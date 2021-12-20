@@ -59,7 +59,7 @@ public class ExElementalInitTalent implements IClientIncomingPacket
 		
 		if (player.isInBattle())
 		{
-			client.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_RESET_SPIRIT_ATTRIBUTE_DURING_BATTLE));
+			client.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_RESET_THE_SPIRIT_ATTRIBUTES_WHILE_IN_BATTLE));
 			client.sendPacket(new ElementalSpiritSetTalent(player, _type, false));
 			return;
 		}

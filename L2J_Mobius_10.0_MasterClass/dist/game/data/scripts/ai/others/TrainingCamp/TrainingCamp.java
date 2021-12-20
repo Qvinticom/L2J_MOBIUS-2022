@@ -149,7 +149,7 @@ public class TrainingCamp extends AbstractNpcAI
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_REWARDS_FOR_TRAINING_IF_YOU_HAVE_TRAINED_FOR_LESS_THAN_1_MINUTE);
+							player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_REWARDS_FOR_TRAINING_IF_YOU_HAVE_TRAINED_FOR_LESS_THAN_1_MIN);
 						}
 					}
 					else
@@ -186,7 +186,7 @@ public class TrainingCamp extends AbstractNpcAI
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_REWARDS_FOR_TRAINING_IF_YOU_HAVE_TRAINED_FOR_LESS_THAN_1_MINUTE);
+							player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_REWARDS_FOR_TRAINING_IF_YOU_HAVE_TRAINED_FOR_LESS_THAN_1_MIN);
 						}
 						player.setTraingCampDuration(player.getTraingCampDuration() + holder.getTrainingTime(TimeUnit.SECONDS));
 						player.removeTraingCampInfo();
@@ -229,7 +229,7 @@ public class TrainingCamp extends AbstractNpcAI
 	{
 		if (player.getLevel() <= Config.TRAINING_CAMP_MIN_LEVEL)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.LV_S1_OR_ABOVE).addInt(Config.TRAINING_CAMP_MIN_LEVEL));
+			player.sendPacket(new SystemMessage(SystemMessageId.LV_S1).addInt(Config.TRAINING_CAMP_MIN_LEVEL));
 			return false;
 		}
 		else if (player.getLevel() >= Config.TRAINING_CAMP_MAX_LEVEL)

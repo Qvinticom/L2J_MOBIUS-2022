@@ -72,7 +72,7 @@ public class Q10296_LetsPayRespectsToOurFallenBrethren extends Quest
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		addCondCompletedQuest(Q10295_RespectforGraves.class.getSimpleName(), "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_52_58_LET_S_PAY_RESPECTS_TO_OUR_FALLEN_BRETHREN);
+		setQuestNameNpcStringId(NpcStringId.LV_52_58_PAY_RESPECTS_TO_FALLEN_BRETHREN);
 	}
 	
 	@Override

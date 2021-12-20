@@ -353,7 +353,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						{
 							qs.setCond(4, true);
 							qs.unset(KILL_COUNT_VAR);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_SILVAN_IN_YOUR_INVENTORY_NTALK_TO_SILVAN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_SILVAN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -374,7 +374,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						{
 							qs.setCond(7, true);
 							qs.unset(KILL_COUNT_VAR2);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;

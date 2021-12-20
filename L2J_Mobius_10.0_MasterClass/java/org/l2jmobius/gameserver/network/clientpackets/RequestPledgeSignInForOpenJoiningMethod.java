@@ -66,12 +66,12 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 			{
 				if (clan.getCharPenaltyExpiryTime() > Chronos.currentTimeMillis())
 				{
-					player.sendPacket(SystemMessageId.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER);
+					player.sendPacket(SystemMessageId.YOU_CANNOT_ACCEPT_A_NEW_CLAN_MEMBER_FOR_24_H_AFTER_DISMISSING_SOMEONE);
 					return;
 				}
 				if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_CLAN);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
 					sm.addString(player.getName());
 					player.sendPacket(sm);
 					return;

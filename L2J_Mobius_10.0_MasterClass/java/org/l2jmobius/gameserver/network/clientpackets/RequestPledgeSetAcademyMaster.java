@@ -56,7 +56,7 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 		
 		if (!player.hasClanPrivilege(ClanPrivilege.CL_APPRENTICE))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_DISMISS_AN_APPRENTICE);
+			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_THE_RIGHT_TO_DISMISS_MENTEES);
 			return;
 		}
 		
@@ -106,7 +106,7 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 			
 			apprenticeMember.saveApprenticeAndSponsor(0, 0);
 			sponsorMember.saveApprenticeAndSponsor(0, 0);
-			sm = new SystemMessage(SystemMessageId.S2_CLAN_MEMBER_C1_S_APPRENTICE_HAS_BEEN_REMOVED);
+			sm = new SystemMessage(SystemMessageId.S2_C1_S_MENTEE_IS_DISMISSED);
 		}
 		else
 		{
@@ -137,7 +137,7 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 			// saving to database even if online, since both must match
 			apprenticeMember.saveApprenticeAndSponsor(0, sponsorMember.getObjectId());
 			sponsorMember.saveApprenticeAndSponsor(apprenticeMember.getObjectId(), 0);
-			sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_BECOME_S2_S_MENTOR);
 		}
 		sm.addString(sponsorMember.getName());
 		sm.addString(apprenticeMember.getName());

@@ -95,7 +95,7 @@ public class RequestJoinPledge implements IClientIncomingPacket
 		final Player target = World.getInstance().getPlayer(_target);
 		if (target == null)
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			player.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);
 			return;
 		}
 		

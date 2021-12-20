@@ -157,12 +157,12 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
 			player.sendPacket(iu);
-			player.sendPacket(new SystemMessage(SystemMessageId.ARTIFACT_UPGRADE_SUCCEEDED_AND_YOU_OBTAINED_S1).addItemName(targetItem.getId()));
+			player.sendPacket(new SystemMessage(SystemMessageId.SUCCESSFUL_ARTIFACT_UPGRADE_YOU_HAVE_OBTAINED_S1).addItemName(targetItem.getId()));
 			player.sendPacket(new ExTryEnchantArtifactResult(ExTryEnchantArtifactResult.SUCCESS, targetItem.getEnchantLevel()));
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UPGRADE_ARTIFACT_THE_ITEM_S_UPGRADE_LEVEL_WILL_REMAIN_THE_SAME));
+			player.sendPacket(new SystemMessage(SystemMessageId.UPGRADE_FAILED_THE_MODIFICATION_OF_THE_ITEMS_HAS_NOT_CHANGED));
 			player.sendPacket(new ExTryEnchantArtifactResult(ExTryEnchantArtifactResult.FAIL, targetItem.getEnchantLevel()));
 		}
 	}

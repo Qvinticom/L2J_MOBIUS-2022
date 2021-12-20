@@ -94,7 +94,7 @@ public class Request
 	{
 		if (partner == null)
 		{
-			_player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			_player.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);
 			return false;
 		}
 		if (partner.getRequest().isProcessingRequest())

@@ -397,7 +397,7 @@ public class ItemCommissionManager
 		final long totalPrice = itemInstance.getCount() * commissionItem.getPricePerUnit();
 		if (!player.getInventory().reduceAdena("Commission Registration Fee", totalPrice, player, null))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 			return;
 		}

@@ -93,7 +93,7 @@ public class KastiaExceptional extends AbstractInstance
 				{
 					case 0:
 					{
-						showOnScreenMsg(world, NpcStringId.STAGE_1, ExShowScreenMessage.TOP_CENTER, 10000, true);
+						showOnScreenMsg(world, NpcStringId.LV_1_2, ExShowScreenMessage.TOP_CENTER, 10000, true);
 						world.setStatus(1);
 						world.spawnGroup("wave_1");
 						startQuestTimer("check_status", 10000, null, player);
@@ -103,7 +103,7 @@ public class KastiaExceptional extends AbstractInstance
 					{
 						if (world.getAliveNpcs().isEmpty())
 						{
-							showOnScreenMsg(world, NpcStringId.STAGE_2, ExShowScreenMessage.TOP_CENTER, 10000, true);
+							showOnScreenMsg(world, NpcStringId.LV_2_2, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(2);
 							world.spawnGroup("wave_2");
 						}
@@ -114,7 +114,7 @@ public class KastiaExceptional extends AbstractInstance
 					{
 						if (world.getAliveNpcs().isEmpty())
 						{
-							showOnScreenMsg(world, NpcStringId.STAGE_3, ExShowScreenMessage.TOP_CENTER, 10000, true);
+							showOnScreenMsg(world, NpcStringId.LV_3_2, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(3);
 							world.spawnGroup("wave_3");
 						}

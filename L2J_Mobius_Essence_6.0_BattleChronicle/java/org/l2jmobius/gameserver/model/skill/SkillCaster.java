@@ -347,7 +347,7 @@ public class SkillCaster implements Runnable
 		if (caster.isPlayer() && !instantCast)
 		{
 			// Send a system message to the player.
-			caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
+			caster.sendPacket(_skill.getId() != 2046 ? new SystemMessage(SystemMessageId.YOU_VE_USED_S1).addSkillName(_skill) : new SystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 			
 			// Show the gauge bar for casting.
 			caster.sendPacket(new SetupGauge(caster.getObjectId(), SetupGauge.BLUE, displayedCastTime));
@@ -394,7 +394,7 @@ public class SkillCaster implements Runnable
 				}
 				clan.takeReputationScore(_skill.getClanRepConsume());
 				
-				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CLAN_REPUTATION_POINTS_SPENT);
 				msg.addInt(_skill.getClanRepConsume());
 				player.sendPacket(msg);
 			}

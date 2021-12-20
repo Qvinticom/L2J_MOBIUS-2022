@@ -209,7 +209,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		{
 			if (player.isOnline())
 			{
-				player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_BEGUN);
+				player.sendPacket(SystemMessageId.THE_REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_BEGUN);
 				if (canRegister(player, false))
 				{
 					player.sendPacket(ExCuriousHouseState.REGISTRATION_PACKET);
@@ -230,7 +230,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			{
 				if (player.isOnline())
 				{
-					player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_ENDED);
+					player.sendPacket(SystemMessageId.THE_REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_IS_OVER);
 					if (!REGISTERED_PLAYERS.contains(player))
 					{
 						player.sendPacket(ExCuriousHouseState.IDLE_PACKET);
@@ -451,7 +451,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		{
 			if (player != null)
 			{
-				player.sendPacket(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT);
+				player.sendPacket(SystemMessageId.THE_MATCH_HAS_BEGUN_FIGHT);
 				player.setImmobilized(false);
 				player.setInvisible(false);
 				player.broadcastInfo();
@@ -516,7 +516,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				REGISTERED_PLAYERS.add(player);
 				player.setRegisteredOnEvent(true);
 				player.sendPacket(SystemMessageId.YOU_ARE_NOW_ON_THE_WAITING_LIST_YOU_WILL_AUTOMATICALLY_BE_TELEPORTED_WHEN_THE_TOURNAMENT_STARTS_AND_WILL_BE_REMOVED_FROM_THE_WAITING_LIST_IF_YOU_LOG_OUT_IF_YOU_CANCEL_REGISTRATION_WITHIN_THE_LAST_MINUTE_OF_ENTERING_THE_ARENA_AFTER_SIGNING_UP_30_TIMES_OR_MORE_OR_FORFEIT_AFTER_ENTERING_THE_ARENA_30_TIMES_OR_MORE_DURING_A_CYCLE_YOU_BECOME_INELIGIBLE_FOR_PARTICIPATION_IN_THE_CEREMONY_OF_CHAOS_UNTIL_THE_NEXT_CYCLE_ALL_THE_BUFFS_EXCEPT_THE_VITALITY_BUFF_WILL_BE_REMOVED_ONCE_YOU_ENTER_THE_ARENAS);
-				player.sendPacket(SystemMessageId.EXCEPT_THE_VITALITY_BUFF_ALL_BUFFS_INCLUDING_ART_OF_SEDUCTION_WILL_BE_DELETED);
+				player.sendPacket(SystemMessageId.ALL_BUFFS_LIKE_ROSY_SEDUCTIONS_AND_ART_OF_SEDUCTION_WILL_BE_REMOVED_SAYHA_S_GRACE_WILL_REMAIN);
 				player.sendPacket(ExCuriousHouseState.PREPARE_PACKET);
 				break;
 			}
@@ -526,7 +526,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				{
 					removeListeners(player);
 					player.setRegisteredOnEvent(false);
-					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_TAKEN_OFF_THE_WAIT_LIST_YOU_MAY_ONLY_ENTER_THE_WAIT_LIST_ON_MON_THURS_EVERY_QUARTER_OF_AN_HOUR_FOR_5_MINUTES_BETWEEN_20_00_AND_23_40_IF_YOU_CANCEL_REGISTRATION_OR_CHOOSE_TO_FORFEIT_AFTER_ENTERING_A_MATCH_30_TIMES_OR_MORE_DURING_A_CYCLE_YOU_MUST_WAIT_UNTIL_THE_NEXT_CYCLE_TO_PARTICIPATE_IN_THE_CEREMONY_OF_CHAOS_UPON_ENTERING_THE_ARENA_ALL_BUFFS_EXCLUDING_VITALITY_BUFFS_ARE_REMOVED);
+					player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_TAKEN_OFF_THE_WAIT_LIST_YOU_MAY_ONLY_ENTER_THE_WAIT_LIST_ON_MON_THURS_EVERY_QUARTER_OF_AN_HOUR_FOR_5_MIN_BETWEEN_20_00_AND_23_40_IF_YOU_CANCEL_REGISTRATION_OR_CHOOSE_TO_FORFEIT_AFTER_ENTERING_A_MATCH_30_TIMES_OR_MORE_DURING_A_CYCLE_YOU_MUST_WAIT_UNTIL_THE_NEXT_CYCLE_TO_PARTICIPATE_IN_THE_CEREMONY_OF_CHAOS_UPON_ENTERING_THE_ARENA_ALL_BUFFS_EXCLUDING_VITALITY_BUFFS_ARE_REMOVED);
 					player.sendPacket(ExCuriousHouseState.IDLE_PACKET);
 				}
 				break;
@@ -648,7 +648,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			case "match_start_countdown":
 			{
 				final int time = params.getInt("time", 0);
-				final SystemMessage countdown = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+				final SystemMessage countdown = new SystemMessage(SystemMessageId.THE_MATCH_BEGINS_IN_S1_SEC);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				
@@ -713,7 +713,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		SystemMessage msg = null;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
-			msg = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+			msg = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 		}
 		else
 		{
@@ -1027,7 +1027,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		SystemMessageId sm = null;
 		if (player.getLevel() < 85)
 		{
-			sm = SystemMessageId.ONLY_CHARACTERS_LEVEL_85_OR_ABOVE_MAY_PARTICIPATE_IN_THE_TOURNAMENT;
+			sm = SystemMessageId.ONLY_CHARACTERS_OF_LV_85_CAN_PARTICIPATE_IN_THE_TOURNAMENT;
 			canRegister = false;
 		}
 		else if (player.isFlyingMounted())
@@ -1042,7 +1042,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		}
 		else if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() != 0))
 		{
-			sm = SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY;
+			sm = SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY;
 			canRegister = false;
 		}
 		else if ((clan == null) || (clan.getLevel() < 3))
@@ -1082,12 +1082,12 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		}
 		else if (player.isInSiege())
 		{
-			sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_ON_THE_BATTLEFIELD_CASTLE_SIEGE_FORTRESS_SIEGE;
+			sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_ON_THE_BATTLEFIELD_CASTLE_SIEGE_FORTRESS_BATTLE;
 			canRegister = false;
 		}
 		else if (player.isInsideZone(ZoneId.SIEGE))
 		{
-			sm = SystemMessageId.YOU_CANNOT_REGISTER_IN_THE_WAITING_LIST_WHILE_BEING_INSIDE_OF_A_BATTLEGROUND_CASTLE_SIEGE_FORTRESS_SIEGE;
+			sm = SystemMessageId.YOU_CANNOT_REGISTER_IN_THE_WAITING_LIST_WHILE_BEING_INSIDE_OF_A_BATTLEGROUND_CASTLE_SIEGE_FORTRESS_BATTLE;
 			canRegister = false;
 		}
 		else if (player.isFlyingMounted())
@@ -1102,7 +1102,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 		}
 		else if (player.isInTimedHuntingZone(player.getX(), player.getY()))
 		{
-			sm = SystemMessageId.CANNOT_USE_TIME_LIMITED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_CEREMONY_OF_CHAOS;
+			sm = SystemMessageId.SPECIAL_INSTANCE_ZONES_CANNOT_BE_USED_WHILE_WAITING_FOR_THE_CEREMONY_OF_CHAOS;
 			canRegister = false;
 		}
 		

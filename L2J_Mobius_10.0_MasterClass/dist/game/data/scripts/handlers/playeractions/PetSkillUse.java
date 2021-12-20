@@ -42,7 +42,7 @@ public class PetSkillUse implements IPlayerActionHandler
 		final Pet pet = player.getPet();
 		if (pet == null)
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_PET);
 		}
 		else if (pet.isUncontrollable())
 		{
@@ -50,7 +50,7 @@ public class PetSkillUse implements IPlayerActionHandler
 		}
 		else if (pet.isBetrayed())
 		{
-			player.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 		}
 		else if ((pet.getLevel() - player.getLevel()) > 20)
 		{

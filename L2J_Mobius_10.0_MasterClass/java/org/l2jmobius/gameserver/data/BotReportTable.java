@@ -227,7 +227,7 @@ public class BotReportTable
 		
 		if (bot.isInsideZone(ZoneId.PEACE) || bot.isInsideZone(ZoneId.PVP))
 		{
-			reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_IN_THIS_AREA);
+			reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_IS_IN_A_PEACE_ZONE_OR_A_BATTLEGROUND);
 			return false;
 		}
 		
@@ -264,7 +264,7 @@ public class BotReportTable
 			final int ip = hashIp(reporter);
 			if (!timeHasPassed(_ipRegistry, ip))
 			{
-				reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_ALLIANCE_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
+				reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
 				return false;
 			}
 			
@@ -278,7 +278,7 @@ public class BotReportTable
 				
 				if (!Config.BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS && rcd.reportedBySameClan(reporter.getClan()))
 				{
-					reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_ALLIANCE_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
+					reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_THE_TARGET_HAS_ALREADY_BEEN_REPORTED_BY_EITHER_YOUR_CLAN_OR_HAS_ALREADY_BEEN_REPORTED_FROM_YOUR_CURRENT_IP);
 					return false;
 				}
 			}
@@ -287,14 +287,14 @@ public class BotReportTable
 			{
 				if (rcdRep.getPointsLeft() == 0)
 				{
-					reporter.sendPacket(SystemMessageId.YOU_SPENT_ALL_AVAILABLE_POINTS_THEY_WILL_BECOME_AVAILABLE_WHEN_THEY_ARE_RESET_AT_06_30_AM_EVERY_DAY);
+					reporter.sendPacket(SystemMessageId.YOU_HAVE_USED_ALL_AVAILABLE_POINTS_POINTS_ARE_RESET_EVERYDAY_AT_NOON);
 					return false;
 				}
 				
 				final long reuse = (Chronos.currentTimeMillis() - rcdRep.getLastReporTime());
 				if (reuse < Config.BOTREPORT_REPORT_DELAY)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MIN_YOU_HAVE_S2_POINT_S_LEFT);
 					sm.addInt((int) (reuse / 60000));
 					sm.addInt(rcdRep.getPointsLeft());
 					reporter.sendPacket(sm);

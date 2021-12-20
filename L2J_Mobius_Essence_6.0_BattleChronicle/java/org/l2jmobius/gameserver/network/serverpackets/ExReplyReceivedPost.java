@@ -71,7 +71,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 				packet.writeD(_msg.getElementals()[i]);
 			}
 			packet.writeD(SystemMessageId.THE_ITEM_YOU_REGISTERED_HAS_BEEN_SOLD.getId());
-			packet.writeD(SystemMessageId.S1_HAS_BEEN_SOLD.getId());
+			packet.writeD(SystemMessageId.S1_SOLD.getId());
 		}
 		packet.writeD(_msg.getId());
 		packet.writeD(_msg.isLocked() ? 1 : 0);

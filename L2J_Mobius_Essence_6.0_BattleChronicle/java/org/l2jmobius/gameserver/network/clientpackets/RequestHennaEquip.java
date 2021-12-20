@@ -60,7 +60,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 		
 		if (player.getHennaEmptySlots() == 0)
 		{
-			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
+			player.sendPacket(SystemMessageId.YOU_HAVE_NO_FREE_PATTERN_SLOTS);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -82,11 +82,11 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			iu.addModifiedItem(player.getInventory().getAdenaInstance());
 			player.sendInventoryUpdate(iu);
 			player.sendPacket(new HennaEquipList(player));
-			player.sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED);
+			player.sendPacket(SystemMessageId.PATTERN_ADDED);
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MAKE_A_PATTERN);
 			if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !henna.isAllowedClass(player.getClassId()))
 			{
 				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);

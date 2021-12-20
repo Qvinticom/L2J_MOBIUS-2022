@@ -110,7 +110,7 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		}
 		else if ((warehouse instanceof ClanWarehouse) && !player.isClanLeader())
 		{
-			player.sendPacket(SystemMessageId.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_DO_YOU_WANT_TO_CONTINUE);
+			player.sendPacket(SystemMessageId.ITEMS_LEFT_IN_THE_CLAN_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_CONTINUE);
 			return;
 		}
 		

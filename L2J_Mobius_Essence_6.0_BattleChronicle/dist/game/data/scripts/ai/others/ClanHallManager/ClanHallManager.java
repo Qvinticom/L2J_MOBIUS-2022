@@ -507,7 +507,7 @@ public class ClanHallManager extends AbstractNpcAI
 		}
 		else
 		{
-			htmltext = htmltext.replaceAll("%" + name + "recovery%", "<fstring p1=\"\" p2=\"\">" + NpcStringId.NONE_2.getId() + "</fstring>");
+			htmltext = htmltext.replaceAll("%" + name + "recovery%", "<fstring p1=\"\" p2=\"\">" + NpcStringId.DISABLED.getId() + "</fstring>");
 			htmltext = htmltext.replaceAll("%" + name + "price%", "");
 			htmltext = htmltext.replaceAll("%" + name + "expire%", "");
 			htmltext = htmltext.replaceAll("%" + name + "deactive%", "");

@@ -77,7 +77,7 @@ public class Q10299_GetIncrediblePower extends Quest
 		addTalkId(ORVEN);
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_45_GET_INCREDIBLE_POWER);
+		setQuestNameNpcStringId(NpcStringId.LV_45_75_TO_GET_INCREDIBLE_POWER);
 	}
 	
 	@Override

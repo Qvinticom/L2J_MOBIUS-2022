@@ -62,7 +62,7 @@ public class BlessedSoulShots implements IItemHandler
 		{
 			if (!player.getAutoSoulShot().contains(itemId))
 			{
-				player.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SOULSHOTS);
 			}
 			return false;
 		}

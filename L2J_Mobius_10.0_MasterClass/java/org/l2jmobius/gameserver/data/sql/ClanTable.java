@@ -169,7 +169,7 @@ public class ClanTable
 		}
 		if (player.getClanId() != 0)
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
+			player.sendPacket(SystemMessageId.FAILED_TO_CREATE_A_CLAN);
 			return null;
 		}
 		if (Chronos.currentTimeMillis() < player.getClanCreateExpiryTime())

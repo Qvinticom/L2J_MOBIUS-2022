@@ -123,7 +123,7 @@ public class LaVieEnRose extends AbstractNpcAI
 	{
 		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_BEAUTY_SHOP_WHILE_REGISTERED_IN_THE_OLYMPIAD);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_BEAUTY_SHOP_WHILE_REGISTERING_IN_THE_OLYMPIAD);
 			return false;
 		}
 		

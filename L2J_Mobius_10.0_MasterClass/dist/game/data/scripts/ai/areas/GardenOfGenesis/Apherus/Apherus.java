@@ -168,7 +168,7 @@ public class Apherus extends AbstractNpcAI
 				{
 					openDoor(door, npc.getInstanceId());
 				}
-				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.APHERUS_GARDEN_DOOR_WAS_OPENED, ExShowScreenMessage.TOP_CENTER, 3000, true));
+				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.APHERUS_GARDEN_IS_OPEN, ExShowScreenMessage.TOP_CENTER, 3000, true));
 			}
 			else
 			{

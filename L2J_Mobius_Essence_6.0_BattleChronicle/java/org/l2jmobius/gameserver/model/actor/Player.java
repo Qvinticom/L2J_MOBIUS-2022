@@ -2236,7 +2236,7 @@ public class Player extends Playable
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.ITEM_S1_S2_UNEQUIPPED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
@@ -2265,13 +2265,13 @@ public class Player extends Playable
 			{
 				if (item.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1_S2);
 					sm.addInt(item.getEnchantLevel());
 					sm.addItemName(item);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1);
 					sm.addItemName(item);
 				}
 				sendPacket(sm);
@@ -3069,7 +3069,7 @@ public class Player extends Playable
 	{
 		if (sendMessage)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_ADENA);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_ADENA_2);
 			sm.addLong(count);
 			sendPacket(sm);
 		}
@@ -3106,7 +3106,7 @@ public class Player extends Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			}
 			return false;
 		}
@@ -3185,7 +3185,7 @@ public class Player extends Playable
 			{
 				if (count > 1)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 					sm.addItemName(Inventory.BEAUTY_TICKET_ID);
 					sm.addLong(count);
 					sendPacket(sm);
@@ -3213,7 +3213,7 @@ public class Player extends Playable
 	{
 		if (sendMessage)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 			sm.addItemName(Inventory.ANCIENT_ADENA_ID);
 			sm.addLong(count);
 			sendPacket(sm);
@@ -3249,7 +3249,7 @@ public class Player extends Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			}
 			return false;
 		}
@@ -3277,7 +3277,7 @@ public class Player extends Playable
 			{
 				if (count > 1)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 					sm.addItemName(Inventory.ANCIENT_ADENA_ID);
 					sm.addLong(count);
 					sendPacket(sm);
@@ -3377,7 +3377,7 @@ public class Player extends Playable
 				{
 					if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 						sm.addItemName(itemId);
 						sm.addLong(count);
 						sendPacket(sm);
@@ -3495,7 +3495,7 @@ public class Player extends Playable
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 				sm.addItemName(destoyedItem);
 				sm.addLong(count);
 				sendPacket(sm);
@@ -3610,7 +3610,7 @@ public class Player extends Playable
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 				sm.addItemName(itemId);
 				sm.addLong(count);
 				sendPacket(sm);
@@ -6011,7 +6011,7 @@ public class Player extends Playable
 			final Item unequippedItem = unequipped.get(0);
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.ITEM_S1_S2_UNEQUIPPED);
 				sm.addInt(unequippedItem.getEnchantLevel());
 				sm.addItemName(unequippedItem);
 			}
@@ -6052,7 +6052,7 @@ public class Player extends Playable
 				final Item unequippedItem = unequipped.get(0);
 				if (unequippedItem.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+					sm = new SystemMessage(SystemMessageId.ITEM_S1_S2_UNEQUIPPED);
 					sm.addInt(unequippedItem.getEnchantLevel());
 					sm.addItemName(unequippedItem);
 				}
@@ -8007,13 +8007,13 @@ public class Player extends Playable
 			if (henna.getCancelCount() > 0)
 			{
 				_inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 				sm.addItemName(henna.getDyeItemId());
 				sm.addLong(henna.getCancelCount());
 				sendPacket(sm);
 			}
 		}
-		sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_DELETED);
+		sendPacket(SystemMessageId.PATTERN_WAS_DELETED);
 		
 		// Remove henna duration task
 		if (henna.getDuration() > 0)
@@ -11891,7 +11891,7 @@ public class Player extends Playable
 				
 				if (equippedItem.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+					sm = new SystemMessage(SystemMessageId.ITEM_S1_S2_UNEQUIPPED);
 					sm.addInt(equippedItem.getEnchantLevel());
 					sm.addItemName(equippedItem);
 				}

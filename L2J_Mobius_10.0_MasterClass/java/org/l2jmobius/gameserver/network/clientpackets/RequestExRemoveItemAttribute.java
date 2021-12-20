@@ -82,11 +82,11 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			{
 				if (targetItem.isArmor())
 				{
-					sm = new SystemMessage(SystemMessageId.S3_ATTRIBUTE_WAS_REMOVED_FROM_S1_S2_SO_RESISTANCE_TO_S4_WAS_DECREASED);
+					sm = new SystemMessage(SystemMessageId.S3_POWER_HAS_BEEN_REMOVED_FROM_S1_S2_S4_RESISTANCE_IS_DECREASED);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_ATTRIBUTE_HAS_BEEN_REMOVED);
+					sm = new SystemMessage(SystemMessageId.S1_S2_S_ATTRIBUTE_HAS_BEEN_REMOVED);
 				}
 				sm.addInt(targetItem.getEnchantLevel());
 				sm.addItemName(targetItem);

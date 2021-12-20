@@ -42,7 +42,7 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 	private static final NpcStringId[] TAUTI_MESSAGES =
 	{
 		NpcStringId.TAUTI_INTENDS_TO_SHOW_OFF_HIS_POWER_TO_HIS_FOLLOWERS,
-		NpcStringId.TAUTI_INTENDS_TO_SHOW_OFF_HIS_POWER_TO_THOSE_WHO_AVOID_HIM
+		NpcStringId.TAUTI_IS_GOING_TO_CRUSH_DOWN_THOSE_WHO_ARE_RUNNING_AWAY
 	};
 	
 	public ThroneOfHeroesTauti()
@@ -86,7 +86,7 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_TAUTI_WILL_BEGIN_SHORTLY, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_TAUTI_WILL_BEGIN_SHORTLY_NPLEASE_GET_READY_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
 					startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
 				}
 				break;

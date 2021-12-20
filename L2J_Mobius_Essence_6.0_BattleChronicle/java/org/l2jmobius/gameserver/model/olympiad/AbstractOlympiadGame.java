@@ -89,7 +89,7 @@ public abstract class AbstractOlympiadGame
 	protected final void addPointsToParticipant(Participant par, int points)
 	{
 		par.updateStat(POINTS, points);
-		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EARNED_S2_POINTS_IN_THE_OLYMPIAD_GAMES);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_EARNED_OLYMPIAD_POINTS_X_S2);
 		sm.addString(par.getName());
 		sm.addInt(points);
 		broadcastPacket(sm);
@@ -98,7 +98,7 @@ public abstract class AbstractOlympiadGame
 	protected final void removePointsFromParticipant(Participant par, int points)
 	{
 		par.updateStat(POINTS, -points);
-		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_LOST_S2_POINTS_IN_THE_OLYMPIAD_GAMES);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_LOST_OLYMPIAD_POINTS_X_S2);
 		sm.addString(par.getName());
 		sm.addInt(points);
 		broadcastPacket(sm);
@@ -130,7 +130,7 @@ public abstract class AbstractOlympiadGame
 		SystemMessage sm;
 		if (player.isDead())
 		{
-			sm = new SystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
+			sm = new SystemMessage(SystemMessageId.C1_IS_DEAD_AND_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return new SystemMessage(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED);
@@ -428,7 +428,7 @@ public abstract class AbstractOlympiadGame
 				}
 				
 				iu.addModifiedItem(item);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 				sm.addItemName(item);
 				sm.addLong(holder.getCount());
 				player.sendPacket(sm);

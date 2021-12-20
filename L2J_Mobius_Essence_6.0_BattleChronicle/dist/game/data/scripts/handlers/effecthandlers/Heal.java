@@ -142,7 +142,7 @@ public class Heal extends AbstractEffect
 		{
 			if (skill.getId() == 4051)
 			{
-				effected.sendPacket(SystemMessageId.REJUVENATING_HP);
+				effected.sendPacket(SystemMessageId.RECOVERS_HP);
 			}
 			else if (effector.isPlayer() && (effector != effected))
 			{

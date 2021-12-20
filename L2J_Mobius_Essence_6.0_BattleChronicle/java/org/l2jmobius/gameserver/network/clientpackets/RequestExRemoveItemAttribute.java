@@ -86,7 +86,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_S_ATTRIBUTE_HAS_BEEN_REMOVED);
+					sm = new SystemMessage(SystemMessageId.S1_S2_S_S3_ATTRIBUTE_HAS_BEEN_REMOVED);
 				}
 				sm.addInt(targetItem.getEnchantLevel());
 				sm.addItemName(targetItem);

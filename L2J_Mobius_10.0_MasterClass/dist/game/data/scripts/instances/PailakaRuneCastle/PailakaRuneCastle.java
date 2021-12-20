@@ -160,19 +160,19 @@ public class PailakaRuneCastle extends AbstractInstance
 				{
 					case 0:
 					{
-						showOnScreenMsg(world, NpcStringId.STAGE_1, ExShowScreenMessage.TOP_CENTER, 5000, true);
+						showOnScreenMsg(world, NpcStringId.LV_1_2, ExShowScreenMessage.TOP_CENTER, 5000, true);
 						monsters = world.spawnGroup("monsters_first_wave");
 						break;
 					}
 					case 1:
 					{
-						showOnScreenMsg(world, NpcStringId.STAGE_2, ExShowScreenMessage.TOP_CENTER, 5000, true);
+						showOnScreenMsg(world, NpcStringId.LV_2_2, ExShowScreenMessage.TOP_CENTER, 5000, true);
 						monsters = world.spawnGroup("monsters_second_wave");
 						break;
 					}
 					case 2:
 					{
-						showOnScreenMsg(world, NpcStringId.STAGE_3, ExShowScreenMessage.TOP_CENTER, 5000, true);
+						showOnScreenMsg(world, NpcStringId.LV_3_2, ExShowScreenMessage.TOP_CENTER, 5000, true);
 						monsters = world.spawnGroup("monsters_third_wave");
 						break;
 					}

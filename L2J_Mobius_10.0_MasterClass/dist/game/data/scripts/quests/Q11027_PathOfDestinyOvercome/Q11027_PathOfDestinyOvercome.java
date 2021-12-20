@@ -653,7 +653,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(2, true);
 							qs.unset(KILL_COUNT_VAR);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -674,7 +674,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(5, true);
 							qs.unset(KILL_COUNT_VAR2);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -692,7 +692,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						if (getQuestItemsCount(killer, ORC_EMPOWERING_POTION) >= 15)
 						{
 							qs.setCond(8, true);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -713,7 +713,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(11, true);
 							qs.unset(KILL_COUNT_VAR3);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -731,7 +731,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						if (getQuestItemsCount(killer, KETRA_ORDER) >= 15)
 						{
 							qs.setCond(14, true);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_RECLOUS_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_RECLOUS_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -752,7 +752,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(17, true);
 							qs.unset(KILL_COUNT_VAR4);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;

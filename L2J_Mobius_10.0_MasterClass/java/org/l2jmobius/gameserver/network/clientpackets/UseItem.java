@@ -254,7 +254,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVEN_T_EQUIPPED_AN_ARTIFACT_BOOK_SO_S1_CANNOT_BE_EQUIPPED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.UNABLE_TO_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_AN_ARTIFACT_BOOK);
 					sm.addItemName(item);
 					player.sendPacket(sm);
 					return;
@@ -312,20 +312,20 @@ public class UseItem implements IClientIncomingPacket
 		final SystemMessage sm;
 		if (hours > 0)
 		{
-			sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_H_S3_MIN_S4_SEC);
 			sm.addItemName(item);
 			sm.addInt(hours);
 			sm.addInt(minutes);
 		}
 		else if (minutes > 0)
 		{
-			sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_MIN_S3_SEC);
 			sm.addItemName(item);
 			sm.addInt(minutes);
 		}
 		else
 		{
-			sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_SEC);
 			sm.addItemName(item);
 		}
 		sm.addInt(seconds);

@@ -155,7 +155,7 @@ public class HandysBlockCheckerManager
 			{
 				if (_arenaPlayers[i].getAllPlayers().contains(player))
 				{
-					final SystemMessage msg = new SystemMessage(SystemMessageId.THE_MATCH_C1_PREVIOUSLY_PARTICIPATED_IN_SHOULD_END_BEFORE_YOU_APPLY_PLEASE_TRY_AGAIN_LATER);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_ALREADY_BEEN_REGISTERED_ON_THE_MATCH_WAITING_LIST);
 					msg.addString(player.getName());
 					player.sendPacket(msg);
 					return false;

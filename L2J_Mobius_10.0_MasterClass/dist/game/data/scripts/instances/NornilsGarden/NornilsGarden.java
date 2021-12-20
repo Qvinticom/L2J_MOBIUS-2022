@@ -268,7 +268,7 @@ public class NornilsGarden extends AbstractInstance
 					world.getAliveNpcs(BOZ_STAGE4).forEach(boz -> boz.doDie(null));
 					world.spawnGroup("wave_4");
 					world.finishInstance();
-					world.broadcastPacket(new SystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt((int) 5.0D));
+					world.broadcastPacket(new SystemMessage(SystemMessageId.THE_INSTANCE_ZONE_EXPIRES_IN_S1_MIN_AFTER_THAT_YOU_WILL_BE_TELEPORTED_OUTSIDE).addInt((int) 5.0D));
 				}
 				break;
 			}

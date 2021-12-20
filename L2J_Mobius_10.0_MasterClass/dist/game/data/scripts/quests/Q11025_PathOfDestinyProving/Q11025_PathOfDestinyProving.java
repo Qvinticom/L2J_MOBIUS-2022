@@ -340,7 +340,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 				if (qs.isCond(13) && (npc != null))
 				{
 					qs.setCond(14, true);
-					showOnScreenMsg(player, NpcStringId.RETURN_TO_RAYMOND_OF_THE_TOWN_OF_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.RETURN_TO_HIGH_PRIEST_RAYMOND_IN_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveItems(player, WIND_SPIRIT_REALM_RELIC, 1);
 					player.teleToLocation(TRAINING_GROUNDS_TELEPORT5);
 					npc.deleteMe();
@@ -531,7 +531,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						{
 							giveItems(killer, SECRET_MATERIAL, 1);
 							qs.setCond(2, true);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_KALLESIN_IN_YOUR_INVENTORY_NTALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -553,7 +553,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						{
 							qs.setCond(5, true);
 							qs.unset(KILL_COUNT_VAR);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_ZENATH_IN_YOUR_INVENTORY_NTALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -571,7 +571,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						else if (getQuestItemsCount(killer, BREATH_OF_DEATH) == 14)
 						{
 							qs.setCond(8, true);
-							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;

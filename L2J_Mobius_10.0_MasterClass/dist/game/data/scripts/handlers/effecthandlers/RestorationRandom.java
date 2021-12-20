@@ -97,7 +97,7 @@ public class RestorationRandom extends AbstractEffect
 		final Player player = effected.getActingPlayer();
 		if (creationList.isEmpty())
 		{
-			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_THE_ITEM);
 			return;
 		}
 		

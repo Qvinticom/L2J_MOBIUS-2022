@@ -63,7 +63,7 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		// Dead characters cannot use teleports.
 		if (player.isDead())
 		{
-			player.sendPacket(SystemMessageId.CANNOT_TELEPORT_WHILE_DEAD);
+			player.sendPacket(SystemMessageId.DEAD_CHARACTERS_CANNOT_USE_TELEPORTS);
 			return;
 		}
 		

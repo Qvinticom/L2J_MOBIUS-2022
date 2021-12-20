@@ -74,7 +74,7 @@ public class EnemyNot implements ITargetTypeHandler
 			{
 				if (sendMessage)
 				{
-					creature.sendPacket(SystemMessageId.THE_TARGET_IS_LOCATED_WHERE_YOU_CANNOT_CHARGE);
+					creature.sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_THE_TARGET);
 				}
 				return null;
 			}

@@ -180,7 +180,7 @@ public abstract class LetterQuest extends Quest
 				}
 				else if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 				{
-					showOnScreenMsg(player, NpcStringId.YOU_CANNOT_TELEPORT_IN_COMBAT, ExShowScreenMessage.TOP_CENTER, 5000);
+					showOnScreenMsg(player, NpcStringId.YOU_CANNOT_TELEPORT_WHILE_IN_COMBAT_MODE, ExShowScreenMessage.TOP_CENTER, 5000);
 				}
 				else if (player.isTransformed())
 				{

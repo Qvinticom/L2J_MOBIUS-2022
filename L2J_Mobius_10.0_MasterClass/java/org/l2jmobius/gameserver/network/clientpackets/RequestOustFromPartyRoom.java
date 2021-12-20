@@ -65,7 +65,7 @@ public class RequestOustFromPartyRoom implements IClientIncomingPacket
 		final Party memberParty = player.getParty();
 		if ((playerParty != null) && (memberParty != null) && (playerParty.getLeaderObjectId() == memberParty.getLeaderObjectId()))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_DISMISS_A_PARTY_MEMBER_BY_FORCE);
+			player.sendPacket(SystemMessageId.FAILED_TO_DISMISS_THE_PARTY_MEMBER_2);
 		}
 		else
 		{

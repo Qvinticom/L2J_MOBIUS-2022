@@ -497,7 +497,7 @@ public class AltarOfShilen extends AbstractInstance
 				for (Player player : _world.getPlayers())
 				{
 					player.sendPacket(new Earthquake(player.getX(), player.getY(), player.getZ(), 20, 5));
-					player.sendPacket(new ExShowScreenMessage(NpcStringId.SACRIFICE_HAS_BEEN_KILLED_SACRIFICE_LEFT_S1, ExShowScreenMessage.MIDDLE_CENTER, 3000, String.valueOf(_victims)));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.SACRIFICES_HAVE_BEEN_KILLED_SACRIFICES_LEFT_S1, ExShowScreenMessage.MIDDLE_CENTER, 3000, String.valueOf(_victims)));
 				}
 			}
 			if ((_world.getStatus() == 2) && !_firstFloorVictims.isEmpty())

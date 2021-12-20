@@ -41,7 +41,7 @@ public class ExHomunculusGetEnchantPointResult implements IClientOutgoingPacket
 		{
 			packet.writeD(1); // success
 			packet.writeD(_enchantType);
-			packet.writeD(SystemMessageId.YOUVE_OBTAINED_UPGRADE_POINTS.getId());
+			packet.writeD(SystemMessageId.YOU_VE_OBTAINED_UPGRADE_POINTS.getId());
 		}
 		else
 		{

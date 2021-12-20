@@ -151,7 +151,7 @@ public class Doppelganger extends Npc
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+				sm = new SystemMessage(SystemMessageId.C1_HAS_DEALT_S3_DAMAGE_TO_C2);
 				sm.addNpcName(this);
 				sm.addString(target.getName());
 				sm.addInt(damage);

@@ -64,7 +64,7 @@ public class RequestDeleteSentPost implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
+			player.sendPacket(SystemMessageId.THE_MAILBOX_FUNCTIONS_CAN_BE_USED_ONLY_IN_PEACE_ZONES_OUTSIDE_OF_THEM_YOU_CAN_ONLY_CHECK_ITS_CONTENTS);
 			return;
 		}
 		

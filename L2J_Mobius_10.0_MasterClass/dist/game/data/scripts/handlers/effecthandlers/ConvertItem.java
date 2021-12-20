@@ -111,7 +111,7 @@ public class ConvertItem extends AbstractEffect
 			final SystemMessage sm;
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 				sm.addInt(unequippedItem.getEnchantLevel());
 				sm.addItemName(unequippedItem);
 			}
@@ -150,7 +150,7 @@ public class ConvertItem extends AbstractEffect
 		final SystemMessage msg;
 		if (newItem.getEnchantLevel() > 0)
 		{
-			msg = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
+			msg = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
 			msg.addInt(newItem.getEnchantLevel());
 			msg.addItemName(newItem);
 		}

@@ -918,7 +918,7 @@ public class Instance implements IIdentifiable, INamable
 			ps.executeBatch();
 			
 			// Save to memory and send message to player
-			final SystemMessage msg = new SystemMessage(SystemMessageId.INSTANCE_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.INSTANCE_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_WITH_INSTANCEZONE);
 			if (InstanceManager.getInstance().getInstanceName(getTemplateId()) != null)
 			{
 				msg.addInstanceName(_template.getId());
@@ -981,7 +981,7 @@ public class Instance implements IIdentifiable, INamable
 		if (!player.isOnEvent() && (_template.getEjectTime() > 0))
 		{
 			// Send message
-			final SystemMessage sm = new SystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANCE_ZONE);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_IN_S1_MIN_YOU_WILL_BE_TELEPORTED_OUT_OF_THE_INSTANCE_ZONE);
 			sm.addInt(_template.getEjectTime());
 			player.sendPacket(sm);
 			
@@ -1236,7 +1236,7 @@ public class Instance implements IIdentifiable, INamable
 		{
 			return;
 		}
-		final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_INSTANCE_ZONE_WILL_BE_TERMINATED_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_INSTANCE_ZONE_EXPIRES_IN_S1_MIN_AFTER_THAT_YOU_WILL_BE_TELEPORTED_OUTSIDE_2);
 		sm.addInt(delay);
 		broadcastPacket(sm);
 	}

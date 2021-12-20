@@ -277,7 +277,7 @@ public class MonsterRace
 				}
 				case 1050: // 17 min 30 sec
 				{
-					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_30_SEC);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SEC);
 					msg.addInt(_raceNumber);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg);
 					break;

@@ -64,7 +64,7 @@ public class RequestDuelAnswerStart implements IClientIncomingPacket
 			SystemMessage msg2 = null;
 			if (requestor.isInDuel())
 			{
-				msg1 = new SystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL);
+				msg1 = new SystemMessage(SystemMessageId.C1_IS_ALREADY_IN_A_DUEL);
 				msg1.addString(requestor.getName());
 				player.sendPacket(msg1);
 				return;

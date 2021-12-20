@@ -482,7 +482,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			
 			// Clear mentee status
 			player.sendPacket(new ExMentorList(player));
-			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NO_LONGER_S1_S_MENTEE_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_86_OR_HIGHER).addPcName(player));
 			sendMail(player.getObjectId(), MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, GRADUTION_BOX, 1);
 		}
 	}

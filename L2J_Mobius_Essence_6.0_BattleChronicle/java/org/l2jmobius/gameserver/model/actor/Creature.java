@@ -1056,11 +1056,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					if (weaponItem.getItemType() == WeaponType.FISHINGROD)
 					{
-						sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
+						sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_WHILE_FISHING);
 					}
 					else
 					{
-						sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
+						sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_WITH_THIS_WEAPON);
 					}
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -1105,7 +1105,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						if (target.isInsidePeaceZone(getActingPlayer()))
 						{
 							getAI().setIntention(AI_INTENTION_ACTIVE);
-							sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
+							sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_IN_A_PEACEFUL_ZONE);
 							sendPacket(ActionFailed.STATIC_PACKET);
 							return;
 						}
@@ -4039,7 +4039,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (isInsidePeaceZone(player))
 		{
 			// If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
-			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

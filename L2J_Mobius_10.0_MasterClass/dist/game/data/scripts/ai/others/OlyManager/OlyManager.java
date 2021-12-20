@@ -152,7 +152,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				else if (!player.isInventoryUnder80(false))
 				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+					player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				}
 				else if (event.equals("register1v1"))
 				{
@@ -194,7 +194,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+					player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				}
 				break;
 			}
@@ -314,7 +314,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
 					return false;
 				}
 				
@@ -331,7 +331,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			else if (!Olympiad.getInstance().inCompPeriod())
 			{
-				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+				player.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
 				return false;
 			}
 			else if (player.isRegisteredOnEvent())

@@ -90,7 +90,7 @@ public class Recipes implements IItemHandler
 		
 		if (recipeLevel)
 		{
-			player.sendPacket(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
+			player.sendPacket(SystemMessageId.THE_LEVEL_OF_CREATE_ITEM_IS_TOO_LOW_FOR_REGISTERING_THE_RECIPE);
 			return false;
 		}
 		
@@ -112,7 +112,7 @@ public class Recipes implements IItemHandler
 		}
 		
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED);
+		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ADDED);
 		sm.addItemName(item);
 		player.sendPacket(sm);
 		return true;

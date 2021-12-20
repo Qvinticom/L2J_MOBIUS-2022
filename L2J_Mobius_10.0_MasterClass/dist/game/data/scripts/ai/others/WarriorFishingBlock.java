@@ -47,7 +47,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	// NPC Strings
 	private static final NpcStringId[] NPC_STRINGS_ON_SPAWN =
 	{
-		NpcStringId.CROAK_CROAK_FOOD_LIKE_S1_IN_THIS_PLACE,
+		NpcStringId.CROAK_ROAK_IS_THERE_FOOD_LIKE_S1_HERE,
 		NpcStringId.S1_HOW_LUCKY_I_AM,
 		NpcStringId.PRAY_THAT_YOU_CAUGHT_A_WRONG_FISH_S1
 	};

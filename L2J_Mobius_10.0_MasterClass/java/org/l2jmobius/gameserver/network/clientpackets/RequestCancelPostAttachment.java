@@ -87,7 +87,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		
 		if (player.hasItemRequest())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT);
+			player.sendPacket(SystemMessageId.UNAVAILABLE_WHILE_THE_ENCHANTING_IS_IN_PROCESS);
 			return;
 		}
 		
@@ -187,7 +187,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 					playerIU.addNewItem(newItem);
 				}
 			}
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
 			player.sendPacket(sm);

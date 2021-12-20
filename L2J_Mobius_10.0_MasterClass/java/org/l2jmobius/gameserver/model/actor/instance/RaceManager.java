@@ -167,7 +167,7 @@ public class RaceManager extends Npc
 				item.setCustomType1(ticket);
 				item.setCustomType2(TICKET_PRICES[priceId - 1] / 100);
 				player.addItem("Race", item, player, false);
-				final SystemMessage msg = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_S2_OBTAINED);
 				msg.addInt(MonsterRace.getInstance().getRaceNumber());
 				msg.addItemName(4443);
 				player.sendPacket(msg);

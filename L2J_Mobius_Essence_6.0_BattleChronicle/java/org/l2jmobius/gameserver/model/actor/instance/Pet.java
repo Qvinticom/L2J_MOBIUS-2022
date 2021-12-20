@@ -533,7 +533,7 @@ public class Pet extends Summon
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
@@ -579,7 +579,7 @@ public class Pet extends Summon
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
@@ -1608,7 +1608,7 @@ public class Pet extends Summon
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.ITEM_S1_S2_UNEQUIPPED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
@@ -1637,13 +1637,13 @@ public class Pet extends Summon
 			{
 				if (item.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1_S2);
 					sm.addInt(item.getEnchantLevel());
 					sm.addItemName(item);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1);
 					sm.addItemName(item);
 				}
 				sendPacket(sm);

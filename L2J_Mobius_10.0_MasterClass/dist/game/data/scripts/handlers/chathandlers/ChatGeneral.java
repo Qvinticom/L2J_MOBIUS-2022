@@ -77,13 +77,13 @@ public class ChatGeneral implements IChatHandler
 		{
 			if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 			{
-				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER_CHATTING_BAN_TIME_REMAINING_S1_SECONDS);
+				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 				return;
 			}
 			
 			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PlayerCondOverride.CHAT_CONDITIONS))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.GENERAL_CHAT_CANNOT_BE_USED_BY_NON_PREMIUM_USERS_LV_S1_OR_LOWER).addInt(Config.MINIMUM_CHAT_LEVEL));
+				activeChar.sendPacket(new SystemMessage(SystemMessageId.GENERAL_CHAT_CANNOT_BE_USED_BY_CHARACTERS_LV_S1_OR_LOWER).addInt(Config.MINIMUM_CHAT_LEVEL));
 				return;
 			}
 			

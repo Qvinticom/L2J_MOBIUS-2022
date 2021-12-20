@@ -51,7 +51,7 @@ public class PartyMatchingRoom extends MatchingRoom
 	@Override
 	protected void notifyInvalidCondition(Player player)
 	{
-		player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
+		player.sendPacket(SystemMessageId.YOU_DON_T_MEET_THE_REQUIREMENTS_TO_ENTER_A_PARTY_ROOM);
 	}
 	
 	@Override

@@ -360,13 +360,13 @@ public class VillageMaster extends Folk
 			// Subclasses may not be changed while you have exceeded your inventory limit.
 			if (!player.isInventoryUnder90(true))
 			{
-				player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_OR_CHANGE_A_SUBCLASS_WHILE_YOU_HAVE_NO_FREE_SPACE_IN_YOUR_INVENTORY);
 				return;
 			}
 			// Subclasses may not be changed while a you are over your weight limit.
 			if (player.getWeightPenalty() >= 2)
 			{
-				player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_OR_CHANGE_A_DUAL_CLASS_WHILE_YOU_HAVE_OVERWEIGHT);
 				return;
 			}
 			
@@ -1046,7 +1046,7 @@ public class VillageMaster extends Folk
 		}
 		if (clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_THE_DISSOLUTION_OF_YOUR_CLAN);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_THE_DISSOLUTION_OF_S1_CLAN);
 			return;
 		}
 		

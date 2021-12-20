@@ -102,7 +102,7 @@ public class CommandChannel extends AbstractPlayerGroup
 		party.broadcastPacket(ExCloseMPCC.STATIC_PACKET);
 		if (_parties.size() < 2)
 		{
-			broadcastPacket(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
+			broadcastPacket(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_IS_DISBANDED));
 			disbandChannel();
 		}
 		else

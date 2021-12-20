@@ -127,7 +127,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 			final int hours = (int) (remainingTime / 3600);
 			remainingTime = remainingTime % 3600;
 			final int minutes = (int) (remainingTime / 60);
-			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAY_S_S2_HOUR_S_S3_MINUTE_S);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_D_S2_H_S3_MIN);
 			msg.addInt(days);
 			msg.addInt(hours);
 			msg.addInt(minutes);
@@ -157,7 +157,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		// }
 		else if ((MentorManager.getInstance().getMentees(mentor.getObjectId()) != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()).size() >= 3))
 		{
-			mentor.sendPacket(SystemMessageId.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME);
+			mentor.sendPacket(SystemMessageId.A_MENTOR_CAN_HAVE_NO_MORE_THAN_3_MENTEES);
 			return false;
 		}
 		else if (mentee.isMentee())

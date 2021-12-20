@@ -246,7 +246,7 @@ public class RecipeManager
 					_price = item.getCost();
 					if (_target.getAdena() < _price) // check price
 					{
-						_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+						_target.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 						abort();
 						return;
 					}
@@ -387,7 +387,7 @@ public class RecipeManager
 				final Item adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				if (adenatransfer == null)
 				{
-					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					_target.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 					abort();
 					return;
 				}
@@ -482,7 +482,7 @@ public class RecipeManager
 				grabItems -= count;
 				if (_target == _player)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED); // you equipped ...
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1_S2); // you equipped ...
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -621,7 +621,7 @@ public class RecipeManager
 					inv.destroyItemByItemId("Manufacture", tmp.getItemId(), tmp.getQuantity(), _target, _player);
 					if (tmp.getQuantity() > 1)
 					{
-						sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+						sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 						sm.addItemName(tmp.getItemId());
 						sm.addLong(tmp.getQuantity());
 						_target.sendPacket(sm);
@@ -702,7 +702,7 @@ public class RecipeManager
 			
 			if (itemCount > 1)
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 				sm.addItemName(itemId);
 				sm.addLong(itemCount);
 				_target.sendPacket(sm);

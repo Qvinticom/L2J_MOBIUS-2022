@@ -832,7 +832,7 @@ public class Kamaloka extends AbstractInstance
 				}
 				reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 				
-				final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANCE_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.INSTANCE_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_WITH_INSTANCEZONE);
 				sm.addInstanceName(world.getTemplateId());
 				
 				// set instance reenter time for all allowed players

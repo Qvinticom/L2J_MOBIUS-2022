@@ -428,7 +428,7 @@ public class SkillCaster implements Runnable
 		{
 			if (caster.isPlayer())
 			{
-				caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+				caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 			}
 			return false;
 		}
@@ -1076,7 +1076,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.isInOlympiadMode() && skill.isBlockedInOlympiad())
 			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
+				player.sendPacket(SystemMessageId.THE_SKILL_CANNOT_BE_USED_IN_THE_OLYMPIAD);
 				return false;
 			}
 			

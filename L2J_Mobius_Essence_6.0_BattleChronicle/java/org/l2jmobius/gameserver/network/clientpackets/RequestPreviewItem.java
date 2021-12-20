@@ -227,7 +227,7 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		// Charge buyer and add tax to castle treasury if not owned by npc clan because a Try On is not Free
 		if ((totalPrice < 0) || !player.reduceAdena("Wear", totalPrice, player.getLastFolkNPC(), true))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			return;
 		}
 		

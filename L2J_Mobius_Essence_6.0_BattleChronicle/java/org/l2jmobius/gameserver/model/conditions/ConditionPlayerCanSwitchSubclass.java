@@ -52,12 +52,12 @@ public class ConditionPlayerCanSwitchSubclass extends Condition
 		}
 		else if (!player.isInventoryUnder90(true))
 		{
-			player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_OR_CHANGE_A_SUBCLASS_WHILE_YOU_HAVE_NO_FREE_SPACE_IN_YOUR_INVENTORY);
 			canSwitchSub = false;
 		}
 		else if (player.getWeightPenalty() >= 2)
 		{
-			player.sendPacket(SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_WHILE_YOU_ARE_OVER_YOUR_WEIGHT_LIMIT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_OR_CHANGE_A_DUAL_CLASS_WHILE_YOU_HAVE_OVERWEIGHT);
 			canSwitchSub = false;
 		}
 		else if (player.isRegisteredOnEvent())

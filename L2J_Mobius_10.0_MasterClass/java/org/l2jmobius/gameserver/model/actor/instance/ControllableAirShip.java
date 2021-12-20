@@ -147,7 +147,7 @@ public class ControllableAirShip extends AirShip
 				}
 				else if (player.isCursedWeaponEquipped())
 				{
-					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+					player.sendPacket(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHEN_A_CURSED_WEAPON_IS_EQUIPPED);
 					return false;
 				}
 				else if (player.isFishing())

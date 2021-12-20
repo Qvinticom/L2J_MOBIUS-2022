@@ -64,7 +64,7 @@ public class Q10300_ExploringTheCrumaTower extends Quest
 		addTalkId(ORVEN, CARSUS);
 		addKillId(PORTA, EXCURO, MORDEO, RICENSEO, KRATOR, CATHEROK, PREMO, VALIDUS, DICOR, PERUM, TORFE);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_65_CRUMA_TOWER_EXPLORATION_SUPPORT);
+		setQuestNameNpcStringId(NpcStringId.LV_65_EXPLORING_THE_CRUMA_TOWER);
 	}
 	
 	@Override

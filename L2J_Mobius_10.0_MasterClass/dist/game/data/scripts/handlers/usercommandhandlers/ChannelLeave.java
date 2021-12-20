@@ -44,7 +44,7 @@ public class ChannelLeave implements IUserCommandHandler
 		
 		if (!player.isInParty() || !player.getParty().isLeader(player))
 		{
-			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_LEAVE_A_COMMAND_CHANNEL);
+			player.sendPacket(SystemMessageId.ONLY_THE_PARTY_LEADER_CAN_LEAVE_THE_COMMAND_CHANNEL);
 			return false;
 		}
 		
@@ -53,7 +53,7 @@ public class ChannelLeave implements IUserCommandHandler
 			final CommandChannel channel = player.getParty().getCommandChannel();
 			final Party party = player.getParty();
 			channel.removeParty(party);
-			party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL);
+			party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_COMMAND_CHANNEL);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_PARTY_HAS_LEFT_THE_COMMAND_CHANNEL);
 			sm.addPcName(party.getLeader());

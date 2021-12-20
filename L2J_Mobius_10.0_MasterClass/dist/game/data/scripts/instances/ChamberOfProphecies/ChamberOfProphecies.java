@@ -446,7 +446,7 @@ public class ChamberOfProphecies extends AbstractInstance
 			case "exit":
 			{
 				startQuestTimer("finish", 3000, npc, player);
-				player.sendPacket(new SystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(1));
+				player.sendPacket(new SystemMessage(SystemMessageId.THE_INSTANCE_ZONE_EXPIRES_IN_S1_MIN_AFTER_THAT_YOU_WILL_BE_TELEPORTED_OUTSIDE).addInt(1));
 				final QuestState qs = player.getQuestState(Q11027_PathOfDestinyOvercome.class.getSimpleName());
 				if (qs != null)
 				{

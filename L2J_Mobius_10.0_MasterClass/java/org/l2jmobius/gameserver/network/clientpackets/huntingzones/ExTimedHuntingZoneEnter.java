@@ -58,7 +58,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		
 		if (!player.isInsideZone(ZoneId.PEACE))
 		{
-			player.sendPacket(SystemMessageId.CAN_ONLY_ENTER_TO_A_PEACE_ZONE);
+			player.sendPacket(SystemMessageId.YOU_CAN_ENTER_THE_AREA_ONLY_FROM_PEACE_ZONE);
 			return;
 		}
 		if (player.isInCombat())
@@ -83,7 +83,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		}
 		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
 		{
-			player.sendPacket(SystemMessageId.CANNOT_USE_TIME_LIMITED_HUNTING_ZONES_WHILE_WAITING_FOR_THE_OLYMPIAD);
+			player.sendPacket(SystemMessageId.SPECIAL_INSTANCE_ZONES_CANNOT_BE_USED_WHILE_WAITING_FOR_THE_OLYMPIAD);
 			return;
 		}
 		if (player.isRegisteredOnEvent() || (player.getBlockCheckerArena() > -1))
@@ -167,7 +167,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_TIME_AVAILABLE_TO_ENTER_THE_HUNTING_ZONE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_MORE_TIME_FOR_A_CURRENT_HUNTING_ZONES);
 		}
 	}
 }

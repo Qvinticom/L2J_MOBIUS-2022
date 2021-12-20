@@ -61,7 +61,7 @@ public class Q10301_NotSoSilentValley extends Quest
 		addTalkId(ORVEN);
 		addKillId(CHIMERA_PIECE, MUTATED_CREATION, CREATURE_OF_THE_PAST, FORGOTTEN_FACE, SOLDIER_OF_ANCIENT_TIMES, GIANT_SHADOW, WARRIOR_OF_ANCIENT_TIMES, SHAMAN_OF_ANCIENT_TIMES, FORGOTTEN_ANCIENT_PEOPLE, ANCIENT_GUARDIAN);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_SILENT_VALLEY_2);
+		setQuestNameNpcStringId(NpcStringId.DEFEAT_MONSTERS_IN_THE_SILENT_VALLEY_2);
 	}
 	
 	@Override
@@ -178,7 +178,7 @@ public class Q10301_NotSoSilentValley extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_SILENT_VALLEY_2.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_MONSTERS_IN_THE_SILENT_VALLEY_2.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

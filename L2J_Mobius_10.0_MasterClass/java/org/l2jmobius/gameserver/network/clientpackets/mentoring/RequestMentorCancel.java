@@ -70,7 +70,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 						MentorManager.getInstance().cancelAllMentoringBuffs(player);
 					}
 					
-					player.sendPacket(new SystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString(_name));
+					player.sendPacket(new SystemMessage(SystemMessageId.S1_S_MENTORING_CONTRACT_IS_CANCELLED_THE_MENTOR_CANNOT_BOND_WITH_ANOTHER_MENTEE_FOR_2_DAYS).addString(_name));
 					MentorManager.getInstance().setPenalty(player.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_LEAVE);
 					MentorManager.getInstance().deleteMentor(player.getObjectId(), mentee.getObjectId());
 					
@@ -95,7 +95,7 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeLeft(mentor, player), player);
-					mentor.getPlayer().sendPacket(new SystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString(_name));
+					mentor.getPlayer().sendPacket(new SystemMessage(SystemMessageId.S1_S_MENTORING_CONTRACT_IS_CANCELLED_THE_MENTOR_CANNOT_BOND_WITH_ANOTHER_MENTEE_FOR_2_DAYS).addString(_name));
 				}
 			}
 		}

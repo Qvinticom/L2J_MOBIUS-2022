@@ -49,7 +49,7 @@ public class Remons extends AbstractNpcAI
 		{
 			case "NPC_SHOUT":
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.PERHAPS_EVEN_THE_VILLAGE_BECOMES_DANGEROUS);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MAY_THE_VILLAGE_ALSO_BE_IN_DANGER);
 				getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 				break;
 			}

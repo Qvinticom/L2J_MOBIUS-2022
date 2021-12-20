@@ -208,7 +208,7 @@ public class Q10591_NobleMaterial extends Quest
 					basicRewards(player);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
-					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_S1_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -223,7 +223,7 @@ public class Q10591_NobleMaterial extends Quest
 					basicRewards(player);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
-					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_S1_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -238,7 +238,7 @@ public class Q10591_NobleMaterial extends Quest
 					basicRewards(player);
 					player.setNobleLevel(1);
 					player.broadcastInfo();
-					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_S1_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

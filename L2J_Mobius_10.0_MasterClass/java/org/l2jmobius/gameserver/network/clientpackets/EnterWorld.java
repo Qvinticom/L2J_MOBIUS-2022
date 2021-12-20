@@ -380,7 +380,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final ClanHall ch = ClanHallData.getInstance().getClanHallByClan(clan);
 			if ((ch != null) && (ch.getCostFailDay() > 0) && (ch.getResidenceId() < 186))
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_DEPOSIT_THE_NECESSARY_AMOUNT_OF_ADENA_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 				sm.addInt(ch.getLease());
 				player.sendPacket(sm);
 			}
@@ -555,7 +555,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+			player.sendPacket(SystemMessageId.YOU_ARE_DISMISSED_FROM_A_CLAN_YOU_CANNOT_JOIN_ANOTHER_FOR_24_H);
 		}
 		
 		// remove combat flag before teleporting

@@ -68,7 +68,7 @@ public class NpcBody implements ITargetTypeHandler
 				{
 					if (sendMessage)
 					{
-						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+						creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 					}
 					return null;
 				}

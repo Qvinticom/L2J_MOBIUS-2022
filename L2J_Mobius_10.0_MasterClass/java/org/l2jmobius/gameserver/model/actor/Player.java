@@ -2217,7 +2217,7 @@ public class Player extends Playable
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
@@ -2246,7 +2246,7 @@ public class Player extends Playable
 			{
 				if (item.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
+					sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED);
 					sm.addInt(item.getEnchantLevel());
 					sm.addItemName(item);
 				}
@@ -2445,7 +2445,7 @@ public class Player extends Playable
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
-				final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.S1_IS_DISMISSED_FROM_THE_CLAN);
 				msg.addPcName(this);
 				_clan.broadcastToOnlineMembers(msg);
 				_clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
@@ -3067,7 +3067,7 @@ public class Player extends Playable
 	{
 		if (sendMessage)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_ADENA);
 			sm.addLong(count);
 			sendPacket(sm);
 		}
@@ -3211,7 +3211,7 @@ public class Player extends Playable
 	{
 		if (sendMessage)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 			sm.addItemName(Inventory.ANCIENT_ADENA_ID);
 			sm.addLong(count);
 			sendPacket(sm);
@@ -3374,7 +3374,7 @@ public class Player extends Playable
 				{
 					if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 						sm.addItemName(itemId);
 						sm.addLong(count);
 						sendPacket(sm);
@@ -3389,7 +3389,7 @@ public class Player extends Playable
 				}
 				else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
 					sm.addItemName(itemId);
 					sendPacket(sm);
 				}
@@ -6027,7 +6027,7 @@ public class Player extends Playable
 			final Item unequippedItem = unequipped.get(0);
 			if (unequippedItem.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 				sm.addInt(unequippedItem.getEnchantLevel());
 				sm.addItemName(unequippedItem);
 			}
@@ -6068,7 +6068,7 @@ public class Player extends Playable
 				final Item unequippedItem = unequipped.get(0);
 				if (unequippedItem.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+					sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 					sm.addInt(unequippedItem.getEnchantLevel());
 					sm.addItemName(unequippedItem);
 				}
@@ -6139,21 +6139,21 @@ public class Player extends Playable
 			{
 				// A strider cannot be ridden when dead
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_MOUNT_WHILE_DEAD);
+				sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHEN_DEAD);
 				return false;
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_DEAD_MOUNT);
+				sendPacket(SystemMessageId.A_DEAD_MOUNT_CANNOT_BE_RIDDEN);
 				return false;
 			}
 			else if (pet.isInCombat() || pet.isRooted())
 			{
 				// A strider in battle cannot be ridden
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_MOUNT_THAT_IS_IN_BATTLE);
+				sendPacket(SystemMessageId.A_MOUNT_IN_BATTLE_CANNOT_BE_RIDDEN);
 				return false;
 			}
 			else if (isInCombat())
@@ -8093,7 +8093,7 @@ public class Player extends Playable
 			if (henna.getCancelCount() > 0)
 			{
 				_inventory.addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 				sm.addItemName(henna.getDyeItemId());
 				sm.addLong(henna.getCancelCount());
 				sendPacket(sm);
@@ -8582,20 +8582,20 @@ public class Player extends Playable
 				final int seconds = (remainingTime % 60);
 				if (hours > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_H_S3_MIN_S4_SEC);
 					sm.addSkillName(usedSkill);
 					sm.addInt(hours);
 					sm.addInt(minutes);
 				}
 				else if (minutes > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_MIN_S3_SEC);
 					sm.addSkillName(usedSkill);
 					sm.addInt(minutes);
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_AGAIN_IN_S2_SEC);
 					sm.addSkillName(usedSkill);
 				}
 				
@@ -8618,7 +8618,7 @@ public class Player extends Playable
 		// Check if the caster is sitting
 		if (_waitTypeSitting)
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
+			sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
@@ -9572,7 +9572,7 @@ public class Player extends Playable
 		}
 		if (_isInDuel || _startingDuel)
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
+			_noDuelReason = SystemMessageId.C1_IS_ALREADY_IN_A_DUEL;
 			return false;
 		}
 		if (_inOlympiadMode || isRegisteredOnEvent())
@@ -9582,7 +9582,7 @@ public class Player extends Playable
 		}
 		if (isCursedWeaponEquipped())
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
+			_noDuelReason = SystemMessageId.C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE_AND_CANNOT_PARTICIPATE_IN_A_DUEL;
 			return false;
 		}
 		if (_privateStoreType != PrivateStoreType.NONE)
@@ -9592,7 +9592,7 @@ public class Player extends Playable
 		}
 		if (isMounted() || isInBoat())
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
+			_noDuelReason = SystemMessageId.C1_IS_RIDING_A_BOAT_FENRIR_OR_STRIDER_AND_THEREFORE_CANNOT_DUEL;
 			return false;
 		}
 		if (isFishing())
@@ -11777,7 +11777,7 @@ public class Player extends Playable
 		if (skill != null)
 		{
 			skill.applyEffects(this, this);
-			sendPacket(new SystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(nextLv));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILLIEN_S_BREATH_LEVEL_S1).addInt(nextLv));
 		}
 	}
 	
@@ -11788,11 +11788,11 @@ public class Player extends Playable
 		{
 			final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), nextLv);
 			skill.applyEffects(this, this);
-			sendPacket(new SystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(nextLv));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILLIEN_S_BREATH_LEVEL_S1).addInt(nextLv));
 		}
 		else
 		{
-			sendPacket(SystemMessageId.SHILEN_S_BREATH_HAS_BEEN_PURIFIED);
+			sendPacket(SystemMessageId.SHILLIEN_S_BREATH_HAS_BEEN_PURIFIED);
 		}
 	}
 	
@@ -11802,7 +11802,7 @@ public class Player extends Playable
 		{
 			final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), level);
 			skill.applyEffects(this, this);
-			sendPacket(new SystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(level));
+			sendPacket(new SystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILLIEN_S_BREATH_LEVEL_S1).addInt(level));
 		}
 	}
 	
@@ -11870,12 +11870,12 @@ public class Player extends Playable
 		}
 		else if (target.isDoor() || (target instanceof ControlTower))
 		{
-			sm = new SystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
+			sm = new SystemMessage(SystemMessageId.YOU_VE_HIT_FOR_S1_DAMAGE);
 			sm.addInt(damage);
 		}
 		else if (this != target)
 		{
-			sm = new SystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+			sm = new SystemMessage(SystemMessageId.C1_HAS_DEALT_S3_DAMAGE_TO_C2);
 			sm.addPcName(this);
 			
 			// Localisation related.
@@ -11953,7 +11953,7 @@ public class Player extends Playable
 				
 				if (equippedItem.getEnchantLevel() > 0)
 				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+					sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 					sm.addInt(equippedItem.getEnchantLevel());
 					sm.addItemName(equippedItem);
 				}
@@ -12392,17 +12392,17 @@ public class Player extends Playable
 		}
 		else if (hasBlockActions() && hasAbnormalType(AbnormalType.PARALYZE))
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_PETRIFIED_OR_PARALYZED_STATE);
+			sendPacket(SystemMessageId.CANNOT_TELEPORT_WHILE_PETRIFIED_OR_PARALYZED);
 			return false;
 		}
 		else if (isDead())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_DEAD);
+			sendPacket(SystemMessageId.YOU_CANNOT_USE_TELEPORT_WHILE_YOU_ARE_DEAD);
 			return false;
 		}
 		else if (isInWater())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_UNDERWATER);
+			sendPacket(SystemMessageId.YOU_CANNOT_USE_TELEPORT_UNDERWATER);
 			return false;
 		}
 		else if ((type == 1) && (isInsideZone(ZoneId.SIEGE) || isInsideZone(ZoneId.CLAN_HALL) || isInsideZone(ZoneId.JAIL) || isInsideZone(ZoneId.CASTLE) || isInsideZone(ZoneId.NO_SUMMON_FRIEND) || isInsideZone(ZoneId.FORT)))
@@ -12414,7 +12414,7 @@ public class Player extends Playable
 		{
 			if (type == 0)
 			{
-				sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
+				sendPacket(SystemMessageId.YOU_CANNOT_USE_TELEPORT_IN_THIS_AREA);
 			}
 			else if (type == 1)
 			{
@@ -12963,7 +12963,7 @@ public class Player extends Playable
 			if ((_fallingDamage > 0) && !isInvul())
 			{
 				reduceCurrentHp(Math.min(_fallingDamage, getCurrentHp() - 1), this, null, false, true, false, false);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_VE_RECEIVED_S1_DAMAGE_FROM_FALLING);
 				sm.addInt(_fallingDamage);
 				sendPacket(sm);
 			}
@@ -14233,7 +14233,7 @@ public class Player extends Playable
 		}
 		if (oldLevel < getFactionLevel(faction))
 		{
-			sendPacket(new SystemMessage(SystemMessageId.THE_AMITY_LEVEL_OF_S1_HAS_INCREASED_OPEN_THE_FACTIONS_WINDOW_TO_CHECK).addFactionName(faction.getId()));
+			sendPacket(new SystemMessage(SystemMessageId.THE_S1_FACTION_LEVEL_HAS_INCREASED_OPEN_THE_FACTIONS_WINDOW_TO_LEARN_MORE).addFactionName(faction.getId()));
 		}
 	}
 	

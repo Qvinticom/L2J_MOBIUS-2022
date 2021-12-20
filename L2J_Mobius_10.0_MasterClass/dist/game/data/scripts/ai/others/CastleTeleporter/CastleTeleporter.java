@@ -154,7 +154,7 @@ public class CastleTeleporter extends AbstractNpcAI
 			case "MASS_TELEPORT":
 			{
 				final int region = MapRegionManager.getInstance().getMapRegionLocId(npc.getX(), npc.getY());
-				final NpcSay msg = new NpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.THE_DEFENDERS_OF_S1_CASTLE_WILL_BE_TELEPORTED_TO_THE_INNER_CASTLE);
+				final NpcSay msg = new NpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.THE_DEFENDERS_OF_S1_CASTLE_WILL_BE_TELEPORTED_INSIDE);
 				msg.addStringParameter(npc.getCastle().getName());
 				npc.getCastle().oustAllPlayers();
 				npc.setScriptValue(0);

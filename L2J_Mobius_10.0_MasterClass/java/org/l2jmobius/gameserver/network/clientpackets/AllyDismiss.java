@@ -92,6 +92,6 @@ public class AllyDismiss implements IClientIncomingPacket
 		clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_DISMISSED * 86400000), Clan.PENALTY_TYPE_CLAN_DISMISSED); // 24*60*60*1000 = 86400000
 		clan.updateClanInDB();
 		
-		player.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_EXPELLING_THE_CLAN);
+		player.sendPacket(SystemMessageId.THE_CLAN_IS_DISMISSED_FROM_THE_ALLIANCE);
 	}
 }

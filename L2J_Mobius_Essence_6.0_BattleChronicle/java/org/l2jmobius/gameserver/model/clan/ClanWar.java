@@ -65,7 +65,7 @@ public class ClanWar
 		sm.addString(attacked.getName());
 		attacker.broadcastToOnlineMembers(sm);
 		
-		sm = new SystemMessage(SystemMessageId.S1_HAS_DECLARED_A_CLAN_WAR_THE_WAR_WILL_AUTOMATICALLY_START_IF_YOU_KILL_MORE_THAN_5_CLAN_MEMBERS_IN_A_WEEK);
+		sm = new SystemMessage(SystemMessageId.S1_HAS_DECLARED_A_CLAN_WAR_THE_WAR_WILL_AUTOMATICALLY_START_IF_YOU_KILL_MORE_THAN_5_S1_CLAN_MEMBERS_IN_A_WEEK);
 		sm.addString(attacker.getName());
 		attacked.broadcastToOnlineMembers(sm);
 	}
@@ -169,7 +169,7 @@ public class ClanWar
 		// Reduce reputation.
 		cancelor.takeReputationScore(500);
 		player.sendPacket(new SurrenderPledgeWar(cancelor.getName(), player.getName()));
-		SystemMessage sm = new SystemMessage(SystemMessageId.THE_WAR_ENDED_BY_YOUR_DEFEAT_DECLARATION_WITH_THE_S1_CLAN);
+		SystemMessage sm = new SystemMessage(SystemMessageId.THE_WAR_IS_OVER_AS_YOU_VE_ADMITTED_DEFEAT_FROM_THE_CLAN_S1_YOU_VE_LOST);
 		sm.addString(winnerClan.getName());
 		cancelor.broadcastToOnlineMembers(sm);
 		

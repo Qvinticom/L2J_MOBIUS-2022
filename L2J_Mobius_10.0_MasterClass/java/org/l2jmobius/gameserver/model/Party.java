@@ -550,14 +550,14 @@ public class Party extends AbstractPlayerGroup
 			SystemMessage msg;
 			if (type == MessageType.EXPELLED)
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
-				msg = new SystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
+				player.sendPacket(SystemMessageId.YOU_ARE_DISMISSED_FROM_THE_PARTY);
+				msg = new SystemMessage(SystemMessageId.C1_IS_DISMISSED_FROM_THE_PARTY);
 				msg.addString(player.getName());
 				broadcastPacket(msg);
 			}
 			else if ((type == MessageType.LEFT) || (type == MessageType.DISCONNECTED))
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
+				player.sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_PARTY);
 				msg = new SystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
 				msg.addString(player.getName());
 				broadcastPacket(msg);
@@ -637,7 +637,7 @@ public class Party extends AbstractPlayerGroup
 	public void disbandParty()
 	{
 		_disbanding = true;
-		broadcastPacket(new SystemMessage(SystemMessageId.THE_PARTY_HAS_DISPERSED));
+		broadcastPacket(new SystemMessage(SystemMessageId.THE_PARTY_IS_DISBANDED));
 		for (Player member : _members)
 		{
 			if (member != null)
@@ -1146,7 +1146,7 @@ public class Party extends AbstractPlayerGroup
 		{
 			broadcastPacket(new ExSetPartyLooting(1, _changeRequestDistributionType));
 			_distributionType = _changeRequestDistributionType;
-			final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LOOTING_METHOD_WAS_CHANGED_TO_S1);
 			sm.addSystemString(_changeRequestDistributionType.getSysStringId());
 			broadcastPacket(sm);
 		}

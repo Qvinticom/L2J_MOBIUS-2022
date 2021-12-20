@@ -44,9 +44,9 @@ import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.instancemanager.ItemCommissionManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -2673,21 +2673,21 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_ADENA);
 			smsg.addLong(count);
 			player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
 		else if (count > 1)
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 			smsg.addItemName(item);
 			smsg.addLong(count);
 			player.sendPacket(smsg);
 		}
 		else
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
 			smsg.addItemName(item);
 			player.sendPacket(smsg);
 		}

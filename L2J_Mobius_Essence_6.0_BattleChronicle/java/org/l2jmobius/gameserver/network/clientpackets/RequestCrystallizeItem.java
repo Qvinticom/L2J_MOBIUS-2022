@@ -213,7 +213,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.ITEM_S1_S2_UNEQUIPPED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 			}
@@ -238,7 +238,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			{
 				// add crystals
 				final Item createdItem = player.getInventory().addItem("Crystalize", holder.getId(), holder.getCount(), player, player);
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 				sm.addItemName(createdItem);
 				sm.addLong(holder.getCount());
 				player.sendPacket(sm);

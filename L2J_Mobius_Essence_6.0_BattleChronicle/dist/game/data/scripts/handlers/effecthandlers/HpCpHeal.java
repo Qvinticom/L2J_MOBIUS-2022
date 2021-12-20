@@ -176,7 +176,7 @@ public class HpCpHeal extends AbstractEffect
 			}
 			else
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_RECOVER_S1_CP);
 				sm.addInt((int) amount);
 				effected.sendPacket(sm);
 			}

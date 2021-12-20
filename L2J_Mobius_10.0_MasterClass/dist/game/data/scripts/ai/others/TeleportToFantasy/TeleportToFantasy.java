@@ -82,7 +82,7 @@ public class TeleportToFantasy extends AbstractNpcAI
 			}
 			else
 			{
-				npc.broadcastSay(ChatType.GENERAL, NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_I_LL_BE_SENDING_YOU_BACK_TO_THE_TOWN_OF_RUNE_WHICH_IS_THE_NEAREST_TOWN);
+				npc.broadcastSay(ChatType.GENERAL, NpcStringId.YOUR_MEANS_OF_ARRIVAL_HAS_BEEN_A_BIT_UNCONVENTIONAL_I_LL_SEND_YOU_TO_RUNE_WHICH_IS_THE_NEAREST_TOWN);
 				player.teleToLocation(TELEPORTER_LOCATIONS.get(31320)); // Rune
 			}
 		}

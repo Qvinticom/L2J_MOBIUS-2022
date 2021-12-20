@@ -122,7 +122,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		// first validation check - also over enchant check
 		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && ((item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()) || (!(item.getItem().getEnchantLimit() == 0) && (item.getEnchantLevel() == item.getItem().getEnchantLimit())))))
 		{
-			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 			player.removeRequest(request.getClass());
 			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
@@ -163,7 +163,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			// last validation check
 			if ((item.getOwnerId() != player.getObjectId()) || !item.isEnchantable())
 			{
-				player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+				player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 				player.removeRequest(request.getClass());
 				player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
@@ -174,7 +174,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			{
 				case ERROR:
 				{
-					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+					player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 					player.removeRequest(request.getClass());
 					player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 					break;
@@ -292,7 +292,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						{
 							if (item.getEnchantLevel() > 0)
 							{
-								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 								sm.addInt(item.getEnchantLevel());
 								sm.addItemName(item);
 								player.sendPacket(sm);
@@ -398,7 +398,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							{
 								crystals = player.getInventory().addItem("Enchant", crystalId, count, player, item);
 								
-								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 								sm.addItemName(crystals);
 								sm.addLong(count);
 								player.sendPacket(sm);

@@ -299,7 +299,7 @@ public class Nursery extends AbstractInstance
 						{
 							gameManager.getVariables().increaseInt("GAME_POINTS", returnPoint);
 						}
-						showOnScreenMsg(instance, NpcStringId.MAGUEN_GETS_SURPRISED_AND_GIVES_S1_PIECES_OF_BIO_ENERGY_RESIDUE, ExShowScreenMessage.MIDDLE_CENTER, 3000, String.valueOf(returnPoint));
+						showOnScreenMsg(instance, NpcStringId.MAGUEN_IS_SURPRISED_AND_LOSES_S1_PIECES_OF_BIO_ENERGY_RESIDUE, ExShowScreenMessage.MIDDLE_CENTER, 3000, String.valueOf(returnPoint));
 						npc.setTargetable(false);
 						npc.doDie(null);
 					}
@@ -350,7 +350,7 @@ public class Nursery extends AbstractInstance
 				final Npc maguen = addSpawn(MAGUEN, npc, false, 0, false, instance.getId());
 				maguen.setRunning();
 				maguen.getAI().startFollow(killer);
-				showOnScreenMsg(instance, NpcStringId.MAGUEN_APPEARANCE, ExShowScreenMessage.MIDDLE_CENTER, 4000);
+				showOnScreenMsg(instance, NpcStringId.MAGUEN, ExShowScreenMessage.MIDDLE_CENTER, 4000);
 				getTimers().addTimer("MAGUEN_WAIT_TIMER", 4000, maguen, killer);
 				getTimers().addTimer("MAGUEN_HIDE_TIMER", 60000, maguen, null);
 			}
@@ -418,7 +418,7 @@ public class Nursery extends AbstractInstance
 					}
 					npc.setTargetable(true);
 					managerVars.increaseInt("GAME_POINTS", decreasePoints * -1);
-					showOnScreenMsg(instance, NpcStringId.MAGUEN_STOLE_S1_PIECES_OF_BIO_ENERGY_RESIDUE, ExShowScreenMessage.MIDDLE_CENTER, 4000, String.valueOf(decreasePoints));
+					showOnScreenMsg(instance, NpcStringId.MAGUEN_HAS_STOLEN_S1_PIECES_OF_BIO_ENERGY_RESIDUE, ExShowScreenMessage.MIDDLE_CENTER, 4000, String.valueOf(decreasePoints));
 					npcVars.set("MAGUEN_STOLEN_COUNT", decreasePoints);
 					npcVars.set("MAGUEN_STATUS", 1);
 					if (decreasePoints > 50)

@@ -188,7 +188,7 @@ public class PlayerStatus extends PlayableStatus
 				else
 				{
 					getActiveChar().reduceCurrentMp(mpDam);
-					final SystemMessage smsg = new SystemMessage(SystemMessageId.ARCANE_SHIELD_DECREASED_YOUR_MP_INSTEAD_OF_HP);
+					final SystemMessage smsg = new SystemMessage(SystemMessageId.ARCANE_SHIELD_S1_DECREASED_YOUR_MP_INSTEAD_OF_HP);
 					smsg.addInt(mpDam);
 					getActiveChar().sendPacket(smsg);
 					return;

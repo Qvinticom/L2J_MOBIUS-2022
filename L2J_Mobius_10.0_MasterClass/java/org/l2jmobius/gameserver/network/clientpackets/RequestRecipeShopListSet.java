@@ -82,7 +82,7 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 		
 		if (_manufactureRecipes == null)
 		{
-			player.sendPacket(SystemMessageId.ITEMS_ARE_NOT_AVAILABLE_FOR_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(SystemMessageId.ITEMS_IN_A_PRIVATE_STORE_OR_A_PRIVATE_WORKSHOP_CANNOT_BE_EQUIPPED);
 			player.setPrivateStoreType(PrivateStoreType.NONE);
 			player.broadcastUserInfo();
 			return;

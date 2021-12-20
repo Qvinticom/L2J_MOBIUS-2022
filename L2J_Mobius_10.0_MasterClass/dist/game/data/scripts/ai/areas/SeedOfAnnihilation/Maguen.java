@@ -97,7 +97,7 @@ public class Maguen extends AbstractNpcAI
 				maguen.setRunning();
 				maguen.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 				maguen.broadcastStatusUpdate();
-				showOnScreenMsg(player, NpcStringId.MAGUEN_APPEARANCE, 2, 4000);
+				showOnScreenMsg(player, NpcStringId.MAGUEN, 2, 4000);
 				startQuestTimer("DIST_CHECK_TIMER", 1000, maguen, player);
 				break;
 			}

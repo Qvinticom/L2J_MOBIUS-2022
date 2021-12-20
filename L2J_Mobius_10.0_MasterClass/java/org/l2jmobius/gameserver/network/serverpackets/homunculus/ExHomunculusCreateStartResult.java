@@ -36,7 +36,7 @@ public class ExHomunculusCreateStartResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_HOMUNCULUS_CREATE_START_RESULT.writeId(packet);
 		packet.writeD(1); // 1 - success
-		packet.writeD(SystemMessageId.YOUVE_SEALED_A_HOMUNCULUS_HEART_IN_ORDER_TO_CREATE_IT_YOUR_BLOOD_SPIRIT_AND_TEARS_ARE_REQUIRED.getId());
+		packet.writeD(SystemMessageId.YOU_VE_SEALED_A_HOMUNCULUS_HEART_IN_ORDER_TO_CREATE_IT_YOUR_BLOOD_SPIRIT_AND_TEARS_ARE_REQUIRED.getId());
 		return true;
 	}
 }

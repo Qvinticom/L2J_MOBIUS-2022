@@ -94,7 +94,7 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IN_BATTLE);
 			return;
 		}
 		else if (player.isInStoreMode() || (player.getPrivateStoreType() != PrivateStoreType.NONE))

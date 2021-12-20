@@ -152,7 +152,7 @@ public abstract class AbstractOlympiadGame
 		}
 		if (!player.isInventoryUnder90(true))
 		{
-			sm = new SystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_AS_THE_INVENTORY_WEIGHT_SLOT_IS_FILLED_BEYOND_80);
+			sm = new SystemMessage(SystemMessageId.C1_CAN_T_PARTICIPATE_IN_THE_OLYMPIAD_BECAUSE_THEIR_INVENTORY_IS_FILLED_FOR_MORE_THAN_80);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return new SystemMessage(SystemMessageId.YOUR_OPPONENT_DOES_NOT_MEET_THE_REQUIREMENTS_TO_DO_BATTLE_THE_MATCH_HAS_BEEN_CANCELLED);
@@ -428,7 +428,7 @@ public abstract class AbstractOlympiadGame
 				}
 				
 				iu.addModifiedItem(item);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 				sm.addItemName(item);
 				sm.addLong(holder.getCount());
 				player.sendPacket(sm);

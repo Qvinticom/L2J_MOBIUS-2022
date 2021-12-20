@@ -178,7 +178,7 @@ public class RequestProcureCropList implements IClientIncomingPacket
 				sm.addLong(i.getCount());
 				player.sendPacket(sm);
 				
-				sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				sm = new SystemMessage(SystemMessageId.NOT_ENOUGH_ADENA);
 				player.sendPacket(sm);
 				continue;
 			}

@@ -166,7 +166,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		}
 		else if ((totalPrice < 0) || (player.getAdena() < totalPrice))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			return;
 		}
 		

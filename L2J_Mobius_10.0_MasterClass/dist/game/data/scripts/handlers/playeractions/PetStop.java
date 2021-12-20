@@ -33,7 +33,7 @@ public class PetStop implements IPlayerActionHandler
 	{
 		if ((player.getPet() == null) || !player.getPet().isPet())
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_PET);
 			return;
 		}
 		
@@ -44,7 +44,7 @@ public class PetStop implements IPlayerActionHandler
 		}
 		else if (pet.isBetrayed())
 		{
-			player.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 		}
 		else
 		{
