@@ -47,6 +47,7 @@ public class AirBind extends AbstractEffect
 		AIRBIND_SKILLS.put(ClassId.SIGEL_HELL_KNIGHT, 10249); // Heavy Hit
 		AIRBIND_SKILLS.put(ClassId.SIGEL_EVA_TEMPLAR, 10249); // Heavy Hit
 		AIRBIND_SKILLS.put(ClassId.SIGEL_SHILLIEN_TEMPLAR, 10249); // Heavy Hit
+		AIRBIND_SKILLS.put(ClassId.SIGEL_DEATH_KNIGHT, 10249); // Heavy Hit
 		AIRBIND_SKILLS.put(ClassId.TYRR_DUELIST, 10499); // Heavy Hit
 		AIRBIND_SKILLS.put(ClassId.TYRR_DREADNOUGHT, 10499); // Heavy Hit
 		AIRBIND_SKILLS.put(ClassId.TYRR_TITAN, 10499); // Heavy Hit

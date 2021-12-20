@@ -65,6 +65,7 @@ public class KnockBack extends AbstractEffect
 		KNOCKBACK_SKILLS.put(ClassId.SIGEL_HELL_KNIGHT, 10250); // Heavy Hit
 		KNOCKBACK_SKILLS.put(ClassId.SIGEL_EVA_TEMPLAR, 10250); // Heavy Hit
 		KNOCKBACK_SKILLS.put(ClassId.SIGEL_SHILLIEN_TEMPLAR, 10250); // Heavy Hit
+		KNOCKBACK_SKILLS.put(ClassId.SIGEL_DEATH_KNIGHT, 10250); // Heavy Hit
 		KNOCKBACK_SKILLS.put(ClassId.TYRR_DUELIST, 10500); // Heavy Hit
 		KNOCKBACK_SKILLS.put(ClassId.TYRR_DREADNOUGHT, 10500); // Heavy Hit
 		KNOCKBACK_SKILLS.put(ClassId.TYRR_TITAN, 10500); // Heavy Hit
