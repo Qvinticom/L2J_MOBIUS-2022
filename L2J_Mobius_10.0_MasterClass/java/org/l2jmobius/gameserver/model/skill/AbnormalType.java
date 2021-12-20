@@ -264,6 +264,7 @@ public enum AbnormalType
 	PK_DEBUFF1(-1),
 	PK_DEBUFF2(-1),
 	ERATON(-1),
+	DK_AURA(-1),
 	AB_HAWK_EYE(0),
 	ALL_ATTACK_DOWN(1),
 	ALL_ATTACK_UP(2),
