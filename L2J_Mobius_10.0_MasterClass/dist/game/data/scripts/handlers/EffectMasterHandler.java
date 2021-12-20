@@ -193,6 +193,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("HpDrain", HpDrain::new);
 		EffectHandler.getInstance().registerHandler("HpRegen", HpRegen::new);
 		EffectHandler.getInstance().registerHandler("HpToOwner", HpToOwner::new);
+		EffectHandler.getInstance().registerHandler("Ignition", Ignition::new);
 		EffectHandler.getInstance().registerHandler("IgnoreDeath", IgnoreDeath::new);
 		EffectHandler.getInstance().registerHandler("ImmobileDamageBonus", ImmobileDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("ImmobileDamageResist", ImmobileDamageResist::new);

@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
@@ -1379,7 +1380,17 @@ public abstract class Inventory extends ItemContainer
 	public int getPaperdollItemVisualId(int slot)
 	{
 		final Item item = _paperdoll[slot];
-		return (item != null) ? item.getVisualId() : 0;
+		if (item == null)
+		{
+			return 0;
+		}
+		
+		if (item.isWeapon() && getOwner().isAffected(EffectFlag.IGNITION) && (item.getWeaponItem().getItemType() == WeaponType.SWORD) && (item.getWeaponItem().getBodyPart() != ItemTemplate.SLOT_LR_HAND))
+		{
+			return 82118; // Death Knight's Flame Sword
+		}
+		
+		return item.getVisualId();
 	}
 	
 	public VariationInstance getPaperdollAugmentation(int slot)
