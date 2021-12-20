@@ -41,7 +41,6 @@ public class ExDieInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DIE_INFO.writeId(packet);
-		
 		packet.writeH(_droppedItems.size());
 		for (Item item : _droppedItems)
 		{
@@ -49,17 +48,15 @@ public class ExDieInfo implements IClientOutgoingPacket
 			packet.writeD(item.getEnchantLevel());
 			packet.writeD((int) item.getCount());
 		}
-		
 		packet.writeD(_lastDamageTaken.size());
 		for (DamageTakenHolder damageHolder : _lastDamageTaken)
 		{
 			packet.writeS(damageHolder.getCreature().getName());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(damageHolder.getSkillId());
 			packet.writeF(damageHolder.getDamage());
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
-		
 		return true;
 	}
 }

@@ -92,10 +92,8 @@ public class Attack implements IClientOutgoingPacket
 	{
 		// Get the last position in the hits table
 		final int pos = _hits.length;
-		
 		// Create a new Hit object
 		final Hit[] tmp = new Hit[pos + 1];
-		
 		// Add the new Hit object to hits table
 		System.arraycopy(_hits, 0, tmp, 0, _hits.length);
 		tmp[pos] = new Hit(target, damage, miss, crit, shld);

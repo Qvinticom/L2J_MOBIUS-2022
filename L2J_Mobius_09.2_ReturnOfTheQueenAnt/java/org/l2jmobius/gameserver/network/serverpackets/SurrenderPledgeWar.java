@@ -34,7 +34,6 @@ public class SurrenderPledgeWar implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SURRENDER_PLEDGE_WAR.writeId(packet);
-		
 		packet.writeS(_pledgeName);
 		packet.writeS(_playerName);
 		return true;

@@ -40,7 +40,6 @@ public class ExUserBoostStat implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_USER_BOOST_STAT.writeId(packet);
-		
 		int count = 0;
 		int bonus = 0;
 		switch (_type)
@@ -68,7 +67,6 @@ public class ExUserBoostStat implements IClientOutgoingPacket
 					count = 1;
 					bonus = 100;
 				}
-				
 				if (bonus > 0)
 				{
 					count += (int) _player.getStat().getValue(Stat.VITALITY_SKILLS, 0);
@@ -89,11 +87,9 @@ public class ExUserBoostStat implements IClientOutgoingPacket
 				break;
 			}
 		}
-		
 		packet.writeC(_type.getId());
 		packet.writeC(count);
 		packet.writeH(bonus);
-		
 		return true;
 	}
 }

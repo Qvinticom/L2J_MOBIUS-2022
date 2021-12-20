@@ -55,7 +55,6 @@ public class ExResponseCommissionInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_INFO.writeId(packet);
-		
 		packet.writeD(_result);
 		packet.writeD(_itemId);
 		packet.writeQ(_presetPricePerUnit);

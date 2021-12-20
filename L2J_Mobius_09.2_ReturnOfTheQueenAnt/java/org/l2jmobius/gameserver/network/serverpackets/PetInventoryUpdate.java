@@ -46,7 +46,6 @@ public class PetInventoryUpdate extends AbstractInventoryUpdate
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_INVENTORY_UPDATE.writeId(packet);
-		
 		writeItems(packet);
 		return true;
 	}

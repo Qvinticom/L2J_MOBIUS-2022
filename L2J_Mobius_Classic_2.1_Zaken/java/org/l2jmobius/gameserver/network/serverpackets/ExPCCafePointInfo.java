@@ -56,7 +56,6 @@ public class ExPCCafePointInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PCCAFE_POINT_INFO.writeId(packet);
-		
 		packet.writeD(_points); // num points
 		packet.writeD(_mAddPoint); // points inc display
 		packet.writeC(_mPeriodType); // period(0=don't show window,1=acquisition,2=use points)

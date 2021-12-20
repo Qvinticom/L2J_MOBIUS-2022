@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final Set<Integer> _routes;
-	
 	private final int _skillId;
 	private final int _skillLevel;
 	private final int _skillSubLevel;

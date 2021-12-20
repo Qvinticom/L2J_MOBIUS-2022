@@ -36,7 +36,6 @@ public class ExRpItemLink extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RP_ITEM_LINK.writeId(packet);
-		
 		writeItem(packet, _item);
 		return true;
 	}

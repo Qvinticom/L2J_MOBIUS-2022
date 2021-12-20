@@ -97,7 +97,6 @@ public class ExSubjobInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SUBJOB_INFO.writeId(packet);
-		
 		packet.writeC(_type);
 		packet.writeD(_currClassId);
 		packet.writeD(_currRace);

@@ -41,10 +41,8 @@ public class ExPledgeMissionRewardCount implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_MISSION_REWARD_COUNT.writeId(packet);
-		
 		packet.writeD(Math.min(_availableMissionsCount, _doneMissionsCount)); // Received missions rewards.
 		packet.writeD(_availableMissionsCount); // Available missions rewards. 18 - for noble, 20 - for honnorable noble.
-		
 		return true;
 	}
 }

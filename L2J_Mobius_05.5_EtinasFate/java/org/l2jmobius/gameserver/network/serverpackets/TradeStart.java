@@ -58,7 +58,6 @@ public class TradeStart extends AbstractItemPacket
 			{
 				_mask |= 0x08;
 			}
-			
 			// Does not shows level
 			if (_partner.isGM())
 			{

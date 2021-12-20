@@ -38,7 +38,6 @@ public class ExSetPartyLooting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SET_PARTY_LOOTING.writeId(packet);
-		
 		packet.writeD(_result);
 		packet.writeD(_partyDistributionType.getId());
 		return true;

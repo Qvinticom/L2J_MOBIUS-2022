@@ -41,7 +41,6 @@ public class ExReplyPostItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REPLY_POST_ITEM_LIST.writeId(packet);
-		
 		packet.writeD(_itemList.size());
 		for (Item item : _itemList)
 		{

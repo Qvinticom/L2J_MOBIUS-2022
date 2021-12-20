@@ -45,8 +45,7 @@ public class BuyList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
-		
-		packet.writeD(0x00); // Type BUY
+		packet.writeD(0); // Type BUY
 		packet.writeQ(_money); // current money
 		packet.writeD(_listId);
 		packet.writeD(_inventorySlots);

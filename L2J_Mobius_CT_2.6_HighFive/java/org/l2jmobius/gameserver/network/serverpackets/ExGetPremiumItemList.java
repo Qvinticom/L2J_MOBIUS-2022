@@ -47,7 +47,7 @@ public class ExGetPremiumItemList implements IClientOutgoingPacket
 			packet.writeD(_player.getObjectId());
 			packet.writeD(item.getItemId());
 			packet.writeQ(item.getCount());
-			packet.writeD(0x00); // ?
+			packet.writeD(0); // ?
 			packet.writeS(item.getSender());
 		}
 		return true;

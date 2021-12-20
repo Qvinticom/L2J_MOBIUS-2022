@@ -37,7 +37,6 @@ public class ExRotation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ROTATION.writeId(packet);
-		
 		packet.writeD(_charId);
 		packet.writeD(_heading);
 		return true;

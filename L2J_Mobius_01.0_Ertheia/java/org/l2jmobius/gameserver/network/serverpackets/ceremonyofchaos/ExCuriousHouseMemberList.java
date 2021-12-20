@@ -43,7 +43,6 @@ public class ExCuriousHouseMemberList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_LIST.writeId(packet);
-		
 		packet.writeD(_id);
 		packet.writeD(_maxPlayers);
 		packet.writeD(_players.size());

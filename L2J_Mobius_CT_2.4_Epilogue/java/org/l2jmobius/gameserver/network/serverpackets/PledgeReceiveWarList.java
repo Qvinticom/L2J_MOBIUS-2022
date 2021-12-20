@@ -39,9 +39,8 @@ public class PledgeReceiveWarList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_RECEIVE_WAR_LIST.writeId(packet);
-		
 		packet.writeD(_tab); // type : 0 = Declared, 1 = Under Attack
-		packet.writeD(0x00); // page
+		packet.writeD(0); // page
 		packet.writeD(_tab == 0 ? _clan.getWarList().size() : _clan.getAttackerList().size());
 		for (Integer i : _tab == 0 ? _clan.getWarList() : _clan.getAttackerList())
 		{
@@ -50,7 +49,6 @@ public class PledgeReceiveWarList implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			packet.writeS(clan.getName());
 			packet.writeD(_tab); // ??
 			packet.writeD(_tab); // ??

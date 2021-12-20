@@ -39,10 +39,8 @@ public class NpcInfoAbnormalVisualEffect implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.NPC_INFO_ABNORMAL_VISUAL_EFFECT.writeId(packet);
-		
 		packet.writeD(_npc.getObjectId());
 		packet.writeD(_npc.getTransformationDisplayId());
-		
 		final Set<AbnormalVisualEffect> abnormalVisualEffects = _npc.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeD(abnormalVisualEffects.size());
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)

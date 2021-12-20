@@ -37,7 +37,7 @@ public class ExBaseAttributeCancelResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BASE_ATTRIBUTE_CANCEL_RESULT.writeId(packet);
-		packet.writeD(0x01); // result
+		packet.writeD(1); // result
 		packet.writeD(_objId);
 		packet.writeD(_attribute);
 		return true;

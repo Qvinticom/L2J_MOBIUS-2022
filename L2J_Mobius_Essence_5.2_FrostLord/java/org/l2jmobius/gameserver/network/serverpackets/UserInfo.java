@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class UserInfo extends AbstractMaskPacket<UserInfoType>
 {
 	private Player _player;
-	
 	private int _relation;
 	private int _runSpd;
 	private int _walkSpd;
@@ -51,7 +50,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	private int _enchantLevel;
 	private int _armorEnchant;
 	private String _title;
-	
 	private final byte[] _masks = new byte[]
 	{
 		(byte) 0x00,
@@ -59,7 +57,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		(byte) 0x00,
 		(byte) 0x00
 	};
-	
 	private int _initSize = 5;
 	
 	public UserInfo(Player player)
@@ -83,6 +80,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			_enchantLevel = player.getInventory().getWeaponEnchant();
 			_armorEnchant = player.getInventory().getArmorMinEnchant();
 			_title = player.getTitle();
+			
 			if (player.isGM() && player.isInvisible())
 			{
 				_title = "[Invisible]";
@@ -138,30 +136,26 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		}
 		
 		OutgoingPackets.USER_INFO.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_initSize);
 		packet.writeH(28); // 286 - 28
 		packet.writeB(_masks);
-		
 		if (containsMask(UserInfoType.RELATION))
 		{
 			packet.writeD(_relation);
 		}
-		
 		if (containsMask(UserInfoType.BASIC_INFO))
 		{
 			packet.writeH(23 + (_player.getAppearance().getVisibleName().length() * 2));
 			packet.writeString(_player.getName());
-			packet.writeC(_player.isGM() ? 0x01 : 0x00);
+			packet.writeC(_player.isGM() ? 1 : 0);
 			packet.writeC(_player.getRace().ordinal());
-			packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00);
+			packet.writeC(_player.getAppearance().isFemale() ? 1 : 0);
 			packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
 			packet.writeD(_player.getClassId().getId());
 			packet.writeD(_player.getLevel()); // 270
 			packet.writeD(_player.getClassId().getId()); // 286
 		}
-		
 		if (containsMask(UserInfoType.BASE_STATS))
 		{
 			packet.writeH(18);
@@ -171,10 +165,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(_player.getINT());
 			packet.writeH(_player.getWIT());
 			packet.writeH(_player.getMEN());
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0);
+			packet.writeH(0);
 		}
-		
 		if (containsMask(UserInfoType.MAX_HPCPMP))
 		{
 			packet.writeH(14);
@@ -182,7 +175,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getMaxMp());
 			packet.writeD(_player.getMaxCp());
 		}
-		
 		if (containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP))
 		{
 			packet.writeH(38);
@@ -193,32 +185,28 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeQ(_player.getExp());
 			packet.writeF((float) (_player.getExp() - ExperienceData.getInstance().getExpForLevel(_player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_player.getLevel())));
 		}
-		
 		if (containsMask(UserInfoType.ENCHANTLEVEL))
 		{
 			packet.writeH(4);
 			packet.writeC(_enchantLevel);
 			packet.writeC(_armorEnchant);
 		}
-		
 		if (containsMask(UserInfoType.APPAREANCE))
 		{
 			packet.writeH(15);
 			packet.writeD(_player.getVisualHair());
 			packet.writeD(_player.getVisualHairColor());
 			packet.writeD(_player.getVisualFace());
-			packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00);
+			packet.writeC(_player.isHairAccessoryEnabled() ? 1 : 0);
 		}
-		
 		if (containsMask(UserInfoType.STATUS))
 		{
 			packet.writeH(6);
 			packet.writeC(_player.getMountType().ordinal());
 			packet.writeC(_player.getPrivateStoreType().getId());
 			packet.writeC(_player.hasDwarvenCraft() || (_player.getSkillLevel(248) > 0) ? 1 : 0);
-			packet.writeC(0x00);
+			packet.writeC(0);
 		}
-		
 		if (containsMask(UserInfoType.STATS))
 		{
 			packet.writeH(64); // 270
@@ -236,21 +224,19 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getMDef());
 			packet.writeD(_player.getMagicAccuracy());
 			packet.writeD(_player.getMCriticalHit());
-			packet.writeD(0x00); // 270
-			packet.writeD(0x00); // 270
+			packet.writeD(0); // 270
+			packet.writeD(0); // 270
 		}
-		
 		if (containsMask(UserInfoType.ELEMENTALS))
 		{
 			packet.writeH(14);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
 		}
-		
 		if (containsMask(UserInfoType.POSITION))
 		{
 			packet.writeH(18);
@@ -259,7 +245,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getZ());
 			packet.writeD(_player.isInVehicle() ? _player.getVehicle().getObjectId() : 0);
 		}
-		
 		if (containsMask(UserInfoType.SPEED))
 		{
 			packet.writeH(18);
@@ -272,28 +257,24 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(_flyRunSpd);
 			packet.writeH(_flyWalkSpd);
 		}
-		
 		if (containsMask(UserInfoType.MULTIPLIER))
 		{
 			packet.writeH(18);
 			packet.writeF(_moveMultiplier);
 			packet.writeF(_player.getAttackSpeedMultiplier());
 		}
-		
 		if (containsMask(UserInfoType.COL_RADIUS_HEIGHT))
 		{
 			packet.writeH(18);
 			packet.writeF(_player.getCollisionRadius());
 			packet.writeF(_player.getCollisionHeight());
 		}
-		
 		if (containsMask(UserInfoType.ATK_ELEMENTAL))
 		{
 			packet.writeH(5);
-			packet.writeC(0x00);
-			packet.writeH(0x00);
+			packet.writeC(0);
+			packet.writeH(0);
 		}
-		
 		if (containsMask(UserInfoType.CLAN))
 		{
 			packet.writeH(32 + (_title.length() * 2));
@@ -303,12 +284,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getClanCrestLargeId());
 			packet.writeD(_player.getClanCrestId());
 			packet.writeD(_player.getClanPrivileges().getBitmask());
-			packet.writeC(_player.isClanLeader() ? 0x01 : 0x00);
+			packet.writeC(_player.isClanLeader() ? 1 : 0);
 			packet.writeD(_player.getAllyId());
 			packet.writeD(_player.getAllyCrestId());
-			packet.writeC(_player.isInMatchingRoom() ? 0x01 : 0x00);
+			packet.writeC(_player.isInMatchingRoom() ? 1 : 0);
 		}
-		
 		if (containsMask(UserInfoType.SOCIAL))
 		{
 			packet.writeH(30); // 228
@@ -328,82 +308,72 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			}
 			else
 			{
-				packet.writeD(0x00);
+				packet.writeD(0);
 			}
-			packet.writeD(0x00); // 228
+			packet.writeD(0); // 228
 		}
-		
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
 			packet.writeH(19); // 196
 			packet.writeD(_player.getVitalityPoints());
-			packet.writeC(0x00); // Vita Bonus
-			packet.writeD(0x00); // _player.getFame()
-			packet.writeD(0x00); // _player.getRaidbossPoints()
-			packet.writeC(0x00); // 196
-			packet.writeH(0x00); // Henna Seal Engraving Gauge
-			packet.writeC(0x00); // 196
+			packet.writeC(0); // Vita Bonus
+			packet.writeD(0); // _player.getFame()
+			packet.writeD(0); // _player.getRaidbossPoints()
+			packet.writeC(0); // 196
+			packet.writeH(0); // Henna Seal Engraving Gauge
+			packet.writeC(0); // 196
 		}
-		
 		if (containsMask(UserInfoType.SLOTS))
 		{
 			packet.writeH(12); // 152
 			packet.writeC(_player.getInventory().getTalismanSlots());
 			packet.writeC(_player.getInventory().getBroochJewelSlots());
 			packet.writeC(_player.getTeam().getId());
-			packet.writeD(0x00);
-			
+			packet.writeD(0);
 			if (_player.getInventory().getAgathionSlots() > 0)
 			{
-				packet.writeC(0x01); // Charm slots
+				packet.writeC(1); // Charm slots
 				packet.writeC(_player.getInventory().getAgathionSlots() - 1);
 				packet.writeC(_player.getInventory().getArtifactSlots()); // Artifact set slots // 152
 			}
 			else
 			{
-				packet.writeC(0x00); // Charm slots
-				packet.writeC(0x00);
+				packet.writeC(0); // Charm slots
+				packet.writeC(0);
 				packet.writeC(_player.getInventory().getArtifactSlots()); // Artifact set slots // 152
 			}
 		}
-		
 		if (containsMask(UserInfoType.MOVEMENTS))
 		{
 			packet.writeH(4);
 			packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
-			packet.writeC(_player.isRunning() ? 0x01 : 0x00);
+			packet.writeC(_player.isRunning() ? 1 : 0);
 		}
-		
 		if (containsMask(UserInfoType.COLOR))
 		{
 			packet.writeH(10);
 			packet.writeD(_player.getAppearance().getNameColor());
 			packet.writeD(_player.getAppearance().getTitleColor());
 		}
-		
 		if (containsMask(UserInfoType.INVENTORY_LIMIT))
 		{
 			packet.writeH(13);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0);
+			packet.writeH(0);
 			packet.writeH(_player.getInventoryLimit());
-			
 			packet.writeC(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
-			
-			packet.writeC(0x00); // 196
-			packet.writeC(0x00); // 196
-			packet.writeC(0x00); // 196
-			packet.writeC(0x00); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
+			packet.writeC(0); // 196
 		}
-		
 		if (containsMask(UserInfoType.TRUE_HERO))
 		{
 			packet.writeH(9);
-			packet.writeD(0x00);
-			packet.writeH(0x00);
-			packet.writeC(_player.isTrueHero() ? 100 : 0x00);
+			packet.writeD(0);
+			packet.writeH(0);
+			packet.writeC(_player.isTrueHero() ? 100 : 0);
 		}
-		
 		if (containsMask(UserInfoType.ATT_SPIRITS)) // 152
 		{
 			packet.writeH(26);
@@ -414,13 +384,11 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD((int) _player.getEarthSpiritDefense());
 			packet.writeD(_player.getActiveElementalSpiritType());
 		}
-		
 		if (containsMask(UserInfoType.RANKING)) // 196
 		{
 			packet.writeH(6);
 			packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : RankManager.getInstance().getPlayerClassRank(_player) == 1 ? 4 : 0);
 		}
-		
 		if (containsMask(UserInfoType.STAT_POINTS)) // 235
 		{
 			packet.writeH(16);
@@ -432,7 +400,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_WIT, 0));
 			packet.writeH(_player.getVariables().getInt(PlayerVariables.STAT_MEN, 0));
 		}
-		
 		if (containsMask(UserInfoType.STAT_ABILITIES)) // 235
 		{
 			packet.writeH(18);
@@ -442,10 +409,9 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(_player.getINT() - _player.getTemplate().getBaseINT() - _player.getVariables().getInt(PlayerVariables.STAT_INT, 0)); // additional INT
 			packet.writeH(_player.getWIT() - _player.getTemplate().getBaseWIT() - _player.getVariables().getInt(PlayerVariables.STAT_WIT, 0)); // additional WIT
 			packet.writeH(_player.getMEN() - _player.getTemplate().getBaseMEN() - _player.getVariables().getInt(PlayerVariables.STAT_MEN, 0)); // additional MEN
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0);
+			packet.writeH(0);
 		}
-		
 		if (containsMask(UserInfoType.ELIXIR_USED)) // 286
 		{
 			packet.writeD(_player.getVariables().getInt(PlayerVariables.ELIXIRS_USED, 0)); // count
@@ -480,7 +446,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 				relation |= 0x10; // Party leader
 			}
 		}
-		
 		if (clan != null)
 		{
 			relation |= 0x20; // Clan member
@@ -489,12 +454,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 				relation |= 0x40; // Clan leader
 			}
 		}
-		
 		if (player.isInSiege())
 		{
 			relation |= 0x80; // In siege
 		}
-		
 		return relation;
 	}
 }

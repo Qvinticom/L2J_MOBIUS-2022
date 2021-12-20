@@ -35,7 +35,6 @@ public class ExVitalityPointInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VITALITY_POINT_INFO.writeId(packet);
-		
 		packet.writeD(_vitalityPoints);
 		return true;
 	}

@@ -46,7 +46,6 @@ public class InventoryUpdate extends AbstractInventoryUpdate
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.INVENTORY_UPDATE.writeId(packet);
-		
 		writeItems(packet);
 		return true;
 	}

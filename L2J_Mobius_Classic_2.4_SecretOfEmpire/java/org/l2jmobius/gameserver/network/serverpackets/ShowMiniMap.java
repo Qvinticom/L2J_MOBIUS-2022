@@ -32,9 +32,8 @@ public class ShowMiniMap implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_MINIMAP.writeId(packet);
-		
 		packet.writeD(_mapId);
-		packet.writeC(0x00); // Seven Signs state
+		packet.writeC(0); // Seven Signs state
 		return true;
 	}
 }

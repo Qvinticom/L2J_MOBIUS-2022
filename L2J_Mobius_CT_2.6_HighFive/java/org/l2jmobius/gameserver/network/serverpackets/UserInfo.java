@@ -32,7 +32,6 @@ public class UserInfo implements IClientOutgoingPacket
 	private final Player _player;
 	private int _relation;
 	private int _airShipHelm;
-	
 	private final int _runSpd;
 	private final int _walkSpd;
 	private final int _swimRunSpd;
@@ -44,7 +43,6 @@ public class UserInfo implements IClientOutgoingPacket
 	public UserInfo(Player player)
 	{
 		_player = player;
-		
 		final int _territoryId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
 		_relation = _player.isClanLeader() ? 0x40 : 0;
 		if (_player.getSiegeState() == 1)
@@ -71,7 +69,6 @@ public class UserInfo implements IClientOutgoingPacket
 		{
 			_airShipHelm = 0;
 		}
-		
 		_moveMultiplier = player.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);
@@ -85,19 +82,15 @@ public class UserInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.USER_INFO.writeId(packet);
-		
 		packet.writeD(_player.getX());
 		packet.writeD(_player.getY());
 		packet.writeD(_player.getZ());
 		packet.writeD(_player.getVehicle() != null ? _player.getVehicle().getObjectId() : 0);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getAppearance().getVisibleName());
 		packet.writeD(_player.getRace().ordinal());
 		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
-		
 		packet.writeD(_player.getBaseClass());
-		
 		packet.writeD(_player.getLevel());
 		packet.writeQ(_player.getExp());
 		packet.writeF((float) (_player.getExp() - ExperienceData.getInstance().getExpForLevel(_player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_player.getLevel()))); // High Five exp %
@@ -114,7 +107,6 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD((int) _player.getSp());
 		packet.writeD(_player.getCurrentLoad());
 		packet.writeD(_player.getMaxLoad());
-		
 		packet.writeD(_player.getActiveWeaponItem() != null ? 40 : 20); // 20 no weapon, 40 weapon equipped
 		
 		for (int slot : getPaperdollOrder())
@@ -141,15 +133,11 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getAccuracy());
 		packet.writeD(_player.getCriticalHit(null, null));
 		packet.writeD((int) _player.getMAtk(null, null));
-		
 		packet.writeD(_player.getMAtkSpd());
 		packet.writeD((int) _player.getPAtkSpd());
-		
 		packet.writeD((int) _player.getMDef(null, null));
-		
 		packet.writeD(_player.getPvpFlag());
 		packet.writeD(_player.getKarma());
-		
 		packet.writeD(_runSpd);
 		packet.writeD(_walkSpd);
 		packet.writeD(_swimRunSpd);
@@ -160,10 +148,8 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_flyWalkSpd);
 		packet.writeF(_moveMultiplier);
 		packet.writeF(_player.getAttackSpeedMultiplier());
-		
 		packet.writeF(_player.getCollisionRadius());
 		packet.writeF(_player.getCollisionHeight());
-		
 		packet.writeD(_player.getAppearance().getHairStyle());
 		packet.writeD(_player.getAppearance().getHairColor());
 		packet.writeD(_player.getAppearance().getFace());
@@ -196,48 +182,37 @@ public class UserInfo implements IClientOutgoingPacket
 		}
 		
 		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
-		
 		packet.writeD(_player.isInvisible() ? _player.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _player.getAbnormalVisualEffects());
 		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
-		
 		packet.writeD(_player.getClanPrivileges().getBitmask());
-		
 		packet.writeH(_player.getRecomLeft()); // c2 recommendations remaining
 		packet.writeH(_player.getRecomHave()); // c2 recommendations received
 		packet.writeD(_player.getMountNpcId() > 0 ? _player.getMountNpcId() + 1000000 : 0);
 		packet.writeH(_player.getInventoryLimit());
-		
 		packet.writeD(_player.getClassId().getId());
-		packet.writeD(0x00); // special effects? circles around player...
+		packet.writeD(0); // special effects? circles around player...
 		packet.writeD(_player.getMaxCp());
 		packet.writeD((int) _player.getCurrentCp());
 		packet.writeC(_player.isMounted() || (_airShipHelm != 0) ? 0 : _player.getEnchantEffect());
-		
 		packet.writeC(_player.getTeam().getId());
-		
 		packet.writeD(_player.getClanCrestLargeId());
-		packet.writeC(_player.isNoble() ? 1 : 0); // 0x01: symbol on char menu ctrl+I
-		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // 0x01: Hero Aura
+		packet.writeC(_player.isNoble() ? 1 : 0); // 1: symbol on char menu ctrl+I
+		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // 1: Hero Aura
 		
 		packet.writeC(_player.isFishing() ? 1 : 0); // Fishing Mode
 		packet.writeD(_player.getFishx()); // fishing x
 		packet.writeD(_player.getFishy()); // fishing y
 		packet.writeD(_player.getFishz()); // fishing z
+		
 		packet.writeD(_player.getAppearance().getNameColor());
-		
 		// new c5
-		packet.writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
-		
+		packet.writeC(_player.isRunning() ? 1 : 0); // changes the Speed display on Status Window
 		packet.writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
 		packet.writeD(_player.getPledgeType());
-		
 		packet.writeD(_player.getAppearance().getTitleColor());
-		
 		packet.writeD(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
-		
 		// T1 Starts
 		packet.writeD(_player.getTransformationDisplayId());
-		
 		final byte attackAttribute = _player.getAttackElement();
 		packet.writeH(attackAttribute);
 		packet.writeH(_player.getAttackElementValue(attackAttribute));
@@ -247,16 +222,14 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeH(_player.getDefenseElementValue(Elementals.EARTH));
 		packet.writeH(_player.getDefenseElementValue(Elementals.HOLY));
 		packet.writeH(_player.getDefenseElementValue(Elementals.DARK));
-		
 		packet.writeD(_player.getAgathionId());
-		
 		// T2 Starts
 		packet.writeD(_player.getFame()); // Fame
 		packet.writeD(_player.isMinimapAllowed() ? 1 : 0); // Minimap on Hellbound
 		packet.writeD(_player.getVitalityPoints()); // Vitality Points
 		packet.writeD(_player.getAbnormalVisualEffectSpecial());
 		// packet.writeD(_territoryId); // CT2.3
-		// packet.writeD((_isDisguised ? 0x01: 0x00)); // CT2.3
+		// packet.writeD((_isDisguised ? 1: 0)); // CT2.3
 		// packet.writeD(_territoryId); // CT2.3
 		return true;
 	}

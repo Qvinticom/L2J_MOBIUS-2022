@@ -42,7 +42,6 @@ public class ElementalSpiritExtractInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ELEMENTAL_SPIRIT_EXTRACT_INFO.writeId(packet);
-		
 		final ElementalSpirit spirit = _player.getElementalSpirit(ElementalType.of(_type));
 		if (spirit == null)
 		{
@@ -50,15 +49,12 @@ public class ElementalSpiritExtractInfo implements IClientOutgoingPacket
 			packet.writeC(0);
 			return true;
 		}
-		
 		packet.writeC(_type); // active elemental spirit
 		packet.writeC(1); // is extract ?
-		
 		packet.writeC(1); // cost count
 		// for each cost count
 		packet.writeD(57); // item id
 		packet.writeD(ElementalSpiritData.EXTRACT_FEES[spirit.getStage() - 1]); // item count
-		
 		packet.writeD(spirit.getExtractItem());
 		packet.writeD(spirit.getExtractAmount());
 		return true;

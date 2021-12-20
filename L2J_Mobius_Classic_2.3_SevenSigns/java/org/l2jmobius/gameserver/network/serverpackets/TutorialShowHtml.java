@@ -48,7 +48,6 @@ public class TutorialShowHtml extends AbstractHtmlPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TUTORIAL_SHOW_HTML.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeS(getHtml());
 		return true;

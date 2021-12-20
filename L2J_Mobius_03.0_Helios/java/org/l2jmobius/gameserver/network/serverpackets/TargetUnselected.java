@@ -42,12 +42,11 @@ public class TargetUnselected implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TARGET_UNSELECTED.writeId(packet);
-		
 		packet.writeD(_targetObjId);
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
-		packet.writeD(0x00); // ??
+		packet.writeD(0); // ??
 		return true;
 	}
 }

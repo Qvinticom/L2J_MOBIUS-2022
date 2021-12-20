@@ -83,7 +83,6 @@ public class SkillList implements IClientOutgoingPacket
 			{
 				ns[i] = sk;
 			}
-			
 			_skills = ns;
 		}
 	}
@@ -93,7 +92,6 @@ public class SkillList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SKILL_LIST.writeId(packet);
 		packet.writeD(_skills.length);
-		
 		for (Skill temp : _skills)
 		{
 			packet.writeD(temp.passive ? 1 : 0);

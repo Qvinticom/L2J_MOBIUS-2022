@@ -62,13 +62,12 @@ public class Earthquake implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EARTHQUAKE.writeId(packet);
-		
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
 		packet.writeD(_intensity);
 		packet.writeD(_duration);
-		packet.writeD(0x00); // Unknown
+		packet.writeD(0); // Unknown
 		return true;
 	}
 }

@@ -46,7 +46,6 @@ public class ExShuttleGetOff implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SUTTLE_GET_OFF.writeId(packet);
-		
 		packet.writeD(_playerObjectId);
 		packet.writeD(_shuttleObjectId);
 		packet.writeD(_x);

@@ -44,7 +44,6 @@ public class ElementalSpiritEvolutionInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO.writeId(packet);
-		
 		final ElementalSpirit spirit = _player.getElementalSpirit(ElementalType.of(_type));
 		if (spirit == null)
 		{
@@ -52,13 +51,11 @@ public class ElementalSpiritEvolutionInfo implements IClientOutgoingPacket
 			packet.writeD(0);
 			return true;
 		}
-		
 		packet.writeC(_type);
 		packet.writeD(spirit.getNpcId());
-		packet.writeD(0x01); // unk
+		packet.writeD(1); // unk
 		packet.writeD(spirit.getStage());
 		packet.writeF(100); // chance ??
-		
 		final List<ItemHolder> items = spirit.getItemsToEvolve();
 		packet.writeD(items.size());
 		for (ItemHolder item : items)

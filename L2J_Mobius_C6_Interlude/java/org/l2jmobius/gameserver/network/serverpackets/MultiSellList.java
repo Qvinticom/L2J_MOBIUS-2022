@@ -51,18 +51,16 @@ public class MultiSellList implements IClientOutgoingPacket
 		packet.writeD(_finished); // finished
 		packet.writeD(0x28); // size of pages
 		packet.writeD(_list == null ? 0 : _list.getEntries().size()); // list length
-		
 		if (_list != null)
 		{
 			for (MultiSellEntry ent : _list.getEntries())
 			{
 				packet.writeD(ent.getEntryId());
-				packet.writeD(0x00); // C6
-				packet.writeD(0x00); // C6
+				packet.writeD(0); // C6
+				packet.writeD(0); // C6
 				packet.writeC(1);
 				packet.writeH(ent.getProducts().size());
 				packet.writeH(ent.getIngredients().size());
-				
 				for (MultiSellIngredient i : ent.getProducts())
 				{
 					packet.writeH(i.getItemId());
@@ -70,10 +68,9 @@ public class MultiSellList implements IClientOutgoingPacket
 					packet.writeH(ItemTable.getInstance().getTemplate(i.getItemId()).getType2());
 					packet.writeD(i.getItemCount());
 					packet.writeH(i.getEnchantmentLevel()); // enchtant level
-					packet.writeD(0x00); // C6
-					packet.writeD(0x00); // C6
+					packet.writeD(0); // C6
+					packet.writeD(0); // C6
 				}
-				
 				for (MultiSellIngredient i : ent.getIngredients())
 				{
 					final int items = i.getItemId();
@@ -86,8 +83,8 @@ public class MultiSellList implements IClientOutgoingPacket
 					packet.writeH(typeE);
 					packet.writeD(i.getItemCount()); // Count
 					packet.writeH(i.getEnchantmentLevel()); // Enchant Level
-					packet.writeD(0x00); // C6
-					packet.writeD(0x00); // C6
+					packet.writeD(0); // C6
+					packet.writeD(0); // C6
 				}
 			}
 		}

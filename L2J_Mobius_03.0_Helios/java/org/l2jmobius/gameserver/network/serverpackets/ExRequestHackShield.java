@@ -35,7 +35,6 @@ public class ExRequestHackShield implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REQUEST_HACK_SHIELD.writeId(packet);
-		
 		return true;
 	}
 }

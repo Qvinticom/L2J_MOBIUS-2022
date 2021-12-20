@@ -37,9 +37,8 @@ public class ExNevitAdventTimeChange implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION.writeId(packet);
-		
 		// state 0 - pause 1 - started
-		packet.writeC(_paused ? 0x00 : 0x01);
+		packet.writeC(_paused ? 0 : 1);
 		// left time in ms max is 16000 its 4m and state is automatically changed to quit
 		packet.writeD(_time);
 		return true;

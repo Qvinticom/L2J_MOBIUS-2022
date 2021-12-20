@@ -52,7 +52,7 @@ public class ExFishingStart implements IClientOutgoingPacket
 		packet.writeD(_baitLocation.getX());
 		packet.writeD(_baitLocation.getY());
 		packet.writeD(_baitLocation.getZ());
-		packet.writeC(0x01); // 0 = newbie, 1 = normal, 2 = night
+		packet.writeC(1); // 0 = newbie, 1 = normal, 2 = night
 		return true;
 	}
 }

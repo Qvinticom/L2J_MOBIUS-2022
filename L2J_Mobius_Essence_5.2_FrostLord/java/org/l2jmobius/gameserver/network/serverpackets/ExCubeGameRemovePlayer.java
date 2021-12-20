@@ -43,12 +43,9 @@ public class ExCubeGameRemovePlayer implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
-		
-		packet.writeD(0x02);
-		
+		packet.writeD(2);
 		packet.writeD(0xffffffff);
-		
-		packet.writeD(_isRedTeam ? 0x01 : 0x00);
+		packet.writeD(_isRedTeam ? 1 : 0);
 		packet.writeD(_player.getObjectId());
 		return true;
 	}

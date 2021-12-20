@@ -36,7 +36,6 @@ public class PetItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_ITEM_LIST.writeId(packet);
-		
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{

@@ -265,7 +265,6 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
-		
 		// Localisation related.
 		if (_lang != null)
 		{
@@ -284,9 +283,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_size);
 						packet.writeD(_unk2);
 						packet.writeD(_unk3);
-						packet.writeD(_effect ? 0x01 : 0x00);
+						packet.writeD(_effect ? 1 : 0);
 						packet.writeD(_time);
-						packet.writeD(_fade ? 0x01 : 0x00);
+						packet.writeD(_fade ? 1 : 0);
 						packet.writeD(-1);
 						packet.writeS(sml.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 						return true;
@@ -308,9 +307,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_size);
 						packet.writeD(_unk2);
 						packet.writeD(_unk3);
-						packet.writeD(_effect ? 0x01 : 0x00);
+						packet.writeD(_effect ? 1 : 0);
 						packet.writeD(_time);
-						packet.writeD(_fade ? 0x01 : 0x00);
+						packet.writeD(_fade ? 1 : 0);
 						packet.writeD(-1);
 						packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 						return true;
@@ -318,7 +317,6 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		packet.writeD(_type);
 		packet.writeD(_sysMessageId);
 		packet.writeD(_position);
@@ -326,9 +324,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 		packet.writeD(_size);
 		packet.writeD(_unk2);
 		packet.writeD(_unk3);
-		packet.writeD(_effect ? 0x01 : 0x00);
+		packet.writeD(_effect ? 1 : 0);
 		packet.writeD(_time);
-		packet.writeD(_fade ? 0x01 : 0x00);
+		packet.writeD(_fade ? 1 : 0);
 		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{

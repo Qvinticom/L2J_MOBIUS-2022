@@ -43,7 +43,6 @@ public class ExEnchantSkillList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_LIST.writeId(packet);
-		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skills.size());
 		for (Skill skill : _skills)

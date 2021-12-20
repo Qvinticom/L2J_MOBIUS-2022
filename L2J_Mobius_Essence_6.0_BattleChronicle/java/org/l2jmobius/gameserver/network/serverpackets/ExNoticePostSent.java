@@ -43,8 +43,7 @@ public class ExNoticePostSent implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REPLY_WRITE_POST.writeId(packet);
-		
-		packet.writeD(_showAnim ? 0x01 : 0x00);
+		packet.writeD(_showAnim ? 1 : 0);
 		return true;
 	}
 }

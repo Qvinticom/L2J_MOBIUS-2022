@@ -41,7 +41,6 @@ public class ExMPCCRoomMember implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MPCC_ROOM_MEMBER.writeId(packet);
-		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_room.getMembersCount());
 		for (Player member : _room.getMembers())

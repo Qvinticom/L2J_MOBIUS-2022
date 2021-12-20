@@ -31,10 +31,10 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ListPartyWaiting implements IClientOutgoingPacket
 {
+	private static final int NUM_PER_PAGE = 64;
+	
 	private final List<MatchingRoom> _rooms = new LinkedList<>();
 	private final int _size;
-	
-	private static final int NUM_PER_PAGE = 64;
 	
 	public ListPartyWaiting(PartyMatchingRoomLevelType type, int location, int page, int requestorLevel)
 	{
@@ -56,7 +56,6 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.LIST_PARTY_WATING.writeId(packet);
-		
 		packet.writeD(_size);
 		packet.writeD(_rooms.size());
 		for (MatchingRoom room : _rooms)

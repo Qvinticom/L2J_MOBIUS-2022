@@ -60,32 +60,27 @@ public class ExReplySentPost implements IClientOutgoingPacket
 		packet.writeS(_msg.getReceiverName());
 		packet.writeS(_msg.getSubject());
 		packet.writeS(_msg.getContent());
-		
 		if ((_items != null) && !_items.isEmpty())
 		{
 			packet.writeD(_items.size());
 			for (Item item : _items)
 			{
 				packet.writeH(item.getItem().getType2());
-				packet.writeD(0x00); // unknown
+				packet.writeD(0); // unknown
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
 				packet.writeD(item.getEnchantLevel());
 				packet.writeH(item.getCustomType2());
-				packet.writeH(0x00); // unknown
-				packet.writeD(0x00); // unknown
-				
+				packet.writeH(0); // unknown
+				packet.writeD(0); // unknown
 				packet.writeD(item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0x00);
-				
-				packet.writeD(0x00); // unknown
-				
+				packet.writeD(0); // unknown
 				packet.writeH(item.getAttackElementType());
 				packet.writeH(item.getAttackElementPower());
 				for (byte i = 0; i < 6; i++)
 				{
 					packet.writeH(item.getElementDefAttr(i));
 				}
-				
 				for (int op : item.getEnchantOptions())
 				{
 					packet.writeH(op);
@@ -96,7 +91,7 @@ public class ExReplySentPost implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeQ(_msg.getReqAdena());
 		}
 		return true;

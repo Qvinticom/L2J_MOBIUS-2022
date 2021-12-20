@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPutShapeShiftingExtractionItemResult implements IClientOutgoingPacket
 {
-	public static final ExPutShapeShiftingExtractionItemResult FAILED = new ExPutShapeShiftingExtractionItemResult(0x00);
-	public static final ExPutShapeShiftingExtractionItemResult SUCCESS = new ExPutShapeShiftingExtractionItemResult(0x01);
+	public static final ExPutShapeShiftingExtractionItemResult FAILED = new ExPutShapeShiftingExtractionItemResult(0);
+	public static final ExPutShapeShiftingExtractionItemResult SUCCESS = new ExPutShapeShiftingExtractionItemResult(1);
 	
 	private final int _result;
 	
@@ -39,7 +39,6 @@ public class ExPutShapeShiftingExtractionItemResult implements IClientOutgoingPa
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_SHAPE_SHIFTING_EXTRACTION_ITEM_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		return true;
 	}

@@ -50,20 +50,20 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 			packet.writeD(_room.getLocation());
 			if (_room.getOwner().equals(member))
 			{
-				packet.writeD(0x01);
+				packet.writeD(1);
 			}
 			else
 			{
 				if ((_room.getOwner().isInParty() && member.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == member.getParty().getLeaderObjectId()))
 				{
-					packet.writeD(0x02);
+					packet.writeD(2);
 				}
 				else
 				{
-					packet.writeD(0x00);
+					packet.writeD(0);
 				}
 			}
-			packet.writeD(0x00); // TODO: Instance datas there is more if that is not 0!
+			packet.writeD(0); // TODO: Instance datas there is more if that is not 0!
 		}
 		return true;
 	}

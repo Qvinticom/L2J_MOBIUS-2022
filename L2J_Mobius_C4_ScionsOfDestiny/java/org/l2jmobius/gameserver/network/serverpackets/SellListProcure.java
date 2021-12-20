@@ -58,9 +58,8 @@ public class SellListProcure implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SELL_LIST_PROCURE.writeId(packet);
 		packet.writeD(_money); // money
-		packet.writeD(0x00); // lease ?
+		packet.writeD(0); // lease ?
 		packet.writeH(_sellList.size()); // list size
-		
 		for (Entry<Item, Integer> entry : _sellList.entrySet())
 		{
 			final Item item = entry.getKey();

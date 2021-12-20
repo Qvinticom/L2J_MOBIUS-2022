@@ -52,7 +52,6 @@ public class FriendStatus implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FRIEND_STATUS.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeS(_name);
 		switch (_type)

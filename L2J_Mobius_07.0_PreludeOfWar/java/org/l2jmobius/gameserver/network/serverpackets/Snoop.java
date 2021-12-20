@@ -41,10 +41,9 @@ public class Snoop implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SNOOP.writeId(packet);
-		
 		packet.writeD(_convoId);
 		packet.writeS(_name);
-		packet.writeD(0x00); // ??
+		packet.writeD(0); // ??
 		packet.writeD(_type.getClientId());
 		packet.writeS(_speaker);
 		packet.writeS(_msg);

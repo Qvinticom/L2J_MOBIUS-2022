@@ -47,7 +47,6 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_HERO_AND_LEGEND_INFO.writeId(packet);
-		
 		if (!Hero.getInstance().getHeroes().isEmpty())
 		{
 			try (Connection con = DatabaseFactory.getConnection();
@@ -63,7 +62,6 @@ public class ExOlympiadHeroAndLegendInfo implements IClientOutgoingPacket
 						{
 							packet.writeC(1); // ?? shows 78 on JP
 							packet.writeC(1); // ?? shows 0 on JP
-							
 							packet.writeString(rset.getString("char_name"));
 							final int clanId = rset.getInt("clanid");
 							if (clanId > 0)

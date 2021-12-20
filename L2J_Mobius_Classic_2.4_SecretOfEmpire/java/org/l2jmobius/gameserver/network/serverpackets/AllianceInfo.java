@@ -44,7 +44,6 @@ public class AllianceInfo implements IClientOutgoingPacket
 		_name = leader.getAllyName();
 		_leaderC = leader.getName();
 		_leaderP = leader.getLeaderName();
-		
 		final Collection<Clan> allies = ClanTable.getInstance().getClanAllies(allianceId);
 		_allies = new ClanInfo[allies.size()];
 		int idx = 0;
@@ -57,7 +56,6 @@ public class AllianceInfo implements IClientOutgoingPacket
 			total += ci.getTotal();
 			online += ci.getOnline();
 		}
-		
 		_total = total;
 		_online = online;
 	}
@@ -66,18 +64,16 @@ public class AllianceInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ALLIANCE_INFO.writeId(packet);
-		
 		packet.writeS(_name);
 		packet.writeD(_total);
 		packet.writeD(_online);
 		packet.writeS(_leaderC);
 		packet.writeS(_leaderP);
-		
 		packet.writeD(_allies.length);
 		for (ClanInfo aci : _allies)
 		{
 			packet.writeS(aci.getClan().getName());
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeD(aci.getClan().getLevel());
 			packet.writeS(aci.getClan().getLeaderName());
 			packet.writeD(aci.getTotal());

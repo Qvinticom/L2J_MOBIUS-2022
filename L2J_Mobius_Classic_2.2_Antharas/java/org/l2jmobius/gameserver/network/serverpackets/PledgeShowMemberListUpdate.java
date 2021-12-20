@@ -66,7 +66,6 @@ public class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_UPDATE.writeId(packet);
-		
 		packet.writeS(_name);
 		packet.writeD(_level);
 		packet.writeD(_classId);

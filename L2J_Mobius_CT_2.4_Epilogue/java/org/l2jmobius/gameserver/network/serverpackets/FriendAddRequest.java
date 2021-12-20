@@ -36,7 +36,7 @@ public class FriendAddRequest implements IClientOutgoingPacket
 	{
 		OutgoingPackets.FRIEND_ADD_REQUEST.writeId(packet);
 		packet.writeS(_requestorName);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

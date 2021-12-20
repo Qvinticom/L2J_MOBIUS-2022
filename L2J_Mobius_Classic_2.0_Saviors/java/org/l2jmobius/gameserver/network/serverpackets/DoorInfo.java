@@ -33,7 +33,6 @@ public class DoorInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DOOR_INFO.writeId(packet);
-		
 		packet.writeD(_door.getObjectId());
 		packet.writeD(_door.getId());
 		return true;

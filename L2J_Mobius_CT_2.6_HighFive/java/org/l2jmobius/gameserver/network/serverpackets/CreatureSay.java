@@ -81,7 +81,6 @@ public class CreatureSay implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SAY2.writeId(packet);
-		
 		packet.writeD(_sender == null ? 0 : _sender.getObjectId());
 		packet.writeD(_chatType.getClientId());
 		if (_senderName != null)

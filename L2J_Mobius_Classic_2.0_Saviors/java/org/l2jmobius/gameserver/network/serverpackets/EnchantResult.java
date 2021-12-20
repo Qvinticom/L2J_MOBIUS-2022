@@ -58,7 +58,6 @@ public class EnchantResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ENCHANT_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		packet.writeD(_crystal);
 		packet.writeQ(_count);

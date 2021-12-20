@@ -75,12 +75,9 @@ public class ExUISetting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_UI_SETTING.writeId(packet);
-		
 		packet.writeD(buffsize);
 		packet.writeD(categories);
-		
 		int category = 0;
-		
 		final int numKeyCt = _uiSettings.getKeys().size();
 		packet.writeD(numKeyCt);
 		for (int i = 0; i < numKeyCt; i++)
@@ -96,10 +93,9 @@ public class ExUISetting implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeC(0x00);
+				packet.writeC(0);
 			}
 			category++;
-			
 			if (_uiSettings.getCategories().containsKey(category))
 			{
 				final List<Integer> catElList2 = _uiSettings.getCategories().get(category);
@@ -111,10 +107,9 @@ public class ExUISetting implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeC(0x00);
+				packet.writeC(0);
 			}
 			category++;
-			
 			if (_uiSettings.getKeys().containsKey(i))
 			{
 				final List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
@@ -130,11 +125,11 @@ public class ExUISetting implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeD(0x00);
+				packet.writeD(0);
 			}
 		}
 		packet.writeD(0x11);
-		packet.writeD(0x10);
+		packet.writeD(16);
 		return true;
 	}
 }

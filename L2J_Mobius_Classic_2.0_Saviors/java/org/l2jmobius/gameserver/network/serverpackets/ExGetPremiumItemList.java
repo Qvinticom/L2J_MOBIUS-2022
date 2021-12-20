@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExGetPremiumItemList implements IClientOutgoingPacket
 {
 	private final Player _player;
-	
 	private final Map<Integer, PremiumItem> _map;
 	
 	public ExGetPremiumItemList(Player player)
@@ -43,7 +42,6 @@ public class ExGetPremiumItemList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_GET_PREMIUM_ITEM_LIST.writeId(packet);
-		
 		packet.writeD(_map.size());
 		for (Entry<Integer, PremiumItem> entry : _map.entrySet())
 		{
@@ -51,7 +49,7 @@ public class ExGetPremiumItemList implements IClientOutgoingPacket
 			packet.writeQ(entry.getKey());
 			packet.writeD(item.getItemId());
 			packet.writeQ(item.getCount());
-			packet.writeD(0x00); // ?
+			packet.writeD(0); // ?
 			packet.writeS(item.getSender());
 		}
 		return true;

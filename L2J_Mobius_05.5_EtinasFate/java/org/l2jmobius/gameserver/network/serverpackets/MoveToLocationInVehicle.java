@@ -48,7 +48,6 @@ public class MoveToLocationInVehicle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MOVE_TO_LOCATION_IN_VEHICLE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_boatId);
 		packet.writeD(_destination.getX());

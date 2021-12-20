@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class Ex2ndPasswordCheck implements IClientOutgoingPacket
 {
-	public static final int PASSWORD_NEW = 0x00;
-	public static final int PASSWORD_PROMPT = 0x01;
-	public static final int PASSWORD_OK = 0x02;
+	public static final int PASSWORD_NEW = 0;
+	public static final int PASSWORD_PROMPT = 1;
+	public static final int PASSWORD_OK = 2;
 	
 	private final int _windowType;
 	
@@ -40,7 +40,7 @@ public class Ex2ndPasswordCheck implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_2ND_PASSWORD_CHECK.writeId(packet);
 		packet.writeD(_windowType);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

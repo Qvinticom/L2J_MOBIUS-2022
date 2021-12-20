@@ -53,7 +53,6 @@ public class ExOlympiadSpelledInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_SPELLED_INFO.writeId(packet);
-		
 		packet.writeD(_playerId);
 		packet.writeD(_effects.size() + _effects2.size());
 		for (BuffInfo info : _effects)
@@ -62,7 +61,7 @@ public class ExOlympiadSpelledInfo implements IClientOutgoingPacket
 			{
 				packet.writeD(info.getSkill().getDisplayId());
 				packet.writeH(info.getSkill().getDisplayLevel());
-				packet.writeH(0x00); // Sub level
+				packet.writeH(0); // Sub level
 				packet.writeD(info.getSkill().getAbnormalType().getClientId());
 				writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
 			}
@@ -73,7 +72,7 @@ public class ExOlympiadSpelledInfo implements IClientOutgoingPacket
 			{
 				packet.writeD(skill.getDisplayId());
 				packet.writeH(skill.getDisplayLevel());
-				packet.writeH(0x00); // Sub level
+				packet.writeH(0); // Sub level
 				packet.writeD(skill.getAbnormalType().getClientId());
 				packet.writeH(-1);
 			}

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * Fromat:(ch) dddddc
+ * Format:(ch) dddddc
  */
 public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 {

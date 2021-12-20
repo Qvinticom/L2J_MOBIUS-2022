@@ -40,7 +40,6 @@ public class CharTemplates implements IClientOutgoingPacket
 	{
 		OutgoingPackets.CHAR_TEMPLATES.writeId(packet);
 		packet.writeD(_chars.size());
-		
 		for (PlayerTemplate temp : _chars)
 		{
 			packet.writeD(temp.getRace().ordinal());

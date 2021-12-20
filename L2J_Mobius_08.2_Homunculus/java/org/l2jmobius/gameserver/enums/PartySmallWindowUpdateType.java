@@ -23,16 +23,16 @@ import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
  */
 public enum PartySmallWindowUpdateType implements IUpdateTypeComponent
 {
-	CURRENT_CP(0x01),
-	MAX_CP(0x02),
-	CURRENT_HP(0x04),
-	MAX_HP(0x08),
-	CURRENT_MP(0x10),
-	MAX_MP(0x20),
-	LEVEL(0x40),
-	CLASS_ID(0x80),
-	PARTY_SUBSTITUTE(0x100),
-	VITALITY_POINTS(0x200);
+	CURRENT_CP(1),
+	MAX_CP(2),
+	CURRENT_HP(4),
+	MAX_HP(8),
+	CURRENT_MP(16),
+	MAX_MP(32),
+	LEVEL(64),
+	CLASS_ID(128),
+	PARTY_SUBSTITUTE(256),
+	VITALITY_POINTS(512);
 	
 	private final int _mask;
 	

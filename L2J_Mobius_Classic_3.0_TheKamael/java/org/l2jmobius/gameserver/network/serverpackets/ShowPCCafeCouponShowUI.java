@@ -34,7 +34,6 @@ public class ShowPCCafeCouponShowUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_PCCAFE_COUPON_SHOW_UI.writeId(packet);
-		
 		return true;
 	}
 }

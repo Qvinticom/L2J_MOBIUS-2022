@@ -53,9 +53,7 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RECEIVE_OLYMPIAD.writeId(packet);
-		
-		packet.writeD(0x01); // Type 0 = Match List, 1 = Match Result
-		
+		packet.writeD(1); // Type 0 = Match List, 1 = Match Result
 		packet.writeD(_tie ? 1 : 0); // 0 - win, 1 - tie
 		packet.writeS(_winnerList.get(0).getName());
 		packet.writeD(_winTeam);
@@ -69,9 +67,8 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 			packet.writeD(info.getDamage());
 			packet.writeD(info.getCurrentPoints());
 			packet.writeD(info.getDiffPoints());
-			packet.writeD(0x00); // Helios
+			packet.writeD(0); // Helios
 		}
-		
 		packet.writeD(_loseTeam);
 		packet.writeD(_loserList.size());
 		for (OlympiadInfo info : _loserList)
@@ -83,7 +80,7 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 			packet.writeD(info.getDamage());
 			packet.writeD(info.getCurrentPoints());
 			packet.writeD(info.getDiffPoints());
-			packet.writeD(0x00); // Helios
+			packet.writeD(0); // Helios
 		}
 		return true;
 	}

@@ -34,12 +34,13 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBeautyItemList implements IClientOutgoingPacket
 {
-	private int _colorCount;
-	private final BeautyData _beautyData;
-	private final Map<Integer, List<BeautyItem>> _colorData = new HashMap<>();
 	private static final int HAIR_TYPE = 0;
 	private static final int FACE_TYPE = 1;
 	private static final int COLOR_TYPE = 2;
+	
+	private int _colorCount;
+	private final BeautyData _beautyData;
+	private final Map<Integer, List<BeautyItem>> _colorData = new HashMap<>();
 	
 	public ExBeautyItemList(Player player)
 	{
@@ -60,7 +61,6 @@ public class ExBeautyItemList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BEAUTY_ITEM_LIST.writeId(packet);
-		
 		packet.writeD(HAIR_TYPE);
 		packet.writeD(_beautyData.getHairList().size());
 		for (BeautyItem hair : _beautyData.getHairList().values())
@@ -72,7 +72,6 @@ public class ExBeautyItemList implements IClientOutgoingPacket
 			packet.writeD(hair.getBeautyShopTicket());
 			packet.writeD(1); // Limit
 		}
-		
 		packet.writeD(FACE_TYPE);
 		packet.writeD(_beautyData.getFaceList().size());
 		for (BeautyItem face : _beautyData.getFaceList().values())
@@ -84,7 +83,6 @@ public class ExBeautyItemList implements IClientOutgoingPacket
 			packet.writeD(face.getBeautyShopTicket());
 			packet.writeD(1); // Limit
 		}
-		
 		packet.writeD(COLOR_TYPE);
 		packet.writeD(_colorCount);
 		for (Entry<Integer, List<BeautyItem>> entry : _colorData.entrySet())

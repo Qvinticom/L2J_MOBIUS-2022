@@ -27,6 +27,7 @@ public class ExUISetting implements IClientOutgoingPacket
 {
 	public static final String UI_KEY_MAPPING_VAR = "UI_KEY_MAPPING";
 	public static final String SPLIT_VAR = "	";
+	
 	private final byte[] _uiKeyMapping;
 	
 	public ExUISetting(Player player)

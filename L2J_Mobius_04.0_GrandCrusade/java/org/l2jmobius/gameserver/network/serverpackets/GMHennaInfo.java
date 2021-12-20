@@ -50,7 +50,6 @@ public class GMHennaInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GMHENNA_INFO.writeId(packet);
-		
 		packet.writeH(_player.getHennaValue(BaseStat.INT)); // equip INT
 		packet.writeH(_player.getHennaValue(BaseStat.STR)); // equip STR
 		packet.writeH(_player.getHennaValue(BaseStat.CON)); // equip CON
@@ -64,19 +63,19 @@ public class GMHennaInfo implements IClientOutgoingPacket
 		for (Henna henna : _hennas)
 		{
 			packet.writeD(henna.getDyeId());
-			packet.writeD(0x01);
+			packet.writeD(1);
 		}
 		if (_player.getHenna(4) != null)
 		{
 			packet.writeD(_player.getHenna(4).getDyeId());
-			packet.writeD(0x00); // Premium Slot Dye Time Left
-			packet.writeD(_player.getHenna(4).isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
+			packet.writeD(0); // Premium Slot Dye Time Left
+			packet.writeD(_player.getHenna(4).isAllowedClass(_player.getClassId()) ? 1 : 0);
 		}
 		else
 		{
-			packet.writeD(0x00); // Premium Slot Dye ID
-			packet.writeD(0x00); // Premium Slot Dye Time Left
-			packet.writeD(0x00); // Premium Slot Dye ID isValid
+			packet.writeD(0); // Premium Slot Dye ID
+			packet.writeD(0); // Premium Slot Dye Time Left
+			packet.writeD(0); // Premium Slot Dye ID isValid
 		}
 		return true;
 	}

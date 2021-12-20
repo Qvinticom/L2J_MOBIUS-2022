@@ -35,13 +35,12 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_SHOP_ITEM_INFO.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_recipeId);
 		packet.writeD((int) _player.getCurrentMp());
 		packet.writeD(_player.getMaxMp());
 		packet.writeD(0xffffffff);
-		packet.writeQ(0x00);
+		packet.writeQ(0);
 		return true;
 	}
 }

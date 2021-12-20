@@ -46,7 +46,6 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		{
 			_recipes = _seller.getCommonRecipeBook();
 		}
-		
 		// clean previous recipes
 		if (_seller.getCreateList() != null)
 		{
@@ -67,8 +66,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		OutgoingPackets.RECIPE_SHOP_MANAGE_LIST.writeId(packet);
 		packet.writeD(_seller.getObjectId());
 		packet.writeD(_seller.getAdena());
-		packet.writeD(_isDwarven ? 0x00 : 0x01);
-		
+		packet.writeD(_isDwarven ? 0 : 1);
 		if (_recipes == null)
 		{
 			packet.writeD(0);
@@ -84,7 +82,6 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 				packet.writeD(count);
 			}
 		}
-		
 		if (_seller.getCreateList() == null)
 		{
 			packet.writeD(0);
@@ -93,11 +90,10 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		{
 			final ManufactureList list = _seller.getCreateList();
 			packet.writeD(list.size());
-			
 			for (ManufactureItem item : list.getList())
 			{
 				packet.writeD(item.getRecipeId());
-				packet.writeD(0x00);
+				packet.writeD(0);
 				packet.writeD(item.getCost());
 			}
 		}

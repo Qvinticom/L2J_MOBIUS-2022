@@ -36,14 +36,13 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_SHOP_SELL_LIST.writeId(packet);
-		
 		packet.writeD(_manufacturer.getObjectId());
 		packet.writeD((int) _manufacturer.getCurrentMp()); // Creator's MP
 		packet.writeD(_manufacturer.getMaxMp()); // Creator's MP
 		packet.writeQ(_buyer.getAdena()); // Buyer Adena
 		if (!_manufacturer.hasManufactureShop())
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		else
 		{
@@ -51,12 +50,11 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 			for (ManufactureItem temp : _manufacturer.getManufactureItems().values())
 			{
 				packet.writeD(temp.getRecipeId());
-				packet.writeD(0x00); // unknown
+				packet.writeD(0); // unknown
 				packet.writeQ(temp.getCost());
-				
-				packet.writeQ(0x00); // Classic - 166
-				packet.writeQ(0x00); // Classic - 166
-				packet.writeC(0x00); // Classic - 166
+				packet.writeQ(0); // Classic - 166
+				packet.writeQ(0); // Classic - 166
+				packet.writeC(0); // Classic - 166
 			}
 		}
 		return true;

@@ -49,7 +49,6 @@ public class FriendAddRequestResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FRIEND_ADD_REQUEST_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		packet.writeD(_charId);
 		packet.writeS(_charName);
@@ -57,7 +56,7 @@ public class FriendAddRequestResult implements IClientOutgoingPacket
 		packet.writeD(_charObjectId);
 		packet.writeD(_charLevel);
 		packet.writeD(_charClassId);
-		packet.writeH(0x00); // Always 0 on retail
+		packet.writeH(0); // Always 0 on retail
 		return true;
 	}
 }

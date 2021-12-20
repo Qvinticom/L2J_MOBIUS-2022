@@ -50,13 +50,12 @@ public class ExAlchemySkillList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ALCHEMY_SKILL_LIST.writeId(packet);
-		
 		packet.writeD(_skills.size());
 		for (Skill skill : _skills)
 		{
 			packet.writeD(skill.getId());
 			packet.writeD(skill.getLevel());
-			packet.writeQ(0x00); // Always 0 on Naia, SP i guess?
+			packet.writeQ(0); // Always 0 on Naia, SP i guess?
 			packet.writeC(skill.getId() == CommonSkill.ALCHEMY_CUBE.getId() ? 0 : 1); // This is type in flash, visible or not
 		}
 		return true;

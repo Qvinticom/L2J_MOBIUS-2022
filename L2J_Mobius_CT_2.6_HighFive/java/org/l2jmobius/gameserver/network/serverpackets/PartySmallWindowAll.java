@@ -39,27 +39,24 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 		packet.writeD(_party.getLeaderObjectId());
 		packet.writeD(_party.getDistributionType().getId());
 		packet.writeD(_party.getMemberCount() - 1);
-		
 		for (Player member : _party.getMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{
 				packet.writeD(member.getObjectId());
 				packet.writeS(member.getName());
-				
 				packet.writeD((int) member.getCurrentCp()); // c4
 				packet.writeD(member.getMaxCp()); // c4
-				
 				packet.writeD((int) member.getCurrentHp());
 				packet.writeD(member.getMaxHp());
 				packet.writeD((int) member.getCurrentMp());
 				packet.writeD(member.getMaxMp());
 				packet.writeD(member.getLevel());
 				packet.writeD(member.getClassId().getId());
-				packet.writeD(0x00); // packet.writeD(0x01); ??
+				packet.writeD(0); // packet.writeD(1); ??
 				packet.writeD(member.getRace().ordinal());
-				packet.writeD(0x00); // T2.3
-				packet.writeD(0x00); // T2.3
+				packet.writeD(0); // T2.3
+				packet.writeD(0); // T2.3
 				if (member.hasSummon())
 				{
 					packet.writeD(member.getSummon().getObjectId());
@@ -74,7 +71,7 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 				}
 				else
 				{
-					packet.writeD(0x00);
+					packet.writeD(0);
 				}
 			}
 		}

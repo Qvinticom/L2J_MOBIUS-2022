@@ -38,7 +38,6 @@ public class ExShowOwnthingPos implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_OWNTHING_POS.writeId(packet);
-		
 		if (TerritoryWarManager.getInstance().isTWInProgress())
 		{
 			final Collection<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
@@ -46,7 +45,6 @@ public class ExShowOwnthingPos implements IClientOutgoingPacket
 			for (TerritoryWard ward : territoryWardList)
 			{
 				packet.writeD(ward.getTerritoryId());
-				
 				if (ward.getNpc() != null)
 				{
 					packet.writeD(ward.getNpc().getX());
@@ -61,16 +59,16 @@ public class ExShowOwnthingPos implements IClientOutgoingPacket
 				}
 				else
 				{
-					packet.writeD(0x00);
-					packet.writeD(0x00);
-					packet.writeD(0x00);
+					packet.writeD(0);
+					packet.writeD(0);
+					packet.writeD(0);
 				}
 			}
 		}
 		else
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		return true;
 	}

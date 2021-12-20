@@ -47,7 +47,7 @@ public class GMViewPledgeInfo implements IClientOutgoingPacket
 		OutgoingPackets.GM_VIEW_PLEDGE_INFO.writeId(packet);
 		packet.writeS(_player.getName());
 		packet.writeD(_clan.getClanId());
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeS(_clan.getName());
 		packet.writeS(_clan.getLeaderName());
 		packet.writeD(_clan.getCrestId()); // -> no, it's no longer used (nuocnam) fix by game
@@ -58,12 +58,10 @@ public class GMViewPledgeInfo implements IClientOutgoingPacket
 		packet.writeD(_clan.getReputationScore());
 		packet.writeD(0);
 		packet.writeD(0);
-		
 		packet.writeD(_clan.getAllyId()); // c2
 		packet.writeS(_clan.getAllyName()); // c2
 		packet.writeD(_clan.getAllyCrestId()); // c2
 		packet.writeD(_clan.isAtWar()); // c3
-		
 		final Collection<ClanMember> members = _clan.getMembers();
 		packet.writeD(members.size());
 		for (ClanMember member : members)

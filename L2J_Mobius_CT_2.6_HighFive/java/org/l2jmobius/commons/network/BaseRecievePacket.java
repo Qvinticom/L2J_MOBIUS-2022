@@ -73,7 +73,7 @@ public abstract class BaseRecievePacket
 		try
 		{
 			result = new String(_decrypt, _off, _decrypt.length - _off, StandardCharsets.UTF_16LE);
-			result = result.substring(0, result.indexOf(0x00));
+			result = result.substring(0, result.indexOf(0));
 			_off += (result.length() * 2) + 2;
 		}
 		catch (Exception e)

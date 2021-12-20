@@ -37,7 +37,6 @@ public class ExWorldChatCnt implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_WORLD_CHAT_CNT.writeId(packet);
-		
 		packet.writeD(_points);
 		return true;
 	}

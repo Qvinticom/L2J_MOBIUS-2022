@@ -44,7 +44,6 @@ public class ExManageMpccRoomMember implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MANAGE_PARTY_ROOM_MEMBER.writeId(packet);
-		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getName());

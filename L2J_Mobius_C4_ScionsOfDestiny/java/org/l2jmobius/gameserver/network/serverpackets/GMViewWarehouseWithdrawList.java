@@ -57,17 +57,14 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 		packet.writeS(_playerName);
 		packet.writeD(_money);
 		packet.writeH(_items.size());
-		
 		for (Item item : _items)
 		{
 			packet.writeH(item.getItem().getType1());
-			
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItemId());
 			packet.writeD(item.getCount());
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(item.getCustomType1());
-			
 			switch (item.getItem().getType2())
 			{
 				case ItemTemplate.TYPE2_WEAPON:
@@ -87,12 +84,11 @@ public class GMViewWarehouseWithdrawList implements IClientOutgoingPacket
 				{
 					packet.writeD(item.getItem().getBodyPart());
 					packet.writeH(item.getEnchantLevel());
-					packet.writeH(0x00);
-					packet.writeH(0x00);
+					packet.writeH(0);
+					packet.writeH(0);
 					break;
 				}
 			}
-			
 			packet.writeD(item.getObjectId());
 		}
 		return true;

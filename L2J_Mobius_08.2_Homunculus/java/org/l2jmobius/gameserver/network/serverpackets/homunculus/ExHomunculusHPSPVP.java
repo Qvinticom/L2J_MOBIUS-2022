@@ -41,11 +41,9 @@ public class ExHomunculusHPSPVP implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_HOMUNCULUS_HPSPVP.writeId(packet);
-		
 		packet.writeD(_hp);
 		packet.writeQ(_sp);
 		packet.writeD(_vp);
-		
 		return true;
 	}
 }

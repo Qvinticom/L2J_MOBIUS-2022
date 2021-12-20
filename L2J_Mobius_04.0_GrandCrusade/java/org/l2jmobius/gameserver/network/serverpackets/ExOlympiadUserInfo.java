@@ -76,7 +76,6 @@ public class ExOlympiadUserInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_USER_INFO.writeId(packet);
-		
 		if (_player != null)
 		{
 			packet.writeC(_player.getOlympiadSide());
@@ -91,7 +90,6 @@ public class ExOlympiadUserInfo implements IClientOutgoingPacket
 			packet.writeS(_par.getName());
 			packet.writeD(_par.getBaseClass());
 		}
-		
 		packet.writeD(_curHp);
 		packet.writeD(_maxHp);
 		packet.writeD(_curCp);

@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 {
 	private final Player _player;
-	
 	private final int _tabId;
 	private final int _rankingType;
 	private final int _unk;
@@ -58,14 +57,12 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_RANKING_INFO.writeId(packet);
-		
 		packet.writeC(_tabId); // Tab id
 		packet.writeC(_rankingType); // ranking type
 		packet.writeC(_unk); // unk, shows 1 all time
 		packet.writeD(_classId); // class id (default 148) or caller class id for personal rank
 		packet.writeD(_serverId); // 0 - all servers, server id - for caller server
 		packet.writeD(933); // unk, 933 all time
-		
 		if (!_playerList.isEmpty())
 		{
 			switch (_tabId)
@@ -75,14 +72,12 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 					if (_rankingType == 0)
 					{
 						packet.writeD(_playerList.size() > 100 ? 100 : _playerList.size());
-						
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet player = _playerList.get(id);
 							packet.writeString(player.getString("name")); // name
 							packet.writeString(player.getString("clanName")); // clan name
 							packet.writeD(id); // rank
-							
 							if (!_snapshotList.isEmpty())
 							{
 								for (Integer id2 : _snapshotList.keySet())
@@ -98,7 +93,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 							{
 								packet.writeD(id);
 							}
-							
 							packet.writeD(Config.SERVER_ID);// server id
 							packet.writeD(player.getInt("level"));// level
 							packet.writeD(player.getInt("classId"));// class id
@@ -119,7 +113,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;
-								
 								final int first = id > 10 ? (id - 9) : 1;
 								final int last = _playerList.size() >= (id + 10) ? id + 10 : id + (_playerList.size() - id);
 								if (first == 1)
@@ -130,7 +123,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 								{
 									packet.writeD(last - first);
 								}
-								
 								for (int id2 = first; id2 <= last; id2++)
 								{
 									final StatSet plr = _playerList.get(id2);
@@ -152,7 +144,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 									{
 										packet.writeD(id2);
 									}
-									
 									packet.writeD(Config.SERVER_ID);
 									packet.writeD(plr.getInt("level"));
 									packet.writeD(plr.getInt("classId"));
@@ -186,7 +177,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 							}
 						}
 						packet.writeD(count > 50 ? 50 : count);
-						
 						int i = 1;
 						for (Integer id : _playerList.keySet())
 						{
@@ -222,7 +212,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 								{
 									packet.writeD(i);
 								}
-								
 								packet.writeD(Config.SERVER_ID);
 								packet.writeD(player.getInt("level"));
 								packet.writeD(player.getInt("classId"));
@@ -250,7 +239,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 								i++;
 							}
 						}
-						
 						for (Integer id : classList.keySet())
 						{
 							final StatSet player = classList.get(id);

@@ -38,7 +38,6 @@ public class ExTacticalSign implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TACTICAL_SIGN.writeId(packet);
-		
 		packet.writeD(_target.getObjectId());
 		packet.writeD(_tokenId);
 		return true;

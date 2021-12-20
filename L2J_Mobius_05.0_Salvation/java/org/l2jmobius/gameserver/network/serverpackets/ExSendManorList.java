@@ -38,7 +38,6 @@ public class ExSendManorList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SEND_MANOR_LIST.writeId(packet);
-		
 		final Collection<Castle> castles = CastleManager.getInstance().getCastles();
 		packet.writeD(castles.size());
 		for (Castle castle : castles)

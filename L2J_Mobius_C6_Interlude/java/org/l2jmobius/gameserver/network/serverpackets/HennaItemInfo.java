@@ -42,7 +42,6 @@ public class HennaItemInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.getPrice()); // total amount of adenas required to draw symbol
 		packet.writeD(1); // able to draw or not 0 is false and 1 is true
 		packet.writeD(_player.getAdena());
-		
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeC(_player.getINT() + _henna.getINT()); // equip INT
 		packet.writeD(_player.getSTR()); // current STR

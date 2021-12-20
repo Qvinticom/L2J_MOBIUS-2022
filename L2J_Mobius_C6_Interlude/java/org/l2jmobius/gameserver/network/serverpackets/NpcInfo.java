@@ -27,9 +27,9 @@ import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuard;
 import org.l2jmobius.gameserver.model.actor.instance.Guard;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeNpc;
-import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -81,7 +81,6 @@ public class NpcInfo implements IClientOutgoingPacket
 			attacker.broadcastPacket(new StopRotation(cha, cha.getHeading(), 0));
 			return;
 		}
-		
 		_creature = cha;
 		_displayId = cha.getTemplate().getDisplayId();
 		_isAttackable = cha.isAutoAttackable(attacker);
@@ -90,7 +89,6 @@ public class NpcInfo implements IClientOutgoingPacket
 		_isSummoned = false;
 		_collisionHeight = cha.getTemplate().getFCollisionHeight();
 		_collisionRadius = cha.getTemplate().getFCollisionRadius();
-		
 		if (Config.SHOW_NPC_CLAN_CREST && (cha.getCastle() != null) && (cha.getCastle().getOwnerId() != 0) && !cha.isMonster() && !cha.isArtefact() && !(cha instanceof ControlTower))
 		{
 			if (cha.isInsideZone(ZoneId.TOWN) || cha.isInsideZone(ZoneId.CASTLE) //
@@ -103,12 +101,10 @@ public class NpcInfo implements IClientOutgoingPacket
 				_allyId = clan.getAllyId();
 			}
 		}
-		
 		if (cha.getTemplate().isServerSideName())
 		{
 			_name = cha.getTemplate().getName();
 		}
-		
 		if (Config.CHAMPION_ENABLE && cha.isChampion())
 		{
 			_title = Config.CHAMP_TITLE;
@@ -121,7 +117,6 @@ public class NpcInfo implements IClientOutgoingPacket
 		{
 			_title = cha.getTitle();
 		}
-		
 		// Custom level titles
 		if (cha.isMonster() && (Config.SHOW_NPC_LEVEL || Config.SHOW_NPC_AGGRESSION))
 		{
@@ -150,7 +145,6 @@ public class NpcInfo implements IClientOutgoingPacket
 			}
 			_title = cha.isChampion() ? Config.CHAMP_TITLE + " " + t1 : t1;
 		}
-		
 		_x = _creature.getX();
 		_y = _creature.getY();
 		_z = _creature.getZ();
@@ -183,7 +177,6 @@ public class NpcInfo implements IClientOutgoingPacket
 			_name = _creature.getName();
 			_title = cha.getTitle();
 		}
-		
 		_x = _creature.getX();
 		_y = _creature.getY();
 		_z = _creature.getZ();
@@ -199,16 +192,10 @@ public class NpcInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		if (_creature == null)
+		if ((_creature == null) || ((_creature instanceof Summon) && (((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().isInvisible()))
 		{
 			return false;
 		}
-		
-		if ((_creature instanceof Summon) && (((Summon) _creature).getOwner() != null) && ((Summon) _creature).getOwner().getAppearance().isInvisible())
-		{
-			return false;
-		}
-		
 		OutgoingPackets.NPC_INFO.writeId(packet);
 		packet.writeD(_creature.getObjectId());
 		packet.writeD(_displayId + 1000000); // npctype id
@@ -217,7 +204,7 @@ public class NpcInfo implements IClientOutgoingPacket
 		packet.writeD(_y);
 		packet.writeD(_z);
 		packet.writeD(_heading);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
 		packet.writeD(_runSpd);
@@ -243,10 +230,9 @@ public class NpcInfo implements IClientOutgoingPacket
 		packet.writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 		packet.writeS(_name);
 		packet.writeS(_title);
-		
 		if (_creature instanceof Summon)
 		{
-			packet.writeD(0x01); // Title color 0=client default
+			packet.writeD(1); // Title color 0=client default
 			packet.writeD(((Summon) _creature).getPvpFlag());
 			packet.writeD(((Summon) _creature).getKarma());
 		}
@@ -256,27 +242,24 @@ public class NpcInfo implements IClientOutgoingPacket
 			packet.writeD(0);
 			packet.writeD(0);
 		}
-		
 		packet.writeD(_creature.getAbnormalEffect()); // C2
 		packet.writeD(_clanId); // C2
 		packet.writeD(_clanCrest); // C2
 		packet.writeD(_allyId); // C2
 		packet.writeD(_allyCrest); // C2
-		packet.writeC(0x00); // C2
-		
+		packet.writeC(0); // C2
 		if (Config.CHAMPION_ENABLE)
 		{
 			packet.writeC(_creature.isChampion() ? Config.CHAMPION_AURA : 0);
 		}
 		else
 		{
-			packet.writeC(0x00); // C3 team circle 1-blue, 2-red
+			packet.writeC(0); // C3 team circle 1-blue, 2-red
 		}
-		
 		packet.writeF(_collisionRadius);
 		packet.writeF(_collisionHeight);
-		packet.writeD(0x00); // C4
-		packet.writeD(0x00); // C6
+		packet.writeD(0); // C4
+		packet.writeD(0); // C6
 		return true;
 	}
 }

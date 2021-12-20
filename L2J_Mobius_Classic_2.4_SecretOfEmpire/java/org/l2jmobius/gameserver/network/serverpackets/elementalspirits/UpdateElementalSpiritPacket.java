@@ -41,7 +41,6 @@ public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiri
 	{
 		packet.writeC(_update ? 1 : 0);
 		packet.writeC(_type);
-		
 		if (_update)
 		{
 			final ElementalSpirit spirit = _player.getElementalSpirit(ElementalType.of(_type));
@@ -49,7 +48,6 @@ public abstract class UpdateElementalSpiritPacket extends AbstractElementalSpiri
 			{
 				return;
 			}
-			
 			packet.writeC(_type);
 			writeSpiritInfo(packet, spirit);
 		}

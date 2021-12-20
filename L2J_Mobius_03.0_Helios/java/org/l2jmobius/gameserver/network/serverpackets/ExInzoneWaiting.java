@@ -46,7 +46,6 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_INZONE_WAITING_INFO.writeId(packet);
-		
 		packet.writeD(_currentTemplateId);
 		packet.writeD(_instanceTimes.size());
 		for (Entry<Integer, Long> entry : _instanceTimes.entrySet())

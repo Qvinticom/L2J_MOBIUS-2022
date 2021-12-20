@@ -34,7 +34,6 @@ public class ExRemoveEnchantSupportItemResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REMOVE_ENCHANT_SUPPORT_ITEM_RESULT.writeId(packet);
-		
 		return true;
 	}
 }

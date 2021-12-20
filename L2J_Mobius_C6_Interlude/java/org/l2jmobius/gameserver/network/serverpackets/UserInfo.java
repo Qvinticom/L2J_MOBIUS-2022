@@ -59,17 +59,14 @@ public class UserInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.USER_INFO.writeId(packet);
-		
 		packet.writeD(_player.getX());
 		packet.writeD(_player.getY());
 		packet.writeD(_player.getZ());
 		packet.writeD(_player.getBoat() != null ? _player.getBoat().getObjectId() : 0);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getName());
 		packet.writeD(_player.getRace().ordinal());
 		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
-		
 		if (_player.getClassIndex() == 0)
 		{
 			packet.writeD(_player.getClassId().getId());
@@ -78,7 +75,6 @@ public class UserInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(_player.getBaseClass());
 		}
-		
 		packet.writeD(_player.getLevel());
 		packet.writeQ(_player.getExp());
 		packet.writeD(_player.getSTR());
@@ -94,7 +90,6 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getSp());
 		packet.writeD(_player.getCurrentLoad());
 		packet.writeD(_player.getMaxLoad());
-		
 		packet.writeD(_player.getActiveWeaponItem() != null ? 40 : 20); // 20 no weapon, 40 weapon equipped
 		
 		packet.writeD(_inventory.getPaperdollObjectId(Inventory.PAPERDOLL_DHAIR));
@@ -134,39 +129,40 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 		
 		// c6 new h's
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
 		packet.writeD(_inventory.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
 		packet.writeD(_inventory.getPaperdollAugmentationId(Inventory.PAPERDOLL_LRHAND));
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
-		packet.writeH(0x00);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
+		packet.writeH(0);
 		// end of c6 new h's
+		
 		packet.writeD(_player.getPAtk(null));
 		packet.writeD(_player.getPAtkSpd());
 		packet.writeD(_player.getPDef(null));
@@ -174,15 +170,11 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getAccuracy());
 		packet.writeD(_player.getCriticalHit(null, null));
 		packet.writeD(_player.getMAtk(null, null));
-		
 		packet.writeD(_player.getMAtkSpd());
 		packet.writeD(_player.getPAtkSpd());
-		
 		packet.writeD(_player.getMDef(null, null));
-		
 		packet.writeD(_player.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
 		packet.writeD(_player.getKarma());
-		
 		packet.writeD(_runSpd); // base run speed
 		packet.writeD(_walkSpd); // base walk speed
 		packet.writeD(_runSpd); // swim run speed (calculated by getter)
@@ -227,7 +219,6 @@ public class UserInfo implements IClientOutgoingPacket
 		}
 		
 		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
-		
 		if (_player.getAppearance().isInvisible())
 		{
 			packet.writeD((_player.getAbnormalEffect() | Creature.ABNORMAL_EFFECT_STEALTH));
@@ -236,60 +227,40 @@ public class UserInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(_player.getAbnormalEffect()); // C2
 		}
-		
-		packet.writeC(0x00);
-		
+		packet.writeC(0);
 		packet.writeD(_player.getClanPrivileges());
-		
 		packet.writeH(_player.getRecomLeft()); // c2 recommendations remaining
 		packet.writeH(_player.getRecomHave()); // c2 recommendations received
-		packet.writeD(0x00); // _player.getMountNpcId() > 0 ? _player.getMountNpcId() + 1000000 : 0
+		packet.writeD(0); // _player.getMountNpcId() > 0 ? _player.getMountNpcId() + 1000000 : 0
 		packet.writeH(_player.getInventoryLimit());
-		
 		packet.writeD(_player.getClassId().getId());
-		packet.writeD(0x00); // special effects? circles around player...
+		packet.writeD(0); // special effects? circles around player...
 		packet.writeD(_player.getMaxCp());
 		packet.writeD((int) _player.getCurrentCp());
 		packet.writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
-		
-		if (_player.getTeam() == 1)
-		{
-			packet.writeC(0x01); // team circle around feet 1= Blue, 2 = red
-		}
-		else if (_player.getTeam() == 2)
-		{
-			packet.writeC(0x02); // team circle around feet 1= Blue, 2 = red
-		}
-		else
-		{
-			packet.writeC(0x00); // team circle around feet 1= Blue, 2 = red
-		}
-		
+		packet.writeC(_player.getTeam()); // team circle around feet 1= Blue, 2 = red
 		packet.writeD(_player.getClanCrestLargeId());
-		packet.writeC(_player.isNoble() ? 1 : 0); // 0x01: symbol on char menu ctrl+I
-		packet.writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.isPVPHero()) ? 1 : 0); // 0x01: Hero Aura
+		packet.writeC(_player.isNoble() ? 1 : 0); // 1: symbol on char menu ctrl+I
+		packet.writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.isPVPHero()) ? 1 : 0); // 1: Hero Aura
 		
 		packet.writeC(_player.isFishing() ? 1 : 0); // Fishing Mode
 		packet.writeD(_player.getFishX()); // fishing x
 		packet.writeD(_player.getFishY()); // fishing y
 		packet.writeD(_player.getFishZ()); // fishing z
+		
 		packet.writeD(_player.getAppearance().getNameColor());
-		
 		// new c5
-		packet.writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
-		
+		packet.writeC(_player.isRunning() ? 1 : 0); // changes the Speed display on Status Window
 		packet.writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
 		packet.writeD(_player.getPledgeType());
-		
 		packet.writeD(_player.getAppearance().getTitleColor());
-		
 		if (_player.isCursedWeaponEquiped())
 		{
 			packet.writeD(CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquipedId()));
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		return true;
 	}

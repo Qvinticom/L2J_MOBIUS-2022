@@ -46,7 +46,6 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 		// section 1
 		packet.writeD(_objId);
 		packet.writeQ(_playerAdena);
-		
 		// section2
 		packet.writeD(_itemList.size()); // inventory items for potential buy
 		for (Item item : _itemList)
@@ -54,7 +53,6 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 			writeItem(packet, item);
 			packet.writeQ(item.getItem().getReferencePrice() * 2);
 		}
-		
 		// section 3
 		packet.writeD(_buyList.size()); // count for all items already added for buy
 		for (TradeItem item : _buyList)

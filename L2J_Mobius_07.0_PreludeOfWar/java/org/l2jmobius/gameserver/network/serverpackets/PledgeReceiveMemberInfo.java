@@ -36,7 +36,6 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_RECEIVE_MEMBER_INFO.writeId(packet);
-		
 		packet.writeD(_member.getPledgeType());
 		packet.writeS(_member.getName());
 		packet.writeS(_member.getTitle()); // title

@@ -34,7 +34,6 @@ public class PledgeInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_INFO.writeId(packet);
-		
 		packet.writeD(Config.SERVER_ID);
 		packet.writeD(_clan.getId());
 		packet.writeS(_clan.getName());

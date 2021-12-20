@@ -50,7 +50,6 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_SHOP_ITEM_INFO.writeId(packet);
-		
 		packet.writeD(_manufacturer.getObjectId());
 		packet.writeD(_recipeId);
 		packet.writeD((int) _manufacturer.getCurrentMp());

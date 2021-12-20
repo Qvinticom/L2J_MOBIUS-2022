@@ -55,10 +55,9 @@ public class GMViewItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_ITEM_LIST.writeId(packet);
-		
 		packet.writeS(_playerName);
 		packet.writeD(_limit); // inventory limit
-		packet.writeH(0x01); // show window ??
+		packet.writeH(1); // show window ??
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{

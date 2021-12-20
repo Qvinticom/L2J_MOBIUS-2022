@@ -43,7 +43,6 @@ public class ExNeedToChangeName implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_NEED_TO_CHANGE_NAME.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeD(_subType);
 		packet.writeS(_name);

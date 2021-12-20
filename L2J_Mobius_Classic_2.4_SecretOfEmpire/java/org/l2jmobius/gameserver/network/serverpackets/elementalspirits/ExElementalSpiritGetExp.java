@@ -38,7 +38,6 @@ public class ExElementalSpiritGetExp implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ELEMENTAL_SPIRIT_GET_EXP.writeId(packet);
-		
 		packet.writeC(_type);
 		packet.writeQ(_experience);
 		return true;

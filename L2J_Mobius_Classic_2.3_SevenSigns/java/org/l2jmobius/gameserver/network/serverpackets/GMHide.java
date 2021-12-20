@@ -38,7 +38,6 @@ public class GMHide implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_HIDE.writeId(packet);
-		
 		packet.writeD(_mode);
 		return true;
 	}

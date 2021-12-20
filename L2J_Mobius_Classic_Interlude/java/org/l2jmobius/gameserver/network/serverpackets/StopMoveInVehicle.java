@@ -43,7 +43,6 @@ public class StopMoveInVehicle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.STOP_MOVE_IN_VEHICLE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_boatId);
 		packet.writeD(_pos.getX());

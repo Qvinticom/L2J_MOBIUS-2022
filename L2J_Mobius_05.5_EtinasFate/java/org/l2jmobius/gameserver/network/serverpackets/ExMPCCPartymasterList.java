@@ -37,7 +37,6 @@ public class ExMPCCPartymasterList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MPCC_PARTYMASTER_LIST.writeId(packet);
-		
 		packet.writeD(_leadersName.size());
 		_leadersName.forEach(packet::writeS);
 		return true;

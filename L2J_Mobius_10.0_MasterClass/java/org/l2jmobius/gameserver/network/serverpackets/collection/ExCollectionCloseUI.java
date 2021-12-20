@@ -29,7 +29,7 @@ public class ExCollectionCloseUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_COLLECTION_CLOSE_UI.writeId(packet);
-		packet.writeC(0x00);
+		packet.writeC(0);
 		return true;
 	}
 }

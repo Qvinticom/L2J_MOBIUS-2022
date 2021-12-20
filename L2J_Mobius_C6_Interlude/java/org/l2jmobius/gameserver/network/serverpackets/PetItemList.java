@@ -39,7 +39,6 @@ public class PetItemList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_ITEM_LIST.writeId(packet);
-		
 		packet.writeH(_items.size());
 		for (Item temp : _items)
 		{
@@ -51,16 +50,16 @@ public class PetItemList implements IClientOutgoingPacket
 			packet.writeH(0xff); // ?
 			if (temp.isEquipped())
 			{
-				packet.writeH(0x01);
+				packet.writeH(1);
 			}
 			else
 			{
-				packet.writeH(0x00);
+				packet.writeH(0);
 			}
 			packet.writeD(temp.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 			// writeH(temp.getItem().getBodyPart()); // rev 377 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 			packet.writeH(temp.getEnchantLevel()); // enchant level
-			packet.writeH(0x00); // ?
+			packet.writeH(0); // ?
 		}
 		return true;
 	}

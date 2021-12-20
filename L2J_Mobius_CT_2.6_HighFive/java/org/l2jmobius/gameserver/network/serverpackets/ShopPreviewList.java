@@ -53,11 +53,10 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		OutgoingPackets.SHOP_PREVIEW_LIST.writeId(packet);
 		packet.writeC(0xC0); // ?
 		packet.writeC(0x13); // ?
-		packet.writeC(0x00); // ?
-		packet.writeC(0x00); // ?
+		packet.writeC(0); // ?
+		packet.writeC(0); // ?
 		packet.writeQ(_money); // current money
 		packet.writeD(_listId);
-		
 		int newlength = 0;
 		for (Product product : _list)
 		{
@@ -67,23 +66,20 @@ public class ShopPreviewList implements IClientOutgoingPacket
 			}
 		}
 		packet.writeH(newlength);
-		
 		for (Product product : _list)
 		{
 			if ((product.getItem().getCrystalType().getLevel() <= _expertise) && product.getItem().isEquipable())
 			{
 				packet.writeD(product.getItemId());
 				packet.writeH(product.getItem().getType2()); // item type2
-				
 				if (product.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeH(product.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
 				else
 				{
-					packet.writeH(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(0); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
-				
 				packet.writeQ(Config.WEAR_PRICE);
 			}
 		}

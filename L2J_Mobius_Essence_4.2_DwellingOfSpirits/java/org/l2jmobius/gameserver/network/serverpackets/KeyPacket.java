@@ -35,17 +35,16 @@ public class KeyPacket implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VERSION_CHECK.writeId(packet);
-		
 		packet.writeC(_result); // 0 - wrong protocol, 1 - protocol ok
 		for (int i = 0; i < 8; i++)
 		{
 			packet.writeC(_key[i]); // key
 		}
-		packet.writeD(0x01);
+		packet.writeD(1);
 		packet.writeD(Config.SERVER_ID); // server id
-		packet.writeC(0x01);
-		packet.writeD(0x00); // obfuscation key
-		packet.writeC((Config.SERVER_LIST_TYPE & 0x400) == 0x400 ? 0x04 : 0x00); // isClassic
+		packet.writeC(1);
+		packet.writeD(0); // obfuscation key
+		packet.writeC((Config.SERVER_LIST_TYPE & 0x400) == 0x400 ? 4 : 0); // isClassic
 		return true;
 	}
 }

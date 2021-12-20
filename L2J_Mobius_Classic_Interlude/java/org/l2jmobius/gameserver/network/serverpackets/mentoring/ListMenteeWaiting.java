@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ListMenteeWaiting implements IClientOutgoingPacket
 {
 	private static final int PLAYERS_PER_PAGE = 64;
+	
 	private final List<Player> _possibleCandiates = new ArrayList<>();
 	private final int _page;
 	
@@ -51,18 +52,15 @@ public class ListMenteeWaiting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.LIST_MENTEE_WAITING.writeId(packet);
-		
-		packet.writeD(0x01); // always 1 in retail
+		packet.writeD(1); // always 1 in retail
 		if (_possibleCandiates.isEmpty())
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
 			return true;
 		}
-		
 		packet.writeD(_possibleCandiates.size());
 		packet.writeD(_possibleCandiates.size() % PLAYERS_PER_PAGE);
-		
 		for (Player player : _possibleCandiates)
 		{
 			if ((1 <= (PLAYERS_PER_PAGE * _page)) && (1 > (PLAYERS_PER_PAGE * (_page - 1))))

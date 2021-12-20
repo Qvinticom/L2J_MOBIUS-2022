@@ -44,7 +44,6 @@ public class ExValidateLocationInAirShip implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VALIDATE_LOCATION_IN_AIR_SHIP.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_shipId);
 		packet.writeD(_loc.getX());

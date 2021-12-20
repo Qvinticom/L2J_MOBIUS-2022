@@ -51,7 +51,6 @@ public class ExMoveToLocationInShuttle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MOVE_TO_LOCATION_IN_SUTTLE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_airShipId);
 		packet.writeD(_targetX);

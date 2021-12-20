@@ -46,13 +46,10 @@ public class SSQStatus implements IClientOutgoingPacket
 		final int totalDawnMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DAWN);
 		final int totalDuskMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DUSK);
 		OutgoingPackets.SSQ_STATUS.writeId(packet);
-		
 		packet.writeC(_page);
 		packet.writeC(SevenSigns.getInstance().getCurrentPeriod()); // current period?
-		
 		int dawnPercent = 0;
 		int duskPercent = 0;
-		
 		switch (_page)
 		{
 			case 1:
@@ -83,7 +80,6 @@ public class SSQStatus implements IClientOutgoingPacket
 						break;
 					}
 				}
-				
 				switch (currentPeriod)
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
@@ -99,19 +95,15 @@ public class SSQStatus implements IClientOutgoingPacket
 						break;
 					}
 				}
-				
 				packet.writeC(SevenSigns.getInstance().getPlayerCabal(_activevChar));
 				packet.writeC(SevenSigns.getInstance().getPlayerSeal(_activevChar));
-				
 				packet.writeD(SevenSigns.getInstance().getPlayerStoneContrib(_activevChar)); // Seal Stones Turned-In
 				packet.writeD(SevenSigns.getInstance().getPlayerAdenaCollect(_activevChar)); // Ancient Adena to Collect
-				
 				final double dawnStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DAWN);
 				final int dawnFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DAWN);
 				final double duskStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DUSK);
 				final int duskFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DUSK);
 				final double totalStoneScore = duskStoneScore + dawnStoneScore;
-				
 				/*
 				 * Scoring seems to be proportionate to a set base value, so base this on the maximum obtainable score from festivals, which is 500.
 				 */
@@ -122,7 +114,6 @@ public class SSQStatus implements IClientOutgoingPacket
 					duskStoneScoreProp = Math.round(((float) duskStoneScore / (float) totalStoneScore) * 500);
 					dawnStoneScoreProp = Math.round(((float) dawnStoneScore / (float) totalStoneScore) * 500);
 				}
-				
 				final int duskTotalScore = SevenSigns.getInstance().getCurrentScore(SevenSigns.CABAL_DUSK);
 				final int dawnTotalScore = SevenSigns.getInstance().getCurrentScore(SevenSigns.CABAL_DAWN);
 				final int totalOverallScore = duskTotalScore + dawnTotalScore;
@@ -131,19 +122,15 @@ public class SSQStatus implements IClientOutgoingPacket
 					dawnPercent = Math.round(((float) dawnTotalScore / totalOverallScore) * 100);
 					duskPercent = Math.round(((float) duskTotalScore / totalOverallScore) * 100);
 				}
-				
 				/* DUSK */
 				packet.writeD(duskStoneScoreProp); // Seal Stone Score
 				packet.writeD(duskFestivalScore); // Festival Score
 				packet.writeD(duskTotalScore); // Total Score
-				
 				packet.writeC(duskPercent); // Dusk %
-				
 				/* DAWN */
 				packet.writeD(dawnStoneScoreProp); // Seal Stone Score
 				packet.writeD(dawnFestivalScore); // Festival Score
 				packet.writeD(dawnTotalScore); // Total Score
-				
 				packet.writeC(dawnPercent); // Dawn %
 				break;
 			}

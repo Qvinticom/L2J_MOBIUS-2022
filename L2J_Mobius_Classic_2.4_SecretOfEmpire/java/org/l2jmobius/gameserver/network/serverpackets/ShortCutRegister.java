@@ -37,7 +37,6 @@ public class ShortCutRegister implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHORT_CUT_REGISTER.writeId(packet);
-		
 		packet.writeD(_shortcut.getType().ordinal());
 		packet.writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
 		switch (_shortcut.getType())
@@ -47,10 +46,10 @@ public class ShortCutRegister implements IClientOutgoingPacket
 				packet.writeD(_shortcut.getId());
 				packet.writeD(_shortcut.getCharacterType());
 				packet.writeD(_shortcut.getSharedReuseGroup());
-				packet.writeD(0x00); // unknown
-				packet.writeD(0x00); // unknown
-				packet.writeD(0x00); // item augment id
-				packet.writeD(0x00); // TODO: Find me, item visual id ?
+				packet.writeD(0); // unknown
+				packet.writeD(0); // unknown
+				packet.writeD(0); // item augment id
+				packet.writeD(0); // TODO: Find me, item visual id ?
 				break;
 			}
 			case SKILL:
@@ -59,10 +58,10 @@ public class ShortCutRegister implements IClientOutgoingPacket
 				packet.writeH(_shortcut.getLevel());
 				packet.writeH(_shortcut.getSubLevel());
 				packet.writeD(_shortcut.getSharedReuseGroup());
-				packet.writeC(0x00); // C5
+				packet.writeC(0); // C5
 				packet.writeD(_shortcut.getCharacterType());
-				packet.writeD(0x00); // TODO: Find me
-				packet.writeD(0x00); // TODO: Find me
+				packet.writeD(0); // TODO: Find me
+				packet.writeD(0); // TODO: Find me
 				break;
 			}
 			case ACTION:

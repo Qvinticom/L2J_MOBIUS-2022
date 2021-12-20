@@ -32,7 +32,6 @@ public class ChooseInventoryItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHOOSE_INVENTORY_ITEM.writeId(packet);
-		
 		packet.writeD(_itemId);
 		return true;
 	}

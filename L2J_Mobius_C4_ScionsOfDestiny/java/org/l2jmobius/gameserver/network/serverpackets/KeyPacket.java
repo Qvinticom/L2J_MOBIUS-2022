@@ -38,7 +38,7 @@ public class KeyPacket implements IClientOutgoingPacket
 		packet.writeC(_result); // 0 - wrong protocol, 1 - protocol ok
 		packet.writeB(_key);
 		packet.writeD(Config.SERVER_ID); // server id
-		packet.writeD(0x01);
+		packet.writeD(1);
 		return true;
 	}
 }

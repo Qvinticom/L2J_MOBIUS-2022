@@ -36,7 +36,6 @@ public class ExPartyPetWindowDelete implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PARTY_PET_WINDOW_DELETE.writeId(packet);
-		
 		packet.writeD(_summon.getObjectId());
 		packet.writeC(_summon.getSummonType());
 		packet.writeD(_summon.getOwner().getObjectId());

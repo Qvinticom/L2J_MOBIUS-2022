@@ -21,10 +21,10 @@ package org.l2jmobius.gameserver.enums;
  */
 public enum AttackType
 {
-	MISSED(0x01),
-	BLOCKED(0x02),
-	CRITICAL(0x04),
-	SHOT_USED(0x08);
+	MISSED(1),
+	BLOCKED(2),
+	CRITICAL(4),
+	SHOT_USED(8);
 	
 	private final int _mask;
 	

@@ -63,10 +63,8 @@ public class Die implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.DIE.writeId(packet);
 		packet.writeD(_objectId);
-		
 		// NOTE:
 		// 6d 00 00 00 00 - to nearest village
 		// 6d 01 00 00 00 - to hide away
@@ -74,12 +72,11 @@ public class Die implements IClientOutgoingPacket
 		// 6d 03 00 00 00 - to siege HQ
 		// sweepable
 		// 6d 04 00 00 00 - FIXED
-		packet.writeD(_canTeleport ? 0x01 : 0); // 6d 00 00 00 00 - to nearest village
-		
+		packet.writeD(_canTeleport ? 1 : 0); // 6d 00 00 00 00 - to nearest village
 		if (_canTeleport && (_clan != null))
 		{
 			SiegeClan siegeClan = null;
-			Boolean isInDefense = false;
+			boolean isInDefense = false;
 			final Castle castle = CastleManager.getInstance().getCastle(_creature);
 			final Fort fort = FortManager.getInstance().getFort(_creature);
 			if ((castle != null) && castle.getSiege().isInProgress())
@@ -100,20 +97,18 @@ public class Die implements IClientOutgoingPacket
 					isInDefense = true;
 				}
 			}
-			
-			packet.writeD(_clan.getHideoutId() > 0 ? 0x01 : 0x00); // 6d 01 00 00 00 - to hide away
-			packet.writeD((_clan.getCastleId() > 0) || (_clan.getFortId() > 0) || isInDefense ? 0x01 : 0x00); // 6d 02 00 00 00 - to castle
-			packet.writeD((siegeClan != null) && !isInDefense && !siegeClan.getFlag().isEmpty() ? 0x01 : 0x00); // 6d 03 00 00 00 - to siege HQ
+			packet.writeD(_clan.getHideoutId() > 0 ? 1 : 0); // 6d 01 00 00 00 - to hide away
+			packet.writeD((_clan.getCastleId() > 0) || (_clan.getFortId() > 0) || isInDefense ? 1 : 0); // 6d 02 00 00 00 - to castle
+			packet.writeD((siegeClan != null) && !isInDefense && !siegeClan.getFlag().isEmpty() ? 1 : 0); // 6d 03 00 00 00 - to siege HQ
 		}
 		else
 		{
-			packet.writeD(0x00); // 6d 01 00 00 00 - to hide away
-			packet.writeD(0x00); // 6d 02 00 00 00 - to castle
-			packet.writeD(0x00); // 6d 03 00 00 00 - to siege HQ
+			packet.writeD(0); // 6d 01 00 00 00 - to hide away
+			packet.writeD(0); // 6d 02 00 00 00 - to castle
+			packet.writeD(0); // 6d 03 00 00 00 - to siege HQ
 		}
-		
-		packet.writeD(_sweepable ? 0x01 : 0x00); // sweepable (blue glow)
-		packet.writeD(_allowFixedRes ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
+		packet.writeD(_sweepable ? 1 : 0); // sweepable (blue glow)
+		packet.writeD(_allowFixedRes ? 1 : 0); // 6d 04 00 00 00 - to FIXED
 		return true;
 	}
 }

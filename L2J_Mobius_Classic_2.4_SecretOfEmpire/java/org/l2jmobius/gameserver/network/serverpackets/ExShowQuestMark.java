@@ -37,7 +37,6 @@ public class ExShowQuestMark implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_QUEST_MARK.writeId(packet);
-		
 		packet.writeD(_questId);
 		packet.writeD(_questState);
 		return true;

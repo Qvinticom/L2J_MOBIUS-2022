@@ -46,9 +46,8 @@ public class ExDivideAdenaDone implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DIVIDE_ADENA_DONE.writeId(packet);
-		
-		packet.writeC(_isPartyLeader ? 0x01 : 0x00);
-		packet.writeC(_isCCLeader ? 0x01 : 0x00);
+		packet.writeC(_isPartyLeader ? 1 : 0);
+		packet.writeC(_isCCLeader ? 1 : 0);
 		packet.writeD(_memberCount);
 		packet.writeQ(_distributedAdenaCount);
 		packet.writeQ(_adenaCount);

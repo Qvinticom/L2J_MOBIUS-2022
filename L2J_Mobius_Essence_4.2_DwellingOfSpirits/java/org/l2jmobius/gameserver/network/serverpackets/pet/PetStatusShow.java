@@ -39,7 +39,6 @@ public class PetStatusShow implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_STATUS_SHOW.writeId(packet);
-		
 		packet.writeD(_summonType);
 		packet.writeD(_summonObjectId);
 		return true;

@@ -59,10 +59,8 @@ public class ExBuySellList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
-		
-		packet.writeD(0x01); // Type SELL
+		packet.writeD(1); // Type SELL
 		packet.writeD(_inventorySlots);
-		
 		if ((_sellList != null))
 		{
 			packet.writeH(_sellList.size());
@@ -74,9 +72,8 @@ public class ExBuySellList extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
-		
 		if ((_refundList != null) && !_refundList.isEmpty())
 		{
 			packet.writeH(_refundList.size());
@@ -90,10 +87,9 @@ public class ExBuySellList extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
-		
-		packet.writeC(_done ? 0x01 : 0x00);
+		packet.writeC(_done ? 1 : 0);
 		return true;
 	}
 }

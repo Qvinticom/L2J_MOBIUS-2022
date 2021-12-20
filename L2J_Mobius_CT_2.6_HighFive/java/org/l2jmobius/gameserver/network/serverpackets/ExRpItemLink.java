@@ -42,7 +42,7 @@ public class ExRpItemLink implements IClientOutgoingPacket
 		packet.writeQ(_item.getCount());
 		packet.writeH(_item.getItem().getType2());
 		packet.writeH(_item.getCustomType1());
-		packet.writeH(_item.isEquipped() ? 0x01 : 0x00);
+		packet.writeH(_item.isEquipped() ? 1 : 0);
 		packet.writeD(_item.getItem().getBodyPart());
 		packet.writeH(_item.getEnchantLevel());
 		packet.writeH(_item.getCustomType2());
@@ -52,7 +52,7 @@ public class ExRpItemLink implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		packet.writeD(_item.getMana());
 		packet.writeD(_item.isTimeLimitedItem() ? (int) (_item.getRemainingTime() / 1000) : -9999);

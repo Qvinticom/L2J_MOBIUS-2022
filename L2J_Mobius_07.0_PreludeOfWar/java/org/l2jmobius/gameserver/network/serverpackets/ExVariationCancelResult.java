@@ -35,7 +35,6 @@ public class ExVariationCancelResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VARIATION_CANCEL_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		return true;
 	}

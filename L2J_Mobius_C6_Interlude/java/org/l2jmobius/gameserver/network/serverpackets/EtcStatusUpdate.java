@@ -48,11 +48,11 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00); // 1-7 increase force, level
+			packet.writeD(0); // 1-7 increase force, level
 		}
 		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, level (1=50%, 2=66.6%, 3=80%, 4=100%)
 		packet.writeD(_player.isInRefusalMode() || _player.isChatBanned() ? 1 : 0); // 1 = block all chat
-		// writeD(0x00); // 1 = danger area
+		// writeD(0); // 1 = danger area
 		packet.writeD(_player.isInsideZone(ZoneId.DANGER_AREA)/* || _player.isInDangerArea() */ ? 1 : 0); // 1 = danger area
 		packet.writeD(Math.min(_player.getExpertisePenalty() + _player.getMasteryPenalty() + _player.getMasteryWeapPenalty(), 1)); // 1 = grade penalty
 		packet.writeD(_player.getCharmOfCourage() ? 1 : 0); // 1 = charm of courage (no xp loss in siege..)

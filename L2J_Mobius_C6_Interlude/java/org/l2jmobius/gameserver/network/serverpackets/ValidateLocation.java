@@ -41,7 +41,6 @@ public class ValidateLocation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VALIDATE_LOCATION.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_x);
 		packet.writeD(_y);

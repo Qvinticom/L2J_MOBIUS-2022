@@ -32,7 +32,6 @@ public class MagicSkillCanceld implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_SKILL_CANCELED.writeId(packet);
-		
 		packet.writeD(_objectId);
 		return true;
 	}

@@ -50,7 +50,6 @@ public class ExFishingHpRegen implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FISHING_HP_REGEN.writeId(packet);
-		
 		packet.writeD(_creature.getObjectId());
 		packet.writeD(_time);
 		packet.writeD(_fishHP);

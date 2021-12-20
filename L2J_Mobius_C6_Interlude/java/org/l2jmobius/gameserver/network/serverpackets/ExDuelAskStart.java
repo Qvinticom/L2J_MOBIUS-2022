@@ -27,7 +27,6 @@ public class ExDuelAskStart implements IClientOutgoingPacket
 {
 	/** The _requestor name. */
 	private final String _requestorName;
-	
 	/** The _party duel. */
 	private final int _partyDuel;
 	
@@ -46,7 +45,6 @@ public class ExDuelAskStart implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DUEL_ASK_START.writeId(packet);
-		
 		packet.writeS(_requestorName);
 		packet.writeD(_partyDuel);
 		return true;

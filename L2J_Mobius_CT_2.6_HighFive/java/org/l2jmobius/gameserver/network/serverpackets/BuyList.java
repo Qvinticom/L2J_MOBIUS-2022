@@ -43,12 +43,10 @@ public class BuyList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeQ(_money); // current money
 		packet.writeD(_listId);
-		
 		packet.writeH(_list.size());
-		
 		for (Product product : _list)
 		{
 			if ((product.getCount() > 0) || !product.hasLimitedStock())
@@ -59,24 +57,23 @@ public class BuyList implements IClientOutgoingPacket
 				packet.writeQ(product.getCount() < 0 ? 0 : product.getCount());
 				packet.writeH(product.getItem().getType2());
 				packet.writeH(product.getItem().getType1()); // Custom Type 1
-				packet.writeH(0x00); // isEquipped
+				packet.writeH(0); // isEquipped
 				packet.writeD(product.getItem().getBodyPart()); // Body Part
 				packet.writeH(product.getItem().getDefaultEnchantLevel()); // Enchant
-				packet.writeH(0x00); // Custom Type
-				packet.writeD(0x00); // Augment
+				packet.writeH(0); // Custom Type
+				packet.writeD(0); // Augment
 				packet.writeD(-1); // Mana
 				packet.writeD(-9999); // Time
-				packet.writeH(0x00); // Element Type
-				packet.writeH(0x00); // Element Power
+				packet.writeH(0); // Element Type
+				packet.writeH(0); // Element Power
 				for (byte i = 0; i < 6; i++)
 				{
-					packet.writeH(0x00);
+					packet.writeH(0);
 				}
 				// Enchant Effects
-				packet.writeH(0x00);
-				packet.writeH(0x00);
-				packet.writeH(0x00);
-				
+				packet.writeH(0);
+				packet.writeH(0);
+				packet.writeH(0);
 				if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
 				{
 					packet.writeQ((long) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));

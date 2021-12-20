@@ -49,7 +49,6 @@ public class ExMagicAttackInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MAGIC_ATTACK_INFO.writeId(packet);
-		
 		packet.writeD(_caster);
 		packet.writeD(_target);
 		packet.writeD(_type);

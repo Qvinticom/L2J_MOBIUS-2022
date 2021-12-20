@@ -46,7 +46,6 @@ public class ExMPCCPartyInfoUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MPCCPARTY_INFO_UPDATE.writeId(packet);
-		
 		packet.writeS(_name);
 		packet.writeD(_LeaderOID);
 		packet.writeD(_memberCount);

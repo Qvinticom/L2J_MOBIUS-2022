@@ -33,6 +33,7 @@ public class SystemMessage implements IClientOutgoingPacket
 	private static final int TYPE_NPC_NAME = 2;
 	private static final int TYPE_NUMBER = 1;
 	private static final int TYPE_TEXT = 0;
+	
 	private final int _messageId;
 	private final List<Integer> _types = new ArrayList<>();
 	private final List<Object> _values = new ArrayList<>();
@@ -122,15 +123,12 @@ public class SystemMessage implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SYSTEM_MESSAGE.writeId(packet);
-		
 		packet.writeD(_messageId);
 		packet.writeD(_types.size());
-		
 		for (int i = 0; i < _types.size(); i++)
 		{
 			final int t = _types.get(i).intValue();
 			packet.writeD(t);
-			
 			switch (t)
 			{
 				case TYPE_TEXT:

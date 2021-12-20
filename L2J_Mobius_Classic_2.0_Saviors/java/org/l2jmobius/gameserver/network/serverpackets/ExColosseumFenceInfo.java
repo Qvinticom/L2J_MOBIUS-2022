@@ -54,7 +54,6 @@ public class ExColosseumFenceInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_COLOSSEUM_FENCE_INFO.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeD(_clientState);
 		packet.writeD(_x);
@@ -62,7 +61,6 @@ public class ExColosseumFenceInfo implements IClientOutgoingPacket
 		packet.writeD(_z);
 		packet.writeD(_width);
 		packet.writeD(_length);
-		
 		return true;
 	}
 }

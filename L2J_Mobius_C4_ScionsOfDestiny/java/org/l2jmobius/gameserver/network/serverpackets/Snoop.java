@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * CDSDDSS -> (0xd5)(objId)(name)(0x00)(type)(speaker)(name)
+ * CDSDDSS -> (0xd5)(objId)(name)(0)(type)(speaker)(name)
  */
 public class Snoop implements IClientOutgoingPacket
 {

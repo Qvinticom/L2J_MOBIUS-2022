@@ -38,13 +38,11 @@ public class MoveToLocationInVehicle implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		final Player player = (Player) actor;
 		if (player.getBoat() == null)
 		{
 			return;
 		}
-		
 		_objectId = player.getObjectId();
 		_boatId = player.getBoat().getObjectId();
 		_destination = destination;

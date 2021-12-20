@@ -54,7 +54,6 @@ public class ShowBoard implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_BOARD.writeId(packet);
-		
 		packet.writeC(_showBoard); // c4 1 to show community 00 to hide
 		packet.writeS("bypass _bbshome"); // top
 		packet.writeS("bypass _bbsgetfav"); // favorite

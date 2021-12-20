@@ -38,10 +38,8 @@ public class PartySmallWindowUpdate implements IClientOutgoingPacket
 		OutgoingPackets.PARTY_SMALL_WINDOW_UPDATE.writeId(packet);
 		packet.writeD(_member.getObjectId());
 		packet.writeS(_member.getName());
-		
 		packet.writeD((int) _member.getCurrentCp()); // c4
 		packet.writeD(_member.getMaxCp()); // c4
-		
 		packet.writeD((int) _member.getCurrentHp());
 		packet.writeD(_member.getMaxHp());
 		packet.writeD((int) _member.getCurrentMp());

@@ -37,12 +37,10 @@ public class ExAirShipTeleportList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_AIR_SHIP_TELEPORT_LIST.writeId(packet);
-		
 		packet.writeD(_dockId);
 		if (_teleports != null)
 		{
 			packet.writeD(_teleports.length);
-			
 			for (int i = 0; i < _teleports.length; i++)
 			{
 				packet.writeD(i - 1);

@@ -45,7 +45,6 @@ public class GetOnVehicle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GET_ON_VEHICLE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_boatObjId);
 		packet.writeD(_pos.getX());

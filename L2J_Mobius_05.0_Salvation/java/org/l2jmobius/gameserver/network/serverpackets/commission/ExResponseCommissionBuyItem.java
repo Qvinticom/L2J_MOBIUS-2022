@@ -40,7 +40,6 @@ public class ExResponseCommissionBuyItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_ITEM.writeId(packet);
-		
 		packet.writeD(_commissionItem != null ? 1 : 0);
 		if (_commissionItem != null)
 		{

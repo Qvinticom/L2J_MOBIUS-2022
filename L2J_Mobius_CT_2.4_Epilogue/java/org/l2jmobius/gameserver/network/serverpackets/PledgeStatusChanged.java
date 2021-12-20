@@ -38,8 +38,8 @@ public class PledgeStatusChanged implements IClientOutgoingPacket
 		packet.writeD(_clan.getCrestId());
 		packet.writeD(_clan.getAllyId());
 		packet.writeD(_clan.getAllyCrestId());
-		packet.writeD(0x00);
-		packet.writeD(0x00);
+		packet.writeD(0);
+		packet.writeD(0);
 		return true;
 	}
 }

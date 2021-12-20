@@ -90,7 +90,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_summon.getObjectId());
 		packet.writeD(_summon.getTemplate().getDisplayId() + 1000000);
 		packet.writeD(0); // 1=attackable
-		
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
@@ -106,7 +105,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_flWalkSpd);
 		packet.writeD(_flyRunSpd);
 		packet.writeD(_flyWalkSpd);
-		
 		packet.writeF(1/* _cha.getProperMultiplier() */);
 		packet.writeF(1/* _cha.getAttackSpeedMultiplier() */);
 		packet.writeF(_summon.getTemplate().getFCollisionRadius());
@@ -147,7 +145,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_runSpd); // speed
 		packet.writeD(_summon.getPAtkSpd()); // atkspeed
 		packet.writeD(_summon.getMAtkSpd()); // casting speed
-		
 		packet.writeD(0); // c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
 		final int npcId = _summon.getTemplate().getNpcId();
 		if ((npcId >= 12526) && (npcId <= 12528))
@@ -158,9 +155,7 @@ public class PetInfo implements IClientOutgoingPacket
 		{
 			packet.writeH(0);
 		}
-		
 		packet.writeC(0); // c2
-		
 		// Following all added in C4.
 		packet.writeH(0); // ??
 		packet.writeC(0); // team aura (1 = blue, 2 = red)

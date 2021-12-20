@@ -19,7 +19,7 @@ package org.l2jmobius.loginserver.network.serverpackets;
 import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
- * Fromat: d d: response
+ * Format: d d: response
  */
 public class GGAuth extends AbstractServerPacket
 {

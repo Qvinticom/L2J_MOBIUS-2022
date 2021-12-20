@@ -41,9 +41,8 @@ public class ExAutoSoulShot implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_AUTO_SOUL_SHOT.writeId(packet);
-		
 		packet.writeD(_itemId);
-		packet.writeD(_enable ? 0x01 : 0x00); // Underground
+		packet.writeD(_enable ? 1 : 0); // Underground
 		packet.writeD(_type);
 		return true;
 	}

@@ -41,7 +41,6 @@ public class HennaEquipList implements IClientOutgoingPacket
 		packet.writeD(_player.getAdena());
 		packet.writeD(3);
 		packet.writeD(_hennaEquipList.size());
-		
 		for (Henna temp : _hennaEquipList)
 		{
 			// Player must have at least one dye in inventory to be able to see the henna that can be applied with it.

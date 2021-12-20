@@ -89,14 +89,12 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 		Inventory.PAPERDOLL_ARTIFACT20,
 		Inventory.PAPERDOLL_ARTIFACT21,
 	};
-	
 	int[] PAPERDOLL_ORDER_AUGMENT = new int[]
 	{
 		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_LHAND,
 		Inventory.PAPERDOLL_RHAND
 	};
-	
 	int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
 	{
 		Inventory.PAPERDOLL_RHAND,

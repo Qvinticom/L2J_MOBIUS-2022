@@ -42,7 +42,6 @@ public class GMViewQuestList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.GM_VIEW_QUEST_LIST.writeId(packet);
 		packet.writeS(_player.getName());
-		
 		final List<Quest> questList = _player.getAllActiveQuests();
 		packet.writeH(questList.size()); // quest count
 		for (Quest q : questList)
@@ -54,7 +53,6 @@ public class GMViewQuestList implements IClientOutgoingPacket
 				packet.writeD(0);
 				continue;
 			}
-			
 			packet.writeD(qs.getCond()); // stage of quest progress
 		}
 		return true;

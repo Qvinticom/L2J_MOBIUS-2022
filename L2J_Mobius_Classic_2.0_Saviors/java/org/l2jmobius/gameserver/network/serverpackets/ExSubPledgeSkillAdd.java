@@ -39,7 +39,6 @@ public class ExSubPledgeSkillAdd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SUB_PLEDGET_SKILL_ADD.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);

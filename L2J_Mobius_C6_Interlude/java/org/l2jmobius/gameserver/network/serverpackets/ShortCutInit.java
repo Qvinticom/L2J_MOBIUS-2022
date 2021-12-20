@@ -39,7 +39,6 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		_shortCuts = _player.getAllShortCuts();
 	}
 	
@@ -52,50 +51,49 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			packet.writeD(sc.getType());
 			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
-			
 			switch (sc.getType())
 			{
 				case ShortCut.TYPE_ITEM: // 1
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01);
+					packet.writeD(1);
 					packet.writeD(-1);
-					packet.writeD(0x00);
-					packet.writeD(0x00);
-					packet.writeH(0x00);
-					packet.writeH(0x00);
+					packet.writeD(0);
+					packet.writeD(0);
+					packet.writeH(0);
+					packet.writeH(0);
 					break;
 				}
 				case ShortCut.TYPE_SKILL: // 2
 				{
 					packet.writeD(sc.getId());
 					packet.writeD(sc.getLevel());
-					packet.writeC(0x00); // C5
-					packet.writeD(0x01); // C6
+					packet.writeC(0); // C5
+					packet.writeD(1); // C6
 					break;
 				}
 				case ShortCut.TYPE_ACTION: // 3
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // C6
+					packet.writeD(1); // C6
 					break;
 				}
 				case ShortCut.TYPE_MACRO: // 4
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // C6
+					packet.writeD(1); // C6
 					break;
 				}
 				case ShortCut.TYPE_RECIPE: // 5
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // C6
+					packet.writeD(1); // C6
 					break;
 				}
 				default:
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // C6
+					packet.writeD(1); // C6
 				}
 			}
 		}

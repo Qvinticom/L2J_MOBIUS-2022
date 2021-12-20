@@ -39,7 +39,6 @@ public class ExResponseCommissionDelete implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_DELETE.writeId(packet);
-		
 		packet.writeD(_result);
 		return true;
 	}

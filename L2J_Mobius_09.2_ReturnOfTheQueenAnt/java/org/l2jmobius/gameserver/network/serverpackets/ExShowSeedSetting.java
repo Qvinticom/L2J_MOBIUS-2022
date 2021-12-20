@@ -62,10 +62,8 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SEED_SETTING.writeId(packet);
-		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_seeds.size()); // size
-		
 		for (Seed s : _seeds)
 		{
 			packet.writeD(s.getSeedId()); // seed id

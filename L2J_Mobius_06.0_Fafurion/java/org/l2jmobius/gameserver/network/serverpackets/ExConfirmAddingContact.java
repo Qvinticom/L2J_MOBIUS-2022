@@ -37,9 +37,8 @@ public class ExConfirmAddingContact implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_AGIT_AUCTION_CMD.writeId(packet);
-		
 		packet.writeS(_charName);
-		packet.writeD(_added ? 0x01 : 0x00);
+		packet.writeD(_added ? 1 : 0);
 		return true;
 	}
 }

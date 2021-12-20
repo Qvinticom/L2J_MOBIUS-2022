@@ -45,11 +45,10 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 			packet.writeD(_player.getMaxMp()); // Creator's MP
 			packet.writeD(_buyer.getAdena()); // Buyer Adena
 			packet.writeD(createList.size());
-			
 			for (ManufactureItem item : createList.getList())
 			{
 				packet.writeD(item.getRecipeId());
-				packet.writeD(0x00); // unknown
+				packet.writeD(0); // unknown
 				packet.writeD(item.getCost());
 			}
 		}

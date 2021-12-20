@@ -33,6 +33,16 @@ import org.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
  */
 public class ExShowScreenMessage implements IClientOutgoingPacket
 {
+	// Positions
+	public static final byte TOP_LEFT = 1;
+	public static final byte TOP_CENTER = 2;
+	public static final byte TOP_RIGHT = 3;
+	public static final byte MIDDLE_LEFT = 4;
+	public static final byte MIDDLE_CENTER = 5;
+	public static final byte MIDDLE_RIGHT = 6;
+	public static final byte BOTTOM_CENTER = 7;
+	public static final byte BOTTOM_RIGHT = 8;
+	
 	private final int _type;
 	private final int _sysMessageId;
 	private final int _unk1;
@@ -48,15 +58,6 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	private List<String> _parameters;
 	// Localisation related.
 	private String _lang;
-	// Positions
-	public static final byte TOP_LEFT = 0x01;
-	public static final byte TOP_CENTER = 0x02;
-	public static final byte TOP_RIGHT = 0x03;
-	public static final byte MIDDLE_LEFT = 0x04;
-	public static final byte MIDDLE_CENTER = 0x05;
-	public static final byte MIDDLE_RIGHT = 0x06;
-	public static final byte BOTTOM_CENTER = 0x07;
-	public static final byte BOTTOM_RIGHT = 0x08;
 	
 	public void setLang(String lang)
 	{
@@ -265,7 +266,6 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
-		
 		// Localisation related.
 		if (_lang != null)
 		{
@@ -284,9 +284,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_size);
 						packet.writeD(_unk2);
 						packet.writeD(_unk3);
-						packet.writeD(_effect ? 0x01 : 0x00);
+						packet.writeD(_effect ? 1 : 0);
 						packet.writeD(_time);
-						packet.writeD(_fade ? 0x01 : 0x00);
+						packet.writeD(_fade ? 1 : 0);
 						packet.writeD(-1);
 						packet.writeS(sml.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 						return true;
@@ -308,9 +308,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 						packet.writeD(_size);
 						packet.writeD(_unk2);
 						packet.writeD(_unk3);
-						packet.writeD(_effect ? 0x01 : 0x00);
+						packet.writeD(_effect ? 1 : 0);
 						packet.writeD(_time);
-						packet.writeD(_fade ? 0x01 : 0x00);
+						packet.writeD(_fade ? 1 : 0);
 						packet.writeD(-1);
 						packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 						return true;
@@ -318,7 +318,6 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		packet.writeD(_type);
 		packet.writeD(_sysMessageId);
 		packet.writeD(_position);
@@ -326,9 +325,9 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 		packet.writeD(_size);
 		packet.writeD(_unk2);
 		packet.writeD(_unk3);
-		packet.writeD(_effect ? 0x01 : 0x00);
+		packet.writeD(_effect ? 1 : 0);
 		packet.writeD(_time);
-		packet.writeD(_fade ? 0x01 : 0x00);
+		packet.writeD(_fade ? 1 : 0);
 		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{

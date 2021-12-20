@@ -44,7 +44,6 @@ public class ExBrBuffEventState implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_BUFF_EVENT_STATE.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeD(_value);
 		packet.writeD(_state);

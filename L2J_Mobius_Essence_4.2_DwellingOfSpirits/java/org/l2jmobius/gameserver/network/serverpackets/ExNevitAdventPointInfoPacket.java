@@ -35,7 +35,6 @@ public class ExNevitAdventPointInfoPacket implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_AGATHION_ENERGY_INFO.writeId(packet);
-		
 		packet.writeD(_points); // 72 = 1%, max 7200 = 100%
 		return true;
 	}

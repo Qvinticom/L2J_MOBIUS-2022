@@ -89,10 +89,8 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_CROP_SETTING.writeId(packet);
-		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_count); // size
-		
 		for (int i = 0; i < _count; i++)
 		{
 			packet.writeD(_cropData[(i * 14) + 0]); // crop id
@@ -101,16 +99,13 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 			packet.writeD(_cropData[(i * 14) + 2]); // reward 1 id
 			packet.writeC(1);
 			packet.writeD(_cropData[(i * 14) + 3]); // reward 2 id
-			
 			packet.writeD(_cropData[(i * 14) + 4]); // next sale limit
 			packet.writeD(_cropData[(i * 14) + 5]); // ???
 			packet.writeD(_cropData[(i * 14) + 6]); // min crop price
 			packet.writeD(_cropData[(i * 14) + 7]); // max crop price
-			
 			packet.writeD(_cropData[(i * 14) + 8]); // today buy
 			packet.writeD(_cropData[(i * 14) + 9]); // today price
 			packet.writeC(_cropData[(i * 14) + 10]); // today reward
-			
 			packet.writeD(_cropData[(i * 14) + 11]); // next buy
 			packet.writeD(_cropData[(i * 14) + 12]); // next price
 			packet.writeC(_cropData[(i * 14) + 13]); // next reward

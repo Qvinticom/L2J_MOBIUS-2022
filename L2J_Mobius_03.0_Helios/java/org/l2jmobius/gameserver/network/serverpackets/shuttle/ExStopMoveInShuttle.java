@@ -44,7 +44,6 @@ public class ExStopMoveInShuttle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_STOP_MOVE_IN_SHUTTLE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_boatId);
 		packet.writeD(_pos.getX());

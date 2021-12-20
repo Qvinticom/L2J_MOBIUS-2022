@@ -63,7 +63,6 @@ public class PlaySound implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLAY_SOUND.writeId(packet);
-		
 		packet.writeD(_unknown1); // unknown 0 for quest and ship;
 		packet.writeS(_soundFile);
 		packet.writeD(_unknown3); // unknown 0 for quest; 1 for ship;

@@ -46,7 +46,6 @@ public class StatusUpdate implements IClientOutgoingPacket
 	public void addUpdate(StatusUpdateType type, int level)
 	{
 		_updates.put(type, level);
-		
 		if (_isPlayable)
 		{
 			switch (type)
@@ -75,10 +74,9 @@ public class StatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.STATUS_UPDATE.writeId(packet);
-		
 		packet.writeD(_objectId); // casterId
-		packet.writeD(_isVisible ? _casterObjectId : 0x00);
-		packet.writeC(_isVisible ? 0x01 : 0x00);
+		packet.writeD(_isVisible ? _casterObjectId : 0);
+		packet.writeC(_isVisible ? 1 : 0);
 		packet.writeC(_updates.size());
 		for (Entry<StatusUpdateType, Integer> entry : _updates.entrySet())
 		{

@@ -84,7 +84,6 @@ public class MagicSkillUse implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
-		
 		packet.writeD(_castingType.getClientBarId()); // Casting bar type: 0 - default, 1 - default up, 2 - blue, 3 - green, 4 - red.
 		packet.writeD(_creature.getObjectId());
 		packet.writeD(_target.getObjectId());
@@ -111,7 +110,7 @@ public class MagicSkillUse implements IClientOutgoingPacket
 		packet.writeD(_target.getX());
 		packet.writeD(_target.getY());
 		packet.writeD(_target.getZ());
-		packet.writeD(_actionId >= 0 ? 0x01 : 0x00); // 1 when ID from RequestActionUse is used
+		packet.writeD(_actionId >= 0 ? 1 : 0); // 1 when ID from RequestActionUse is used
 		packet.writeD(_actionId >= 0 ? _actionId : 0); // ID from RequestActionUse. Used to set cooldown on summon skills.
 		packet.writeD(-1); // 306
 		return true;

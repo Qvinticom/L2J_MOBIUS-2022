@@ -35,7 +35,6 @@ public class ExPutEnchantSupportItemResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_ENCHANT_SUPPORT_ITEM_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		return true;
 	}

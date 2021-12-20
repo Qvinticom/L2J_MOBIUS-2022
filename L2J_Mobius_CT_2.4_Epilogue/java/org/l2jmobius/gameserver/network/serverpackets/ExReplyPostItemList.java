@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Migi, DS
  */
-
 public class ExReplyPostItemList implements IClientOutgoingPacket
 {
 	Player _player;
@@ -53,14 +52,12 @@ public class ExReplyPostItemList implements IClientOutgoingPacket
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(item.getCustomType2());
-			
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
 			for (byte i = 0; i < 6; i++)
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);

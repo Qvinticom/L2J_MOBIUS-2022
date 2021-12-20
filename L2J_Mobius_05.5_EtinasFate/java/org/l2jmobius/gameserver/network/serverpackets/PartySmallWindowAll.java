@@ -37,21 +37,17 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_ALL.writeId(packet);
-		
 		packet.writeD(_party.getLeaderObjectId());
 		packet.writeC(_party.getDistributionType().getId());
 		packet.writeC(_party.getMemberCount() - 1);
-		
 		for (Player member : _party.getMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{
 				packet.writeD(member.getObjectId());
 				packet.writeS(member.getName());
-				
 				packet.writeD((int) member.getCurrentCp()); // c4
 				packet.writeD(member.getMaxCp()); // c4
-				
 				packet.writeD((int) member.getCurrentHp());
 				packet.writeD(member.getMaxHp());
 				packet.writeD((int) member.getCurrentMp());
@@ -59,7 +55,7 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 				packet.writeD(member.getVitalityPoints());
 				packet.writeC(member.getLevel());
 				packet.writeH(member.getClassId().getId());
-				packet.writeC(0x01); // Unk
+				packet.writeC(1); // Unk
 				packet.writeH(member.getRace().ordinal());
 				final Summon pet = member.getPet();
 				packet.writeD(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm

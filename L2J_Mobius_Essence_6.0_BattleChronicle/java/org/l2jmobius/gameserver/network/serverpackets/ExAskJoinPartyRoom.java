@@ -38,7 +38,6 @@ public class ExAskJoinPartyRoom implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ASK_JOIN_PARTY_ROOM.writeId(packet);
-		
 		packet.writeS(_charName);
 		packet.writeS(_roomName);
 		return true;

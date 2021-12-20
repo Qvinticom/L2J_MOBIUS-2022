@@ -71,7 +71,6 @@ public class PetInfo implements IClientOutgoingPacket
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
 		}
-		
 		if (summon.isBetrayed())
 		{
 			_statusMask |= 0x01; // Auto attackable status
@@ -99,19 +98,15 @@ public class PetInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_INFO.writeId(packet);
-		
 		packet.writeC(_summon.getSummonType());
 		packet.writeD(_summon.getObjectId());
 		packet.writeD(_summon.getTemplate().getDisplayId() + 1000000);
-		
 		packet.writeD(_summon.getX());
 		packet.writeD(_summon.getY());
 		packet.writeD(_summon.getZ());
 		packet.writeD(_summon.getHeading());
-		
 		packet.writeD(_summon.getStat().getMAtkSpd());
 		packet.writeD(_summon.getStat().getPAtkSpd());
-		
 		packet.writeH(_runSpd);
 		packet.writeH(_walkSpd);
 		packet.writeH(_swimRunSpd);
@@ -120,16 +115,13 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeH(_flWalkSpd);
 		packet.writeH(_flyRunSpd);
 		packet.writeH(_flyWalkSpd);
-		
 		packet.writeF(_moveMultiplier);
 		packet.writeF(_summon.getAttackSpeedMultiplier()); // attack speed multiplier
 		packet.writeF(_summon.getTemplate().getFCollisionRadius());
 		packet.writeF(_summon.getTemplate().getFCollisionHeight());
-		
 		packet.writeD(_summon.getWeapon()); // right hand weapon
 		packet.writeD(_summon.getArmor()); // body armor
-		packet.writeD(0x00); // left hand weapon
-		
+		packet.writeD(0); // left hand weapon
 		packet.writeC(_summon.isDead() ? 0 : _summon.isShowSummonAnimation() ? 2 : _value);
 		packet.writeD(-1); // High Five NPCString ID
 		if (_summon.isPet())
@@ -142,24 +134,19 @@ public class PetInfo implements IClientOutgoingPacket
 		}
 		packet.writeD(-1); // High Five NPCString ID
 		packet.writeS(_summon.getTitle()); // owner name
-		
 		packet.writeC(_summon.getPvpFlag()); // confirmed
 		packet.writeD(_summon.getReputation()); // confirmed
-		
 		packet.writeD(_curFed); // how fed it is
 		packet.writeD(_maxFed); // max fed it can be
 		packet.writeD((int) _summon.getCurrentHp()); // current hp
 		packet.writeD(_summon.getMaxHp()); // max hp
 		packet.writeD((int) _summon.getCurrentMp()); // current mp
 		packet.writeD(_summon.getMaxMp()); // max mp
-		
 		packet.writeQ(_summon.getStat().getSp()); // sp
 		packet.writeH(_summon.getLevel()); // level
 		packet.writeQ(_summon.getStat().getExp());
-		
 		// 0% absolute value
 		packet.writeQ(Math.min(_summon.getExpForThisLevel(), _summon.getStat().getExp())); // 0% absolute value
-		
 		packet.writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
 		packet.writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
 		packet.writeD(_summon.getMaxLoad()); // max weight it can carry
@@ -176,12 +163,10 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD((int) _summon.getStat().getMoveSpeed()); // speed
 		packet.writeD(_summon.getPAtkSpd()); // atkspeed
 		packet.writeD(_summon.getMAtkSpd()); // casting speed
-		
 		packet.writeC(0); // TODO: Check me, might be ride status
 		packet.writeC(_summon.getTeam().getId()); // Confirmed
 		packet.writeC(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit - Confirmed
 		packet.writeC(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit - - Confirmed
-		
 		packet.writeD(-1);
 		packet.writeD(0);
 		final Set<AbnormalVisualEffect> aves = _summon.getEffectList().getCurrentAbnormalVisualEffects();

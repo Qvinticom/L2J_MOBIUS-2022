@@ -35,7 +35,6 @@ public class ExOpenMPCC implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OPEN_MPCC.writeId(packet);
-		
 		return true;
 	}
 }

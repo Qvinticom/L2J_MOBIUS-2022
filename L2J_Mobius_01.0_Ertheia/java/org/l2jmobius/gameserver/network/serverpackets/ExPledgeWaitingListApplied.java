@@ -40,7 +40,6 @@ public class ExPledgeWaitingListApplied implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_WAITING_LIST_APPLIED.writeId(packet);
-		
 		packet.writeD(_pledgeRecruitInfo.getClan().getId());
 		packet.writeS(_pledgeRecruitInfo.getClan().getName());
 		packet.writeS(_pledgeRecruitInfo.getClan().getLeaderName());

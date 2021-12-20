@@ -45,14 +45,12 @@ public class HennaInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_INFO.writeId(packet);
-		
 		packet.writeC(_player.getHennaStatINT()); // equip INT
 		packet.writeC(_player.getHennaStatSTR()); // equip STR
 		packet.writeC(_player.getHennaStatCON()); // equip CON
 		packet.writeC(_player.getHennaStatMEN()); // equip MEM
 		packet.writeC(_player.getHennaStatDEX()); // equip DEX
 		packet.writeC(_player.getHennaStatWIT()); // equip WIT
-		
 		// Henna slots
 		int classId = _player.getClassId().level();
 		if (classId == 1)
@@ -67,7 +65,6 @@ public class HennaInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(0);
 		}
-		
 		packet.writeD(_count); // size
 		for (int i = 0; i < _count; i++)
 		{

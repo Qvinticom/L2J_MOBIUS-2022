@@ -55,19 +55,17 @@ public class PetInventoryUpdate extends AbstractInventoryUpdate
 			packet.writeD(item.getItem().getId());
 			packet.writeQ(item.getCount());
 			packet.writeH(item.getItem().getType2()); // item type2
-			packet.writeH(0x00); // ?
+			packet.writeH(0); // ?
 			packet.writeH(item.getEquipped());
 			packet.writeD(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 			packet.writeH(item.getEnchant()); // enchant level
-			packet.writeH(0x00); // ?
-			
+			packet.writeH(0); // ?
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
 			for (byte i = 0; i < 6; i++)
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);

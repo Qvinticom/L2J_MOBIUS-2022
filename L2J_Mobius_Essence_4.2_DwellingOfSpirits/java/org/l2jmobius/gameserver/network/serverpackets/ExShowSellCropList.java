@@ -47,7 +47,6 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 				_cropsItems.put(cropId, item);
 			}
 		}
-		
 		for (CropProcure crop : CastleManorManager.getInstance().getCropProcure(_manorId, false))
 		{
 			if (_cropsItems.containsKey(crop.getId()) && (crop.getAmount() > 0))
@@ -61,7 +60,6 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SELL_CROP_LIST.writeId(packet);
-		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_cropsItems.size()); // size
 		for (Item item : _cropsItems.values())
@@ -70,9 +68,9 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 			packet.writeD(item.getObjectId()); // Object id
 			packet.writeD(item.getId()); // crop id
 			packet.writeD(seed.getLevel()); // seed level
-			packet.writeC(0x01);
+			packet.writeC(1);
 			packet.writeD(seed.getReward(1)); // reward 1 id
-			packet.writeC(0x01);
+			packet.writeC(1);
 			packet.writeD(seed.getReward(2)); // reward 2 id
 			if (_castleCrops.containsKey(item.getId()))
 			{
@@ -85,9 +83,9 @@ public class ExShowSellCropList implements IClientOutgoingPacket
 			else
 			{
 				packet.writeD(0xFFFFFFFF); // manor
-				packet.writeQ(0x00); // buy residual
-				packet.writeQ(0x00); // buy price
-				packet.writeC(0x00); // reward
+				packet.writeQ(0); // buy residual
+				packet.writeQ(0); // buy price
+				packet.writeC(0); // reward
 			}
 			packet.writeQ(item.getCount()); // my crops
 		}

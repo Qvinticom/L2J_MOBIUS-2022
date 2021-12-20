@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 {
 	private static final int NUM_PER_PAGE = 64;
+	
 	private final int _size;
 	private final List<Player> _players = new LinkedList<>();
 	
@@ -60,7 +61,6 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM.writeId(packet);
-		
 		packet.writeD(_size);
 		packet.writeD(_players.size());
 		for (Player player : _players)

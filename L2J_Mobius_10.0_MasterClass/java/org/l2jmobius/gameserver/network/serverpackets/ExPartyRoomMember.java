@@ -47,7 +47,6 @@ public class ExPartyRoomMember implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PARTY_ROOM_MEMBER.writeId(packet);
-		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_room.getMembersCount());
 		for (Player member : _room.getMembers())

@@ -34,7 +34,6 @@ public class StopPledgeWar implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.STOP_PLEDGE_WAR.writeId(packet);
-		
 		packet.writeS(_pledgeName);
 		packet.writeS(_playerName);
 		return true;

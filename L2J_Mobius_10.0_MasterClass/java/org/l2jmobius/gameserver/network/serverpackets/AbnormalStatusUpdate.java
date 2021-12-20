@@ -39,7 +39,6 @@ public class AbnormalStatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ABNORMAL_STATUS_UPDATE.writeId(packet);
-		
 		packet.writeH(_effects.size());
 		for (BuffInfo info : _effects)
 		{

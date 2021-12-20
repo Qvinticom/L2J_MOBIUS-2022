@@ -45,7 +45,7 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 			packet.writeD(skill.isPassive() ? 1 : 0);
 			packet.writeD(skill.getLevel());
 			packet.writeD(skill.getId());
-			packet.writeC(0x00); // c5
+			packet.writeC(0); // c5
 		}
 		return true;
 	}

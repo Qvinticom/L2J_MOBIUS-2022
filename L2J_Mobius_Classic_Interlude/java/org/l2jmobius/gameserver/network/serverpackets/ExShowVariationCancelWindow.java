@@ -34,7 +34,6 @@ public class ExShowVariationCancelWindow implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_VARIATION_CANCEL_WINDOW.writeId(packet);
-		
 		return true;
 	}
 }

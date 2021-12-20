@@ -53,7 +53,6 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM.writeId(packet);
-		
 		// If the mode is 0 and the activeChar isn't the PartyRoom leader, return an empty list.
 		if (_mode == 0)
 		{
@@ -66,7 +65,6 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 				return true;
 			}
 		}
-		
 		for (Player cha : PartyMatchWaitingList.getInstance().getPlayers())
 		{
 			// Don't add yourself in the list
@@ -74,21 +72,17 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			if (!cha.isPartyWaiting())
 			{
 				PartyMatchWaitingList.getInstance().removePlayer(cha);
 				continue;
 			}
-			
 			if ((cha.getLevel() < _minLevel) || (cha.getLevel() > _maxLevel))
 			{
 				continue;
 			}
-			
 			_members.add(cha);
 		}
-		
 		int count = 0;
 		final int size = _members.size();
 		packet.writeD(1);

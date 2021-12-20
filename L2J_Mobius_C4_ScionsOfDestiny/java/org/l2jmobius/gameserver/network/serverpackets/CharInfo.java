@@ -58,7 +58,6 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeS(_player.getName());
 		packet.writeD(_player.getRace().ordinal());
 		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
-		
 		if (_player.getClassIndex() == 0)
 		{
 			packet.writeD(_player.getClassId().getId());
@@ -67,8 +66,7 @@ public class CharInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(_player.getBaseClass());
 		}
-		
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
@@ -79,16 +77,12 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_BACK));
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 		packet.writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-		
 		packet.writeD(_player.getPvpFlag());
 		packet.writeD(_player.getKarma());
-		
 		packet.writeD(_player.getMAtkSpd());
 		packet.writeD(_player.getPAtkSpd());
-		
 		packet.writeD(_player.getPvpFlag());
 		packet.writeD(_player.getKarma());
-		
 		packet.writeD(_runSpd); // base run speed
 		packet.writeD(_walkSpd); // base walk speed
 		packet.writeD(_runSpd); // swim run speed (calculated by getter)
@@ -104,24 +98,19 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getAppearance().getHairStyle());
 		packet.writeD(_player.getAppearance().getHairColor());
 		packet.writeD(_player.getAppearance().getFace());
-		
 		packet.writeS(_gmSeeInvis ? "Invisible" : _player.getTitle());
-		
 		packet.writeD(_player.getClanId());
 		packet.writeD(_player.getClanCrestId());
 		packet.writeD(_player.getAllyId());
 		packet.writeD(_player.getAllyCrestId());
 		// In UserInfo leader rights and siege flags, but here found nothing??
 		// Therefore RelationChanged packet with that info is required
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
 		packet.writeC(_player.isSitting() ? 0 : 1); // standing = 1 sitting = 0
 		packet.writeC(_player.isRunning() ? 1 : 0); // running = 1 walking = 0
 		packet.writeC(_player.isInCombat() ? 1 : 0);
 		packet.writeC(_player.isAlikeDead() ? 1 : 0);
-		
 		packet.writeC(!_gmSeeInvis && _player.getAppearance().isInvisible() ? 1 : 0); // invisible = 1 visible = 0
-		
 		packet.writeC(_player.getMountType()); // 1 on strider 2 on wyvern 0 no mount
 		packet.writeC(_player.getPrivateStoreType()); // 1 - sellshop
 		
@@ -132,35 +121,19 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
-		
 		packet.writeD(_gmSeeInvis ? (_player.getAbnormalEffect() | Creature.ABNORMAL_EFFECT_STEALTH) : _player.getAbnormalEffect());
-		
 		packet.writeC(_player.getRecomLeft());
 		packet.writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 		packet.writeD(_player.getClassId().getId());
-		
 		packet.writeD(_player.getMaxCp());
 		packet.writeD((int) _player.getCurrentCp());
 		packet.writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
-		
-		if (_player.getTeam() == 1)
-		{
-			packet.writeC(0x01); // team circle around feet 1 = Blue, 2 = red
-		}
-		else if (_player.getTeam() == 2)
-		{
-			packet.writeC(0x02); // team circle around feet 1 = Blue, 2 = red
-		}
-		else
-		{
-			packet.writeC(0x00); // team circle around feet 1 = Blue, 2 = red
-		}
-		
+		packet.writeC(_player.getTeam()); // team circle around feet 1 = Blue, 2 = red
 		packet.writeD(_player.getClanCrestLargeId());
 		packet.writeC(_player.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
 		packet.writeC((_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) || _player.isPVPHero()) ? 1 : 0); // Hero Aura
 		
-		packet.writeC(_player.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
+		packet.writeC(_player.isFishing() ? 1 : 0); // 1: Fishing Mode (Cant be undone by setting back to 0)
 		packet.writeD(_player.getFishX());
 		packet.writeD(_player.getFishY());
 		packet.writeD(_player.getFishZ());

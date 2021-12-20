@@ -46,7 +46,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL.writeId(packet);
-		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);
@@ -54,7 +53,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));
 			packet.writeD(_enchantSkillHolder.getChance(_type));
-			packet.writeD(0x02); // item count
+			packet.writeD(2); // item count
 			packet.writeD(_enchantSkillHolder.getRequiredAdena(_type).getId());
 			packet.writeD((int) _enchantSkillHolder.getRequiredAdena(_type).getCount());
 			packet.writeD(_enchantSkillHolder.getRequiredBook(_type).getId());

@@ -37,15 +37,6 @@ import org.l2jmobius.gameserver.network.PacketLogger;
 
 public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 {
-	public static final int PRIVATE = 1;
-	public static final int CLAN = 2;
-	public static final int CASTLE = 3; // not sure
-	public static final int FREIGHT = 4; // not sure
-	
-	private long _playerAdena;
-	private List<WarehouseItem> _objects = new ArrayList<>();
-	private int _whType;
-	
 	public enum WarehouseListType
 	{
 		WEAPON,
@@ -66,6 +57,11 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		ALL
 	}
 	
+	public static final int PRIVATE = 1;
+	public static final int CLAN = 2;
+	public static final int CASTLE = 3; // not sure
+	public static final int FREIGHT = 4; // not sure
+	
 	/** sort order A..Z */
 	public static final byte A2Z = 1;
 	/** sort order Z..A */
@@ -80,6 +76,10 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	public static final byte WEAR = 5;
 	/** Maximum Items to put into list */
 	public static final int MAX_SORT_LIST_ITEMS = 300;
+	
+	private long _playerAdena;
+	private List<WarehouseItem> _objects = new ArrayList<>();
+	private int _whType;
 	
 	/**
 	 * This will instantiate the Warehouselist the Player asked for
@@ -98,7 +98,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 			PacketLogger.warning("Error while sending withdraw request to: " + player.getName());
 			return;
 		}
-		
 		switch (itemtype)
 		{
 			case WEAPON:
@@ -168,7 +167,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 				break;
 			}
 		}
-		
 		try
 		{
 			switch (sortorder)
@@ -302,7 +300,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	private static class WarehouseItemRecipeComparator implements Comparator<WarehouseItem>
 	{
 		private int order = 0;
-		
 		private RecipeData rd = null;
 		
 		protected WarehouseItemRecipeComparator(int sortOrder)
@@ -336,7 +333,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 					{
 						return (order == A2Z ? Z2A : A2Z);
 					}
-					
 					final Integer i1 = rp1.getLevel();
 					final Integer i2 = rp2.getLevel();
 					return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
@@ -346,7 +342,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 					return 0;
 				}
 			}
-			
 			final String s1 = o1.getItemName();
 			final String s2 = o2.getItemName();
 			return (order == A2Z ? s1.compareTo(s2) : s2.compareTo(s1));
@@ -717,7 +712,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		packet.writeH(_whType);
 		packet.writeQ(_playerAdena);
 		packet.writeH(_objects.size());
-		
 		for (WarehouseItem item : _objects)
 		{
 			packet.writeD(item.getObjectId());
@@ -726,7 +720,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 			packet.writeQ(item.getCount());
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(item.getCustomType1());
-			packet.writeH(0x00); // Can't be equipped in WH
+			packet.writeH(0); // Can't be equipped in WH
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(item.getCustomType2());
@@ -736,7 +730,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeD(0x00);
+				packet.writeD(0);
 			}
 			packet.writeD(item.getMana());
 			packet.writeD(item.getTime());

@@ -34,7 +34,6 @@ public class SetSummonRemainTime implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SET_SUMMON_REMAIN_TIME.writeId(packet);
-		
 		packet.writeD(_maxTime);
 		packet.writeD(_remainingTime);
 		return true;

@@ -30,6 +30,7 @@ public class WareHouseDepositList extends AbstractItemPacket
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3;
 	public static final int FREIGHT = 1;
+	
 	private final int _sendType;
 	private final long _playerAdena;
 	private final List<Item> _items = new ArrayList<>();
@@ -49,7 +50,6 @@ public class WareHouseDepositList extends AbstractItemPacket
 		_sendType = sendType;
 		_whType = type;
 		_playerAdena = player.getAdena();
-		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (Item temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{

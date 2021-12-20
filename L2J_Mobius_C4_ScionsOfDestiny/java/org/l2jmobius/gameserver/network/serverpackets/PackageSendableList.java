@@ -42,7 +42,6 @@ public class PackageSendableList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
-		
 		packet.writeD(_playerObjId);
 		packet.writeD(_adena);
 		packet.writeD(_items.size());
@@ -53,11 +52,11 @@ public class PackageSendableList implements IClientOutgoingPacket
 			packet.writeD(item.getItemId());
 			packet.writeD(item.getCount());
 			packet.writeH(item.getItem().getType2());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0);
+			packet.writeH(0);
 			packet.writeD(item.getObjectId()); // some item identifier later used by client to answer (see RequestPackageSend) not item id nor object id maybe some freight system id??
 		}
 		return true;

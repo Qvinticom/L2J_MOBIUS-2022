@@ -57,11 +57,9 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_SHOP_MANAGE_LIST.writeId(packet);
-		
 		packet.writeD(_seller.getObjectId());
 		packet.writeD((int) _seller.getAdena());
-		packet.writeD(_isDwarven ? 0x00 : 0x01);
-		
+		packet.writeD(_isDwarven ? 0 : 1);
 		if ((_recipes == null) || _recipes.isEmpty())
 		{
 			packet.writeD(0);
@@ -69,7 +67,6 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(_recipes.size()); // number of items in recipe book
-			
 			int i = 1;
 			for (RecipeHolder recipe : _recipes)
 			{
@@ -77,10 +74,9 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 				packet.writeD(i++);
 			}
 		}
-		
 		if ((_manufacture == null) || _manufacture.isEmpty())
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		else
 		{
@@ -88,7 +84,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 			for (Entry<Integer, Long> item : _manufacture)
 			{
 				packet.writeD(item.getKey());
-				packet.writeD(0x00); // CanCraft?
+				packet.writeD(0); // CanCraft?
 				packet.writeQ(item.getValue());
 			}
 		}

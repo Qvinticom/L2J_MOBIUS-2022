@@ -88,7 +88,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_summon.getObjectId());
 		packet.writeD(_summon.getTemplate().getDisplayId() + 1000000);
 		packet.writeD(0); // 1=attackable
-		
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
@@ -110,7 +109,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeF(_summon.getTemplate().getFCollisionHeight());
 		packet.writeD(_summon.getWeapon()); // right hand weapon
 		packet.writeD(_summon.getArmor()); // body armor
-		packet.writeD(0x00); // left hand weapon
+		packet.writeD(0); // left hand weapon
 		packet.writeC(_summon.getOwner() != null ? 1 : 0); // when pet is dead and player exit game, pet doesn't show master name
 		packet.writeC(_summon.isRunning() ? 1 : 0); // running=1 (it is always 1, walking mode is calculated from multiplier)
 		packet.writeC(_summon.isInCombat() ? 1 : 0); // attacking 1=true
@@ -139,7 +138,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD((int) _summon.getStat().getSp()); // sp
 		packet.writeD(_summon.getLevel()); // level
 		packet.writeQ(_summon.getStat().getExp());
-		
 		if (_summon.getExpForThisLevel() > _summon.getStat().getExp())
 		{
 			packet.writeQ(_summon.getStat().getExp()); // 0% absolute value
@@ -148,7 +146,6 @@ public class PetInfo implements IClientOutgoingPacket
 		{
 			packet.writeQ(_summon.getExpForThisLevel()); // 0% absolute value
 		}
-		
 		packet.writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
 		packet.writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
 		packet.writeD(_summon.getMaxLoad()); // max weight it can carry
@@ -162,12 +159,9 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD((int) _summon.getMoveSpeed()); // speed
 		packet.writeD((int) _summon.getPAtkSpd()); // atkspeed
 		packet.writeD(_summon.getMAtkSpd()); // casting speed
-		
 		packet.writeD(_summon.getAbnormalVisualEffects()); // c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
 		packet.writeH(_summon.isMountable() ? 1 : 0); // c2 ride button
-		
 		packet.writeC(_summon.isInsideZone(ZoneId.WATER) ? 1 : _summon.isFlying() ? 2 : 0); // c2
-		
 		// Following all added in C4.
 		packet.writeH(0); // ??
 		packet.writeC(_summon.getTeam().getId());

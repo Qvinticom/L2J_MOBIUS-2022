@@ -37,7 +37,6 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHAR_INFO.writeId(packet);
-		
 		packet.writeD(_activeChar.getX());
 		packet.writeD(_activeChar.getY());
 		packet.writeD(_activeChar.getZ());
@@ -58,7 +57,6 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		packet.writeD(_activeChar.getFakePlayer().PAPERDOLL_HAIR());
 		packet.writeD(_activeChar.getFakePlayer().PAPERDOLL_RHAND());
 		packet.writeD(_activeChar.getFakePlayer().PAPERDOLL_HAIR());
-		
 		packet.writeD(_activeChar.getFakePlayer().getPvpFlag() ? 1 : 0);
 		packet.writeD(_activeChar.getFakePlayer().getKarma());
 		packet.writeD(_activeChar.getMAtkSpd());

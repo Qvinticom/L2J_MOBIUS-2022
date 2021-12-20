@@ -50,13 +50,11 @@ public class ExAirShipInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_AIR_SHIP_INFO.writeId(packet);
-		
 		packet.writeD(_ship.getObjectId());
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
 		packet.writeD(_heading);
-		
 		packet.writeD(_captain);
 		packet.writeD(_moveSpeed);
 		packet.writeD(_rotationSpeed);
@@ -73,14 +71,13 @@ public class ExAirShipInfo implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
-		
 		packet.writeD(_ship.getFuel());
 		packet.writeD(_ship.getMaxFuel());
 		return true;

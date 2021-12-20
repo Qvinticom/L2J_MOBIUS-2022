@@ -46,15 +46,12 @@ public class ExPledgeMissionInfo implements IClientOutgoingPacket
 		{
 			return true;
 		}
-		
 		OutgoingPackets.EX_PLEDGE_MISSION_INFO.writeId(packet);
-		
 		packet.writeD(_rewards.size());
 		for (DailyMissionDataHolder reward : _rewards)
 		{
 			int progress = reward.getProgress(_player);
 			int status = reward.getStatus(_player);
-			
 			// TODO: Figure out this.
 			if (reward.isLevelUpMission())
 			{
@@ -76,12 +73,10 @@ public class ExPledgeMissionInfo implements IClientOutgoingPacket
 			{
 				status = 2;
 			}
-			
 			packet.writeD(reward.getId());
 			packet.writeD(progress);
 			packet.writeC(status);
 		}
-		
 		return true;
 	}
 }

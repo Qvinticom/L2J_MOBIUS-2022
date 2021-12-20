@@ -41,7 +41,6 @@ public class ShortCutRegister implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHORT_CUT_REGISTER.writeId(packet);
-		
 		packet.writeD(_shortcut.getType());
 		packet.writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
 		switch (_shortcut.getType())
@@ -55,7 +54,7 @@ public class ShortCutRegister implements IClientOutgoingPacket
 			{
 				packet.writeD(_shortcut.getId());
 				packet.writeD(_shortcut.getLevel());
-				packet.writeC(0x00); // C5
+				packet.writeC(0); // C5
 				break;
 			}
 			case ShortCut.TYPE_ACTION: // 3
@@ -78,7 +77,6 @@ public class ShortCutRegister implements IClientOutgoingPacket
 				packet.writeD(_shortcut.getId());
 			}
 		}
-		
 		packet.writeD(1); // ??
 		return true;
 	}

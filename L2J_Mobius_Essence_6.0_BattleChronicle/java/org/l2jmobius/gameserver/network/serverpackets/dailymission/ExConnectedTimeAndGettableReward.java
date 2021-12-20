@@ -43,18 +43,18 @@ public class ExConnectedTimeAndGettableReward implements IClientOutgoingPacket
 		}
 		
 		OutgoingPackets.EX_CONNECTED_TIME_AND_GETTABLE_REWARD.writeId(packet);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_oneDayRewardAvailableCount);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
 		return true;
 	}
 }

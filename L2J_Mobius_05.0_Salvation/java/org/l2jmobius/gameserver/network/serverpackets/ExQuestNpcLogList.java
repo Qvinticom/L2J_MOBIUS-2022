@@ -56,13 +56,12 @@ public class ExQuestNpcLogList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_QUEST_NPC_LOG_LIST.writeId(packet);
-		
 		packet.writeD(_questId);
 		packet.writeC(_npcLogList.size());
 		for (NpcLogListHolder holder : _npcLogList)
 		{
 			packet.writeD(holder.isNpcString() ? holder.getId() : holder.getId() + 1000000);
-			packet.writeC(holder.isNpcString() ? 0x01 : 0x00);
+			packet.writeC(holder.isNpcString() ? 1 : 0);
 			packet.writeD(holder.getCount());
 		}
 		return true;

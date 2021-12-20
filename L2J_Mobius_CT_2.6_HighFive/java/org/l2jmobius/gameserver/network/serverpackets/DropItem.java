@@ -43,15 +43,13 @@ public class DropItem implements IClientOutgoingPacket
 		packet.writeD(_objectId);
 		packet.writeD(_item.getObjectId());
 		packet.writeD(_item.getDisplayId());
-		
 		packet.writeD(_item.getX());
 		packet.writeD(_item.getY());
 		packet.writeD(_item.getZ());
 		// only show item count if it is a stackable item
-		packet.writeD(_item.isStackable() ? 0x01 : 0x00);
+		packet.writeD(_item.isStackable() ? 1 : 0);
 		packet.writeQ(_item.getCount());
-		
-		packet.writeD(0x01); // unknown
+		packet.writeD(1); // unknown
 		return true;
 	}
 }

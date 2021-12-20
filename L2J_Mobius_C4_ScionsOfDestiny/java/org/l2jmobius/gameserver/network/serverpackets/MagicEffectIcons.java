@@ -57,7 +57,6 @@ public class MagicEffectIcons implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		if (debuff)
 		{
 			_debuffs.add(new Effect(skillId, level, duration));
@@ -72,14 +71,11 @@ public class MagicEffectIcons implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_EFFECT_ICONS.writeId(packet);
-		
 		packet.writeH(_effects.size() + _debuffs.size());
-		
 		for (Effect temp : _effects)
 		{
 			packet.writeD(temp._skillId);
 			packet.writeH(temp._level);
-			
 			if (temp._duration == -1)
 			{
 				packet.writeD(-1);
@@ -89,12 +85,10 @@ public class MagicEffectIcons implements IClientOutgoingPacket
 				packet.writeD(temp._duration / 1000);
 			}
 		}
-		
 		for (Effect temp : _debuffs)
 		{
 			packet.writeD(temp._skillId);
 			packet.writeH(temp._level);
-			
 			if (temp._duration == -1)
 			{
 				packet.writeD(-1);
@@ -104,7 +98,6 @@ public class MagicEffectIcons implements IClientOutgoingPacket
 				packet.writeD(temp._duration / 1000);
 			}
 		}
-		
 		return true;
 	}
 }

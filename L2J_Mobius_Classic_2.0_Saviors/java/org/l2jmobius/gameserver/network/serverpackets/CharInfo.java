@@ -33,6 +33,22 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
+	private static final int[] PAPERDOLL_ORDER = new int[]
+	{
+		Inventory.PAPERDOLL_UNDER,
+		Inventory.PAPERDOLL_HEAD,
+		Inventory.PAPERDOLL_RHAND,
+		Inventory.PAPERDOLL_LHAND,
+		Inventory.PAPERDOLL_GLOVES,
+		Inventory.PAPERDOLL_CHEST,
+		Inventory.PAPERDOLL_LEGS,
+		Inventory.PAPERDOLL_FEET,
+		Inventory.PAPERDOLL_CLOAK,
+		Inventory.PAPERDOLL_RHAND,
+		Inventory.PAPERDOLL_HAIR,
+		Inventory.PAPERDOLL_HAIR2
+	};
+	
 	private final Player _player;
 	private final Clan _clan;
 	private int _objId;
@@ -54,22 +70,6 @@ public class CharInfo implements IClientOutgoingPacket
 	private int _armorEnchant = 0;
 	private int _vehicleId = 0;
 	private final boolean _gmSeeInvis;
-	
-	private static final int[] PAPERDOLL_ORDER = new int[]
-	{
-		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_HEAD,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_CLOAK,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_HAIR2
-	};
 	
 	public CharInfo(Player player, boolean gmSeeInvis)
 	{
@@ -125,9 +125,8 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_vehicleId); // Confirmed
 		packet.writeD(_objId); // Confirmed
 		packet.writeS(_player.getAppearance().getVisibleName()); // Confirmed
-		
 		packet.writeH(_player.getRace().ordinal()); // Confirmed
-		packet.writeC(_player.getAppearance().isFemale() ? 0x01 : 0x00); // Confirmed
+		packet.writeC(_player.getAppearance().isFemale() ? 1 : 0); // Confirmed
 		packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
 		
 		for (int slot : getPaperdollOrder())
@@ -151,10 +150,8 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeC(_player.getPvpFlag());
 		packet.writeD(_player.getReputation());
-		
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
-		
 		packet.writeH(_runSpd);
 		packet.writeH(_walkSpd);
 		packet.writeH(_swimRunSpd);
@@ -165,53 +162,40 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeH(_flyWalkSpd);
 		packet.writeF(_moveMultiplier);
 		packet.writeF(_attackSpeedMultiplier);
-		
 		packet.writeF(_player.getCollisionRadius());
 		packet.writeF(_player.getCollisionHeight());
-		
 		packet.writeD(_player.getVisualHair());
 		packet.writeD(_player.getVisualHairColor());
 		packet.writeD(_player.getVisualFace());
-		
 		packet.writeS(_gmSeeInvis ? "Invisible" : _player.getAppearance().getVisibleTitle());
-		
 		packet.writeD(_player.getAppearance().getVisibleClanId());
 		packet.writeD(_player.getAppearance().getVisibleClanCrestId());
 		packet.writeD(_player.getAppearance().getVisibleAllyId());
 		packet.writeD(_player.getAppearance().getVisibleAllyCrestId());
-		
-		packet.writeC(_player.isSitting() ? 0x00 : 0x01); // Confirmed
-		packet.writeC(_player.isRunning() ? 0x01 : 0x00); // Confirmed
-		packet.writeC(_player.isInCombat() ? 0x01 : 0x00); // Confirmed
-		
-		packet.writeC(!_player.isInOlympiadMode() && _player.isAlikeDead() ? 0x01 : 0x00); // Confirmed
-		
-		packet.writeC(_player.isInvisible() ? 0x01 : 0x00);
-		
+		packet.writeC(_player.isSitting() ? 0 : 1); // Confirmed
+		packet.writeC(_player.isRunning() ? 1 : 0); // Confirmed
+		packet.writeC(_player.isInCombat() ? 1 : 0); // Confirmed
+		packet.writeC(!_player.isInOlympiadMode() && _player.isAlikeDead() ? 1 : 0); // Confirmed
+		packet.writeC(_player.isInvisible() ? 1 : 0);
 		packet.writeC(_player.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
 		packet.writeC(_player.getPrivateStoreType().getId()); // Confirmed
 		
 		packet.writeH(_player.getCubics().size()); // Confirmed
 		_player.getCubics().keySet().forEach(packet::writeH);
 		
-		packet.writeC(_player.isInMatchingRoom() ? 0x01 : 0x00); // Confirmed
-		
+		packet.writeC(_player.isInMatchingRoom() ? 1 : 0); // Confirmed
 		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
 		packet.writeH(_player.getRecomHave()); // Confirmed
 		packet.writeD(_player.getMountNpcId() == 0 ? 0 : _player.getMountNpcId() + 1000000);
-		
 		packet.writeD(_player.getClassId().getId()); // Confirmed
-		packet.writeD(0x00); // TODO: Find me!
+		packet.writeD(0); // TODO: Find me!
 		packet.writeC(_player.isMounted() ? 0 : _enchantLevel); // Confirmed
-		
 		packet.writeC(_player.getTeam().getId()); // Confirmed
-		
 		packet.writeD(_player.getClanCrestLargeId());
 		packet.writeC(_player.isNoble() ? 1 : 0); // Confirmed
 		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Confirmed
 		
 		packet.writeC(_player.isFishing() ? 1 : 0); // Confirmed
-		
 		final ILocational baitLocation = _player.getFishing().getBaitLocation();
 		if (baitLocation != null)
 		{
@@ -227,29 +211,21 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		packet.writeD(_player.getAppearance().getNameColor()); // Confirmed
-		
 		packet.writeD(_heading); // Confirmed
-		
 		packet.writeC(_player.getPledgeClass());
 		packet.writeH(_player.getPledgeType());
-		
 		packet.writeD(_player.getAppearance().getTitleColor()); // Confirmed
-		
 		packet.writeC(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
-		
 		packet.writeD(_clan != null ? _clan.getReputationScore() : 0);
 		packet.writeD(_player.getTransformationDisplayId()); // Confirmed
 		packet.writeD(_player.getAgathionId()); // Confirmed
-		
-		packet.writeC(0x00); // nPvPRestrainStatus
-		
+		packet.writeC(0); // nPvPRestrainStatus
 		packet.writeD((int) Math.round(_player.getCurrentCp())); // Confirmed
 		packet.writeD(_player.getMaxHp()); // Confirmed
 		packet.writeD((int) Math.round(_player.getCurrentHp())); // Confirmed
 		packet.writeD(_player.getMaxMp()); // Confirmed
 		packet.writeD((int) Math.round(_player.getCurrentMp())); // Confirmed
-		
-		packet.writeC(0x00); // cBRLectureMark
+		packet.writeC(0); // cBRLectureMark
 		
 		final Set<AbnormalVisualEffect> abnormalVisualEffects = _player.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeD(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
@@ -261,8 +237,9 @@ public class CharInfo implements IClientOutgoingPacket
 		{
 			packet.writeH(AbnormalVisualEffect.STEALTH.getClientId());
 		}
+		
 		packet.writeC(_player.isTrueHero() ? 100 : 0);
-		packet.writeC(_player.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
+		packet.writeC(_player.isHairAccessoryEnabled() ? 1 : 0); // Hair accessory
 		packet.writeC(_player.getAbilityPointsUsed()); // Used Ability Points
 		return true;
 	}

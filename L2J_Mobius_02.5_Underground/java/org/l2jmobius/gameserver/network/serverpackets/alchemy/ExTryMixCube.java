@@ -47,7 +47,6 @@ public class ExTryMixCube implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TRY_MIX_CUBE.writeId(packet);
-		
 		packet.writeC(_type.ordinal());
 		packet.writeD(_items.size());
 		for (AlchemyResult holder : _items)

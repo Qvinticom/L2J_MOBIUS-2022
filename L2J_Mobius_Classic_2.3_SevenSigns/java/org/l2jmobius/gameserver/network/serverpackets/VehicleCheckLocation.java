@@ -36,7 +36,6 @@ public class VehicleCheckLocation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VEHICLE_CHECK_LOCATION.writeId(packet);
-		
 		packet.writeD(_boat.getObjectId());
 		packet.writeD(_boat.getX());
 		packet.writeD(_boat.getY());

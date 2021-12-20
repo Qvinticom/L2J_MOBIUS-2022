@@ -51,7 +51,6 @@ public class HennaEquipList implements IClientOutgoingPacket
 		packet.writeQ(_player.getAdena()); // activeChar current amount of Adena
 		packet.writeD(3); // available equip slot
 		packet.writeD(_hennaEquipList.size());
-		
 		for (Henna henna : _hennaEquipList)
 		{
 			// Player must have at least one dye in inventory
@@ -62,8 +61,8 @@ public class HennaEquipList implements IClientOutgoingPacket
 				packet.writeD(henna.getDyeItemId()); // item Id of the dye
 				packet.writeQ(henna.getWearCount()); // amount of dyes required
 				packet.writeQ(henna.getWearFee()); // amount of Adena required
-				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
-				// packet.writeD(0x00); // Does not exist in Classic.
+				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // meet the requirement or not
+				// packet.writeD(0); // Does not exist in Classic.
 			}
 		}
 		return true;

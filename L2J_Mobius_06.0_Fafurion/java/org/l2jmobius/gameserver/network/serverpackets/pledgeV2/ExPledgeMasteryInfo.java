@@ -44,9 +44,7 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_PLEDGE_MASTERY_INFO.writeId(packet);
-		
 		packet.writeD(clan.getUsedDevelopmentPoints()); // Consumed development points
 		packet.writeD(clan.getTotalDevelopmentPoints()); // Total development points
 		packet.writeD(16); // Mastery count
@@ -56,8 +54,7 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 			{
 				final int id = mastery.getId();
 				packet.writeD(id); // Mastery
-				packet.writeD(0x00); // ?
-				
+				packet.writeD(0); // ?
 				boolean available = true;
 				if (clan.getLevel() < mastery.getClanLevel())
 				{
@@ -76,11 +73,9 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 						available = clan.hasMastery(previous);
 					}
 				}
-				
-				packet.writeC(clan.hasMastery(id) ? 0x02 : available ? 0x01 : 0x00); // Availability.
+				packet.writeC(clan.hasMastery(id) ? 2 : available ? 1 : 0); // Availability.
 			}
 		}
-		
 		return true;
 	}
 }

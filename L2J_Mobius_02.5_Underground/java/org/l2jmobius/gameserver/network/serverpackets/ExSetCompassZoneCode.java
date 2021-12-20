@@ -46,7 +46,6 @@ public class ExSetCompassZoneCode implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SET_COMPASS_ZONE_CODE.writeId(packet);
-		
 		packet.writeD(_zoneType);
 		return true;
 	}

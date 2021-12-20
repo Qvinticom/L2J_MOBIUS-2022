@@ -56,29 +56,24 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			packet.writeD(0);
 			return true;
 		}
-		
 		for (Player cha : PartyMatchWaitingList.getInstance().getPlayers())
 		{
 			if ((cha == null) || (cha == _player))
 			{
 				continue;
 			}
-			
 			if (!cha.isPartyWaiting())
 			{
 				PartyMatchWaitingList.getInstance().removePlayer(cha);
 				continue;
 			}
-			
 			else if ((cha.getLevel() < _minLevel) || (cha.getLevel() > _maxLevel))
 			{
 				continue;
 			}
-			
 			_members.add(cha);
 		}
-		
-		packet.writeD(0x01); // Page?
+		packet.writeD(1); // Page?
 		packet.writeD(_members.size());
 		for (Player member : _members)
 		{

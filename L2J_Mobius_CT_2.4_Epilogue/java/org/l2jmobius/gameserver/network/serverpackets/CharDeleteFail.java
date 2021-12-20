@@ -21,9 +21,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharDeleteFail implements IClientOutgoingPacket
 {
-	public static final int REASON_DELETION_FAILED = 0x01;
-	public static final int REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER = 0x02;
-	public static final int REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED = 0x03;
+	public static final int REASON_DELETION_FAILED = 1;
+	public static final int REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER = 2;
+	public static final int REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED = 3;
 	
 	private final int _error;
 	

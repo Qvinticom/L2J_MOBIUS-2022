@@ -105,12 +105,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			mask |= ItemListType.AUGMENT_BONUS.getMask();
 		}
-		
 		if ((item.getAttackElementType() >= 0) || (item.getAttributeDefence(AttributeType.FIRE) > 0) || (item.getAttributeDefence(AttributeType.WATER) > 0) || (item.getAttributeDefence(AttributeType.WIND) > 0) || (item.getAttributeDefence(AttributeType.EARTH) > 0) || (item.getAttributeDefence(AttributeType.HOLY) > 0) || (item.getAttributeDefence(AttributeType.DARK) > 0))
 		{
 			mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
 		}
-		
 		if (item.getEnchantOptions() != null)
 		{
 			for (int id : item.getEnchantOptions())
@@ -122,12 +120,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 				}
 			}
 		}
-		
 		if (item.getVisualId() > 0)
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
-		
 		return mask;
 	}
 	
@@ -199,7 +195,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
 	}
 }

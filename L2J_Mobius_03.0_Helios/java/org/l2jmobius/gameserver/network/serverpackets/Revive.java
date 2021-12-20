@@ -33,7 +33,6 @@ public class Revive implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.REVIVE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		return true;
 	}

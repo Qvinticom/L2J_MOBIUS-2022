@@ -51,7 +51,6 @@ public class ExShowFortressSiegeInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_FORTRESS_SIEGE_INFO.writeId(packet);
-		
 		packet.writeD(_fortId); // Fortress Id
 		packet.writeD(_size); // Total Barracks Count
 		if (_csize > 0)
@@ -64,22 +63,22 @@ public class ExShowFortressSiegeInfo implements IClientOutgoingPacket
 					{
 						case 0:
 						{
-							packet.writeD(0x03);
+							packet.writeD(3);
 							break;
 						}
 						case 1:
 						{
-							packet.writeD(0x02);
+							packet.writeD(2);
 							break;
 						}
 						case 2:
 						{
-							packet.writeD(0x01);
+							packet.writeD(1);
 							break;
 						}
 						case 3:
 						{
-							packet.writeD(0x00);
+							packet.writeD(0);
 							break;
 						}
 					}
@@ -92,27 +91,27 @@ public class ExShowFortressSiegeInfo implements IClientOutgoingPacket
 						// TODO: once control room supported, update packet.writeD(0x0x) to support 5th room
 						case 0:
 						{
-							packet.writeD(0x05);
+							packet.writeD(5);
 							break;
 						}
 						case 1:
 						{
-							packet.writeD(0x04);
+							packet.writeD(4);
 							break;
 						}
 						case 2:
 						{
-							packet.writeD(0x03);
+							packet.writeD(3);
 							break;
 						}
 						case 3:
 						{
-							packet.writeD(0x02);
+							packet.writeD(2);
 							break;
 						}
 						case 4:
 						{
-							packet.writeD(0x01);
+							packet.writeD(1);
 							break;
 						}
 					}
@@ -124,7 +123,7 @@ public class ExShowFortressSiegeInfo implements IClientOutgoingPacket
 		{
 			for (int i = 0; i < _size; i++)
 			{
-				packet.writeD(0x00);
+				packet.writeD(0);
 			}
 		}
 		return true;

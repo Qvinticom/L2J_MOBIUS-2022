@@ -122,7 +122,6 @@ public class EquipUpdate implements IClientOutgoingPacket
 				break;
 			}
 		}
-		
 		packet.writeD(bodypart);
 		return true;
 	}

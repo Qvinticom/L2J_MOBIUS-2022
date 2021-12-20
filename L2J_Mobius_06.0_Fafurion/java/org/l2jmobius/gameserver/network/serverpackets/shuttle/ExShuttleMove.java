@@ -43,7 +43,6 @@ public class ExShuttleMove implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SUTTLE_MOVE.writeId(packet);
-		
 		packet.writeD(_shuttle.getObjectId());
 		packet.writeD((int) _shuttle.getStat().getMoveSpeed());
 		packet.writeD((int) _shuttle.getStat().getRotationSpeed());

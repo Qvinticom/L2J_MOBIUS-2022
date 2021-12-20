@@ -42,7 +42,6 @@ public class Ride implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RIDE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_mounted);
 		packet.writeD(_rideType);

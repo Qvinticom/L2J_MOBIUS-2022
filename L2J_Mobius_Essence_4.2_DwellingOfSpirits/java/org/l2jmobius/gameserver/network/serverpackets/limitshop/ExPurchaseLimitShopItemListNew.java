@@ -42,7 +42,6 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 	{
 		_shopType = shopType;
 		_player = player;
-		
 		switch (shopType)
 		{
 			case 3: // Normal Lcoin Shop
@@ -66,7 +65,6 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PURCHASE_LIMIT_SHOP_ITEM_LIST_NEW.writeId(packet);
-		
 		packet.writeC(_shopType); //
 		packet.writeD(_products.size());
 		for (LimitShopProductHolder product : _products)
@@ -82,7 +80,6 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			packet.writeH(product.getIngredientEnchants()[0]);
 			packet.writeH(product.getIngredientEnchants()[1]);
 			packet.writeH(product.getIngredientEnchants()[2]);
-			
 			// Check limits.
 			if (product.getAccountDailyLimit() > 0) // Sale period.
 			{
@@ -90,7 +87,7 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 				{
 					if ((_player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 					{
-						packet.writeD(0x00);
+						packet.writeD(0);
 					}
 					else // Reset limit.
 					{
@@ -107,7 +104,7 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			{
 				if (_player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountBuyLimit())
 				{
-					packet.writeD(0x00);
+					packet.writeD(0);
 				}
 				else
 				{
@@ -116,12 +113,11 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			}
 			else // No account limits.
 			{
-				packet.writeD(0x01);
+				packet.writeD(1);
 			}
-			packet.writeD(0x00); // nRemainSec
-			packet.writeD(0x00); // nRemainServerItemAmount
+			packet.writeD(0); // nRemainSec
+			packet.writeD(0); // nRemainServerItemAmount
 		}
-		
 		return true;
 	}
 }

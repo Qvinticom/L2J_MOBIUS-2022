@@ -42,9 +42,7 @@ public class ExPledgeItemList extends AbstractItemPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_PLEDGE_ITEM_LIST.writeId(packet);
-		
 		packet.writeH(ClanShopData.getInstance().getProducts().size()); // Product count.
 		for (ClanShopProductHolder product : ClanShopData.getInstance().getProducts())
 		{
@@ -61,7 +59,6 @@ public class ExPledgeItemList extends AbstractItemPacket
 			packet.writeH(0); // Current stock
 			packet.writeH(0); // Total stock
 		}
-		
 		return true;
 	}
 }

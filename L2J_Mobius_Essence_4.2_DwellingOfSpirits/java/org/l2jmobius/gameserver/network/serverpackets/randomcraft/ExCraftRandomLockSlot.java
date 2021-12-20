@@ -33,7 +33,7 @@ public class ExCraftRandomLockSlot implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CRAFT_RANDOM_LOCK_SLOT.writeId(packet);
-		packet.writeC(0x00);
+		packet.writeC(0);
 		return true;
 	}
 }

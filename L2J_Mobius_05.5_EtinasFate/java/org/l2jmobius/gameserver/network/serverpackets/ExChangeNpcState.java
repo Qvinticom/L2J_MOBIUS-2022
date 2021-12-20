@@ -37,7 +37,6 @@ public class ExChangeNpcState implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CHANGE_NPC_STATE.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeD(_state);
 		return true;

@@ -36,7 +36,6 @@ public class ExRegenMax implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REGEN_MAX.writeId(packet);
-		
 		packet.writeD(1);
 		packet.writeD(_time);
 		packet.writeD(_tickInterval);

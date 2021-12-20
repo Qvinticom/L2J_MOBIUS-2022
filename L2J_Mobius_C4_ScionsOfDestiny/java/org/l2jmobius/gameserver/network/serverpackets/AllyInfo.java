@@ -39,7 +39,6 @@ public class AllyInfo implements IClientOutgoingPacket
 			_player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
 			return false;
 		}
-		
 		// ======<AllyInfo>======
 		SystemMessage sm = new SystemMessage(SystemMessageId.ALLIANCE_INFORMATION);
 		_player.sendPacket(sm);

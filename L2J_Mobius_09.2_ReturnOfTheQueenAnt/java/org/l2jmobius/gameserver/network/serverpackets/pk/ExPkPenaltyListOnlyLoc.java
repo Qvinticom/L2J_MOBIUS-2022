@@ -37,7 +37,6 @@ public class ExPkPenaltyListOnlyLoc implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PK_PENALTY_LIST_ONLY_LOC.writeId(packet);
-		
 		final Set<Player> players = World.getInstance().getPkPlayers();
 		packet.writeD(World.getInstance().getLastPkTime());
 		packet.writeD(players.size());
@@ -48,7 +47,6 @@ public class ExPkPenaltyListOnlyLoc implements IClientOutgoingPacket
 			packet.writeD(player.getY());
 			packet.writeD(player.getZ());
 		}
-		
 		return true;
 	}
 }

@@ -45,7 +45,6 @@ public class PackageSendableList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
-		
 		packet.writeC(_sendType);
 		if (_sendType == 2)
 		{

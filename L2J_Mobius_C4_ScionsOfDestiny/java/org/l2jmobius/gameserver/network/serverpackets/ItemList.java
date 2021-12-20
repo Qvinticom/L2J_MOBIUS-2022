@@ -50,7 +50,7 @@ public class ItemList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ITEM_LIST.writeId(packet);
-		packet.writeH(_showWindow ? 0x01 : 0x00);
+		packet.writeH(_showWindow ? 1 : 0);
 		packet.writeH(_items.size());
 		for (Item temp : _items)
 		{
@@ -64,7 +64,7 @@ public class ItemList implements IClientOutgoingPacket
 			packet.writeD(temp.getCount());
 			packet.writeH(temp.getItem().getType2());
 			packet.writeH(temp.getCustomType1());
-			packet.writeH(temp.isEquipped() ? 0x01 : 0x00);
+			packet.writeH(temp.isEquipped() ? 1 : 0);
 			packet.writeD(temp.getItem().getBodyPart());
 			packet.writeH(temp.getEnchantLevel());
 			// race tickets

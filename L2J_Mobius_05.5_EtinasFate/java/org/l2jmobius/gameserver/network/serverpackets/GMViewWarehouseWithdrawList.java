@@ -51,7 +51,6 @@ public class GMViewWarehouseWithdrawList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_WAREHOUSE_WITHDRAW_LIST.writeId(packet);
-		
 		packet.writeC(_sendType);
 		if (_sendType == 2)
 		{

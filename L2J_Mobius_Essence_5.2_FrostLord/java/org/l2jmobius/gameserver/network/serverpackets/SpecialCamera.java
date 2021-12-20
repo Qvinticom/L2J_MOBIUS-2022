@@ -110,7 +110,6 @@ public class SpecialCamera implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SPECIAL_CAMERA.writeId(packet);
-		
 		packet.writeD(_id);
 		packet.writeD(_force);
 		packet.writeD(_angle1);

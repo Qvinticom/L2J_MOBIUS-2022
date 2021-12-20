@@ -39,7 +39,6 @@ public class ExResponseCommissionItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_ITEM_LIST.writeId(packet);
-		
 		packet.writeD(_items.size());
 		for (Item itemInstance : _items)
 		{

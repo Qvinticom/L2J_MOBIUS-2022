@@ -35,7 +35,6 @@ public class ShowXMasSeal implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_XMAS_SEAL.writeId(packet);
-		
 		packet.writeD(_item);
 		return true;
 	}

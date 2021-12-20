@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * Fromat: (ch) (just a trigger)
+ * Format: (ch) (just a trigger)
  * @author -Wooden-
  */
 public class ExMailArrived implements IClientOutgoingPacket

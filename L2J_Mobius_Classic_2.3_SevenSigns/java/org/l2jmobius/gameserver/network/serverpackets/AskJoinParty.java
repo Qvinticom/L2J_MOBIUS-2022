@@ -39,7 +39,6 @@ public class AskJoinParty implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ASK_JOIN_PARTY.writeId(packet);
-		
 		packet.writeS(_requestorName);
 		packet.writeD(_partyDistributionType.getId());
 		return true;

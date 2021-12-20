@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExItemAnnounce implements IClientOutgoingPacket
 {
-	public static final int ENCHANT = 0x00;
-	public static final int RANDOM_CRAFT = 0x02;
+	public static final int ENCHANT = 0;
+	public static final int RANDOM_CRAFT = 2;
 	
 	private final Item _item;
 	private final Player _player;
@@ -48,7 +48,7 @@ public class ExItemAnnounce implements IClientOutgoingPacket
 		packet.writeString(_player.getName()); // name of player
 		packet.writeD(_item.getId()); // item id
 		packet.writeD(_item.getEnchantLevel()); // enchant level
-		packet.writeC(0x00); // name of item
+		packet.writeC(0); // name of item
 		return true;
 	}
 }

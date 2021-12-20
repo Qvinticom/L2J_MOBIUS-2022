@@ -33,7 +33,6 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		_shortCuts = player.getAllShortCuts();
 	}
 	
@@ -41,25 +40,23 @@ public class ShortCutInit implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHORT_CUT_INIT.writeId(packet);
-		
 		packet.writeD(_shortCuts.size());
 		for (Shortcut sc : _shortCuts)
 		{
 			packet.writeD(sc.getType().ordinal());
 			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
-			
 			switch (sc.getType())
 			{
 				case ITEM:
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // Enabled or not
+					packet.writeD(1); // Enabled or not
 					packet.writeD(sc.getSharedReuseGroup());
-					packet.writeD(0x00);
-					packet.writeD(0x00);
-					packet.writeH(0x00);
-					packet.writeH(0x00);
-					packet.writeD(0x00); // Visual id
+					packet.writeD(0);
+					packet.writeD(0);
+					packet.writeH(0);
+					packet.writeH(0);
+					packet.writeD(0); // Visual id
 					break;
 				}
 				case SKILL:
@@ -68,8 +65,8 @@ public class ShortCutInit implements IClientOutgoingPacket
 					packet.writeH(sc.getLevel());
 					packet.writeH(sc.getSubLevel());
 					packet.writeD(sc.getSharedReuseGroup());
-					packet.writeC(0x00); // C5
-					packet.writeD(0x01); // C6
+					packet.writeC(0); // C5
+					packet.writeD(1); // C6
 					break;
 				}
 				case ACTION:
@@ -78,7 +75,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 				case BOOKMARK:
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // C6
+					packet.writeD(1); // C6
 				}
 			}
 		}

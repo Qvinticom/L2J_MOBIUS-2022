@@ -51,14 +51,12 @@ public class WearList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WEAR_LIST.writeId(packet);
-		
 		packet.writeC(0xc0); // ?
 		packet.writeC(0x13); // ?
-		packet.writeC(0x00); // ?
-		packet.writeC(0x00); // ?
+		packet.writeC(0); // ?
+		packet.writeC(0); // ?
 		packet.writeD(_money); // current money
 		packet.writeD(_listId);
-		
 		int newlength = 0;
 		for (Item item : _list)
 		{
@@ -68,27 +66,23 @@ public class WearList implements IClientOutgoingPacket
 			}
 		}
 		packet.writeH(newlength);
-		
 		for (Item item : _list)
 		{
 			if ((item.getItem().getCrystalType() <= _expertise) && item.isEquipable())
 			{
 				packet.writeD(item.getItemId());
 				packet.writeH(item.getItem().getType2()); // item type2
-				
 				if (item.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeH(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
 				else
 				{
-					packet.writeH(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(0); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 				}
-				
 				packet.writeD(Config.WEAR_PRICE);
 			}
 		}
-		
 		return true;
 	}
 }

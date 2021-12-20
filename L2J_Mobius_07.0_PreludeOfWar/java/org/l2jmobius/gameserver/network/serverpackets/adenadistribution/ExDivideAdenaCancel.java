@@ -35,8 +35,7 @@ public class ExDivideAdenaCancel implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DIVIDE_ADENA_CANCEL.writeId(packet);
-		
-		packet.writeC(0x00); // TODO: Find me
+		packet.writeC(0); // TODO: Find me
 		return true;
 	}
 }

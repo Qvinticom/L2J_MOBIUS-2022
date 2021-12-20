@@ -40,7 +40,6 @@ public class ShortBuffStatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHORT_BUFF_STATUS_UPDATE.writeId(packet);
-		
 		packet.writeD(_skillId);
 		packet.writeH(_skillLevel);
 		packet.writeH(_skillSubLevel);

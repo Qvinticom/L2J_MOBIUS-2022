@@ -29,7 +29,7 @@ public class ExCollectionFavoriteList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_COLLECTION_FAVORITE_LIST.writeId(packet);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

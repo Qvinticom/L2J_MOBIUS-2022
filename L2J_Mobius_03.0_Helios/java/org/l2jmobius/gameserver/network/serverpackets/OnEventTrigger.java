@@ -37,7 +37,6 @@ public class OnEventTrigger implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EVENT_TRIGGER.writeId(packet);
-		
 		packet.writeD(_emitterId);
 		packet.writeC(_enabled);
 		return true;

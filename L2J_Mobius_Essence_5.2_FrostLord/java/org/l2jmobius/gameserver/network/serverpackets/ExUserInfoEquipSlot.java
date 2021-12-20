@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 {
 	private final Player _player;
-	
 	private final byte[] _masks = new byte[]
 	{
 		(byte) 0x00,
@@ -66,11 +65,9 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_USER_INFO_EQUIP_SLOT.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeH(InventorySlot.values().length); // 152
 		packet.writeB(_masks);
-		
 		final PlayerInventory inventory = _player.getInventory();
 		for (InventorySlot slot : InventorySlot.values())
 		{

@@ -39,7 +39,6 @@ public class PackageToList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PACKAGE_TO_LIST.writeId(packet);
-		
 		packet.writeD(_players.size());
 		for (Entry<Integer, String> entry : _players.entrySet())
 		{

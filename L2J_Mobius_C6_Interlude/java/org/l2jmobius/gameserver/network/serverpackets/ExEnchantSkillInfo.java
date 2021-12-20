@@ -66,15 +66,12 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
-		
 		packet.writeD(_id);
 		packet.writeD(_level);
 		packet.writeD(_spCost);
 		packet.writeQ(_xpCost);
 		packet.writeD(_rate);
-		
 		packet.writeD(_reqs.size());
-		
 		for (Req temp : _reqs)
 		{
 			packet.writeD(temp.type);

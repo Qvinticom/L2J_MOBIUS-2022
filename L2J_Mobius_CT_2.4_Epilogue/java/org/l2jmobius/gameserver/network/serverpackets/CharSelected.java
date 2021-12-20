@@ -40,21 +40,19 @@ public class CharSelected implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHARACTER_SELECTED.writeId(packet);
-		
 		packet.writeS(_player.getName());
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getTitle());
 		packet.writeD(_sessionId);
 		packet.writeD(_player.getClanId());
-		packet.writeD(0x00); // ??
+		packet.writeD(0); // ??
 		packet.writeD(_player.getAppearance().isFemale() ? 1 : 0);
 		packet.writeD(_player.getRace().ordinal());
 		packet.writeD(_player.getClassId().getId());
-		packet.writeD(0x01); // active ??
+		packet.writeD(1); // active ??
 		packet.writeD(_player.getX());
 		packet.writeD(_player.getY());
 		packet.writeD(_player.getZ());
-		
 		packet.writeF(_player.getCurrentHp());
 		packet.writeF(_player.getCurrentMp());
 		packet.writeD((int) _player.getSp());
@@ -68,19 +66,15 @@ public class CharSelected implements IClientOutgoingPacket
 		packet.writeD(_player.getMEN());
 		packet.writeD(_player.getDEX());
 		packet.writeD(_player.getWIT());
-		
 		packet.writeD(GameTimeTaskManager.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
 		packet.writeD(_player.getClassId().getId());
-		
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
 		packet.writeB(new byte[64]);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

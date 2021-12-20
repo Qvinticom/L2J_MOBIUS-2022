@@ -34,7 +34,6 @@ public class ExPledgeRecruitBoardSearch implements IClientOutgoingPacket
 	private final int _clanOnCurrentPage;
 	private final int _startIndex;
 	private final int _endIndex;
-	
 	static final int CLAN_PER_PAGE = 12;
 	
 	public ExPledgeRecruitBoardSearch(List<PledgeRecruitInfo> clanList, int currentPage)
@@ -51,11 +50,9 @@ public class ExPledgeRecruitBoardSearch implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_SEARCH.writeId(packet);
-		
 		packet.writeD(_currentPage);
 		packet.writeD(_totalNumberOfPage);
 		packet.writeD(_clanOnCurrentPage);
-		
 		for (int i = _startIndex; i < _endIndex; i++)
 		{
 			packet.writeD(_clanList.get(i).getClanId());

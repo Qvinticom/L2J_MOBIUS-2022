@@ -19,7 +19,7 @@ package org.l2jmobius.loginserver.network.serverpackets;
 import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
- * Fromat: d d: the failure reason
+ * Format: d d: the failure reason
  */
 public class LoginFail extends AbstractServerPacket
 {

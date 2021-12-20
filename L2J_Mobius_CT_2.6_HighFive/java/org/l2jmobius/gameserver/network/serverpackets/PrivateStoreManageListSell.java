@@ -49,7 +49,6 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 		packet.writeD(_objId);
 		packet.writeD(_packageSale ? 1 : 0); // Package sell
 		packet.writeQ(_playerAdena);
-		
 		// section2
 		packet.writeD(_itemList.size()); // for potential sells
 		for (TradeItem item : _itemList)

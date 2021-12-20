@@ -41,7 +41,6 @@ public class ExMercenaryCastleWarCastleInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_MERCENARY_CASTLEWAR_CASTLE_INFO.writeId(packet);
 		packet.writeD(_castle.getResidenceId());
-		
 		final var clan = _castle.getOwner();
 		if (clan != null)
 		{
@@ -56,16 +55,13 @@ public class ExMercenaryCastleWarCastleInfo implements IClientOutgoingPacket
 			packet.writeD(0);
 			packet.writeString("");
 			packet.writeString("");
-			
 		}
-		
 		packet.writeD(_castle.getTaxPercent(TaxType.BUY));
 		packet.writeQ((long) (_castle.getTreasury() * _castle.getTaxRate(TaxType.BUY)));
 		packet.writeQ((long) (_castle.getTreasury() + (_castle.getTreasury() * _castle.getTaxRate(TaxType.BUY))));
 		final Calendar cal = Calendar.getInstance();
 		cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());
 		packet.writeD((int) (cal.getTimeInMillis() / 1000));
-		
 		return true;
 	}
 }

@@ -124,7 +124,6 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SEND_UIEVENT.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_type); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
 		packet.writeD(0); // unknown

@@ -45,7 +45,6 @@ public class JoinParty implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.JOIN_PARTY.writeId(packet);
-		
 		packet.writeD(_response);
 		return true;
 	}

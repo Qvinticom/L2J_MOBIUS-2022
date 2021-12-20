@@ -39,8 +39,7 @@ public class ExCubeGameChangeTimeToStart implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
-		packet.writeD(0x03);
-		
+		packet.writeD(3);
 		packet.writeD(_seconds);
 		return true;
 	}

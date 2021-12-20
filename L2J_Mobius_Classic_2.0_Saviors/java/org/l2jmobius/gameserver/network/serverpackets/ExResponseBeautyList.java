@@ -29,12 +29,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExResponseBeautyList implements IClientOutgoingPacket
 {
+	public static final int SHOW_FACESHAPE = 1;
+	public static final int SHOW_HAIRSTYLE = 0;
+	
 	private final Player _player;
 	private final int _type;
 	private final Map<Integer, BeautyItem> _beautyItem;
-	
-	public static final int SHOW_FACESHAPE = 1;
-	public static final int SHOW_HAIRSTYLE = 0;
 	
 	public ExResponseBeautyList(Player player, int type)
 	{
@@ -54,7 +54,6 @@ public class ExResponseBeautyList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_BEAUTY_LIST.writeId(packet);
-		
 		packet.writeQ(_player.getAdena());
 		packet.writeQ(_player.getBeautyTickets());
 		packet.writeD(_type);

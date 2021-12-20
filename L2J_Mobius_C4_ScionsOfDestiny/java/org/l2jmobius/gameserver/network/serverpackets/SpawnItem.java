@@ -41,7 +41,7 @@ public class SpawnItem implements IClientOutgoingPacket
 		_x = item.getX();
 		_y = item.getY();
 		_z = item.getZ();
-		_stackable = item.isStackable() ? 0x01 : 0x00;
+		_stackable = item.isStackable() ? 1 : 0;
 		_count = item.getCount();
 	}
 	
@@ -51,14 +51,13 @@ public class SpawnItem implements IClientOutgoingPacket
 		OutgoingPackets.SPAWN_ITEM.writeId(packet);
 		packet.writeD(_objectId);
 		packet.writeD(_itemId);
-		
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
 		// only show item count if it is a stackable item
 		packet.writeD(_stackable);
 		packet.writeD(_count);
-		packet.writeD(0x00); // c2
+		packet.writeD(0); // c2
 		return true;
 	}
 }

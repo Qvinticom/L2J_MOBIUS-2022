@@ -45,7 +45,6 @@ public class ExAttributeEnchantResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ATTRIBUTE_ENCHANT_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		packet.writeC(_isWeapon);
 		packet.writeH(_type);

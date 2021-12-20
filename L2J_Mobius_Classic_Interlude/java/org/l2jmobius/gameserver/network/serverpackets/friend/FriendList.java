@@ -86,12 +86,10 @@ public class FriendList implements IClientOutgoingPacket
 				}
 				continue;
 			}
-			
 			if (player1.isOnline())
 			{
 				online = true;
 			}
-			
 			classid = player1.getClassId().getId();
 			level = player1.getLevel();
 			_info.add(new FriendInfo(objId, name, online, classid, level));
@@ -102,14 +100,13 @@ public class FriendList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FRIEND_LIST.writeId(packet);
-		
 		packet.writeD(_info.size());
 		for (FriendInfo info : _info)
 		{
 			packet.writeD(info._objId); // character id
 			packet.writeS(info._name);
-			packet.writeD(info._online ? 0x01 : 0x00); // online
-			packet.writeD(info._online ? info._objId : 0x00); // object id if online
+			packet.writeD(info._online ? 1 : 0); // online
+			packet.writeD(info._online ? info._objId : 0); // object id if online
 			packet.writeD(info._classid);
 			packet.writeD(info._level);
 		}

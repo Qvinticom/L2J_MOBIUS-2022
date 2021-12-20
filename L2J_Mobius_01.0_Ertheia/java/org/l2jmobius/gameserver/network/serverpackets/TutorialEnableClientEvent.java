@@ -32,7 +32,6 @@ public class TutorialEnableClientEvent implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TUTORIAL_ENABLE_CLIENT_EVENT.writeId(packet);
-		
 		packet.writeD(_eventId);
 		return true;
 	}

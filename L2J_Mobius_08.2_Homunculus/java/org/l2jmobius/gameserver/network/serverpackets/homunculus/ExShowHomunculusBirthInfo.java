@@ -44,7 +44,6 @@ public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_HOMUNCULUS_BIRTH_INFO.writeId(packet);
-		
 		int creationStage = 0;
 		if (_homunculusCreateTime > 0)
 		{
@@ -63,7 +62,6 @@ public class ExShowHomunculusBirthInfo implements IClientOutgoingPacket
 		packet.writeD(_vpPoints); // vp points
 		packet.writeD(_homunculusCreateTime); // finish time
 		packet.writeD(0); // JP = 0. ?
-		
 		return true;
 	}
 }

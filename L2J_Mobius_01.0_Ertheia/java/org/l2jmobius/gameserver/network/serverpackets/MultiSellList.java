@@ -58,15 +58,13 @@ public class MultiSellList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MULTI_SELL_LIST.writeId(packet);
-		
 		packet.writeD(_list.getId()); // list id
-		packet.writeC(0x00); // GOD Unknown
+		packet.writeC(0); // GOD Unknown
 		packet.writeD(1 + (_index / PAGE_SIZE)); // page started from 1
-		packet.writeD(_finished ? 0x01 : 0x00); // finished
+		packet.writeD(_finished ? 1 : 0); // finished
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
-		packet.writeC(_list.isChanceMultisell() ? 0x01 : 0x00); // new multisell window
-		
+		packet.writeC(_list.isChanceMultisell() ? 1 : 0); // new multisell window
 		while (_size-- > 0)
 		{
 			ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
@@ -83,19 +81,15 @@ public class MultiSellList extends AbstractItemPacket
 					}
 				}
 			}
-			
 			packet.writeD(_index); // Entry ID. Start from 1.
 			packet.writeC(entry.isStackable() ? 1 : 0);
-			
 			// Those values will be passed down to MultiSellChoose packet.
 			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
 			packet.writeD((itemEnchantment != null) && (itemEnchantment.getAugmentation() != null) ? itemEnchantment.getAugmentation().getOption1Id() : 0);
 			packet.writeD((itemEnchantment != null) && (itemEnchantment.getAugmentation() != null) ? itemEnchantment.getAugmentation().getOption2Id() : 0);
 			writeItemElemental(packet, itemEnchantment);
-			
 			packet.writeH(entry.getProducts().size());
 			packet.writeH(entry.getIngredients().size());
-			
 			for (ItemChanceHolder product : entry.getProducts())
 			{
 				final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
@@ -119,7 +113,6 @@ public class MultiSellList extends AbstractItemPacket
 				packet.writeD((displayItemEnchantment != null) && (displayItemEnchantment.getAugmentation() != null) ? displayItemEnchantment.getAugmentation().getOption2Id() : 0);
 				writeItemElemental(packet, displayItemEnchantment);
 			}
-			
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
 				final ItemTemplate template = ItemTable.getInstance().getTemplate(ingredient.getId());

@@ -37,7 +37,6 @@ public class PledgeReceivePowerInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_RECEIVE_POWER_INFO.writeId(packet);
-		
 		packet.writeD(_member.getPowerGrade()); // power grade
 		packet.writeS(_member.getName());
 		packet.writeD(_member.getClan().getRankPrivs(_member.getPowerGrade())); // privileges

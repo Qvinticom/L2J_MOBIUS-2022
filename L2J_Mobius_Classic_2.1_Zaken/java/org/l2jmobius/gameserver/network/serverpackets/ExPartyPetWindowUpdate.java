@@ -36,7 +36,6 @@ public class ExPartyPetWindowUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PARTY_PET_WINDOW_UPDATE.writeId(packet);
-		
 		packet.writeD(_summon.getObjectId());
 		packet.writeD(_summon.getTemplate().getDisplayId() + 1000000);
 		packet.writeC(_summon.getSummonType());

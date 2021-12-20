@@ -42,11 +42,9 @@ public class MonRaceInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MON_RACE_INFO.writeId(packet);
-		
 		packet.writeD(_unknown1);
 		packet.writeD(_unknown2);
-		packet.writeD(0x08);
-		
+		packet.writeD(8);
 		for (int i = 0; i < 8; i++)
 		{
 			packet.writeD(_monsters[i].getObjectId()); // npcObjectID
@@ -68,11 +66,11 @@ public class MonRaceInfo implements IClientOutgoingPacket
 				}
 				else
 				{
-					packet.writeC(0x00);
+					packet.writeC(0);
 				}
 			}
-			packet.writeD(0x00);
-			packet.writeD(0x00); // CT2.3 special effect
+			packet.writeD(0);
+			packet.writeD(0); // CT2.3 special effect
 		}
 		return true;
 	}

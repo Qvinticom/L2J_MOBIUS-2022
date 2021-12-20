@@ -35,15 +35,14 @@ public class RecipeShopItemInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_SHOP_ITEM_INFO.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_recipeId);
 		packet.writeD((int) _player.getCurrentMp());
 		packet.writeD(_player.getMaxMp());
 		packet.writeD(0xffffffff);
-		packet.writeQ(0x00);
-		packet.writeC(0x00); // Trigger offering window if 1
-		packet.writeQ(0x00);
+		packet.writeQ(0);
+		packet.writeC(0); // Trigger offering window if 1
+		packet.writeQ(0);
 		return true;
 	}
 }

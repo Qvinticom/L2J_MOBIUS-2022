@@ -59,8 +59,8 @@ public class ItemList extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeC(0x01); // _showWindow ? 0x01 : 0x00
-			packet.writeD(0x00);
+			packet.writeC(1); // _showWindow ? 1 : 0
+			packet.writeD(0);
 			packet.writeD(_items.size());
 		}
 		writeInventoryBlock(packet, _player.getInventory());

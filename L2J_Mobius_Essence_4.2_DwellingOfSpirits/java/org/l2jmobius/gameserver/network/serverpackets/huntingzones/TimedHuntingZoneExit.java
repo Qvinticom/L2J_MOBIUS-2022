@@ -35,7 +35,7 @@ public class TimedHuntingZoneExit implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_ENTER.writeId(packet);
-		packet.writeC(0x00); // bEnterSuccess
+		packet.writeC(0); // bEnterSuccess
 		return true;
 	}
 }

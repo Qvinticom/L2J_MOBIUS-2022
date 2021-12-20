@@ -42,7 +42,6 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		
 		if (targets != null)
 		{
 			_numberOfTargets = targets.size();
@@ -54,7 +53,6 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 			_targets = new ArrayList<>();
 			_targets.add(creature);
 		}
-		
 		_singleTargetId = 0;
 	}
 	

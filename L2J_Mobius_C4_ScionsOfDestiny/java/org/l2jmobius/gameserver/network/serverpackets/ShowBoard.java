@@ -56,7 +56,7 @@ public class ShowBoard implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_BOARD.writeId(packet);
-		packet.writeC(0x01); // 1 to show, 0 to hide
+		packet.writeC(1); // 1 to show, 0 to hide
 		packet.writeS(TOP);
 		packet.writeS(FAV);
 		packet.writeS(REGION);

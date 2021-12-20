@@ -38,7 +38,6 @@ public class ChangeMoveType implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHANGE_MOVE_TYPE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_running ? RUN : WALK);
 		packet.writeD(0); // c2

@@ -45,9 +45,8 @@ public class ExBRProductList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
-		
 		packet.writeQ(_player.getAdena()); // Adena
-		packet.writeQ(0x00); // Hero coins
+		packet.writeQ(0); // Hero coins
 		packet.writeC(_type); // Type 0 - Home, 1 - History, 2 - Favorites
 		packet.writeD(_primeList.size());
 		for (PrimeShopGroup brItem : _primeList)

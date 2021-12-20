@@ -36,12 +36,10 @@ public class PartySmallWindowAdd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_ADD.writeId(packet);
-		
 		packet.writeD(_party.getLeaderObjectId()); // c3
 		packet.writeD(_party.getDistributionType().getId()); // c3
 		packet.writeD(_member.getObjectId());
 		packet.writeS(_member.getName());
-		
 		packet.writeD((int) _member.getCurrentCp()); // c4
 		packet.writeD(_member.getMaxCp()); // c4
 		packet.writeD((int) _member.getCurrentHp());
@@ -51,9 +49,9 @@ public class PartySmallWindowAdd implements IClientOutgoingPacket
 		packet.writeD(_member.getVitalityPoints());
 		packet.writeC(_member.getLevel());
 		packet.writeH(_member.getClassId().getId());
-		packet.writeC(0x00);
+		packet.writeC(0);
 		packet.writeH(_member.getRace().ordinal());
-		packet.writeD(0x00); // 228
+		packet.writeD(0); // 228
 		return true;
 	}
 }

@@ -45,24 +45,21 @@ public class GMViewItemList implements IClientOutgoingPacket
 		OutgoingPackets.GM_VIEW_ITEM_LIST.writeId(packet);
 		packet.writeS(_playerName);
 		packet.writeD(_player.getInventoryLimit()); // inventory limit
-		packet.writeH(0x01); // show window ??
+		packet.writeH(1); // show window ??
 		packet.writeH(_items.size());
-		
 		for (Item temp : _items)
 		{
 			if ((temp == null) || (temp.getItem() == null))
 			{
 				continue;
 			}
-			
 			packet.writeH(temp.getItem().getType1());
-			
 			packet.writeD(temp.getObjectId());
 			packet.writeD(temp.getItemId());
 			packet.writeD(temp.getCount());
 			packet.writeH(temp.getItem().getType2());
 			packet.writeH(temp.getCustomType1());
-			packet.writeH(temp.isEquipped() ? 0x01 : 0x00);
+			packet.writeH(temp.isEquipped() ? 1 : 0);
 			packet.writeD(temp.getItem().getBodyPart());
 			packet.writeH(temp.getEnchantLevel());
 			packet.writeH(temp.getCustomType2());
@@ -72,7 +69,7 @@ public class GMViewItemList implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeD(0x00);
+				packet.writeD(0);
 			}
 			packet.writeD(-1); // C6
 		}

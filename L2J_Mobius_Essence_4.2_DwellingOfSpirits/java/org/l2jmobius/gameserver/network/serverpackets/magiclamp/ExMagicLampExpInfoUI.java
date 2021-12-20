@@ -38,7 +38,7 @@ public class ExMagicLampExpInfoUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MAGICLAMP_EXP_INFO.writeId(packet);
-		packet.writeD(Config.ENABLE_MAGIC_LAMP ? 0x01 : 0x00); // IsOpen
+		packet.writeD(Config.ENABLE_MAGIC_LAMP ? 1 : 0); // IsOpen
 		packet.writeD(Config.MAGIC_LAMP_MAX_LEVEL_EXP); // MaxMagicLampExp
 		packet.writeD(_player.getLampExp()); // MagicLampExp
 		packet.writeD(_player.getLampCount()); // MagicLampCount

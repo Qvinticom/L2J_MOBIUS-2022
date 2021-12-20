@@ -39,7 +39,6 @@ public class TradeUpdate extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TRADE_UPDATE.writeId(packet);
-		
 		packet.writeH(1);
 		packet.writeH((_newCount > 0) && _item.getItem().isStackable() ? 3 : 2);
 		writeTradeItem(packet, _item);

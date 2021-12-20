@@ -38,7 +38,6 @@ public class ExShowContactList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RECEIVE_SHOW_POST_FRIEND.writeId(packet);
-		
 		packet.writeD(_contacts.size());
 		_contacts.forEach(packet::writeS);
 		return true;

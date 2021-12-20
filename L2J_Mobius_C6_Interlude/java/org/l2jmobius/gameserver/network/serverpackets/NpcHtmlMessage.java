@@ -129,13 +129,10 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 {
 	/** The _npc obj id. */
 	private final int _npcObjId;
-	
 	/** The _html. */
 	private String _html;
-	
 	/** The _html file. */
 	private String _file = null;
-	
 	/** The _validate. */
 	private final boolean _validate = true;
 	
@@ -167,7 +164,6 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 			buildBypassCache(player);
 			buildLinksCache(player);
 		}
-		
 		if ((_file != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
 		{
 			BuilderUtil.sendHtmlMessage(player, _file.substring(10));
@@ -186,14 +182,12 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 			_html = "<html><body></body></html>";
 			return;
 		}
-		
 		if (text.length() > 8192)
 		{
 			PacketLogger.warning("Html is too long! This will crash the client!");
 			_html = "<html><body>Html was too long,<br>Try to use DB for this action</body></html>";
 			return;
 		}
-		
 		_html = text; // html code must not exceed 8192 bytes
 	}
 	
@@ -211,7 +205,6 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 			PacketLogger.warning("Missing html page " + path);
 			return false;
 		}
-		
 		_file = path;
 		setHtml(content);
 		return true;
@@ -257,7 +250,6 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		player.clearBypass();
 		final int len = _html.length();
 		for (int i = 0; i < len; i++)
@@ -268,7 +260,6 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 			{
 				break;
 			}
-			
 			start += 10;
 			i = start;
 			final int finish2 = _html.indexOf('$', start);
@@ -294,7 +285,6 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		player.clearLinks();
 		final int len = _html.length();
 		for (int i = 0; i < len; i++)
@@ -305,7 +295,6 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 			{
 				break;
 			}
-			
 			i = start;
 			player.addLink(_html.substring(start + 5, finish).trim());
 		}
@@ -317,7 +306,7 @@ public class NpcHtmlMessage implements IClientOutgoingPacket
 		OutgoingPackets.NPC_HTML_MESSAGE.writeId(packet);
 		packet.writeD(_npcObjId);
 		packet.writeS(_html);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 	

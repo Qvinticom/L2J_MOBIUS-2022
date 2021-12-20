@@ -53,7 +53,6 @@ public class PetStatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_STATUS_UPDATE.writeId(packet);
-		
 		packet.writeD(_summon.getSummonType());
 		packet.writeD(_summon.getObjectId());
 		packet.writeD(_summon.getX());
@@ -70,7 +69,7 @@ public class PetStatusUpdate implements IClientOutgoingPacket
 		packet.writeQ(_summon.getStat().getExp());
 		packet.writeQ(_summon.getExpForThisLevel()); // 0% absolute value
 		packet.writeQ(_summon.getExpForNextLevel()); // 100% absolute value
-		packet.writeD(0x01); // TODO: Find me!
+		packet.writeD(1); // TODO: Find me!
 		return true;
 	}
 }

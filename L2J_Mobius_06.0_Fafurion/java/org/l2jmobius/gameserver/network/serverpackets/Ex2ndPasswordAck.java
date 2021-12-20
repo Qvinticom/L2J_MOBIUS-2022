@@ -24,12 +24,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class Ex2ndPasswordAck implements IClientOutgoingPacket
 {
+	// TODO: Enum
+	public static final int SUCCESS = 0;
+	public static final int WRONG_PATTERN = 1;
+	
 	private final int _status;
 	private final int _response;
-	
-	// TODO: Enum
-	public static final int SUCCESS = 0x00;
-	public static final int WRONG_PATTERN = 0x01;
 	
 	public Ex2ndPasswordAck(int status, int response)
 	{
@@ -41,10 +41,9 @@ public class Ex2ndPasswordAck implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_2ND_PASSWORD_ACK.writeId(packet);
-		
 		packet.writeC(_status);
-		packet.writeD(_response == WRONG_PATTERN ? 0x01 : 0x00);
-		packet.writeD(0x00);
+		packet.writeD(_response == WRONG_PATTERN ? 1 : 0);
+		packet.writeD(0);
 		return true;
 	}
 }

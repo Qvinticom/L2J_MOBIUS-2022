@@ -45,10 +45,8 @@ public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ABNORMAL_STATUS_UPDATE_FROM_TARGET.writeId(packet);
-		
 		packet.writeD(_creature.getObjectId());
 		packet.writeH(_effects.size());
-		
 		for (BuffInfo info : _effects)
 		{
 			packet.writeD(info.getSkill().getDisplayId());

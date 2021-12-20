@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final List<Integer> _routes = new ArrayList<>(); // skill levels for each route
-	
 	private final int _id;
 	private final int _level;
 	private boolean _maxEnchanted = false;
@@ -37,7 +36,6 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 	{
 		_id = id;
 		_level = level;
-		
 		final EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
 		// do we have this skill?
 		if (enchantLearn != null)
@@ -46,16 +44,13 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 			if (_level > 100)
 			{
 				_maxEnchanted = enchantLearn.isMaxEnchant(_level);
-				
 				// get detail for next level
 				final EnchantSkillHolder esd = enchantLearn.getEnchantSkillHolder(_level);
-				
 				// if it exists add it
 				if (esd != null)
 				{
 					_routes.add(_level); // current enchant add firts
 				}
-				
 				final int skillLevel = (_level % 100);
 				for (int route : enchantLearn.getAllRoutes())
 				{
@@ -89,7 +84,6 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 		packet.writeD(_maxEnchanted ? 0 : 1);
 		packet.writeD(_level > 100 ? 1 : 0); // enchanted?
 		packet.writeD(_routes.size());
-		
 		for (int level : _routes)
 		{
 			packet.writeD(level);

@@ -35,7 +35,6 @@ public class ExRedSky implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RED_SKY.writeId(packet);
-		
 		packet.writeD(_duration);
 		return true;
 	}

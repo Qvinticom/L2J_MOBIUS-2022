@@ -39,7 +39,6 @@ public class ExPledgeContributionList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_CONTRIBUTION_LIST.writeId(packet);
-		
 		packet.writeD(_contributors.size());
 		for (ClanMember contributor : _contributors)
 		{

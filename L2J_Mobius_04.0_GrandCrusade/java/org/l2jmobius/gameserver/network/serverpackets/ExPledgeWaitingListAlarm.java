@@ -30,7 +30,6 @@ public class ExPledgeWaitingListAlarm implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_WAITING_LIST_ALARM.writeId(packet);
-		
 		return true;
 	}
 }

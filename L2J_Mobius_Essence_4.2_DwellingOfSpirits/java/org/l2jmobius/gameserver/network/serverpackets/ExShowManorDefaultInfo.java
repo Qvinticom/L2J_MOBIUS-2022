@@ -41,8 +41,7 @@ public class ExShowManorDefaultInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_MANOR_DEFAULT_INFO.writeId(packet);
-		
-		packet.writeC(_hideButtons ? 0x01 : 0x00); // Hide "Seed Purchase" and "Crop Sales" buttons
+		packet.writeC(_hideButtons ? 1 : 0); // Hide "Seed Purchase" and "Crop Sales" buttons
 		packet.writeD(_crops.size());
 		for (Seed crop : _crops)
 		{

@@ -40,7 +40,6 @@ public class QuestList implements IClientOutgoingPacket
 		for (QuestState qs : _questStates)
 		{
 			packet.writeD(qs.getQuest().getQuestId());
-			
 			final int states = qs.getInt("__compltdStateFlags");
 			if (states != 0)
 			{

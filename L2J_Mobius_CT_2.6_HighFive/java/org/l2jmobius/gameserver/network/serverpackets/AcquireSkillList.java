@@ -70,11 +70,9 @@ public class AcquireSkillList implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.ACQUIRE_SKILL_LIST.writeId(packet);
 		packet.writeD(_skillType.ordinal());
 		packet.writeD(_skills.size());
-		
 		for (Skill temp : _skills)
 		{
 			packet.writeD(temp.id);

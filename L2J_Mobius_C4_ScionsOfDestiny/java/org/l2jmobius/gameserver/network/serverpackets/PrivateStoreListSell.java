@@ -51,7 +51,6 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 		{
 			_playerAdena = _player.getAdena();
 		}
-		
 		_storePlayer.getSellList().updateItems();
 		_items = _storePlayer.getSellList().getItems();
 		_packageSale = _storePlayer.getSellList().isPackaged();
@@ -71,9 +70,9 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getItemId());
 			packet.writeD(item.getCount());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeH(item.getEnchant());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeD(item.getPrice()); // your price
 			packet.writeD(item.getItem().getReferencePrice()); // store price

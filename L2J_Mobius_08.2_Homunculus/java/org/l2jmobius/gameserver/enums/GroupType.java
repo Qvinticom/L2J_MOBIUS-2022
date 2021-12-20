@@ -23,9 +23,9 @@ import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
  */
 public enum GroupType implements IUpdateTypeComponent
 {
-	NONE(0x01),
-	PARTY(0x02),
-	COMMAND_CHANNEL(0x04);
+	NONE(1),
+	PARTY(2),
+	COMMAND_CHANNEL(4);
 	
 	private int _mask;
 	

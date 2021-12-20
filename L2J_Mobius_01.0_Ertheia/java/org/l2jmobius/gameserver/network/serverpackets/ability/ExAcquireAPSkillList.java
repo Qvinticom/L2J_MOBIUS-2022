@@ -62,7 +62,6 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ACQUIRE_AP_SKILL_LIST.writeId(packet);
-		
 		packet.writeD(_enable ? 1 : 0);
 		packet.writeQ(Config.ABILITY_POINTS_RESET_ADENA);
 		packet.writeQ(_price);

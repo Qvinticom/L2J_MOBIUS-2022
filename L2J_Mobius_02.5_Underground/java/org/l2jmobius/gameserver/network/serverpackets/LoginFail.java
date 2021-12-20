@@ -48,7 +48,6 @@ public class LoginFail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.LOGIN_FAIL.writeId(packet);
-		
 		packet.writeD(_reason);
 		return true;
 	}

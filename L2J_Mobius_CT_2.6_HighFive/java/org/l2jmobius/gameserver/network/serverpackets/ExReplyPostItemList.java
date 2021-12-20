@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Migi, DS
  */
-
 public class ExReplyPostItemList extends AbstractItemPacket
 {
 	Player _player;

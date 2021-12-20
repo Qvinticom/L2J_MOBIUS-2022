@@ -36,12 +36,9 @@ public class ExUserInfoCubic implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_USER_INFO_CUBIC.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeH(_player.getCubics().size());
-		
 		_player.getCubics().keySet().forEach(packet::writeH);
-		
 		packet.writeD(_player.getAgathionId());
 		return true;
 	}

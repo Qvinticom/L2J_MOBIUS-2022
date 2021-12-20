@@ -60,7 +60,7 @@ public class HennaInfo implements IClientOutgoingPacket
 		for (Henna henna : _hennas)
 		{
 			packet.writeD(henna.getDyeId());
-			packet.writeD(0x01);
+			packet.writeD(1);
 		}
 		return true;
 	}

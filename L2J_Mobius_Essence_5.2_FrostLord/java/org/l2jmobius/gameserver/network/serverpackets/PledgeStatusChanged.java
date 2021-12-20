@@ -33,15 +33,14 @@ public class PledgeStatusChanged implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_STATUS_CHANGED.writeId(packet);
-		
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_clan.getLeaderId());
 		packet.writeD(_clan.getId());
 		packet.writeD(_clan.getCrestId());
 		packet.writeD(_clan.getAllyId());
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.getCrestLargeId());
-		packet.writeD(0x00); // pledge type ?
+		packet.writeD(0); // pledge type ?
 		return true;
 	}
 }

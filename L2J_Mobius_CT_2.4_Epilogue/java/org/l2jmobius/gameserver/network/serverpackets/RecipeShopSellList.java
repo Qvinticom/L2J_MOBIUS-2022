@@ -42,7 +42,7 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 		packet.writeQ(_buyer.getAdena()); // Buyer Adena
 		if (!_manufacturer.hasManufactureShop())
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		else
 		{
@@ -50,7 +50,7 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 			for (ManufactureItem temp : _manufacturer.getManufactureItems().values())
 			{
 				packet.writeD(temp.getRecipeId());
-				packet.writeD(0x00); // unknown
+				packet.writeD(0); // unknown
 				packet.writeQ(temp.getCost());
 			}
 		}

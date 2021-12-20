@@ -40,12 +40,11 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_UNEQUIP_INFO.writeId(packet);
-		
 		packet.writeD(_henna.getDyeId()); // symbol Id
 		packet.writeD(_henna.getDyeItemId()); // item id of dye
 		packet.writeQ(_henna.getCancelCount()); // total amount of dye require
 		packet.writeQ(_henna.getCancelFee()); // total amount of Adena require to remove symbol
-		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // able to remove or not
+		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to remove or not
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeH(_player.getINT() - _player.getHennaValue(BaseStat.INT)); // equip INT
@@ -63,7 +62,7 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeH(_player.getLUC() - _player.getHennaValue(BaseStat.LUC)); // equip LUC
 		packet.writeD(_player.getCHA()); // current CHA
 		packet.writeH(_player.getCHA() - _player.getHennaValue(BaseStat.CHA)); // equip CHA
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

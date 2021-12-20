@@ -44,7 +44,6 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		{
 			throw new IllegalArgumentException();
 		}
-		
 		_npcObjId = npcObjId;
 	}
 	
@@ -60,7 +59,6 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		{
 			throw new IllegalArgumentException();
 		}
-		
 		_npcObjId = npcObjId;
 		setHtml(html);
 	}
@@ -77,13 +75,11 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 			PacketLogger.warning(getClass().getSimpleName() + ": Html is too long! this will crash the client!");
 			_html = html.substring(0, 17200);
 		}
-		
 		if (!html.contains("<html") && !html.startsWith("..\\L2"))
 		{
 			_html = "<html><body>" + html + "</body></html>";
 			return;
 		}
-		
 		_html = html;
 	}
 	
@@ -96,7 +92,6 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 			PacketLogger.warning(getClass().getSimpleName() + ": Missing html page " + path);
 			return false;
 		}
-		
 		setHtml(content);
 		return true;
 	}
@@ -138,12 +133,10 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		{
 			player.clearHtmlActions(getScope());
 		}
-		
 		if (_disabledValidation)
 		{
 			return;
 		}
-		
 		if (player != null)
 		{
 			Util.buildHtmlActionCache(player, getScope(), _npcObjId, _html);

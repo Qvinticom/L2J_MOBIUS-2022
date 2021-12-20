@@ -44,7 +44,6 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
-		
 		packet.writeD(_items.size());
 		for (Item item : _items)
 		{

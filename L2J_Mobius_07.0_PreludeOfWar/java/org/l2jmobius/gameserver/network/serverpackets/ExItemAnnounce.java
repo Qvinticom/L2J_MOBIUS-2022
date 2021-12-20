@@ -39,11 +39,11 @@ public class ExItemAnnounce implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ITEM_ANNOUNCE.writeId(packet);
-		packet.writeC(0x00); // item icon
+		packet.writeC(0); // item icon
 		packet.writeString(_player.getName()); // name of player
 		packet.writeD(_item.getId()); // item id
 		packet.writeD(_item.getEnchantLevel()); // enchant level
-		packet.writeC(0x00); // name of item
+		packet.writeC(0); // name of item
 		return true;
 	}
 }

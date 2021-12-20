@@ -51,7 +51,6 @@ public class MultiSellList implements IClientOutgoingPacket
 		packet.writeD(_finished); // finished
 		packet.writeD(0x28); // size of pages
 		packet.writeD(_list == null ? 0 : _list.getEntries().size()); // list length
-		
 		if (_list != null)
 		{
 			for (MultiSellEntry ent : _list.getEntries())
@@ -60,7 +59,6 @@ public class MultiSellList implements IClientOutgoingPacket
 				packet.writeC(1);
 				packet.writeH(ent.getProducts().size());
 				packet.writeH(ent.getIngredients().size());
-				
 				for (MultiSellIngredient i : ent.getProducts())
 				{
 					packet.writeH(i.getItemId());
@@ -69,7 +67,6 @@ public class MultiSellList implements IClientOutgoingPacket
 					packet.writeD(i.getItemCount());
 					packet.writeH(i.getEnchantmentLevel()); // enchtant level
 				}
-				
 				for (MultiSellIngredient i : ent.getIngredients())
 				{
 					final int items = i.getItemId();

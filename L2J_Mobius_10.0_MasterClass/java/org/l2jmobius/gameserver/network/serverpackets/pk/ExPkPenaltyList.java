@@ -37,7 +37,6 @@ public class ExPkPenaltyList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PK_PENALTY_LIST.writeId(packet);
-		
 		final Set<Player> players = World.getInstance().getPkPlayers();
 		packet.writeD(World.getInstance().getLastPkTime());
 		packet.writeD(players.size());
@@ -48,7 +47,6 @@ public class ExPkPenaltyList implements IClientOutgoingPacket
 			packet.writeD(player.getLevel());
 			packet.writeD(player.getClassId().getId());
 		}
-		
 		return true;
 	}
 }

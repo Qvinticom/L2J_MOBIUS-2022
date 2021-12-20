@@ -37,7 +37,6 @@ public class ExCuriousHouseRemainTime implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_CURIOUS_HOUSE_REMAIN_TIME.writeId(packet);
 		packet.writeD(_time);
-		
 		return true;
 	}
 }

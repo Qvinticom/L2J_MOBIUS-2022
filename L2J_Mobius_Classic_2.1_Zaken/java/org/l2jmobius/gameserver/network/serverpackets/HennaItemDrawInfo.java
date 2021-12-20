@@ -40,12 +40,11 @@ public class HennaItemDrawInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_ITEM_INFO.writeId(packet);
-		
 		packet.writeD(_henna.getDyeId()); // symbol Id
 		packet.writeD(_henna.getDyeItemId()); // item id of dye
 		packet.writeQ(_henna.getWearCount()); // total amount of dye require
 		packet.writeQ(_henna.getWearFee()); // total amount of Adena require to draw symbol
-		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // able to draw or not 0 is false and 1 is true
+		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to draw or not 0 is false and 1 is true
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeH(_player.getINT() + _player.getHennaValue(BaseStat.INT)); // equip INT
@@ -59,7 +58,7 @@ public class HennaItemDrawInfo implements IClientOutgoingPacket
 		packet.writeH(_player.getDEX() + _player.getHennaValue(BaseStat.DEX)); // equip DEX
 		packet.writeD(_player.getWIT()); // current WIT
 		packet.writeH(_player.getWIT() + _player.getHennaValue(BaseStat.WIT)); // equip WIT
-		packet.writeD(0x00); // TODO: Find me!
+		packet.writeD(0); // TODO: Find me!
 		return true;
 	}
 }

@@ -42,7 +42,6 @@ public class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowU
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_UPDATE.writeId(packet);
-		
 		packet.writeD(_member.getObjectId());
 		packet.writeH(_flags);
 		if (containsMask(PartySmallWindowUpdateType.CURRENT_CP))
@@ -79,7 +78,7 @@ public class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowU
 		}
 		if (containsMask(PartySmallWindowUpdateType.PARTY_SUBSTITUTE))
 		{
-			packet.writeC(0x00);
+			packet.writeC(0);
 		}
 		if (containsMask(PartySmallWindowUpdateType.VITALITY_POINTS))
 		{

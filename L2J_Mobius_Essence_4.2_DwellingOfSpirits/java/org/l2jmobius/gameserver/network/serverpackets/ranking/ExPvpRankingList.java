@@ -114,10 +114,8 @@ public class ExPvpRankingList implements IClientOutgoingPacket
 	
 	private void writeScopeData(PacketWriter packet, RankingScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
 	{
-		
 		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
-		
 		final List<Entry<Integer, StatSet>> limited;
 		switch (scope)
 		{
@@ -146,9 +144,7 @@ public class ExPvpRankingList implements IClientOutgoingPacket
 				limited = Collections.emptyList();
 			}
 		}
-		
 		packet.writeD(limited.size());
-		
 		int rank = 1;
 		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 		{

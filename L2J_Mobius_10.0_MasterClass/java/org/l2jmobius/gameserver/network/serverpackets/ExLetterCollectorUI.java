@@ -36,7 +36,7 @@ public class ExLetterCollectorUI implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_LETTER_COLLECTOR_UI_LAUNCHER.writeId(packet);
-		packet.writeC(0x01); // enabled (0x00 - no, 0x01 -yes)
+		packet.writeC(1); // enabled (0x00 - no, 0x01 -yes)
 		packet.writeD(LETTER_COLLECTOR_MIN_LEVEL); // Minimum Level
 		return true;
 	}

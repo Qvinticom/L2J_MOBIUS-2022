@@ -39,7 +39,6 @@ public class ExTeleportToLocationActivate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TELEPORT_TO_LOCATION_ACTIVATE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_loc.getX());
 		packet.writeD(_loc.getY());

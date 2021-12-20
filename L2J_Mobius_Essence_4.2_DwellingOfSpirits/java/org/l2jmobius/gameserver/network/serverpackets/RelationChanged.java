@@ -88,7 +88,6 @@ public class RelationChanged implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		final Relation r = new Relation();
 		r._objId = activeChar.getObjectId();
 		r._relation = relation;
@@ -102,7 +101,6 @@ public class RelationChanged implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RELATION_CHANGED.writeId(packet);
-		
 		packet.writeC(_mask);
 		if (_multi == null)
 		{
@@ -122,7 +120,6 @@ public class RelationChanged implements IClientOutgoingPacket
 	private void writeRelation(PacketWriter packet, Relation relation)
 	{
 		packet.writeD(relation._objId);
-		
 		if ((_mask & SEND_DEFAULT) != SEND_DEFAULT)
 		{
 			packet.writeQ(relation._relation);

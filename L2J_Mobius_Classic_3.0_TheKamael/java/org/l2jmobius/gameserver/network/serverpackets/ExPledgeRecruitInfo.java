@@ -40,7 +40,6 @@ public class ExPledgeRecruitInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_RECRUIT_INFO.writeId(packet);
-		
 		final Collection<SubPledge> subPledges = _clan.getAllSubPledges();
 		packet.writeS(_clan.getName());
 		packet.writeS(_clan.getLeaderName());

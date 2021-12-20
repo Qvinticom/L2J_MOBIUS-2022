@@ -21,7 +21,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.loginserver.network.OutgoingPackets;
 
 /**
- * Fromat: d d: response
+ * Format: d d: response
  */
 public class GGAuth implements IOutgoingPacket
 {

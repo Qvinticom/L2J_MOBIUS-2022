@@ -33,11 +33,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExRankingCharRankers implements IClientOutgoingPacket
 {
 	private final Player _player;
-	
 	private final int _race;
 	private final int _group;
 	private final int _scope;
-	
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
@@ -55,11 +53,9 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RANKING_CHAR_RANKERS.writeId(packet);
-		
 		packet.writeC(_group);
 		packet.writeC(_scope);
 		packet.writeD(_race);
-		
 		if (!_playerList.isEmpty())
 		{
 			switch (_group)
@@ -70,7 +66,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					{
 						final int count = _playerList.size() > 150 ? 150 : _playerList.size();
 						packet.writeD(count);
-						
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet player = _playerList.get(id);
@@ -127,7 +122,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									packet.writeD(plr.getInt("classId"));
 									packet.writeD(plr.getInt("race"));
 									packet.writeD(id2); // server rank
-									
 									if (!_snapshotList.isEmpty())
 									{
 										for (Integer id3 : _snapshotList.keySet())
@@ -164,7 +158,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							}
 						}
 						packet.writeD(count > 100 ? 100 : count);
-						
 						int i = 1;
 						for (Integer id : _playerList.keySet())
 						{
@@ -212,7 +205,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					else
 					{
 						boolean found = false;
-						
 						final Map<Integer, StatSet> raceList = new ConcurrentHashMap<>();
 						int i = 1;
 						for (Integer id : _playerList.keySet())
@@ -224,7 +216,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								i++;
 							}
 						}
-						
 						for (Integer id : raceList.keySet())
 						{
 							final StatSet player = raceList.get(id);
@@ -277,9 +268,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								i++;
 							}
 						}
-						
 						packet.writeD(clanList.size());
-						
 						for (Integer id : clanList.keySet())
 						{
 							final StatSet player = clanList.get(id);
@@ -333,9 +322,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							}
 						}
 						friendList.add(_player.getObjectId());
-						
 						packet.writeD(count);
-						
 						for (int id : _playerList.keySet())
 						{
 							final StatSet player = _playerList.get(id);
@@ -370,7 +357,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					else
 					{
 						packet.writeD(1);
-						
 						packet.writeString(_player.getName());
 						if (_player.getClan() != null)
 						{

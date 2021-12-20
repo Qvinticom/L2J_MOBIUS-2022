@@ -45,7 +45,6 @@ public class ExBRProductInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_PRODUCT_INFO.writeId(packet);
-		
 		packet.writeD(_item.getBrId());
 		packet.writeD(_item.getPrice());
 		packet.writeD(_item.getItems().size());

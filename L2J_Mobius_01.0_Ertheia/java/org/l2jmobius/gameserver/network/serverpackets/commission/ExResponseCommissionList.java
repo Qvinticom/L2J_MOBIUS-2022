@@ -64,7 +64,6 @@ public class ExResponseCommissionList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_LIST.writeId(packet);
-		
 		packet.writeD(_replyType.getClientId());
 		switch (_replyType)
 		{
@@ -73,13 +72,11 @@ public class ExResponseCommissionList extends AbstractItemPacket
 			{
 				packet.writeD((int) Instant.now().getEpochSecond());
 				packet.writeD(_chunkId);
-				
 				int chunkSize = _items.size() - _listIndexStart;
 				if (chunkSize > MAX_CHUNK_SIZE)
 				{
 					chunkSize = MAX_CHUNK_SIZE;
 				}
-				
 				packet.writeD(chunkSize);
 				for (int i = _listIndexStart; i < (_listIndexStart + chunkSize); i++)
 				{

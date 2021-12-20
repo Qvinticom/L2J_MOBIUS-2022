@@ -38,11 +38,11 @@ public class ExCraftRandomMake implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CRAFT_RANDOM_MAKE.writeId(packet);
-		packet.writeC(0x00); // Close window
+		packet.writeC(0); // Close window
 		packet.writeH(0x0F); // Unknown
 		packet.writeD(_itemId);
 		packet.writeQ(_itemCount);
-		packet.writeC(0x00); // Enchantment level
+		packet.writeC(0); // Enchantment level
 		return true;
 	}
 }

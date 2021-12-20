@@ -48,7 +48,6 @@ public class ExShowTerritory implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_TERRITORY.writeId(packet);
-		
 		packet.writeD(_vertices.size());
 		packet.writeD(_minZ);
 		packet.writeD(_maxZ);

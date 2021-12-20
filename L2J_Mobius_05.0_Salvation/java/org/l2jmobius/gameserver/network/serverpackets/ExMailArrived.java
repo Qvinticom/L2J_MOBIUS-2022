@@ -35,7 +35,6 @@ public class ExMailArrived implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MAIL_ARRIVED.writeId(packet);
-		
 		return true;
 	}
 }

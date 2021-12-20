@@ -43,7 +43,6 @@ public class ExBrLoadEventTopRankers implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_LOAD_EVENT_TOP_RANKERS.writeId(packet);
-		
 		packet.writeD(_eventId);
 		packet.writeD(_day);
 		packet.writeD(_count);

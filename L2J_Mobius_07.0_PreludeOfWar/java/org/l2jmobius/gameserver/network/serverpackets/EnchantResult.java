@@ -59,25 +59,20 @@ public class EnchantResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ENCHANT_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		packet.writeD(_crystal);
 		packet.writeQ(_count);
-		
 		// Guessing.
 		// With 166 options became 3x write integers instead of shorts and enchant level moved bellow.
-		
 		// Commenting until actually knowing.
 		// for (int option : _enchantOptions)
 		// {
 		// packet.writeD(option);
 		// }
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
 		packet.writeD(_enchantLevel); // Confirmed.
-		
 		return true;
 	}
 }

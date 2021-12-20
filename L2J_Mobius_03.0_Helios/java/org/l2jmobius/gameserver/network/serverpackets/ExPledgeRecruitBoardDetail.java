@@ -36,7 +36,6 @@ public class ExPledgeRecruitBoardDetail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_RECRUIT_BOARD_DETAIL.writeId(packet);
-		
 		packet.writeD(_pledgeRecruitInfo.getClanId());
 		packet.writeD(_pledgeRecruitInfo.getKarma());
 		packet.writeS(_pledgeRecruitInfo.getInformation());

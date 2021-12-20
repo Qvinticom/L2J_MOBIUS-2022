@@ -41,7 +41,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	{
 		_clan = clan;
 		_pledge = pledge;
-		_pledgeId = _pledge == null ? 0x00 : _pledge.getId();
+		_pledgeId = _pledge == null ? 0 : _pledge.getId();
 		_leaderName = pledge == null ? clan.getLeaderName() : CharNameTable.getInstance().getNameById(pledge.getLeaderId());
 		_name = pledge == null ? clan.getName() : pledge.getName();
 		_members = _clan.getMembers();
@@ -65,31 +65,28 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
-		
-		packet.writeD(_isSubPledge ? 0x00 : 0x01);
+		packet.writeD(_isSubPledge ? 0 : 1);
 		packet.writeD(_clan.getId());
 		packet.writeD(Config.SERVER_ID);
 		packet.writeD(_pledgeId);
 		packet.writeS(_name);
 		packet.writeS(_leaderName);
-		
 		packet.writeD(_clan.getCrestId()); // crest id .. is used again
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_clan.getHideoutId());
 		packet.writeD(_clan.getFortId());
 		packet.writeD(_clan.getRank());
 		packet.writeD(_clan.getReputationScore());
-		packet.writeD(0x00); // 0
-		packet.writeD(0x00); // 0
+		packet.writeD(0); // 0
+		packet.writeD(0); // 0
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.isAtWar() ? 1 : 0); // new c3
-		packet.writeD(0x00); // Territory castle ID
+		packet.writeD(0); // Territory castle ID
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeId));
-		
 		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() != _pledgeId)
@@ -107,8 +104,8 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeD(0x01); // no visible effect
-				packet.writeD(0x01); // packet.writeD(1);
+				packet.writeD(1); // no visible effect
+				packet.writeD(1); // packet.writeD(1);
 			}
 			packet.writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
 			packet.writeD(m.getSponsor() != 0 ? 1 : 0);

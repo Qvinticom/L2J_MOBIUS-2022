@@ -29,7 +29,7 @@ public class ExShowUpgradeSystem extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_UPGRADE_SYSTEM.writeId(packet);
-		packet.writeH(0x01);
+		packet.writeH(1);
 		return true;
 	}
 }

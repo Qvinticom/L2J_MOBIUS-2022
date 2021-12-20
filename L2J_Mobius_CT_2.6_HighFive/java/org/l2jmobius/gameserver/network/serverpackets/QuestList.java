@@ -68,7 +68,6 @@ public class QuestList implements IClientOutgoingPacket
 		 * the 10th but the 6th and 9th are not to be shown at all (not completed, either).
 		 * </pre>
 		 */
-		
 		final List<Quest> quests = _player.getAllActiveQuests();
 		OutgoingPackets.QUEST_LIST.writeId(packet);
 		packet.writeH(quests.size());
@@ -81,7 +80,6 @@ public class QuestList implements IClientOutgoingPacket
 				packet.writeD(0);
 				continue;
 			}
-			
 			final int states = qs.getInt("__compltdStateFlags");
 			if (states > 0)
 			{

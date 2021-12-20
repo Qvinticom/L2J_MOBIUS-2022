@@ -36,10 +36,8 @@ public class ExResponseResetList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_RESET_LIST.writeId(packet);
-		
 		packet.writeQ(_player.getAdena());
 		packet.writeQ(_player.getBeautyTickets());
-		
 		packet.writeD(_player.getAppearance().getHairStyle());
 		packet.writeD(_player.getAppearance().getHairColor());
 		packet.writeD(_player.getAppearance().getFace());

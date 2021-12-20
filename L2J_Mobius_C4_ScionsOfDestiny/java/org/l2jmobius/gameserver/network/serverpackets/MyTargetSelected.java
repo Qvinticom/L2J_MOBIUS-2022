@@ -47,7 +47,6 @@ public class MyTargetSelected implements IClientOutgoingPacket
 {
 	/** The _object id. */
 	private final int _objectId;
-	
 	/** The _color. */
 	private final int _color;
 	

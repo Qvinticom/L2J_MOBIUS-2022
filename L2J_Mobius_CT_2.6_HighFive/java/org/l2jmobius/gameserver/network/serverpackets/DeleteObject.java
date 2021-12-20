@@ -39,7 +39,7 @@ public class DeleteObject implements IClientOutgoingPacket
 	{
 		OutgoingPackets.DELETE_OBJECT.writeId(packet);
 		packet.writeD(_objectId);
-		packet.writeD(0x00); // c2
+		packet.writeD(0); // c2
 		return true;
 	}
 }

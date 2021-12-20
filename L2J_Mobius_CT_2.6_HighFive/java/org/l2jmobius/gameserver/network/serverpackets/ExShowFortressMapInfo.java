@@ -41,11 +41,9 @@ public class ExShowFortressMapInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_FORTRESS_MAP_INFO.writeId(packet);
-		
 		packet.writeD(_fortress.getResidenceId());
 		packet.writeD(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
 		packet.writeD(_fortress.getFortSize()); // barracks count
-		
 		final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
 		if ((commanders != null) && !commanders.isEmpty() && _fortress.getSiege().isInProgress())
 		{

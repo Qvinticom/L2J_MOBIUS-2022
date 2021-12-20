@@ -34,7 +34,6 @@ public class ExDissmissMPCCRoom implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DISSMISS_MPCC_ROOM.writeId(packet);
-		
 		return true;
 	}
 }

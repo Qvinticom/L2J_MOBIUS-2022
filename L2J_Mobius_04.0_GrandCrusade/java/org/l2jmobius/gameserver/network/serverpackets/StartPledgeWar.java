@@ -34,7 +34,6 @@ public class StartPledgeWar implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.START_PLEDGE_WAR.writeId(packet);
-		
 		packet.writeS(_playerName);
 		packet.writeS(_pledgeName);
 		return true;

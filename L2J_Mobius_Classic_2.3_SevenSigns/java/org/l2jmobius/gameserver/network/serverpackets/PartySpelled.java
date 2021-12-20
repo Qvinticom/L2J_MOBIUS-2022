@@ -50,7 +50,6 @@ public class PartySpelled implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SPELLED.writeId(packet);
-		
 		packet.writeD(_creature.isServitor() ? 2 : _creature.isPet() ? 1 : 0);
 		packet.writeD(_creature.getObjectId());
 		packet.writeD(_effects.size() + _effects2.size());

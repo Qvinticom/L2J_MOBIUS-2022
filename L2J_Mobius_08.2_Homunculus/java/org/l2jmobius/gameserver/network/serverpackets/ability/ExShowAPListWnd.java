@@ -35,7 +35,6 @@ public class ExShowAPListWnd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_AP_LIST_WND.writeId(packet);
-		
 		return true;
 	}
 }

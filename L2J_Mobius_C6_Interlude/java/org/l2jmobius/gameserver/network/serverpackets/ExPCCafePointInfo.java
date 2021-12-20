@@ -58,7 +58,6 @@ public class ExPCCafePointInfo implements IClientOutgoingPacket
 			_periodType = 2;
 			_pointType = 2;
 		}
-		
 		_remainTime = hour;
 	}
 	

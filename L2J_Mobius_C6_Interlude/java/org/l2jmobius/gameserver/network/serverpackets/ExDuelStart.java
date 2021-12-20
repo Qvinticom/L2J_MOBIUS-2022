@@ -41,7 +41,6 @@ public class ExDuelStart implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DUEL_START.writeId(packet);
-		
 		packet.writeD(_unk1);
 		return true;
 	}

@@ -54,7 +54,6 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_STORAGE_MAX_COUNT.writeId(packet);
-		
 		packet.writeD(_inventory);
 		packet.writeD(_warehouse);
 		packet.writeD(_clan);

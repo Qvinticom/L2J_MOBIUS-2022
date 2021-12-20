@@ -26,7 +26,6 @@ public class ExVariationCancelResult implements IClientOutgoingPacket
 {
 	/** The _close window. */
 	private final int _closeWindow;
-	
 	/** The _unk1. */
 	private final int _unk1;
 	

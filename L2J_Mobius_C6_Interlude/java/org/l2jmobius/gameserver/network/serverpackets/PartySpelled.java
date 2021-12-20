@@ -60,7 +60,6 @@ public class PartySpelled implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.PARTY_SPELLED.writeId(packet);
 		packet.writeD(_creature instanceof Servitor ? 2 : _creature instanceof Pet ? 1 : 0);
 		packet.writeD(_creature.getObjectId());

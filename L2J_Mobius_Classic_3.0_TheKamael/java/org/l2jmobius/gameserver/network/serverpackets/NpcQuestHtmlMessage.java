@@ -38,7 +38,6 @@ public class NpcQuestHtmlMessage extends AbstractHtmlPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_NPC_QUEST_HTML_MESSAGE.writeId(packet);
-		
 		packet.writeD(getNpcObjId());
 		packet.writeS(getHtml());
 		packet.writeD(_questId);

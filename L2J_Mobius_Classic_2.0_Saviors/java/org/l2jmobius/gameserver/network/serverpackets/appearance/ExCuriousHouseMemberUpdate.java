@@ -45,7 +45,6 @@ public class ExCuriousHouseMemberUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CURIOUS_HOUSE_MEMBER_UPDATE.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeD(_maxHp);
 		packet.writeD(_maxCp);

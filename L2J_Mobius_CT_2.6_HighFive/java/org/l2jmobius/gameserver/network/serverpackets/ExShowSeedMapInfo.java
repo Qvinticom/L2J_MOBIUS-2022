@@ -40,7 +40,6 @@ public class ExShowSeedMapInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SEED_MAP_INFO.writeId(packet);
-		
 		packet.writeD(ENTRANCES.length);
 		for (Location loc : ENTRANCES)
 		{

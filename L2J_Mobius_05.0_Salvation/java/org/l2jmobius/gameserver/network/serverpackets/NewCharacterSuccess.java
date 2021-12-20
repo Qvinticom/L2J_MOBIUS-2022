@@ -36,7 +36,6 @@ public class NewCharacterSuccess implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.NEW_CHARACTER_SUCCESS.writeId(packet);
-		
 		packet.writeD(_chars.size());
 		for (PlayerTemplate chr : _chars)
 		{
@@ -44,31 +43,24 @@ public class NewCharacterSuccess implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			// TODO: Unhardcode these
 			packet.writeD(chr.getRace().ordinal());
 			packet.writeD(chr.getClassId().getId());
-			
 			packet.writeD(99);
 			packet.writeD(chr.getBaseSTR());
 			packet.writeD(1);
-			
 			packet.writeD(99);
 			packet.writeD(chr.getBaseDEX());
 			packet.writeD(1);
-			
 			packet.writeD(99);
 			packet.writeD(chr.getBaseCON());
 			packet.writeD(1);
-			
 			packet.writeD(99);
 			packet.writeD(chr.getBaseINT());
 			packet.writeD(1);
-			
 			packet.writeD(99);
 			packet.writeD(chr.getBaseWIT());
 			packet.writeD(1);
-			
 			packet.writeD(99);
 			packet.writeD(chr.getBaseMEN());
 			packet.writeD(1);

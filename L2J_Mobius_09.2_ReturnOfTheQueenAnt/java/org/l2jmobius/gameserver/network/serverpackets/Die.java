@@ -57,7 +57,6 @@ public class Die implements IClientOutgoingPacket
 				siegeClan = fort.getSiege().getAttackerClan(clan);
 				isInFortDefense = (siegeClan == null) && fort.getSiege().checkIsDefender(clan);
 			}
-			
 			// ClanHall check.
 			if ((clan != null) && (clan.getHideoutId() > 0))
 			{
@@ -92,12 +91,12 @@ public class Die implements IClientOutgoingPacket
 		OutgoingPackets.DIE.writeId(packet);
 		packet.writeD(_objectId);
 		packet.writeQ(_flags);
-		packet.writeD(_isSweepable ? 0x01 : 0x00);
-		packet.writeD(0x00); // Feather item time.
-		packet.writeC(0x00); // Hide die animation.
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
+		packet.writeD(_isSweepable ? 1 : 0);
+		packet.writeD(0); // Feather item time.
+		packet.writeC(0); // Hide die animation.
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeD(0);
 		return true;
 	}
 }

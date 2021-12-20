@@ -43,7 +43,6 @@ public class ExShuttleInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHUTTLE_INFO.writeId(packet);
-		
 		packet.writeD(_shuttle.getObjectId());
 		packet.writeD(_shuttle.getX());
 		packet.writeD(_shuttle.getY());
@@ -60,8 +59,8 @@ public class ExShuttleInfo implements IClientOutgoingPacket
 				packet.writeD(loc.getY());
 				packet.writeD(loc.getZ());
 			}
-			packet.writeD(stop.isDoorOpen() ? 0x01 : 0x00);
-			packet.writeD(stop.hasDoorChanged() ? 0x01 : 0x00);
+			packet.writeD(stop.isDoorOpen() ? 1 : 0);
+			packet.writeD(stop.hasDoorChanged() ? 1 : 0);
 		}
 		return true;
 	}

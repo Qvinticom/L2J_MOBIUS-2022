@@ -52,10 +52,8 @@ public class ExShowProcureCropDetail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_PROCURE_CROP_DETAIL.writeId(packet);
-		
 		packet.writeD(_cropId); // crop id
 		packet.writeD(_castleCrops.size()); // size
-		
 		for (Entry<Integer, CropProcure> entry : _castleCrops.entrySet())
 		{
 			final CropProcure crop = entry.getValue();

@@ -34,10 +34,9 @@ public class ExPutItemResultForVariationMake implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_MAKE.writeId(packet);
-		
 		packet.writeD(_itemObjId);
 		packet.writeD(_itemId);
-		packet.writeD(0x01);
+		packet.writeD(1);
 		return true;
 	}
 }

@@ -43,11 +43,9 @@ public class ExEnchantHomunculusSkillResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_HOMUNCULUS_SKILL_RESULT.writeId(packet);
-		
 		final int playerNumber = Rnd.get(1, 6);
 		final int homunculusNumber = Rnd.get(1, 6);
 		final int systemNumber = Rnd.get(1, 6);
-		
 		final Homunculus homunculus = _player.getHomunculusList().get(_slot);
 		int boundLevel = 1;
 		if ((playerNumber == homunculusNumber) && (playerNumber == systemNumber))
@@ -58,7 +56,6 @@ public class ExEnchantHomunculusSkillResult implements IClientOutgoingPacket
 		{
 			boundLevel = 2;
 		}
-		
 		switch (_skillNumber)
 		{
 			case 1:
@@ -89,7 +86,6 @@ public class ExEnchantHomunculusSkillResult implements IClientOutgoingPacket
 		}
 		_player.getHomunculusList().update(homunculus);
 		_player.getHomunculusList().refreshStats(true);
-		
 		packet.writeD(boundLevel); // skill bound level result
 		packet.writeD(homunculus.getId()); // homunculus id? random value on JP
 		packet.writeD(_slot); // slot
@@ -97,7 +93,6 @@ public class ExEnchantHomunculusSkillResult implements IClientOutgoingPacket
 		packet.writeD(playerNumber); // player number
 		packet.writeD(homunculusNumber); // homunculus number
 		packet.writeD(systemNumber); // system number
-		
 		return true;
 	}
 }

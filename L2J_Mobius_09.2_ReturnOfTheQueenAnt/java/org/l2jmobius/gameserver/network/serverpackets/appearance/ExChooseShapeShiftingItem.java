@@ -43,7 +43,6 @@ public class ExChooseShapeShiftingItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CHOOSE_SHAPE_SHIFTING_ITEM.writeId(packet);
-		
 		packet.writeD(_targetType != null ? _targetType.ordinal() : 0);
 		packet.writeD(_type != null ? _type.ordinal() : 0);
 		packet.writeD(_itemId);

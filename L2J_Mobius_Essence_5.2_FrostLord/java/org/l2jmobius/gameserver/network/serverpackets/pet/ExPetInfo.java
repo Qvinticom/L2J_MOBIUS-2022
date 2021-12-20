@@ -44,10 +44,8 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		(byte) 0x00,
 		(byte) 0x00
 	};
-	
 	private int _initSize = 0;
 	private int _blockSize = 0;
-	
 	private int _clanCrest = 0;
 	private int _clanLargeCrest = 0;
 	private int _allyCrest = 0;
@@ -69,88 +67,71 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			_masks[2] |= 0x10;
 			addComponentType(NpcInfoType.NAME);
 		}
-		
 		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.RELATIONS, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING, NpcInfoType.PVP_FLAG);
 		if (summon.getHeading() > 0)
 		{
 			addComponentType(NpcInfoType.HEADING);
 		}
-		
 		if ((summon.getStat().getPAtkSpd() > 0) || (summon.getStat().getMAtkSpd() > 0))
 		{
 			addComponentType(NpcInfoType.ATK_CAST_SPEED);
 		}
-		
 		if (summon.getRunSpeed() > 0)
 		{
 			addComponentType(NpcInfoType.SPEED_MULTIPLIER);
 		}
-		
 		if ((summon.getWeapon() > 0) || (summon.getArmor() > 0))
 		{
 			addComponentType(NpcInfoType.EQUIPPED);
 		}
-		
 		if (summon.getTeam() != Team.NONE)
 		{
 			addComponentType(NpcInfoType.TEAM);
 		}
-		
 		if (summon.isInsideZone(ZoneId.WATER) || summon.isFlying())
 		{
 			addComponentType(NpcInfoType.SWIM_OR_FLY);
 		}
-		
 		if (summon.isFlying())
 		{
 			addComponentType(NpcInfoType.FLYING);
 		}
-		
 		if (summon.getMaxHp() > 0)
 		{
 			addComponentType(NpcInfoType.MAX_HP);
 		}
-		
 		if (summon.getMaxMp() > 0)
 		{
 			addComponentType(NpcInfoType.MAX_MP);
 		}
-		
 		if (summon.getCurrentHp() <= summon.getMaxHp())
 		{
 			addComponentType(NpcInfoType.CURRENT_HP);
 		}
-		
 		if (summon.getCurrentMp() <= summon.getMaxMp())
 		{
 			addComponentType(NpcInfoType.CURRENT_MP);
 		}
-		
 		if (!_abnormalVisualEffects.isEmpty())
 		{
 			addComponentType(NpcInfoType.ABNORMALS);
 		}
-		
 		if (summon.getTemplate().getWeaponEnchant() > 0)
 		{
 			addComponentType(NpcInfoType.ENCHANT);
 		}
-		
 		if (summon.getTransformationDisplayId() > 0)
 		{
 			addComponentType(NpcInfoType.TRANSFORMATION);
 		}
-		
 		if (summon.isShowSummonAnimation())
 		{
 			addComponentType(NpcInfoType.SUMMONED);
 		}
-		
 		if (summon.getReputation() != 0)
 		{
 			addComponentType(NpcInfoType.REPUTATION);
 		}
-		
 		if (summon.getOwner().getClan() != null)
 		{
 			_clanId = summon.getOwner().getAppearance().getVisibleClanId();
@@ -160,9 +141,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			_allyId = summon.getOwner().getAppearance().getVisibleAllyCrestId();
 			addComponentType(NpcInfoType.CLAN);
 		}
-		
 		addComponentType(NpcInfoType.COLOR_EFFECT);
-		
 		// TODO: Confirm me
 		if (summon.isInCombat())
 		{
@@ -176,9 +155,8 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			_statusMask |= 0x04;
 		}
-		
 		_statusMask |= 0x08;
-		if (_statusMask != 0)
+		if (_statusMask != 0x00)
 		{
 			addComponentType(NpcInfoType.VISUAL_STATE);
 		}
@@ -228,28 +206,24 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PET_INFO.writeId(packet);
-		
 		packet.writeD(_summon.getObjectId());
 		packet.writeC(_value); // 0=teleported 1=default 2=summoned
 		packet.writeH(37); // mask_bits_37
 		packet.writeB(_masks);
-		
 		// Block 1
 		packet.writeC(_initSize);
-		
 		if (containsMask(NpcInfoType.ATTACKABLE))
 		{
-			packet.writeC(_summon.isAutoAttackable(_attacker) ? 0x01 : 0x00);
+			packet.writeC(_summon.isAutoAttackable(_attacker) ? 1 : 0);
 		}
 		if (containsMask(NpcInfoType.RELATIONS))
 		{
-			packet.writeQ(0x00);
+			packet.writeQ(0);
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{
 			packet.writeS(_title);
 		}
-		
 		// Block 2
 		packet.writeH(_blockSize);
 		if (containsMask(NpcInfoType.ID))
@@ -268,7 +242,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.UNKNOWN2))
 		{
-			packet.writeD(0x00); // Unknown
+			packet.writeD(0); // Unknown
 		}
 		if (containsMask(NpcInfoType.ATK_CAST_SPEED))
 		{
@@ -284,19 +258,19 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeD(_summon.getWeapon());
 			packet.writeD(_summon.getArmor()); // Armor id?
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		if (containsMask(NpcInfoType.ALIVE))
 		{
-			packet.writeC(_summon.isDead() ? 0x00 : 0x01);
+			packet.writeC(_summon.isDead() ? 0 : 1);
 		}
 		if (containsMask(NpcInfoType.RUNNING))
 		{
-			packet.writeC(_summon.isRunning() ? 0x01 : 0x00);
+			packet.writeC(_summon.isRunning() ? 1 : 0);
 		}
 		if (containsMask(NpcInfoType.SWIM_OR_FLY))
 		{
-			packet.writeC(_summon.isInsideZone(ZoneId.WATER) ? 0x01 : _summon.isFlying() ? 0x02 : 0x00);
+			packet.writeC(_summon.isInsideZone(ZoneId.WATER) ? 1 : _summon.isFlying() ? 2 : 0);
 		}
 		if (containsMask(NpcInfoType.TEAM))
 		{
@@ -308,20 +282,20 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.FLYING))
 		{
-			packet.writeD(_summon.isFlying() ? 0x01 : 00);
+			packet.writeD(_summon.isFlying() ? 1 : 0);
 		}
 		if (containsMask(NpcInfoType.CLONE))
 		{
-			packet.writeD(0x00); // Player ObjectId with Decoy
+			packet.writeD(0); // Player ObjectId with Decoy
 		}
 		if (containsMask(NpcInfoType.COLOR_EFFECT))
 		{
 			// No visual effect
-			packet.writeD(0x00); // Unknown
+			packet.writeD(0); // Unknown
 		}
 		if (containsMask(NpcInfoType.DISPLAY_EFFECT))
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		if (containsMask(NpcInfoType.TRANSFORMATION))
 		{
@@ -345,12 +319,12 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.SUMMONED))
 		{
-			packet.writeC(_summon.isShowSummonAnimation() ? 0x02 : 0x00); // 2 - do some animation on spawn
+			packet.writeC(_summon.isShowSummonAnimation() ? 2 : 0); // 2 - do some animation on spawn
 		}
 		if (containsMask(NpcInfoType.UNKNOWN12))
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		if (containsMask(NpcInfoType.NAME))
 		{
@@ -380,12 +354,10 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			packet.writeD(_allyId);
 			packet.writeD(_allyCrest);
 		}
-		
 		if (containsMask(NpcInfoType.VISUAL_STATE))
 		{
 			packet.writeC(_statusMask);
 		}
-		
 		if (containsMask(NpcInfoType.ABNORMALS))
 		{
 			packet.writeH(_abnormalVisualEffects.size());

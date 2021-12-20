@@ -36,7 +36,6 @@ public class ExAdenaInvenCount implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ADENA_INVEN_COUNT.writeId(packet);
-		
 		packet.writeQ(_player.getAdena());
 		packet.writeH(_player.getInventory().getSize());
 		return true;

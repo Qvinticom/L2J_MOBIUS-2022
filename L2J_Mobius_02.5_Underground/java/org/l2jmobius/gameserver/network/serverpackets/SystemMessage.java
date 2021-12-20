@@ -160,7 +160,6 @@ public class SystemMessage implements IClientOutgoingPacket
 				PacketLogger.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
 			}
 		}
-		
 		_params[_paramIndex++] = param;
 	}
 	
@@ -266,7 +265,6 @@ public class SystemMessage implements IClientOutgoingPacket
 		{
 			return addString(item.getName());
 		}
-		
 		append(new SMParam(TYPE_ITEM_NAME, id));
 		return this;
 	}
@@ -382,7 +380,6 @@ public class SystemMessage implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SYSTEM_MESSAGE.writeId(packet);
-		
 		// Localisation related.
 		if (_lang != null)
 		{
@@ -395,13 +392,12 @@ public class SystemMessage implements IClientOutgoingPacket
 					params[i] = _params[i].getValue();
 				}
 				packet.writeH(SystemMessageId.S1_2.getId());
-				packet.writeC(0x01);
+				packet.writeC(1);
 				packet.writeC(TYPE_TEXT);
 				packet.writeS(sml.getLocalisation(params));
 				return true;
 			}
 		}
-		
 		packet.writeH(getId());
 		packet.writeC(_params.length);
 		for (SMParam param : _params)
@@ -411,9 +407,7 @@ public class SystemMessage implements IClientOutgoingPacket
 				PacketLogger.warning("Found null parameter for SystemMessageId " + _smId);
 				continue;
 			}
-			
 			packet.writeC(param.getType());
-			
 			switch (param.getType())
 			{
 				case TYPE_ELEMENT_NAME:

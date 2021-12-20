@@ -41,7 +41,7 @@ public class ExActivateAutoShortcut implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ACTIVATE_AUTO_SHORTCUT.writeId(packet);
 		packet.writeH(_position);
-		packet.writeC(_active ? 0x01 : 0x00);
+		packet.writeC(_active ? 1 : 0);
 		return true;
 	}
 }

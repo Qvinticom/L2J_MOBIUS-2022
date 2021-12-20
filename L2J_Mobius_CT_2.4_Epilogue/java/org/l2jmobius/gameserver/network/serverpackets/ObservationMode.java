@@ -36,9 +36,9 @@ public class ObservationMode implements IClientOutgoingPacket
 		packet.writeD(_loc.getX());
 		packet.writeD(_loc.getY());
 		packet.writeD(_loc.getZ());
-		packet.writeC(0x00); // ?
+		packet.writeC(0); // ?
 		packet.writeC(0xc0); // ?
-		packet.writeC(0x00); // ?
+		packet.writeC(0); // ?
 		return true;
 	}
 }

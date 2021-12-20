@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExEnchantFail implements IClientOutgoingPacket
 {
 	public static final ExEnchantFail STATIC_PACKET = new ExEnchantFail(0, 0);
+	
 	private final int _itemOne;
 	private final int _itemTwo;
 	
@@ -39,7 +40,6 @@ public class ExEnchantFail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_FAIL.writeId(packet);
-		
 		packet.writeD(_itemOne);
 		packet.writeD(_itemTwo);
 		return true;

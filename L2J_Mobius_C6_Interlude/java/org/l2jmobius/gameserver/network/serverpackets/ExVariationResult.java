@@ -26,10 +26,8 @@ public class ExVariationResult implements IClientOutgoingPacket
 {
 	/** The _stat12. */
 	private final int _stat12;
-	
 	/** The _stat34. */
 	private final int _stat34;
-	
 	/** The _unk3. */
 	private final int _unk3;
 	

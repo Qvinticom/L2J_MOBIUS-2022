@@ -34,7 +34,6 @@ public class ExBirthdayPopup implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_NOTIFY_BIRTH_DAY.writeId(packet);
-		
 		return true;
 	}
 }

@@ -35,7 +35,6 @@ public class AutoAttackStart implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.AUTO_ATTACK_START.writeId(packet);
-		
 		packet.writeD(_targetObjId);
 		return true;
 	}

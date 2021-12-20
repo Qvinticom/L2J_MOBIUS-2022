@@ -40,7 +40,6 @@ public class ValidateLocationInVehicle implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VALIDATE_LOCATION_IN_VEHICLE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_boatObjId);
 		packet.writeD(_pos.getX());

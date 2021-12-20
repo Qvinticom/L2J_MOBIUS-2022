@@ -43,7 +43,6 @@ public class ExPrivateStoreSetWholeMsg implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PRIVATE_STORE_WHOLE_MSG.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeS(_msg);
 		return true;

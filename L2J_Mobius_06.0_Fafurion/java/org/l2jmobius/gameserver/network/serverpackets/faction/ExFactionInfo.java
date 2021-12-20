@@ -40,11 +40,9 @@ public class ExFactionInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FACTION_INFO.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeC(_openDialog ? 1 : 0);
 		packet.writeD(Faction.values().length);
-		
 		for (Faction faction : Faction.values())
 		{
 			packet.writeC(faction.getId());

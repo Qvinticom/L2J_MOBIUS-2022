@@ -56,11 +56,10 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 		OutgoingPackets.EX_REPLY_RECEIVED_POST.writeId(packet);
 		packet.writeD(_msg.getId());
 		packet.writeD(_msg.isLocked() ? 1 : 0);
-		packet.writeD(0x00); // Unknown
+		packet.writeD(0); // Unknown
 		packet.writeS(_msg.getSenderName());
 		packet.writeS(_msg.getSubject());
 		packet.writeS(_msg.getContent());
-		
 		if ((_items != null) && !_items.isEmpty())
 		{
 			packet.writeD(_items.size());
@@ -72,9 +71,8 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
-		
 		packet.writeQ(_msg.getReqAdena());
 		packet.writeD(_msg.hasAttachments() ? 1 : 0);
 		packet.writeD(_msg.getSendBySystem());

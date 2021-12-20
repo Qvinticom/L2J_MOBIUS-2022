@@ -30,7 +30,6 @@ public class ExCubeGameTeamList implements IClientOutgoingPacket
 	// Players Lists
 	private final List<Player> _bluePlayers;
 	private final List<Player> _redPlayers;
-	
 	// Common Values
 	private final int _roomNumber;
 	
@@ -51,12 +50,9 @@ public class ExCubeGameTeamList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
-		
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
 		packet.writeD(_roomNumber);
 		packet.writeD(0xffffffff);
-		
 		packet.writeD(_bluePlayers.size());
 		for (Player player : _bluePlayers)
 		{

@@ -60,13 +60,11 @@ public class ExPetRankingList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PET_RANKING_LIST.writeId(packet);
-		
 		packet.writeC(_season);
 		packet.writeC(_tabId);
 		packet.writeC(_type);
 		packet.writeD(_race);
 		packet.writeC(0);
-		
 		if (!_playerList.isEmpty() && (_type != 255) && (_race != 255))
 		{
 			final RankingCategory category = RankingCategory.values()[_season];
@@ -76,7 +74,6 @@ public class ExPetRankingList implements IClientOutgoingPacket
 		{
 			packet.writeD(0);
 		}
-		
 		return true;
 	}
 	
@@ -111,7 +108,6 @@ public class ExPetRankingList implements IClientOutgoingPacket
 	{
 		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
-		
 		final List<Entry<Integer, StatSet>> limited;
 		switch (scope)
 		{
@@ -140,9 +136,7 @@ public class ExPetRankingList implements IClientOutgoingPacket
 				limited = Collections.emptyList();
 			}
 		}
-		
 		packet.writeD(limited.size());
-		
 		int rank = 1;
 		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 		{

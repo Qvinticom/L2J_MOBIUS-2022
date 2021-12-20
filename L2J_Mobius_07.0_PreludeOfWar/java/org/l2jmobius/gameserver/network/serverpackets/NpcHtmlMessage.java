@@ -54,24 +54,20 @@ public class NpcHtmlMessage extends AbstractHtmlPacket
 	public NpcHtmlMessage(int npcObjId, int itemId)
 	{
 		super(npcObjId);
-		
 		if (itemId < 0)
 		{
 			throw new IllegalArgumentException();
 		}
-		
 		_itemId = itemId;
 	}
 	
 	public NpcHtmlMessage(int npcObjId, int itemId, String html)
 	{
 		super(npcObjId, html);
-		
 		if (itemId < 0)
 		{
 			throw new IllegalArgumentException();
 		}
-		
 		_itemId = itemId;
 	}
 	
@@ -79,11 +75,10 @@ public class NpcHtmlMessage extends AbstractHtmlPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.NPC_HTML_MESSAGE.writeId(packet);
-		
 		packet.writeD(getNpcObjId());
 		packet.writeS(getHtml());
 		packet.writeD(_itemId);
-		packet.writeD(0x00); // TODO: Find me!
+		packet.writeD(0); // TODO: Find me!
 		return true;
 	}
 	

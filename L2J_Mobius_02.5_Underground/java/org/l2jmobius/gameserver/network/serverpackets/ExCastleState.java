@@ -39,7 +39,6 @@ public class ExCastleState implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CASTLE_STATE.writeId(packet);
-		
 		packet.writeD(_castleId);
 		packet.writeD(_castleSide.ordinal());
 		return true;

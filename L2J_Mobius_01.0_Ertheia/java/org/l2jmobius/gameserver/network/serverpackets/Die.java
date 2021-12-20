@@ -68,7 +68,6 @@ public class Die implements IClientOutgoingPacket
 				siegeClan = fort.getSiege().getAttackerClan(clan);
 				isInFortDefense = (siegeClan == null) && fort.getSiege().checkIsDefender(clan);
 			}
-			
 			_toVillage = creature.canRevive() && !creature.isPendingRevive();
 			_toClanHall = (clan != null) && (clan.getHideoutId() > 0);
 			_toCastle = ((clan != null) && (clan.getCastleId() > 0)) || isInCastleDefense;
@@ -76,7 +75,6 @@ public class Die implements IClientOutgoingPacket
 			_useFeather = creature.getAccessLevel().allowFixedRes() || creature.getInventory().haveItemForSelfResurrection();
 			_toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
 		}
-		
 		_isSweepable = creature.isAttackable() && creature.isSweepActive();
 	}
 	
@@ -91,7 +89,6 @@ public class Die implements IClientOutgoingPacket
 		{
 			_items = new ArrayList<>(8);
 		}
-		
 		if (_items.size() < 8)
 		{
 			_items.add(itemId);
@@ -116,20 +113,18 @@ public class Die implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DIE.writeId(packet);
-		
 		packet.writeD(_objectId);
-		packet.writeD(_toVillage ? 0x01 : 0x00);
-		packet.writeD(_toClanHall ? 0x01 : 0x00);
-		packet.writeD(_toCastle ? 0x01 : 0x00);
-		packet.writeD(_toOutpost ? 0x01 : 0x00);
-		packet.writeD(_isSweepable ? 0x01 : 0x00);
-		packet.writeD(_useFeather ? 0x01 : 0x00);
-		packet.writeD(_toFortress ? 0x01 : 0x00);
-		packet.writeD(0x00); // Disables use Feather button for X seconds
-		packet.writeD(0x00); // Adventure's Song
-		packet.writeC(_hideAnimation ? 0x01 : 0x00);
-		
-		packet.writeD(_itemsEnabled ? 0x01 : 0x00);
+		packet.writeD(_toVillage ? 1 : 0);
+		packet.writeD(_toClanHall ? 1 : 0);
+		packet.writeD(_toCastle ? 1 : 0);
+		packet.writeD(_toOutpost ? 1 : 0);
+		packet.writeD(_isSweepable ? 1 : 0);
+		packet.writeD(_useFeather ? 1 : 0);
+		packet.writeD(_toFortress ? 1 : 0);
+		packet.writeD(0); // Disables use Feather button for X seconds
+		packet.writeD(0); // Adventure's Song
+		packet.writeC(_hideAnimation ? 1 : 0);
+		packet.writeD(_itemsEnabled ? 1 : 0);
 		packet.writeD(getItems().size());
 		getItems().forEach(packet::writeD);
 		return true;

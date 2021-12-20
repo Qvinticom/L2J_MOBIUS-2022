@@ -38,7 +38,6 @@ public class ExItemAuctionInfoPacket extends AbstractItemPacket
 		{
 			throw new NullPointerException();
 		}
-		
 		if (currentAuction.getAuctionState() != ItemAuctionState.STARTED)
 		{
 			_timeRemaining = 0;
@@ -47,7 +46,6 @@ public class ExItemAuctionInfoPacket extends AbstractItemPacket
 		{
 			_timeRemaining = (int) (currentAuction.getFinishingTimeRemaining() / 1000); // in seconds
 		}
-		
 		_refresh = refresh;
 		_currentAuction = currentAuction;
 		_nextAuction = nextAuction;
@@ -57,15 +55,12 @@ public class ExItemAuctionInfoPacket extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ITEM_AUCTION_INFO.writeId(packet);
-		packet.writeC(_refresh ? 0x00 : 0x01);
+		packet.writeC(_refresh ? 0 : 1);
 		packet.writeD(_currentAuction.getInstanceId());
-		
 		final ItemAuctionBid highestBid = _currentAuction.getHighestBid();
 		packet.writeQ(highestBid != null ? highestBid.getLastBid() : _currentAuction.getAuctionInitBid());
-		
 		packet.writeD(_timeRemaining);
 		writeItem(packet, _currentAuction.getItemInfo());
-		
 		if (_nextAuction != null)
 		{
 			packet.writeQ(_nextAuction.getAuctionInitBid());

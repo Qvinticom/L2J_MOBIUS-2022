@@ -31,10 +31,10 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class ExShowReceivedPostList implements IClientOutgoingPacket
 {
-	private final List<Message> _inbox;
-	
 	private static final int MESSAGE_FEE = 100;
 	private static final int MESSAGE_FEE_PER_SLOT = 1000;
+	
+	private final List<Message> _inbox;
 	
 	public ExShowReceivedPostList(int objectId)
 	{
@@ -45,7 +45,6 @@ public class ExShowReceivedPostList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST.writeId(packet);
-		
 		packet.writeD((int) (Chronos.currentTimeMillis() / 1000));
 		if ((_inbox != null) && !_inbox.isEmpty())
 		{
@@ -64,18 +63,18 @@ public class ExShowReceivedPostList implements IClientOutgoingPacket
 				packet.writeD(msg.getId());
 				packet.writeS(msg.getSubject());
 				packet.writeS(msg.getSenderName());
-				packet.writeD(msg.isLocked() ? 0x01 : 0x00);
+				packet.writeD(msg.isLocked() ? 1 : 0);
 				packet.writeD(msg.getExpirationSeconds());
-				packet.writeD(msg.isUnread() ? 0x01 : 0x00);
+				packet.writeD(msg.isUnread() ? 1 : 0);
 				packet.writeD(((msg.getMailType() == MailType.COMMISSION_ITEM_SOLD) || (msg.getMailType() == MailType.COMMISSION_ITEM_RETURNED)) ? 0 : 1);
-				packet.writeD(msg.hasAttachments() ? 0x01 : 0x00);
-				packet.writeD(msg.isReturned() ? 0x01 : 0x00);
-				packet.writeD(0x00); // SysString in some case it seems
+				packet.writeD(msg.hasAttachments() ? 1 : 0);
+				packet.writeD(msg.isReturned() ? 1 : 0);
+				packet.writeD(0); // SysString in some case it seems
 			}
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		packet.writeD(MESSAGE_FEE);
 		packet.writeD(MESSAGE_FEE_PER_SLOT);

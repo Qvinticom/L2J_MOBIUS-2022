@@ -52,7 +52,6 @@ public class ExChangeClientEffectInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CHANGE_CLIENT_EFFECT_INFO.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeD(_key);
 		packet.writeD(_value);

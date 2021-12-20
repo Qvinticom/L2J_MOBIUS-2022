@@ -30,6 +30,7 @@ public class WareHouseDepositList extends AbstractItemPacket
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3;
 	public static final int FREIGHT = 1;
+	
 	private final long _playerAdena;
 	private final int _warehouseSize;
 	private final List<Item> _items = new ArrayList<>();
@@ -49,7 +50,6 @@ public class WareHouseDepositList extends AbstractItemPacket
 		_whType = type;
 		_playerAdena = player.getAdena();
 		_warehouseSize = player.getActiveWarehouse() != null ? player.getActiveWarehouse().getSize() : 0;
-		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (Item temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{
@@ -68,19 +68,15 @@ public class WareHouseDepositList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WAREHOUSE_DEPOSIT_LIST.writeId(packet);
-		
 		packet.writeH(_whType);
 		packet.writeQ(_playerAdena);
 		packet.writeD(_warehouseSize);
 		packet.writeH(_itemsStackable.size());
-		
 		for (int itemId : _itemsStackable)
 		{
 			packet.writeD(itemId);
 		}
-		
 		packet.writeH(_items.size());
-		
 		for (Item item : _items)
 		{
 			writeItem(packet, item);

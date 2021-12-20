@@ -34,7 +34,6 @@ public class ExShowAdventurerGuideBook implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_ADVENTURER_GUIDE_BOOK.writeId(packet);
-		
 		return true;
 	}
 }

@@ -44,9 +44,8 @@ public class AgitDecoInfo implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			packet.writeC(_residense.hasFunction(type) ? 0x01 : 0x00);
+			packet.writeC(_residense.hasFunction(type) ? 1 : 0);
 		}
-		
 		// Unknown
 		packet.writeD(0); // TODO: Find me!
 		packet.writeD(0); // TODO: Find me!

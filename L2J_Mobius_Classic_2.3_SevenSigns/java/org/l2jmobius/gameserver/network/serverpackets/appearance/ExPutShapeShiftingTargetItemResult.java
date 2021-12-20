@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExPutShapeShiftingTargetItemResult implements IClientOutgoingPacket
 {
-	public static final int RESULT_FAILED = 0x00;
-	public static final int RESULT_SUCCESS = 0x01;
+	public static final int RESULT_FAILED = 0;
+	public static final int RESULT_SUCCESS = 1;
 	
 	public static final ExPutShapeShiftingTargetItemResult FAILED = new ExPutShapeShiftingTargetItemResult(RESULT_FAILED, 0);
 	
@@ -43,7 +43,6 @@ public class ExPutShapeShiftingTargetItemResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_SHAPE_SHIFTING_TARGET_ITEM_RESULT.writeId(packet);
-		
 		packet.writeD(_resultId);
 		packet.writeQ(_price);
 		return true;

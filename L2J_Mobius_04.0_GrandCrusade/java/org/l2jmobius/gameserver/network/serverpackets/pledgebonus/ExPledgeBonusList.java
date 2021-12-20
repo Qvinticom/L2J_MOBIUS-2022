@@ -51,7 +51,6 @@ public class ExPledgeBonusList implements IClientOutgoingPacket
 							packet.writeD(0);
 							return;
 						}
-						
 						packet.writeD(bonus.getSkillReward().getSkillId());
 						break;
 					}
@@ -63,7 +62,6 @@ public class ExPledgeBonusList implements IClientOutgoingPacket
 							packet.writeD(0);
 							return;
 						}
-						
 						packet.writeD(bonus.getItemReward().getId());
 						break;
 					}

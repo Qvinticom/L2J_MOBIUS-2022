@@ -529,7 +529,7 @@ public class Lindvior extends AbstractNpcAI
 				for (Location loc : CONTROL_GENERATOR_SPAWNS)
 				{
 					guard = (FriendlyNpc) addSpawn(NPC_GENERATOR, loc, true);
-					guard.setDisplayEffect(0x01);
+					guard.setDisplayEffect(1);
 					guard.setScriptValue(i++);
 					_generatorSpawn.add(guard);
 				}
@@ -685,7 +685,7 @@ public class Lindvior extends AbstractNpcAI
 				if (!hasFlag(_activeMask, 1 << index))
 				{
 					_activeMask |= 1 << index;
-					npc.setDisplayEffect(0x02);
+					npc.setDisplayEffect(2);
 					sendEventTrigger(true, GENERATOR_TRIGERS[index]);
 					_zoneLair.getPlayersInside().stream().forEach(p -> p.broadcastPacket(new Earthquake(p.getX(), p.getY(), p.getZ(), 20, 10)));
 					if (hasFlag(_activeMask, 0xf))

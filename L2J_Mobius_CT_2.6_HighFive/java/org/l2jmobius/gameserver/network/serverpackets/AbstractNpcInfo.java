@@ -51,7 +51,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	protected final int _flyRunSpd;
 	protected final int _flyWalkSpd;
 	protected double _moveMultiplier;
-	
 	protected int _rhand;
 	protected int _lhand;
 	protected int _chest;
@@ -115,7 +114,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_collisionHeight = cha.getTemplate().getFCollisionHeight(); // On every subclass
 			_collisionRadius = cha.getTemplate().getFCollisionRadius(); // On every subclass
 			_isAttackable = cha.isAutoAttackable(attacker);
-			
 			// npc crest of owning clan/ally of castle
 			if (cha.isNpc() && cha.isInsideZone(ZoneId.TOWN) && (Config.SHOW_CREST_WITHOUT_QUEST || cha.getCastle().getShowNpcCrest()) && (cha.getCastle().getOwnerId() != 0))
 			{
@@ -133,7 +131,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 					}
 				}
 			}
-			
 			_displayEffect = cha.getDisplayEffect();
 		}
 		
@@ -148,7 +145,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeD(_y);
 			packet.writeD(_z);
 			packet.writeD(_heading);
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeD(_mAtkSpd);
 			packet.writeD(_pAtkSpd);
 			packet.writeD(_runSpd);
@@ -230,30 +227,26 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 				_title = (Config.CHAMP_TITLE); // On every subclass
 			}
 			packet.writeS(_title);
-			packet.writeD(0x00); // Title color 0=client default
-			packet.writeD(0x00); // pvp flag
-			packet.writeD(0x00); // karma
-			
+			packet.writeD(0); // Title color 0=client default
+			packet.writeD(0); // pvp flag
+			packet.writeD(0); // karma
 			packet.writeD(_npc.isInvisible() ? _npc.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _npc.getAbnormalVisualEffects());
 			packet.writeD(_clanId); // clan id
 			packet.writeD(_clanCrest); // crest id
 			packet.writeD(_allyId); // ally id
 			packet.writeD(_allyCrest); // all crest
-			
 			packet.writeC(_npc.isInsideZone(ZoneId.WATER) ? 1 : _npc.isFlying() ? 2 : 0); // C2
 			packet.writeC(_npc.getTeam().getId());
-			
 			packet.writeF(_collisionRadius);
 			packet.writeF(_collisionHeight);
 			packet.writeD(_enchantEffect); // C4
 			packet.writeD(_npc.isFlying() ? 1 : 0); // C6
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeD(_npc.getColorEffect()); // CT1.5 Pet form and skills, Color effect
-			packet.writeC(_npc.isTargetable() ? 0x01 : 0x00);
-			packet.writeC(_npc.isShowName() ? 0x01 : 0x00);
+			packet.writeC(_npc.isTargetable() ? 1 : 0);
+			packet.writeC(_npc.isShowName() ? 1 : 0);
 			packet.writeD(_npc.getAbnormalVisualEffectSpecial());
 			packet.writeD(_displayEffect);
-			
 			return true;
 		}
 	}
@@ -265,7 +258,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		public TrapInfo(Trap cha, Creature attacker)
 		{
 			super(cha, (attacker != null) && attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
-			
 			_trap = cha;
 			_displayId = cha.getTemplate().getDisplayId();
 			_isAttackable = cha.isAutoAttackable(attacker);
@@ -291,7 +283,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeD(_y);
 			packet.writeD(_z);
 			packet.writeD(_heading);
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeD(_mAtkSpd);
 			packet.writeD(_pAtkSpd);
 			packet.writeD(_runSpd);
@@ -318,30 +310,25 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeS(_name);
 			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_title);
-			packet.writeD(0x00); // title color 0 = client default
-			
+			packet.writeD(0); // title color 0 = client default
 			packet.writeD(_trap.getPvpFlag());
 			packet.writeD(_trap.getKarma());
-			
 			packet.writeD(_trap.isInvisible() ? _trap.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _trap.getAbnormalVisualEffects());
-			packet.writeD(0x00); // clan id
-			packet.writeD(0x00); // crest id
-			packet.writeD(0000); // C2
-			packet.writeD(0000); // C2
-			packet.writeC(0000); // C2
-			
+			packet.writeD(0); // clan id
+			packet.writeD(0); // crest id
+			packet.writeD(0); // C2
+			packet.writeD(0); // C2
+			packet.writeC(0); // C2
 			packet.writeC(_trap.getTeam().getId());
-			
 			packet.writeF(_collisionRadius);
 			packet.writeF(_collisionHeight);
-			packet.writeD(0x00); // C4
-			packet.writeD(0x00); // C6
-			packet.writeD(0x00);
+			packet.writeD(0); // C4
+			packet.writeD(0); // C6
+			packet.writeD(0);
 			packet.writeD(0); // CT1.5 Pet form and skills
-			packet.writeC(0x01);
-			packet.writeC(0x01);
-			packet.writeD(0x00);
-			
+			packet.writeC(1);
+			packet.writeC(1);
+			packet.writeD(0);
 			return true;
 		}
 	}
@@ -384,7 +371,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeD(_y);
 			packet.writeD(_z);
 			packet.writeD(_heading);
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeD(_mAtkSpd);
 			packet.writeD(_pAtkSpd);
 			packet.writeD(_runSpd);
@@ -402,8 +389,8 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeD(_rhand); // right hand weapon
 			packet.writeD(_chest);
 			packet.writeD(_lhand); // left hand weapon
-			packet.writeC(0x01); // name above char 1=true ... ??
-			packet.writeC(0x01); // always running 1=running 0=walking
+			packet.writeC(1); // name above char 1=true ... ??
+			packet.writeC(1); // always running 1=running 0=walking
 			packet.writeC(_summon.isInCombat() ? 1 : 0);
 			packet.writeC(_summon.isAlikeDead() ? 1 : 0);
 			packet.writeC(_isSummoned ? 2 : _value); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
@@ -411,31 +398,25 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeS(_name);
 			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_title);
-			packet.writeD(0x01); // Title color 0=client default
-			
+			packet.writeD(1); // Title color 0=client default
 			packet.writeD(_summon.getPvpFlag());
 			packet.writeD(_summon.getKarma());
-			
 			packet.writeD(_gmSeeInvis && _summon.isInvisible() ? _summon.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask() : _summon.getAbnormalVisualEffects());
-			
-			packet.writeD(0x00); // clan id
-			packet.writeD(0x00); // crest id
-			packet.writeD(0x00); // C2
-			packet.writeD(0x00); // C2
+			packet.writeD(0); // clan id
+			packet.writeD(0); // crest id
+			packet.writeD(0); // C2
+			packet.writeD(0); // C2
 			packet.writeC(_summon.isInsideZone(ZoneId.WATER) ? 1 : _summon.isFlying() ? 2 : 0); // C2
-			
 			packet.writeC(_summon.getTeam().getId());
-			
 			packet.writeF(_collisionRadius);
 			packet.writeF(_collisionHeight);
 			packet.writeD(_enchantEffect); // C4
-			packet.writeD(0x00); // C6
-			packet.writeD(0x00);
+			packet.writeD(0); // C6
+			packet.writeD(0);
 			packet.writeD(_form); // CT1.5 Pet form and skills
-			packet.writeC(0x01);
-			packet.writeC(0x01);
+			packet.writeC(1);
+			packet.writeC(1);
 			packet.writeD(_summon.getAbnormalVisualEffectSpecial());
-			
 			return true;
 		}
 	}

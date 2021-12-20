@@ -26,6 +26,7 @@ public class RestartResponse implements IClientOutgoingPacket
 {
 	private static final RestartResponse STATIC_PACKET_TRUE = new RestartResponse(true);
 	private static final RestartResponse STATIC_PACKET_FALSE = new RestartResponse(false);
+	
 	private final String _message;
 	private final boolean _result;
 	

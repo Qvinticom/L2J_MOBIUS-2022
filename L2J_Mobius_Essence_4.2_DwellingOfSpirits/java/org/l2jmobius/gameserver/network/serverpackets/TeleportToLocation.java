@@ -41,14 +41,13 @@ public class TeleportToLocation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TELEPORT_TO_LOCATION.writeId(packet);
-		
 		packet.writeD(_targetObjId);
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
-		packet.writeD(0x00); // Fade 0, Instant 1.
+		packet.writeD(0); // Fade 0, Instant 1.
 		packet.writeD(_heading);
-		packet.writeD(0x00); // Unknown.
+		packet.writeD(0); // Unknown.
 		return true;
 	}
 }

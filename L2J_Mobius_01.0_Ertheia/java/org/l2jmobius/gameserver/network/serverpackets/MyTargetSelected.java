@@ -45,10 +45,9 @@ public class MyTargetSelected implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MY_TARGET_SELECTED.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeH(_color);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

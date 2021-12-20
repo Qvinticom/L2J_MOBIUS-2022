@@ -36,11 +36,9 @@ public class ExSummonHomunculusCouponResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SUMMON_HOMUNCULUS_COUPON_RESULT.writeId(packet);
-		
 		packet.writeD(1); // 1 - success
 		packet.writeD(_slot); // homunculus slot
 		packet.writeD(0); // keep or delete
-		
 		return true;
 	}
 }

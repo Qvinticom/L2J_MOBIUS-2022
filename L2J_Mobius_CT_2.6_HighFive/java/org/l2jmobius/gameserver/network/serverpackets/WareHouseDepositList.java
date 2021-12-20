@@ -30,6 +30,7 @@ public class WareHouseDepositList extends AbstractItemPacket
 	public static final int CLAN = 4;
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
+	
 	private final long _playerAdena;
 	private final List<Item> _items = new ArrayList<>();
 	/**
@@ -46,7 +47,6 @@ public class WareHouseDepositList extends AbstractItemPacket
 	{
 		_whType = type;
 		_playerAdena = player.getAdena();
-		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (Item temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{
@@ -64,7 +64,6 @@ public class WareHouseDepositList extends AbstractItemPacket
 		packet.writeH(_whType);
 		packet.writeQ(_playerAdena);
 		packet.writeH(_items.size());
-		
 		for (Item item : _items)
 		{
 			writeItem(packet, item);

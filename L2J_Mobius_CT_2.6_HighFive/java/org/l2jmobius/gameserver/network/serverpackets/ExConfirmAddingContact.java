@@ -38,7 +38,7 @@ public class ExConfirmAddingContact implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_CONFIRM_ADDING_POST_FRIEND.writeId(packet);
 		packet.writeS(_charName);
-		packet.writeD(_added ? 0x01 : 0x00);
+		packet.writeD(_added ? 1 : 0);
 		return true;
 	}
 }

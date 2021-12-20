@@ -38,7 +38,6 @@ public class FriendRemove implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FRIEND_REMOVE.writeId(packet);
-		
 		packet.writeD(_responce);
 		packet.writeS(_charName);
 		return true;

@@ -46,9 +46,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		final float moveMultiplier = _player.getMovementSpeedMultiplier();
 		final int runSpd = (int) (_player.getRunSpeed() / moveMultiplier);
 		final int walkSpd = (int) (_player.getWalkSpeed() / moveMultiplier);
-		
 		OutgoingPackets.GM_VIEW_CHARACTER_INFO.writeId(packet);
-		
 		packet.writeD(_player.getX());
 		packet.writeD(_player.getY());
 		packet.writeD(_player.getZ());
@@ -74,7 +72,6 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getCurrentLoad());
 		packet.writeD(_player.getMaxLoad());
 		packet.writeD(0x28); // unknown
-		
 		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
 		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
 		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
@@ -91,7 +88,6 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
 		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND));
 		packet.writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
-		
 		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
 		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_REAR));
 		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
@@ -109,7 +105,6 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
 		packet.writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FACE));
-		
 		packet.writeD(_player.getPAtk(null));
 		packet.writeD(_player.getPAtkSpd());
 		packet.writeD(_player.getPDef(null));
@@ -117,15 +112,11 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getAccuracy());
 		packet.writeD(_player.getCriticalHit(null, null));
 		packet.writeD(_player.getMAtk(null, null));
-		
 		packet.writeD(_player.getMAtkSpd());
 		packet.writeD(_player.getPAtkSpd());
-		
 		packet.writeD(_player.getMDef(null, null));
-		
 		packet.writeD(_player.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
 		packet.writeD(_player.getKarma());
-		
 		packet.writeD(runSpd);
 		packet.writeD(walkSpd);
 		packet.writeD(runSpd); // swimspeed
@@ -141,8 +132,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getAppearance().getHairStyle());
 		packet.writeD(_player.getAppearance().getHairColor());
 		packet.writeD(_player.getAppearance().getFace());
-		packet.writeD(_player.isGM() ? 0x01 : 0x00); // builder level
-		
+		packet.writeD(_player.isGM() ? 1 : 0); // builder level
 		packet.writeS(_player.getTitle());
 		packet.writeD(_player.getClanId()); // pledge id
 		packet.writeD(_player.getClanCrestId()); // pledge crest id
@@ -152,23 +142,17 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeC(_player.hasDwarvenCraft() ? 1 : 0);
 		packet.writeD(_player.getPkKills());
 		packet.writeD(_player.getPvpKills());
-		
 		packet.writeH(_player.getRecomLeft());
 		packet.writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 		packet.writeD(_player.getClassId().getId());
-		// packet.writeD(0x00); // special effects? circles around player...
+		// packet.writeD(0); // special effects? circles around player...
 		packet.writeD(_player.getMaxCp());
 		packet.writeD((int) _player.getCurrentCp());
-		
-		// packet.writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
-		
+		// packet.writeC(_player.isRunning() ? 1 : 0); // changes the Speed display on Status Window
 		// packet.writeC(321);
-		
 		// packet.writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
-		
-		// packet.writeC(_player.isNoble() ? 0x01 : 0x00);
-		// packet.writeC(_player.isHero() ? 0x01 : 0x00);
-		
+		// packet.writeC(_player.isNoble() ? 1 : 0);
+		// packet.writeC(_player.isHero() ? 1 : 0);
 		// packet.writeD(_player.getAppearance().getNameColor());
 		// packet.writeD(_player.getAppearance().getTitleColor());
 		return true;

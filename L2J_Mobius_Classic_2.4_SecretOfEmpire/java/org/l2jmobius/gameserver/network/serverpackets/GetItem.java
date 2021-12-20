@@ -35,10 +35,8 @@ public class GetItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GET_ITEM.writeId(packet);
-		
 		packet.writeD(_playerId);
 		packet.writeD(_item.getObjectId());
-		
 		packet.writeD(_item.getX());
 		packet.writeD(_item.getY());
 		packet.writeD(_item.getZ());

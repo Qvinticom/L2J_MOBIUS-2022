@@ -44,7 +44,6 @@ public class ExStopMoveAirShip implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_STOP_MOVE_AIR_SHIP.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_x);
 		packet.writeD(_y);

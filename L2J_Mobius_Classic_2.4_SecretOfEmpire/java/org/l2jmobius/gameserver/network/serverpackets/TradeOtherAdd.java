@@ -41,9 +41,9 @@ public class TradeOtherAdd extends AbstractItemPacket
 		packet.writeC(_sendType);
 		if (_sendType == 2)
 		{
-			packet.writeD(0x01);
+			packet.writeD(1);
 		}
-		packet.writeD(0x01);
+		packet.writeD(1);
 		writeItem(packet, _item);
 		return true;
 	}

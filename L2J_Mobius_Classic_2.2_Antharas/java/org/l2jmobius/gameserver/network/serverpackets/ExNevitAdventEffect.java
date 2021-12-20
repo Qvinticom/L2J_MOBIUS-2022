@@ -35,7 +35,6 @@ public class ExNevitAdventEffect implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_CHANNELING_EFFECT.writeId(packet);
-		
 		packet.writeD(_timeLeft);
 		return true;
 	}

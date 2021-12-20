@@ -25,11 +25,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExPledgeEmblem implements IClientOutgoingPacket
 {
+	private static final int TOTAL_SIZE = 65664;
+	
 	private final int _crestId;
 	private final int _clanId;
 	private final byte[] _data;
 	private final int _chunkId;
-	private static final int TOTAL_SIZE = 65664;
 	
 	public ExPledgeEmblem(int crestId, byte[] chunkedData, int clanId, int chunkId)
 	{
@@ -43,7 +44,6 @@ public class ExPledgeEmblem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_EMBLEM.writeId(packet);
-		
 		packet.writeD(Config.SERVER_ID);
 		packet.writeD(_clanId);
 		packet.writeD(_crestId);

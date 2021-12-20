@@ -58,18 +58,16 @@ public class MultiSellList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MULTI_SELL_LIST.writeId(packet);
-		
-		packet.writeC(0x00); // Helios
+		packet.writeC(0); // Helios
 		packet.writeD(_list.getId()); // list id
-		packet.writeC(0x00); // GOD Unknown
+		packet.writeC(0); // GOD Unknown
 		packet.writeD(1 + (_index / PAGE_SIZE)); // page started from 1
-		packet.writeD(_finished ? 0x01 : 0x00); // finished
+		packet.writeD(_finished ? 1 : 0); // finished
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
-		packet.writeC(0x00); // Grand Crusade
-		packet.writeC(_list.isChanceMultisell() ? 0x01 : 0x00); // new multisell window
-		packet.writeD(0x20); // Helios - Always 32
-		
+		packet.writeC(0); // Grand Crusade
+		packet.writeC(_list.isChanceMultisell() ? 1 : 0); // new multisell window
+		packet.writeD(32); // Helios - Always 32
 		while (_size-- > 0)
 		{
 			ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
@@ -86,20 +84,16 @@ public class MultiSellList extends AbstractItemPacket
 					}
 				}
 			}
-			
 			packet.writeD(_index); // Entry ID. Start from 1.
 			packet.writeC(entry.isStackable() ? 1 : 0);
-			
 			// Those values will be passed down to MultiSellChoose packet.
 			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
 			writeItemAugment(packet, itemEnchantment);
 			writeItemElemental(packet, itemEnchantment);
 			writeItemEnsoulOptions(packet, itemEnchantment);
-			packet.writeC(0x00); // 286
-			
+			packet.writeC(0); // 286
 			packet.writeH(entry.getProducts().size());
 			packet.writeH(entry.getIngredients().size());
-			
 			for (ItemChanceHolder product : entry.getProducts())
 			{
 				final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
@@ -122,9 +116,8 @@ public class MultiSellList extends AbstractItemPacket
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
 				writeItemEnsoulOptions(packet, displayItemEnchantment);
-				packet.writeC(0x00); // 286
+				packet.writeC(0); // 286
 			}
-			
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
 				final ItemTemplate template = ItemTable.getInstance().getTemplate(ingredient.getId());
@@ -144,7 +137,7 @@ public class MultiSellList extends AbstractItemPacket
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
 				writeItemEnsoulOptions(packet, displayItemEnchantment);
-				packet.writeC(0x00); // 286
+				packet.writeC(0); // 286
 			}
 		}
 		return true;

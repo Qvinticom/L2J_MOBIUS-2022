@@ -35,7 +35,6 @@ public class ExNotifyFlyMoveStart implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_NOTIFY_FLY_MOVE_START.writeId(packet);
-		
 		return true;
 	}
 }

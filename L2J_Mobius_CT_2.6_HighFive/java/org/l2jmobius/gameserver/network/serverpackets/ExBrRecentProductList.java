@@ -40,7 +40,6 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 	public ExBrRecentProductList(Player player)
 	{
 		final int playerObj = player.getObjectId();
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT productId FROM prime_shop_transactions WHERE charId=? ORDER BY transactionTime DESC"))
 		{
@@ -70,26 +69,23 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_BR_RECENT_PRODUCT_LIST.writeId(packet);
 		packet.writeD(_itemList.size());
-		
 		for (PrimeShopProductHolder product : _itemList)
 		{
 			packet.writeD(product.getProductId());
 			packet.writeH(product.getCategory());
 			packet.writeD(product.getPrice());
-			packet.writeD(0x00); // category
-			
-			packet.writeD(0x00); // start sale
-			packet.writeD(0x00); // end sale
-			packet.writeC(0x00); // day week
-			packet.writeC(0x00); // start hour
-			packet.writeC(0x00); // start min
-			packet.writeC(0x00); // end hour
-			packet.writeC(0x00); // end min
-			packet.writeD(0x00); // current stock
-			packet.writeD(0x00); // max stock
+			packet.writeD(0); // category
+			packet.writeD(0); // start sale
+			packet.writeD(0); // end sale
+			packet.writeC(0); // day week
+			packet.writeC(0); // start hour
+			packet.writeC(0); // start min
+			packet.writeC(0); // end hour
+			packet.writeC(0); // end min
+			packet.writeD(0); // current stock
+			packet.writeD(0); // max stock
 		}
 		return true;
 	}

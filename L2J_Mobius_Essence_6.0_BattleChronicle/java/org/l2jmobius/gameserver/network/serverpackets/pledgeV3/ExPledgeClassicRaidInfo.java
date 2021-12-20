@@ -39,7 +39,6 @@ public class ExPledgeClassicRaidInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_CLASSIC_RAID_INFO.writeId(packet);
-		
 		if (_clan == null)
 		{
 			packet.writeD(0);
@@ -48,7 +47,6 @@ public class ExPledgeClassicRaidInfo implements IClientOutgoingPacket
 		{
 			final int stage = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.MONSTER_ARENA_VARIABLE + _clan.getId(), 0);
 			packet.writeD(stage);
-			
 			// Skill rewards.
 			packet.writeD(5);
 			for (int i = 1; i <= 5; i++)
@@ -57,7 +55,6 @@ public class ExPledgeClassicRaidInfo implements IClientOutgoingPacket
 				packet.writeD(i);
 			}
 		}
-		
 		return true;
 	}
 }

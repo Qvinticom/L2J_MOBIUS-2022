@@ -40,7 +40,6 @@ public class ExPutCommissionResultForVariationMake implements IClientOutgoingPac
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE.writeId(packet);
-		
 		packet.writeD(_gemstoneObjId);
 		packet.writeD(_itemId);
 		packet.writeQ(_gemstoneCount);

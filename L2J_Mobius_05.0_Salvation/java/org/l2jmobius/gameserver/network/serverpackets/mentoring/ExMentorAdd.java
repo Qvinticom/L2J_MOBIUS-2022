@@ -37,7 +37,6 @@ public class ExMentorAdd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MENTOR_ADD.writeId(packet);
-		
 		packet.writeS(_mentor.getName());
 		packet.writeD(_mentor.getActiveClass());
 		packet.writeD(_mentor.getLevel());

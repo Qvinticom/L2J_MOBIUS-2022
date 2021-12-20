@@ -35,47 +35,44 @@ public class ExBrProductList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
 		packet.writeD(_itemList.size());
-		
 		for (PrimeShopProductHolder product : _itemList)
 		{
 			final int category = product.getCategory();
 			packet.writeD(product.getProductId()); // product id
 			packet.writeH(category); // category id
 			packet.writeD(product.getPrice()); // points
-			
 			switch (category)
 			{
 				case 6:
 				{
-					packet.writeD(0x01); // event
+					packet.writeD(1); // event
 					break;
 				}
 				case 7:
 				{
-					packet.writeD(0x02); // best
+					packet.writeD(2); // best
 					break;
 				}
 				case 8:
 				{
-					packet.writeD(0x03); // event & best
+					packet.writeD(3); // event & best
 					break;
 				}
 				default:
 				{
-					packet.writeD(0x00); // normal
+					packet.writeD(0); // normal
 					break;
 				}
 			}
-			
-			packet.writeD(0x00); // start sale
-			packet.writeD(0x00); // end sale
-			packet.writeC(0x00); // day week
-			packet.writeC(0x00); // start hour
-			packet.writeC(0x00); // start min
-			packet.writeC(0x00); // end hour
-			packet.writeC(0x00); // end min
-			packet.writeD(0x00); // current stock
-			packet.writeD(0x00); // max stock
+			packet.writeD(0); // start sale
+			packet.writeD(0); // end sale
+			packet.writeC(0); // day week
+			packet.writeC(0); // start hour
+			packet.writeC(0); // start min
+			packet.writeC(0); // end hour
+			packet.writeC(0); // end min
+			packet.writeD(0); // current stock
+			packet.writeD(0); // max stock
 		}
 		return true;
 	}

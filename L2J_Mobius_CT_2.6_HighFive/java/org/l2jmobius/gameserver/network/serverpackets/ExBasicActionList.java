@@ -63,6 +63,7 @@ public class ExBasicActionList implements IClientOutgoingPacket
 		1096, 1097, 1098 
 	};
 	//@formatter:on
+	
 	public static final int[] DEFAULT_ACTION_LIST;
 	static
 	{
@@ -75,12 +76,10 @@ public class ExBasicActionList implements IClientOutgoingPacket
 		{
 			DEFAULT_ACTION_LIST[i] = i;
 		}
-		
 		for (i = count2; i-- > 0;)
 		{
 			DEFAULT_ACTION_LIST[count1 + i] = 1000 + i;
 		}
-		
 		for (i = count3; i-- > 0;)
 		{
 			DEFAULT_ACTION_LIST[count1 + count2 + i] = 5000 + i;

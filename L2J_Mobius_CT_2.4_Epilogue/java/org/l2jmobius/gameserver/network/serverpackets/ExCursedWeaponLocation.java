@@ -39,7 +39,6 @@ public class ExCursedWeaponLocation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CURSED_WEAPON_LOCATION.writeId(packet);
-		
 		if (!_cursedWeaponInfo.isEmpty())
 		{
 			packet.writeD(_cursedWeaponInfo.size());
@@ -47,7 +46,6 @@ public class ExCursedWeaponLocation implements IClientOutgoingPacket
 			{
 				packet.writeD(w.id);
 				packet.writeD(w.activated);
-				
 				packet.writeD(w.pos.getX());
 				packet.writeD(w.pos.getY());
 				packet.writeD(w.pos.getZ());

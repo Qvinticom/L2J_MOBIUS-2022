@@ -47,7 +47,6 @@ public class ExFishingStartCombat implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FISHING_START_COMBAT.writeId(packet);
-		
 		packet.writeD(_creature.getObjectId());
 		packet.writeD(_time);
 		packet.writeD(_hp);

@@ -86,8 +86,8 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeD(item.getMana());
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
-		packet.writeC(0x00); // 140 protocol
-		packet.writeC(0x00); // 140 protocol
+		packet.writeC(0); // 140 protocol
+		packet.writeC(0); // 140 protocol
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);
@@ -123,12 +123,12 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
 		packet.writeC(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-		packet.writeC(0x01); // TODO : Find me
+		packet.writeC(1); // TODO : Find me
 		packet.writeD(item.getMana());
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
-		packet.writeC(0x00); // 140 protocol
-		packet.writeC(0x00); // 140 protocol
+		packet.writeC(0); // 140 protocol
+		packet.writeC(0); // 140 protocol
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);
@@ -167,12 +167,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			mask |= ItemListType.AUGMENT_BONUS.getMask();
 		}
-		
 		if ((item.getAttackElementType() >= 0) || (item.getAttributeDefence(AttributeType.FIRE) > 0) || (item.getAttributeDefence(AttributeType.WATER) > 0) || (item.getAttributeDefence(AttributeType.WIND) > 0) || (item.getAttributeDefence(AttributeType.EARTH) > 0) || (item.getAttributeDefence(AttributeType.HOLY) > 0) || (item.getAttributeDefence(AttributeType.DARK) > 0))
 		{
 			mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
 		}
-		
 		if (item.getEnchantOptions() != null)
 		{
 			for (int id : item.getEnchantOptions())
@@ -184,17 +182,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 				}
 			}
 		}
-		
 		if (item.getVisualId() > 0)
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
 		}
-		
 		if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty()))
 		{
 			mask |= ItemListType.SOUL_CRYSTAL.getMask();
 		}
-		
 		return mask;
 	}
 	
@@ -262,7 +257,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			{
 				packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
 			}
-			
 			packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
 			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
 			{
@@ -289,7 +283,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
 	}
 }

@@ -51,8 +51,8 @@ public class ExFishingStart implements IClientOutgoingPacket
 		packet.writeD(_x); // x position
 		packet.writeD(_y); // y position
 		packet.writeD(_z); // z position
-		packet.writeC(_isNightLure ? 0x01 : 0x00); // night lure
-		packet.writeC(0x00); // show fish rank result button
+		packet.writeC(_isNightLure ? 1 : 0); // night lure
+		packet.writeC(0); // show fish rank result button
 		return true;
 	}
 }

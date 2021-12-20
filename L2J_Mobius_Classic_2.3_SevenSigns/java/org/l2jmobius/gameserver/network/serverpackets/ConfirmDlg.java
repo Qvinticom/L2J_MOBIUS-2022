@@ -68,7 +68,6 @@ public class ConfirmDlg implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CONFIRM_DLG.writeId(packet);
-		
 		final SMParam[] params = _systemMessage.getParams();
 		packet.writeD(_systemMessage.getId());
 		packet.writeD(params.length);
@@ -131,7 +130,6 @@ public class ConfirmDlg implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		packet.writeD(_time);
 		packet.writeD(_requesterId);
 		return true;

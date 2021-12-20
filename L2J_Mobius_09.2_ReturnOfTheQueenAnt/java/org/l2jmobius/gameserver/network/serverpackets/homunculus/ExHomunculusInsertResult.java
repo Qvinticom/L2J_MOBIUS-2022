@@ -37,7 +37,6 @@ public class ExHomunculusInsertResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_HOMUNCULUS_INSERT_RESULT.writeId(packet);
-		
 		packet.writeD(1); // 1 - success
 		if (_type == 0)
 		{
@@ -51,7 +50,6 @@ public class ExHomunculusInsertResult implements IClientOutgoingPacket
 		{
 			packet.writeD(SystemMessageId.THE_HOMUNCULUS_TAKES_YOUR_TEARS_VP.getId());
 		}
-		
 		return true;
 	}
 }

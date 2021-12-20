@@ -34,7 +34,6 @@ public class ExOlympiadMatchEnd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_MATCH_END.writeId(packet);
-		
 		return true;
 	}
 }

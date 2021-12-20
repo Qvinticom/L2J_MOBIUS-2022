@@ -35,8 +35,7 @@ public class ExCubeGameRequestReady implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
-		
-		packet.writeD(0x04);
+		packet.writeD(4);
 		return true;
 	}
 }

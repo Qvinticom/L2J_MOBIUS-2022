@@ -30,7 +30,6 @@ public class ExNotifyPremiumItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_NOTIFY_PREMIUM_ITEM.writeId(packet);
-		
 		return true;
 	}
 }

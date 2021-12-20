@@ -49,7 +49,6 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 		{
 			_playerAdena = _player.getAdena();
 		}
-		
 		// _storePlayer.getSellList().updateItems(); // Update SellList for case inventory content has changed
 		// this items must be the items available into the _activeChar (seller) inventory
 		_items = _storePlayer.getBuyList().getAvailableItems(_player.getInventory());

@@ -41,13 +41,12 @@ public class ExPutItemResultForVariationCancel implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_ITEM_RESULT_FOR_VARIATION_CANCEL.writeId(packet);
-		
 		packet.writeD(_itemObjId);
 		packet.writeD(_itemId);
 		packet.writeD(_itemAug1);
 		packet.writeD(_itemAug2);
 		packet.writeQ(_price);
-		packet.writeD(0x01);
+		packet.writeD(1);
 		return true;
 	}
 }

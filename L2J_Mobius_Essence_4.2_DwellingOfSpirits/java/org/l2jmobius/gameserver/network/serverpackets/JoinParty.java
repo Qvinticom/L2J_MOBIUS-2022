@@ -32,9 +32,8 @@ public class JoinParty implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.JOIN_PARTY.writeId(packet);
-		
 		packet.writeD(_response);
-		packet.writeD(0x00); // TODO: Find me!
+		packet.writeD(0); // TODO: Find me!
 		return true;
 	}
 }

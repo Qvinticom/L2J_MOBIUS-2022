@@ -34,7 +34,6 @@ public class ExSendManorList implements IClientOutgoingPacket
 	{
 		final List<Castle> castles = CastleManager.getInstance().getCastles();
 		castles.sort(Comparator.comparing(Castle::getResidenceId));
-		
 		OutgoingPackets.EX_SEND_MANOR_LIST.writeId(packet);
 		packet.writeD(castles.size());
 		for (Castle castle : castles)

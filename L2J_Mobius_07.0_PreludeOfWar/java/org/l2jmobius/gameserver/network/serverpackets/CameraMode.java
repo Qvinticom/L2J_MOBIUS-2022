@@ -36,7 +36,6 @@ public class CameraMode implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CAMERA_MODE.writeId(packet);
-		
 		packet.writeD(_mode);
 		return true;
 	}

@@ -41,7 +41,6 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_CASTLE_INFO.writeId(packet);
-		
 		final Collection<Castle> castles = CastleManager.getInstance().getCastles();
 		packet.writeD(castles.size());
 		for (Castle castle : castles)
@@ -65,8 +64,7 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 			}
 			packet.writeD(castle.getTaxPercent(TaxType.BUY));
 			packet.writeD((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
-			
-			packet.writeC(castle.getSiege().isInProgress() ? 0x01 : 0x00); // Grand Crusade
+			packet.writeC(castle.getSiege().isInProgress() ? 1 : 0); // Grand Crusade
 			packet.writeC(castle.getSide().ordinal()); // Grand Crusade
 		}
 		return true;

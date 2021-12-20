@@ -41,7 +41,6 @@ public class ExPledgeContributionInfo implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_PLEDGE_CONTRIBUTION_INFO.writeId(packet);
 		packet.writeD(_player.getClanContribution());
 		packet.writeD(_player.getClanContribution());

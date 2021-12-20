@@ -50,10 +50,8 @@ public class BuyListSeed implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.BUY_LIST_SEED.writeId(packet);
-		
 		packet.writeQ(_money); // current money
 		packet.writeD(_manorId); // manor id
-		
 		if (!_list.isEmpty())
 		{
 			packet.writeH(_list.size()); // list length
@@ -61,34 +59,34 @@ public class BuyListSeed implements IClientOutgoingPacket
 			{
 				packet.writeD(s.getId());
 				packet.writeD(s.getId());
-				packet.writeD(0x00);
+				packet.writeD(0);
 				packet.writeQ(s.getAmount()); // item count
-				packet.writeH(0x05); // Custom Type 2
-				packet.writeH(0x00); // Custom Type 1
-				packet.writeH(0x00); // Equipped
-				packet.writeD(0x00); // Body Part
-				packet.writeH(0x00); // Enchant
-				packet.writeH(0x00); // Custom Type
-				packet.writeD(0x00); // Augment
+				packet.writeH(5); // Custom Type 2
+				packet.writeH(0); // Custom Type 1
+				packet.writeH(0); // Equipped
+				packet.writeD(0); // Body Part
+				packet.writeH(0); // Enchant
+				packet.writeH(0); // Custom Type
+				packet.writeD(0); // Augment
 				packet.writeD(-1); // Mana
 				packet.writeD(-9999); // Time
-				packet.writeH(0x00); // Element Type
-				packet.writeH(0x00); // Element Power
+				packet.writeH(0); // Element Type
+				packet.writeH(0); // Element Power
 				for (byte i = 0; i < 6; i++)
 				{
-					packet.writeH(0x00);
+					packet.writeH(0);
 				}
 				// Enchant Effects
-				packet.writeH(0x00);
-				packet.writeH(0x00);
-				packet.writeH(0x00);
+				packet.writeH(0);
+				packet.writeH(0);
+				packet.writeH(0);
 				packet.writeQ(s.getPrice()); // price
 			}
 			_list.clear();
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
 		return true;
 	}

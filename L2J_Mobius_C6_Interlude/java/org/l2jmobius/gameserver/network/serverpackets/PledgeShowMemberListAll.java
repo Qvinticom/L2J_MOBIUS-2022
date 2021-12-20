@@ -45,12 +45,10 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	{
 		_pledgeType = 0;
 		writePledge(packet, 0);
-		
 		for (SubPledge element : _clan.getAllSubPledges())
 		{
 			_player.sendPacket(new PledgeReceiveSubPledgeCreated(element));
 		}
-		
 		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() == 0)
@@ -59,7 +57,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			}
 			_player.sendPacket(new PledgeShowMemberListAdd(m));
 		}
-		
 		// unless this is sent sometimes, the client doesn't recognize the player as the leader
 		_player.sendPacket(new UserInfo(_player));
 		return true;
@@ -68,13 +65,11 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	void writePledge(PacketWriter packet, int mainOrSubpledge)
 	{
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
-		
 		packet.writeD(mainOrSubpledge); // c5 main clan 0 or any subpledge 1?
 		packet.writeD(_clan.getClanId());
 		packet.writeD(_pledgeType); // c5 - possibly pledge type?
 		packet.writeS(_clan.getName());
 		packet.writeS(_clan.getLeaderName());
-		
 		packet.writeD(_clan.getCrestId()); // crest id .. is used again
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
@@ -83,13 +78,11 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getReputationScore()); // was activechar level
 		packet.writeD(0); // 0
 		packet.writeD(0); // 0
-		
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.isAtWar());
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
-		
 		int yellow;
 		for (ClanMember m : _members)
 		{
@@ -97,7 +90,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			if (m.getPledgeType() == -1)
 			{
 				yellow = m.getSponsor() != 0 ? 1 : 0;
@@ -110,7 +102,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			{
 				yellow = 0;
 			}
-			
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());
 			packet.writeD(m.getClassId());

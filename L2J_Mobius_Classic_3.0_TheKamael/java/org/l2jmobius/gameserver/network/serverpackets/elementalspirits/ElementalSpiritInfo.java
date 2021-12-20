@@ -41,7 +41,6 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ELEMENTAL_SPIRIT_INFO.writeId(packet);
-		
 		final ElementalSpirit[] spirits = _player.getSpirits();
 		if (spirits == null)
 		{
@@ -50,20 +49,16 @@ public class ElementalSpiritInfo extends AbstractElementalSpiritPacket
 			packet.writeC(0);
 			return true;
 		}
-		
 		packet.writeC(_type); // show spirit info window 1; Change type 2; Only update 0
 		packet.writeC(_spiritType);
-		
 		packet.writeC(spirits.length); // spirit count
-		
 		for (ElementalSpirit spirit : spirits)
 		{
 			packet.writeC(spirit.getType());
-			packet.writeC(0x01); // spirit active ?
+			packet.writeC(1); // spirit active ?
 			// if active
 			writeSpiritInfo(packet, spirit);
 		}
-		
 		packet.writeD(1); // Reset talent items count
 		for (int j = 0; j < 1; j++)
 		{

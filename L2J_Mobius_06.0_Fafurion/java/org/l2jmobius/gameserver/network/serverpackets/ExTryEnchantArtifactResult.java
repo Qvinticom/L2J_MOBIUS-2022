@@ -44,7 +44,6 @@ public class ExTryEnchantArtifactResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TRY_ENCHANT_ARTIFACT_RESULT.writeId(packet);
-		
 		packet.writeD(_state);
 		packet.writeD(_enchant);
 		packet.writeD(0);

@@ -40,13 +40,10 @@ public class ExMultiPartyCommandChannelInfo implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_MULTI_PARTY_COMMAND_CHANNEL_INFO.writeId(packet);
-		
 		packet.writeS(_channel.getChannelLeader().getName());
 		packet.writeD(0); // Channel loot
 		packet.writeD(_channel.getMemberCount());
-		
 		packet.writeD(_channel.getParties().size());
 		for (Party p : _channel.getParties())
 		{

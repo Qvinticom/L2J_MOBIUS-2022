@@ -45,16 +45,14 @@ public class ElementalSpiritAbsorbInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ELEMENTAL_SPIRIT_ABSORB_INFO.writeId(packet);
-		
 		final ElementalSpirit spirit = _player.getElementalSpirit(ElementalType.of(_type));
 		if (spirit == null)
 		{
-			packet.writeC(0x00);
-			packet.writeC(0x00);
+			packet.writeC(0);
+			packet.writeC(0);
 			return true;
 		}
-		
-		packet.writeC(0x01);
+		packet.writeC(1);
 		packet.writeC(_type);
 		packet.writeC(spirit.getStage());
 		packet.writeQ(spirit.getExperience());
@@ -62,7 +60,6 @@ public class ElementalSpiritAbsorbInfo implements IClientOutgoingPacket
 		packet.writeQ(spirit.getExperienceToNextLevel()); // MaxExp
 		packet.writeD(spirit.getLevel());
 		packet.writeD(spirit.getMaxLevel());
-		
 		final List<ElementalSpiritAbsorbItemHolder> absorbItems = spirit.getAbsorbItems();
 		packet.writeD(absorbItems.size()); // AbsorbCount
 		for (ElementalSpiritAbsorbItemHolder absorbItem : absorbItems)

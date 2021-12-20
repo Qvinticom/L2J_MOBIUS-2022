@@ -33,7 +33,6 @@ public class RecipeShopMsg implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_SHOP_MSG.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeS(_player.getStoreName());
 		return true;

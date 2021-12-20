@@ -38,7 +38,6 @@ public class ExCursedWeaponList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CURSED_WEAPON_LIST.writeId(packet);
-		
 		packet.writeD(_cursedWeaponIds.size());
 		for (Integer i : _cursedWeaponIds)
 		{

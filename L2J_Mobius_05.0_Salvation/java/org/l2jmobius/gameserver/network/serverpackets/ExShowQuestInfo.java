@@ -34,7 +34,6 @@ public class ExShowQuestInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_QUEST_INFO.writeId(packet);
-		
 		return true;
 	}
 }

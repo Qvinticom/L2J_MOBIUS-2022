@@ -55,13 +55,11 @@ public class ExCubeGameExtendedChangePoints implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BLOCK_UP_SET_STATE.writeId(packet);
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
 		packet.writeD(_timeLeft);
 		packet.writeD(_bluePoints);
 		packet.writeD(_redPoints);
-		
-		packet.writeD(_isRedTeam ? 0x01 : 0x00);
+		packet.writeD(_isRedTeam ? 1 : 0);
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_playerPoints);
 		return true;

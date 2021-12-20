@@ -72,10 +72,8 @@ public class CharSelectInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHAR_SELECT_INFO.writeId(packet);
-		
 		final int size = _characterPackages.size();
 		packet.writeD(size);
-		
 		long lastAccess = 0;
 		if (_activeId == -1)
 		{
@@ -88,7 +86,6 @@ public class CharSelectInfo implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		for (int i = 0; i < size; i++)
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
@@ -97,36 +94,29 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			packet.writeS(_loginName);
 			packet.writeD(_sessionId);
 			packet.writeD(charInfoPackage.getClanId());
-			packet.writeD(0x00); // ??
-			
+			packet.writeD(0); // ??
 			packet.writeD(charInfoPackage.getSex());
 			packet.writeD(charInfoPackage.getRace());
 			packet.writeD(charInfoPackage.getBaseClassId());
-			
-			packet.writeD(0x01); // active ??
-			
-			packet.writeD(0x00); // x
-			packet.writeD(0x00); // y
-			packet.writeD(0x00); // z
-			
+			packet.writeD(1); // active ??
+			packet.writeD(0); // x
+			packet.writeD(0); // y
+			packet.writeD(0); // z
 			packet.writeF(charInfoPackage.getCurrentHp()); // hp cur
 			packet.writeF(charInfoPackage.getCurrentMp()); // mp cur
-			
 			packet.writeD(charInfoPackage.getSp());
 			packet.writeD((int) charInfoPackage.getExp());
 			packet.writeD(charInfoPackage.getLevel());
-			
 			packet.writeD(charInfoPackage.getKarma()); // karma
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
 			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
 			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
@@ -143,7 +133,6 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
 			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND));
 			packet.writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
-			
 			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
 			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_REAR));
 			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
@@ -160,14 +149,11 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_BACK));
 			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 			packet.writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-			
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
 			packet.writeD(charInfoPackage.getFace());
-			
 			packet.writeF(charInfoPackage.getMaxHp()); // hp max
 			packet.writeF(charInfoPackage.getMaxMp()); // mp max
-			
 			final long deleteTime = charInfoPackage.getDeleteTimer();
 			final int accesslevels = charInfoPackage.getAccessLevel();
 			int deletedays = 0;
@@ -179,21 +165,18 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			{
 				deletedays = -1; // like L2OFF player looks dead if he is banned.
 			}
-			
 			packet.writeD(deletedays); // days left before
 			// delete .. if != 0
 			// then char is inactive
 			packet.writeD(charInfoPackage.getClassId());
-			
 			if (i == _activeId)
 			{
-				packet.writeD(0x01);
+				packet.writeD(1);
 			}
 			else
 			{
-				packet.writeD(0x00); // c3 auto-select char
+				packet.writeD(0); // c3 auto-select char
 			}
-			
 			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
 		}
 		return true;
@@ -203,13 +186,11 @@ public class CharSelectInfo implements IClientOutgoingPacket
 	{
 		CharSelectInfoPackage charInfopackage;
 		final List<CharSelectInfoPackage> characterList = new ArrayList<>();
-		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT account_name, charId, char_name, level, maxHp, curHp, maxMp, curMp, acc, crit, evasion, mAtk, mDef, mSpd, pAtk, pDef, pSpd, runSpd, walkSpd, str, con, dex, _int, men, wit, face, hairStyle, hairColor, sex, heading, x, y, z, movement_multiplier, attack_speed_multiplier, colRad, colHeight, exp, sp, karma, pvpkills, pkkills, clanid, maxload, race, classid, deletetime, cancraft, title, rec_have, rec_left, accesslevel, online, char_slot, lastAccess, base_class FROM characters WHERE account_name=?");
 			statement.setString(1, _loginName);
 			final ResultSet charList = statement.executeQuery();
-			
 			while (charList.next())// fills the package
 			{
 				charInfopackage = restoreChar(charList);
@@ -218,14 +199,12 @@ public class CharSelectInfo implements IClientOutgoingPacket
 					characterList.add(charInfopackage);
 				}
 			}
-			
 			statement.close();
 		}
 		catch (Exception e)
 		{
 			PacketLogger.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		
 		return characterList;
 	}
 	
@@ -243,7 +222,6 @@ public class CharSelectInfo implements IClientOutgoingPacket
 				charInfopackage.setSp(charList.getInt("sp"));
 				charInfopackage.setLevel(charList.getInt("level"));
 			}
-			
 			charList.close();
 			statement.close();
 		}
@@ -256,7 +234,6 @@ public class CharSelectInfo implements IClientOutgoingPacket
 	private CharSelectInfoPackage restoreChar(ResultSet chardata) throws Exception
 	{
 		final int objectId = chardata.getInt("charId");
-		
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
 		if ((deletetime > 0) && (Chronos.currentTimeMillis() > deletetime))
@@ -267,11 +244,9 @@ public class CharSelectInfo implements IClientOutgoingPacket
 			{
 				clan.removeClanMember(cha.getName(), 0);
 			}
-			
 			GameClient.deleteCharByObjId(objectId);
 			return null;
 		}
-		
 		final String name = chardata.getString("char_name");
 		final CharSelectInfoPackage charInfopackage = new CharSelectInfoPackage(objectId, name);
 		charInfopackage.setLevel(chardata.getInt("level"));
@@ -280,38 +255,29 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		charInfopackage.setMaxMp(chardata.getInt("maxmp"));
 		charInfopackage.setCurrentMp(chardata.getDouble("curmp"));
 		charInfopackage.setKarma(chardata.getInt("karma"));
-		
 		charInfopackage.setFace(chardata.getInt("face"));
 		charInfopackage.setHairStyle(chardata.getInt("hairstyle"));
 		charInfopackage.setHairColor(chardata.getInt("haircolor"));
 		charInfopackage.setSex(chardata.getInt("sex"));
-		
 		charInfopackage.setExp(chardata.getLong("exp"));
 		charInfopackage.setSp(chardata.getInt("sp"));
 		charInfopackage.setClanId(chardata.getInt("clanid"));
-		
 		charInfopackage.setRace(chardata.getInt("race"));
-		
 		charInfopackage.setAccessLevel(chardata.getInt("accesslevel"));
-		
 		final int baseClassId = chardata.getInt("base_class");
 		final int activeClassId = chardata.getInt("classid");
-		
 		// if is in subclass, load subclass exp, sp, level info
 		if (baseClassId != activeClassId)
 		{
 			loadCharacterSubclassInfo(charInfopackage, objectId, activeClassId);
 		}
-		
 		charInfopackage.setClassId(activeClassId);
-		
 		// Get the augmentation id for equipped weapon
 		int weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND);
 		if (weaponObjId < 1)
 		{
 			weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
 		}
-		
 		/*
 		 * Check if the base class is set to zero and alse doesn't match with the current active class, otherwise send the base class ID. This prevents chars created before base class was introduced from being displayed incorrectly.
 		 */
@@ -323,10 +289,8 @@ public class CharSelectInfo implements IClientOutgoingPacket
 		{
 			charInfopackage.setBaseClassId(baseClassId);
 		}
-		
 		charInfopackage.setDeleteTimer(deletetime);
 		charInfopackage.setLastAccess(chardata.getLong("lastAccess"));
-		
 		return charInfopackage;
 	}
 }

@@ -45,10 +45,10 @@ public class ExVipAttendanceItemList implements IClientOutgoingPacket
 		OutgoingPackets.EX_VIP_ATTENDANCE_ITEM_LIST.writeId(packet);
 		packet.writeC(_available ? _index + 1 : _index); // index to receive?
 		packet.writeC(_index); // last received index?
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeC(0x01);
-		packet.writeC(_available ? 0x01 : 0x00); // player can receive reward today?
+		packet.writeD(0);
+		packet.writeD(0);
+		packet.writeC(1);
+		packet.writeC(_available ? 1 : 0); // player can receive reward today?
 		packet.writeC(250);
 		packet.writeC(AttendanceRewardData.getInstance().getRewardsCount()); // reward size
 		int rewardCounter = 0;
@@ -57,11 +57,11 @@ public class ExVipAttendanceItemList implements IClientOutgoingPacket
 			rewardCounter++;
 			packet.writeD(reward.getId());
 			packet.writeQ(reward.getCount());
-			packet.writeC(0x01); // is unknown?
-			packet.writeC((rewardCounter % 7) == 0 ? 0x01 : 0x00); // is last in row?
+			packet.writeC(1); // is unknown?
+			packet.writeC((rewardCounter % 7) == 0 ? 1 : 0); // is last in row?
 		}
-		packet.writeC(0x00);
-		packet.writeD(0x00);
+		packet.writeC(0);
+		packet.writeD(0);
 		return true;
 	}
 }

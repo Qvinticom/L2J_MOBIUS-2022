@@ -56,10 +56,8 @@ public class SellList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SELL_LIST.writeId(packet);
 		packet.writeD(_money);
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
 		packet.writeH(_selllist.size());
-		
 		for (Item item : _selllist)
 		{
 			packet.writeH(item.getItem().getType1());
@@ -67,11 +65,11 @@ public class SellList implements IClientOutgoingPacket
 			packet.writeD(item.getItemId());
 			packet.writeD(item.getCount());
 			packet.writeH(item.getItem().getType2());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0);
+			packet.writeH(0);
 			packet.writeD(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
 		}
 		return true;

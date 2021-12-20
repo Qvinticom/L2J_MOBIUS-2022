@@ -47,7 +47,6 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 			throw new IllegalArgumentException("Undefined Atribute item: " + stone);
 		}
 		_level = ElementalAttributeData.getInstance().getMaxElementLevel(_itemId);
-		
 		// Register only items that can be put an attribute stone/crystal
 		for (Item item : player.getInventory().getItems())
 		{
@@ -62,7 +61,6 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CHOOSE_INVENTORY_ATTRIBUTE_ITEM.writeId(packet);
-		
 		packet.writeD(_itemId);
 		packet.writeQ(_count);
 		packet.writeD(_atribute == AttributeType.FIRE ? 1 : 0); // Fire

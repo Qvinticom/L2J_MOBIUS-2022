@@ -35,7 +35,6 @@ public class ExIsCharNameCreatable implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_IS_CHAR_NAME_CREATABLE.writeId(packet);
-		
 		packet.writeD(_allowed);
 		return true;
 	}

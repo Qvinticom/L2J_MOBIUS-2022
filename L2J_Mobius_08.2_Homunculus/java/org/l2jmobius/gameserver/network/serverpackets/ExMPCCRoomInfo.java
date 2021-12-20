@@ -36,7 +36,6 @@ public class ExMPCCRoomInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MPCC_ROOM_INFO.writeId(packet);
-		
 		packet.writeD(_room.getId());
 		packet.writeD(_room.getMaxMembers());
 		packet.writeD(_room.getMinLevel());

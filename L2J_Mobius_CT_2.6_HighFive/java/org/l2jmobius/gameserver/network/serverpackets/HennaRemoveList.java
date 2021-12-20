@@ -38,9 +38,8 @@ public class HennaRemoveList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.HENNA_UNEQUIP_LIST.writeId(packet);
 		packet.writeQ(_player.getAdena());
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(3 - _player.getHennaEmptySlots());
-		
 		for (Henna henna : _player.getHennaList())
 		{
 			if (henna != null)
@@ -48,10 +47,10 @@ public class HennaRemoveList implements IClientOutgoingPacket
 				packet.writeD(henna.getDyeId());
 				packet.writeD(henna.getDyeItemId());
 				packet.writeD(henna.getCancelCount());
-				packet.writeD(0x00);
+				packet.writeD(0);
 				packet.writeD(henna.getCancelFee());
-				packet.writeD(0x00);
-				packet.writeD(0x01);
+				packet.writeD(0);
+				packet.writeD(1);
 			}
 		}
 		return true;

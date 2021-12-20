@@ -35,7 +35,6 @@ public class JoinPledge implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.JOIN_PLEDGE.writeId(packet);
-		
 		packet.writeD(_pledgeId);
 		return true;
 	}

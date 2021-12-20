@@ -29,7 +29,7 @@ public class ExShowHomunculusCouponUi implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_HOMUNCULUS_COUPON_UI.writeId(packet);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

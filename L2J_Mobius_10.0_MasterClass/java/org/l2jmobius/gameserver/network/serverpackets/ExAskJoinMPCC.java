@@ -39,9 +39,8 @@ public class ExAskJoinMPCC implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ASK_JOIN_MPCC.writeId(packet);
-		
 		packet.writeS(_requestorName); // name of CCLeader
-		packet.writeD(0x00); // TODO: Find me
+		packet.writeD(0); // TODO: Find me
 		return true;
 	}
 }

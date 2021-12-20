@@ -62,7 +62,6 @@ public class FlyToLocation implements IClientOutgoingPacket
 		_destY = destY;
 		_destZ = destZ;
 		_type = type;
-		
 		if (creature.isPlayer())
 		{
 			creature.getActingPlayer().setBlinkActive(true);
@@ -82,7 +81,6 @@ public class FlyToLocation implements IClientOutgoingPacket
 		_flySpeed = flySpeed;
 		_flyDelay = flyDelay;
 		_animationSpeed = animationSpeed;
-		
 		if (creature.isPlayer())
 		{
 			creature.getActingPlayer().setBlinkActive(true);
@@ -103,7 +101,6 @@ public class FlyToLocation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FLY_TO_LOCATION.writeId(packet);
-		
 		packet.writeD(_chaObjId);
 		packet.writeD(_destX);
 		packet.writeD(_destY);

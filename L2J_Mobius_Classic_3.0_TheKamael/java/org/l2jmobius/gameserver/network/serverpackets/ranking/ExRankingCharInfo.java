@@ -48,7 +48,6 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RANKING_CHAR_INFO.writeId(packet);
-		
 		if (!_playerList.isEmpty())
 		{
 			for (Integer id : _playerList.keySet())
@@ -58,7 +57,6 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 				{
 					packet.writeD(id); // server rank
 					packet.writeD(player.getInt("raceRank")); // race rank
-					
 					for (Integer id2 : _snapshotList.keySet())
 					{
 						final StatSet snapshot = _snapshotList.get(id2);

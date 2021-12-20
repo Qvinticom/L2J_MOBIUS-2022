@@ -37,7 +37,7 @@ public class PartySmallWindowAdd implements IClientOutgoingPacket
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_ADD.writeId(packet);
 		packet.writeD(_party.getLeaderObjectId()); // c3
-		packet.writeD(_party.getDistributionType().getId()); // packet.writeD(0x04); ?? //c3
+		packet.writeD(_party.getDistributionType().getId()); // packet.writeD(4); ?? //c3
 		packet.writeD(_member.getObjectId());
 		packet.writeS(_member.getName());
 		packet.writeD((int) _member.getCurrentCp()); // c4
@@ -48,8 +48,8 @@ public class PartySmallWindowAdd implements IClientOutgoingPacket
 		packet.writeD(_member.getMaxMp());
 		packet.writeD(_member.getLevel());
 		packet.writeD(_member.getClassId().getId());
-		packet.writeD(0x00); // ?
-		packet.writeD(0x00); // ?
+		packet.writeD(0); // ?
+		packet.writeD(0); // ?
 		return true;
 	}
 }

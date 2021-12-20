@@ -46,10 +46,10 @@ public class ExGetBossRecord implements IClientOutgoingPacket
 		packet.writeD(_totalPoints);
 		if (_bossRecordInfo == null)
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		else
 		{
@@ -58,7 +58,7 @@ public class ExGetBossRecord implements IClientOutgoingPacket
 			{
 				packet.writeD(entry.getKey());
 				packet.writeD(entry.getValue());
-				packet.writeD(0x00); // ??
+				packet.writeD(0); // ??
 			}
 		}
 		return true;

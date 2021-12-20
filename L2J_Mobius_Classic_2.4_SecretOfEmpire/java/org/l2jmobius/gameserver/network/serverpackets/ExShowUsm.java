@@ -44,7 +44,6 @@ public class ExShowUsm implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_USM.writeId(packet);
-		
 		packet.writeD(_videoId);
 		return true;
 	}

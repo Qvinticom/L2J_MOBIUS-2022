@@ -37,7 +37,6 @@ public class ExAskCoupleAction implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ASK_COUPLE_ACTION.writeId(packet);
-		
 		packet.writeD(_actionId);
 		packet.writeD(_objectId);
 		return true;

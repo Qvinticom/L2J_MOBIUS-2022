@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class CharSelectionInfo implements IClientOutgoingPacket
 {
 	private static final Logger LOGGER = Logger.getLogger(CharSelectionInfo.class.getName());
+	
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;
@@ -76,13 +77,10 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
-		
 		final int size = _characterPackages.size();
 		packet.writeD(size); // Created character count
-		
 		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		packet.writeC(0x00);
-		
+		packet.writeC(0);
 		long lastAccess = 0;
 		if (_activeId == -1)
 		{
@@ -95,7 +93,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		for (int i = 0; i < size; i++)
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
@@ -104,58 +101,45 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeS(_loginName); // Account name
 			packet.writeD(_sessionId); // Account ID
 			packet.writeD(charInfoPackage.getClanId()); // Clan ID
-			packet.writeD(0x00); // Builder level
-			
+			packet.writeD(0); // Builder level
 			packet.writeD(charInfoPackage.getSex()); // Sex
 			packet.writeD(charInfoPackage.getRace()); // Race
 			packet.writeD(charInfoPackage.getBaseClassId());
-			
-			packet.writeD(0x01); // GameServerName
-			
+			packet.writeD(1); // GameServerName
 			packet.writeD(charInfoPackage.getX());
 			packet.writeD(charInfoPackage.getY());
 			packet.writeD(charInfoPackage.getZ());
 			packet.writeF(charInfoPackage.getCurrentHp());
 			packet.writeF(charInfoPackage.getCurrentMp());
-			
 			packet.writeD((int) charInfoPackage.getSp());
 			packet.writeQ(charInfoPackage.getExp());
-			
 			packet.writeD(charInfoPackage.getLevel());
-			
 			packet.writeD(charInfoPackage.getKarma());
 			packet.writeD(charInfoPackage.getPkKills());
 			packet.writeD(charInfoPackage.getPvPKills());
-			
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 			for (int slot : getPaperdollOrder())
 			{
 				packet.writeD(charInfoPackage.getPaperdollItemId(slot));
 			}
-			
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
 			packet.writeD(charInfoPackage.getFace());
-			
 			packet.writeF(charInfoPackage.getMaxHp()); // Maximum HP
 			packet.writeF(charInfoPackage.getMaxMp()); // Maximum MP
-			
 			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - Chronos.currentTimeMillis()) / 1000) : 0);
 			packet.writeD(charInfoPackage.getClassId());
-			packet.writeD(i == _activeId ? 0x01 : 0x00);
-			
+			packet.writeD(i == _activeId ? 1 : 0);
 			packet.writeC(Math.min(charInfoPackage.getEnchantEffect(), 127));
 			packet.writeD(charInfoPackage.getAugmentationId());
-			
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
-			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
+			packet.writeD(0); // Currently on retail when you are on character select you don't see your transformation.
 		}
 		return true;
 	}
@@ -164,7 +148,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	{
 		CharSelectInfoPackage charInfopackage;
 		final List<CharSelectInfoPackage> characterList = new LinkedList<>();
-		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
@@ -177,7 +160,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					if (charInfopackage != null)
 					{
 						characterList.add(charInfopackage);
-						
 						final Player player = World.getInstance().getPlayer(charInfopackage.getObjectId());
 						if (player != null)
 						{
@@ -191,7 +173,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			LOGGER.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
 		}
-		
 		return characterList;
 	}
 	
@@ -232,7 +213,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			{
 				clan.removeClanMember(objectId, 0);
 			}
-			
 			GameClient.deleteCharByObjId(objectId);
 			return null;
 		}
@@ -251,20 +231,16 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		charInfopackage.setHairStyle(chardata.getInt("hairstyle"));
 		charInfopackage.setHairColor(chardata.getInt("haircolor"));
 		charInfopackage.setSex(chardata.getInt("sex"));
-		
 		charInfopackage.setExp(chardata.getLong("exp"));
 		charInfopackage.setSp(chardata.getLong("sp"));
 		charInfopackage.setVitalityPoints(chardata.getInt("vitality_points"));
 		charInfopackage.setClanId(chardata.getInt("clanid"));
-		
 		charInfopackage.setRace(chardata.getInt("race"));
-		
 		final int baseClassId = chardata.getInt("base_class");
 		final int activeClassId = chardata.getInt("classid");
 		charInfopackage.setX(chardata.getInt("x"));
 		charInfopackage.setY(chardata.getInt("y"));
 		charInfopackage.setZ(chardata.getInt("z"));
-		
 		final int faction = chardata.getInt("faction");
 		if (faction == 1)
 		{
@@ -274,7 +250,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			charInfopackage.setEvil();
 		}
-		
 		if (Config.MULTILANG_ENABLE)
 		{
 			String lang = chardata.getString("language");
@@ -284,22 +259,18 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			}
 			charInfopackage.setHtmlPrefix("data/lang/" + lang + "/");
 		}
-		
 		// if is in subclass, load subclass exp, sp, level info
 		if (baseClassId != activeClassId)
 		{
 			loadCharacterSubclassInfo(charInfopackage, objectId, activeClassId);
 		}
-		
 		charInfopackage.setClassId(activeClassId);
-		
 		// Get the augmentation id for equipped weapon
 		int weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
 		if (weaponObjId < 1)
 		{
 			weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
 		}
-		
 		if (weaponObjId > 0)
 		{
 			try (Connection con = DatabaseFactory.getConnection();
@@ -320,7 +291,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				LOGGER.log(Level.WARNING, "Could not restore augmentation info: " + e.getMessage(), e);
 			}
 		}
-		
 		// Check if the base class is set to zero and also doesn't match with the current active class, otherwise send the base class ID. This prevents chars created before base class was introduced from being displayed incorrectly.
 		if ((baseClassId == 0) && (activeClassId > 0))
 		{
@@ -330,7 +300,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			charInfopackage.setBaseClassId(baseClassId);
 		}
-		
 		charInfopackage.setDeleteTimer(deletetime);
 		charInfopackage.setLastAccess(chardata.getLong("lastAccess"));
 		return charInfopackage;

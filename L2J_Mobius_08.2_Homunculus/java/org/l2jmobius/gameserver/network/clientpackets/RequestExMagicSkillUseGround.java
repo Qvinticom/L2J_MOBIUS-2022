@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * Fromat:(ch) dddddc
+ * Format:(ch) dddddc
  * @author -Wooden-
  */
 public class RequestExMagicSkillUseGround implements IClientIncomingPacket

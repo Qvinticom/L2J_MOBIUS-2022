@@ -37,7 +37,6 @@ public class ExActivateHomunculusResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ACTIVATE_HOMUNCULUS_RESULT.writeId(packet);
-		
 		packet.writeD(1); // success
 		if (_activate)
 		{

@@ -45,13 +45,11 @@ public class ReceiveVipProductList implements IClientOutgoingPacket
 		}
 		final Collection<PrimeShopGroup> products = PrimeShopData.getInstance().getPrimeItems().values();
 		final PrimeShopGroup gift = PrimeShopData.getInstance().getVipGiftOfTier(_player.getVipTier());
-		
 		OutgoingPackets.RECIVE_VIP_PRODUCT_LIST.writeId(packet);
 		packet.writeQ(_player.getAdena());
 		packet.writeQ(_player.getGoldCoin()); // Gold Coin Amount
 		packet.writeQ(_player.getSilverCoin()); // Silver Coin Amount
 		packet.writeC(1); // Show Reward tab
-		
 		if (gift != null)
 		{
 			packet.writeD(products.size() + 1);
@@ -61,7 +59,6 @@ public class ReceiveVipProductList implements IClientOutgoingPacket
 		{
 			packet.writeD(products.size());
 		}
-		
 		for (PrimeShopGroup product : products)
 		{
 			writeProduct(product, packet);
@@ -79,7 +76,6 @@ public class ReceiveVipProductList implements IClientOutgoingPacket
 		buffer.writeC(product.getPanelType()); // NEW - 6; HOT - 5 ... Unk
 		buffer.writeC(product.getVipTier());
 		buffer.writeC(10);
-		
 		buffer.writeC(product.getItems().size());
 		for (PrimeShopItem item : product.getItems())
 		{

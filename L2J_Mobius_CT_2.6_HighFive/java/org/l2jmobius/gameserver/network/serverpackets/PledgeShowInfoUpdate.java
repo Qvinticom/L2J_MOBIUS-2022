@@ -42,8 +42,8 @@ public class PledgeShowInfoUpdate implements IClientOutgoingPacket
 		packet.writeD(_clan.getFortId());
 		packet.writeD(_clan.getRank());
 		packet.writeD(_clan.getReputationScore()); // clan reputation score
-		packet.writeD(0x00); // ?
-		packet.writeD(0x00); // ?
+		packet.writeD(0); // ?
+		packet.writeD(0); // ?
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName()); // c5
 		packet.writeD(_clan.getAllyCrestId()); // c5

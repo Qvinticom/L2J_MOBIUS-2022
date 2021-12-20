@@ -41,7 +41,6 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_CASTLE_INFO.writeId(packet);
-		
 		final Collection<Castle> castles = CastleManager.getInstance().getCastles();
 		packet.writeD(castles.size());
 		for (Castle castle : castles)

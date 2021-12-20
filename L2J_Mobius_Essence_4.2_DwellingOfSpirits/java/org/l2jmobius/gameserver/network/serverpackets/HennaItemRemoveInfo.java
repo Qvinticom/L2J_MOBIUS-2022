@@ -40,12 +40,11 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_UNEQUIP_INFO.writeId(packet);
-		
 		packet.writeD(_henna.getDyeId()); // symbol Id
 		packet.writeD(_henna.getDyeItemId()); // item id of dye
 		packet.writeQ(_henna.getCancelCount()); // total amount of dye require
 		packet.writeQ(_henna.getCancelFee()); // total amount of Adena require to remove symbol
-		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // able to remove or not
+		packet.writeD(_henna.isAllowedClass(_player.getClassId()) ? 1 : 0); // able to remove or not
 		packet.writeQ(_player.getAdena());
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeH(_player.getINT() - _player.getHennaValue(BaseStat.INT)); // equip INT
@@ -59,11 +58,11 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeH(_player.getDEX() - _player.getHennaValue(BaseStat.DEX)); // equip DEX
 		packet.writeD(_player.getWIT()); // current WIT
 		packet.writeH(_player.getWIT() - _player.getHennaValue(BaseStat.WIT)); // equip WIT
-		packet.writeD(0x00); // current LUC
-		packet.writeH(0x00); // equip LUC
-		packet.writeD(0x00); // current CHA
-		packet.writeH(0x00); // equip CHA
-		packet.writeD(0x00);
+		packet.writeD(0); // current LUC
+		packet.writeH(0); // equip LUC
+		packet.writeD(0); // current CHA
+		packet.writeH(0); // equip CHA
+		packet.writeD(0);
 		return true;
 	}
 }

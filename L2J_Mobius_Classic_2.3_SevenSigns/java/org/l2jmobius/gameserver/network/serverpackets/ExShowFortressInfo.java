@@ -39,7 +39,6 @@ public class ExShowFortressInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_FORTRESS_INFO.writeId(packet);
-		
 		final Collection<Fort> forts = FortManager.getInstance().getForts();
 		packet.writeD(forts.size());
 		for (Fort fort : forts)
@@ -47,7 +46,7 @@ public class ExShowFortressInfo implements IClientOutgoingPacket
 			final Clan clan = fort.getOwnerClan();
 			packet.writeD(fort.getResidenceId());
 			packet.writeS(clan != null ? clan.getName() : "");
-			packet.writeD(fort.getSiege().isInProgress() ? 0x01 : 0x00);
+			packet.writeD(fort.getSiege().isInProgress() ? 1 : 0);
 			// Time of possession
 			packet.writeD(fort.getOwnedTime());
 		}

@@ -38,12 +38,10 @@ public class SendMacroList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MACRO_LIST.writeId(packet);
-		
 		packet.writeD(_rev); // macro change revision (changes after each macro edition)
-		packet.writeC(0x00); // unknown
+		packet.writeC(0); // unknown
 		packet.writeC(_count); // count of Macros
 		packet.writeC(_macro != null ? 1 : 0); // unknown
-		
 		if (_macro != null)
 		{
 			packet.writeD(_macro.getId()); // Macro ID
@@ -51,9 +49,7 @@ public class SendMacroList implements IClientOutgoingPacket
 			packet.writeS(_macro.getDescr()); // Desc
 			packet.writeS(_macro.getAcronym()); // acronym
 			packet.writeC(_macro.getIcon()); // icon
-			
 			packet.writeC(_macro.getCommands().size()); // count
-			
 			int i = 1;
 			for (MacroCmd cmd : _macro.getCommands())
 			{

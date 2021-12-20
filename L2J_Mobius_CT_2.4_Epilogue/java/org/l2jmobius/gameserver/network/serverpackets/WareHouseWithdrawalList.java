@@ -30,6 +30,7 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 	public static final int CLAN = 4;
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
+	
 	private long _playerAdena;
 	private Collection<Item> _items;
 	/**
@@ -49,7 +50,6 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 			PacketLogger.warning("Error while sending withdraw request to: " + player.getName());
 			return;
 		}
-		
 		_playerAdena = player.getAdena();
 		_items = player.getActiveWarehouse().getItems();
 		_whType = type;
@@ -62,7 +62,6 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 		packet.writeH(_whType);
 		packet.writeQ(_playerAdena);
 		packet.writeH(_items.size());
-		
 		for (Item item : _items)
 		{
 			packet.writeH(item.getItem().getType1());
@@ -73,7 +72,7 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 			packet.writeH(item.getCustomType1());
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeH(item.getCustomType2());
 			packet.writeD(item.getObjectId());
 			if (item.isAugmented())
@@ -83,20 +82,17 @@ public class WareHouseWithdrawalList implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeQ(0x00);
+				packet.writeQ(0);
 			}
-			
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
 			for (byte i = 0; i < 6; i++)
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			
 			packet.writeD(item.getMana());
 			// T2
 			packet.writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1);
-			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);

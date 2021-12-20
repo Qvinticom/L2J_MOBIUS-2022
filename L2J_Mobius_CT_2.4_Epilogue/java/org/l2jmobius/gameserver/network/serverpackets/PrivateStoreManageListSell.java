@@ -49,7 +49,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 		packet.writeD(_objId);
 		packet.writeD(_packageSale ? 1 : 0); // Package sell
 		packet.writeQ(_playerAdena);
-		
 		// section2
 		packet.writeD(_itemList.size()); // for potential sells
 		for (TradeItem item : _itemList)
@@ -63,7 +62,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeH(item.getCustomType2());
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeQ(item.getPrice()); // store price
-			
 			// T1
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
@@ -71,7 +69,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);
@@ -87,11 +84,10 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeQ(item.getCount());
 			packet.writeH(0);
 			packet.writeH(item.getEnchant()); // enchant level
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeQ(item.getPrice()); // your price
 			packet.writeQ(item.getItem().getReferencePrice()); // store price
-			
 			// T1
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
@@ -99,7 +95,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);

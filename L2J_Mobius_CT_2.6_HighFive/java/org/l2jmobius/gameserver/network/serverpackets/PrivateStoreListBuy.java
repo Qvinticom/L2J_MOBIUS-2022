@@ -43,9 +43,7 @@ public class PrivateStoreListBuy extends AbstractItemPacket
 		OutgoingPackets.PRIVATE_STORE_BUY_LIST.writeId(packet);
 		packet.writeD(_objId);
 		packet.writeQ(_playerAdena);
-		
 		packet.writeD(_items.size());
-		
 		for (TradeItem item : _items)
 		{
 			writeItem(packet, item);

@@ -59,11 +59,9 @@ public class MoveToPawn implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MOVE_TO_PAWN.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_targetId);
 		packet.writeD(_distance);
-		
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);

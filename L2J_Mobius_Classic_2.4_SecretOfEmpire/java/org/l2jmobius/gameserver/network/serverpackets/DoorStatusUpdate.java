@@ -33,7 +33,6 @@ public class DoorStatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DOOR_STATUS_UPDATE.writeId(packet);
-		
 		packet.writeD(_door.getObjectId());
 		packet.writeD(_door.isOpen() ? 0 : 1);
 		packet.writeD(_door.getDamage());

@@ -35,7 +35,6 @@ public class PetDelete implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PET_DELETE.writeId(packet);
-		
 		packet.writeD(_petType);
 		packet.writeD(_petObjId);
 		return true;

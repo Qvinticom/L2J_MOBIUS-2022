@@ -55,7 +55,7 @@ public class Earthquake implements IClientOutgoingPacket
 		packet.writeD(_z);
 		packet.writeD(_intensity);
 		packet.writeD(_duration);
-		packet.writeD(0x00); // Unknown
+		packet.writeD(0); // Unknown
 		return true;
 	}
 }

@@ -53,10 +53,10 @@ public class ExFishingStart implements IClientOutgoingPacket
 		packet.writeD(_x); // x poisson
 		packet.writeD(_y); // y poisson
 		packet.writeD(_z); // z poisson
-		packet.writeC(0x00); // night lure
-		packet.writeC(0x00); // ??
-		packet.writeC((_fishType >= 7) && (_fishType <= 9) ? 0x01 : 0x00); // 0 = day lure 1 = night lure
-		packet.writeC(0x00);
+		packet.writeC(0); // night lure
+		packet.writeC(0); // ??
+		packet.writeC((_fishType >= 7) && (_fishType <= 9) ? 1 : 0); // 0 = day lure 1 = night lure
+		packet.writeC(0);
 		return true;
 	}
 }

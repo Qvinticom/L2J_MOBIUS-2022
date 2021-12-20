@@ -63,7 +63,6 @@ public class PartySpelled implements IClientOutgoingPacket
 		OutgoingPackets.PARTY_SPELLED.writeId(packet);
 		packet.writeD(_creature instanceof Servitor ? 2 : _creature instanceof Pet ? 1 : 0);
 		packet.writeD(_creature.getObjectId());
-		
 		// C4 does not support more than 20 effects in party window, so limiting them makes no difference.
 		// This check ignores first effects, so there is space for last effects to be viewable by party members.
 		// It may also help healers be aware of cursed members.
@@ -77,7 +76,6 @@ public class PartySpelled implements IClientOutgoingPacket
 		{
 			packet.writeD(_effects.size());
 		}
-		
 		for (; size < _effects.size(); size++)
 		{
 			final Effect temp = _effects.get(size);
@@ -85,7 +83,6 @@ public class PartySpelled implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			packet.writeD(temp._skillId);
 			packet.writeH(temp._dat);
 			packet.writeD(temp._duration / 1000);

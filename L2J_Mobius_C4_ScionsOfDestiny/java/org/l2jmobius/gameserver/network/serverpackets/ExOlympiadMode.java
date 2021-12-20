@@ -46,12 +46,10 @@ public class ExOlympiadMode implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		if (_mode == 3)
 		{
 			_player.setObserverMode(true);
 		}
-		
 		OutgoingPackets.EX_OLYMPIAD_MODE.writeId(packet);
 		packet.writeC(_mode);
 		return true;

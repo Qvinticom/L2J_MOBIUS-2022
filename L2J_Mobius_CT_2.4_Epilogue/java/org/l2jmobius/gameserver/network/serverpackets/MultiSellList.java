@@ -56,28 +56,25 @@ public class MultiSellList implements IClientOutgoingPacket
 		packet.writeD(_finished ? 1 : 0); // finished
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
-		
 		Entry ent;
 		while (_size-- > 0)
 		{
 			ent = _list.getEntries().get(_index++);
 			packet.writeD(ent.getEntryId());
 			packet.writeC(ent.isStackable() ? 1 : 0);
-			packet.writeH(0x00); // C6
-			packet.writeD(0x00); // C6
-			packet.writeD(0x00); // T1
+			packet.writeH(0); // C6
+			packet.writeD(0); // C6
+			packet.writeD(0); // T1
 			packet.writeH(65534); // T1
-			packet.writeH(0x00); // T1
-			packet.writeH(0x00); // T1
-			packet.writeH(0x00); // T1
-			packet.writeH(0x00); // T1
-			packet.writeH(0x00); // T1
-			packet.writeH(0x00); // T1
-			packet.writeH(0x00); // T1
-			
+			packet.writeH(0); // T1
+			packet.writeH(0); // T1
+			packet.writeH(0); // T1
+			packet.writeH(0); // T1
+			packet.writeH(0); // T1
+			packet.writeH(0); // T1
+			packet.writeH(0); // T1
 			packet.writeH(ent.getProducts().size());
 			packet.writeH(ent.getIngredients().size());
-			
 			for (Ingredient ing : ent.getProducts())
 			{
 				if (ing.getTemplate() != null)
@@ -97,7 +94,7 @@ public class MultiSellList implements IClientOutgoingPacket
 				{
 					packet.writeH(ing.getItemInfo().getEnchantLevel()); // enchant level
 					packet.writeD(ing.getItemInfo().getAugmentId()); // augment id
-					packet.writeD(0x00); // mana
+					packet.writeD(0); // mana
 					packet.writeH(ing.getItemInfo().getElementId()); // attack element
 					packet.writeH(ing.getItemInfo().getElementPower()); // element power
 					packet.writeH(ing.getItemInfo().getElementals()[0]); // fire
@@ -110,19 +107,18 @@ public class MultiSellList implements IClientOutgoingPacket
 				else
 				{
 					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD(0x00); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeH(0x00); // attack element
-					packet.writeH(0x00); // element power
-					packet.writeH(0x00); // fire
-					packet.writeH(0x00); // water
-					packet.writeH(0x00); // wind
-					packet.writeH(0x00); // earth
-					packet.writeH(0x00); // holy
-					packet.writeH(0x00); // dark
+					packet.writeD(0); // augment id
+					packet.writeD(0); // mana
+					packet.writeH(0); // attack element
+					packet.writeH(0); // element power
+					packet.writeH(0); // fire
+					packet.writeH(0); // water
+					packet.writeH(0); // wind
+					packet.writeH(0); // earth
+					packet.writeH(0); // holy
+					packet.writeH(0); // dark
 				}
 			}
-			
 			for (Ingredient ing : ent.getIngredients())
 			{
 				packet.writeD(ing.getTemplate() != null ? ing.getTemplate().getDisplayId() : ing.getItemId());
@@ -132,7 +128,7 @@ public class MultiSellList implements IClientOutgoingPacket
 				{
 					packet.writeH(ing.getItemInfo().getEnchantLevel()); // enchant level
 					packet.writeD(ing.getItemInfo().getAugmentId()); // augment id
-					packet.writeD(0x00); // mana
+					packet.writeD(0); // mana
 					packet.writeH(ing.getItemInfo().getElementId()); // attack element
 					packet.writeH(ing.getItemInfo().getElementPower()); // element power
 					packet.writeH(ing.getItemInfo().getElementals()[0]); // fire
@@ -145,16 +141,16 @@ public class MultiSellList implements IClientOutgoingPacket
 				else
 				{
 					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD(0x00); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeH(0x00); // attack element
-					packet.writeH(0x00); // element power
-					packet.writeH(0x00); // fire
-					packet.writeH(0x00); // water
-					packet.writeH(0x00); // wind
-					packet.writeH(0x00); // earth
-					packet.writeH(0x00); // holy
-					packet.writeH(0x00); // dark
+					packet.writeD(0); // augment id
+					packet.writeD(0); // mana
+					packet.writeH(0); // attack element
+					packet.writeH(0); // element power
+					packet.writeH(0); // fire
+					packet.writeH(0); // water
+					packet.writeH(0); // wind
+					packet.writeH(0); // earth
+					packet.writeH(0); // holy
+					packet.writeH(0); // dark
 				}
 			}
 		}

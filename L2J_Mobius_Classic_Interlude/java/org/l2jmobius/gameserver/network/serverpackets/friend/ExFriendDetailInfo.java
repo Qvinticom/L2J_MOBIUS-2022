@@ -47,9 +47,7 @@ public class ExFriendDetailInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FRIEND_DETAIL_INFO.writeId(packet);
-		
 		packet.writeD(_objectId);
-		
 		if (_friend == null)
 		{
 			packet.writeS(_name);

@@ -45,7 +45,6 @@ public class Attack implements IClientOutgoingPacket
 		_attackerObjId = attacker.getObjectId();
 		_attackerLoc = new Location(attacker);
 		_targetLoc = new Location(target);
-		
 		final Player player = attacker.getActingPlayer();
 		if (player == null)
 		{
@@ -111,7 +110,6 @@ public class Attack implements IClientOutgoingPacket
 		final Iterator<Hit> it = _hits.iterator();
 		final Hit firstHit = it.next();
 		OutgoingPackets.ATTACK.writeId(packet);
-		
 		packet.writeD(_attackerObjId);
 		packet.writeD(firstHit.getTargetId());
 		packet.writeD(_soulshotVisualSubstitute); // Ertheia
@@ -121,13 +119,11 @@ public class Attack implements IClientOutgoingPacket
 		packet.writeD(_attackerLoc.getX());
 		packet.writeD(_attackerLoc.getY());
 		packet.writeD(_attackerLoc.getZ());
-		
 		packet.writeH(_hits.size() - 1);
 		while (it.hasNext())
 		{
 			writeHit(packet, it.next());
 		}
-		
 		packet.writeD(_targetLoc.getX());
 		packet.writeD(_targetLoc.getY());
 		packet.writeD(_targetLoc.getZ());

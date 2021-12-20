@@ -39,7 +39,6 @@ public class ChairSit implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHAIR_SIT.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_staticObjectId);
 		return true;

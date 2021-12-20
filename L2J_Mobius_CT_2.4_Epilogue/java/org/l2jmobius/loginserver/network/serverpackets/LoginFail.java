@@ -21,7 +21,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.loginserver.network.OutgoingPackets;
 
 /**
- * Fromat: d d: the failure reason
+ * Format: d d: the failure reason
  */
 public class LoginFail implements IOutgoingPacket
 {

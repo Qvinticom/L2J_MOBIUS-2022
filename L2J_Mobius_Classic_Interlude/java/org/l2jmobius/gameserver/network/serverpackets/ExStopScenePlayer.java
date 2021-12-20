@@ -36,7 +36,6 @@ public class ExStopScenePlayer implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_STOP_SCENE_PLAYER.writeId(packet);
-		
 		packet.writeD(_movie.getClientId());
 		return true;
 	}

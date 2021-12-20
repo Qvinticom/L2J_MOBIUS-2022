@@ -39,7 +39,6 @@ public class ExResponseCommissionRegister implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_REGISTER.writeId(packet);
-		
 		packet.writeD(_result);
 		return true;
 	}

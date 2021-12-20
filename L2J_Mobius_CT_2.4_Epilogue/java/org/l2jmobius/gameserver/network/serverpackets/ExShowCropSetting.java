@@ -62,10 +62,8 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_CROP_SETTING.writeId(packet);
-		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_seeds.size()); // size
-		
 		CropProcure cp;
 		for (Seed s : _seeds)
 		{

@@ -37,14 +37,12 @@ public class NewCharacterSuccess implements IClientOutgoingPacket
 	{
 		OutgoingPackets.NEW_CHARACTER_SUCCESS.writeId(packet);
 		packet.writeD(_chars.size());
-		
 		for (PlayerTemplate chr : _chars)
 		{
 			if (chr == null)
 			{
 				continue;
 			}
-			
 			// TODO: Unhardcode these
 			packet.writeD(chr.getRace().ordinal());
 			packet.writeD(chr.getClassId().getId());

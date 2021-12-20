@@ -40,7 +40,6 @@ public class ExHeroList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_HERO_LIST.writeId(packet);
-		
 		packet.writeD(_heroList.size());
 		for (StatSet hero : _heroList.values())
 		{

@@ -28,14 +28,15 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ConfirmDlg implements IClientOutgoingPacket
 {
+	private static final int TYPE_TEXT = 0;
+	private static final int TYPE_NUMBER = 1;
+	private static final int TYPE_NPC_NAME = 2;
+	private static final int TYPE_ITEM_NAME = 3;
+	private static final int TYPE_SKILL_NAME = 4;
+	private static final int TYPE_ZONE_NAME = 7;
+	
 	private final int _messageId;
 	private int _skillLevel = 1;
-	private static final int TYPE_ZONE_NAME = 7;
-	private static final int TYPE_SKILL_NAME = 4;
-	private static final int TYPE_ITEM_NAME = 3;
-	private static final int TYPE_NPC_NAME = 2;
-	private static final int TYPE_NUMBER = 1;
-	private static final int TYPE_TEXT = 0;
 	private final List<Integer> _types = new ArrayList<>();
 	private final List<Object> _values = new ArrayList<>();
 	private int _time = 0;
@@ -169,7 +170,6 @@ public class ConfirmDlg implements IClientOutgoingPacket
 			{
 				packet.writeD(_requesterId);
 			}
-			
 			if ((_time > 0) && (_targetPlayer != null))
 			{
 				_targetPlayer.addConfirmDlgRequestTime(_requesterId, _time);
@@ -177,9 +177,9 @@ public class ConfirmDlg implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		return true;
 	}

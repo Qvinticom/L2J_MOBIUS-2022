@@ -24,9 +24,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class Ex2ndPasswordVerify implements IClientOutgoingPacket
 {
-	public static final int PASSWORD_OK = 0x00;
-	public static final int PASSWORD_WRONG = 0x01;
-	public static final int PASSWORD_BAN = 0x02;
+	public static final int PASSWORD_OK = 0;
+	public static final int PASSWORD_WRONG = 1;
+	public static final int PASSWORD_BAN = 2;
 	
 	private final int _wrongTentatives;
 	private final int _mode;

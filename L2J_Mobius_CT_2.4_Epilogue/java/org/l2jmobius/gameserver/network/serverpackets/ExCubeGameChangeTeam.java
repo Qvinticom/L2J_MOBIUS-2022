@@ -43,11 +43,10 @@ public class ExCubeGameChangeTeam implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
-		packet.writeD(0x05);
-		
+		packet.writeD(5);
 		packet.writeD(_player.getObjectId());
-		packet.writeD(_fromRedTeam ? 0x01 : 0x00);
-		packet.writeD(_fromRedTeam ? 0x00 : 0x01);
+		packet.writeD(_fromRedTeam ? 1 : 0);
+		packet.writeD(_fromRedTeam ? 0 : 1);
 		return true;
 	}
 }

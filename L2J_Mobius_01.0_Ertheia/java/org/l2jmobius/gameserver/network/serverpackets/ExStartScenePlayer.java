@@ -36,7 +36,6 @@ public class ExStartScenePlayer implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_START_SCENE_PLAYER.writeId(packet);
-		
 		packet.writeD(_movie.getClientId());
 		return true;
 	}

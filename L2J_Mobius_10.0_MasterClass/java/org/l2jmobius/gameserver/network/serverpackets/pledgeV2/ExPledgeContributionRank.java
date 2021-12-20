@@ -44,10 +44,8 @@ public class ExPledgeContributionRank implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_PLEDGE_CONTRIBUTION_RANK.writeId(packet);
 		packet.writeC(_cycle);
-		
 		packet.writeD(_clan.getMembersCount());
 		int order = 1;
 		for (ClanMember member : _clan.getMembers())
@@ -70,7 +68,6 @@ public class ExPledgeContributionRank implements IClientOutgoingPacket
 				packet.writeD(member.getClanContributionTotal());
 			}
 		}
-		
 		return true;
 	}
 }

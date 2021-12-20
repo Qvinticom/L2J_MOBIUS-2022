@@ -38,7 +38,6 @@ public class ExOlympiadMode implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_MODE.writeId(packet);
-		
 		packet.writeC(_mode);
 		return true;
 	}

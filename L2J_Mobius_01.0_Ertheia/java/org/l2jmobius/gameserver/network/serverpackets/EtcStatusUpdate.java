@@ -41,7 +41,6 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ETC_STATUS_UPDATE.writeId(packet);
-		
 		packet.writeC(_player.getCharges()); // 1-7 increase force, level
 		packet.writeD(_player.getWeightPenalty()); // 1-4 weight penalty, level (1=50%, 2=66.6%, 3=80%, 4=100%)
 		packet.writeC(_player.getExpertiseWeaponPenalty()); // Weapon Grade Penalty [1-4]

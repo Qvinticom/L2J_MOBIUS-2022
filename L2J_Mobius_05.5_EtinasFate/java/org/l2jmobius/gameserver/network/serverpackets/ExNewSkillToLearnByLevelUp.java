@@ -34,7 +34,6 @@ public class ExNewSkillToLearnByLevelUp implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_NEW_SKILL_TO_LEARN_BY_LEVEL_UP.writeId(packet);
-		
 		return true;
 	}
 }

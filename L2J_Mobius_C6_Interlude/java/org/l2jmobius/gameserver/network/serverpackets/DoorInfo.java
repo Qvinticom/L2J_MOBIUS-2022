@@ -41,7 +41,7 @@ public class DoorInfo implements IClientOutgoingPacket
 		OutgoingPackets.DOOR_INFO.writeId(packet);
 		packet.writeD(_door.getObjectId());
 		packet.writeD(_door.getDoorId());
-		packet.writeD(_showHp ? 0x01 : 0x00);
+		packet.writeD(_showHp ? 1 : 0);
 		return true;
 	}
 }

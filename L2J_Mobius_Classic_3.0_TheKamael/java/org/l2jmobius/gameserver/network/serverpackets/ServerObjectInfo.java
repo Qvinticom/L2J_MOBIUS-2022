@@ -55,7 +55,6 @@ public class ServerObjectInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SERVER_OBJECT_INFO.writeId(packet);
-		
 		packet.writeD(_activeChar.getObjectId());
 		packet.writeD(_displayId + 1000000);
 		packet.writeS(_name); // name
@@ -70,8 +69,8 @@ public class ServerObjectInfo implements IClientOutgoingPacket
 		packet.writeF(_collisionHeight);
 		packet.writeD((int) (_isAttackable ? _activeChar.getCurrentHp() : 0));
 		packet.writeD(_isAttackable ? _activeChar.getMaxHp() : 0);
-		packet.writeD(0x01); // object type
-		packet.writeD(0x00); // special effects
+		packet.writeD(1); // object type
+		packet.writeD(0); // special effects
 		return true;
 	}
 }

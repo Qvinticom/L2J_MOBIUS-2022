@@ -53,7 +53,6 @@ public class StopMove implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.STOP_MOVE.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_x);
 		packet.writeD(_y);

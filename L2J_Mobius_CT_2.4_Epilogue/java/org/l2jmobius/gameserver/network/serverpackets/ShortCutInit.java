@@ -33,7 +33,6 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		_shortCuts = player.getAllShortCuts();
 	}
 	
@@ -46,26 +45,25 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			packet.writeD(sc.getType().ordinal());
 			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
-			
 			switch (sc.getType())
 			{
 				case ITEM:
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01);
+					packet.writeD(1);
 					packet.writeD(sc.getSharedReuseGroup());
-					packet.writeD(0x00);
-					packet.writeD(0x00);
-					packet.writeH(0x00);
-					packet.writeH(0x00);
+					packet.writeD(0);
+					packet.writeD(0);
+					packet.writeH(0);
+					packet.writeH(0);
 					break;
 				}
 				case SKILL:
 				{
 					packet.writeD(sc.getId());
 					packet.writeD(sc.getLevel());
-					packet.writeC(0x00); // C5
-					packet.writeD(0x01); // C6
+					packet.writeC(0); // C5
+					packet.writeD(1); // C6
 					break;
 				}
 				case ACTION:
@@ -74,7 +72,7 @@ public class ShortCutInit implements IClientOutgoingPacket
 				case BOOKMARK:
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(0x01); // C6
+					packet.writeD(1); // C6
 				}
 			}
 		}

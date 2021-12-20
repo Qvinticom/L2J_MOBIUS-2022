@@ -33,7 +33,6 @@ public class FriendAddRequest implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FRIEND_ADD_REQUEST.writeId(packet);
-		
 		packet.writeS(_requestorName);
 		return true;
 	}

@@ -38,7 +38,6 @@ public class ExRaidBossSpawnInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RAID_BOSS_SPAWN_INFO.writeId(packet);
-		
 		packet.writeD(_bossIds.size()); // alive count
 		for (int id : _bossIds) // alive ids
 		{

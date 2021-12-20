@@ -32,14 +32,13 @@ public class ExVariationResult implements IClientOutgoingPacket
 	{
 		_option1 = option1;
 		_option2 = option2;
-		_success = success ? 0x01 : 0x00;
+		_success = success ? 1 : 0;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VARIATION_RESULT.writeId(packet);
-		
 		packet.writeD(_option1);
 		packet.writeD(_option2);
 		packet.writeD(_success);

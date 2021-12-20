@@ -106,7 +106,6 @@ public class NpcSay implements IClientOutgoingPacket
 			{
 				_parameters = new ArrayList<>();
 			}
-			
 			for (String item : params)
 			{
 				if ((item != null) && (item.length() > 0))
@@ -127,11 +126,9 @@ public class NpcSay implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.NPC_SAY.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_textType.getClientId());
 		packet.writeD(_npcId);
-		
 		// Localisation related.
 		if (_lang != null)
 		{
@@ -147,7 +144,6 @@ public class NpcSay implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{

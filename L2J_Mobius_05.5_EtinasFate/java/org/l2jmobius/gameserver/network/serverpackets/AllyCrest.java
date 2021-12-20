@@ -44,7 +44,6 @@ public class AllyCrest implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ALLIANCE_CREST.writeId(packet);
-		
 		packet.writeD(Config.SERVER_ID);
 		packet.writeD(_crestId);
 		if (_data != null)

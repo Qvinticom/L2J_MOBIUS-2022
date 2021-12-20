@@ -96,23 +96,19 @@ public class Attack implements IClientOutgoingPacket
 	{
 		final Iterator<Hit> it = _hits.iterator();
 		OutgoingPackets.ATTACK.writeId(packet);
-		
 		packet.writeD(_attackerObjId);
 		writeHit(packet, it.next());
 		packet.writeD(_attackerLoc.getX());
 		packet.writeD(_attackerLoc.getY());
 		packet.writeD(_attackerLoc.getZ());
-		
 		packet.writeH(_hits.size() - 1);
 		while (it.hasNext())
 		{
 			writeHit(packet, it.next());
 		}
-		
 		packet.writeD(_targetLoc.getX());
 		packet.writeD(_targetLoc.getY());
 		packet.writeD(_targetLoc.getZ());
-		
 		return true;
 	}
 }

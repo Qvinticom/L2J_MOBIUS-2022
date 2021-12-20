@@ -55,7 +55,6 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_MY_RANKING_INFO.writeId(packet);
-		
 		final Date date = new Date();
 		final Calendar calendar = new GregorianCalendar();
 		calendar.setTime(date);
@@ -101,7 +100,6 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 			{
 				PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 			}
-			
 			int previousPlace = 0;
 			int previousWins = 0;
 			int previousLoses = 0;
@@ -130,7 +128,6 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 			{
 				PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 			}
-			
 			int heroCount = 0;
 			int legendCount = 0;
 			if (Hero.getInstance().getCompleteHeroes().containsKey(_player.getObjectId()))
@@ -139,7 +136,6 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 				heroCount = hero.getInt("count", 0);
 				legendCount = hero.getInt("legend_count", 0);
 			}
-			
 			packet.writeD(year); // Year
 			packet.writeD(month); // Month
 			packet.writeD(Olympiad.getInstance().getCurrentCycle() - 1); // cycle ?

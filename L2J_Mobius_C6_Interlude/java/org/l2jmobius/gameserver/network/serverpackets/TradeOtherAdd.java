@@ -37,20 +37,17 @@ public class TradeOtherAdd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TRADE_OTHER_ADD.writeId(packet);
-		
 		packet.writeH(1); // item count
-		
 		packet.writeH(_item.getItem().getType1()); // item type1
 		packet.writeD(_item.getObjectId());
 		packet.writeD(_item.getItem().getItemId());
 		packet.writeD(_item.getCount());
 		packet.writeH(_item.getItem().getType2()); // item type2
-		packet.writeH(0x00); // ?
-		
+		packet.writeH(0); // ?
 		packet.writeD(_item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 		packet.writeH(_item.getEnchant()); // enchant level
-		packet.writeH(0x00); // ?
-		packet.writeH(0x00);
+		packet.writeH(0); // ?
+		packet.writeH(0);
 		return true;
 	}
 }

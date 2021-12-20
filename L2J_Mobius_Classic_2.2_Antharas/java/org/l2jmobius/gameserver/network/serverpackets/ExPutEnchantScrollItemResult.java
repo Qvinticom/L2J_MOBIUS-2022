@@ -35,7 +35,6 @@ public class ExPutEnchantScrollItemResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_ENCHANT_SCROLL_ITEM_RESULT.writeId(packet);
-		
 		packet.writeD(_result);
 		return true;
 	}

@@ -38,7 +38,6 @@ public class ExEnchantSkillResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_RESULT.writeId(packet);
-		
 		packet.writeD(_enchanted ? 1 : 0);
 		return true;
 	}

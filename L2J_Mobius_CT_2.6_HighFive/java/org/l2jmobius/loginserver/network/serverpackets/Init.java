@@ -52,7 +52,6 @@ public class Init implements IOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.INIT.writeId(packet);
-		
 		packet.writeD(_sessionId); // session id
 		packet.writeD(0x0000c621); // protocol revision
 		

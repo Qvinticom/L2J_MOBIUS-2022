@@ -47,13 +47,12 @@ public class TargetSelected implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TARGET_SELECTED.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_targetObjId);
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
-		packet.writeD(0x00); // ?
+		packet.writeD(0); // ?
 		return true;
 	}
 }

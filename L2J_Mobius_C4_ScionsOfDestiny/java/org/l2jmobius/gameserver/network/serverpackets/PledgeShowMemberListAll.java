@@ -49,13 +49,10 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_player.getLevel()); // ??
 		packet.writeD(_clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis() ? 3 : 0);
 		packet.writeD(0);
-		
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
-		
 		packet.writeD(_clan.isAtWar()); // new c3
-		
 		packet.writeD(_clan.getMembers().size() - 1);
 		for (ClanMember m : _clan.getMembers())
 		{
@@ -64,7 +61,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			packet.writeS(m.getName());
 			packet.writeD(m.getLevel());
 			packet.writeD(m.getClassId());

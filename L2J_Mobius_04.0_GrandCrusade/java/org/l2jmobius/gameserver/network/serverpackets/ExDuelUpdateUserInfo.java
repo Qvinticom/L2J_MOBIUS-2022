@@ -36,7 +36,6 @@ public class ExDuelUpdateUserInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DUEL_UPDATE_USER_INFO.writeId(packet);
-		
 		packet.writeS(_player.getName());
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_player.getClassId().getId());

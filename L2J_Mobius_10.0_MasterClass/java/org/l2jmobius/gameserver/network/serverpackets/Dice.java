@@ -50,7 +50,6 @@ public class Dice implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.DICE.writeId(packet);
-		
 		packet.writeD(_objectId); // object id of player
 		packet.writeD(_itemId); // item id of dice (spade) 4625,4626,4627,4628
 		packet.writeD(_number); // number rolled

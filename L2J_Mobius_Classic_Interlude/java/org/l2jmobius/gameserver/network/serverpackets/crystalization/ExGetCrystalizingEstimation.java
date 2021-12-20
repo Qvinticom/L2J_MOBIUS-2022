@@ -39,7 +39,6 @@ public class ExGetCrystalizingEstimation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_GET_CRYSTALIZING_ESTIMATION.writeId(packet);
-		
 		packet.writeD(_items.size());
 		for (ItemChanceHolder holder : _items)
 		{

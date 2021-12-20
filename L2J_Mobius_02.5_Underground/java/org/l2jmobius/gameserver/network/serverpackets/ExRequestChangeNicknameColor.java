@@ -35,7 +35,6 @@ public class ExRequestChangeNicknameColor implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CHANGE_NICKNAME_NCOLOR.writeId(packet);
-		
 		packet.writeD(_itemId);
 		return true;
 	}

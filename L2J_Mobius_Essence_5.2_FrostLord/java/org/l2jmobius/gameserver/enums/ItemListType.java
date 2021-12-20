@@ -23,13 +23,13 @@ import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
  */
 public enum ItemListType implements IUpdateTypeComponent
 {
-	AUGMENT_BONUS(0x01),
-	ELEMENTAL_ATTRIBUTE(0x02),
-	ENCHANT_EFFECT(0x04),
-	VISUAL_ID(0x08),
-	SOUL_CRYSTAL(0x10),
-	EVOLVE(0x80),
-	BLESSED(0x100);
+	AUGMENT_BONUS(1),
+	ELEMENTAL_ATTRIBUTE(2),
+	ENCHANT_EFFECT(4),
+	VISUAL_ID(8),
+	SOUL_CRYSTAL(16),
+	EVOLVE(128),
+	BLESSED(256);
 	
 	private final int _mask;
 	

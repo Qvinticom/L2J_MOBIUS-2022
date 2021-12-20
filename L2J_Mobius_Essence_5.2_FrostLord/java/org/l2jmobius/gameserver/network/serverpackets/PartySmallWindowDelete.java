@@ -33,7 +33,6 @@ public class PartySmallWindowDelete implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_DELETE.writeId(packet);
-		
 		packet.writeD(_member.getObjectId());
 		packet.writeS(_member.getName());
 		return true;

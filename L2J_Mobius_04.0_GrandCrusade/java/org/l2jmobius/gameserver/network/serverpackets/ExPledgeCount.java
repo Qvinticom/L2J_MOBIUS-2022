@@ -36,7 +36,6 @@ public class ExPledgeCount implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_COUNT.writeId(packet);
-		
 		packet.writeD(_count);
 		return true;
 	}

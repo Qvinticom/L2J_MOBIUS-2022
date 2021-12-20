@@ -39,10 +39,9 @@ public class ExBRGamePoint implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_GAME_POINT.writeId(packet);
-		
 		packet.writeD(_charId);
 		packet.writeQ(_charPoints);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

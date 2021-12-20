@@ -44,28 +44,24 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_ALL.writeId(packet);
-		
 		packet.writeD(_leaderObjId);
 		packet.writeD(_dist);
 		packet.writeD(_party.getMemberCount() - 1);
-		
 		for (Player member : _party.getPartyMembers())
 		{
 			if ((member != null) && (member != _exclude))
 			{
 				packet.writeD(member.getObjectId());
 				packet.writeS(member.getName());
-				
 				packet.writeD((int) member.getCurrentCp()); // c4
 				packet.writeD(member.getMaxCp()); // c4
-				
 				packet.writeD((int) member.getCurrentHp());
 				packet.writeD(member.getMaxHp());
 				packet.writeD((int) member.getCurrentMp());
 				packet.writeD(member.getMaxMp());
 				packet.writeD(member.getLevel());
 				packet.writeD(member.getClassId().getId());
-				packet.writeD(0); // writeD(0x01); ??
+				packet.writeD(0); // writeD(1); ??
 				packet.writeD(member.getRace().ordinal());
 			}
 		}

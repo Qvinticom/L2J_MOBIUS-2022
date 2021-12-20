@@ -43,38 +43,34 @@ public class BuyList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet); // writeC(0x07) ?
+		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet); // writeC(7) ?
 		packet.writeQ(_money); // current money
 		packet.writeD(_listId);
-		
 		packet.writeH(_list.size());
-		
 		for (Product product : _list)
 		{
 			if ((product.getCount() > 0) || !product.hasLimitedStock())
 			{
 				packet.writeH(product.getItem().getType1()); // item type1
-				packet.writeD(0x00); // objectId
+				packet.writeD(0); // objectId
 				packet.writeD(product.getItemId());
 				packet.writeQ(product.getCount() < 0 ? 0 : product.getCount());
 				packet.writeH(product.getItem().getType2());
-				packet.writeH(0x00); // isEquipped
-				
+				packet.writeH(0); // isEquipped
 				if (product.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeD(product.getItem().getBodyPart());
-					packet.writeH(0x00); // item enchant level
-					packet.writeH(0x00); // ?
-					packet.writeH(0x00);
+					packet.writeH(0); // item enchant level
+					packet.writeH(0); // ?
+					packet.writeH(0);
 				}
 				else
 				{
-					packet.writeD(0x00);
-					packet.writeH(0x00);
-					packet.writeH(0x00);
-					packet.writeH(0x00);
+					packet.writeD(0);
+					packet.writeH(0);
+					packet.writeH(0);
+					packet.writeH(0);
 				}
-				
 				if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
 				{
 					packet.writeQ((long) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
@@ -83,16 +79,14 @@ public class BuyList implements IClientOutgoingPacket
 				{
 					packet.writeQ((long) (product.getPrice() * (1 + _taxRate)));
 				}
-				
 				// T1
 				for (byte i = 0; i < 8; i++)
 				{
-					packet.writeH(0x00);
+					packet.writeH(0);
 				}
-				
-				packet.writeH(0x00); // Enchant effect 1
-				packet.writeH(0x00); // Enchant effect 2
-				packet.writeH(0x00); // Enchant effect 3
+				packet.writeH(0); // Enchant effect 1
+				packet.writeH(0); // Enchant effect 2
+				packet.writeH(0); // Enchant effect 3
 			}
 		}
 		return true;

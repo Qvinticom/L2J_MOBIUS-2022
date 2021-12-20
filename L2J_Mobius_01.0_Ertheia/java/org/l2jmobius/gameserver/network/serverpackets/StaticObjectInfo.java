@@ -72,7 +72,6 @@ public class StaticObjectInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.STATIC_OBJECT.writeId(packet);
-		
 		packet.writeD(_staticObjectId);
 		packet.writeD(_objectId);
 		packet.writeD(_type);

@@ -38,7 +38,6 @@ public class BlockListPacket implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.BLOCK_LIST.writeId(packet);
-		
 		packet.writeD(_playersId.size());
 		for (int playerId : _playersId)
 		{

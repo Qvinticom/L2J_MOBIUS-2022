@@ -46,7 +46,6 @@ public class VehicleDeparture implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VEHICLE_DEPARTURE.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeD(_moveSpeed);
 		packet.writeD(_rotationSpeed);

@@ -56,7 +56,6 @@ public class PartyMemberPosition implements IClientOutgoingPacket
 	{
 		OutgoingPackets.PARTY_MEMBER_POSITION.writeId(packet);
 		packet.writeD(_locations.size());
-		
 		for (Entry<Integer, Location> entry : _locations.entrySet())
 		{
 			final Location loc = entry.getValue();

@@ -66,7 +66,6 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
-		
 		packet.writeD(_castingType.getClientBarId()); // MagicSkillUse castingType
 		packet.writeD(_objectId);
 		packet.writeD(_skillId);

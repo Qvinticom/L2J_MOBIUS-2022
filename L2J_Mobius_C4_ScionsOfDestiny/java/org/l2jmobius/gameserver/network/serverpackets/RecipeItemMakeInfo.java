@@ -52,7 +52,6 @@ public class RecipeItemMakeInfo implements IClientOutgoingPacket
 		if (recipe != null)
 		{
 			OutgoingPackets.RECIPE_ITEM_MAKE_INFO.writeId(packet);
-			
 			packet.writeD(_id);
 			packet.writeD(recipe.isDwarvenRecipe() ? 0 : 1); // 0 = Dwarven - 1 = Common
 			packet.writeD((int) _player.getCurrentMp());

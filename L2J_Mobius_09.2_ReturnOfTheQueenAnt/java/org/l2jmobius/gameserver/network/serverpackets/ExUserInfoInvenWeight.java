@@ -36,7 +36,6 @@ public class ExUserInfoInvenWeight implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_USER_INFO_INVEN_WEIGHT.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_player.getCurrentLoad());
 		packet.writeD(_player.getMaxLoad());

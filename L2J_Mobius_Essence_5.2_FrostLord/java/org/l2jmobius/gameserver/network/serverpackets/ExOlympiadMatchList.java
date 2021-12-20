@@ -55,19 +55,15 @@ public class ExOlympiadMatchList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RECEIVE_OLYMPIAD.writeId(packet);
-		
-		packet.writeD(0x00); // Type 0 = Match List, 1 = Match Result
-		
+		packet.writeD(0); // Type 0 = Match List, 1 = Match Result
 		packet.writeD(_games.size());
-		packet.writeD(0x00);
-		
+		packet.writeD(0);
 		for (OlympiadGameTask curGame : _games)
 		{
 			final AbstractOlympiadGame game = curGame.getGame();
 			if (game != null)
 			{
 				packet.writeD(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
-				
 				if (game instanceof OlympiadGameNonClassed)
 				{
 					packet.writeD(1);
@@ -80,8 +76,7 @@ public class ExOlympiadMatchList implements IClientOutgoingPacket
 				{
 					packet.writeD(0);
 				}
-				
-				packet.writeD(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
+				packet.writeD(curGame.isRunning() ? 2 : 1); // (1 = Standby, 2 = Playing)
 				packet.writeS(game.getPlayerNames()[0]); // Player 1 Name
 				packet.writeS(game.getPlayerNames()[1]); // Player 2 Name
 			}

@@ -36,7 +36,6 @@ public class ExPledgeRecruitApplyInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_RECRUIT_APPLY_INFO.writeId(packet);
-		
 		packet.writeD(_status.ordinal());
 		return true;
 	}

@@ -33,7 +33,7 @@ public class ClientSetTime implements IClientOutgoingPacket
 	{
 		OutgoingPackets.CLIENT_SET_TIME.writeId(packet);
 		packet.writeD(GameTimeTaskManager.getInstance().getGameTime()); // time in client minutes
-		packet.writeD(0x06); // constant to match the server time( this determines the speed of the client clock)
+		packet.writeD(6); // constant to match the server time( this determines the speed of the client clock)
 		return true;
 	}
 }

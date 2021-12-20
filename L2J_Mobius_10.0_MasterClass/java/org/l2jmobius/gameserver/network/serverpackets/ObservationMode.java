@@ -33,11 +33,10 @@ public class ObservationMode implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.OBSERVER_START.writeId(packet);
-		
 		packet.writeD(_loc.getX());
 		packet.writeD(_loc.getY());
 		packet.writeD(_loc.getZ());
-		packet.writeD(0x00); // TODO: Find me
+		packet.writeD(0); // TODO: Find me
 		packet.writeD(0xc0); // TODO: Find me
 		return true;
 	}

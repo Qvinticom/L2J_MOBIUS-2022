@@ -39,7 +39,6 @@ public class ExShowAgitInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_AGIT_INFO.writeId(packet);
-		
 		final Collection<ClanHall> clanHalls = ClanHallData.getInstance().getClanHalls();
 		packet.writeD(clanHalls.size());
 		clanHalls.forEach(clanHall ->

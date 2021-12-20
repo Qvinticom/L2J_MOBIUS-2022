@@ -36,7 +36,6 @@ public class ExEnchantSucess implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SUCESS.writeId(packet);
-		
 		packet.writeD(_itemId);
 		return true;
 	}

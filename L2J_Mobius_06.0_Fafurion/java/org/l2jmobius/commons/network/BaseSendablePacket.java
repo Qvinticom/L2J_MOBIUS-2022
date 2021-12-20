@@ -117,16 +117,16 @@ public abstract class BaseSendablePacket
 	public byte[] getBytes()
 	{
 		// if (this instanceof Init)
-		// writeD(0x00); // reserve for XOR initial key
+		// writeD(0); // reserve for XOR initial key
 		
-		writeD(0x00); // reserve for checksum
+		writeD(0); // reserve for checksum
 		
 		final int padding = _bao.size() % 8;
 		if (padding != 0)
 		{
 			for (int i = padding; i < 8; i++)
 			{
-				writeC(0x00);
+				writeC(0);
 			}
 		}
 		

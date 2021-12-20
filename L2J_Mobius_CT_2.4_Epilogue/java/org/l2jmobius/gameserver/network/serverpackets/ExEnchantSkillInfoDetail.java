@@ -20,8 +20,8 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
-import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -61,12 +61,10 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 				esd = enchantLearn.getFirstRouteGroup().getEnchantGroupDetails().get(0);
 			}
 		}
-		
 		if (esd == null)
 		{
 			throw new IllegalArgumentException("Skill " + skillId + " dont have enchant data for level " + skillLevel);
 		}
-		
 		if (type == 0)
 		{
 			multi = EnchantSkillGroupsData.NORMAL_ENCHANT_COST_MULTIPLIER;
@@ -85,7 +83,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		_type = type;
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		
 		switch (type)
 		{
 			case TYPE_NORMAL_ENCHANT:
@@ -117,7 +114,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 				return;
 			}
 		}
-		
 		if ((type != TYPE_SAFE_ENCHANT) && !Config.ES_SP_BOOK_NEEDED)
 		{
 			reqCount = 0;
@@ -133,7 +129,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		packet.writeD(_skillLevel);
 		packet.writeD(_sp * multi); // sp
 		packet.writeD(_chance); // exp
-		packet.writeD(0x02); // items count?
+		packet.writeD(2); // items count?
 		packet.writeD(Inventory.ADENA_ID); // Adena
 		packet.writeD(_adenacount); // Adena count
 		packet.writeD(bookId); // ItemId Required

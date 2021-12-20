@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ActionFailed implements IClientOutgoingPacket
 {
 	public static final ActionFailed STATIC_PACKET = new ActionFailed();
-	private static final Map<SkillCastingType, ActionFailed> STATIC_PACKET_BY_CASTING_TYPE = new EnumMap<>(SkillCastingType.class);
 	
+	private static final Map<SkillCastingType, ActionFailed> STATIC_PACKET_BY_CASTING_TYPE = new EnumMap<>(SkillCastingType.class);
 	static
 	{
 		for (SkillCastingType castingType : SkillCastingType.values())
@@ -57,7 +57,6 @@ public class ActionFailed implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ACTION_FAIL.writeId(packet);
-		
 		packet.writeD(_castingType); // MagicSkillUse castingType
 		return true;
 	}

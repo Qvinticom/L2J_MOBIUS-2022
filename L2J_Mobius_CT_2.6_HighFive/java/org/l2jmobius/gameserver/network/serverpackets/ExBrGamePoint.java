@@ -48,7 +48,7 @@ public class ExBrGamePoint implements IClientOutgoingPacket
 		OutgoingPackets.EX_BR_GAME_POINT.writeId(packet);
 		packet.writeD(_playerObj);
 		packet.writeQ(_points);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		return true;
 	}
 }

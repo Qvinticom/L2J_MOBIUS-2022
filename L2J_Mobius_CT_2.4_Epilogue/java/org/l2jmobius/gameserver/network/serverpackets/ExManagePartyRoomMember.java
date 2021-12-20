@@ -61,11 +61,11 @@ public class ExManagePartyRoomMember implements IClientOutgoingPacket
 		{
 			if ((_room.getOwner().isInParty() && _player.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == _player.getParty().getLeaderObjectId()))
 			{
-				packet.writeD(0x02);
+				packet.writeD(2);
 			}
 			else
 			{
-				packet.writeD(0x00);
+				packet.writeD(0);
 			}
 		}
 		return true;

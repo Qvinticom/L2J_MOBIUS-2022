@@ -35,8 +35,7 @@ public class ExShowCommission implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_COMMISSION.writeId(packet);
-		
-		packet.writeD(0x01);
+		packet.writeD(1);
 		return true;
 	}
 }

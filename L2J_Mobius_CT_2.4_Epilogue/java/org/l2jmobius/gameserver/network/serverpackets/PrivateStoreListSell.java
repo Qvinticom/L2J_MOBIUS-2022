@@ -43,7 +43,6 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 		else
 		{
 			OutgoingPackets.PRIVATE_STORE_SELL_LIST.writeId(packet);
-			
 			packet.writeD(_seller.getObjectId());
 			packet.writeD(_seller.getSellList().isPackaged() ? 1 : 0);
 			packet.writeQ(_player.getAdena());
@@ -54,13 +53,12 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 				packet.writeD(item.getObjectId());
 				packet.writeD(item.getItem().getId());
 				packet.writeQ(item.getCount());
-				packet.writeH(0x00);
+				packet.writeH(0);
 				packet.writeH(item.getEnchant());
 				packet.writeH(item.getCustomType2());
 				packet.writeD(item.getItem().getBodyPart());
 				packet.writeQ(item.getPrice()); // your price
 				packet.writeQ(item.getItem().getReferencePrice()); // store price
-				
 				// T1
 				packet.writeH(item.getAttackElementType());
 				packet.writeH(item.getAttackElementPower());
@@ -68,7 +66,6 @@ public class PrivateStoreListSell implements IClientOutgoingPacket
 				{
 					packet.writeH(item.getElementDefAttr(i));
 				}
-				
 				for (int op : item.getEnchantOptions())
 				{
 					packet.writeH(op);

@@ -60,7 +60,7 @@ public class AccountKicked implements IOutgoingPacket
 	{
 		OutgoingPackets.ACCOUNT_KICKED.writeId(packet);
 		packet.writeD(_reason.getCode());
-		
 		return true;
 	}
 }
+

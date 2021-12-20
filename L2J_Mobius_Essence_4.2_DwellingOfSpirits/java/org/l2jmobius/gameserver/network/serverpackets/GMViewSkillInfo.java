@@ -38,10 +38,8 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_SKILL_INFO.writeId(packet);
-		
 		packet.writeS(_player.getName());
 		packet.writeD(_skills.size());
-		
 		final boolean isDisabled = (_player.getClan() != null) && (_player.getClan().getReputationScore() < 0);
 		for (Skill skill : _skills)
 		{
@@ -49,7 +47,7 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 			packet.writeH(skill.getDisplayLevel());
 			packet.writeH(skill.getSubLevel());
 			packet.writeD(skill.getDisplayId());
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
 			packet.writeC(skill.isEnchantable() ? 1 : 0);
 		}

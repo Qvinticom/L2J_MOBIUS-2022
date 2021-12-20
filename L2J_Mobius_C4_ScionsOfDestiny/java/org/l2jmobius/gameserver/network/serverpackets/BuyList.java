@@ -75,30 +75,28 @@ public class BuyList implements IClientOutgoingPacket
 				packet.writeD(item.getItemId());
 				if (item.getCount() < 0)
 				{
-					packet.writeD(0x00); // max amount of items that a player can buy at a time (with this itemid)
+					packet.writeD(0); // max amount of items that a player can buy at a time (with this itemid)
 				}
 				else
 				{
 					packet.writeD(item.getCount());
 				}
 				packet.writeH(item.getItem().getType2()); // item type2
-				packet.writeH(0x00); // ?
-				
+				packet.writeH(0); // ?
 				if (item.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
 					packet.writeD(item.getItem().getBodyPart()); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
 					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeH(0x00); // ?
-					packet.writeH(0x00);
+					packet.writeH(0); // ?
+					packet.writeH(0);
 				}
 				else
 				{
-					packet.writeD(0x00); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
-					packet.writeH(0x00); // enchant level
-					packet.writeH(0x00); // ?
-					packet.writeH(0x00);
+					packet.writeD(0); // rev 415 slot 0006-lr.ear 0008-neck 0030-lr.finger 0040-head 0080-?? 0100-l.hand 0200-gloves 0400-chest 0800-pants 1000-feet 2000-?? 4000-r.hand 8000-r.hand
+					packet.writeH(0); // enchant level
+					packet.writeH(0); // ?
+					packet.writeH(0);
 				}
-				
 				if ((item.getItemId() >= 3960) && (item.getItemId() <= 4026))
 				{
 					packet.writeD((int) (item.getPriceToSell() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));

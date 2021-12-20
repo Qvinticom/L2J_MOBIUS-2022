@@ -26,6 +26,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBrBroadcastEventState implements IClientOutgoingPacket
 {
+	public static final int APRIL_FOOLS = 20090401;
+	public static final int EVAS_INFERNO = 20090801; // event state (0 - hide, 1 - show), day (1-14), percent (0-100)
+	public static final int HALLOWEEN_EVENT = 20091031; // event state (0 - hide, 1 - show)
+	public static final int RAISING_RUDOLPH = 20091225; // event state (0 - hide, 1 - show)
+	public static final int LOVERS_JUBILEE = 20100214; // event state (0 - hide, 1 - show)
+	
 	private final int _eventId;
 	private final int _eventState;
 	private int _param0;
@@ -35,12 +41,6 @@ public class ExBrBroadcastEventState implements IClientOutgoingPacket
 	private int _param4;
 	private String _param5;
 	private String _param6;
-	
-	public static final int APRIL_FOOLS = 20090401;
-	public static final int EVAS_INFERNO = 20090801; // event state (0 - hide, 1 - show), day (1-14), percent (0-100)
-	public static final int HALLOWEEN_EVENT = 20091031; // event state (0 - hide, 1 - show)
-	public static final int RAISING_RUDOLPH = 20091225; // event state (0 - hide, 1 - show)
-	public static final int LOVERS_JUBILEE = 20100214; // event state (0 - hide, 1 - show)
 	
 	public ExBrBroadcastEventState(int eventId, int eventState)
 	{

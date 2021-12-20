@@ -43,14 +43,14 @@ public class ExRpItemLink implements IClientOutgoingPacket
 		packet.writeD(_item.getItem().getBodyPart());
 		packet.writeH(_item.getEnchantLevel());
 		packet.writeH(_item.getCustomType2());
-		packet.writeH(0x00); // ??
+		packet.writeH(0); // ??
 		if (_item.isAugmented())
 		{
 			packet.writeD(_item.getAugmentation().getAugmentationId());
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		packet.writeD(_item.getMana());
 		packet.writeH(_item.getAttackElementType());

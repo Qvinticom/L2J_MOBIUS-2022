@@ -27,19 +27,14 @@ public class ExSetCompassZoneCode implements IClientOutgoingPacket
 {
 	/** The Constant SIEGEWARZONE1. */
 	public static final int SIEGEWARZONE1 = 0x0A;
-	
 	/** The Constant SIEGEWARZONE2. */
 	public static final int SIEGEWARZONE2 = 0x0B;
-	
 	/** The Constant PEACEZONE. */
 	public static final int PEACEZONE = 0x0C;
-	
 	/** The Constant SEVENSIGNSZONE. */
 	public static final int SEVENSIGNSZONE = 0x0D;
-	
 	/** The Constant PVPZONE. */
 	public static final int PVPZONE = 0x0E;
-	
 	/** The Constant GENERALZONE. */
 	public static final int GENERALZONE = 0x0F;
 	

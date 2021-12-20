@@ -60,7 +60,6 @@ public class ExReplySentPost extends AbstractItemPacket
 		packet.writeS(_msg.getReceiverName());
 		packet.writeS(_msg.getSubject());
 		packet.writeS(_msg.getContent());
-		
 		if ((_items != null) && !_items.isEmpty())
 		{
 			packet.writeD(_items.size());
@@ -74,7 +73,7 @@ public class ExReplySentPost extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeQ(_msg.getReqAdena());
 		}
 		return true;

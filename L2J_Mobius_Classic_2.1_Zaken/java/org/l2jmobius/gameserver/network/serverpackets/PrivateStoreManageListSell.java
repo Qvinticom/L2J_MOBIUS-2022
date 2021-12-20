@@ -45,18 +45,15 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PRIVATE_STORE_MANAGE_LIST.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeD(_packageSale ? 1 : 0); // Package sell
 		packet.writeQ(_playerAdena);
-		
 		packet.writeD(_itemList.size()); // for potential sells
 		for (TradeItem item : _itemList)
 		{
 			writeItem(packet, item);
 			packet.writeQ(item.getItem().getReferencePrice() * 2);
 		}
-		
 		packet.writeD(_sellList.size()); // count for any items already added for sell
 		for (TradeItem item : _sellList)
 		{

@@ -44,14 +44,13 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 		OutgoingPackets.GM_VIEW_QUEST_INFO.writeId(packet);
 		packet.writeS(_player.getName());
 		packet.writeH(_questList.size()); // quest count
-		
 		for (Quest quest : _questList)
 		{
 			final QuestState qs = _player.getQuestState(quest.getName());
 			packet.writeD(quest.getId());
 			packet.writeD(qs == null ? 0 : qs.getCond());
 		}
-		packet.writeH(0x00); // some size
+		packet.writeH(0); // some size
 		// for size; ddQQ
 		return true;
 	}

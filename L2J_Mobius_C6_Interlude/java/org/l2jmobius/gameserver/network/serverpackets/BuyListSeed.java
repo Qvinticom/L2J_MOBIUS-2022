@@ -50,12 +50,12 @@ public class BuyListSeed implements IClientOutgoingPacket
 		packet.writeH(_list.size()); // list length
 		for (Item item : _list)
 		{
-			packet.writeH(0x04); // item->type1
-			packet.writeD(0x00); // objectId
+			packet.writeH(4); // item->type1
+			packet.writeD(0); // objectId
 			packet.writeD(item.getItemId()); // item id
 			packet.writeD(item.getCount()); // item count
-			packet.writeH(0x04); // item->type2
-			packet.writeH(0x00); // unknown :)
+			packet.writeH(4); // item->type2
+			packet.writeH(0); // unknown :)
 			packet.writeD(item.getPriceToSell()); // price
 		}
 		return true;

@@ -385,16 +385,13 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SERVER_PRIMITIVE.writeId(packet);
-		
 		packet.writeS(_name);
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
 		packet.writeD(65535); // has to do something with display range and angle
 		packet.writeD(65535); // has to do something with display range and angle
-		
 		packet.writeD(_points.size() + _lines.size());
-		
 		for (Point point : _points)
 		{
 			packet.writeC(1); // Its the type in this case Point
@@ -408,7 +405,6 @@ public class ExServerPrimitive implements IClientOutgoingPacket
 			packet.writeD(point.getY());
 			packet.writeD(point.getZ());
 		}
-		
 		for (Line line : _lines)
 		{
 			packet.writeC(2); // Its the type in this case Line

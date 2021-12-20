@@ -42,7 +42,7 @@ public class ExDominionWarStart implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_DOMINION_WAR_START.writeId(packet);
 		packet.writeD(_objId);
-		packet.writeD(0x01); // ??
+		packet.writeD(1); // ??
 		packet.writeD(_terId);
 		packet.writeD(_isDisguised ? 1 : 0);
 		packet.writeD(_isDisguised ? _terId : 0);

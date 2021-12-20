@@ -45,7 +45,6 @@ public class ExVoteSystemInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VOTE_SYSTEM_INFO.writeId(packet);
-		
 		packet.writeD(_recomLeft);
 		packet.writeD(_recomHave);
 		packet.writeD(_bonusTime);

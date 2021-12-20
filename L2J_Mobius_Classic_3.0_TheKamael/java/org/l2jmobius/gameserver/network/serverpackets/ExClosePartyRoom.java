@@ -34,7 +34,6 @@ public class ExClosePartyRoom implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CLOSE_PARTY_ROOM.writeId(packet);
-		
 		return true;
 	}
 }

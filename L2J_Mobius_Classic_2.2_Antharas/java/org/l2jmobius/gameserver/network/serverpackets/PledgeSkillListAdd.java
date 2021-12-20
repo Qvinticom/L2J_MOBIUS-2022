@@ -37,7 +37,6 @@ public class PledgeSkillListAdd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_SKILL_LIST_ADD.writeId(packet);
-		
 		packet.writeD(_id);
 		packet.writeD(_level);
 		return true;

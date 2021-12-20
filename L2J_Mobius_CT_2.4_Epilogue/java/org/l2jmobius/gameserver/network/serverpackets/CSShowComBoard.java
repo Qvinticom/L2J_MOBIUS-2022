@@ -32,7 +32,7 @@ public class CSShowComBoard implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_BOARD.writeId(packet);
-		packet.writeC(0x01); // c4 1 to show community 00 to hide
+		packet.writeC(1); // c4 1 to show community 00 to hide
 		packet.writeB(_html);
 		return true;
 	}

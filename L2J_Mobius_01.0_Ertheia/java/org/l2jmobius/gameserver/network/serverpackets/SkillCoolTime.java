@@ -51,12 +51,11 @@ public class SkillCoolTime implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SKILL_COOL_TIME.writeId(packet);
-		
 		packet.writeD(_skillReuseTimeStamps.size());
 		for (TimeStamp ts : _skillReuseTimeStamps)
 		{
 			packet.writeD(ts.getSkillId());
-			packet.writeD(0x00); // ?
+			packet.writeD(0); // ?
 			packet.writeD((int) ts.getReuse() / 1000);
 			packet.writeD((int) Math.max(ts.getStamp() - _currentTime, 0) / 1000);
 		}

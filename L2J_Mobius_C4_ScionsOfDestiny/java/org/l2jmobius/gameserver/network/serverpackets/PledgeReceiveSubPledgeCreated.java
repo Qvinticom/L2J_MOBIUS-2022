@@ -36,7 +36,7 @@ public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_RECEIVE_SUB_PLEDGE_CREATED.writeId(packet);
-		packet.writeD(0x01);
+		packet.writeD(1);
 		packet.writeD(_subPledge.getId());
 		packet.writeS(_subPledge.getName());
 		packet.writeS(_subPledge.getLeaderName());

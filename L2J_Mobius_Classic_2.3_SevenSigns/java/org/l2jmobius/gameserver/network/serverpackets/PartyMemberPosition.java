@@ -55,7 +55,6 @@ public class PartyMemberPosition implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PARTY_MEMBER_POSITION.writeId(packet);
-		
 		packet.writeD(locations.size());
 		for (Entry<Integer, Location> entry : locations.entrySet())
 		{

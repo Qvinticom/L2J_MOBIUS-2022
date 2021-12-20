@@ -78,7 +78,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
 	}
 }

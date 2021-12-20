@@ -44,12 +44,10 @@ public class PrivateStoreListBuy extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PRIVATE_STORE_BUY_LIST.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeQ(_playerAdena);
-		packet.writeD(0x00); // Viewer's item count?
+		packet.writeD(0); // Viewer's item count?
 		packet.writeD(_items.size());
-		
 		int slotNumber = 0;
 		for (TradeItem item : _items)
 		{

@@ -88,32 +88,30 @@ public class ExBuySellList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
 		packet.writeQ(_money);
-		
 		packet.writeD(_buyListId);
 		packet.writeH(_buyList.size());
 		for (Product item : _buyList)
 		{
 			packet.writeH(item.getItem().getType1());
-			packet.writeD(0x00); // objectId
+			packet.writeD(0); // objectId
 			packet.writeD(item.getItemId());
 			packet.writeQ(item.getCount() < 0 ? 0 : item.getCount());
 			packet.writeH(item.getItem().getType2());
-			packet.writeH(0x00); // ?
+			packet.writeH(0); // ?
 			if (item.getItem().getType1() != ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA)
 			{
 				packet.writeD(item.getItem().getBodyPart());
-				packet.writeH(0x00); // item enchant level
-				packet.writeH(0x00); // ?
-				packet.writeH(0x00);
+				packet.writeH(0); // item enchant level
+				packet.writeH(0); // ?
+				packet.writeH(0);
 			}
 			else
 			{
-				packet.writeD(0x00);
-				packet.writeH(0x00);
-				packet.writeH(0x00);
-				packet.writeH(0x00);
+				packet.writeD(0);
+				packet.writeH(0);
+				packet.writeH(0);
+				packet.writeH(0);
 			}
-			
 			if ((item.getItemId() >= 3960) && (item.getItemId() <= 4026))
 			{
 				packet.writeQ((long) (item.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE));
@@ -122,17 +120,15 @@ public class ExBuySellList implements IClientOutgoingPacket
 			{
 				packet.writeQ((long) (item.getPrice() * (1 + (_taxRate / 2))));
 			}
-			
 			// T1
 			for (byte i = 0; i < 8; i++)
 			{
-				packet.writeH(0x00);
+				packet.writeH(0);
 			}
-			packet.writeH(0x00); // Enchant effect 1
-			packet.writeH(0x00); // Enchant effect 2
-			packet.writeH(0x00); // Enchant effect 3
+			packet.writeH(0); // Enchant effect 1
+			packet.writeH(0); // Enchant effect 2
+			packet.writeH(0); // Enchant effect 3
 		}
-		
 		if ((_sellList != null) && !_sellList.isEmpty())
 		{
 			packet.writeH(_sellList.size());
@@ -143,13 +139,12 @@ public class ExBuySellList implements IClientOutgoingPacket
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
 				packet.writeH(item.getItem().getType2());
-				packet.writeH(0x00);
+				packet.writeH(0);
 				packet.writeD(item.getItem().getBodyPart());
 				packet.writeH(item.getEnchantLevel());
-				packet.writeH(0x00);
-				packet.writeH(0x00);
+				packet.writeH(0);
+				packet.writeH(0);
 				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : item.getItem().getReferencePrice() / 2);
-				
 				// T1
 				packet.writeH(item.getAttackElementType());
 				packet.writeH(item.getAttackElementPower());
@@ -157,16 +152,15 @@ public class ExBuySellList implements IClientOutgoingPacket
 				{
 					packet.writeH(item.getElementDefAttr(i));
 				}
-				packet.writeH(0x00); // Enchant effect 1
-				packet.writeH(0x00); // Enchant effect 2
-				packet.writeH(0x00); // Enchant effect 3
+				packet.writeH(0); // Enchant effect 1
+				packet.writeH(0); // Enchant effect 2
+				packet.writeH(0); // Enchant effect 3
 			}
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
-		
 		if ((_refundList != null) && !_refundList.isEmpty())
 		{
 			packet.writeH(_refundList.size());
@@ -177,11 +171,10 @@ public class ExBuySellList implements IClientOutgoingPacket
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
 				packet.writeH(item.getItem().getType2());
-				packet.writeH(0x00); // ?
+				packet.writeH(0); // ?
 				packet.writeH(item.getEnchantLevel());
-				packet.writeH(0x00); // ?
+				packet.writeH(0); // ?
 				packet.writeQ(Config.MERCHANT_ZERO_SELL_PRICE ? 0 : (item.getItem().getReferencePrice() / 2) * item.getCount());
-				
 				// T1
 				packet.writeH(item.getAttackElementType());
 				packet.writeH(item.getAttackElementPower());
@@ -189,18 +182,16 @@ public class ExBuySellList implements IClientOutgoingPacket
 				{
 					packet.writeH(item.getElementDefAttr(i));
 				}
-				packet.writeH(0x00); // Enchant effect 1
-				packet.writeH(0x00); // Enchant effect 2
-				packet.writeH(0x00); // Enchant effect 3
+				packet.writeH(0); // Enchant effect 1
+				packet.writeH(0); // Enchant effect 2
+				packet.writeH(0); // Enchant effect 3
 			}
 		}
 		else
 		{
-			packet.writeH(0x00);
+			packet.writeH(0);
 		}
-		
-		packet.writeC(_done ? 0x01 : 0x00);
-		
+		packet.writeC(_done ? 1 : 0);
 		return true;
 	}
 }

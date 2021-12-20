@@ -44,7 +44,6 @@ public class ExItemAuctionStatus implements IClientOutgoingPacket
 			_x = spawn.getX();
 			_y = spawn.getY();
 			_z = spawn.getZ();
-			
 			final ItemAuctionInstance manager = ItemAuctionManager.getInstance().getManagerInstance(AUCTION_MANAGER);
 			if (manager != null)
 			{
@@ -64,7 +63,7 @@ public class ExItemAuctionStatus implements IClientOutgoingPacket
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeH(_status);
 		return true;
 	}

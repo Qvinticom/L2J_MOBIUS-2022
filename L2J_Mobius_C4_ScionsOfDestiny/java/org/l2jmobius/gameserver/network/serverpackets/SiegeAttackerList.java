@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * <br>
  * c = ca<br>
  * d = CastleID<br>
- * d = unknow (0x00)<br>
- * d = unknow (0x01)<br>
- * d = unknow (0x00)<br>
+ * d = unknown (0)<br>
+ * d = unknown (1)<br>
+ * d = unknown (0)<br>
  * d = Number of Attackers Clans?<br>
  * d = Number of Attackers Clans<br>
  * { //repeats<br>
@@ -73,9 +73,9 @@ public class SiegeAttackerList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SIEGE_ATTACKER_LIST.writeId(packet);
 		packet.writeD(_residenceId);
-		packet.writeD(0x00); // 0
-		packet.writeD(0x01); // 1
-		packet.writeD(0x00); // 0
+		packet.writeD(0); // 0
+		packet.writeD(1); // 1
+		packet.writeD(0); // 0
 		final int size = _attackers.size();
 		if (size > 0)
 		{
@@ -89,12 +89,11 @@ public class SiegeAttackerList implements IClientOutgoingPacket
 				{
 					continue;
 				}
-				
 				packet.writeD(clan.getClanId());
 				packet.writeS(clan.getName());
 				packet.writeS(clan.getLeaderName());
 				packet.writeD(clan.getCrestId());
-				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
+				packet.writeD(0); // signed time (seconds) (not storated by L2J)
 				packet.writeD(clan.getAllyId());
 				packet.writeS(clan.getAllyName());
 				packet.writeS(""); // AllyLeaderName
@@ -103,8 +102,8 @@ public class SiegeAttackerList implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		return true;
 	}

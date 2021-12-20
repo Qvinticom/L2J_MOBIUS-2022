@@ -59,7 +59,6 @@ public class ExUseSharedGroupItem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_USE_SHARED_GROUP_ITEM.writeId(packet);
-		
 		packet.writeD(_unk1);
 		packet.writeD(_unk2);
 		packet.writeD(_unk3);

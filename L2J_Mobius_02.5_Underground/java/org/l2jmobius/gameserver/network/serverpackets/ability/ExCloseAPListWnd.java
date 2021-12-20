@@ -35,7 +35,6 @@ public class ExCloseAPListWnd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CLOSE_AP_LIST_WND.writeId(packet);
-		
 		return true;
 	}
 }

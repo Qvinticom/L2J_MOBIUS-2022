@@ -38,7 +38,6 @@ public class ExDuelEnd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_DUEL_END.writeId(packet);
-		
 		packet.writeD(_partyDuel);
 		return true;
 	}

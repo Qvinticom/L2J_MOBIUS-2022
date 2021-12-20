@@ -22,16 +22,16 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ChangeWaitType implements IClientOutgoingPacket
 {
+	public static final int WT_SITTING = 0;
+	public static final int WT_STANDING = 1;
+	public static final int WT_START_FAKEDEATH = 2;
+	public static final int WT_STOP_FAKEDEATH = 3;
+	
 	private final int _objectId;
 	private final int _moveType;
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	
-	public static final int WT_SITTING = 0;
-	public static final int WT_STANDING = 1;
-	public static final int WT_START_FAKEDEATH = 2;
-	public static final int WT_STOP_FAKEDEATH = 3;
 	
 	public ChangeWaitType(Creature creature, int newMoveType)
 	{

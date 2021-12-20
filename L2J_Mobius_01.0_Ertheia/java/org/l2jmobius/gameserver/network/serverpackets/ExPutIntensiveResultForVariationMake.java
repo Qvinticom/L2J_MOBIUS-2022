@@ -40,7 +40,6 @@ public class ExPutIntensiveResultForVariationMake implements IClientOutgoingPack
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PUT_INTENSIVE_RESULT_FOR_VARIATION_MAKE.writeId(packet);
-		
 		packet.writeD(_refinerItemObjId);
 		packet.writeD(_lifestoneItemId);
 		packet.writeD(_gemstoneItemId);

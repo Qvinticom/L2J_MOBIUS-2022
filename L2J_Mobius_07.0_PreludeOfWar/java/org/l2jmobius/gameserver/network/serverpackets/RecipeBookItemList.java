@@ -40,10 +40,8 @@ public class RecipeBookItemList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RECIPE_BOOK_ITEM_LIST.writeId(packet);
-		
-		packet.writeD(_isDwarvenCraft ? 0x00 : 0x01); // 0 = Dwarven - 1 = Common
+		packet.writeD(_isDwarvenCraft ? 0 : 1); // 0 = Dwarven - 1 = Common
 		packet.writeD(_maxMp);
-		
 		if (_recipes == null)
 		{
 			packet.writeD(0);

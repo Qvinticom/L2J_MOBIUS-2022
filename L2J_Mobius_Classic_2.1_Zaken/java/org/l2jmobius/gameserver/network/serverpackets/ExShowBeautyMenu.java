@@ -25,12 +25,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExShowBeautyMenu implements IClientOutgoingPacket
 {
-	private final Player _player;
-	private final int _type;
-	
 	// TODO: Enum
 	public static final int MODIFY_APPEARANCE = 0;
 	public static final int RESTORE_APPEARANCE = 1;
+	
+	private final Player _player;
+	private final int _type;
 	
 	public ExShowBeautyMenu(Player player, int type)
 	{
@@ -42,7 +42,6 @@ public class ExShowBeautyMenu implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_BEAUTY_MENU.writeId(packet);
-		
 		packet.writeD(_type);
 		packet.writeD(_player.getVisualHair());
 		packet.writeD(_player.getVisualHairColor());

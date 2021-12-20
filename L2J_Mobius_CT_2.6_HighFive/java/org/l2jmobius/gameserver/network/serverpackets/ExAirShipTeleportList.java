@@ -41,7 +41,6 @@ public class ExAirShipTeleportList implements IClientOutgoingPacket
 		if (_teleports != null)
 		{
 			packet.writeD(_teleports.length);
-			
 			VehiclePathPoint[] path;
 			VehiclePathPoint dst;
 			for (int i = 0; i < _teleports.length; i++)

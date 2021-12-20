@@ -45,7 +45,7 @@ public class TeleportToLocation implements IClientOutgoingPacket
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);
-		packet.writeD(0x00); // Fade 0, Instant 1.
+		packet.writeD(0); // Fade 0, Instant 1.
 		packet.writeD(_heading);
 		return true;
 	}

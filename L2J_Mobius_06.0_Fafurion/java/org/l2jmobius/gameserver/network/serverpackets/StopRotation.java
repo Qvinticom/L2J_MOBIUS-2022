@@ -36,7 +36,6 @@ public class StopRotation implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.FINISH_ROTATING.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_degree);
 		packet.writeD(_speed);

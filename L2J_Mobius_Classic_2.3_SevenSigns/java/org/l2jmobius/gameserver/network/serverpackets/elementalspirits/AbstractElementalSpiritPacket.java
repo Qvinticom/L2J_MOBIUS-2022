@@ -43,9 +43,7 @@ abstract class AbstractElementalSpiritPacket implements IClientOutgoingPacket
 		packet.writeD(spirit.getMaxCharacteristics());
 		packet.writeD(spirit.getMaxCharacteristics());
 		packet.writeD(spirit.getMaxCharacteristics());
-		
 		packet.writeC(1); // unk
-		
 		for (int j = 0; j < 1; j++)
 		{
 			packet.writeH(2);

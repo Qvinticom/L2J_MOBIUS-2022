@@ -38,7 +38,7 @@ public class ExNevitAdventTimeChange implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_NAVIT_ADVENT_TIME_CHANGE.writeId(packet);
 		// state 0 - pause 1 - started
-		packet.writeC(_paused ? 0x00 : 0x01);
+		packet.writeC(_paused ? 0 : 1);
 		// left time in ms max is 16000 its 4m and state is automatically changed to quit
 		packet.writeD(_time);
 		return true;

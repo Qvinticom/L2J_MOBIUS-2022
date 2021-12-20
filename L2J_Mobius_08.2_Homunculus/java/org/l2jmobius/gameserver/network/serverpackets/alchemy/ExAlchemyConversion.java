@@ -38,8 +38,7 @@ public class ExAlchemyConversion implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ALCHEMY_CONVERSION.writeId(packet);
-		
-		packet.writeC((_successCount == 0) && (_failureCount == 0) ? 0x01 : 0x00);
+		packet.writeC((_successCount == 0) && (_failureCount == 0) ? 1 : 0);
 		packet.writeD(_successCount);
 		packet.writeD(_failureCount);
 		return true;

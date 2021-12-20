@@ -47,18 +47,15 @@ public class ExFlyMove implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_FLY_MOVE.writeId(packet);
-		
 		packet.writeD(_objectId);
-		
 		packet.writeD(_type.ordinal());
-		packet.writeD(0x00); // ??
+		packet.writeD(0); // ??
 		packet.writeD(_mapId);
-		
 		packet.writeD(_locations.size());
 		for (SayuneEntry loc : _locations)
 		{
 			packet.writeD(loc.getId());
-			packet.writeD(0x00); // ??
+			packet.writeD(0); // ??
 			packet.writeD(loc.getX());
 			packet.writeD(loc.getY());
 			packet.writeD(loc.getZ());

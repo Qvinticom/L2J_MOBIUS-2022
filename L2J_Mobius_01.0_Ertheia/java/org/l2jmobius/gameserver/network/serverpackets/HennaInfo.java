@@ -51,7 +51,6 @@ public class HennaInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_INFO.writeId(packet);
-		
 		packet.writeC(_player.getHennaValue(BaseStat.INT)); // equip INT
 		packet.writeC(_player.getHennaValue(BaseStat.STR)); // equip STR
 		packet.writeC(_player.getHennaValue(BaseStat.CON)); // equip CON
@@ -65,9 +64,8 @@ public class HennaInfo implements IClientOutgoingPacket
 		for (Henna henna : _hennas)
 		{
 			packet.writeD(henna.getDyeId());
-			packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
+			packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 1 : 0);
 		}
-		
 		final Henna premium = _player.getHenna(4);
 		if (premium != null)
 		{
@@ -77,16 +75,15 @@ public class HennaInfo implements IClientOutgoingPacket
 				final long currentTime = Chronos.currentTimeMillis();
 				duration = (int) Math.max(0, _player.getVariables().getLong("HennaDuration4", currentTime) - currentTime) / 1000;
 			}
-			
 			packet.writeD(premium.getDyeId());
 			packet.writeD(duration); // Premium Slot Dye Time Left
-			packet.writeD(premium.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
+			packet.writeD(premium.isAllowedClass(_player.getClassId()) ? 1 : 0);
 		}
 		else
 		{
-			packet.writeD(0x00); // Premium Slot Dye ID
-			packet.writeD(0x00); // Premium Slot Dye Time Left
-			packet.writeD(0x00); // Premium Slot Dye ID isValid
+			packet.writeD(0); // Premium Slot Dye ID
+			packet.writeD(0); // Premium Slot Dye Time Left
+			packet.writeD(0); // Premium Slot Dye ID isValid
 		}
 		return true;
 	}

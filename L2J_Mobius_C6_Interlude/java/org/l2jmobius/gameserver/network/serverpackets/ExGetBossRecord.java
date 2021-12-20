@@ -30,10 +30,8 @@ public class ExGetBossRecord implements IClientOutgoingPacket
 {
 	/** The _boss record info. */
 	private final Map<Integer, Integer> _bossRecordInfo;
-	
 	/** The _ranking. */
 	private final int _ranking;
-	
 	/** The _total points. */
 	private final int _totalPoints;
 	
@@ -58,10 +56,10 @@ public class ExGetBossRecord implements IClientOutgoingPacket
 		packet.writeD(_totalPoints);
 		if (_bossRecordInfo == null)
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		else
 		{
@@ -70,7 +68,7 @@ public class ExGetBossRecord implements IClientOutgoingPacket
 			{
 				packet.writeD(entry.getKey());
 				packet.writeD(entry.getValue());
-				packet.writeD(0x00); // ??
+				packet.writeD(0); // ??
 			}
 		}
 		return true;

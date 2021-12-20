@@ -25,15 +25,14 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExResponseBeautyRegistReset implements IClientOutgoingPacket
 {
+	public static final int FAILURE = 0;
+	public static final int SUCCESS = 1;
+	public static final int CHANGE = 0;
+	public static final int RESTORE = 1;
+	
 	private final Player _player;
 	private final int _type;
 	private final int _result;
-	
-	public static final int FAILURE = 0;
-	public static final int SUCCESS = 1;
-	
-	public static final int CHANGE = 0;
-	public static final int RESTORE = 1;
 	
 	public ExResponseBeautyRegistReset(Player player, int type, int result)
 	{
@@ -46,7 +45,6 @@ public class ExResponseBeautyRegistReset implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_BEAUTY_REGIST_RESET.writeId(packet);
-		
 		packet.writeQ(_player.getAdena());
 		packet.writeQ(_player.getBeautyTickets());
 		packet.writeD(_type);

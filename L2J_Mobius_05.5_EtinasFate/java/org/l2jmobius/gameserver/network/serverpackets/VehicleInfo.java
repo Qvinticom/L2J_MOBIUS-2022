@@ -44,7 +44,6 @@ public class VehicleInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VEHICLE_INFO.writeId(packet);
-		
 		packet.writeD(_objId);
 		packet.writeD(_x);
 		packet.writeD(_y);

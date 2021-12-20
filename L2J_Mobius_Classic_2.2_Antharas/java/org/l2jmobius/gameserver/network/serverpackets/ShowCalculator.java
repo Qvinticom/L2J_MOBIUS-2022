@@ -32,7 +32,6 @@ public class ShowCalculator implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOW_CALC.writeId(packet);
-		
 		packet.writeD(_calculatorId);
 		return true;
 	}

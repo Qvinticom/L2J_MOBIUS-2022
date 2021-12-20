@@ -37,7 +37,6 @@ public class TutorialShowQuestionMark implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK.writeId(packet);
-		
 		packet.writeC(_markType);
 		packet.writeD(_markId);
 		return true;

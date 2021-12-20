@@ -54,7 +54,6 @@ public class SkillList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SKILL_LIST.writeId(packet);
 		packet.writeD(_skills.size());
-		
 		for (Skill temp : _skills)
 		{
 			packet.writeD(temp.passive ? 1 : 0);

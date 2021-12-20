@@ -50,7 +50,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO_DETAIL.writeId(packet);
-		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
 		packet.writeH(_skillLevel);

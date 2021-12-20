@@ -42,14 +42,12 @@ public class ExTeleportFavoritesList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TELEPORT_FAVORITES_LIST.writeId(packet);
-		
-		packet.writeC(_enable ? 0x01 : 0x00);
+		packet.writeC(_enable ? 1 : 0);
 		packet.writeD(_teleports.size());
 		for (int id : _teleports)
 		{
 			packet.writeD(id);
 		}
-		
 		return true;
 	}
 }

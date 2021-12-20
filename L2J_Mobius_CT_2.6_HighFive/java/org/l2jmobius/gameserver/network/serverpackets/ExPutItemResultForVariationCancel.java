@@ -46,7 +46,7 @@ public class ExPutItemResultForVariationCancel implements IClientOutgoingPacket
 		packet.writeD(_itemAug1);
 		packet.writeD(_itemAug2);
 		packet.writeQ(_price);
-		packet.writeD(0x01);
+		packet.writeD(1);
 		return true;
 	}
 }

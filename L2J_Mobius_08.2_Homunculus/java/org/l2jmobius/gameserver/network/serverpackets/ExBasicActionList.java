@@ -75,7 +75,6 @@ public class ExBasicActionList implements IClientOutgoingPacket
 		1149, 1150, 1151, 1152,
 		1153, 1154, 1155
 	};
-	
 	public static final int[] DEFAULT_ACTION_LIST = 
 	{ 
 		0, 1, 2, 3,
@@ -147,7 +146,6 @@ public class ExBasicActionList implements IClientOutgoingPacket
 		5012, 5013, 5014, 5015
 	};
 	//@formatter:on
-	
 	public static final ExBasicActionList STATIC_PACKET = new ExBasicActionList(DEFAULT_ACTION_LIST);
 	
 	private final int[] _actionIds;
@@ -161,7 +159,6 @@ public class ExBasicActionList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BASIC_ACTION_LIST.writeId(packet);
-		
 		packet.writeD(_actionIds.length);
 		for (int _actionId : _actionIds)
 		{

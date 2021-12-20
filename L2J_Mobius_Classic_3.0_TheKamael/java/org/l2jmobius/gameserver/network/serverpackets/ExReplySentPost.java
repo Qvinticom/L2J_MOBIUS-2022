@@ -54,14 +54,12 @@ public class ExReplySentPost extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REPLY_SENT_POST.writeId(packet);
-		
-		packet.writeD(0x00); // GOD
+		packet.writeD(0); // GOD
 		packet.writeD(_msg.getId());
 		packet.writeD(_msg.isLocked() ? 1 : 0);
 		packet.writeS(_msg.getReceiverName());
 		packet.writeS(_msg.getSubject());
 		packet.writeS(_msg.getContent());
-		
 		if ((_items != null) && !_items.isEmpty())
 		{
 			packet.writeD(_items.size());
@@ -73,11 +71,11 @@ public class ExReplySentPost extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
 		packet.writeQ(_msg.getReqAdena());
-		packet.writeD(_msg.hasAttachments() ? 0x01 : 0x00);
-		packet.writeD(_msg.isReturned() ? 0x01 : 00);
+		packet.writeD(_msg.hasAttachments() ? 1 : 0);
+		packet.writeD(_msg.isReturned() ? 1 : 0);
 		return true;
 	}
 }

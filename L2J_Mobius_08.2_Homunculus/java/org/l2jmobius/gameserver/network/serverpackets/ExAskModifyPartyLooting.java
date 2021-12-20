@@ -38,7 +38,6 @@ public class ExAskModifyPartyLooting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ASK_MODIFY_PARTY_LOOTING.writeId(packet);
-		
 		packet.writeS(_requestor);
 		packet.writeD(_partyDistributionType.getId());
 		return true;

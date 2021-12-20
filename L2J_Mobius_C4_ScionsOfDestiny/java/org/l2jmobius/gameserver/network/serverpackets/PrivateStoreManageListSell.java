@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * 3 section to this packet 1)playerinfo which is always sent dd 2)list of items which can be added to sell d(hhddddhhhd) 3)list of items which have already been setup for sell in previous sell private store sell manageent d(hhddddhhhdd) *
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
-
 /*
  * In memory of our friend Vadim 03/11/2014
  */
@@ -51,7 +50,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 		{
 			_playerAdena = _player.getAdena();
 		}
-		
 		_player.getSellList().updateItems();
 		_packageSale = _player.getSellList().isPackaged();
 		_itemList = _player.getInventory().getAvailableItems(_player.getSellList());
@@ -69,7 +67,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_packageSale ? 1 : 0); // Package sell
 		packet.writeD(_playerAdena);
-		
 		// section2
 		packet.writeD(_itemList.size()); // for potential sells
 		for (TradeItem item : _itemList)
@@ -84,7 +81,6 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeD(item.getPrice()); // store price
 		}
-		
 		// section 3
 		packet.writeD(_sellList.size()); // count for any items already added for sell
 		for (TradeItem item : _sellList)
@@ -95,7 +91,7 @@ public class PrivateStoreManageListSell implements IClientOutgoingPacket
 			packet.writeD(item.getCount());
 			packet.writeH(0);
 			packet.writeH(item.getEnchant()); // enchant level
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeD(item.getPrice()); // your price
 			packet.writeD(item.getItem().getReferencePrice()); // store price

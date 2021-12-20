@@ -35,7 +35,6 @@ public class GameGuardQuery implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GAME_GUARD_QUERY.writeId(packet);
-		
 		packet.writeD(0x27533DD9);
 		packet.writeD(0x2E72A51D);
 		packet.writeD(0x2017038B);

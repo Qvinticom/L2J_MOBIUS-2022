@@ -40,7 +40,6 @@ public class RadarControl implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.RADAR_CONTROL.writeId(packet);
-		
 		packet.writeD(_showRadar);
 		packet.writeD(_type); // maybe type
 		packet.writeD(_x);

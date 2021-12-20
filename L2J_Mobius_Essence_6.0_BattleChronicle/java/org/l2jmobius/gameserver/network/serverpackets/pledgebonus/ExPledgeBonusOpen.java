@@ -50,7 +50,6 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 			LOGGER.warning("Player: " + _player + " attempting to write to a null clan!");
 			return false;
 		}
-		
 		final ClanRewardBonus highestMembersOnlineBonus = ClanRewardData.getInstance().getHighestReward(ClanRewardType.MEMBERS_ONLINE);
 		final ClanRewardBonus highestHuntingBonus = ClanRewardData.getInstance().getHighestReward(ClanRewardType.HUNTING_MONSTERS);
 		final ClanRewardBonus membersOnlineBonus = ClanRewardType.MEMBERS_ONLINE.getAvailableBonus(clan);
@@ -75,25 +74,22 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 			LOGGER.warning("Couldn't find skill reward for highest available hunting bonus!!");
 			return false;
 		}
-		
 		// General OP Code
 		OutgoingPackets.EX_PLEDGE_BONUS_OPEN.writeId(packet);
-		
 		// Members online bonus
 		packet.writeD(highestMembersOnlineBonus.getRequiredAmount());
 		packet.writeD(clan.getMaxOnlineMembers());
-		packet.writeC(0x02); // 140
-		packet.writeD(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
-		packet.writeC(membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00);
-		packet.writeC(clan.canClaimBonusReward(_player, ClanRewardType.MEMBERS_ONLINE) ? 0x01 : 0x00);
-		
+		packet.writeC(2); // 140
+		packet.writeD(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0);
+		packet.writeC(membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0);
+		packet.writeC(clan.canClaimBonusReward(_player, ClanRewardType.MEMBERS_ONLINE) ? 1 : 0);
 		// Hunting bonus
 		packet.writeD(highestHuntingBonus.getRequiredAmount());
 		packet.writeD(clan.getHuntingPoints());
-		packet.writeC(0x02); // 140
-		packet.writeD(huntingBonus != null ? highestHuntingBonus.getSkillReward().getSkillId() : 0x00);
-		packet.writeC(huntingBonus != null ? huntingBonus.getLevel() : 0x00);
-		packet.writeC(clan.canClaimBonusReward(_player, ClanRewardType.HUNTING_MONSTERS) ? 0x01 : 0x00);
+		packet.writeC(2); // 140
+		packet.writeD(huntingBonus != null ? highestHuntingBonus.getSkillReward().getSkillId() : 0);
+		packet.writeC(huntingBonus != null ? huntingBonus.getLevel() : 0);
+		packet.writeC(clan.canClaimBonusReward(_player, ClanRewardType.HUNTING_MONSTERS) ? 1 : 0);
 		return true;
 	}
 }

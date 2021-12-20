@@ -60,13 +60,13 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 		{
 			packet.writeD(_objId);
 			packet.writeQ(_playerAdena);
-			packet.writeD(0x00);
+			packet.writeD(0);
 			for (Item item : _itemList)
 			{
 				writeItem(packet, item);
 				packet.writeQ(item.getItem().getReferencePrice() * 2);
 			}
-			packet.writeD(0x00);
+			packet.writeD(0);
 			for (TradeItem item2 : _buyList)
 			{
 				writeItem(packet, item2);

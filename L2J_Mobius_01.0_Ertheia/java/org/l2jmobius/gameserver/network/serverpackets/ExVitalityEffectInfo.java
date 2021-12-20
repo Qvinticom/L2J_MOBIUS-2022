@@ -41,10 +41,9 @@ public class ExVitalityEffectInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VITALITY_EFFECT_INFO.writeId(packet);
-		
 		packet.writeD(_points);
 		packet.writeD(_vitalityBonus); // Vitality Bonus
-		// packet.writeH(0x00); // Vitality additional bonus in %
+		// packet.writeH(0); // Vitality additional bonus in %
 		packet.writeH(_vitalityItemsRemaining); // How much vitality items remaining for use
 		packet.writeH(Config.VITALITY_MAX_ITEMS_ALLOWED); // Max number of items for use
 		return true;

@@ -34,9 +34,9 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * <br>
  * c = 0xcb<br>
  * d = CastleID<br>
- * d = unknow (0x00)<br>
- * d = unknow (0x01)<br>
- * d = unknow (0x00)<br>
+ * d = unknown (0)<br>
+ * d = unknown (1)<br>
+ * d = unknown (0)<br>
  * d = Number of Defending Clans?<br>
  * d = Number of Defending Clans<br>
  * { //repeats<br>
@@ -77,9 +77,9 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SIEGE_DEFENDER_LIST.writeId(packet);
 		packet.writeD(_residenceId);
-		packet.writeD(0x00); // 0
-		packet.writeD(0x01); // 1
-		packet.writeD(0x00); // 0
+		packet.writeD(0); // 0
+		packet.writeD(1); // 1
+		packet.writeD(0); // 0
 		final int size = _defenders.size() + _waiting.size();
 		if (size > 0)
 		{
@@ -94,32 +94,31 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 				{
 					continue;
 				}
-				
 				packet.writeD(clan.getClanId());
 				packet.writeS(clan.getName());
 				packet.writeS(clan.getLeaderName());
 				packet.writeD(clan.getCrestId());
-				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
+				packet.writeD(0); // signed time (seconds) (not storated by L2J)
 				switch (siegeclan.getType())
 				{
 					case OWNER:
 					{
-						packet.writeD(0x01); // owner
+						packet.writeD(1); // owner
 						break;
 					}
 					case DEFENDER_PENDING:
 					{
-						packet.writeD(0x02); // approved
+						packet.writeD(2); // approved
 						break;
 					}
 					case DEFENDER:
 					{
-						packet.writeD(0x03); // waiting approved
+						packet.writeD(3); // waiting approved
 						break;
 					}
 					default:
 					{
-						packet.writeD(0x00);
+						packet.writeD(0);
 						break;
 					}
 				}
@@ -135,8 +134,8 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 				packet.writeS(clan.getName());
 				packet.writeS(clan.getLeaderName());
 				packet.writeD(clan.getCrestId());
-				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
-				packet.writeD(0x02); // waiting approval
+				packet.writeD(0); // signed time (seconds) (not storated by L2J)
+				packet.writeD(2); // waiting approval
 				packet.writeD(clan.getAllyId());
 				packet.writeS(clan.getAllyName());
 				packet.writeS(""); // AllyLeaderName
@@ -145,8 +144,8 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		return true;
 	}

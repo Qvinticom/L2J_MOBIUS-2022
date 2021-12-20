@@ -56,12 +56,10 @@ public class GMViewPledgeInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getLevel());
 		packet.writeD(_clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis() ? 3 : 0);
 		packet.writeD(0);
-		
 		packet.writeD(_clan.getAllyId()); // c2
 		packet.writeS(_clan.getAllyName()); // c2
 		packet.writeD(_clan.getAllyCrestId()); // c2
 		packet.writeD(_clan.isAtWar()); // c3
-		
 		final Collection<ClanMember> members = _clan.getMembers();
 		packet.writeD(members.size());
 		for (ClanMember member : members)

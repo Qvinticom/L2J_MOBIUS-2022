@@ -38,12 +38,10 @@ public class ExCraftInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CRAFT_INFO.writeId(packet);
-		
 		final PlayerRandomCraft rc = _player.getRandomCraft();
 		packet.writeD(rc.getFullCraftPoints()); // Full points owned
 		packet.writeD(rc.getCraftPoints()); // Craft Points (10k = 1%)
-		packet.writeC(rc.isSayhaRoll() ? 0x01 : 0x00); // Will get sayha?
-		
+		packet.writeC(rc.isSayhaRoll() ? 1 : 0); // Will get sayha?
 		return true;
 	}
 }

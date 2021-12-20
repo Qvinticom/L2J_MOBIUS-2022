@@ -62,7 +62,6 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 		}
 		
 		OutgoingPackets.EX_ONE_DAY_RECEIVE_REWARD_LIST.writeId(packet);
-		
 		packet.writeD(_dayRemainTime);
 		packet.writeD(_weekRemainTime);
 		packet.writeD(_monthRemainTime);
@@ -75,7 +74,7 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 			packet.writeH(reward.getId());
 			final int status = reward.getStatus(_player);
 			packet.writeC(status);
-			packet.writeC(reward.getRequiredCompletions() > 1 ? 0x01 : 0x00);
+			packet.writeC(reward.getRequiredCompletions() > 1 ? 1 : 0);
 			packet.writeD(reward.getParams().getInt("level", -1) == -1 ? (status == 1 ? 0 : reward.getProgress(_player)) : _player.getLevel());
 			packet.writeD(reward.getRequiredCompletions());
 		}

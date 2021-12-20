@@ -84,10 +84,8 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SEED_SETTING.writeId(packet);
-		
 		packet.writeD(_manorId); // manor id
 		packet.writeD(_count); // size
-		
 		for (int i = 0; i < _count; i++)
 		{
 			packet.writeD(_seedData[(i * 12) + 0]); // seed id
@@ -96,12 +94,10 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 			packet.writeD(_seedData[(i * 12) + 2]); // reward 1 id
 			packet.writeC(1);
 			packet.writeD(_seedData[(i * 12) + 3]); // reward 2 id
-			
 			packet.writeD(_seedData[(i * 12) + 4]); // next sale limit
 			packet.writeD(_seedData[(i * 12) + 5]); // price for castle to produce 1
 			packet.writeD(_seedData[(i * 12) + 6]); // min seed price
 			packet.writeD(_seedData[(i * 12) + 7]); // max seed price
-			
 			packet.writeD(_seedData[(i * 12) + 8]); // today sales
 			packet.writeD(_seedData[(i * 12) + 9]); // today price
 			packet.writeD(_seedData[(i * 12) + 10]); // next sales

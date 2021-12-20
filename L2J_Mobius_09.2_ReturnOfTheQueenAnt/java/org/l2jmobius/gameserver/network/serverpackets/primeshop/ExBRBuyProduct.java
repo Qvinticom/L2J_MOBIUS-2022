@@ -69,7 +69,6 @@ public class ExBRBuyProduct implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BR_BUY_PRODUCT.writeId(packet);
-		
 		packet.writeD(_reply);
 		return true;
 	}

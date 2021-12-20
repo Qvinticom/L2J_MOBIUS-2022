@@ -49,7 +49,6 @@ public class ExUserInfoFishing implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_USER_INFO_FISHING.writeId(packet);
-		
 		packet.writeD(_player.getObjectId());
 		packet.writeC(_isFishing ? 1 : 0);
 		if (_baitLocation == null)

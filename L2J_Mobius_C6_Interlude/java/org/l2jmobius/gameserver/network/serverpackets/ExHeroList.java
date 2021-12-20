@@ -42,7 +42,6 @@ public class ExHeroList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_HERO_LIST.writeId(packet);
 		packet.writeD(_heroList.size());
-		
 		for (StatSet hero : _heroList.values())
 		{
 			packet.writeS(hero.getString(Olympiad.CHAR_NAME));

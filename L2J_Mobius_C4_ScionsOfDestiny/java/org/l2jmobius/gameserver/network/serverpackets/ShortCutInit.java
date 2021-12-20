@@ -39,7 +39,6 @@ public class ShortCutInit implements IClientOutgoingPacket
 		{
 			return;
 		}
-		
 		_shortCuts = _player.getAllShortCuts();
 	}
 	

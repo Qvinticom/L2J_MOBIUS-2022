@@ -64,20 +64,17 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_OLYMPIAD_RANKING_INFO.writeId(packet);
-		
 		packet.writeC(_tabId); // Tab id
 		packet.writeC(_rankingType); // ranking type
 		packet.writeC(_unk); // unk, shows 1 all time
 		packet.writeD(_classId); // class id (default 148) or caller class id for personal rank
 		packet.writeD(_serverId); // 0 - all servers, server id - for caller server
 		packet.writeD(933); // unk, 933 all time
-		
 		if (!_playerList.isEmpty())
 		{
 			final RankingOlympiadCategory category = RankingOlympiadCategory.values()[_tabId];
 			writeFilteredRankingData(packet, category, category.getScopeByGroup(_rankingType), ClassId.getClassId(_classId));
 		}
-		
 		return true;
 	}
 	
@@ -100,10 +97,8 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 	
 	private void writeScopeData(PacketWriter packet, RankingOlympiadScope scope, List<Entry<Integer, StatSet>> list, List<Entry<Integer, StatSet>> snapshot)
 	{
-		
 		Entry<Integer, StatSet> playerData = list.stream().filter(it -> it.getValue().getInt("charId", 0) == _player.getObjectId()).findFirst().orElse(null);
 		final int indexOf = list.indexOf(playerData);
-		
 		final List<Entry<Integer, StatSet>> limited;
 		switch (scope)
 		{
@@ -132,9 +127,7 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 				limited = Collections.emptyList();
 			}
 		}
-		
 		packet.writeD(limited.size());
-		
 		int rank = 1;
 		for (Entry<Integer, StatSet> data : limited.stream().sorted(Entry.comparingByKey()).collect(Collectors.toList()))
 		{
@@ -143,7 +136,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 			packet.writeString(player.getString("name")); // name
 			packet.writeString(player.getString("clanName")); // clan name
 			packet.writeD(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank); // rank
-			
 			if (!snapshot.isEmpty())
 			{
 				int snapshotRank = 1;
@@ -160,7 +152,6 @@ public class ExOlympiadRankingInfo implements IClientOutgoingPacket
 			{
 				packet.writeD(scope == RankingOlympiadScope.SELF ? data.getKey() : curRank);
 			}
-			
 			packet.writeD(Config.SERVER_ID); // server id
 			packet.writeD(player.getInt("level")); // level
 			packet.writeD(player.getInt("classId")); // class id

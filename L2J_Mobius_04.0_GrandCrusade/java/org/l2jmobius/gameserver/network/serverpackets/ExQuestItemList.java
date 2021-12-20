@@ -48,7 +48,6 @@ public class ExQuestItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_QUEST_ITEM_LIST.writeId(packet);
-		
 		packet.writeH(_items.size());
 		for (Item item : _items)
 		{

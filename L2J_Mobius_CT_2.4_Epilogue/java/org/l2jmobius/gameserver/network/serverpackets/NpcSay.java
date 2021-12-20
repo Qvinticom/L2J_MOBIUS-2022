@@ -105,11 +105,9 @@ public class NpcSay implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.NPC_SAY.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_textType.getClientId());
 		packet.writeD(_npcId);
-		
 		if (_parameters != null)
 		{
 			for (int i = 0; i < _parameters.size(); i++)
@@ -117,7 +115,6 @@ public class NpcSay implements IClientOutgoingPacket
 				_text = _text.replace("$s" + (i + 1), _parameters.get(i));
 			}
 		}
-		
 		// Localisation related.
 		if (_lang != null)
 		{
@@ -131,7 +128,6 @@ public class NpcSay implements IClientOutgoingPacket
 				}
 			}
 		}
-		
 		packet.writeS(_text);
 		return true;
 	}

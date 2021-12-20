@@ -42,7 +42,6 @@ public class ExPurchaseLimitShopItemResult implements IClientOutgoingPacket
 		_category = category;
 		_productId = productId;
 		_rewards = rewards;
-		
 		switch (_category)
 		{
 			case 3: // Normal Lcoin Shop

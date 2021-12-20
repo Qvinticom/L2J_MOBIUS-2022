@@ -46,22 +46,17 @@ public class SSQStatus implements IClientOutgoingPacket
 		final int totalDawnMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DAWN);
 		final int totalDuskMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DUSK);
 		OutgoingPackets.SSQ_STATUS.writeId(packet);
-		
 		packet.writeC(_page);
 		packet.writeC(SevenSigns.getInstance().getCurrentPeriod()); // current period?
-		
 		int dawnPercent = 0;
 		int duskPercent = 0;
-		
 		switch (_page)
 		{
 			case 1:
 			{
 				// [ddd cc dd ddd c ddd c]
 				packet.writeD(SevenSigns.getInstance().getCurrentCycle());
-				
 				final int currentPeriod = SevenSigns.getInstance().getCurrentPeriod();
-				
 				switch (currentPeriod)
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
@@ -85,7 +80,6 @@ public class SSQStatus implements IClientOutgoingPacket
 						break;
 					}
 				}
-				
 				switch (currentPeriod)
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
@@ -101,19 +95,15 @@ public class SSQStatus implements IClientOutgoingPacket
 						break;
 					}
 				}
-				
 				packet.writeC(SevenSigns.getInstance().getPlayerCabal(_objectId));
 				packet.writeC(SevenSigns.getInstance().getPlayerSeal(_objectId));
-				
 				packet.writeQ(SevenSigns.getInstance().getPlayerStoneContrib(_objectId)); // Seal Stones Turned-In
 				packet.writeQ(SevenSigns.getInstance().getPlayerAdenaCollect(_objectId)); // Ancient Adena to Collect
-				
 				final double dawnStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DAWN);
 				final int dawnFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DAWN);
 				final double duskStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DUSK);
 				final int duskFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DUSK);
 				final double totalStoneScore = duskStoneScore + dawnStoneScore;
-				
 				/*
 				 * Scoring seems to be proportionate to a set base value, so base this on the maximum obtainable score from festivals, which is 500.
 				 */
@@ -124,7 +114,6 @@ public class SSQStatus implements IClientOutgoingPacket
 					duskStoneScoreProp = Math.round(((float) duskStoneScore / (float) totalStoneScore) * 500);
 					dawnStoneScoreProp = Math.round(((float) dawnStoneScore / (float) totalStoneScore) * 500);
 				}
-				
 				final int duskTotalScore = SevenSigns.getInstance().getCurrentScore(SevenSigns.CABAL_DUSK);
 				final int dawnTotalScore = SevenSigns.getInstance().getCurrentScore(SevenSigns.CABAL_DAWN);
 				final int totalOverallScore = duskTotalScore + dawnTotalScore;
@@ -133,19 +122,15 @@ public class SSQStatus implements IClientOutgoingPacket
 					dawnPercent = Math.round(((float) dawnTotalScore / totalOverallScore) * 100);
 					duskPercent = Math.round(((float) duskTotalScore / totalOverallScore) * 100);
 				}
-				
 				/* DUSK */
 				packet.writeQ(duskStoneScoreProp); // Seal Stone Score
 				packet.writeQ(duskFestivalScore); // Festival Score
 				packet.writeQ(duskTotalScore); // Total Score
-				
 				packet.writeC(duskPercent); // Dusk %
-				
 				/* DAWN */
 				packet.writeQ(dawnStoneScoreProp); // Seal Stone Score
 				packet.writeQ(dawnFestivalScore); // Festival Score
 				packet.writeQ(dawnTotalScore); // Total Score
-				
 				packet.writeC(dawnPercent); // Dawn %
 				break;
 			}
@@ -153,26 +138,20 @@ public class SSQStatus implements IClientOutgoingPacket
 			{
 				// c cc hc [cd (dc (S))]
 				packet.writeH(1);
-				
 				packet.writeC(5); // Total number of festivals
-				
 				for (int i = 0; i < 5; i++)
 				{
 					packet.writeC(i + 1); // Current client-side festival ID
 					packet.writeD(SevenSignsFestival.FESTIVAL_LEVEL_SCORES[i]);
-					
 					final int duskScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DUSK, i);
 					final int dawnScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DAWN, i);
-					
 					// Dusk Score \\
 					packet.writeQ(duskScore);
-					
 					StatSet highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, i);
 					String[] partyMembers = highScoreData.getString("members").split(",");
 					if (partyMembers != null)
 					{
 						packet.writeC(partyMembers.length);
-						
 						for (String partyMember : partyMembers)
 						{
 							packet.writeS(partyMember);
@@ -182,16 +161,13 @@ public class SSQStatus implements IClientOutgoingPacket
 					{
 						packet.writeC(0);
 					}
-					
 					// Dawn Score \\
 					packet.writeQ(dawnScore);
-					
 					highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, i);
 					partyMembers = highScoreData.getString("members").split(",");
 					if (partyMembers != null)
 					{
 						packet.writeC(partyMembers.length);
-						
 						for (String partyMember : partyMembers)
 						{
 							packet.writeS(partyMember);
@@ -210,14 +186,12 @@ public class SSQStatus implements IClientOutgoingPacket
 				packet.writeC(10); // Minimum limit for winning cabal to retain their seal
 				packet.writeC(35); // Minimum limit for winning cabal to claim a seal
 				packet.writeC(3); // Total number of seals
-				
 				for (int i = 1; i < 4; i++)
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
 					final int duskProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DUSK);
 					packet.writeC(i);
 					packet.writeC(SevenSigns.getInstance().getSealOwner(i));
-					
 					if (totalDuskMembers == 0)
 					{
 						if (totalDawnMembers == 0)
@@ -252,7 +226,6 @@ public class SSQStatus implements IClientOutgoingPacket
 				// c cc [cc (ccD)] CT 2.3 update
 				packet.writeC(winningCabal); // Overall predicted winner
 				packet.writeC(3); // Total number of seals
-				
 				for (int i = 1; i < 4; i++)
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
@@ -261,7 +234,6 @@ public class SSQStatus implements IClientOutgoingPacket
 					duskPercent = Math.round((duskProportion / (totalDuskMembers == 0 ? 1 : (float) totalDuskMembers)) * 100);
 					final int sealOwner = SevenSigns.getInstance().getSealOwner(i);
 					packet.writeC(i);
-					
 					switch (sealOwner)
 					{
 						case SevenSigns.CABAL_NULL:

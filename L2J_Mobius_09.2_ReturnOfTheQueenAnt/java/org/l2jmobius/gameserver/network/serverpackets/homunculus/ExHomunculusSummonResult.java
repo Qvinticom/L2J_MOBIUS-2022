@@ -31,10 +31,8 @@ public class ExHomunculusSummonResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_HOMUNCULUS_SUMMON_RESULT.writeId(packet);
-		
 		packet.writeD(1); // 1 - success
 		packet.writeD(SystemMessageId.A_NEW_HOMUNCULUS_IS_CREATED.getId());
-		
 		return true;
 	}
 }

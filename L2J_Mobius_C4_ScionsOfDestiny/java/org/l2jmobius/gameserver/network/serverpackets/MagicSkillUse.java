@@ -76,12 +76,12 @@ public class MagicSkillUse implements IClientOutgoingPacket
 		packet.writeD(_z);
 		// if (_critical) // ?
 		// {
-		// writeD(0x01);
-		// writeH(0x00);
+		// writeD(1);
+		// writeH(0);
 		// }
 		// else
 		// {
-		packet.writeD(0x00);
+		packet.writeD(0);
 		// }
 		packet.writeD(_targetx);
 		packet.writeD(_targety);

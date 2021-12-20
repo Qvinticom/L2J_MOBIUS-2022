@@ -45,16 +45,13 @@ public class GMViewHennaInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_HENNA_INFO.writeId(packet);
-		
 		packet.writeC(_player.getHennaStatINT());
 		packet.writeC(_player.getHennaStatSTR());
 		packet.writeC(_player.getHennaStatCON());
 		packet.writeC(_player.getHennaStatMEN());
 		packet.writeC(_player.getHennaStatDEX());
 		packet.writeC(_player.getHennaStatWIT());
-		
 		packet.writeD(3); // slots?
-		
 		packet.writeD(_count); // size
 		for (int i = 0; i < _count; i++)
 		{

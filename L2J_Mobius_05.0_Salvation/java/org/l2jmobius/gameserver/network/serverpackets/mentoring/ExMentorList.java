@@ -64,9 +64,8 @@ public class ExMentorList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MENTOR_LIST.writeId(packet);
-		
 		packet.writeD(_type);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_mentees.size());
 		for (Mentee mentee : _mentees)
 		{

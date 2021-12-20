@@ -31,7 +31,6 @@ public class ExCursedWeaponList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CURSED_WEAPON_LIST.writeId(packet);
-		
 		final Set<Integer> ids = CursedWeaponsManager.getInstance().getCursedWeaponsIds();
 		packet.writeD(ids.size());
 		ids.forEach(packet::writeD);

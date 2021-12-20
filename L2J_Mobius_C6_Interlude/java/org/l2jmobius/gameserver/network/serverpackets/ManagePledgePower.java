@@ -45,7 +45,6 @@ public class ManagePledgePower implements IClientOutgoingPacket
 		{
 			return true;
 		}
-		
 		OutgoingPackets.MANAGE_PLEDGE_POWER.writeId(packet);
 		packet.writeD(0);
 		packet.writeD(0);

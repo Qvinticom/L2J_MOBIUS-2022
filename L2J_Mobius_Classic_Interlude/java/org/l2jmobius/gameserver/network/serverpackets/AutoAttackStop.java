@@ -35,7 +35,6 @@ public class AutoAttackStop implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.AUTO_ATTACK_STOP.writeId(packet);
-		
 		packet.writeD(_targetObjId);
 		return true;
 	}

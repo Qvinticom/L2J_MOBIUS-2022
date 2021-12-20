@@ -37,7 +37,6 @@ public class ExUnReadMailCount implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_UN_READ_MAIL_COUNT.writeId(packet);
-		
 		packet.writeD(_mailUnreadCount);
 		return true;
 	}

@@ -23,6 +23,7 @@ public class Ride implements IClientOutgoingPacket
 {
 	public static final int ACTION_MOUNT = 1;
 	public static final int ACTION_DISMOUNT = 0;
+	
 	private final int _id;
 	private final int _bRide;
 	private int _rideType;

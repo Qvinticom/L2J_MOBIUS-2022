@@ -42,7 +42,6 @@ public class ExEventMatchMessage implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_EVENT_MATCH_MESSAGE.writeId(packet);
-		
 		packet.writeC(_type);
 		packet.writeS(_message);
 		return true;

@@ -35,7 +35,6 @@ public class ExCloseMPCC implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CLOSE_MPCC.writeId(packet);
-		
 		return true;
 	}
 }

@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExShowDominionRegistry implements IClientOutgoingPacket
 {
 	private static final int MINID = 80;
+	
 	private final int _castleId;
 	private int _clanReq = 0x00;
 	private int _mercReq = 0x00;
@@ -48,13 +49,13 @@ public class ExShowDominionRegistry implements IClientOutgoingPacket
 			_clanReq = TerritoryWarManager.getInstance().getRegisteredClans(castleId).size();
 			if (player.getClan() != null)
 			{
-				_isClanRegistered = (TerritoryWarManager.getInstance().getRegisteredClans(castleId).contains(player.getClan()) ? 0x01 : 0x00);
+				_isClanRegistered = (TerritoryWarManager.getInstance().getRegisteredClans(castleId).contains(player.getClan()) ? 1 : 0);
 			}
 		}
 		if (TerritoryWarManager.getInstance().getRegisteredMercenaries(castleId) != null)
 		{
 			_mercReq = TerritoryWarManager.getInstance().getRegisteredMercenaries(castleId).size();
-			_isMercRegistered = (TerritoryWarManager.getInstance().getRegisteredMercenaries(castleId).contains(player.getObjectId()) ? 0x01 : 0x00);
+			_isMercRegistered = (TerritoryWarManager.getInstance().getRegisteredMercenaries(castleId).contains(player.getObjectId()) ? 1 : 0);
 		}
 		_warTime = (int) (TerritoryWarManager.getInstance().getTWStartTimeInMillis() / 1000);
 	}
@@ -94,7 +95,7 @@ public class ExShowDominionRegistry implements IClientOutgoingPacket
 		packet.writeD(_currentTime); // Current Time
 		packet.writeD(_isClanRegistered); // is Cancel clan registration
 		packet.writeD(_isMercRegistered); // is Cancel mercenaries registration
-		packet.writeD(0x01); // unknown
+		packet.writeD(1); // unknown
 		final List<Territory> territoryList = TerritoryWarManager.getInstance().getAllTerritories();
 		packet.writeD(territoryList.size()); // Territory Count
 		for (Territory t : territoryList)

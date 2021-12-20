@@ -61,7 +61,6 @@ public class ExAcquireSkillInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ACQUIRE_SKILL_INFO.writeId(packet);
-		
 		packet.writeD(_id);
 		packet.writeD(_level);
 		packet.writeQ(_spCost);
@@ -73,7 +72,6 @@ public class ExAcquireSkillInfo implements IClientOutgoingPacket
 			packet.writeD(holder.getId());
 			packet.writeQ(holder.getCount());
 		}
-		
 		packet.writeD(_skillRem.size());
 		for (Skill skill : _skillRem)
 		{

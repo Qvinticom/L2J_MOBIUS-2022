@@ -29,26 +29,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {
-	private final Player _player;
-	private final Clan _clan;
-	private int _objId;
-	private int _x;
-	private int _y;
-	private int _z;
-	private int _heading;
-	private final int _mAtkSpd;
-	private final int _pAtkSpd;
-	private final int _runSpd;
-	private final int _walkSpd;
-	private final int _swimRunSpd;
-	private final int _swimWalkSpd;
-	private final int _flyRunSpd;
-	private final int _flyWalkSpd;
-	private final double _moveMultiplier;
-	
-	private int _vehicleId = 0;
-	private final boolean _gmSeeInvis;
-	
 	private static final int[] PAPERDOLL_ORDER = new int[]
 	{
 		Inventory.PAPERDOLL_UNDER,
@@ -73,6 +53,25 @@ public class CharInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_DECO6,
 		Inventory.PAPERDOLL_BELT
 	};
+	
+	private final Player _player;
+	private final Clan _clan;
+	private int _objId;
+	private int _x;
+	private int _y;
+	private int _z;
+	private int _heading;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
+	private final int _flyRunSpd;
+	private final int _flyWalkSpd;
+	private final double _moveMultiplier;
+	private int _vehicleId = 0;
+	private final boolean _gmSeeInvis;
 	
 	public CharInfo(Player player, boolean gmSeeInvis)
 	{
@@ -141,15 +140,11 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_player.getInventory().getTalismanSlots());
 		packet.writeD(_player.getInventory().canEquipCloak() ? 1 : 0);
-		
 		packet.writeD(_player.getPvpFlag());
 		packet.writeD(_player.getKarma());
-		
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
-		
-		packet.writeD(0x00); // ?
-		
+		packet.writeD(0); // ?
 		packet.writeD(_runSpd);
 		packet.writeD(_walkSpd);
 		packet.writeD(_swimRunSpd);
@@ -160,16 +155,12 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_flyWalkSpd);
 		packet.writeF(_moveMultiplier);
 		packet.writeF(_player.getAttackSpeedMultiplier());
-		
 		packet.writeF(_player.getCollisionRadius());
 		packet.writeF(_player.getCollisionHeight());
-		
 		packet.writeD(_player.getAppearance().getHairStyle());
 		packet.writeD(_player.getAppearance().getHairColor());
 		packet.writeD(_player.getAppearance().getFace());
-		
 		packet.writeS(_gmSeeInvis ? "Invisible" : _player.getAppearance().getVisibleTitle());
-		
 		if (!_player.isCursedWeaponEquipped())
 		{
 			packet.writeD(_player.getClanId());
@@ -179,20 +170,16 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
-		
 		packet.writeC(_player.isSitting() ? 0 : 1); // standing = 1 sitting = 0
 		packet.writeC(_player.isRunning() ? 1 : 0); // running = 1 walking = 0
 		packet.writeC(_player.isInCombat() ? 1 : 0);
-		
 		packet.writeC(!_player.isInOlympiadMode() && _player.isAlikeDead() ? 1 : 0);
-		
 		packet.writeC(!_gmSeeInvis && _player.isInvisible() ? 1 : 0); // invisible = 1 visible =0
-		
 		packet.writeC(_player.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
 		packet.writeC(_player.getPrivateStoreType().getId());
 		
@@ -203,48 +190,35 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		packet.writeC(_player.isInPartyMatchRoom() ? 1 : 0);
-		
 		packet.writeD(_gmSeeInvis ? (_player.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _player.getAbnormalVisualEffects());
-		
 		packet.writeC(_player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0);
-		
 		packet.writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 		packet.writeD(_player.getMountNpcId() + 1000000);
 		packet.writeD(_player.getClassId().getId());
-		packet.writeD(0x00); // ?
+		packet.writeD(0); // ?
 		packet.writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
-		
 		packet.writeC(_player.getTeam().getId());
-		
 		packet.writeD(_player.getClanCrestLargeId());
 		packet.writeC(_player.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
 		packet.writeC(_player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
 		
-		packet.writeC(_player.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
+		packet.writeC(_player.isFishing() ? 1 : 0); // 1: Fishing Mode (Cant be undone by setting back to 0)
 		packet.writeD(_player.getFishx());
 		packet.writeD(_player.getFishy());
 		packet.writeD(_player.getFishz());
 		
 		packet.writeD(_player.getAppearance().getNameColor());
-		
 		packet.writeD(_heading);
-		
 		packet.writeD(_player.getPledgeClass());
 		packet.writeD(_player.getPledgeType());
-		
 		packet.writeD(_player.getAppearance().getTitleColor());
-		
 		packet.writeD(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
-		
 		packet.writeD(_clan != null ? _clan.getReputationScore() : 0);
-		
 		// T1
 		packet.writeD(_player.getTransformationDisplayId());
 		packet.writeD(_player.getAgathionId());
-		
 		// T2
-		packet.writeD(0x01);
-		
+		packet.writeD(1);
 		// T2.3
 		packet.writeD(_player.getAbnormalVisualEffectSpecial());
 		return true;

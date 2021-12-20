@@ -32,7 +32,6 @@ public class SendTradeRequest implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TRADE_REQUEST.writeId(packet);
-		
 		packet.writeD(_senderId);
 		return true;
 	}

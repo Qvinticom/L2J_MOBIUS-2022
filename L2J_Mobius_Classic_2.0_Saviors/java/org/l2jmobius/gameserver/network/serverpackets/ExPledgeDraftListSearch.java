@@ -38,7 +38,6 @@ public class ExPledgeDraftListSearch implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_DRAFT_LIST_SEARCH.writeId(packet);
-		
 		packet.writeD(_pledgeRecruitList.size());
 		for (PledgeWaitingInfo prl : _pledgeRecruitList)
 		{

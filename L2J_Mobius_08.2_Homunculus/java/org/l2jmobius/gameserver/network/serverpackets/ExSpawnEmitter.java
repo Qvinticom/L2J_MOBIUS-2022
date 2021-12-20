@@ -44,10 +44,9 @@ public class ExSpawnEmitter implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SPAWN_EMITTER.writeId(packet);
-		
 		packet.writeD(_npcObjectId);
 		packet.writeD(_playerObjectId);
-		packet.writeD(0x00); // ?
+		packet.writeD(0); // ?
 		return true;
 	}
 }

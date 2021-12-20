@@ -40,7 +40,7 @@ public class TimedHuntingZoneEnter implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_USER_ENTER.writeId(packet);
-		packet.writeC(0x01); // bEnterSuccess
+		packet.writeC(1); // bEnterSuccess
 		packet.writeD(_zoneId);
 		packet.writeD((int) ((Chronos.currentTimeMillis() / 60) / 1000)); // nEnterTimeStamp (current time in minutes)
 		packet.writeD(_player.getTimedHuntingZoneRemainingTime(_zoneId) / 1000); // nRemainTime (zone left time)

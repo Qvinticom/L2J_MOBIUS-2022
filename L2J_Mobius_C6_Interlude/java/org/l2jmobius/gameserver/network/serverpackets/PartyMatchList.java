@@ -50,20 +50,16 @@ public class PartyMatchList implements IClientOutgoingPacket
 				PartyMatchRoomList.getInstance().deleteRoom(room.getId());
 				continue;
 			}
-			
 			if ((_loc > 0) && (_loc != room.getLocation()))
 			{
 				continue;
 			}
-			
 			if ((_lim == 0) && ((_player.getLevel() < room.getMinLevel()) || (_player.getLevel() > room.getMaxLevel())))
 			{
 				continue;
 			}
-			
 			_rooms.add(room);
 		}
-		
 		int count = 0;
 		final int size = _rooms.size();
 		OutgoingPackets.PARTY_MATCH_LIST.writeId(packet);
@@ -75,7 +71,6 @@ public class PartyMatchList implements IClientOutgoingPacket
 		{
 			packet.writeD(0);
 		}
-		
 		packet.writeD(_rooms.size());
 		while (size > count)
 		{

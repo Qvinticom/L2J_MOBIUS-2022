@@ -39,7 +39,6 @@ public class ExPledgeWaitingList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_WAITING_LIST.writeId(packet);
-		
 		packet.writeD(pledgePlayerRecruitInfos.size());
 		for (PledgeApplicantInfo recruitInfo : pledgePlayerRecruitInfos.values())
 		{

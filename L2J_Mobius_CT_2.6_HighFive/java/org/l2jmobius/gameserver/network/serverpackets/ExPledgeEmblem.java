@@ -46,7 +46,7 @@ public class ExPledgeEmblem implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_EMBLEM.writeId(packet);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_crestId);
 		if (_data != null)
 		{

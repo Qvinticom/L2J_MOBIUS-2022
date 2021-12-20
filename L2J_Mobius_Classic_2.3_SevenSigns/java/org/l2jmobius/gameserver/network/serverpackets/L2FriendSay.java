@@ -40,7 +40,6 @@ public class L2FriendSay implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.L2_FRIEND_SAY.writeId(packet);
-		
 		packet.writeD(0); // ??
 		packet.writeS(_receiver);
 		packet.writeS(_sender);

@@ -47,7 +47,6 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		{
 			_playerAdena = _player.getAdena();
 		}
-		
 		_itemList = _player.getInventory().getUniqueItems(false, true, true);
 		_buyList = _player.getBuyList().getItems();
 	}
@@ -59,7 +58,6 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 		// section 1
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_playerAdena);
-		
 		// section2
 		packet.writeD(_itemList.size()); // inventory items for potential buy
 		for (Item item : _itemList)
@@ -68,11 +66,10 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 			packet.writeH(item.getEnchantLevel()); // show enchant level, but you can't buy enchanted weapons because of L2 Interlude Client bug
 			packet.writeD(item.getCount());
 			packet.writeD(item.getReferencePrice());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
 		}
-		
 		// section 3
 		packet.writeD(_buyList.size()); // count for all items already added for buy
 		for (TradeList.TradeItem item : _buyList)
@@ -81,7 +78,7 @@ public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 			packet.writeH(item.getEnchant());
 			packet.writeD(item.getCount());
 			packet.writeD(item.getItem().getReferencePrice());
-			packet.writeH(0x00);
+			packet.writeH(0);
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
 			packet.writeD(item.getPrice()); // your price

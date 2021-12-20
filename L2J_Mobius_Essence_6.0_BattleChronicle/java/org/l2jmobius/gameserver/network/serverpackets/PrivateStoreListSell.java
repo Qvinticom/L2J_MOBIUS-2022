@@ -43,11 +43,10 @@ public class PrivateStoreListSell extends AbstractItemPacket
 		else
 		{
 			OutgoingPackets.PRIVATE_STORE_LIST.writeId(packet);
-			
 			packet.writeD(_seller.getObjectId());
 			packet.writeD(_seller.getSellList().isPackaged() ? 1 : 0);
 			packet.writeQ(_player.getAdena());
-			packet.writeD(0x00);
+			packet.writeD(0);
 			packet.writeD(_seller.getSellList().getItems().size());
 			for (TradeItem item : _seller.getSellList().getItems())
 			{

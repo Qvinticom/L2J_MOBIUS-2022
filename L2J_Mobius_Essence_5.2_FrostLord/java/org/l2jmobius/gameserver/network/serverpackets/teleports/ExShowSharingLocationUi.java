@@ -35,7 +35,6 @@ public class ExShowSharingLocationUi implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		
 		OutgoingPackets.EX_SHARED_POSITION_SHARING_UI.writeId(packet);
 		packet.writeQ(Config.SHARING_LOCATION_COST);
 		return true;

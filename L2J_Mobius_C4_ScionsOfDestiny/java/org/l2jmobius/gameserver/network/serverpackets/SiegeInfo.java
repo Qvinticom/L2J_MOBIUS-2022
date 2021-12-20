@@ -77,7 +77,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SIEGE_INFO.writeId(packet);
 		packet.writeD(_residenceId);
-		packet.writeD((_ownerId == _player.getClanId()) && _player.isClanLeader() ? 0x01 : 0x00);
+		packet.writeD((_ownerId == _player.getClanId()) && _player.isClanLeader() ? 1 : 0);
 		packet.writeD(_ownerId);
 		if (_ownerId > 0)
 		{
@@ -101,10 +101,9 @@ public class SiegeInfo implements IClientOutgoingPacket
 			packet.writeD(0); // Ally ID
 			packet.writeS(""); // Ally Name
 		}
-		
 		packet.writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
 		packet.writeD((int) _siegeDate);
-		packet.writeD(0x00); // number of choices?
+		packet.writeD(0); // number of choices?
 		return true;
 	}
 }

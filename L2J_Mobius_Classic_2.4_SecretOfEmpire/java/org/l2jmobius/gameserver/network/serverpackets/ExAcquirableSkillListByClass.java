@@ -41,7 +41,6 @@ public class ExAcquirableSkillListByClass implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ACQUIRABLE_SKILL_LIST_BY_CLASS.writeId(packet);
-		
 		packet.writeH(_type.getId());
 		packet.writeH(_learnable.size());
 		for (SkillLearn skill : _learnable)
@@ -54,7 +53,7 @@ public class ExAcquirableSkillListByClass implements IClientOutgoingPacket
 			packet.writeC(skill.getRequiredItems().size());
 			if (_type == AcquireSkillType.SUBPLEDGE)
 			{
-				packet.writeH(0x00);
+				packet.writeH(0);
 			}
 		}
 		return true;

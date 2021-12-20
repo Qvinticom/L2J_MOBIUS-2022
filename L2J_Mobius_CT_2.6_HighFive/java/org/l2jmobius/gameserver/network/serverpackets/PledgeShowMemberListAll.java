@@ -43,12 +43,10 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		_pledgeType = 0;
 		// FIXME: That's wrong on retail sends this whole packet few times (depending how much sub pledges it has)
 		writePledge(packet, 0);
-		
 		for (SubPledge subPledge : _clan.getAllSubPledges())
 		{
 			_player.sendPacket(new PledgeReceiveSubPledgeCreated(subPledge, _clan));
 		}
-		
 		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() == 0)
@@ -57,7 +55,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			}
 			_player.sendPacket(new PledgeShowMemberListAdd(m));
 		}
-		
 		// unless this is sent sometimes, the client doesn't recognise the player as the leader
 		_player.sendPacket(new UserInfo(_player));
 		_player.sendPacket(new ExBrExtraUserInfo(_player));
@@ -67,13 +64,11 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	private void writePledge(PacketWriter packet, int mainOrSubpledge)
 	{
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
-		
 		packet.writeD(mainOrSubpledge);
 		packet.writeD(_clan.getId());
 		packet.writeD(_pledgeType);
 		packet.writeS(_clan.getName());
 		packet.writeS(_clan.getLeaderName());
-		
 		packet.writeD(_clan.getCrestId()); // crest id .. is used again
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
@@ -81,15 +76,14 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getFortId());
 		packet.writeD(_clan.getRank());
 		packet.writeD(_clan.getReputationScore());
-		packet.writeD(0x00); // 0
-		packet.writeD(0x00); // 0
+		packet.writeD(0); // 0
+		packet.writeD(0); // 0
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.isAtWar() ? 1 : 0); // new c3
-		packet.writeD(0x00); // Territory castle ID
+		packet.writeD(0); // Territory castle ID
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
-		
 		for (ClanMember m : _members)
 		{
 			if (m.getPledgeType() != _pledgeType)
@@ -107,8 +101,8 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			}
 			else
 			{
-				packet.writeD(0x01); // no visible effect
-				packet.writeD(0x01); // packet.writeD(1);
+				packet.writeD(1); // no visible effect
+				packet.writeD(1); // packet.writeD(1);
 			}
 			packet.writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
 			packet.writeD(m.getSponsor() != 0 ? 1 : 0);

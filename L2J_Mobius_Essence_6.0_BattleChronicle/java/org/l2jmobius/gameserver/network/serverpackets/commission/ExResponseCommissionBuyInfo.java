@@ -39,7 +39,6 @@ public class ExResponseCommissionBuyInfo extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_BUY_INFO.writeId(packet);
-		
 		packet.writeD(_commissionItem != null ? 1 : 0);
 		if (_commissionItem != null)
 		{

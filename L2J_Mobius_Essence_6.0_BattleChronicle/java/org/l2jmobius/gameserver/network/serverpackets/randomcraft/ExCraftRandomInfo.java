@@ -40,7 +40,6 @@ public class ExCraftRandomInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CRAFT_RANDOM_INFO.writeId(packet);
-		
 		final List<RandomCraftRewardItemHolder> rewards = _player.getRandomCraft().getRewards();
 		int size = 5;
 		packet.writeD(size); // size
@@ -49,30 +48,28 @@ public class ExCraftRandomInfo implements IClientOutgoingPacket
 			final RandomCraftRewardItemHolder holder = rewards.get(i);
 			if ((holder != null) && (holder.getItemId() != 0))
 			{
-				packet.writeC(holder.isLocked() ? 0x01 : 0x00); // Locked
+				packet.writeC(holder.isLocked() ? 1 : 0); // Locked
 				packet.writeD(holder.getLockLeft()); // Rolls it will stay locked
 				packet.writeD(holder.getItemId()); // Item id
 				packet.writeQ(holder.getItemCount()); // Item count
 			}
 			else
 			{
-				packet.writeC(0x00);
-				packet.writeD(0x00);
-				packet.writeD(0x00);
-				packet.writeQ(0x00);
+				packet.writeC(0);
+				packet.writeD(0);
+				packet.writeD(0);
+				packet.writeQ(0);
 			}
 			size--;
 		}
-		
 		// Write missing
 		for (int i = size; i > 0; i--)
 		{
-			packet.writeC(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeQ(0x00);
+			packet.writeC(0);
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeQ(0);
 		}
-		
 		return true;
 	}
 }

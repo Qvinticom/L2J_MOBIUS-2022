@@ -41,7 +41,6 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.GM_VIEW_QUEST_INFO.writeId(packet);
 		packet.writeS(_player.getName());
-		
 		final List<Quest> questList = _player.getAllActiveQuests();
 		if (questList.isEmpty())
 		{
@@ -50,20 +49,16 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 			packet.writeH(0);
 			return true;
 		}
-		
 		packet.writeH(questList.size()); // quest count
-		
 		for (Quest q : questList)
 		{
 			packet.writeD(q.getId());
-			
 			final QuestState qs = _player.getQuestState(q.getName());
 			if (qs == null)
 			{
 				packet.writeD(0);
 				continue;
 			}
-			
 			packet.writeD(qs.getCond()); // stage of quest progress
 		}
 		return true;

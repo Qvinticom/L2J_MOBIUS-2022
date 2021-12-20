@@ -37,7 +37,6 @@ public class ExShowSeedInfo implements IClientOutgoingPacket
 	{
 		_manorId = manorId;
 		_hideButtons = hideButtons;
-		
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		_seeds = (nextPeriod && !manor.isManorApproved()) ? null : manor.getSeedProduction(manorId, nextPeriod);
 	}
@@ -46,9 +45,9 @@ public class ExShowSeedInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SEED_INFO.writeId(packet);
-		packet.writeC(_hideButtons ? 0x01 : 0x00); // Hide "Seed Purchase" button
+		packet.writeC(_hideButtons ? 1 : 0); // Hide "Seed Purchase" button
 		packet.writeD(_manorId); // Manor ID
-		packet.writeD(0x00); // Unknown
+		packet.writeD(0); // Unknown
 		if (_seeds == null)
 		{
 			packet.writeD(0);
@@ -65,17 +64,17 @@ public class ExShowSeedInfo implements IClientOutgoingPacket
 			if (s == null)
 			{
 				packet.writeD(0); // Seed level
-				packet.writeC(0x01); // Reward 1
+				packet.writeC(1); // Reward 1
 				packet.writeD(0); // Reward 1 - item id
-				packet.writeC(0x01); // Reward 2
+				packet.writeC(1); // Reward 2
 				packet.writeD(0); // Reward 2 - item id
 			}
 			else
 			{
 				packet.writeD(s.getLevel()); // Seed level
-				packet.writeC(0x01); // Reward 1
+				packet.writeC(1); // Reward 1
 				packet.writeD(s.getReward(1)); // Reward 1 - item id
-				packet.writeC(0x01); // Reward 2
+				packet.writeC(1); // Reward 2
 				packet.writeD(s.getReward(2)); // Reward 2 - item id
 			}
 		}

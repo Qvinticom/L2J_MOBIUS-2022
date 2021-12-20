@@ -34,7 +34,6 @@ public class ExSearchOrc implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SEARCH_ORC.writeId(packet);
-		
 		return true;
 	}
 }

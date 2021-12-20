@@ -39,12 +39,10 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_RECEIVE_MEMBER_INFO.writeId(packet);
-		
 		packet.writeD(_member.getPledgeType());
 		packet.writeS(_member.getName());
 		packet.writeS(_member.getTitle()); // title
 		packet.writeD(_member.getPowerGrade()); // power
-		
 		// clan or subpledge name
 		if (_member.getPledgeType() != 0)
 		{
@@ -54,7 +52,6 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 		{
 			packet.writeS(_member.getClan().getName());
 		}
-		
 		packet.writeS(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
 		return true;
 	}

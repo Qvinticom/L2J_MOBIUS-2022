@@ -38,7 +38,6 @@ public class ExMPCCShowPartyMemberInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MPCC_SHOW_PARTY_MEMBER_INFO.writeId(packet);
-		
 		packet.writeD(_party.getMemberCount());
 		for (Player pc : _party.getPartyMembers())
 		{

@@ -42,7 +42,6 @@ public class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeD(_henna.getPrice() / 5); // amount of required adenas
 		packet.writeD(1); // able to remove or not 0 is false and 1 is true
 		packet.writeD(_player.getAdena());
-		
 		packet.writeD(_player.getINT()); // current INT
 		packet.writeC(_player.getINT() - _henna.getINT()); // equip INT
 		packet.writeD(_player.getSTR()); // current STR

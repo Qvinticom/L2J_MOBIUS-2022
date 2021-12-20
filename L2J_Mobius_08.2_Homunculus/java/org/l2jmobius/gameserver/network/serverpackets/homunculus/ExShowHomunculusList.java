@@ -39,7 +39,6 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_HOMUNCULUS_LIST.writeId(packet);
-		
 		if (_player.getHomunculusList().size() > 0)
 		{
 			packet.writeD(_player.getHomunculusList().size()); // homunculus count
@@ -51,7 +50,6 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 				{
 					continue;
 				}
-				
 				packet.writeD(counter); // slot
 				packet.writeD(homunculus.getId()); // homunculus id
 				packet.writeD(homunculus.getType());
@@ -81,7 +79,6 @@ public class ExShowHomunculusList implements IClientOutgoingPacket
 		{
 			packet.writeD(0);
 		}
-		
 		return true;
 	}
 }

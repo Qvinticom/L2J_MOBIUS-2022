@@ -53,7 +53,6 @@ public class SignsSky implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SIGNS_SKY.writeId(packet);
-		
 		if (_state == 2)
 		{
 			packet.writeH(258);

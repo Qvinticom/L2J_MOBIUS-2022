@@ -47,12 +47,10 @@ public class ExAlterSkillRequest implements IClientOutgoingPacket
 		{
 			return true;
 		}
-		
 		OutgoingPackets.EX_ALTER_SKILL_REQUEST.writeId(packet);
 		packet.writeD(_nextSkillId);
 		packet.writeD(_currentSkillId);
 		packet.writeD(_alterTime);
-		
 		if (_alterTime > 0)
 		{
 			_player.setAlterSkillActive(true);
@@ -62,7 +60,6 @@ public class ExAlterSkillRequest implements IClientOutgoingPacket
 				_player.setAlterSkillActive(false);
 			}, _alterTime * 1000);
 		}
-		
 		return true;
 	}
 }

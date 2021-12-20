@@ -33,7 +33,7 @@ public class ExCraftExtract implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CRAFT_EXTRACT.writeId(packet);
-		packet.writeC(0x00);
+		packet.writeC(0);
 		return true;
 	}
 }

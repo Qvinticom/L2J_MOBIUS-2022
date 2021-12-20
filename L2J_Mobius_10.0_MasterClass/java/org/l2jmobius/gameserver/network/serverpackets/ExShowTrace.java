@@ -46,7 +46,6 @@ public class ExShowTrace implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_TRACE.writeId(packet);
-		
 		packet.writeH(0); // type broken in H5
 		packet.writeD(0); // time broken in H5
 		packet.writeH(_locations.size());

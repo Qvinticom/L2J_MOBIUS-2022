@@ -39,7 +39,6 @@ public class ExGetOnAirShip implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_GET_ON_AIR_SHIP.writeId(packet);
-		
 		packet.writeD(_playerId);
 		packet.writeD(_airShipId);
 		packet.writeD(_pos.getX());

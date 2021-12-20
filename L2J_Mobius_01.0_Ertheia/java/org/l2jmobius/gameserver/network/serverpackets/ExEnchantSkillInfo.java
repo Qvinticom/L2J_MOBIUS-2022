@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.util.SkillEnchantConverter;
 public class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final Set<Integer> _routes;
-	
 	private final int _skillId;
 	private final int _skillLevel;
 	private final int _skillSubLevel;
@@ -45,7 +44,6 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
-		
 		packet.writeD(_skillId);
 		packet.writeD(_skillSubLevel > 1000 ? SkillEnchantConverter.levelToErtheia(_skillSubLevel) : _skillLevel);
 		packet.writeD((_skillSubLevel % 1000) == EnchantSkillGroupsData.MAX_ENCHANT_LEVEL ? 0 : 1);

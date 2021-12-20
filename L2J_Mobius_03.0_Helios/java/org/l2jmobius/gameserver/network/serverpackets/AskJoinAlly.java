@@ -38,7 +38,6 @@ public class AskJoinAlly implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ASK_JOIN_ALLIANCE.writeId(packet);
-		
 		packet.writeD(_requestorObjId);
 		packet.writeS(null); // Ally Name ?
 		packet.writeS(null); // TODO: Find me!

@@ -43,25 +43,19 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 		OutgoingPackets.PRIVATE_STORE_BUY_LIST.writeId(packet);
 		packet.writeD(_objId);
 		packet.writeQ(_playerAdena);
-		
 		packet.writeD(_items.size());
-		
 		for (TradeItem item : _items)
 		{
 			packet.writeD(item.getObjectId());
 			packet.writeD(item.getItem().getId());
 			packet.writeH(item.getEnchant());
 			packet.writeQ(item.getCount()); // give max possible sell amount
-			
 			packet.writeQ(item.getItem().getReferencePrice());
 			packet.writeH(0);
-			
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getItem().getType2());
 			packet.writeQ(item.getPrice()); // buyers price
-			
 			packet.writeQ(item.getStoreCount()); // maximum possible tradecount
-			
 			// T1
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
@@ -69,7 +63,6 @@ public class PrivateStoreListBuy implements IClientOutgoingPacket
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);

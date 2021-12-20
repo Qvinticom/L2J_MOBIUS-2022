@@ -57,30 +57,27 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
-		
-		packet.writeD(0x00); // _isSubPledge
+		packet.writeD(0); // _isSubPledge
 		packet.writeD(_clan.getId());
 		packet.writeD(Config.SERVER_ID);
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeS(_name);
 		packet.writeS(_leaderName);
-		
 		packet.writeD(_clan.getCrestId()); // crest id .. is used again
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
-		packet.writeD(0x00);
+		packet.writeD(0);
 		packet.writeD(_clan.getHideoutId());
 		packet.writeD(_clan.getFortId());
 		packet.writeD(_clan.getRank());
 		packet.writeD(_clan.getReputationScore());
-		packet.writeD(0x00); // 0
-		packet.writeD(0x00); // 0
+		packet.writeD(0); // 0
+		packet.writeD(0); // 0
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.isAtWar() ? 1 : 0); // new c3
-		packet.writeD(0x00); // Territory castle ID
-		
+		packet.writeD(0); // Territory castle ID
 		packet.writeD(_members.size());
 		for (ClanMember m : _members)
 		{

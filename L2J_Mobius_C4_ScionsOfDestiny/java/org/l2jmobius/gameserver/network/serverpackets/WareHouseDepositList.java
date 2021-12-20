@@ -50,7 +50,6 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 		{
 			_items.add(temp);
 		}
-		
 		// augmented and shadow items can be stored in private wh
 		if (_whType == PRIVATE)
 		{
@@ -74,7 +73,6 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 		packet.writeH(_whType);
 		packet.writeD(_playerAdena);
 		packet.writeH(_items.size());
-		
 		for (Item item : _items)
 		{
 			packet.writeH(item.getItem().getType1()); // item type1 //unconfirmed, works
@@ -82,11 +80,11 @@ public class WareHouseDepositList implements IClientOutgoingPacket
 			packet.writeD(item.getItemId()); // unconfirmed, works
 			packet.writeD(item.getCount()); // unconfirmed, works
 			packet.writeH(item.getItem().getType2()); // item type2 //unconfirmed, works
-			packet.writeH(0x00); // ? 100
+			packet.writeH(0); // ? 100
 			packet.writeD(item.getItem().getBodyPart()); // ?
 			packet.writeH(item.getEnchantLevel()); // enchant level -confirmed
-			packet.writeH(0x00); // ? 300
-			packet.writeH(0x00); // ? 200
+			packet.writeH(0); // ? 300
+			packet.writeH(0); // ? 200
 			packet.writeD(item.getObjectId()); // item id - confimed
 		}
 		return true;

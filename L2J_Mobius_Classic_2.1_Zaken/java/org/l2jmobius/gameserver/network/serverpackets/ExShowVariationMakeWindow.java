@@ -35,7 +35,6 @@ public class ExShowVariationMakeWindow implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_VARIATION_MAKE_WINDOW.writeId(packet);
-		
 		return true;
 	}
 }

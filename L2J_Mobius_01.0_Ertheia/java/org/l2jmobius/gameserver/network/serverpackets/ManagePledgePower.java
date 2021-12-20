@@ -37,11 +37,9 @@ public class ManagePledgePower implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MANAGE_PLEDGE_POWER.writeId(packet);
-		
 		packet.writeD(_rank);
 		packet.writeD(_action);
 		packet.writeD(_clan.getRankPrivs(_rank).getBitmask());
-		
 		return true;
 	}
 }

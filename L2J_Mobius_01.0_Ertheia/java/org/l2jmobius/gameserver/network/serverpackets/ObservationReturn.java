@@ -33,7 +33,6 @@ public class ObservationReturn implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.OBSERVER_END.writeId(packet);
-		
 		packet.writeD(_loc.getX());
 		packet.writeD(_loc.getY());
 		packet.writeD(_loc.getZ());

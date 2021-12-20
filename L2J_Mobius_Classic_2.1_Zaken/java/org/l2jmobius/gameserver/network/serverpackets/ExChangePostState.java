@@ -49,7 +49,6 @@ public class ExChangePostState implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_CHANGE_POST_STATE.writeId(packet);
-		
 		packet.writeD(_receivedBoard ? 1 : 0);
 		packet.writeD(_changedMsgIds.length);
 		for (int postId : _changedMsgIds)

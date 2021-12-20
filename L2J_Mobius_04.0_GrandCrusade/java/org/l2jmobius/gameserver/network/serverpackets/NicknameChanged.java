@@ -38,7 +38,6 @@ public class NicknameChanged implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.NICK_NAME_CHANGED.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeS(_title);
 		return true;

@@ -43,7 +43,6 @@ public class ExPledgeShowInfoUpdate extends AbstractItemPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_PLEDGE_SHOW_INFO_UPDATE.writeId(packet);
 		packet.writeD(clan.getId()); // Clan ID
 		packet.writeD(ClanLevelData.getLevelRequirement(clan.getLevel())); // Next level cost

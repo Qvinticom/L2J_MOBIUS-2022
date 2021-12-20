@@ -43,7 +43,6 @@ public class ExMoveToLocationInAirShip implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_MOVE_TO_LOCATION_IN_AIR_SHIP.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_airShipId);
 		packet.writeD(_destination.getX());

@@ -43,7 +43,6 @@ public class PledgeReceiveWarList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_RECEIVE_WAR_LIST.writeId(packet);
-		
 		packet.writeD(_tab); // page
 		packet.writeD(_clanList.size());
 		for (ClanWar clanWar : _clanList)
@@ -53,7 +52,6 @@ public class PledgeReceiveWarList implements IClientOutgoingPacket
 			{
 				continue;
 			}
-			
 			packet.writeS(clan.getName());
 			packet.writeD(clanWar.getState().ordinal()); // type: 0 = Declaration, 1 = Blood Declaration, 2 = In War, 3 = Victory, 4 = Defeat, 5 = Tie, 6 = Error
 			packet.writeD(clanWar.getRemainingTime()); // Time if friends to start remaining

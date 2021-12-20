@@ -44,7 +44,6 @@ public class PackageSendableList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeQ(_adena);
 		packet.writeD(_items.size());

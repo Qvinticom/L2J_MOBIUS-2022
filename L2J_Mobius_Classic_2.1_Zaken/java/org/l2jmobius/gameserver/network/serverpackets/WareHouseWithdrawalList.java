@@ -32,6 +32,7 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
+	
 	private Player _player;
 	private long _playerAdena;
 	private final int _invSize;
@@ -58,7 +59,6 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 			PacketLogger.warning("error while sending withdraw request to: " + _player.getName());
 			return;
 		}
-		
 		_items = _player.getActiveWarehouse().getItems();
 		for (Item item : _items)
 		{
@@ -73,7 +73,6 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
-		
 		packet.writeH(_whType);
 		packet.writeQ(_playerAdena);
 		packet.writeH(_items.size());

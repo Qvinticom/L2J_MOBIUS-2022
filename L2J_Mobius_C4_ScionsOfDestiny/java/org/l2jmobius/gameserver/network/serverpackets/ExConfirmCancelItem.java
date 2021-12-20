@@ -42,7 +42,7 @@ public class ExConfirmCancelItem implements IClientOutgoingPacket
 		packet.writeD(0x27);
 		packet.writeD(0x2006);
 		packet.writeD(_price);
-		packet.writeD(0x01);
+		packet.writeD(1);
 		return true;
 	}
 }

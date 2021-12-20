@@ -38,7 +38,6 @@ public class ShopPreviewInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SHOP_PREVIEW_INFO.writeId(packet);
-		
 		packet.writeD(Inventory.PAPERDOLL_TOTALSLOTS);
 		// Slots
 		packet.writeD(getFromList(Inventory.PAPERDOLL_UNDER));

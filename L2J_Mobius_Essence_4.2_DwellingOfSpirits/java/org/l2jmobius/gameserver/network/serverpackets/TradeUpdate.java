@@ -44,10 +44,10 @@ public class TradeUpdate extends AbstractItemPacket
 	{
 		OutgoingPackets.TRADE_UPDATE.writeId(packet);
 		packet.writeC(_sendType);
-		packet.writeD(0x01);
+		packet.writeD(1);
 		if (_sendType == 2)
 		{
-			packet.writeD(0x01);
+			packet.writeD(1);
 			packet.writeH((_newCount > 0) && _item.getItem().isStackable() ? 3 : 2);
 			writeItem(packet, _item, _count);
 		}

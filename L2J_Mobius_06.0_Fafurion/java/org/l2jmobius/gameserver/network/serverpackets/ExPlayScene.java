@@ -34,7 +34,6 @@ public class ExPlayScene implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLAY_SCENE.writeId(packet);
-		
 		return true;
 	}
 }

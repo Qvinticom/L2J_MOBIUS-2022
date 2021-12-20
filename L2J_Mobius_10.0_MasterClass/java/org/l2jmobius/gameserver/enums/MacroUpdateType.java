@@ -21,10 +21,10 @@ package org.l2jmobius.gameserver.enums;
  */
 public enum MacroUpdateType
 {
-	ADD(0x01),
-	LIST(0x01),
-	MODIFY(0x02),
-	DELETE(0x00);
+	ADD(1),
+	LIST(1),
+	MODIFY(2),
+	DELETE(0);
 	
 	private final int _id;
 	

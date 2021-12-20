@@ -54,24 +54,20 @@ public class NpcHtmlMessage extends AbstractHtmlPacket
 	public NpcHtmlMessage(int npcObjId, int itemId)
 	{
 		super(npcObjId);
-		
 		if (itemId < 0)
 		{
 			throw new IllegalArgumentException();
 		}
-		
 		_itemId = itemId;
 	}
 	
 	public NpcHtmlMessage(int npcObjId, int itemId, String html)
 	{
 		super(npcObjId, html);
-		
 		if (itemId < 0)
 		{
 			throw new IllegalArgumentException();
 		}
-		
 		_itemId = itemId;
 	}
 	

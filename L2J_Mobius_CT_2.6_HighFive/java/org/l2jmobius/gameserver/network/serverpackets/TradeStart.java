@@ -43,7 +43,6 @@ public class TradeStart extends AbstractItemPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.TRADE_START.writeId(packet);
 		packet.writeD(_player.getActiveTradeList().getPartner().getObjectId());
 		packet.writeH(_itemList.size());

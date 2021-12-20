@@ -52,7 +52,6 @@ public class ClanHallDecoration implements IClientOutgoingPacket
 		{
 			packet.writeC(2);
 		}
-		
 		// FUNC_RESTORE_MP
 		function = _clanHall.getFunction(ClanHall.FUNC_RESTORE_MP);
 		if ((function == null) || (function.getLvl() == 0))
@@ -70,7 +69,6 @@ public class ClanHallDecoration implements IClientOutgoingPacket
 			packet.writeC(2);
 			packet.writeC(2);
 		}
-		
 		// FUNC_RESTORE_EXP
 		function = _clanHall.getFunction(ClanHall.FUNC_RESTORE_EXP);
 		if ((function == null) || (function.getLvl() == 0))
@@ -100,7 +98,6 @@ public class ClanHallDecoration implements IClientOutgoingPacket
 			packet.writeC(2);
 		}
 		packet.writeC(0);
-		
 		// CURTAINS
 		function = _clanHall.getFunction(ClanHall.FUNC_DECO_CURTAINS);
 		if ((function == null) || (function.getLvl() == 0))
@@ -115,7 +112,6 @@ public class ClanHallDecoration implements IClientOutgoingPacket
 		{
 			packet.writeC(2);
 		}
-		
 		// FUNC_ITEM_CREATE
 		function = _clanHall.getFunction(ClanHall.FUNC_ITEM_CREATE);
 		if ((function == null) || (function.getLvl() == 0))
@@ -130,7 +126,6 @@ public class ClanHallDecoration implements IClientOutgoingPacket
 		{
 			packet.writeC(2);
 		}
-		
 		// FUNC_SUPPORT
 		function = _clanHall.getFunction(ClanHall.FUNC_SUPPORT);
 		if ((function == null) || (function.getLvl() == 0))
@@ -162,7 +157,6 @@ public class ClanHallDecoration implements IClientOutgoingPacket
 		{
 			packet.writeC(2);
 		}
-		
 		// FUNC_ITEM_CREATE
 		function = _clanHall.getFunction(ClanHall.FUNC_ITEM_CREATE);
 		if ((function == null) || (function.getLvl() == 0))

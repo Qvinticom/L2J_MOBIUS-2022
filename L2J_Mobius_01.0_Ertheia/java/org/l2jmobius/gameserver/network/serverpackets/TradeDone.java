@@ -32,7 +32,6 @@ public class TradeDone implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TRADE_DONE.writeId(packet);
-		
 		packet.writeD(_num);
 		return true;
 	}

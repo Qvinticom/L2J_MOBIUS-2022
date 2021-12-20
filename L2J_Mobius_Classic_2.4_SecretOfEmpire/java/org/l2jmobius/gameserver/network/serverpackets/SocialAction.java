@@ -37,10 +37,9 @@ public class SocialAction implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SOCIAL_ACTION.writeId(packet);
-		
 		packet.writeD(_objectId);
 		packet.writeD(_actionId);
-		packet.writeD(0x00); // TODO: Find me!
+		packet.writeD(0); // TODO: Find me!
 		return true;
 	}
 }

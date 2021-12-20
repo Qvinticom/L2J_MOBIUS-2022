@@ -67,13 +67,12 @@ public class ListPartyWating implements IClientOutgoingPacket
 		OutgoingPackets.LIST_PARTY_WAITING.writeId(packet);
 		if (size > 0)
 		{
-			packet.writeD(0x01);
+			packet.writeD(1);
 		}
 		else
 		{
-			packet.writeD(0x00);
+			packet.writeD(0);
 		}
-		
 		packet.writeD(_rooms.size());
 		for (PartyMatchRoom room : _rooms)
 		{

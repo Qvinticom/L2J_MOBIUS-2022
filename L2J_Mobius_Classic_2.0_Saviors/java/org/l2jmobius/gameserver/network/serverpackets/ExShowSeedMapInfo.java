@@ -32,15 +32,12 @@ public class ExShowSeedMapInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_SEED_MAP_INFO.writeId(packet);
-		
 		packet.writeD(2); // seed count
-		
 		// Seed of Destruction
 		packet.writeD(-246857); // x coord
 		packet.writeD(251960); // y coord
 		packet.writeD(4331); // z coord
 		packet.writeD(2770 + GraciaSeedsManager.getInstance().getSoDState()); // sys msg id
-		
 		// Seed of Infinity
 		packet.writeD(-213770); // x coord
 		packet.writeD(210760); // y coord

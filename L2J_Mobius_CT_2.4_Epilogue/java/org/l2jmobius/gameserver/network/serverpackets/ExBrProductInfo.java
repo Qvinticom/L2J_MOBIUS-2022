@@ -40,9 +40,7 @@ public class ExBrProductInfo implements IClientOutgoingPacket
 		{
 			return false;
 		}
-		
 		OutgoingPackets.EX_BR_PRODUCT_INFO.writeId(packet);
-		
 		packet.writeD(_product.getProductId()); // product id
 		packet.writeD(_product.getPrice()); // points
 		packet.writeD(1); // components size

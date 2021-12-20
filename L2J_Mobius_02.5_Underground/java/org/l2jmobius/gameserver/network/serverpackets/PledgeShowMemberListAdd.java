@@ -51,12 +51,11 @@ public class PledgeShowMemberListAdd implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ADD.writeId(packet);
-		
 		packet.writeS(_name);
 		packet.writeD(_level);
 		packet.writeD(_classId);
-		packet.writeD(0x00);
-		packet.writeD(0x01);
+		packet.writeD(0);
+		packet.writeD(1);
 		packet.writeD(_isOnline); // 1 = online 0 = offline
 		packet.writeD(_pledgeType);
 		return true;

@@ -55,11 +55,10 @@ public class RecipeItemMakeInfo implements IClientOutgoingPacket
 			packet.writeD((int) _player.getCurrentMp());
 			packet.writeD(_player.getMaxMp());
 			packet.writeD(_success ? 1 : 0); // item creation success/failed
-			packet.writeC(0x00);
-			packet.writeQ(0x00);
+			packet.writeC(0);
+			packet.writeQ(0);
 			return true;
 		}
-		
 		PacketLogger.info("Character: " + _player + ": Requested unexisting recipe with id = " + _id);
 		return false;
 	}
