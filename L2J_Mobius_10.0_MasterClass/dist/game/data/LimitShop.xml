@@ -1,8 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/LimitShop.xsd">
 	<!-- Cat 0 Equipment -->
-	<product id="121" category="0" maxLevel="999">
-		<ingredient id="48472" count="1" /> <!-- L-Coin -->
-		<production id="81811" accountBuyLimit="1" /> <!-- Starter Kit -->
+	<product id="4" category="0" maxLevel="999">
+		<ingredient id="48472" count="180" /> <!-- Einhasad's Golden Coin -->
+		<production id="80964" accountBuyLimit="1" /> <!-- Energy of Protection -->
+	</product>
+	<product id="5" category="0" maxLevel="999">
+		<ingredient id="48472" count="315" /> <!-- Einhasad's Golden Coin -->
+		<production id="80636" accountBuyLimit="1" /> <!-- Artifact Crystal -->
+	</product>
+	<product id="6" category="0" maxLevel="999">
+		<ingredient id="48472" count="80" /> <!-- Einhasad's Golden Coin -->
+		<production id="81134" accountBuyLimit="1" /> <!-- Crystal of Dyes -->
+	</product>
+	<product id="7" category="0" maxLevel="999">
+		<ingredient id="48472" count="110" /> <!-- Einhasad's Golden Coin -->
+		<production id="47817" accountBuyLimit="1" /> <!-- Sayha's Talisman Pack -->
+	</product>
+	<product id="115" category="0" maxLevel="999">
+		<ingredient id="48472" count="800" /> <!-- Einhasad's Golden Coin -->
+		<production id="28588" accountBuyLimit="1" /> <!-- Ferios Cloak -->
+	</product>
+	<product id="116" category="0" maxLevel="999">
+		<ingredient id="48472" count="800" /> <!-- Einhasad's Golden Coin -->
+		<production id="28587" accountBuyLimit="1" /> <!-- Elmore Cloak -->
+	</product>
+	<product id="117" category="0" maxLevel="999">
+		<ingredient id="48472" count="800" /> <!-- Einhasad's Golden Coin -->
+		<production id="28586" accountBuyLimit="1" /> <!-- Elmoreden Cloak -->
+	</product>
+	<product id="118" category="0" maxLevel="999">
+		<ingredient id="48472" count="800" /> <!-- Einhasad's Golden Coin -->
+		<production id="28585" accountBuyLimit="1" /> <!-- Sayha's Talisman Pack -->
+	</product>
+
+	<!-- Cat 1 Enhancement -->
+	<product id="8" category="1" maxLevel="999">
+		<ingredient id="48472" count="600" /> <!-- Einhasad's Golden Coin -->
+		<production id="80839" accountBuyLimit="1" /> <!-- Crystal of Dawn -->
+	</product>
+	<product id="9" category="1" maxLevel="999">
+		<ingredient id="48472" count="8" /> <!-- Einhasad's Golden Coin -->
+		<production id="47951" accountBuyLimit="1" /> <!-- Crystal of Determination	-->
+	</product>
+	<product id="10" category="1" maxLevel="999">
+		<ingredient id="48472" count="14" /> <!-- Einhasad's Golden Coin -->
+		<production id="47952" accountBuyLimit="1" /> <!-- Crystal of Protection -->
+	</product>
+	<product id="11" category="1" maxLevel="999">
+		<ingredient id="48472" count="15" /> <!-- Einhasad's Golden Coin -->
+		<production id="30297" accountBuyLimit="1" /> <!-- Superior Giant's Codex -->
+	</product>
+	<product id="12" category="1" maxLevel="999">
+		<ingredient id="48472" count="60" /> <!-- Einhasad's Golden Coin -->
+		<production id="30298" accountBuyLimit="1" /> <!-- Superior Giant's Codex - Mastery -->
+	</product>
+	<product id="13" category="1" maxLevel="999">
+		<ingredient id="48472" count="200" /> <!-- Einhasad's Golden Coin -->
+		<production id="46150" accountBuyLimit="1" /> <!-- Superior Giant's Codex - Chapter 1 -->
+	</product>
+	<product id="14" category="1" maxLevel="999">
+		<ingredient id="48472" count="430" /> <!-- Einhasad's Golden Coin -->
+		<production id="46151" accountBuyLimit="1" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+	</product>
+	<product id="15" category="1" maxLevel="999">
+		<ingredient id="48472" count="215" /> <!-- Einhasad's Golden Coin -->
+		<production id="48876" accountBuyLimit="1" /> <!-- Forgotten Spellbook - Chapter 1 -->
+	</product>
+
+	<!-- Cat 2 Scrolls -->
+	<product id="16" category="2" maxLevel="999">
+		<ingredient id="48472" count="480" /> <!-- Einhasad's Golden Coin -->
+		<production id="81898" accountBuyLimit="1" /> <!-- Scroll: Enchant Blessed Exalted Armor -->
+	</product>
+	<product id="17" category="2" maxLevel="999">
+		<ingredient id="48472" count="160" /> <!-- Einhasad's Golden Coin -->
+		<production id="82074" accountBuyLimit="1" /> <!-- Blessed Scroll: Enchant Exalted Weapon -->
+	</product>
+	<product id="114" category="2" maxLevel="999">
+		<ingredient id="48472" count="400" /> <!-- Einhasad's Golden Coin -->
+		<production id="28593" accountBuyLimit="1" /> <!-- Scroll: Enchant Cloak -->
+	</product>
+
+	<!-- Cat 3 Supplies -->
+	<product id="22" category="3" maxLevel="999">
+		<ingredient id="48472" count="425" /> <!-- Einhasad's Golden Coin -->
+		<production id="82141" accountBuyLimit="1" /> <!-- Emperor's Special Cocktail 5-unit Pack -->
+	</product>
+	<product id="23" category="3" maxLevel="999">
+		<ingredient id="48472" count="40" /> <!-- Einhasad's Golden Coin -->
+		<production id="82142" accountBuyLimit="1" /> <!-- Honey Dark Beer 2-unit Pack -->
+	</product>
+	<product id="24" category="3" maxLevel="999">
+		<ingredient id="48472" count="80" /> <!-- Einhasad's Golden Coin -->
+		<production id="37560" accountBuyLimit="1" /> <!-- Emperor's Vitality Tonic	-->
+	</product>
+	<product id="25" category="3" maxLevel="999">
+		<ingredient id="48472" count="300" /> <!-- Einhasad's Golden Coin -->
+		<production id="48642" accountBuyLimit="1" /> <!-- Shining Nevit's Gold Hourglass -->
+	</product>
+	<product id="26" category="3" maxLevel="999">
+		<ingredient id="48472" count="20" /> <!-- Einhasad's Golden Coin -->
+		<production id="82143" accountBuyLimit="1" /> <!-- Glowing Dragon's Attribute Potion (XP) 2-unit Pack -->
+	</product>
+	<product id="27" category="3" maxLevel="999">
+		<ingredient id="48472" count="60" /> <!-- Einhasad's Golden Coin -->
+		<production id="82144" accountBuyLimit="1" /> <!-- Freya's Ice Rose 2-unit Pack	-->
+	</product>
+	<product id="28" category="3" maxLevel="999">
+		<ingredient id="48472" count="80" /> <!-- Einhasad's Golden Coin -->
+		<production id="10649" accountBuyLimit="1" /> <!-- Feather of Blessing -->
+	</product>
+	<product id="29" category="3" maxLevel="999">
+		<ingredient id="48472" count="40" /> <!-- Einhasad's Golden Coin -->
+		<production id="13015" accountBuyLimit="6" /> <!-- My Teleport Book Lv. 1 -->
+	</product>
+	<product id="31" category="3" maxLevel="999">
+		<ingredient id="48472" count="10" /> <!-- Einhasad's Golden Coin -->
+		<production id="13016" accountBuyLimit="1" /> <!-- My Teleport Scroll -->
+	</product>
+	<product id="91" category="3" maxLevel="999">
+		<ingredient id="48472" count="80" /> <!-- Einhasad's Golden Coin -->
+		<production id="80999" accountBuyLimit="6" /> <!-- My Teleport Book Lv. 2 -->
+	</product>
+	<product id="106" category="3" maxLevel="999">
+		<ingredient id="48472" count="40" /> <!-- Einhasad's Golden Coin -->
+		<production id="47428" accountBuyLimit="1" /> <!-- Freya's Scroll of Storm -->
+	</product>
+	<product id="110" category="3" maxLevel="999">
+		<ingredient id="48472" count="200" /> <!-- Einhasad's Golden Coin -->
+		<production id="80997" accountBuyLimit="1" /> <!-- Primeval Isle's Time Stone -->
+	</product>
+	<product id="111" category="3" maxLevel="999">
+		<ingredient id="48472" count="200" /> <!-- Einhasad's Golden Coin -->
+		<production id="80996" accountBuyLimit="1" /> <!-- Storm Isle's Time Stone -->
+	</product>
+	<product id="112" category="3" maxLevel="999">
+		<ingredient id="48472" count="200" /> <!-- Einhasad's Golden Coin -->
+		<production id="80998" accountBuyLimit="1" /> <!-- Isle of Souls' Time Stone -->
+	</product>
+	<product id="113" category="3" maxLevel="999">
+		<ingredient id="48472" count="200" /> <!-- Einhasad's Golden Coin -->
+		<production id="81358" accountBuyLimit="1" /> <!-- Abandoned Coal Mines' Time Stone	-->
+	</product>
+
+	<!-- Cat 4 Others -->
+	<product id="33" category="4" maxLevel="999">
+		<ingredient id="48472" count="150" /> <!-- Einhasad's Golden Coin -->
+		<production id="81815" accountBuyLimit="3" /> <!-- Homunculus' Hourglass -->
+	</product>
+	<product id="34" category="4" maxLevel="999">
+		<ingredient id="48472" count="8000" /> <!-- Einhasad's Golden Coin -->
+		<production id="47916" accountBuyLimit="1" /> <!-- Nevit's Cloak of Light Pack -->
+	</product>
+	<product id="35" category="4" maxLevel="999">
+		<ingredient id="48472" count="4000" /> <!-- Einhasad's Golden Coin -->
+		<production id="81979" accountBuyLimit="1" /> <!-- Conquest Name Change Coupon -->
+	</product>
+	<product id="36" category="4" maxLevel="999">
+		<ingredient id="48472" count="120" /> <!-- Einhasad's Golden Coin -->
+		<production id="36308" accountBuyLimit="1" /> <!-- Beauty Shop Ticket -->
+	</product>
+	<product id="119" category="4" maxLevel="999">
+		<ingredient id="48472" count="4000" /> <!-- Einhasad's Golden Coin -->
+		<production id="60015" accountBuyLimit="2" /> <!-- Spellbook: Create Mysterious Soulshots -->
+	</product>
+	<product id="120" category="4" maxLevel="999">
+		<ingredient id="48472" count="4000" /> <!-- Einhasad's Golden Coin -->
+		<production id="60016" accountBuyLimit="2" /> <!-- Spellbook: Create Mysterious Spiritshots -->
+	</product>
+
+	<!-- Cat 5 Events -->
+	<product id="121" category="5" maxLevel="999">
+		<ingredient id="48472" count="150" /> <!-- Einhasad's Golden Coin -->
+		<production id="81811" accountBuyLimit="3" /> <!-- Homunculus' Hourglass -->
+	</product>
+	<product id="122" category="5" maxLevel="999">
+		<ingredient id="48472" count="20" /> <!-- Einhasad's Golden Coin -->
+		<production id="82171" accountBuyLimit="1" /> <!-- Swift Growth Cookie -->
+	</product>
+	<!-- <product id="123" category="5" maxLevel="999">
+		<ingredient id="48472" count="20" /> Einhasad's Golden Coin
+		<production id="60169" accountBuyLimit="1" /> Chest of New Destiny
+	</product> -->
+	<product id="124" category="5" maxLevel="999">
+		<ingredient id="48472" count="150" /> <!-- Einhasad's Golden Coin -->
+		<production id="82070" accountBuyLimit="1" /> <!-- Conquest Expedition Rune -->
+	</product>
+	<product id="125" category="5" maxLevel="999">
+		<ingredient id="48472" count="1000" /> <!-- Einhasad's Golden Coin -->
+		<production id="82068" accountBuyLimit="1" /> <!-- Death Knight's Ring -->
 	</product>
 </list>
