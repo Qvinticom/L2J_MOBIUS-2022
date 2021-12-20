@@ -671,6 +671,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 				}
 				case PALADIN:
 				case DARK_AVENGER:
+				case DEATH_BERSERKER:
 				case TEMPLE_KNIGHT:
 				case SWORDSINGER:
 				case SHILLIEN_KNIGHT:
