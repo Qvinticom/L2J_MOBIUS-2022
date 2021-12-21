@@ -909,8 +909,6 @@ public class Config
 	public static boolean BYPASS_FRINTEZZA_PARTIES_CHECK;
 	public static int FRINTEZZA_MIN_PARTIES;
 	public static int FRINTEZZA_MAX_PARTIES;
-	public static String RAID_INFO_IDS;
-	public static List<Integer> RAID_INFO_IDS_LIST = new ArrayList<>();
 	
 	public static boolean AUTO_LOOT;
 	public static boolean AUTO_LOOT_BOSS;
@@ -2428,12 +2426,6 @@ public class Config
 		FRINTEZZA_MIN_PARTIES = bossConfig.getInt("FrintezzaMinParties", 4);
 		FRINTEZZA_MAX_PARTIES = bossConfig.getInt("FrintezzaMaxParties", 5);
 		LEVEL_DIFF_MULTIPLIER_MINION = bossConfig.getFloat("LevelDiffMultiplierMinion", 0.5f);
-		RAID_INFO_IDS = bossConfig.getString("RaidInfoIDs", "");
-		RAID_INFO_IDS_LIST = new ArrayList<>();
-		for (String id : RAID_INFO_IDS.split(","))
-		{
-			RAID_INFO_IDS_LIST.add(Integer.parseInt(id));
-		}
 		// High Priestess van Halter
 		HPH_FIXINTERVALOFHALTER = bossConfig.getInt("FixIntervalOfHalter", 172800);
 		if ((HPH_FIXINTERVALOFHALTER < 300) || (HPH_FIXINTERVALOFHALTER > 864000))
