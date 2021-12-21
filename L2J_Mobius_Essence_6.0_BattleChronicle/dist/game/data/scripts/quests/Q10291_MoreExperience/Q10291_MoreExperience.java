@@ -95,7 +95,7 @@ public class Q10291_MoreExperience extends Quest
 			}
 			case "30332-06.html":
 			{
-				showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BROOCH_AND_ADVENTURER_S_ROUGH_JEWEL_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_ENCHASE_THE_JEWEL, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BROOCH_AND_ADVENTURER_S_ROUGH_JEWEL_COMPLETE_THE_TUTORIAL_AND_TRY_TO_ENCHASE_THE_JEWEL, ExShowScreenMessage.TOP_CENTER, 10000);
 				addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(30) + 100) - player.getExp(), 117500);
 				giveItems(player, ADVENTURERS_BROOCH);
 				giveItems(player, ADVENTURERS_BROOCH_GEMS);
@@ -146,7 +146,7 @@ public class Q10291_MoreExperience extends Quest
 			{
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
+				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_USE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
 			}
 			else if (killCount < 50)
 			{
@@ -158,7 +158,7 @@ public class Q10291_MoreExperience extends Quest
 			{
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
+				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_USE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
 				giveItems(killer, SOE_TO_CAPTAIN_BATHIS);
 			}
 		}

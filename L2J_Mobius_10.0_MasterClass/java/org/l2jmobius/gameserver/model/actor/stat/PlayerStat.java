@@ -507,11 +507,11 @@ public class PlayerStat extends PlayableStat
 		{
 			if (points < getVitalityPoints())
 			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_DECREASED);
+				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
 			}
 			else
 			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_INCREASED);
+				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
 			}
 		}
 		
@@ -519,11 +519,11 @@ public class PlayerStat extends PlayableStat
 		
 		if (points == 0)
 		{
-			getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_FULLY_EXHAUSTED);
+			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED);
 		}
 		else if (points == MAX_VITALITY_POINTS)
 		{
-			getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_AT_MAXIMUM);
+			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
 		}
 		
 		final Player player = getActiveChar();

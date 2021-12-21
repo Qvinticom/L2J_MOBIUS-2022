@@ -83,7 +83,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		}
 		if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
 		{
-			player.sendPacket(SystemMessageId.SPECIAL_INSTANCE_ZONES_CANNOT_BE_USED_WHILE_WAITING_FOR_THE_OLYMPIAD);
+			player.sendPacket(SystemMessageId.SESSION_ZONES_ARE_UNAVAILABLE_WHILE_YOU_ARE_IN_QUEUE_FOR_THE_OLYMPIAD);
 			return;
 		}
 		if (player.isRegisteredOnEvent() || (player.getBlockCheckerArena() > -1))
@@ -167,7 +167,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_ADD_MORE_TIME_FOR_A_CURRENT_HUNTING_ZONES);
+			player.sendPacket(SystemMessageId.CURRENTLY_YOU_HAVE_THE_MAX_AMOUNT_OF_TIME_FOR_THE_HUNTING_ZONE_SO_YOU_CANNOT_ADD_ANY_MORE_TIME);
 		}
 	}
 }

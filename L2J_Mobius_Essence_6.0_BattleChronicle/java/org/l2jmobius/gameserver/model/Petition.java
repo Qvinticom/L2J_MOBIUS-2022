@@ -94,7 +94,7 @@ public class Petition
 		// End petition consultation and inform them, if they are still online. And if petitioner is online, enable Evaluation button
 		if ((_petitioner != null) && _petitioner.isOnline())
 		{
-			_petitioner.sendPacket(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_NPLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE);
+			_petitioner.sendPacket(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_PLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE);
 			_petitioner.sendPacket(PetitionVotePacket.STATIC_PACKET);
 		}
 		

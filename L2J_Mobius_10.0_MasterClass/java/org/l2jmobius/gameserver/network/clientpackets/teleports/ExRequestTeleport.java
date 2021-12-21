@@ -63,7 +63,7 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		// Dead characters cannot use teleports.
 		if (player.isDead())
 		{
-			player.sendPacket(SystemMessageId.DEAD_CHARACTERS_CANNOT_USE_TELEPORTS);
+			player.sendPacket(SystemMessageId.CANNOT_TELEPORT_WHILE_DEAD);
 			return;
 		}
 		
@@ -77,7 +77,7 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		// Teleport in combat configuration.
 		if (!Config.TELEPORT_WHILE_PLAYER_IN_COMBAT && (player.isInCombat() || player.isCastingNow()))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_IN_COMBAT);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_COMBAT_MODE);
 			return;
 		}
 		
@@ -112,7 +112,7 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			{
 				if (player.getAdena() < price)
 				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 					return;
 				}
 				player.reduceAdena("Teleport", price, player, true);

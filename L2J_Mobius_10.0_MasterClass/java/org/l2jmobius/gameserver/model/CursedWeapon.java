@@ -309,7 +309,7 @@ public class CursedWeapon implements INamable
 		// CursedWeaponsManager.announce(msg);
 		
 		final CursedWeapon cw = CursedWeaponsManager.getInstance().getCursedWeapon(_player.getCursedWeaponEquippedId());
-		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_S2_MIN_OF_USAGE_TIME_REMAINING);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_S_REMAINING_TIME_S2_MIN_TYPE_CURSEDSWORD_TO_CHECK_OTHER_INFORMATION);
 		final int timeLeft = (int) (cw.getTimeLeft() / 60000);
 		msg.addItemName(_player.getCursedWeaponEquippedId());
 		msg.addInt(timeLeft);
@@ -435,7 +435,7 @@ public class CursedWeapon implements INamable
 		_item = item;
 		// Item[] items =
 		_player.getInventory().equipItem(_item);
-		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_S1);
 		sm.addItemName(_item);
 		_player.sendPacket(sm);
 		

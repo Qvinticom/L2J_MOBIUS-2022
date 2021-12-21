@@ -92,7 +92,7 @@ public class ContactList
 		final int contactId = CharNameTable.getInstance().getIdByName(name);
 		if (_contacts.contains(name))
 		{
-			_player.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
+			_player.sendPacket(SystemMessageId.THE_CHARACTER_IS_ALREADY_IN_THE_LIST);
 			return false;
 		}
 		else if (_player.getName().equals(name))
@@ -118,7 +118,7 @@ public class ContactList
 			{
 				if (contactName.equalsIgnoreCase(name))
 				{
-					_player.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
+					_player.sendPacket(SystemMessageId.THE_CHARACTER_IS_ALREADY_IN_THE_LIST);
 					return false;
 				}
 			}

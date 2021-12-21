@@ -68,7 +68,7 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 		if ((item == null) || (scroll == null) || (support == null))
 		{
 			// message may be custom
-			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			request.setEnchantingItem(Player.ID_NONE);
 			request.setSupportItem(Player.ID_NONE);
 			return;
@@ -79,7 +79,7 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 		if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate))
 		{
 			// message may be custom
-			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			request.setSupportItem(Player.ID_NONE);
 			player.sendPacket(new ExPutEnchantSupportItemResult(0));
 			return;

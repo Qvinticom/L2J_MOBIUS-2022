@@ -58,7 +58,7 @@ public class BlessedSpiritShot implements IItemHandler
 		{
 			if (!player.getAutoSoulShot().contains(itemId))
 			{
-				player.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SPIRITSHOTS);
 			}
 			return false;
 		}

@@ -340,7 +340,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 							if (clan != null)
 							{
 								clan.takeReputationScore((int) totalCount);
-								final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+								final SystemMessage smsg = new SystemMessage(SystemMessageId.CLAN_REPUTATION_POINTS_S1_2);
 								smsg.addLong(totalCount);
 								player.sendPacket(smsg);
 							}
@@ -568,14 +568,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 					
 					if (addedItem.getCount() > 1)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 						sm.addItemName(addedItem.getId());
 						sm.addLong(totalCount);
 						player.sendPacket(sm);
 					}
 					else if (addedItem.getEnchantLevel() > 0)
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_OBTAINED);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_2);
 						sm.addLong(addedItem.getEnchantLevel());
 						sm.addItemName(addedItem.getId());
 						player.sendPacket(sm);

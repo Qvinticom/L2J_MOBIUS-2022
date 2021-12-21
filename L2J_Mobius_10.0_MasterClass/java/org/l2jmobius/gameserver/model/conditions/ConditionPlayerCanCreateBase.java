@@ -98,7 +98,7 @@ public class ConditionPlayerCanCreateBase extends Condition
 		}
 		else if (!player.isInsideZone(ZoneId.HQ))
 		{
-			player.sendPacket(SystemMessageId.YOU_CAN_T_BUILD_HEADQUARTERS_HERE);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE);
 			canCreateBase = false;
 		}
 		return (_value == canCreateBase);

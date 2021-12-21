@@ -51,7 +51,7 @@ public class RequestExHomunculusCreateStart implements IClientIncomingPacket
 		
 		if (player.getAdena() < COST)
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA_2);
 			return;
 		}
 		player.reduceAdena("Homunculus creation", COST, player, true);

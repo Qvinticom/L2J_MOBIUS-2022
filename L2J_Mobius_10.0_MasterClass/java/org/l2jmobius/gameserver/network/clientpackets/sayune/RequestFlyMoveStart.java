@@ -53,7 +53,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 		
 		if (player.hasSummon())
 		{
-			player.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SAYUNE_WHILE_A_SERVITOR_IS_AROUND);
+			player.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SAYUNE_WHILE_PET_OR_SUMMONED_PET_IS_OUT);
 			return;
 		}
 		

@@ -45,7 +45,7 @@ public class ServitorMode implements IPlayerActionHandler
 				{
 					if (s.isBetrayed())
 					{
-						player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+						player.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 						return;
 					}
 					
@@ -59,7 +59,7 @@ public class ServitorMode implements IPlayerActionHandler
 				{
 					if (s.isBetrayed())
 					{
-						player.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+						player.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 						return;
 					}
 					

@@ -2673,14 +2673,14 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_ADENA);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_ADENA_2);
 			smsg.addLong(count);
 			player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
 		else if (count > 1)
 		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 			smsg.addItemName(item);
 			smsg.addLong(count);
 			player.sendPacket(smsg);

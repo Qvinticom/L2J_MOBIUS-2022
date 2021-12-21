@@ -116,7 +116,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		}
 		else if (!mentor.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
-			mentor.sendPacket(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR);
+			mentor.sendPacket(SystemMessageId.YOU_CAN_BECOME_A_MENTOR_WHEN_YOUR_MAIN_CLASS_ACHIEVES_LV_105_AND_AWAKENS);
 			return false;
 		}
 		else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > Chronos.currentTimeMillis())
@@ -141,7 +141,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		}
 		else if (mentee.getLevel() >= 105)
 		{
-			mentor.sendPacket(new SystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addString(mentee.getName()));
+			mentor.sendPacket(new SystemMessage(SystemMessageId.S1_IS_LV_105_OR_HIGHER_AND_CANNOT_BECOME_A_MENTEE).addString(mentee.getName()));
 			return false;
 		}
 		else if (mentee.isSubClassActive())
@@ -157,7 +157,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		// }
 		else if ((MentorManager.getInstance().getMentees(mentor.getObjectId()) != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()).size() >= 3))
 		{
-			mentor.sendPacket(SystemMessageId.A_MENTOR_CAN_HAVE_NO_MORE_THAN_3_MENTEES);
+			mentor.sendPacket(SystemMessageId.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME);
 			return false;
 		}
 		else if (mentee.isMentee())

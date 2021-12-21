@@ -59,7 +59,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 			}
 			else
 			{
-				player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+				player.sendPacket(SystemMessageId.THE_PLAYER_HAS_DECLINED_TO_JOIN_YOUR_PARTY);
 			}
 			player.onTransactionResponse();
 		}
@@ -136,7 +136,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		
 		if (BlockList.isBlocked(target, requestor))
 		{
-			sm = new SystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
+			sm = new SystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;

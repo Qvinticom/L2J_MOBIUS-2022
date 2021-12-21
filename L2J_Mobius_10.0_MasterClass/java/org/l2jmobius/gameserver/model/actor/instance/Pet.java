@@ -413,7 +413,7 @@ public class Pet extends Summon
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
@@ -459,7 +459,7 @@ public class Pet extends Summon
 		{
 			if (count > 1)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);

@@ -59,7 +59,7 @@ public class ClanTrader extends AbstractNpcAI
 			takeItems(player, itemId, itemCount);
 			player.getClan().addReputationScore(count);
 			
-			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_REPUTATION_POINTS_S1);
 			sm.addInt(count);
 			player.sendPacket(sm);
 			return npc.getId() + "-04.html";

@@ -162,7 +162,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				// Check if any player from the group has already finished the instance
 				if (InstanceManager.getInstance().getInstanceTime(member, templateId) > 0)
 				{
-					enterGroup.forEach(p -> p.sendPacket(new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addString(member.getName())));
+					enterGroup.forEach(p -> p.sendPacket(new SystemMessage(SystemMessageId.C1_CANNOT_ENTER_YET).addString(member.getName())));
 					return;
 				}
 			}

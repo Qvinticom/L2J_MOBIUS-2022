@@ -158,7 +158,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 			{
 				htmltext = event;
 				player.sendPacket(new ExTutorialShowId(15)); // Skill
-				showOnScreenMsg(player, NpcStringId.PRESS_ALT_K_TO_OPEN_THE_LEARN_SKILL_TAB_AND_LEARN_NEW_SKILLS_NTHE_SKILLS_IN_THE_ACTIVE_TAB_CAN_BE_ADDED_TO_THE_SHORTCUTS, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.PRESS_ALT_K_TO_OPEN_THE_LEARN_SKILL_TAB_AND_LEARN_NEW_SKILLS_THE_SKILLS_IN_THE_ACTIVE_TAB_CAN_BE_ADDED_TO_THE_SHORTCUTS, ExShowScreenMessage.TOP_CENTER, 10000);
 				break;
 			}
 			case "34505-05.html":
@@ -240,7 +240,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						giveAdena(player, 165000, true);
 					}
 					htmltext = event;
-					showOnScreenMsg(player, NpcStringId.SECOND_CLASS_TRANSFER_IS_AVAILABLE_NGO_SEE_TARTI_IN_THE_TOWN_OF_GLUDIO_TO_START_THE_CLASS_TRANSFER, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.SECOND_CLASS_TRANSFER_IS_AVAILABLE_GO_SEE_TARTI_IN_THE_TOWN_OF_GLUDIO_TO_START_THE_CLASS_TRANSFER, ExShowScreenMessage.TOP_CENTER, 10000);
 				}
 				break;
 			}
@@ -286,7 +286,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()))
 					{
-						showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_NCLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
+						showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_CLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
 					htmltext = event;
@@ -531,7 +531,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						{
 							giveItems(killer, SECRET_MATERIAL, 1);
 							qs.setCond(2, true);
-							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_TALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -553,7 +553,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						{
 							qs.setCond(5, true);
 							qs.unset(KILL_COUNT_VAR);
-							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_TALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;
@@ -571,7 +571,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 						else if (getQuestItemsCount(killer, BREATH_OF_DEATH) == 14)
 						{
 							qs.setCond(8, true);
-							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(killer, NpcStringId.USE_TELEPORTATION_CUBE_IN_YOUR_INVENTORY_TALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 						}
 					}
 					break;

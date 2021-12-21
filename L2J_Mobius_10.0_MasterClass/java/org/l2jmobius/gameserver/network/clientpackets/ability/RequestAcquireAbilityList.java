@@ -92,7 +92,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 		
 		if (player.getLevel() < 85)
 		{
-			player.sendPacket(SystemMessageId.REACH_LEVEL_85_TO_USE_THE_ABILITY);
+			player.sendPacket(SystemMessageId.REACH_LV_85_TO_USE);
 			return;
 		}
 		else if (player.isInOlympiadMode())

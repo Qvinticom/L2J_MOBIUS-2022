@@ -119,7 +119,7 @@ public class Q10292_SecretGarden extends Quest
 			{
 				if (qs.isStarted())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_GOT_ADVENTURER_S_AGATHION_BRACELET_AND_ADVENTURER_S_AGATHION_GRIFFIN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_AGATHION, 2, 5000));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_GOT_ADVENTURER_S_AGATHION_BRACELET_AND_ADVENTURER_S_AGATHION_GRIFFIN_COMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_AGATHION, 2, 5000));
 					addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(35) + 100) - player.getExp(), 135000);
 					giveItems(player, TRAVELER_AGATHION_SUMMON_BRACELET);
 					giveItems(player, TRAVELER_AGATHION_GRIFFIN);
@@ -151,7 +151,7 @@ public class Q10292_SecretGarden extends Quest
 				qs.setCond(3, true);
 				qs.unset(KILL_COUNT_VAR);
 				giveItems(killer, SOE_HIGH_PRIEST_RAYMOND);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_GORGON_FLOWER_GARDEN_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_HIGH_PRIEST_RAYMOND_IN_GLUDIO, 2, 5000));
+				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_GORGON_FLOWER_GARDEN_ARE_KILLED_USE_THE_TELEPORT_TO_GET_TO_HIGH_PRIEST_RAYMOND_IN_GLUDIO, 2, 5000));
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

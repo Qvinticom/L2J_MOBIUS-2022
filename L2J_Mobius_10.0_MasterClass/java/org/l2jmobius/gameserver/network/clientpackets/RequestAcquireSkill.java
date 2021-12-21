@@ -217,7 +217,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 						return;
 					}
 					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_X_S2_DISAPPEARED);
 					sm.addItemName(item.getId());
 					sm.addLong(item.getCount());
 					player.sendPacket(sm);
@@ -226,7 +226,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				if (repCost > 0)
 				{
 					clan.takeReputationScore(repCost);
-					final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+					final SystemMessage cr = new SystemMessage(SystemMessageId.CLAN_REPUTATION_POINTS_S1_2);
 					cr.addInt(repCost);
 					player.sendPacket(cr);
 				}

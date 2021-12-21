@@ -886,7 +886,7 @@ public class Formulas
 		{
 			if (attacker.isPlayer())
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_RESISTED_C2_S_MAGIC_DAMAGE_IS_DECREASED);
 				sm.addString(target.getName());
 				sm.addString(attacker.getName());
 				attacker.sendPacket(sm);

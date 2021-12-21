@@ -219,7 +219,7 @@ public class RequestBuyItem implements IClientIncomingPacket
 		// Charge buyer and add tax to castle treasury if not owned by npc clan
 		if ((subTotal < 0) || !player.reduceAdena("Buy", subTotal, player.getLastFolkNPC(), false))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

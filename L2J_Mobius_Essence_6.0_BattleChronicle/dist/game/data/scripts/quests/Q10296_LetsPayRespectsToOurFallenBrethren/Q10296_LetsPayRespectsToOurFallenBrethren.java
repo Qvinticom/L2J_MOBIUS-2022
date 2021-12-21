@@ -177,7 +177,7 @@ public class Q10296_LetsPayRespectsToOurFallenBrethren extends Quest
 			else
 			{
 				qs.setCond(2, true);
-				showOnScreenMsg(killer, NpcStringId.ALL_MISSIONS_ARE_COMPLETED_NUSE_SCROLL_OF_ESCAPE_HIGH_PRIEST_ORVEN_TO_GET_TO_HIGH_PRIEST_ORVEN_IN_ADEN, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(killer, NpcStringId.ALL_MISSIONS_ARE_COMPLETED_USE_SCROLL_OF_ESCAPE_HIGH_PRIEST_ORVEN_TO_GET_TO_HIGH_PRIEST_ORVEN_IN_ADEN, ExShowScreenMessage.TOP_CENTER, 10000);
 				giveItems(killer, SOE_HIGH_PRIEST_OVEN);
 				qs.unset(KILL_COUNT_VAR);
 			}

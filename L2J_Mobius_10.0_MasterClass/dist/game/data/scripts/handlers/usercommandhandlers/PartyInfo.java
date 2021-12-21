@@ -48,17 +48,17 @@ public class PartyInfo implements IUserCommandHandler
 			{
 				case FINDERS_KEEPERS:
 				{
-					player.sendPacket(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS);
+					player.sendPacket(SystemMessageId.LOOT_FINDERS_KEEPERS);
 					break;
 				}
 				case RANDOM:
 				{
-					player.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM);
+					player.sendPacket(SystemMessageId.LOOT_RANDOM);
 					break;
 				}
 				case RANDOM_INCLUDING_SPOIL:
 				{
-					player.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
+					player.sendPacket(SystemMessageId.LOOT_RANDOM_INCLUDING_SPOILS);
 					break;
 				}
 				case BY_TURN:

@@ -84,7 +84,7 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		if (!player.reduceAdena("RequestRefineCancel", price, targetItem, true))
 		{
 			player.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			return;
 		}
 		

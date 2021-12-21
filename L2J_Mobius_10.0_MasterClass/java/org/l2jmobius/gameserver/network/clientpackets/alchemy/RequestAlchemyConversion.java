@@ -174,7 +174,7 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		if (!inventory.validateWeight(totalWeight) || ((totalslots > 0) && !inventory.validateCapacity(totalslots)))
 		{
 			player.sendPacket(new ExAlchemyConversion(0, 0));
-			player.sendPacket(SystemMessageId.THERE_IS_NOT_ENOUGH_INVENTORY_SPACE_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_INVENTORY_SPACE_FREE_UP_SOME_SPACE_AND_TRY_AGAIN);
 			return;
 		}
 		

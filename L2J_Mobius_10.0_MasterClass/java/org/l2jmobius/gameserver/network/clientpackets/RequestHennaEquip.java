@@ -72,7 +72,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			{
 				if (player.getHenna(4) != null)
 				{
-					player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
+					player.sendPacket(SystemMessageId.YOU_HAVE_NO_FREE_TATTOO_SLOTS);
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -85,7 +85,7 @@ public class RequestHennaEquip implements IClientIncomingPacket
 		}
 		else if (player.getHennaEmptySlots() == 0)
 		{
-			player.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
+			player.sendPacket(SystemMessageId.YOU_HAVE_NO_FREE_TATTOO_SLOTS);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -100,11 +100,11 @@ public class RequestHennaEquip implements IClientIncomingPacket
 			player.sendInventoryUpdate(iu);
 			player.sendPacket(new HennaEquipList(player));
 			player.updateSymbolSealSkills();
-			player.sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED);
+			player.sendPacket(SystemMessageId.A_TATTOO_IS_ADDED);
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MAKE_A_TATTOO);
 			if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !henna.isAllowedClass(player.getClassId()))
 			{
 				Util.handleIllegalPlayerAction(player, "Exploit attempt: Character " + player.getName() + " of account " + player.getAccountName() + " tryed to add a forbidden henna.", Config.DEFAULT_PUNISH);

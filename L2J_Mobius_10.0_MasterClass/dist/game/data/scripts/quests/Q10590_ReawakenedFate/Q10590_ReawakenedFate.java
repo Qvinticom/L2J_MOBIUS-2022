@@ -151,7 +151,7 @@ public class Q10590_ReawakenedFate extends Quest
 					takeItems(player, VAMPIRE_ICHOR, -1);
 					giveItems(player, ACHIEVEMENT_BOX, 1);
 					giveItems(player, RUBIN_LV2, 1);
-					showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_TALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -165,7 +165,7 @@ public class Q10590_ReawakenedFate extends Quest
 					takeItems(player, VAMPIRE_ICHOR, -1);
 					giveItems(player, ACHIEVEMENT_BOX, 1);
 					giveItems(player, SAPPHIRE_LV2, 1);
-					showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_TALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

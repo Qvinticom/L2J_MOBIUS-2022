@@ -158,7 +158,7 @@ public class SiegeFlag extends Npc
 		if (canTalk() && (((getCastle() != null) && getCastle().getSiege().isInProgress()) || ((getFort() != null) && getFort().getSiege().isInProgress())) && (_clan != null))
 		{
 			// send warning to owners of headquarters that theirs base is under attack
-			_clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
+			_clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
 			setCanTalk(false);
 			ThreadPool.schedule(new ScheduleTalkTask(), 20000);
 		}

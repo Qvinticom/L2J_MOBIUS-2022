@@ -51,7 +51,7 @@ public class Q10885_SaviorsPathDiscovery extends Quest
 	private static final int LEONA_BLACKBIRDS_MESSAGE = 48545;
 	// Misc
 	private static final int MIN_LEVEL = 103;
-	private final NpcStringId _startMessage = NpcStringId.YOU_VE_GOT_A_MESSAGE_FROM_LEONA_BLACKBIRD_NCLICK_THE_QUESTION_MARK_ICON_TO_READ;
+	private final NpcStringId _startMessage = NpcStringId.YOU_VE_GOT_A_MESSAGE_FROM_LEONA_BLACKBIRD_CLICK_THE_QUESTION_MARK_ICON_TO_READ;
 	
 	public Q10885_SaviorsPathDiscovery()
 	{

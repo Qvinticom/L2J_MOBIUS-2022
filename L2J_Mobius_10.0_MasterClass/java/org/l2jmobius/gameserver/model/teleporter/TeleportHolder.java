@@ -252,7 +252,7 @@ public class TeleportHolder
 		{
 			if (loc.getFeeId() == Inventory.ADENA_ID)
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			}
 			else
 			{

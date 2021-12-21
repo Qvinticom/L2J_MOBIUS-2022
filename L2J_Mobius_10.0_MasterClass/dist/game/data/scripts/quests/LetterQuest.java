@@ -110,12 +110,12 @@ public abstract class LetterQuest extends Quest
 		if (value)
 		{
 			addCondRace(Race.ERTHEIA, "");
-			_startMessage = NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ;
+			_startMessage = NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_CLICK_THE_QUESTION_MARK_ICON_TO_READ;
 		}
 		else
 		{
 			addCondNotRace(Race.ERTHEIA, "");
-			_startMessage = NpcStringId.KEKROPUS_LETTER_HAS_ARRIVED_NCLICK_THE_QUESTION_MARK_ICON_TO_READ;
+			_startMessage = NpcStringId.KEKROPUS_LETTER_HAS_ARRIVED_CLICK_THE_QUESTION_MARK_ICON_TO_READ;
 		}
 	}
 	

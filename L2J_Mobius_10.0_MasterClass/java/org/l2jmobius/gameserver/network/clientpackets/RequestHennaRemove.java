@@ -67,7 +67,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 				found = true;

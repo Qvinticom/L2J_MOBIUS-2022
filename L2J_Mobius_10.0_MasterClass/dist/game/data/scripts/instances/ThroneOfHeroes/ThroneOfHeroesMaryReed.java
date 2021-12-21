@@ -89,7 +89,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_MARY_REED_WILL_BEGIN_SHORTLY_NPLEASE_GET_READY_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_MARY_REED_WILL_BEGIN_SHORTLY_PLEASE_GET_READY_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
 					startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
 				}
 				break;
@@ -169,7 +169,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					showOnScreenMsg(world, NpcStringId.MARY_REED_SUMMONS_ZAKEN_NZAKEN_WILL_BE_HERE_VERY_SOON, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					showOnScreenMsg(world, NpcStringId.MARY_REED_SUMMONS_ZAKEN_ZAKEN_WILL_BE_HERE_VERY_SOON, ExShowScreenMessage.TOP_CENTER, 5000, true);
 					startQuestTimer("MARY_REED_SPAWNS_ZAKEN", 10000, npc, null);
 				}
 				break;

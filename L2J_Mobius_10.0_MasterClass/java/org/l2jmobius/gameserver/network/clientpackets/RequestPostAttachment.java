@@ -241,7 +241,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			if (sender != null)
 			{
 				sender.addAdena("PayMail", adena, player, false);
-				sm = new SystemMessage(SystemMessageId.S2_COMPLETED_THE_PAYMENT_AND_YOU_RECEIVE_S1_ADENA);
+				sm = new SystemMessage(SystemMessageId.S2_HAS_MADE_A_PAYMENT_OF_S1_ADENA_PER_YOUR_PAYMENT_REQUEST_MAIL);
 				sm.addLong(adena);
 				sm.addString(player.getName());
 				sender.sendPacket(sm);

@@ -66,7 +66,7 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 		if ((item == null) || (scroll == null))
 		{
 			// message may be custom
-			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.sendPacket(new ExPutEnchantScrollItemResult(0));
 			request.setEnchantingItem(Player.ID_NONE);
 			request.setEnchantingScroll(Player.ID_NONE);
@@ -77,7 +77,7 @@ public class RequestExAddEnchantScrollItem implements IClientIncomingPacket
 		if ((scrollTemplate == null))
 		{
 			// message may be custom
-			player.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
+			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.sendPacket(new ExPutEnchantScrollItemResult(0));
 			request.setEnchantingScroll(Player.ID_NONE);
 			return;

@@ -94,7 +94,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				
 				if (!player.isClanLeader() || (clan.getLevel() < 4))
 				{
-					player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+					player.sendPacket(SystemMessageId.YOU_CAN_PARTICIPATE_IN_THE_CLAN_HALL_AUCTION_IF_YOUR_CLAN_LEVEL_IS_4_OR_ABOVE_AND_YOU_ARE_THE_CLAN_LEADER_OR_HAVE_THE_AUCTION_RIGHT);
 					return htmltext;
 				}
 				
@@ -123,7 +123,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				
 				if (!player.isClanLeader() || (clan.getLevel() < 4))
 				{
-					player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+					player.sendPacket(SystemMessageId.YOU_CAN_PARTICIPATE_IN_THE_CLAN_HALL_AUCTION_IF_YOUR_CLAN_LEVEL_IS_4_OR_ABOVE_AND_YOU_ARE_THE_CLAN_LEADER_OR_HAVE_THE_AUCTION_RIGHT);
 					return htmltext;
 				}
 				
@@ -175,7 +175,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				
 				if (!player.isClanLeader() || (clan.getLevel() < 4))
 				{
-					player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+					player.sendPacket(SystemMessageId.YOU_CAN_PARTICIPATE_IN_THE_CLAN_HALL_AUCTION_IF_YOUR_CLAN_LEVEL_IS_4_OR_ABOVE_AND_YOU_ARE_THE_CLAN_LEADER_OR_HAVE_THE_AUCTION_RIGHT);
 					return htmltext;
 				}
 				
@@ -332,7 +332,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 			
 			if (!player.isClanLeader() || (clan.getLevel() < 4))
 			{
-				player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+				player.sendPacket(SystemMessageId.YOU_CAN_PARTICIPATE_IN_THE_CLAN_HALL_AUCTION_IF_YOUR_CLAN_LEVEL_IS_4_OR_ABOVE_AND_YOU_ARE_THE_CLAN_LEADER_OR_HAVE_THE_AUCTION_RIGHT);
 				return;
 			}
 			final ClanHall playerClanHall = ClanHallData.getInstance().getClanHallByClan(clan);

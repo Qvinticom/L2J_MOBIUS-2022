@@ -157,7 +157,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		// Check if enough adena and charge the fee
 		if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			return;
 		}
 		

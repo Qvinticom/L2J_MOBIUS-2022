@@ -63,7 +63,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 			
 			if (player.getClan().getLevel() < 3)
 			{
-				player.sendPacket(SystemMessageId.A_PLAYER_CAN_ONLY_BE_GRANTED_A_TITLE_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE);
+				player.sendPacket(SystemMessageId.THE_CLAN_MUST_BE_LEVEL_3_OR_ABOVE_TO_GRANT_A_TITLE);
 				return;
 			}
 			

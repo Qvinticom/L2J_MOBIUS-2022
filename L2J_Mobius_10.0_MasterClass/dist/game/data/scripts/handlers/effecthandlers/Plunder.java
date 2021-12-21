@@ -70,7 +70,7 @@ public class Plunder extends AbstractEffect
 		
 		if (monster.isSpoiled())
 		{
-			effector.sendPacket(SystemMessageId.THE_TARGET_HAS_BEEN_ALREADY_ROBBED);
+			effector.sendPacket(SystemMessageId.THE_PLUNDER_SKILL_HAS_ALREADY_BEEN_USED_ON_THIS_TARGET);
 			return;
 		}
 		

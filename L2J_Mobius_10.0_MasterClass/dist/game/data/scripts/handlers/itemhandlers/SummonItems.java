@@ -46,7 +46,7 @@ public class SummonItems extends ItemSkillsTemplate
 		
 		if (player.isSitting())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return false;
 		}
 		

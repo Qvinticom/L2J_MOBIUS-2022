@@ -246,7 +246,7 @@ public class VillageMaster extends Folk
 		final Clan clan = player.getClan();
 		if (clan.getAllyId() != 0)
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE);
+			player.sendPacket(SystemMessageId.THE_OPPOSING_CLAN_HAS_REQUESTED_TO_DISSOLVE);
 			return;
 		}
 		if (clan.isAtWar())
@@ -284,7 +284,7 @@ public class VillageMaster extends Folk
 		}
 		if (clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_THE_DISSOLUTION_OF_YOUR_CLAN);
+			player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_THE_DISSOLUTION_OF_S1_CLAN);
 			return;
 		}
 		

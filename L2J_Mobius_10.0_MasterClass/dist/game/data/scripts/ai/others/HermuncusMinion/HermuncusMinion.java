@@ -127,7 +127,7 @@ public class HermuncusMinion extends AbstractNpcAI
 			final int locId = Integer.parseInt(st.nextToken());
 			if (player.getAdena() < 150000)
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 				return null;
 			}
 			

@@ -85,7 +85,7 @@ public class RequestPetGetItem implements IClientIncomingPacket
 		
 		if (pet.isUncontrollable())
 		{
-			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
+			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_SATIETY_REACHES_0_YOU_CANNOT_CONTROL_IT);
 			return;
 		}
 		

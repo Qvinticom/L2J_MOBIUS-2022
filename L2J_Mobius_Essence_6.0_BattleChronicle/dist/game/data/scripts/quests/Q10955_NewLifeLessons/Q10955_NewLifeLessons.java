@@ -185,7 +185,7 @@ public class Q10955_NewLifeLessons extends Quest
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
 				giveItems(killer, SOE_KERKIR);
-				showOnScreenMsg(killer, NpcStringId.THE_TRAINING_IN_OVER_NUSE_A_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_GO_BACK_TO_MASTER_KERKIR, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(killer, NpcStringId.THE_TRAINING_IN_OVER_USE_A_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_GO_BACK_TO_MASTER_KERKIR, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

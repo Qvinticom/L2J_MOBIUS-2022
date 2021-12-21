@@ -148,7 +148,7 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 					}
 					else
 					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 					}
 				}
 				else if (isPlayerShot(item.getItem()))

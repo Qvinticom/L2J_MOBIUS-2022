@@ -284,7 +284,7 @@ public class QueenAntLair extends AbstractInstance
 			cancelQuestTimer("SUPPORT_QUEEN", npc, player);
 			
 			addSpawn(JIO, -22130, 182482, -5720, 49151, false, 0, true, player.getInstanceId());
-			world.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_SUCCEEDED_IN_DEFEATING_QUEEN_ANT_NRECEIVE_YOUR_REWARD_FROM_JIO, 2, 9000));
+			world.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_SUCCEEDED_IN_DEFEATING_QUEEN_ANT_RECEIVE_YOUR_REWARD_FROM_JIO, 2, 9000));
 			
 			for (Player gamer : world.getPlayers())
 			{

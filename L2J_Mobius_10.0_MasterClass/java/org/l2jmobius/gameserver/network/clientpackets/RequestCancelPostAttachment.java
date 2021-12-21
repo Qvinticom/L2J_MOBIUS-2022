@@ -87,7 +87,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		
 		if (player.hasItemRequest())
 		{
-			player.sendPacket(SystemMessageId.UNAVAILABLE_WHILE_THE_ENCHANTING_IS_IN_PROCESS);
+			player.sendPacket(SystemMessageId.UNAVAILABLE_WHILE_THE_ENCHANTING_ATTRIBUTE_ENHANCING_IS_IN_PROCESS);
 			return;
 		}
 		
@@ -208,7 +208,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		final Player receiver = World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_CANCELLED_SENDING_A_MAIL);
 			sm.addString(player.getName());
 			receiver.sendPacket(sm);
 			receiver.sendPacket(new ExChangePostState(true, _msgId, Message.DELETED));
@@ -217,6 +217,6 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		MailManager.getInstance().deleteMessageInDb(_msgId);
 		
 		player.sendPacket(new ExChangePostState(false, _msgId, Message.DELETED));
-		player.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_CANCELLED);
+		player.sendPacket(SystemMessageId.YOU_VE_CANCELLED_SENDING_A_MAIL);
 	}
 }

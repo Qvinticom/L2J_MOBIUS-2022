@@ -732,7 +732,7 @@ public class Party extends AbstractPlayerGroup
 		// Send messages to other party members about reward
 		if (item.getCount() > 1)
 		{
-			final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+			final SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_X_S3);
 			msg.addString(target.getName());
 			msg.addItemName(item);
 			msg.addLong(item.getCount());
@@ -769,7 +769,7 @@ public class Party extends AbstractPlayerGroup
 		// Send messages to other party members about reward
 		if (itemCount > 1)
 		{
-			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+			final SystemMessage msg = spoil ? new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_X_S3_BY_USING_SWEEPER) : new SystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_X_S3);
 			msg.addString(looter.getName());
 			msg.addItemName(itemId);
 			msg.addLong(itemCount);

@@ -145,7 +145,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		// Check if player can pay.
 		if (player.getAdena() < manufactureRecipeCost)
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -183,7 +183,7 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			final Item paidAdena = player.transferItem("PayManufacture", player.getInventory().getAdenaInstance().getObjectId(), manufactureRecipeCost, manufacturer.getInventory(), manufacturer);
 			if (paidAdena == null)
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA);
 				return;
 			}
 		}

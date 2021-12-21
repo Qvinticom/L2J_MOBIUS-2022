@@ -155,7 +155,7 @@ public class Fishing
 		{
 			if (Config.PREMIUM_ONLY_FISHING && !_player.hasPremiumStatus())
 			{
-				_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_AS_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+				_player.sendPacket(SystemMessageId.FISHING_IS_AVAILABLE_TO_PREMIUM_USERS_ONLY);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 				stopFishing(FishingEndType.ERROR);
 				return;
@@ -200,7 +200,7 @@ public class Fishing
 		
 		if (_player.isTransformed() || _player.isInBoat())
 		{
-			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_OR_TRANSFORMED);
+			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHEN_TRANSFORMED_OR_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			stopFishing(FishingEndType.ERROR);
 			return;
@@ -232,7 +232,7 @@ public class Fishing
 			}
 			else
 			{
-				_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+				_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE_YOUR_CHARACTER_IS_NOT_FACING_WATER_OR_YOU_ARE_NOT_IN_A_FISHING_GROUND);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 			stopFishing(FishingEndType.ERROR);
@@ -425,7 +425,7 @@ public class Fishing
 		final int baitZ = computeBaitZ(_player, baitX, baitY, fishingZone, waterZone);
 		if (baitZ == Integer.MIN_VALUE)
 		{
-			_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+			_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE_YOUR_CHARACTER_IS_NOT_FACING_WATER_OR_YOU_ARE_NOT_IN_A_FISHING_GROUND);
 			return null;
 		}
 		

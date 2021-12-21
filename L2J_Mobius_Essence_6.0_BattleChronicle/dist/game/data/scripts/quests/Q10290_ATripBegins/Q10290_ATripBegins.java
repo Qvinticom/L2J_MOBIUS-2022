@@ -150,7 +150,7 @@ public class Q10290_ATripBegins extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_ADVENTURER_S_TALISMAN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_ADVENTURER_S_TALISMAN_COMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
 					addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(25) + 100) - player.getExp(), 42000);
 					// TODO: find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
 					if (player.getInventory().getAllItemsByItemId(BSOE_EVENT.getId()).size() <= 20)
@@ -296,7 +296,7 @@ public class Q10290_ATripBegins extends Quest
 			{
 				qs.setCond(3, true);
 				qs.unset(KILL_COUNT_VAR);
-				showOnScreenMsg(killer, NpcStringId.YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000, killer.getName());
+				showOnScreenMsg(killer, NpcStringId.YOU_VE_KILLED_ALL_THE_MONSTERS_USE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000, killer.getName());
 				giveItems(killer, SOE_TO_CAPTAIN_BATHIS);
 			}
 		}

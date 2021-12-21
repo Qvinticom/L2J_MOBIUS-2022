@@ -39,11 +39,11 @@ public class UnsummonPet implements IPlayerActionHandler
 		}
 		else if (((Pet) pet).isUncontrollable())
 		{
-			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
+			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_SATIETY_REACHES_0_YOU_CANNOT_CONTROL_IT);
 		}
 		else if (pet.isBetrayed())
 		{
-			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
+			player.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_SATIETY_REACHES_0_YOU_CANNOT_CONTROL_IT);
 		}
 		else if (pet.isDead())
 		{
@@ -51,7 +51,7 @@ public class UnsummonPet implements IPlayerActionHandler
 		}
 		else if (pet.isAttackingNow() || pet.isInCombat() || pet.isMovementDisabled())
 		{
-			player.sendPacket(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
+			player.sendPacket(SystemMessageId.A_PET_CANNOT_BE_RECALLED_IN_COMBAT);
 		}
 		else if (pet.isHungry())
 		{

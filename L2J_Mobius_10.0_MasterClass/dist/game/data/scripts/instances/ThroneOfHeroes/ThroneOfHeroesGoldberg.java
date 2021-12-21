@@ -88,7 +88,7 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				if (isInInstance(world))
 				{
-					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_GOLDBERG_WILL_BEGIN_SHORTLY_NPLEASE_GET_READY_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
+					showOnScreenMsg(world, NpcStringId.THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_GOLDBERG_WILL_BEGIN_SHORTLY_PLEASE_GET_READY_HEROES, ExShowScreenMessage.TOP_CENTER, 5000, true);
 					startQuestTimer("ANNOUNCE_RAID_PREP", 15000, null, player);
 				}
 				break;

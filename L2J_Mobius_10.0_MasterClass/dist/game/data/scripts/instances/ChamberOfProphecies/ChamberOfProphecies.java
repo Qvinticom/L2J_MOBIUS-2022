@@ -403,7 +403,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				}
 				world.setStatus(5);
 				world.spawnGroup("q10753_16_instance_grail");
-				showOnScreenMsg(player, NpcStringId.LEAVE_THIS_PLACE_TO_KAIN_NGO_TO_THE_NEXT_ROOM, ExShowScreenMessage.TOP_CENTER, 6000);
+				showOnScreenMsg(player, NpcStringId.LEAVE_THIS_PLACE_TO_KAIN_GO_TO_THE_NEXT_ROOM, ExShowScreenMessage.TOP_CENTER, 6000);
 				world.openCloseDoor(DOOR_4, true);
 				cancelQuestTimer("ATTACK2", npc, player);
 				if (npc != null)

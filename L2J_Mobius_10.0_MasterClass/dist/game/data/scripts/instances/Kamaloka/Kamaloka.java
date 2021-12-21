@@ -472,7 +472,7 @@ public class Kamaloka extends AbstractInstance
 					// if found instance still can't be reentered - exit
 					if (Chronos.currentTimeMillis() < entry.getValue().longValue())
 					{
-						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
+						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_CANNOT_ENTER_YET);
 						sm.addPcName(partyMember);
 						player.sendPacket(sm);
 						return false;

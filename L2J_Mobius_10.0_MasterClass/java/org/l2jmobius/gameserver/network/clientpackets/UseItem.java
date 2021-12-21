@@ -254,7 +254,7 @@ public class UseItem implements IClientIncomingPacket
 			{
 				if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.UNABLE_TO_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_AN_ARTIFACT_BOOK);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVEN_T_EQUIPPED_AN_ARTIFACT_BOOK_SO_S1_CANNOT_BE_EQUIPPED);
 					sm.addItemName(item);
 					player.sendPacket(sm);
 					return;

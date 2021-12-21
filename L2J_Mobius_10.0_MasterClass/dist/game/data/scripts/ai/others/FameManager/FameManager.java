@@ -96,7 +96,7 @@ public class FameManager extends AbstractNpcAI
 						player.setFame(player.getFame() - REPUTATION_COST);
 						player.getClan().addReputationScore(50);
 						player.sendPacket(new UserInfo(player));
-						player.sendPacket(SystemMessageId.YOU_HAVE_ACQUIRED_50_CLAN_REPUTATION);
+						player.sendPacket(SystemMessageId.YOU_VE_GAINED_50_CLAN_REPUTATION_POINTS);
 						htmltext = npc.getId() + "-04.html";
 					}
 					else

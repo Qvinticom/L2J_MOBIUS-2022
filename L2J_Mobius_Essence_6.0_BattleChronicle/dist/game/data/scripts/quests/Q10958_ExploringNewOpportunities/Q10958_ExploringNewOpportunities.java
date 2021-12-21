@@ -103,7 +103,7 @@ public class Q10958_ExploringNewOpportunities extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					showOnScreenMsg(player, NpcStringId.YOU_WILL_RECEIVE_REWARDS_FOR_COMPLETING_QUESTS_NCLICK_THE_QUEST_BUTTON_IN_THE_RIGHT_BOTTOM_CORNER_OF_YOUR_SCREEN_TO_OPEN_QUEST_WINDOW, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.YOU_WILL_RECEIVE_REWARDS_FOR_COMPLETING_QUESTS_CLICK_THE_QUEST_BUTTON_IN_THE_RIGHT_BOTTOM_CORNER_OF_YOUR_SCREEN_TO_OPEN_QUEST_WINDOW, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveStoryBuffReward(npc, player); // ?
 					giveItems(player, SOE_NOVICE);
 					giveItems(player, RING_NOVICE);
@@ -178,7 +178,7 @@ public class Q10958_ExploringNewOpportunities extends Quest
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
 				giveItems(killer, SOE_MATHORN);
-				showOnScreenMsg(killer, NpcStringId.THE_TRAINING_IN_OVER_NUSE_A_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_GO_BACK_TO_QUARTERMASTER_MATHORN, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(killer, NpcStringId.THE_TRAINING_IN_OVER_USE_A_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_GO_BACK_TO_QUARTERMASTER_MATHORN, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

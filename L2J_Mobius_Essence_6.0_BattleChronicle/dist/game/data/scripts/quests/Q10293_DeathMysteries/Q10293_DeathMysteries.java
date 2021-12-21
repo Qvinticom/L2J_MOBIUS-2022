@@ -161,7 +161,7 @@ public class Q10293_DeathMysteries extends Quest
 				qs.setCond(3, true);
 				qs.unset(KILL_COUNT_VAR);
 				giveItems(killer, SOE_HIGH_PRIEST_MAXIMILIAN);
-				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_DEATH_PASS_ARE_KILLED_NUSE_THE_TELEPORT_OR_THE_SCROLL_OF_ESCAPE_TO_GET_TO_HIGH_PRIEST_MAXIMILIAN_IN_GIRAN, 2, 5000));
+				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_DEATH_PASS_ARE_KILLED_USE_THE_TELEPORT_OR_THE_SCROLL_OF_ESCAPE_TO_GET_TO_HIGH_PRIEST_MAXIMILIAN_IN_GIRAN, 2, 5000));
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

@@ -102,11 +102,11 @@ public class RequestPetition implements IClientIncomingPacket
 		}
 		
 		final int petitionId = PetitionManager.getInstance().submitPetition(player, _content, _type);
-		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1);
+		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_RECEIPT_NO_IS_S1);
 		sm.addInt(petitionId);
 		player.sendPacket(sm);
 		
-		sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_S1_PETITION_S_NYOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY);
+		sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_S1_PETITION_S_YOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY);
 		sm.addInt(totalPetitions);
 		sm.addInt(Config.MAX_PETITIONS_PER_PLAYER - totalPetitions);
 		player.sendPacket(sm);

@@ -59,7 +59,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		{
 			if ((member != null) && member.isOnline() && member.getPlayer().isInCombat())
 			{
-				player.sendPacket(SystemMessageId.THE_CLAN_WAR_CANNOT_BE_STOPPED_BECAUSE_SOMEONE_FROM_YOUR_CLAN_IS_STILL_ENGAGED_IN_BATTLE);
+				player.sendPacket(SystemMessageId.THE_CLAN_WAR_CANNOT_BE_STOPPED_BECAUSE_SOMEONE_FROM_YOUR_CLAN_IS_STILL_ENGAGED_IN_BATTLE_CLAN_MEMBERS_IN_BATTLE_S1);
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

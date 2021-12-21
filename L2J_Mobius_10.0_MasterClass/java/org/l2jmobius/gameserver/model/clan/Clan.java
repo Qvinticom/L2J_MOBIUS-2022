@@ -2324,7 +2324,7 @@ public class Clan implements IIdentifiable, INamable
 			if (requiredReputation <= _reputationScore)
 			{
 				setReputationScore(_reputationScore - requiredReputation);
-				final SystemMessage cr = new SystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+				final SystemMessage cr = new SystemMessage(SystemMessageId.CLAN_REPUTATION_POINTS_S1_2);
 				cr.addInt(requiredReputation);
 				player.sendPacket(cr);
 				
@@ -2376,7 +2376,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		
 		// notify all the members about it
-		broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_S_LEVEL_HAS_INCREASED));
+		broadcastToOnlineMembers(new SystemMessage(SystemMessageId.YOUR_CLAN_LEVEL_HAS_RISEN));
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
 	}
 	
