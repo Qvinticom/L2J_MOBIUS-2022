@@ -1,5 +1,5 @@
 /*
-YOU_HAVE_OBTAINED_S1_X_S2_2 * This file is part of the L2J Mobius project.
+ * This file is part of the L2J Mobius project.
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
