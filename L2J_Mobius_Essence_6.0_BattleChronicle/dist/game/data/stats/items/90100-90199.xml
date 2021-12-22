@@ -400,7 +400,7 @@
 			<stat type="mDef">32</stat>
 		</stats>
 	</item>
-	<item id="90146" name="Savior’s Cube" additionalName="30-day" type="EtcItem">
+	<item id="90146" name="Savior's Cube" additionalName="30-day" type="EtcItem">
 		<!-- Available for 30 days. Double-click to obtain 1 Savior Scroll: Enchant Weapon and 1 Savior' Growth Scroll (can be used only once a day). -->
 		<set name="icon" val="icon.crystal_cube_event_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -449,7 +449,7 @@
 			<skill id="39213" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
 		</skills>
 	</item>
-	<item id="90150" name="Savior’s Dual Sword" additionalName="30-day" type="Weapon">
+	<item id="90150" name="Savior's Dual Sword" additionalName="30-day" type="Weapon">
 		<!-- Available for 30 days. <Soul Crystal Enhancement>. Atk. Spd. +5%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -475,7 +475,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="90151" name="Savior’s Staff" additionalName="30-day" type="Weapon">
+	<item id="90151" name="Savior's Staff" additionalName="30-day" type="Weapon">
 		<!-- Available for 30 d. <Soul Crystal Enhancement>. Casting Spd. +12%. -->
 		<set name="icon" val="icon.weapon_crystal_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -503,7 +503,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="90152" name="Savior’s Bow" additionalName="30-day" type="Weapon">
+	<item id="90152" name="Savior's Bow" additionalName="30-day" type="Weapon">
 		<!-- Available for 30 days. <Soul Crystal Enhancement>. P. Critical Rate +52. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +531,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="90153" name="Savior’s Dagger" additionalName="30-day" type="Weapon">
+	<item id="90153" name="Savior's Dagger" additionalName="30-day" type="Weapon">
 		<!-- Available for 30 days. <Soul Crystal Enhancement>. P. Critical Rate +66. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -588,7 +588,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="90155" name="Savior’s Herald" additionalName="Sealed" type="EtcItem">
+	<item id="90155" name="Savior's Herald" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Border +6 (30-day) and Fire Dragon Pendant +6 (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -611,7 +611,7 @@
 		<set name="time" val="43200" />
 		<set name="bodypart" val="deco1" />
 	</item>
-	<item id="90157" name="Warrior’s Talisman - Attack" additionalName="7-day" type="Armor">
+	<item id="90157" name="Warrior's Talisman - Attack" additionalName="7-day" type="Armor">
 		<!-- Available for 7 days. PvE Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
 		<set name="icon" val="icon.r90_sp_talisman_dr_mp_active" />
 		<set name="default_action" val="EQUIP" />
@@ -665,7 +665,7 @@
 			<skill id="35045" level="1" /> <!-- Talisman of Battle - Liberate -->
 		</skills>
 	</item>
-	<item id="90160" name="Warrior’s Talisman - Defense" additionalName="7-day" type="Armor">
+	<item id="90160" name="Warrior's Talisman - Defense" additionalName="7-day" type="Armor">
 		<!-- Available for 7 days. Received PvE Damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
 		<set name="icon" val="icon.r99_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -695,7 +695,7 @@
 			<item id="90132" min="1" max="1" chance="100" /> <!-- Monster Arena Belt 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="90162" name="Warrior’s Talisman Pack - Attack" additionalName="7-day" type="EtcItem">
+	<item id="90162" name="Warrior's Talisman Pack - Attack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Warrior s Talisman - Attack (7-day). -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />
@@ -711,7 +711,7 @@
 			<item id="90157" min="1" max="1" chance="100" /> <!-- Warrior s Talisman - Attack - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="90163" name="Warrior’s Talisman Pack - Defense" additionalName="7-day" type="EtcItem">
+	<item id="90163" name="Warrior's Talisman Pack - Defense" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain Warrior s Talisman - Defense (7-day). -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />

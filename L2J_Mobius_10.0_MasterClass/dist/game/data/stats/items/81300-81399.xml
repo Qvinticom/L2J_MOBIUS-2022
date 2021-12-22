@@ -700,7 +700,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81345" name="Expert’s Mask" type="Armor">
+	<item id="81345" name="Expert's Mask" type="Armor">
 		<!-- CHA +1. When enchanted, increases Attribute Attack, Attribute Resistance, Atk. Spd./ Casting Spd., Max HP/ MP/ CP, P./ M. Def., P./ M. Atk. <Enchanting>. Use Scroll: Enchant Expert s Mask. -->
 		<set name="icon" val="icon.explorer_mask" />
 		<set name="default_action" val="EQUIP" />
@@ -717,7 +717,7 @@
 			<skill id="35624" level="1" /> <!-- Enchant Effect: Expert's Mask -->
 		</skills>
 	</item>
-	<item id="81346" name="Scroll: Enchant Expert’s Mask" type="EtcItem">
+	<item id="81346" name="Scroll: Enchant Expert's Mask" type="EtcItem">
 		<!-- Enchant scroll for Scroll: Enchant Expert s Mask. The maximum enchantment value is +5. -->
 		<set name="icon" val="icon.episode_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -779,7 +779,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="81350" name="Atlas’ Earring" type="Armor">
+	<item id="81350" name="Atlas' Earring" type="Armor">
 		<!-- A special mentor's earring. When enchanted, increases Stupor Atk./ Resistance, Attribute Resistance, Vampiric Rage effect, P. Critical Damage, P./ M. Skill Critical Damage, and decreases MP Consumption. Effects of two identical earrings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant Atlas Earring. Can be augmented. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +797,7 @@
 			<stat type="mDef">151</stat>
 		</stats>
 	</item>
-	<item id="81351" name="Scroll: Enchant Atlas’ Earring" type="EtcItem">
+	<item id="81351" name="Scroll: Enchant Atlas' Earring" type="EtcItem">
 		<!-- Can be used to enchant Atlas Earring. Enchant success rate is 100%. The maximum enchanting is up to +12. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -815,7 +815,7 @@
 			<skill id="39617" level="1" /> <!-- Scroll: Enchant Atlas' Earring -->
 		</skills>
 	</item>
-	<item id="81352" name="Larra’s Welcome Guide" type="EtcItem">
+	<item id="81352" name="Larra's Welcome Guide" type="EtcItem">
 		<!-- A guide prepared by Larra for new players of Lineage 2. Double-click to obtain to read. If you don t, you will miss a lot of important details. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -824,7 +824,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="81353" name="Night Goblin’s Gift Box" type="EtcItem">
+	<item id="81353" name="Night Goblin's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
@@ -1057,7 +1057,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="81369" name="Full Moon’s Chuseok Gift Box" additionalName="Event" type="EtcItem">
+	<item id="81369" name="Full Moon's Chuseok Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +8 Attack/ Defense/ Support/ Balance Artifact, Brooch Spirit Stone, High-grade/ Top-grade Spirit Stone, R-grade Crystal, Honey Rice Cakes. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />

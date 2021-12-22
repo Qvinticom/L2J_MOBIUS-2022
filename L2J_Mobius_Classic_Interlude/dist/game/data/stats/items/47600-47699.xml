@@ -93,7 +93,7 @@
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="47608" name="Monkey Bait" additionalName="R" type="EtcItem">
-		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey’s Treasure Chest. Can be used by characters between Lv. 85-94. Will be deleted when the event ends. -->
+		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey's Treasure Chest. Can be used by characters between Lv. 85-94. Will be deleted when the event ends. -->
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -101,7 +101,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47609" name="Monkey Bait" additionalName="R95" type="EtcItem">
-		<!-- Fishing Time: 75 seconds. Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey’s Treasure Chest. Can be used by characters between Lv. 95-98. Will be deleted when the event ends. -->
+		<!-- Fishing Time: 75 seconds. Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey's Treasure Chest. Can be used by characters between Lv. 95-98. Will be deleted when the event ends. -->
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47610" name="Monkey Bait" additionalName="R99" type="EtcItem">
-		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey’s Treasure Chest. Can be used by characters with Lv. 99 or above. Will be deleted when the event ends. -->
+		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey's Treasure Chest. Can be used by characters with Lv. 99 or above. Will be deleted when the event ends. -->
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -134,7 +134,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="47613" name="Angler's Bait (85)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler’s Treasure Chest. Can be used only at levels 85 - 94. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler's Treasure Chest. Can be used only at levels 85 - 94. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -142,8 +142,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47614" name="Angler’s Bait (95)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler’s Treasure Chest. Can be used only at levels 95 - 98. -->
+	<item id="47614" name="Angler's Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler's Treasure Chest. Can be used only at levels 95 - 98. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -151,8 +151,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47615" name="Angler’s Bait (99)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler’s Treasure Chest. Can be used only above level 99. -->
+	<item id="47615" name="Angler's Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler's Treasure Chest. Can be used only above level 99. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -199,8 +199,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="47619" name="Angler’s Shining Treasure Chest" type="EtcItem">
-		<!-- A reward for handing over the Angler’s Bait Box. Double clicking grants an item at random. -->
+	<item id="47619" name="Angler's Shining Treasure Chest" type="EtcItem">
+		<!-- A reward for handing over the Angler's Bait Box. Double clicking grants an item at random. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -208,7 +208,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47620" name="Angler's Treasure Chest" type="EtcItem">
-		<!-- A reward for handing over the Angler’s Bait Box. Double clicking grants an item at random. -->
+		<!-- A reward for handing over the Angler's Bait Box. Double clicking grants an item at random. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -216,7 +216,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47621" name="Angler's Bait Box" type="EtcItem">
-		<!-- Double clicking the box grants 120 Angler’s Bait Exchange Coupons and 120 Fishing Shots. -->
+		<!-- Double clicking the box grants 120 Angler's Bait Exchange Coupons and 120 Fishing Shots. -->
 		<set name="icon" val="icon.bm_gold_lure_special_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -911,7 +911,7 @@
 			<skill id="18726" level="1" /> <!-- Art of Seduction -->
 		</skills>
 	</item>
-	<item id="47675" name="Pa’agrio’s Blessing - Might" additionalName="Event" type="EtcItem">
+	<item id="47675" name="Pa'agrio's Blessing - Might" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases Damage by 10%, and grants 10% Skill Power. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -932,7 +932,7 @@
 			<skill id="18727" level="1" /> <!-- Pa??agrio??s Blessing - Might -->
 		</skills>
 	</item>
-	<item id="47676" name="Pa’agrio’s Blessing - EXP" additionalName="Event" type="EtcItem">
+	<item id="47676" name="Pa'agrio's Blessing - EXP" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />

@@ -877,7 +877,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49663" name="Melissa’s Recovery Potion" type="EtcItem">
+	<item id="49663" name="Melissa's Recovery Potion" type="EtcItem">
 		<!-- Momentarily recovers 500 HP. If HP is full, CP is recovered. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1102,7 +1102,7 @@
 			<skill id="35017" level="6" /> <!-- Equip Talisman - Insolence VI -->
 		</skills>
 	</item>
-	<item id="49682" name="Baium’s Soul" type="EtcItem">
+	<item id="49682" name="Baium's Soul" type="EtcItem">
 		<!-- Can be exchanged along with Talisman of Insolence Lv. 6 to Talisman of Baium by Blacksmith Baggins in Giran. -->
 		<set name="icon" val="icon.high_energy_condense_i00" />
 		<set name="material" val="PAPER" />
@@ -1320,7 +1320,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49699" name="Master’s Book Skill" type="EtcItem">
+	<item id="49699" name="Master's Book Skill" type="EtcItem">
 		<!-- Take it to Chief Caliburs to get all the skills for your character class and level. Required level: 45-60. -->
 		<set name="icon" val="icon.q10338_book_of_hades" />
 		<set name="material" val="PAPER" />

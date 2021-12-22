@@ -175,7 +175,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="80411" name="Mammon’s Key Chest" type="EtcItem">
+	<item id="80411" name="Mammon's Key Chest" type="EtcItem">
 		<!-- Use it to obtain a random quantity of Mammon's Keys. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -616,7 +616,7 @@
 		<set name="price" val="35000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80446" name="Maestro’s Gift Box" type="EtcItem">
+	<item id="80446" name="Maestro's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain the Honey Vitality Beer or Nevit's Golden Hourglass. Also there is a chance to obtain the Maestro's Article Box or Maestro's Luxury Box. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -652,7 +652,7 @@
 			<skill id="39435" level="1" /> <!-- Royal Black Save Card -->
 		</skills>
 	</item>
-	<item id="80450" name="Penitent’s Mark" type="EtcItem">
+	<item id="80450" name="Penitent's Mark" type="EtcItem">
 		<!-- A mark that shows its holder is walking the path of penitence. Double-click to summon the Sin Eater and receive the Hour of Penitence buff. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -664,7 +664,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80451" name="Penitent’s Mark" type="EtcItem">
+	<item id="80451" name="Penitent's Mark" type="EtcItem">
 		<!-- A mark that shows its holder is walking the path of penitence. Double-click to summon the Sin Eater and receive the Hour of Penitence buff. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -676,7 +676,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80452" name="Penitent’s Mark" type="EtcItem">
+	<item id="80452" name="Penitent's Mark" type="EtcItem">
 		<!-- A mark that shows its holder is walking the path of penitence. Double-click to summon the Sin Eater and receive the Hour of Penitence buff. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

@@ -806,7 +806,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13750" name="Warrior’s Recovery Potion" type="EtcItem">
+	<item id="13750" name="Warrior's Recovery Potion" type="EtcItem">
 		<!-- Restores 5000 HP, and the remaining power restores CP. Instant effect with no cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

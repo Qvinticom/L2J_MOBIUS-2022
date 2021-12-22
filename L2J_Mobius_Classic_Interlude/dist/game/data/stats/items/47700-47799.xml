@@ -288,7 +288,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47717" name="Assassin’s Remnant" type="EtcItem">
+	<item id="47717" name="Assassin's Remnant" type="EtcItem">
 		<!-- Signs of Embryo assassins entering to interfere with the production of defensive batteries. After Ishuma finishes building the defensive batteries, prove that she was protected by taking it to her. -->
 		<set name="icon" val="icon.etc_blood_gragon" />
 		<set name="material" val="STEEL" />
@@ -527,7 +527,7 @@
 			<skill id="18742" level="1" /> <!-- Art of Seduction -->
 		</skills>
 	</item>
-	<item id="47736" name="Pa’agrio’s Blessing - Might" additionalName="Event" type="EtcItem">
+	<item id="47736" name="Pa'agrio's Blessing - Might" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases Damage by 10%, and grants 10% Skill Power. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on June 15, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -547,7 +547,7 @@
 			<skill id="18727" level="1" /> <!-- Pa'agrio's Blessing - Might -->
 		</skills>
 	</item>
-	<item id="47737" name="Pa’agrio’s Blessing - EXP" additionalName="Event" type="EtcItem">
+	<item id="47737" name="Pa'agrio's Blessing - EXP" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on June 15, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -588,8 +588,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47739" name="Hunter’s Amulet" type="EtcItem">
-		<!-- When enhancing an influence talisman, prevents the talisman’s stage from being reset to 1. Stage is maintained when enhancement fails. -->
+	<item id="47739" name="Hunter's Amulet" type="EtcItem">
+		<!-- When enhancing an influence talisman, prevents the talisman's stage from being reset to 1. Stage is maintained when enhancement fails. -->
 		<set name="icon" val="icon.etc_mark_red_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
@@ -861,7 +861,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47754" name="Dragon’s Treasure Chest" type="EtcItem">
+	<item id="47754" name="Dragon's Treasure Chest" type="EtcItem">
 		<!-- Double click to receive a random item. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -869,7 +869,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47755" name="Shining Dragon’s Treasure Chest" type="EtcItem">
+	<item id="47755" name="Shining Dragon's Treasure Chest" type="EtcItem">
 		<!-- Double-click to get one of a rare items, out of Bloody/Dark Enhancement Stone or Enhancement Protection Stone, at random. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -877,7 +877,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47756" name="Dragon’s Elemental Potion" type="EtcItem">
+	<item id="47756" name="Dragon's Elemental Potion" type="EtcItem">
 		<!-- When used, increases Attack Attribute by 30, and all Defense Attributes by 30 for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -886,7 +886,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47757" name="Dragon’s Elemental Potion" additionalName="EXP" type="EtcItem">
+	<item id="47757" name="Dragon's Elemental Potion" additionalName="EXP" type="EtcItem">
 		<!-- When used, increases Attack Attribute by 50, and all Defense Attributes by 50, as well as XP/SP received by 10% for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_brave" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -915,7 +915,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47760" name="Dragon’s Rare Accessory Pack" type="EtcItem">
+	<item id="47760" name="Dragon's Rare Accessory Pack" type="EtcItem">
 		<!-- Double click this to obtain one of Blessed Antharas' Earring, Antharas' Earring, Blessed Valakas' Necklace, Valakas' Necklace, Lindvior's Earring. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -959,8 +959,8 @@
 			<stat type="maxMp">59</stat>
 		</stats>
 	</item>
-	<item id="47763" name="Dragon’s Treasure Chest - 10" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, 10 Dragon’s Treasure Chests can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
+	<item id="47763" name="Dragon's Treasure Chest - 10" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, 10 Dragon's Treasure Chests can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1222,7 +1222,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47788" name="Pink’s Style Potion - Kelbim Light Armor" type="EtcItem">
+	<item id="47788" name="Pink's Style Potion - Kelbim Light Armor" type="EtcItem">
 		<!-- Pink style potion. Use to wear Kelbim Light Armor for 1 hour. It will be deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

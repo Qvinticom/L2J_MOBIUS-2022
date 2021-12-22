@@ -191,7 +191,7 @@
 			<skill id="39201" level="1" /> <!-- Best Dye Box -->
 		</skills>
 	</item>
-	<item id="90021" name="Warrior’s Talisman - Attack" additionalName="30-day" type="Armor">
+	<item id="90021" name="Warrior's Talisman - Attack" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. PvE Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
 		<set name="icon" val="icon.r90_sp_talisman_dr_mp_active" />
 		<set name="default_action" val="EQUIP" />
@@ -204,7 +204,7 @@
 		<set name="time" val="43200" />
 		<set name="bodypart" val="deco1" />
 	</item>
-	<item id="90022" name="Warrior’s Talisman - Defense" additionalName="30-day" type="Armor">
+	<item id="90022" name="Warrior's Talisman - Defense" additionalName="30-day" type="Armor">
 		<!-- Available for 40 days. Received PvE Damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
 		<set name="icon" val="icon.r99_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -373,7 +373,7 @@
 			<skill id="39203" level="1" /> <!-- Life Stone Pack -->
 		</skills>
 	</item>
-	<item id="90036" name="Hero’s Talisman - Attack" additionalName="30-day" type="Armor">
+	<item id="90036" name="Hero's Talisman - Attack" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. PvP Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
 		<set name="icon" val="icon.r90_sp_talisman_dr_hp_active" />
 		<set name="default_action" val="EQUIP" />
@@ -387,10 +387,10 @@
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="35038" level="1" /> <!-- Hero’s Talisman - Attack -->
+			<skill id="35038" level="1" /> <!-- Hero's Talisman - Attack -->
 		</skills>
 	</item>
-	<item id="90037" name="Hero’s Talisman - Defense" additionalName="30-day" type="Armor">
+	<item id="90037" name="Hero's Talisman - Defense" additionalName="30-day" type="Armor">
 		<!-- Available for 30 days. Received PvP Damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%. -->
 		<set name="icon" val="icon.r95_talisman_ca_down_active" />
 		<set name="default_action" val="EQUIP" />
@@ -404,7 +404,7 @@
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="35039" level="1" /> <!-- Hero’s Talisman - Defense -->
+			<skill id="35039" level="1" /> <!-- Hero's Talisman - Defense -->
 		</skills>
 	</item>
 	<item id="90038" name="Spellbook: Mount Golden Lion (Time-limited)" additionalName="Sealed" type="EtcItem">
@@ -533,7 +533,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="90052" name="Scroll: Eva’s Defense" type="EtcItem">
+	<item id="90052" name="Scroll: Eva's Defense" type="EtcItem">
 		<!-- A scroll for learning the Eva's Protection skill. <Class>. Eva's Templar. <Skill effect>. Increases P./ M. Def. and Speed. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
@@ -681,7 +681,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="90073" name="Scroll: Destroyer’s Roar" type="EtcItem">
+	<item id="90073" name="Scroll: Destroyer's Roar" type="EtcItem">
 		<!-- A scroll for learning the Destroyer's Roar skill. <Class>. Titan. <Skill effect>. Inflicts Fear on surrounding enemies and decreases their Speed. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />

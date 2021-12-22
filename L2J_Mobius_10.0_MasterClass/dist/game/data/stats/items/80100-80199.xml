@@ -488,7 +488,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80122" name="Eva’s Summer Fishing Pouch" type="EtcItem">
+	<item id="80122" name="Eva's Summer Fishing Pouch" type="EtcItem">
 		<!-- Double-click to obtain Fishing Dock Pass Box (1-hour), Secret Embryo Bait Coupon (120 pcs.), and Master Fisherman's Blessing (1-hour). -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="PEEL" />
@@ -497,7 +497,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80123" name="Eva’s Glittering Treasure Chest" type="EtcItem">
+	<item id="80123" name="Eva's Glittering Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

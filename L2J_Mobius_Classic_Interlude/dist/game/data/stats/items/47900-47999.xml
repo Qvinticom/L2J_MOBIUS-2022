@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="47900" name="Angel’s Fortune Box" type="EtcItem">
-		<!-- Double-click to obtain 30 Shining Magic Baits. Either Archangel’s Box of Grace or Nevit’s Blessing Box is available to get with a random chance. -->
+	<item id="47900" name="Angel's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain 30 Shining Magic Baits. Either Archangel's Box of Grace or Nevit's Blessing Box is available to get with a random chance. -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47901" name="Archangel’s Box of Grace" type="EtcItem">
+	<item id="47901" name="Archangel's Box of Grace" type="EtcItem">
 		<!-- If you double click on the box, you can obtain a rare item. -->
 		<set name="icon" val="icon.bm_nebit_angel_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -16,7 +16,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47902" name="Nevit’s Blessing Box" type="EtcItem">
+	<item id="47902" name="Nevit's Blessing Box" type="EtcItem">
 		<!-- Double-click the box to obtain one of the very rare items at random. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -104,7 +104,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47912" name="Angel's Gift Package" additionalName="Lv4" type="EtcItem">
-		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced Red&Blue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit’s Cloak of Light (30-day fixed period) box. -->
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced Red&Blue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -142,8 +142,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="47916" name="Nevit’s Cloak of Light Box" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain Nevit’s Cloak of Light (30-day fixed term). -->
+	<item id="47916" name="Nevit's Cloak of Light Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Nevit's Cloak of Light (30-day fixed term). -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="default_action" val="PEEL" />
@@ -153,11 +153,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="47917" min="1" max="1" chance="100" /> <!-- Nevit’s Cloak of Light - 30-day -->
+			<item id="47917" min="1" max="1" chance="100" /> <!-- Nevit's Cloak of Light - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="47917" name="Nevit’s Cloak of Light" additionalName="30-day" type="Armor">
-		<!-- By Angel Nevit’s strength, when equipped reduces received damage by -10%, and increases all skills by +3. -->
+	<item id="47917" name="Nevit's Cloak of Light" additionalName="30-day" type="Armor">
+		<!-- By Angel Nevit's strength, when equipped reduces received damage by -10%, and increases all skills by +3. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -183,7 +183,7 @@
 			<stat type="pDef">100</stat>
 		</stats>
 	</item>
-	<item id="47918" name="Nevit’s Gold Hourglass" type="EtcItem">
+	<item id="47918" name="Nevit's Gold Hourglass" type="EtcItem">
 		<!-- When used, increases EXP/SP from hunting by 50%, and every 5 billion EXP, a Stand of Shining Growth is obtained for 30 minutes. Cannot be used with Fall of the Dragon, Dandy's Home Run Ball, and Agathion - EXP Bottle. Cooldown 5 minutes. -->
 		<set name="icon" val="icon.bm_nebit_bonus_time_up" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -352,7 +352,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47933" name="Dwarvish Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the "Mystic Tavern of the Continent’s Hidden Stories" which is known by adventurers in Aden. Will be deleted after the event. -->
+		<!-- Double-click to find out more about the "Mystic Tavern of the Continent's Hidden Stories" which is known by adventurers in Aden. Will be deleted after the event. -->
 		<set name="icon" val="icon.ev_dwarf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />

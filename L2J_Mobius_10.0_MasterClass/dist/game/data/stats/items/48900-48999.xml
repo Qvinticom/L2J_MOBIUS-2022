@@ -419,7 +419,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48937" name="Mentee’s Vitality Potion of Gratitude" type="EtcItem">
+	<item id="48937" name="Mentee's Vitality Potion of Gratitude" type="EtcItem">
 		<!-- A token of gratitude from a mentee who has grown thanks to his mentor s aid. Recharges a certain amount of Vitality. Can be used only 5 times per week. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -429,7 +429,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48938" name="Lurin’s Fortress Relic Box" type="EtcItem">
+	<item id="48938" name="Lurin's Fortress Relic Box" type="EtcItem">
 		<!-- Use it to obtain Mysterious Soulshot, Mysterious Blessed Spiritshot, Zodiac Cube Fragment, Rune Stone, Seed Bracelet, or other items. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

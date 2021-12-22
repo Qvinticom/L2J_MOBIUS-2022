@@ -13,8 +13,8 @@
 		<capsuled_items>
 			<item id="49543" min="1" max="1" chance="1.9899" /> <!-- Elemental Stone -->
 			<item id="49684" min="1" max="1" chance="3.0" /> <!-- Elemental Crystal -->
-			<item id="49853" min="1" max="1" chance="70.0" /> <!-- Secret Book of Baggins’ Enchantments - V -->
-			<item id="49852" min="1" max="1" chance="20.0" /> <!-- Secret Book of Baggins’ Enchantments - IV -->
+			<item id="49853" min="1" max="1" chance="70.0" /> <!-- Secret Book of Baggins' Enchantments - V -->
+			<item id="49852" min="1" max="1" chance="20.0" /> <!-- Secret Book of Baggins' Enchantments - IV -->
 			<item id="49543" min="1" max="1" chance="5.0" /> <!-- Powerless Energy of Insolence -->
 			<item id="49682" min="1" max="1" chance="0.01" /> <!-- Baium s Soul -->
 			<item id="49683" min="1" max="1" chance="0.0001" /> <!-- Talisman of Baium -->
@@ -51,7 +51,7 @@
 			<skill id="50912" level="4" /> <!-- Talisman Bracelet Lv. 4 -->
 		</skills>
 	</item>
-	<item id="49704" name="Talisman of Border’s Fragment" type="EtcItem">
+	<item id="49704" name="Talisman of Border's Fragment" type="EtcItem">
 		<!-- Required to create and upgrade Talisman of Border and Doll of Border. Take it to Alchemist Veruti in Giran. -->
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="material" val="PAPER" />
@@ -836,8 +836,8 @@
 		<capsuled_items>
 			<item id="49543" min="1" max="1" chance="1.9899" /> <!-- Elemental Stone -->
 			<item id="49684" min="1" max="1" chance="3.0" /> <!-- Elemental Crystal -->
-			<item id="49853" min="1" max="1" chance="70.0" /> <!-- Secret Book of Baggins’ Enchantments - V -->
-			<item id="49852" min="1" max="1" chance="20.0" /> <!-- Secret Book of Baggins’ Enchantments - IV -->
+			<item id="49853" min="1" max="1" chance="70.0" /> <!-- Secret Book of Baggins' Enchantments - V -->
+			<item id="49852" min="1" max="1" chance="20.0" /> <!-- Secret Book of Baggins' Enchantments - IV -->
 			<item id="49543" min="1" max="1" chance="5.0" /> <!-- Powerless Energy of Insolence -->
 			<item id="49682" min="1" max="1" chance="0.01" /> <!-- Baium s Soul -->
 			<item id="49683" min="1" max="1" chance="0.0001" /> <!-- Talisman of Baium -->
@@ -976,7 +976,7 @@
 			<skill id="39158" level="1" /> <!-- Secret Scroll Box: Emperor Baium's Enchant -->
 		</skills>
 	</item>
-	<item id="49770" name="Sayha’s Energy" type="EtcItem">
+	<item id="49770" name="Sayha's Energy" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="icon.etc_holy_water_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

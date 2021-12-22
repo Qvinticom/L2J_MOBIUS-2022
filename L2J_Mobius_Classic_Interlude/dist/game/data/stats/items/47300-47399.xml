@@ -1203,7 +1203,7 @@
 		</skills>
 	</item>
 	<item id="47383" name="Red Libra Supplies Lv. 5" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. A box obtained with Bodyguard Blue’s help. A random item can be obtained by double clicking it. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
+		<!-- Red Libra-only Item. A box obtained with Bodyguard Blue's help. A random item can be obtained by double clicking it. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />

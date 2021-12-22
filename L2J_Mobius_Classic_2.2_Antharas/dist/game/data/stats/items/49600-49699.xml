@@ -11,7 +11,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="49663" name="Melissa’s Recovery Potion" type="EtcItem">
+	<item id="49663" name="Melissa's Recovery Potion" type="EtcItem">
 		<!-- Instant HP recovery. Provides HP +500 and uses the remaining points to recover CP. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -232,7 +232,7 @@
 			<skill id="35017" level="6" /> <!-- Equip Talisman - Insolence VI -->
 		</skills>
 	</item>
-	<item id="49682" name="Baium’s Soul" type="EtcItem">
+	<item id="49682" name="Baium's Soul" type="EtcItem">
 		<!-- Blacksmith Baggins in Giran will trade Baium? Soul and Talisman of Insolence VI for Talisman of Baium. -->
 		<set name="icon" val="icon.high_energy_condense_i00" />
 		<set name="material" val="PAPER" />
@@ -425,7 +425,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="49699" name="Master’s Book Skill" type="EtcItem">
+	<item id="49699" name="Master's Book Skill" type="EtcItem">
 		<!-- Take it to Luck Cat to receive all the skills corresponding to your level or class. Intended for Lv. 45-50. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.q10338_book_of_hades" />
 		<set name="material" val="PAPER" />

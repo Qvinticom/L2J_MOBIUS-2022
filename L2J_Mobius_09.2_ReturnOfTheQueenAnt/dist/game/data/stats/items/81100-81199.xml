@@ -366,7 +366,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81144" name="Santiago’s Star Energy Pack" type="EtcItem">
+	<item id="81144" name="Santiago's Star Energy Pack" type="EtcItem">
 		<!-- Double-click to obtain Stardust or Zodiac Cube Fragment. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -385,7 +385,7 @@
 			<item id="36094" min="1" max="1" chance="50" /> <!-- Vitality Replenishing Star Candy -->
 		</capsuled_items>
 	</item>
-	<item id="81145" name="Santiago’s Sea Wind Scroll" type="EtcItem">
+	<item id="81145" name="Santiago's Sea Wind Scroll" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption +30%, acquired XP/ SP +30%. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Cannot be used with Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -401,7 +401,7 @@
 			<skill id="39612" level="1" /> <!-- Santiago's Sea Wind Scroll -->
 		</skills>
 	</item>
-	<item id="81146" name="Santiago’s Bait" type="EtcItem">
+	<item id="81146" name="Santiago's Bait" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Required level: 99+. Fishing with this bait you have a low chance to obtain Santiago s Star Energy Pack. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 			<item id="45932" min="1" max="1" chance="3.33" /> <!-- Top-grade Weapon Augmenting Stone -->
 		</capsuled_items>
 	</item>
-	<item id="81152" name="Fafurion’s Treasure Chest" type="EtcItem">
+	<item id="81152" name="Fafurion's Treasure Chest" type="EtcItem">
 		<!-- Precious treasure chest obtained after the campaign against Fafurion. Double-click to obtain one rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_5" />
 		<set name="default_action" val="PEEL" />
