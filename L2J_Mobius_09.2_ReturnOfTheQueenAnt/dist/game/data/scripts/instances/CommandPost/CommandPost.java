@@ -132,229 +132,234 @@ public class CommandPost extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		if (event.contains("enterInstance"))
+		switch (event)
 		{
-			final Party party = player.getParty();
-			if (player.isInParty())
+			case "enterInstance":
 			{
-				final long currentTime = Chronos.currentTimeMillis();
-				
-				if (!party.isLeader(player))
+				final Party party = player.getParty();
+				if (player.isInParty())
 				{
-					player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
-					return null;
-				}
-				
-				if (player.isInCommandChannel())
-				{
-					player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
-					return null;
-				}
-				
-				final List<Player> members = party.getMembers();
-				for (Player member : members)
-				{
-					if (!member.isInsideRadius3D(npc, 1000))
+					final long currentTime = Chronos.currentTimeMillis();
+					
+					if (!party.isLeader(player))
 					{
-						player.sendMessage("Player " + member.getName() + " must go closer to Gatekeeper Spirit.");
+						player.sendPacket(new SystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 						return null;
 					}
 					
-					if (currentTime < InstanceManager.getInstance().getInstanceTime(member, TEMPLATE_ID))
+					if (player.isInCommandChannel())
 					{
-						final SystemMessage msg = new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON);
-						msg.addString(member.getName());
-						party.broadcastToPartyMembers(member, msg);
+						player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						return null;
 					}
+					
+					final List<Player> members = party.getMembers();
+					for (Player member : members)
+					{
+						if (!member.isInsideRadius3D(npc, 1000))
+						{
+							player.sendMessage("Player " + member.getName() + " must go closer to Gatekeeper Spirit.");
+							return null;
+						}
+						
+						if (currentTime < InstanceManager.getInstance().getInstanceTime(member, TEMPLATE_ID))
+						{
+							final SystemMessage msg = new SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON);
+							msg.addString(member.getName());
+							party.broadcastToPartyMembers(member, msg);
+							return null;
+						}
+					}
+					
+					for (Player member : members)
+					{
+						enterInstance(member, npc, TEMPLATE_ID);
+					}
+				}
+				else if (player.isGM())
+				{
+					enterInstance(player, npc, TEMPLATE_ID);
+				}
+				else
+				{
+					player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 				}
 				
-				for (Player member : members)
+				if (player.getInstanceWorld() != null)
 				{
-					enterInstance(member, npc, TEMPLATE_ID);
-				}
-			}
-			else if (player.isGM())
-			{
-				enterInstance(player, npc, TEMPLATE_ID);
-			}
-			else
-			{
-				player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
-			}
-			
-			if (player.getInstanceWorld() != null)
-			{
-				startQuestTimer("check_status", 3000, null, player);
-			}
-		}
-		else if (event.equals("check_status"))
-		{
-			final Instance world = player.getInstanceWorld();
-			if (!isInInstance(world))
-			{
-				return null;
-			}
-			
-			switch (world.getStatus())
-			{
-				case 0:
-				{
-					world.setStatus(1);
-					world.spawnGroup("geork");
-					if (world.getNpc(GEORK) != null)
-					{
-						world.getNpc(GEORK).setInvul(true);
-						world.getNpc(GEORK).setImmobilized(true);
-						world.getNpc(GEORK).setRandomWalking(false);
-						world.getNpc(GEORK).setTargetable(false);
-					}
 					startQuestTimer("check_status", 3000, null, player);
-					break;
 				}
-				case 1:
+				break;
+			}
+			case "check_status":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					if (world.getAliveNpcs(FIRST_FLOOR).isEmpty())
+					return null;
+				}
+				
+				switch (world.getStatus())
+				{
+					case 0:
 					{
-						showOnScreenMsg(world, NpcStringId.THE_TELEPORT_GATE_TO_THE_2ND_FLOOR_HAS_BEEN_ACTIVATED, ExShowScreenMessage.TOP_CENTER, 2000, true);
-						world.setStatus(2);
-						world.getNpc(GEORK).teleToLocation(GEORK_FLOOR_2_SPAWN);
-						for (Npc monster : world.spawnGroup("group_1"))
+						world.setStatus(1);
+						world.spawnGroup("geork");
+						if (world.getNpc(GEORK) != null)
 						{
-							monster.setInvul(true);
-							monster.setImmobilized(true);
-							monster.setRandomWalking(false);
-							monster.setTargetable(false);
-							monster.setScriptValue(1);
+							world.getNpc(GEORK).setInvul(true);
+							world.getNpc(GEORK).setImmobilized(true);
+							world.getNpc(GEORK).setRandomWalking(false);
+							world.getNpc(GEORK).setTargetable(false);
 						}
-						for (Npc monster : world.spawnGroup("group_2"))
-						{
-							monster.setInvul(true);
-							monster.setImmobilized(true);
-							monster.setRandomWalking(false);
-							monster.setTargetable(false);
-						}
-						for (Npc monster : world.spawnGroup("group_3"))
-						{
-							monster.setInvul(true);
-							monster.setImmobilized(true);
-							monster.setRandomWalking(false);
-							monster.setTargetable(false);
-						}
-						for (Npc monster : world.spawnGroup("group_4"))
-						{
-							monster.setInvul(true);
-							monster.setImmobilized(true);
-							monster.setRandomWalking(false);
-							monster.setTargetable(false);
-						}
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					startQuestTimer("check_status", 3000, null, player);
-					break;
-				}
-				case 2:
-				{
-					if (!player.isGM())
+					case 1:
 					{
-						final Party party = player.getParty();
-						final List<Player> members = party.getMembers();
-						for (Player member : members)
+						if (world.getAliveNpcs(FIRST_FLOOR).isEmpty())
 						{
-							if (FLOOR_1_TP.isInsideZone(member))
+							showOnScreenMsg(world, NpcStringId.THE_TELEPORT_GATE_TO_THE_2ND_FLOOR_HAS_BEEN_ACTIVATED, ExShowScreenMessage.TOP_CENTER, 2000, true);
+							world.setStatus(2);
+							world.getNpc(GEORK).teleToLocation(GEORK_FLOOR_2_SPAWN);
+							for (Npc monster : world.spawnGroup("group_1"))
 							{
-								member.teleToLocation(FLOOR_2_SPAWN);
+								monster.setInvul(true);
+								monster.setImmobilized(true);
+								monster.setRandomWalking(false);
+								monster.setTargetable(false);
+								monster.setScriptValue(1);
+							}
+							for (Npc monster : world.spawnGroup("group_2"))
+							{
+								monster.setInvul(true);
+								monster.setImmobilized(true);
+								monster.setRandomWalking(false);
+								monster.setTargetable(false);
+							}
+							for (Npc monster : world.spawnGroup("group_3"))
+							{
+								monster.setInvul(true);
+								monster.setImmobilized(true);
+								monster.setRandomWalking(false);
+								monster.setTargetable(false);
+							}
+							for (Npc monster : world.spawnGroup("group_4"))
+							{
+								monster.setInvul(true);
+								monster.setImmobilized(true);
+								monster.setRandomWalking(false);
+								monster.setTargetable(false);
 							}
 						}
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					else if (FLOOR_1_TP.isInsideZone(player))
+					case 2:
 					{
-						player.teleToLocation(FLOOR_2_SPAWN);
+						if (!player.isGM())
+						{
+							final Party party = player.getParty();
+							final List<Player> members = party.getMembers();
+							for (Player member : members)
+							{
+								if (FLOOR_1_TP.isInsideZone(member))
+								{
+									member.teleToLocation(FLOOR_2_SPAWN);
+								}
+							}
+						}
+						else if (FLOOR_1_TP.isInsideZone(player))
+						{
+							player.teleToLocation(FLOOR_2_SPAWN);
+						}
+						
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					
-					startQuestTimer("check_status", 3000, null, player);
-					break;
-				}
-				case 3:
-				{
-					for (Npc monster : world.getNpcsOfGroup("group_1"))
+					case 3:
 					{
-						monster.setImmobilized(false);
-						monster.setWalking();
-						monster.getAI().moveTo(GROUP_1_MOVE);
-					}
-					
-					startQuestTimer("check_status", 3000, null, player);
-					break;
-				}
-				case 4:
-				{
-					if ((world.getStatus() == 4) && //
-						(!world.getNpc(ELITE_KNIGHT).isInsideZone(ZoneId.SCRIPT)) && //
-						(!world.getNpc(ELITE_WARRIOR).isInsideZone(ZoneId.SCRIPT)) && //
-						(!world.getNpc(ELITE_ARCHER).isInsideZone(ZoneId.SCRIPT)) && //
-						(!world.getNpc(ELITE_WIZARD).isInsideZone(ZoneId.SCRIPT)))
-					{
-						for (Npc monster : world.getNpcsOfGroup("group_2"))
+						for (Npc monster : world.getNpcsOfGroup("group_1"))
 						{
 							monster.setImmobilized(false);
 							monster.setWalking();
-							monster.getAI().moveTo(GROUP_2_MOVE);
+							monster.getAI().moveTo(GROUP_1_MOVE);
 						}
-						world.openCloseDoor(world.getTemplateParameters().getInt("secondGroupId"), true);
-						world.setStatus(5);
+						
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					
-					startQuestTimer("check_status", 3000, null, player);
-					break;
-				}
-				case 5:
-				{
-					if (world.getAliveNpcs(GROUP_2).isEmpty())
+					case 4:
 					{
-						for (Npc monster : world.getNpcsOfGroup("group_3"))
+						if ((world.getStatus() == 4) && //
+							(!world.getNpc(ELITE_KNIGHT).isInsideZone(ZoneId.SCRIPT)) && //
+							(!world.getNpc(ELITE_WARRIOR).isInsideZone(ZoneId.SCRIPT)) && //
+							(!world.getNpc(ELITE_ARCHER).isInsideZone(ZoneId.SCRIPT)) && //
+							(!world.getNpc(ELITE_WIZARD).isInsideZone(ZoneId.SCRIPT)))
 						{
-							monster.setImmobilized(false);
-							monster.setWalking();
-							monster.getAI().moveTo(GROUP_3_MOVE);
+							for (Npc monster : world.getNpcsOfGroup("group_2"))
+							{
+								monster.setImmobilized(false);
+								monster.setWalking();
+								monster.getAI().moveTo(GROUP_2_MOVE);
+							}
+							world.openCloseDoor(world.getTemplateParameters().getInt("secondGroupId"), true);
+							world.setStatus(5);
 						}
-						world.openCloseDoor(world.getTemplateParameters().getInt("thirdGroupId"), true);
-						world.setStatus(6);
+						
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					
-					startQuestTimer("check_status", 3000, null, player);
-					break;
-				}
-				case 6:
-				{
-					if (world.getAliveNpcs(GROUP_3).isEmpty())
+					case 5:
 					{
-						for (Npc monster : world.getNpcsOfGroup("group_4"))
+						if (world.getAliveNpcs(GROUP_2).isEmpty())
 						{
-							monster.setImmobilized(false);
-							monster.setWalking();
-							monster.getAI().moveTo(GROUP_4_MOVE);
+							for (Npc monster : world.getNpcsOfGroup("group_3"))
+							{
+								monster.setImmobilized(false);
+								monster.setWalking();
+								monster.getAI().moveTo(GROUP_3_MOVE);
+							}
+							world.openCloseDoor(world.getTemplateParameters().getInt("thirdGroupId"), true);
+							world.setStatus(6);
 						}
-						world.openCloseDoor(world.getTemplateParameters().getInt("fourthGroupId"), true);
-						world.setStatus(7);
+						
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					
-					startQuestTimer("check_status", 3000, null, player);
-					break;
-				}
-				case 7:
-				{
-					if (world.getAliveNpcs(GROUP_4).isEmpty())
+					case 6:
 					{
-						System.out.println("Status is 7.");
+						if (world.getAliveNpcs(GROUP_3).isEmpty())
+						{
+							for (Npc monster : world.getNpcsOfGroup("group_4"))
+							{
+								monster.setImmobilized(false);
+								monster.setWalking();
+								monster.getAI().moveTo(GROUP_4_MOVE);
+							}
+							world.openCloseDoor(world.getTemplateParameters().getInt("fourthGroupId"), true);
+							world.setStatus(7);
+						}
+						
+						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
-					
-					startQuestTimer("check_status", 3000, null, player);
-					break;
+					case 7:
+					{
+						// if (world.getAliveNpcs(GROUP_4).isEmpty())
+						// {
+						// System.out.println("Status is 7.");
+						// }
+						
+						startQuestTimer("check_status", 3000, null, player);
+						break;
+					}
+					default:
+					{
+						startQuestTimer("check_status", 3000, null, player);
+					}
 				}
-				default:
-				{
-					startQuestTimer("check_status", 3000, null, player);
-				}
+				break;
 			}
 		}
 		return null;
@@ -366,26 +371,11 @@ public class CommandPost extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
+			npc.setInvul(false);
+			npc.setTargetable(true);
 			if (CommonUtil.contains(GROUP_1, npc.getId()))
 			{
-				npc.setInvul(false);
-				npc.setTargetable(true);
 				world.setStatus(4);
-			}
-			else if (CommonUtil.contains(GROUP_2, npc.getId()))
-			{
-				npc.setInvul(false);
-				npc.setTargetable(true);
-			}
-			else if (CommonUtil.contains(GROUP_3, npc.getId()))
-			{
-				npc.setInvul(false);
-				npc.setTargetable(true);
-			}
-			else if (CommonUtil.contains(GROUP_4, npc.getId()))
-			{
-				npc.setInvul(false);
-				npc.setTargetable(true);
 			}
 		}
 		super.onMoveFinished(npc);
@@ -395,32 +385,35 @@ public class CommandPost extends AbstractInstance
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		final Instance world = creature.getInstanceWorld();
-		switch (zone.getId())
+		if (world != null)
 		{
-			case 25901:
+			switch (zone.getId())
 			{
-				if (creature.isPlayer() && isInInstance(world) && (world.getStatus() >= 2))
+				case 25901:
 				{
-					creature.teleToLocation(FLOOR_2_SPAWN);
+					if (creature.isPlayer() && isInInstance(world) && (world.getStatus() >= 2))
+					{
+						creature.teleToLocation(FLOOR_2_SPAWN);
+					}
+					break;
 				}
-				break;
-			}
-			case 25902:
-			{
-				if (creature.isPlayer() && isInInstance(world) && (world.getStatus() >= 3))
+				case 25902:
 				{
-					creature.teleToLocation(FLOOR_3_SPAWN);
+					if (creature.isPlayer() && isInInstance(world) && (world.getStatus() >= 3))
+					{
+						creature.teleToLocation(FLOOR_3_SPAWN);
+					}
+					break;
 				}
-				break;
-			}
-			case 25903:
-			{
-				if (creature.isPlayer() && isInInstance(world) && (world.getStatus() == 2))
+				case 25903:
 				{
-					world.setStatus(3);
-					world.openCloseDoor(world.getTemplateParameters().getInt("firstGroupId"), true);
+					if (creature.isPlayer() && isInInstance(world) && (world.getStatus() == 2))
+					{
+						world.setStatus(3);
+						world.openCloseDoor(world.getTemplateParameters().getInt("firstGroupId"), true);
+					}
+					break;
 				}
-				break;
 			}
 		}
 		return super.onEnterZone(creature, zone);
