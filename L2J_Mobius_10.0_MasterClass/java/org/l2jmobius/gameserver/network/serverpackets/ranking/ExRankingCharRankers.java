@@ -433,20 +433,20 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								packet.writeD(i); // server rank
 								if (_snapshotList.size() > 0)
 								{
-									final Map<Integer, StatSet> snapshotRaceList = new ConcurrentHashMap<>();
+									final Map<Integer, StatSet> snapshotClassList = new ConcurrentHashMap<>();
 									int j = 1;
 									for (Integer id2 : _snapshotList.keySet())
 									{
 										final StatSet snapshot = _snapshotList.get(id2);
 										if (_class == snapshot.getInt("classId"))
 										{
-											snapshotRaceList.put(j, _snapshotList.get(id2));
+											snapshotClassList.put(j, _snapshotList.get(id2));
 											j++;
 										}
 									}
-									for (Integer id2 : snapshotRaceList.keySet())
+									for (Integer id2 : snapshotClassList.keySet())
 									{
-										final StatSet snapshot = snapshotRaceList.get(id2);
+										final StatSet snapshot = snapshotClassList.get(id2);
 										if (player.getInt("charId") == snapshot.getInt("charId"))
 										{
 											packet.writeD(id2); // server rank snapshot
@@ -468,25 +468,27 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					else
 					{
 						boolean found = false;
-						final Map<Integer, StatSet> raceList = new ConcurrentHashMap<>();
+						
+						final Map<Integer, StatSet> classList = new ConcurrentHashMap<>();
 						int i = 1;
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet set = _playerList.get(id);
 							if (_player.getBaseClass() == set.getInt("classId"))
 							{
-								raceList.put(i, _playerList.get(id));
+								classList.put(i, _playerList.get(id));
 								i++;
 							}
 						}
-						for (Integer id : raceList.keySet())
+						
+						for (Integer id : classList.keySet())
 						{
-							final StatSet player = raceList.get(id);
+							final StatSet player = classList.get(id);
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;
 								final int first = id > 10 ? (id - 9) : 1;
-								final int last = raceList.size() >= (id + 10) ? id + 10 : id + (raceList.size() - id);
+								final int last = classList.size() >= (id + 10) ? id + 10 : id + (classList.size() - id);
 								if (first == 1)
 								{
 									packet.writeD(last - (first - 1));
@@ -497,7 +499,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								}
 								for (int id2 = first; id2 <= last; id2++)
 								{
-									final StatSet plr = raceList.get(id2);
+									final StatSet plr = classList.get(id2);
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
 									packet.writeD(plr.getInt("level"));

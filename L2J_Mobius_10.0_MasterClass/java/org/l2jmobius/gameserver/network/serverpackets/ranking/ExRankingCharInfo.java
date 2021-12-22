@@ -64,8 +64,8 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 						if (player.getInt("charId") == snapshot.getInt("charId"))
 						{
 							packet.writeD(id2); // server rank snapshot
-							packet.writeD(snapshot.getInt("raceRank")); // race rank snapshot
 							packet.writeD(snapshot.getInt("classRank")); // class rank snapshot
+							packet.writeD(player.getInt("classRank")); // class rank snapshot
 							packet.writeD(0);
 							packet.writeD(0);
 							packet.writeD(0);
