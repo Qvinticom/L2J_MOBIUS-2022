@@ -19,10 +19,12 @@ package instances.CommandPost;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -50,40 +52,27 @@ public class CommandPost extends AbstractInstance
 	private static final int ELRYAH = 23594;
 	private static final int[] FIRST_FLOOR =
 	{
-		23595,
-		23596,
-		23597,
-		23600,
+		23595, // Fortress Raider
+		23596, // Fortress Guardian Captain
+		23597, // Atelia Passionate Soldier
+		23600, // Atelia Flame Master
 	};
-	private static final int[] GROUP_1 =
+	private static final int[] WALKING_MONSTERS =
 	{
-		23605,
-		23606,
-		23607,
-		23608,
-	};
-	private static final int[] GROUP_2 =
-	{
-		23590,
-		23591,
-		23592,
-		23593,
-		23594,
-	};
-	private static final int[] GROUP_3 =
-	{
-		23605,
-		23606,
-		23607,
-		23608,
-	};
-	private static final int[] GROUP_4 =
-	{
-		23610,
-		23612,
-		23613,
-		23614,
-		23615,
+		23590, // Adolph - Brainwashed Aden Vanguard
+		23591, // Barton - Brainwashed Aden Vanguard
+		23592, // Hayuk - Brainwashed Aden Vanguard
+		23593, // Elise - Brainwashed Aden Vanguard
+		23594, // Eliyah - Brainwashed Aden Vanguard
+		23605, // Aden Elite Knight - Brainwashed
+		23606, // Aden Elite Warrior - Brainwashed
+		23607, // Aden Elite Archer - Brainwashed
+		23608, // Aden Elite Wizard - Brainwashed
+		23610, // Corrupted High Priest - Embryo
+		23612, // Elite Priest - Embryo
+		23613, // Elite Instructor - Embryo
+		23614, // Elite Executioner - Embryo
+		23615, // Elite Shaman - Embryo
 	};
 	// Items
 	// private static final int EMERGENCY_WHISTLE = 46404;
@@ -111,11 +100,8 @@ public class CommandPost extends AbstractInstance
 		super(TEMPLATE_ID);
 		addStartNpc(DEVIANNE);
 		addTalkId(DEVIANNE);
-		addMoveFinishedId(GROUP_1);
-		addMoveFinishedId(GROUP_2);
-		addMoveFinishedId(GROUP_3);
-		addMoveFinishedId(GROUP_4);
-		addKillId(GEORK, BURNSTEIN);
+		addMoveFinishedId(WALKING_MONSTERS);
+		addKillId(BURNSTEIN);
 		addInstanceLeaveId(TEMPLATE_ID);
 	}
 	
@@ -379,6 +365,25 @@ public class CommandPost extends AbstractInstance
 		{
 			npc.setInvul(false);
 			npc.setTargetable(true);
+			
+			double minDistance = Double.MAX_VALUE;
+			Player target = null;
+			for (Player player : world.getPlayers())
+			{
+				final double distance = player.calculateDistance2D(npc);
+				if (distance < minDistance)
+				{
+					target = player;
+					minDistance = distance;
+				}
+			}
+			
+			if (target != null)
+			{
+				npc.setRunning();
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				((Attackable) npc).addDamageHate(target, 1, 999);
+			}
 		}
 		super.onMoveFinished(npc);
 	}
