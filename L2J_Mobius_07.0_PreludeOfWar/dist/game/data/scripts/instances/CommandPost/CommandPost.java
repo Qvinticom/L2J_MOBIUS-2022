@@ -19,17 +19,13 @@ package instances.CommandPost;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import instances.AbstractInstance;
 
 /**
- * @author NasSeKa
+ * @author NasSeKa, Mobius
  */
 public class CommandPost extends AbstractInstance
 {
@@ -47,10 +43,6 @@ public class CommandPost extends AbstractInstance
 	private static final int DEVIANNE = 34089;
 	private static final int GEORK = 26135;
 	private static final int BURNSTEIN = 26136;
-	private static final int ELITE_KNIGHT = 23605;
-	private static final int ELITE_WARRIOR = 23606;
-	private static final int ELITE_ARCHER = 23607;
-	private static final int ELITE_WIZARD = 23608;
 	private static final int ADOLPH = 23590;
 	private static final int BARTON = 23591;
 	private static final int HAYUK = 23592;
@@ -111,7 +103,6 @@ public class CommandPost extends AbstractInstance
 	// Zones
 	private static final ScriptZone FLOOR_1_TP = ZoneManager.getInstance().getZoneById(25901, ScriptZone.class);
 	private static final ScriptZone FLOOR_2_TP = ZoneManager.getInstance().getZoneById(25902, ScriptZone.class);
-	private static final ScriptZone FLOOR_2_START = ZoneManager.getInstance().getZoneById(25903, ScriptZone.class);
 	// Misc
 	private static final int TEMPLATE_ID = 259;
 	
@@ -120,7 +111,6 @@ public class CommandPost extends AbstractInstance
 		super(TEMPLATE_ID);
 		addStartNpc(DEVIANNE);
 		addTalkId(DEVIANNE);
-		addEnterZoneId(FLOOR_1_TP.getId(), FLOOR_2_TP.getId(), FLOOR_2_START.getId());
 		addMoveFinishedId(GROUP_1);
 		addMoveFinishedId(GROUP_2);
 		addMoveFinishedId(GROUP_3);
@@ -220,8 +210,8 @@ public class CommandPost extends AbstractInstance
 						if (world.getAliveNpcs(FIRST_FLOOR).isEmpty())
 						{
 							showOnScreenMsg(world, NpcStringId.THE_TELEPORT_GATE_TO_THE_2ND_FLOOR_HAS_BEEN_ACTIVATED, ExShowScreenMessage.TOP_CENTER, 2000, true);
-							world.setStatus(2);
 							world.getNpc(GEORK).teleToLocation(GEORK_FLOOR_2_SPAWN);
+							world.setStatus(2);
 							for (Npc monster : world.spawnGroup("group_1"))
 							{
 								monster.setInvul(true);
@@ -257,23 +247,25 @@ public class CommandPost extends AbstractInstance
 					}
 					case 2:
 					{
-						if (!player.isGM())
+						int teleported = world.getParameters().getInt("TELEPORTED", 0);
+						for (Player member : world.getPlayers())
 						{
-							final Party party = player.getParty();
-							final List<Player> members = party.getMembers();
-							for (Player member : members)
+							if (!member.isTeleporting() && FLOOR_1_TP.isInsideZone(member))
 							{
-								if (FLOOR_1_TP.isInsideZone(member))
-								{
-									member.teleToLocation(FLOOR_2_SPAWN);
-								}
+								member.teleToLocation(FLOOR_2_SPAWN);
+								teleported++;
 							}
 						}
-						else if (FLOOR_1_TP.isInsideZone(player))
+						if (teleported == world.getPlayersCount())
 						{
-							player.teleToLocation(FLOOR_2_SPAWN);
+							world.setStatus(3);
+							world.setParameter("TELEPORTED", 0);
+							world.openCloseDoor(world.getTemplateParameters().getInt("firstGroupId"), true);
 						}
-						
+						else
+						{
+							world.setParameter("TELEPORTED", teleported);
+						}
 						startQuestTimer("check_status", 3000, null, player);
 						break;
 					}
@@ -285,17 +277,13 @@ public class CommandPost extends AbstractInstance
 							monster.setWalking();
 							monster.getAI().moveTo(GROUP_1_MOVE);
 						}
-						
+						world.setStatus(4);
 						startQuestTimer("check_status", 3000, null, player);
 						break;
 					}
 					case 4:
 					{
-						if ((world.getStatus() == 4) && //
-							(!world.getNpc(ELITE_KNIGHT).isInsideZone(ZoneId.SCRIPT)) && //
-							(!world.getNpc(ELITE_WARRIOR).isInsideZone(ZoneId.SCRIPT)) && //
-							(!world.getNpc(ELITE_ARCHER).isInsideZone(ZoneId.SCRIPT)) && //
-							(!world.getNpc(ELITE_WIZARD).isInsideZone(ZoneId.SCRIPT)))
+						if (world.getAliveNpcs().size() == 19)
 						{
 							for (Npc monster : world.getNpcsOfGroup("group_2"))
 							{
@@ -306,13 +294,12 @@ public class CommandPost extends AbstractInstance
 							world.openCloseDoor(world.getTemplateParameters().getInt("secondGroupId"), true);
 							world.setStatus(5);
 						}
-						
 						startQuestTimer("check_status", 3000, null, player);
 						break;
 					}
 					case 5:
 					{
-						if (world.getAliveNpcs(GROUP_2).isEmpty())
+						if (world.getAliveNpcs().size() == 14)
 						{
 							for (Npc monster : world.getNpcsOfGroup("group_3"))
 							{
@@ -323,13 +310,12 @@ public class CommandPost extends AbstractInstance
 							world.openCloseDoor(world.getTemplateParameters().getInt("thirdGroupId"), true);
 							world.setStatus(6);
 						}
-						
 						startQuestTimer("check_status", 3000, null, player);
 						break;
 					}
 					case 6:
 					{
-						if (world.getAliveNpcs(GROUP_3).isEmpty())
+						if (world.getAliveNpcs().size() == 8)
 						{
 							for (Npc monster : world.getNpcsOfGroup("group_4"))
 							{
@@ -340,23 +326,43 @@ public class CommandPost extends AbstractInstance
 							world.openCloseDoor(world.getTemplateParameters().getInt("fourthGroupId"), true);
 							world.setStatus(7);
 						}
-						
 						startQuestTimer("check_status", 3000, null, player);
 						break;
 					}
 					case 7:
 					{
-						// if (world.getAliveNpcs(GROUP_4).isEmpty())
-						// {
-						// System.out.println("Status is 7.");
-						// }
-						
+						if (world.getAliveNpcs().size() == 1)
+						{
+							showOnScreenMsg(world, NpcStringId.THE_TELEPORT_GATE_TO_THE_3RD_FLOOR_HAS_BEEN_ACTIVATED, ExShowScreenMessage.TOP_CENTER, 2000, true);
+							world.getNpc(GEORK).deleteMe();
+							world.setStatus(8);
+						}
 						startQuestTimer("check_status", 3000, null, player);
 						break;
 					}
-					default:
+					case 8:
 					{
+						int teleported = world.getParameters().getInt("TELEPORTED", 0);
+						for (Player member : world.getPlayers())
+						{
+							if (!member.isTeleporting() && FLOOR_2_TP.isInsideZone(member))
+							{
+								member.teleToLocation(FLOOR_3_SPAWN);
+								teleported++;
+							}
+						}
+						if (teleported == world.getPlayersCount())
+						{
+							world.setStatus(9);
+							world.spawnGroup("boss");
+							world.setParameter("TELEPORTED", 0);
+						}
+						else
+						{
+							world.setParameter("TELEPORTED", teleported);
+						}
 						startQuestTimer("check_status", 3000, null, player);
+						break;
 					}
 				}
 				break;
@@ -369,54 +375,12 @@ public class CommandPost extends AbstractInstance
 	public void onMoveFinished(Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (world != null)
+		if (isInInstance(world))
 		{
 			npc.setInvul(false);
 			npc.setTargetable(true);
-			if (CommonUtil.contains(GROUP_1, npc.getId()))
-			{
-				world.setStatus(4);
-			}
 		}
 		super.onMoveFinished(npc);
-	}
-	
-	@Override
-	public String onEnterZone(Creature creature, ZoneType zone)
-	{
-		final Instance world = creature.getInstanceWorld();
-		if (world != null)
-		{
-			switch (zone.getId())
-			{
-				case 25901:
-				{
-					if (creature.isPlayer() && isInInstance(world) && (world.getStatus() >= 2))
-					{
-						creature.teleToLocation(FLOOR_2_SPAWN);
-					}
-					break;
-				}
-				case 25902:
-				{
-					if (creature.isPlayer() && isInInstance(world) && (world.getStatus() >= 3))
-					{
-						creature.teleToLocation(FLOOR_3_SPAWN);
-					}
-					break;
-				}
-				case 25903:
-				{
-					if (creature.isPlayer() && isInInstance(world) && (world.getStatus() == 2))
-					{
-						world.setStatus(3);
-						world.openCloseDoor(world.getTemplateParameters().getInt("firstGroupId"), true);
-					}
-					break;
-				}
-			}
-		}
-		return super.onEnterZone(creature, zone);
 	}
 	
 	@Override
@@ -430,51 +394,52 @@ public class CommandPost extends AbstractInstance
 				case BURNSTEIN:
 				{
 					world.finishInstance();
+					showOnScreenMsg(world, NpcStringId.YOU_VE_SUCCESSFULLY_ATTACKED_THE_COMMAND_POST_AND_DEFEATED_COMMANDER_BURNSTEIN, ExShowScreenMessage.TOP_CENTER, 10000, true);
 					break;
 				}
 				case ADOLPH:
 				{
-					world.spawnGroup("adolph");
-					world.getNpc(ADOLPH).setInvul(true);
-					world.getNpc(ADOLPH).setRandomWalking(false);
-					world.getNpc(ADOLPH).setTargetable(false);
-					addMoveToDesire(world.getNpc(ADOLPH), ADOLPH_MOVE, 6);
+					final Npc adolph = world.spawnGroup("adolph").stream().findFirst().get();
+					adolph.setInvul(true);
+					adolph.setRandomWalking(false);
+					adolph.setTargetable(false);
+					addMoveToDesire(adolph, ADOLPH_MOVE, 6);
 					break;
 				}
 				case BARTON:
 				{
-					world.spawnGroup("barton");
-					world.getNpc(BARTON).setInvul(true);
-					world.getNpc(BARTON).setRandomWalking(false);
-					world.getNpc(BARTON).setTargetable(false);
-					addMoveToDesire(world.getNpc(BARTON), BARTON_MOVE, 6);
+					final Npc barton = world.spawnGroup("barton").stream().findFirst().get();
+					barton.setInvul(true);
+					barton.setRandomWalking(false);
+					barton.setTargetable(false);
+					addMoveToDesire(barton, BARTON_MOVE, 6);
 					break;
 				}
 				case HAYUK:
 				{
-					world.spawnGroup("hayuk");
-					world.getNpc(HAYUK).setInvul(true);
-					world.getNpc(HAYUK).setRandomWalking(false);
-					world.getNpc(HAYUK).setTargetable(false);
-					addMoveToDesire(world.getNpc(HAYUK), HAYUK_MOVE, 6);
+					final Npc hayuk = world.spawnGroup("hayuk").stream().findFirst().get();
+					hayuk.setInvul(true);
+					hayuk.setRandomWalking(false);
+					hayuk.setTargetable(false);
+					addMoveToDesire(hayuk, HAYUK_MOVE, 6);
 					break;
 				}
 				case ELISE:
 				{
-					world.spawnGroup("elise");
-					world.getNpc(ELISE).setInvul(true);
-					world.getNpc(ELISE).setRandomWalking(false);
-					world.getNpc(ELISE).setTargetable(false);
-					addMoveToDesire(world.getNpc(ELISE), ELISE_MOVE, 6);
+					final Npc elise = world.spawnGroup("elise").stream().findFirst().get();
+					elise.setInvul(true);
+					elise.setRandomWalking(false);
+					elise.setTargetable(false);
+					addMoveToDesire(elise, ELISE_MOVE, 6);
 					break;
 				}
 				case ELRYAH:
 				{
-					world.spawnGroup("elryah");
-					world.getNpc(ELRYAH).setInvul(true);
-					world.getNpc(ELRYAH).setRandomWalking(false);
-					world.getNpc(ELRYAH).setTargetable(false);
-					addMoveToDesire(world.getNpc(ELRYAH), ELRYAH_MOVE, 6);
+					final Npc elryah = world.spawnGroup("elryah").stream().findFirst().get();
+					elryah.setInvul(true);
+					elryah.setRandomWalking(false);
+					elryah.setTargetable(false);
+					addMoveToDesire(elryah, ELRYAH_MOVE, 6);
 					break;
 				}
 			}

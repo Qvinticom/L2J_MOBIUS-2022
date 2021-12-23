@@ -1158,22 +1158,10 @@
 	<zone name="Tauti_Scarab_Zone" id="80033" type="ScriptZone" shape="Cylinder" minZ="-9150" maxZ="-9000" rad="550">
 		<node X="148800" Y="-153125" />
 	</zone>
-	<zone name="Command_Post_Floor_1" id="25901" type="ScriptZone" shape="Cylinder" minZ="-8784" maxZ="-8750" rad="100">
+	<zone name="Command_Post_Floor_1" id="25901" type="ScriptZone" shape="Cylinder" minZ="-8800" maxZ="-8750" rad="100">
 		<node X="-44036" Y="43258" />
 	</zone>
 	<zone name="Command_Post_Floor_2" id="25902" type="ScriptZone" shape="Cylinder" minZ="-8100" maxZ="-8000" rad="100">
 		<node X="-44037" Y="45821" />
-	</zone>
-	<zone name="Command_Post_Floor_2_Start" id="25903" type="ScriptZone" shape="Cylinder" minZ="-8100" maxZ="-8050" rad="100">
-		<node X="-43563" Y="44499" />
-	</zone>
-	<zone name="Command_Post_Group_1_Pass" id="25904" type="ScriptZone" shape="NPoly" minZ="-8100" maxZ="-8050">
-		<node X="-44604" Y="43589" />
-		<node X="-44039" Y="43082" />
-		<node X="-43398" Y="43524" />
-		<node X="-43286" Y="44573" />
-		<node X="-43567" Y="45499" />
-		<node X="-44015" Y="46009" />
-		<node X="-44945" Y="45667" />
 	</zone>
 </list>

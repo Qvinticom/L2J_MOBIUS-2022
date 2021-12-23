@@ -80,12 +80,12 @@
 			<npc id="23509" x="-44500" y="44173" z="-8865" /> <!-- Fortress Dark Wizard -->
 		</group>
 		<group name="geork" spawnByDefault="false">
-			<npc id="26135" x="-44036" y="43708" z="-8795"/> <!-- Geork -->
+			<npc id="26135" x="-44036" y="43708" z="-8795" heading="-8100" /> <!-- Geork -->
 		</group>
 		<group name="group_1" spawnByDefault="false">
 			<territories>
 				<territory name="group_1" shape="Cylinder" minZ="-8096" maxZ="-8090" rad="10">
-					<node x="-43313" y="44516"/>
+					<node x="-43313" y="44516" />
 				</territory>
 			</territories>
 			<npc id="23605" count="1" /> <!-- Brainwashed Aden Elite Knight -->
@@ -96,7 +96,7 @@
 		<group name="group_2" spawnByDefault="false">
 			<territories>
 				<territory name="group_2" shape="Cylinder" minZ="-8096" maxZ="-8090" rad="10">
-					<node x="-43314" y="44109"/>
+					<node x="-43314" y="44109" />
 				</territory>
 			</territories>
 			<npc id="23590" count="1" /> <!-- Brainwashed Aden Vanguard Adolph -->
@@ -108,7 +108,7 @@
 		<group name="group_3" spawnByDefault="false">
 			<territories>
 				<territory name="group_3" shape="Cylinder" minZ="-8096" maxZ="-8090" rad="10">
-					<node x="-44739" y="44503"/>
+					<node x="-44739" y="44503" />
 				</territory>
 			</territories>
 			<npc id="23605" count="1" /> <!-- Brainwashed Aden Elite Knight -->
@@ -119,7 +119,7 @@
 		<group name="group_4" spawnByDefault="false">
 			<territories>
 				<territory name="group_4" shape="Cylinder" minZ="-8096" maxZ="-8090" rad="10">
-					<node x="-44765" y="44108"/>
+					<node x="-44765" y="44108" />
 				</territory>
 			</territories>
 			<npc id="23610" count="1" /> <!-- Corrupted High Priest -->
@@ -129,22 +129,22 @@
 			<npc id="23615" count="2" /> <!-- Elite Shaman -->
 		</group>
 		<group name="adolph" spawnByDefault="false">
-			<npc id="34305" x="-44033" y="44333" z="-6971"/> <!-- Adolph -->
+			<npc id="34305" x="-44033" y="44333" z="-6971" /> <!-- Adolph -->
 		</group>
 		<group name="barton" spawnByDefault="false">
-			<npc id="34306" x="-44033" y="44333" z="-6971"/> <!-- Barton -->
+			<npc id="34306" x="-44033" y="44333" z="-6971" /> <!-- Barton -->
 		</group>
 		<group name="hayuk" spawnByDefault="false">
-			<npc id="34307" x="-44033" y="44333" z="-6971"/> <!-- Hayuk -->
+			<npc id="34307" x="-44033" y="44333" z="-6971" /> <!-- Hayuk -->
 		</group>
 		<group name="elise" spawnByDefault="false">
-			<npc id="34308" x="-44033" y="44333" z="-6971"/> <!-- Elise -->
+			<npc id="34308" x="-44033" y="44333" z="-6971" /> <!-- Elise -->
 		</group>
 		<group name="elryah" spawnByDefault="false">
-			<npc id="34309" x="-44033" y="44333" z="-6971"/> <!-- Elryah -->
+			<npc id="34309" x="-44033" y="44333" z="-6971" /> <!-- Elryah -->
 		</group>
 		<group name="boss" spawnByDefault="false">
-			<npc id="26136" x="-44033" y="44333" z="-6971"/> <!-- Burnstein -->
+			<npc id="26136" x="-44033" y="44333" z="-6971" /> <!-- Burnstein -->
 		</group>
 	</spawnlist>
 </instance>
