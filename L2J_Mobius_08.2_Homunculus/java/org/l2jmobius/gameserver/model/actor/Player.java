@@ -265,6 +265,7 @@ import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skill.AbnormalType;
+import org.l2jmobius.gameserver.model.skill.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.skill.AmmunitionSkillList;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.CommonSkill;
@@ -10326,6 +10327,7 @@ public class Player extends Playable
 		
 		// Stop Tranquil Soul effect.
 		getEffectList().stopSkillEffects(SkillFinishType.REMOVED, CommonSkill.TRANQUIL_SOUL.getSkill());
+		getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.H_DEATH_EFFECT_AVE);
 	}
 	
 	@Override
