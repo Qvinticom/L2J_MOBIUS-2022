@@ -1001,9 +1001,14 @@
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="-700" min="5" max="5" chance="100" /> <!-- Honor Coin -->
+		</capsuled_items>
 	</item>
 	<item id="95673" name="Sylph's Blessing Pack (Time-limited)" type="EtcItem">
 		<!-- Double-click to obtain a random item from the list or one of various items. -->

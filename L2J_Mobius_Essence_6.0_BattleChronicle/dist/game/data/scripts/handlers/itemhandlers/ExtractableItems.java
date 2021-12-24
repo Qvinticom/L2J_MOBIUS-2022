@@ -117,6 +117,13 @@ public class ExtractableItems implements IItemHandler
 							primeReward = true;
 							continue;
 						}
+						if (expi.getId() == -700) // Honor Coins
+						{
+							player.setHonorCoins(player.getHonorCoins() + (int) createItemAmount);
+							player.sendMessage("You have obtained " + (createItemAmount) + " Honor Coin.");
+							primeReward = true;
+							continue;
+						}
 						
 						if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 						{
@@ -172,7 +179,13 @@ public class ExtractableItems implements IItemHandler
 						primeReward = true;
 						continue;
 					}
-					
+					if (expi.getId() == -700) // Honor Coins
+					{
+						player.setHonorCoins(player.getHonorCoins() + (int) createItemAmount);
+						player.sendMessage("You have obtained " + (createItemAmount) + " Honor Points!");
+						primeReward = true;
+						continue;
+					}
 					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
 						final Item newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
