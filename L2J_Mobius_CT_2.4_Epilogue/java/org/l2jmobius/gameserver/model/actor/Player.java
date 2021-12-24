@@ -10440,11 +10440,6 @@ public class Player extends Playable
 		}
 	}
 	
-	public boolean isLocked()
-	{
-		return _subclassLock;
-	}
-	
 	public void stopWarnUserTakeBreak()
 	{
 		if (_taskWarnUserTakeBreak == null)

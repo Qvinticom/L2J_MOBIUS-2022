@@ -69,7 +69,7 @@ public class RequestRestart implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isLocked())
+		if (player.isChangingClass())
 		{
 			PacketLogger.warning("Player " + player.getName() + " tried to restart during class change.");
 			player.sendPacket(RestartResponse.valueOf(false));
