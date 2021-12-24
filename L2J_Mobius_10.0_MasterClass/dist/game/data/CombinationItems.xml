@@ -1,44 +1,112 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/CombinationItems.xsd">
+	<item one="47807" two="47807" commission="100000"> <!-- Sayha's Talisman Lv. 1 / Sayha's Talisman Lv. 1 -->
+		<reward id="47808" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 -->
+		<reward id="47807" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 -->
+	</item>
+	<item one="47808" two="47808" commission="100000"> <!-- Sayha's Talisman Lv. 2 / Sayha's Talisman Lv. 2 -->
+		<reward id="47809" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 -->
+		<reward id="47808" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 -->
+	</item>
+	<item one="47809" two="47809" commission="100000"> <!-- Sayha's Talisman Lv. 3 / Sayha's Talisman Lv. 3 -->
+		<reward id="47810" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 -->
+		<reward id="47809" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 -->
+	</item>
+	<item one="47810" two="47810" commission="100000"> <!-- Sayha's Talisman Lv. 4 / Sayha's Talisman Lv. 4 -->
+		<reward id="47811" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 -->
+		<reward id="47810" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 -->
+	</item>
+	<item one="47811" two="47811" commission="100000"> <!-- Sayha's Talisman Lv. 5 / Sayha's Talisman Lv. 5 -->
+		<reward id="47812" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 -->
+		<reward id="47811" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 -->
+	</item>
+	<item one="47812" two="47812" commission="100000"> <!-- Sayha's Talisman Lv. 6 / Sayha's Talisman Lv. 6 -->
+		<reward id="47813" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 -->
+		<reward id="47812" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 -->
+	</item>
+	<item one="47813" two="47813" commission="100000"> <!-- Sayha's Talisman Lv. 7 / Sayha's Talisman Lv. 7 -->
+		<reward id="47814" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 -->
+		<reward id="47813" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 -->
+	</item>
+	<item one="47814" two="47814" commission="100000"> <!-- Sayha's Talisman Lv. 8 / Sayha's Talisman Lv. 8 -->
+		<reward id="47815" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 -->
+		<reward id="47814" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 -->
+	</item>
+	<item one="47815" two="47815" commission="100000"> <!-- Sayha's Talisman Lv. 9 / Sayha's Talisman Lv. 9 -->
+		<reward id="47816" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 10 -->
+		<reward id="47815" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 9 -->
+	</item>
+	<item one="47807" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 1 / Sayha's Energy -->
+		<reward id="47808" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 -->
+		<reward id="47807" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 -->
+	</item>
+	<item one="47808" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 2 / Sayha's Energy -->
+		<reward id="47809" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 -->
+		<reward id="47808" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 -->
+	</item>
+	<item one="47809" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 3 / Sayha's Energy -->
+		<reward id="47810" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 -->
+		<reward id="47809" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 -->
+	</item>
+	<item one="47810" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 4 / Sayha's Energy -->
+		<reward id="47811" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 -->
+		<reward id="47810" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 -->
+	</item>
+	<item one="47811" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 5 / Sayha's Energy -->
+		<reward id="47812" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 -->
+		<reward id="47811" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 -->
+	</item>
+	<item one="47812" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 6 / Sayha's Energy -->
+		<reward id="47813" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 -->
+		<reward id="47812" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 -->
+	</item>
+	<item one="47813" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 7 / Sayha's Energy -->
+		<reward id="47814" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 -->
+		<reward id="47813" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 -->
+	</item>
+	<item one="47814" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 8 / Sayha's Energy -->
+		<reward id="47815" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 -->
+		<reward id="47814" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 -->
+	</item>
 	<item one="47088" two="47118" commission="100000" chance="100"> <!-- Crystal with Anakim's Energy / Shining Soul of Monster Spirit -->
 		<reward id="47089" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 1 -->
 		<reward id="47089" count="1" type="ON_FAILURE" /> <!-- Anakim's Soul Crystal Lv. 1 -->
 	</item>
 	<item one="47089" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 1 / Shining Soul of Monster Spirit -->
 		<reward id="47090" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 2 -->
-		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47090" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 2 / Shining Soul of Monster Spirit -->
 		<reward id="47091" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 3 -->
-		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47091" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 3 / Shining Soul of Monster Spirit -->
 		<reward id="47092" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 4 -->
-		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47092" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 4 / Shining Soul of Monster Spirit -->
 		<reward id="47093" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 5 -->
-		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47093" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 5 / Shining Soul of Monster Spirit -->
 		<reward id="47094" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 6 -->
-		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47094" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 6 / Shining Soul of Monster Spirit -->
 		<reward id="47095" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 7 -->
-		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47095" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 7 / Shining Soul of Monster Spirit -->
 		<reward id="47096" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 8 -->
-		<reward id="47117" count="1000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47096" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 8 / Shining Soul of Monster Spirit -->
 		<reward id="47097" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 9 -->
-		<reward id="47117" count="5000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="5000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47097" two="47118" commission="100000"> <!-- Anakim's Soul Crystal Lv. 9 / Shining Soul of Monster Spirit -->
 		<reward id="47098" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 10 -->
-		<reward id="47117" count="15000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="15000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47099" two="47118" commission="100000" chance="100"> <!-- Crystal with Lilith's Energy / Shining Soul of Monster Spirit -->
 		<reward id="47100" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 1 -->
@@ -46,123 +114,123 @@
 	</item>
 	<item one="47100" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 1 / Shining Soul of Monster Spirit -->
 		<reward id="47101" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 2 -->
-		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47101" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 2 / Shining Soul of Monster Spirit -->
 		<reward id="47102" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 3 -->
-		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47102" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 3 / Shining Soul of Monster Spirit -->
 		<reward id="47103" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 4 -->
-		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47103" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 4 / Shining Soul of Monster Spirit -->
 		<reward id="47104" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 5 -->
-		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47104" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 5 / Shining Soul of Monster Spirit -->
 		<reward id="47105" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 6 -->
-		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47105" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 6 / Shining Soul of Monster Spirit -->
 		<reward id="47106" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 7 -->
-		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47106" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 7 / Shining Soul of Monster Spirit -->
 		<reward id="47107" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 8 -->
-		<reward id="47117" count="1000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47107" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 8 / Shining Soul of Monster Spirit -->
 		<reward id="47108" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 9 -->
-		<reward id="47117" count="5000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="5000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47108" two="47118" commission="100000"> <!-- Lilith' Soul Crystal Lv. 9 / Shining Soul of Monster Spirit -->
 		<reward id="47109" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 10 -->
-		<reward id="47117" count="15000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="15000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47110" two="47118" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 4 / Shining Soul of Monster Spirit -->
 		<reward id="47111" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 5 -->
-		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47111" two="47118" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 5 / Shining Soul of Monster Spirit -->
 		<reward id="47112" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 6 -->
-		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47112" two="47118" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 6 / Shining Soul of Monster Spirit -->
 		<reward id="47113" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 7 -->
-		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47113" two="47118" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 7 / Shining Soul of Monster Spirit -->
 		<reward id="47114" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 8 -->
-		<reward id="47117" count="1000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47114" two="47118" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 8 / Shining Soul of Monster Spirit -->
 		<reward id="47115" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 9 -->
-		<reward id="47117" count="5000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="5000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47115" two="47118" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 9 / Shining Soul of Monster Spirit -->
 		<reward id="47116" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 10 -->
-		<reward id="47117" count="15000" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="15000" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47089" two="47119" commission="100000"> <!-- Anakim's Soul Crystal Lv. 1 / Glittering Soul of Monster Spirit -->
 		<reward id="47090" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 2 -->
-		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47090" two="47119" commission="100000"> <!-- Anakim's Soul Crystal Lv. 2 / Glittering Soul of Monster Spirit -->
 		<reward id="47091" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 3 -->
-		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47091" two="47119" commission="100000"> <!-- Anakim's Soul Crystal Lv. 3 / Glittering Soul of Monster Spirit -->
 		<reward id="47092" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 4 -->
-		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47092" two="47120" commission="100000"> <!-- Anakim's Soul Crystal Lv. 4 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47093" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 5 -->
-		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47093" two="47120" commission="100000"> <!-- Anakim's Soul Crystal Lv. 5 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47094" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 6 -->
-		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47094" two="47120" commission="100000"> <!-- Anakim's Soul Crystal Lv. 6 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47095" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 7 -->
-		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47100" two="47119" commission="100000"> <!-- Lilith' Soul Crystal Lv. 1 / Glittering Soul of Monster Spirit -->
 		<reward id="47101" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 2 -->
-		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47101" two="47119" commission="100000"> <!-- Lilith' Soul Crystal Lv. 2 / Glittering Soul of Monster Spirit -->
 		<reward id="47102" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 3 -->
-		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47102" two="47119" commission="100000"> <!-- Lilith' Soul Crystal Lv. 3 / Glittering Soul of Monster Spirit -->
 		<reward id="47103" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 4 -->
-		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47103" two="47120" commission="100000"> <!-- Lilith' Soul Crystal Lv. 4 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47104" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 5 -->
-		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47104" two="47120" commission="100000"> <!-- Lilith' Soul Crystal Lv. 5 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47105" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 6 -->
-		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47105" two="47120" commission="100000"> <!-- Lilith' Soul Crystal Lv. 6 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47106" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 7 -->
-		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47110" two="47120" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 4 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47111" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 5 -->
-		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="40" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47111" two="47120" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 5 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47112" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 6 -->
-		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="150" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47112" two="47120" commission="100000"> <!-- Soul Crystal of Seven Signs Lv. 6 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47113" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 7 -->
-		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="500" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47089" two="47121" commission="100000"> <!-- Anakim's Soul Crystal Lv. 1 / Radiant Soul of Monster Spirit -->
 		<reward id="47090" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 2 -->
@@ -294,95 +362,27 @@
 	</item>
 	<item one="47089" two="47120" commission="100000"> <!-- Anakim's Soul Crystal Lv. 1 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47090" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 2 -->
-		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47090" two="47120" commission="100000"> <!-- Anakim's Soul Crystal Lv. 2 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47091" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 3 -->
-		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47091" two="47120" commission="100000"> <!-- Anakim's Soul Crystal Lv. 3 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47092" count="1" type="ON_SUCCESS" /> <!-- Anakim's Soul Crystal Lv. 4 -->
-		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47100" two="47120" commission="100000"> <!-- Lilith' Soul Crystal Lv. 1 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47101" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 2 -->
-		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="1" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47101" two="47120" commission="100000"> <!-- Lilith' Soul Crystal Lv. 2 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47102" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 3 -->
-		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Fragment -->
+		<reward id="47117" count="3" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47102" two="47120" commission="100000"> <!-- Lilith' Soul Crystal Lv. 3 / Top-grade Glittering Soul of Monster Spirit -->
 		<reward id="47103" count="1" type="ON_SUCCESS" /> <!-- Lilith' Soul Crystal Lv. 4 -->
-		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Fragment -->
-	</item>
-	<item one="47807" two="47807" commission="100000"> <!-- Sayha's Talisman Lv. 1 / Sayha's Talisman Lv. 1 -->
-		<reward id="47808" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 -->
-		<reward id="47807" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 -->
-	</item>
-	<item one="47808" two="47808" commission="100000"> <!-- Sayha's Talisman Lv. 2 / Sayha's Talisman Lv. 2 -->
-		<reward id="47809" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 -->
-		<reward id="47808" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 -->
-	</item>
-	<item one="47809" two="47809" commission="100000"> <!-- Sayha's Talisman Lv. 3 / Sayha's Talisman Lv. 3 -->
-		<reward id="47810" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 -->
-		<reward id="47809" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 -->
-	</item>
-	<item one="47810" two="47810" commission="100000"> <!-- Sayha's Talisman Lv. 4 / Sayha's Talisman Lv. 4 -->
-		<reward id="47811" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 -->
-		<reward id="47810" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 -->
-	</item>
-	<item one="47811" two="47811" commission="100000"> <!-- Sayha's Talisman Lv. 5 / Sayha's Talisman Lv. 5 -->
-		<reward id="47812" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 -->
-		<reward id="47811" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 -->
-	</item>
-	<item one="47812" two="47812" commission="100000"> <!-- Sayha's Talisman Lv. 6 / Sayha's Talisman Lv. 6 -->
-		<reward id="47813" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 -->
-		<reward id="47812" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 -->
-	</item>
-	<item one="47813" two="47813" commission="100000"> <!-- Sayha's Talisman Lv. 7 / Sayha's Talisman Lv. 7 -->
-		<reward id="47814" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 -->
-		<reward id="47813" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 -->
-	</item>
-	<item one="47814" two="47814" commission="100000"> <!-- Sayha's Talisman Lv. 8 / Sayha's Talisman Lv. 8 -->
-		<reward id="47815" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 -->
-		<reward id="47814" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 -->
-	</item>
-	<item one="47815" two="47815" commission="100000"> <!-- Sayha's Talisman Lv. 9 / Sayha's Talisman Lv. 9 -->
-		<reward id="47816" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 10 -->
-		<reward id="47815" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 9 -->
-	</item>
-	<item one="47807" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 1 / Sayha's Energy -->
-		<reward id="47808" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 -->
-		<reward id="47807" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 -->
-	</item>
-	<item one="47808" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 2 / Sayha's Energy -->
-		<reward id="47809" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 -->
-		<reward id="47808" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 -->
-	</item>
-	<item one="47809" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 3 / Sayha's Energy -->
-		<reward id="47810" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 -->
-		<reward id="47809" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 -->
-	</item>
-	<item one="47810" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 4 / Sayha's Energy -->
-		<reward id="47811" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 -->
-		<reward id="47810" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 -->
-	</item>
-	<item one="47811" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 5 / Sayha's Energy -->
-		<reward id="47812" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 -->
-		<reward id="47811" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 -->
-	</item>
-	<item one="47812" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 6 / Sayha's Energy -->
-		<reward id="47813" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 -->
-		<reward id="47812" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 -->
-	</item>
-	<item one="47813" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 7 / Sayha's Energy -->
-		<reward id="47814" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 -->
-		<reward id="47813" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 -->
-	</item>
-	<item one="47814" two="47851" commission="100000"> <!-- Sayha's Talisman Lv. 8 / Sayha's Energy -->
-		<reward id="47815" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 -->
-		<reward id="47814" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 -->
+		<reward id="47117" count="10" type="ON_FAILURE" /> <!-- Soul Shard -->
 	</item>
 	<item one="47093" two="47104" commission="100000" chance="100"> <!-- Anakim's Soul Crystal Lv. 5 / Lilith' Soul Crystal Lv. 5 -->
 		<reward id="47111" count="1" type="ON_SUCCESS" /> <!-- Soul Crystal of Seven Signs Lv. 5 -->
@@ -2390,39 +2390,39 @@
 	</item>
 	<item one="48899" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 1 / Shillien's Soul -->
 		<reward id="48900" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 2 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48900" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 2 / Shillien's Soul -->
 		<reward id="48901" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 3 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48901" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 3 / Shillien's Soul -->
 		<reward id="48902" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 4 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48902" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 4 / Shillien's Soul -->
 		<reward id="48903" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 5 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48903" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 5 / Shillien's Soul -->
 		<reward id="48904" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 6 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48904" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 6 / Shillien's Soul -->
 		<reward id="48905" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 7 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48905" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 7 / Shillien's Soul -->
 		<reward id="48906" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 8 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48906" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 8 / Shillien's Soul -->
 		<reward id="48907" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 9 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="48907" two="48909" commission="100000"> <!-- Shillien's Soul Crystal Lv. 9 / Shillien's Soul -->
 		<reward id="48908" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 10 -->
-		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Broken Soul Shard -->
 	</item>
 	<item one="39572" two="39572" commission="100000"> <!-- Talisman of Insanity / Talisman of Insanity -->
 		<reward id="80957" count="1" type="ON_SUCCESS" /> <!-- Heavenly Talisman -->
@@ -3604,44 +3604,44 @@
 		<reward id="81769" count="1" type="ON_SUCCESS" /> <!-- Enhanced Talisman of Protection Lv. 10 -->
 		<reward id="81768" count="1" type="ON_FAILURE" /> <!-- Enhanced Talisman of Protection Lv. 9 -->
 	</item>
-	<item one="81836" two="81835" commission="100000"> <!-- Bloody Soul Orb / High Priest's Holy Water -->
-		<reward id="81837" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 1 -->
+	<item one="81836" two="81835" commission="100000"> <!-- Orb of Bloody Soul / High Priest's Holy Water -->
+		<reward id="81837" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 1 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81837" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 1 / High Priest's Holy Water -->
-		<reward id="81838" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 2 -->
+	<item one="81837" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 1 / High Priest's Holy Water -->
+		<reward id="81838" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 2 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81838" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 2 / High Priest's Holy Water -->
-		<reward id="81839" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 3 -->
+	<item one="81838" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 2 / High Priest's Holy Water -->
+		<reward id="81839" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 3 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81839" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 3 / High Priest's Holy Water -->
-		<reward id="81840" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 4 -->
+	<item one="81839" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 3 / High Priest's Holy Water -->
+		<reward id="81840" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 4 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81840" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 4 / High Priest's Holy Water -->
-		<reward id="81841" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 5 -->
+	<item one="81840" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 4 / High Priest's Holy Water -->
+		<reward id="81841" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 5 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81841" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 5 / High Priest's Holy Water -->
-		<reward id="81842" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 6 -->
+	<item one="81841" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 5 / High Priest's Holy Water -->
+		<reward id="81842" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 6 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81842" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 6 / High Priest's Holy Water -->
-		<reward id="81843" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 7 -->
+	<item one="81842" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 6 / High Priest's Holy Water -->
+		<reward id="81843" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 7 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81843" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 7 / High Priest's Holy Water -->
-		<reward id="81844" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 8 -->
+	<item one="81843" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 7 / High Priest's Holy Water -->
+		<reward id="81844" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 8 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81844" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 8 / High Priest's Holy Water -->
-		<reward id="81845" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 9 -->
+	<item one="81844" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 8 / High Priest's Holy Water -->
+		<reward id="81845" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 9 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
-	<item one="81845" two="81835" commission="100000"> <!-- Bloody Soul Orb - Lv. 9 / High Priest's Holy Water -->
-		<reward id="81846" count="1" type="ON_SUCCESS" /> <!-- Bloody Soul Orb - Lv. 10 -->
+	<item one="81845" two="81835" commission="100000"> <!-- Orb of Bloody Soul - Lv. 9 / High Priest's Holy Water -->
+		<reward id="81846" count="1" type="ON_SUCCESS" /> <!-- Orb of Bloody Soul - Lv. 10 -->
 		<reward id="81215" count="1" type="ON_FAILURE" /> <!-- Aether -->
 	</item>
 	<item one="81847" two="81835" commission="100000"> <!-- Orb of Abyss / High Priest's Holy Water -->
@@ -3807,6 +3807,366 @@
 	<item one="81123" two="81903" commission="100000"> <!-- Legendary Dye Lv. 9 (M. Skill Power) - INT +5, WIT +5, CHA +5 / Shining Crystal of Dyes -->
 		<reward id="81124" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Skill Power) - INT +5, WIT +5, CHA +5 -->
 		<reward id="81121" count="1" type="ON_FAILURE" /> <!-- Legendary Dye Lv. 7 (M. Skill Power) - INT +5, WIT +5, CHA +5 -->
+	</item>
+	<item one="81499" two="82032" commission="100000"> <!-- Superior Topaz Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81500" count="1" type="ON_SUCCESS" /> <!-- Superior Topaz Lv. 6 -->
+		<reward id="81499" count="1" type="ON_FAILURE" /> <!-- Superior Topaz Lv. 5 -->
+	</item>
+	<item one="81500" two="82032" commission="100000"> <!-- Superior Topaz Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81501" count="1" type="ON_SUCCESS" /> <!-- Superior Topaz Lv. 7 -->
+		<reward id="81500" count="1" type="ON_FAILURE" /> <!-- Superior Topaz Lv. 6 -->
+	</item>
+	<item one="81501" two="82032" commission="100000"> <!-- Superior Topaz Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81502" count="1" type="ON_SUCCESS" /> <!-- Superior Topaz Lv. 8 -->
+		<reward id="81501" count="1" type="ON_FAILURE" /> <!-- Superior Topaz Lv. 7 -->
+	</item>
+	<item one="81502" two="82032" commission="100000"> <!-- Superior Topaz Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81503" count="1" type="ON_SUCCESS" /> <!-- Superior Topaz Lv. 9 -->
+		<reward id="81502" count="1" type="ON_FAILURE" /> <!-- Superior Topaz Lv. 8 -->
+	</item>
+	<item one="81503" two="82032" commission="100000"> <!-- Superior Topaz Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81504" count="1" type="ON_SUCCESS" /> <!-- Superior Topaz Lv. 10 -->
+		<reward id="81503" count="1" type="ON_FAILURE" /> <!-- Superior Topaz Lv. 9 -->
+	</item>
+	<item one="81509" two="82032" commission="100000"> <!-- Superior Ruby Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81510" count="1" type="ON_SUCCESS" /> <!-- Superior Ruby Lv. 6 -->
+		<reward id="81509" count="1" type="ON_FAILURE" /> <!-- Superior Ruby Lv. 5 -->
+	</item>
+	<item one="81510" two="82032" commission="100000"> <!-- Superior Ruby Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81511" count="1" type="ON_SUCCESS" /> <!-- Superior Ruby Lv. 7 -->
+		<reward id="81510" count="1" type="ON_FAILURE" /> <!-- Superior Ruby Lv. 6 -->
+	</item>
+	<item one="81511" two="82032" commission="100000"> <!-- Superior Ruby Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81512" count="1" type="ON_SUCCESS" /> <!-- Superior Ruby Lv. 8 -->
+		<reward id="81511" count="1" type="ON_FAILURE" /> <!-- Superior Ruby Lv. 7 -->
+	</item>
+	<item one="81512" two="82032" commission="100000"> <!-- Superior Ruby Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81513" count="1" type="ON_SUCCESS" /> <!-- Superior Ruby Lv. 9 -->
+		<reward id="81512" count="1" type="ON_FAILURE" /> <!-- Superior Ruby Lv. 8 -->
+	</item>
+	<item one="81513" two="82032" commission="100000"> <!-- Superior Ruby Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81514" count="1" type="ON_SUCCESS" /> <!-- Superior Ruby Lv. 10 -->
+		<reward id="81513" count="1" type="ON_FAILURE" /> <!-- Superior Ruby Lv. 9 -->
+	</item>
+	<item one="81519" two="82032" commission="100000"> <!-- Superior Sapphire Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81520" count="1" type="ON_SUCCESS" /> <!-- Superior Sapphire Lv. 6 -->
+		<reward id="81519" count="1" type="ON_FAILURE" /> <!-- Superior Sapphire Lv. 5 -->
+	</item>
+	<item one="81520" two="82032" commission="100000"> <!-- Superior Sapphire Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81521" count="1" type="ON_SUCCESS" /> <!-- Superior Sapphire Lv. 7 -->
+		<reward id="81520" count="1" type="ON_FAILURE" /> <!-- Superior Sapphire Lv. 6 -->
+	</item>
+	<item one="81521" two="82032" commission="100000"> <!-- Superior Sapphire Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81522" count="1" type="ON_SUCCESS" /> <!-- Superior Sapphire Lv. 8 -->
+		<reward id="81521" count="1" type="ON_FAILURE" /> <!-- Superior Sapphire Lv. 7 -->
+	</item>
+	<item one="81522" two="82032" commission="100000"> <!-- Superior Sapphire Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81523" count="1" type="ON_SUCCESS" /> <!-- Superior Sapphire Lv. 9 -->
+		<reward id="81522" count="1" type="ON_FAILURE" /> <!-- Superior Sapphire Lv. 8 -->
+	</item>
+	<item one="81523" two="82032" commission="100000"> <!-- Superior Sapphire Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81524" count="1" type="ON_SUCCESS" /> <!-- Superior Sapphire Lv. 10 -->
+		<reward id="81523" count="1" type="ON_FAILURE" /> <!-- Superior Sapphire Lv. 9 -->
+	</item>
+	<item one="81529" two="82032" commission="100000"> <!-- Superior Obsidian Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81530" count="1" type="ON_SUCCESS" /> <!-- Superior Obsidian Lv. 6 -->
+		<reward id="81529" count="1" type="ON_FAILURE" /> <!-- Superior Obsidian Lv. 5 -->
+	</item>
+	<item one="81530" two="82032" commission="100000"> <!-- Superior Obsidian Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81531" count="1" type="ON_SUCCESS" /> <!-- Superior Obsidian Lv. 7 -->
+		<reward id="81530" count="1" type="ON_FAILURE" /> <!-- Superior Obsidian Lv. 6 -->
+	</item>
+	<item one="81531" two="82032" commission="100000"> <!-- Superior Obsidian Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81532" count="1" type="ON_SUCCESS" /> <!-- Superior Obsidian Lv. 8 -->
+		<reward id="81531" count="1" type="ON_FAILURE" /> <!-- Superior Obsidian Lv. 7 -->
+	</item>
+	<item one="81532" two="82032" commission="100000"> <!-- Superior Obsidian Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81533" count="1" type="ON_SUCCESS" /> <!-- Superior Obsidian Lv. 9 -->
+		<reward id="81532" count="1" type="ON_FAILURE" /> <!-- Superior Obsidian Lv. 8 -->
+	</item>
+	<item one="81533" two="82032" commission="100000"> <!-- Superior Obsidian Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81534" count="1" type="ON_SUCCESS" /> <!-- Superior Obsidian Lv. 10 -->
+		<reward id="81533" count="1" type="ON_FAILURE" /> <!-- Superior Obsidian Lv. 9 -->
+	</item>
+	<item one="81539" two="82032" commission="100000"> <!-- Superior Opal Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81540" count="1" type="ON_SUCCESS" /> <!-- Superior Opal Lv. 6 -->
+		<reward id="81539" count="1" type="ON_FAILURE" /> <!-- Superior Opal Lv. 5 -->
+	</item>
+	<item one="81540" two="82032" commission="100000"> <!-- Superior Opal Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81541" count="1" type="ON_SUCCESS" /> <!-- Superior Opal Lv. 7 -->
+		<reward id="81540" count="1" type="ON_FAILURE" /> <!-- Superior Opal Lv. 6 -->
+	</item>
+	<item one="81541" two="82032" commission="100000"> <!-- Superior Opal Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81542" count="1" type="ON_SUCCESS" /> <!-- Superior Opal Lv. 8 -->
+		<reward id="81541" count="1" type="ON_FAILURE" /> <!-- Superior Opal Lv. 7 -->
+	</item>
+	<item one="81542" two="82032" commission="100000"> <!-- Superior Opal Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81543" count="1" type="ON_SUCCESS" /> <!-- Superior Opal Lv. 9 -->
+		<reward id="81542" count="1" type="ON_FAILURE" /> <!-- Superior Opal Lv. 8 -->
+	</item>
+	<item one="81543" two="82032" commission="100000"> <!-- Superior Opal Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81544" count="1" type="ON_SUCCESS" /> <!-- Superior Opal Lv. 10 -->
+		<reward id="81543" count="1" type="ON_FAILURE" /> <!-- Superior Opal Lv. 9 -->
+	</item>
+	<item one="81549" two="82032" commission="100000"> <!-- Superior Emerald Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81550" count="1" type="ON_SUCCESS" /> <!-- Superior Emerald Lv. 6 -->
+		<reward id="81549" count="1" type="ON_FAILURE" /> <!-- Superior Emerald Lv. 5 -->
+	</item>
+	<item one="81550" two="82032" commission="100000"> <!-- Superior Emerald Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81551" count="1" type="ON_SUCCESS" /> <!-- Superior Emerald Lv. 7 -->
+		<reward id="81550" count="1" type="ON_FAILURE" /> <!-- Superior Emerald Lv. 6 -->
+	</item>
+	<item one="81551" two="82032" commission="100000"> <!-- Superior Emerald Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81552" count="1" type="ON_SUCCESS" /> <!-- Superior Emerald Lv. 8 -->
+		<reward id="81551" count="1" type="ON_FAILURE" /> <!-- Superior Emerald Lv. 7 -->
+	</item>
+	<item one="81552" two="82032" commission="100000"> <!-- Superior Emerald Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81553" count="1" type="ON_SUCCESS" /> <!-- Superior Emerald Lv. 9 -->
+		<reward id="81552" count="1" type="ON_FAILURE" /> <!-- Superior Emerald Lv. 8 -->
+	</item>
+	<item one="81553" two="82032" commission="100000"> <!-- Superior Emerald Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81554" count="1" type="ON_SUCCESS" /> <!-- Superior Emerald Lv. 10 -->
+		<reward id="81553" count="1" type="ON_FAILURE" /> <!-- Superior Emerald Lv. 9 -->
+	</item>
+	<item one="81559" two="82032" commission="100000"> <!-- Superior Aquamarine Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81560" count="1" type="ON_SUCCESS" /> <!-- Superior Aquamarine Lv. 6 -->
+		<reward id="81559" count="1" type="ON_FAILURE" /> <!-- Superior Aquamarine Lv. 5 -->
+	</item>
+	<item one="81560" two="82032" commission="100000"> <!-- Superior Aquamarine Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81561" count="1" type="ON_SUCCESS" /> <!-- Superior Aquamarine Lv. 7 -->
+		<reward id="81560" count="1" type="ON_FAILURE" /> <!-- Superior Aquamarine Lv. 6 -->
+	</item>
+	<item one="81561" two="82032" commission="100000"> <!-- Superior Aquamarine Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81562" count="1" type="ON_SUCCESS" /> <!-- Superior Aquamarine Lv. 8 -->
+		<reward id="81561" count="1" type="ON_FAILURE" /> <!-- Superior Aquamarine Lv. 7 -->
+	</item>
+	<item one="81562" two="82032" commission="100000"> <!-- Superior Aquamarine Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81563" count="1" type="ON_SUCCESS" /> <!-- Superior Aquamarine Lv. 9 -->
+		<reward id="81562" count="1" type="ON_FAILURE" /> <!-- Superior Aquamarine Lv. 8 -->
+	</item>
+	<item one="81563" two="82032" commission="100000"> <!-- Superior Aquamarine Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81564" count="1" type="ON_SUCCESS" /> <!-- Superior Aquamarine Lv. 10 -->
+		<reward id="81563" count="1" type="ON_FAILURE" /> <!-- Superior Aquamarine Lv. 9 -->
+	</item>
+	<item one="81569" two="82032" commission="100000"> <!-- Superior Diamond Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81570" count="1" type="ON_SUCCESS" /> <!-- Superior Diamond Lv. 6 -->
+		<reward id="81569" count="1" type="ON_FAILURE" /> <!-- Superior Diamond Lv. 5 -->
+	</item>
+	<item one="81570" two="82032" commission="100000"> <!-- Superior Diamond Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81571" count="1" type="ON_SUCCESS" /> <!-- Superior Diamond Lv. 7 -->
+		<reward id="81570" count="1" type="ON_FAILURE" /> <!-- Superior Diamond Lv. 6 -->
+	</item>
+	<item one="81571" two="82032" commission="100000"> <!-- Superior Diamond Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81572" count="1" type="ON_SUCCESS" /> <!-- Superior Diamond Lv. 8 -->
+		<reward id="81571" count="1" type="ON_FAILURE" /> <!-- Superior Diamond Lv. 7 -->
+	</item>
+	<item one="81572" two="82032" commission="100000"> <!-- Superior Diamond Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81573" count="1" type="ON_SUCCESS" /> <!-- Superior Diamond Lv. 9 -->
+		<reward id="81572" count="1" type="ON_FAILURE" /> <!-- Superior Diamond Lv. 8 -->
+	</item>
+	<item one="81573" two="82032" commission="100000"> <!-- Superior Diamond Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81574" count="1" type="ON_SUCCESS" /> <!-- Superior Diamond Lv. 10 -->
+		<reward id="81573" count="1" type="ON_FAILURE" /> <!-- Superior Diamond Lv. 9 -->
+	</item>
+	<item one="81579" two="82032" commission="100000"> <!-- Superior Pearl Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81580" count="1" type="ON_SUCCESS" /> <!-- Superior Pearl Lv. 6 -->
+		<reward id="81579" count="1" type="ON_FAILURE" /> <!-- Superior Pearl Lv. 5 -->
+	</item>
+	<item one="81580" two="82032" commission="100000"> <!-- Superior Pearl Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81581" count="1" type="ON_SUCCESS" /> <!-- Superior Pearl Lv. 7 -->
+		<reward id="81580" count="1" type="ON_FAILURE" /> <!-- Superior Pearl Lv. 6 -->
+	</item>
+	<item one="81581" two="82032" commission="100000"> <!-- Superior Pearl Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81582" count="1" type="ON_SUCCESS" /> <!-- Superior Pearl Lv. 8 -->
+		<reward id="81581" count="1" type="ON_FAILURE" /> <!-- Superior Pearl Lv. 7 -->
+	</item>
+	<item one="81582" two="82032" commission="100000"> <!-- Superior Pearl Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81583" count="1" type="ON_SUCCESS" /> <!-- Superior Pearl Lv. 9 -->
+		<reward id="81582" count="1" type="ON_FAILURE" /> <!-- Superior Pearl Lv. 8 -->
+	</item>
+	<item one="81583" two="82032" commission="100000"> <!-- Superior Pearl Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81584" count="1" type="ON_SUCCESS" /> <!-- Superior Pearl Lv. 10 -->
+		<reward id="81583" count="1" type="ON_FAILURE" /> <!-- Superior Pearl Lv. 9 -->
+	</item>
+	<item one="81589" two="82032" commission="100000"> <!-- Superior Vital Stone Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81590" count="1" type="ON_SUCCESS" /> <!-- Superior Vital Stone Lv. 6 -->
+		<reward id="81589" count="1" type="ON_FAILURE" /> <!-- Superior Vital Stone Lv. 5 -->
+	</item>
+	<item one="81590" two="82032" commission="100000"> <!-- Superior Vital Stone Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81591" count="1" type="ON_SUCCESS" /> <!-- Superior Vital Stone Lv. 7 -->
+		<reward id="81590" count="1" type="ON_FAILURE" /> <!-- Superior Vital Stone Lv. 6 -->
+	</item>
+	<item one="81591" two="82032" commission="100000"> <!-- Superior Vital Stone Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81592" count="1" type="ON_SUCCESS" /> <!-- Superior Vital Stone Lv. 8 -->
+		<reward id="81591" count="1" type="ON_FAILURE" /> <!-- Superior Vital Stone Lv. 7 -->
+	</item>
+	<item one="81592" two="82032" commission="100000"> <!-- Superior Vital Stone Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81593" count="1" type="ON_SUCCESS" /> <!-- Superior Vital Stone Lv. 9 -->
+		<reward id="81592" count="1" type="ON_FAILURE" /> <!-- Superior Vital Stone Lv. 8 -->
+	</item>
+	<item one="81593" two="82032" commission="100000"> <!-- Superior Vital Stone Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81594" count="1" type="ON_SUCCESS" /> <!-- Superior Vital Stone Lv. 10 -->
+		<reward id="81593" count="1" type="ON_FAILURE" /> <!-- Superior Vital Stone Lv. 9 -->
+	</item>
+	<item one="81599" two="82032" commission="100000"> <!-- Superior Garnet Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81600" count="1" type="ON_SUCCESS" /> <!-- Superior Garnet Lv. 6 -->
+		<reward id="81599" count="1" type="ON_FAILURE" /> <!-- Superior Garnet Lv. 5 -->
+	</item>
+	<item one="81600" two="82032" commission="100000"> <!-- Superior Garnet Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81601" count="1" type="ON_SUCCESS" /> <!-- Superior Garnet Lv. 7 -->
+		<reward id="81600" count="1" type="ON_FAILURE" /> <!-- Superior Garnet Lv. 6 -->
+	</item>
+	<item one="81601" two="82032" commission="100000"> <!-- Superior Garnet Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81602" count="1" type="ON_SUCCESS" /> <!-- Superior Garnet Lv. 8 -->
+		<reward id="81601" count="1" type="ON_FAILURE" /> <!-- Superior Garnet Lv. 7 -->
+	</item>
+	<item one="81602" two="82032" commission="100000"> <!-- Superior Garnet Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81603" count="1" type="ON_SUCCESS" /> <!-- Superior Garnet Lv. 9 -->
+		<reward id="81602" count="1" type="ON_FAILURE" /> <!-- Superior Garnet Lv. 8 -->
+	</item>
+	<item one="81603" two="82032" commission="100000"> <!-- Superior Garnet Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81604" count="1" type="ON_SUCCESS" /> <!-- Superior Garnet Lv. 10 -->
+		<reward id="81603" count="1" type="ON_FAILURE" /> <!-- Superior Garnet Lv. 9 -->
+	</item>
+	<item one="81609" two="82032" commission="100000"> <!-- Superior Tanzanite Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81610" count="1" type="ON_SUCCESS" /> <!-- Superior Tanzanite Lv. 6 -->
+		<reward id="81609" count="1" type="ON_FAILURE" /> <!-- Superior Tanzanite Lv. 5 -->
+	</item>
+	<item one="81610" two="82032" commission="100000"> <!-- Superior Tanzanite Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81611" count="1" type="ON_SUCCESS" /> <!-- Superior Tanzanite Lv. 7 -->
+		<reward id="81610" count="1" type="ON_FAILURE" /> <!-- Superior Tanzanite Lv. 6 -->
+	</item>
+	<item one="81611" two="82032" commission="100000"> <!-- Superior Tanzanite Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81612" count="1" type="ON_SUCCESS" /> <!-- Superior Tanzanite Lv. 8 -->
+		<reward id="81611" count="1" type="ON_FAILURE" /> <!-- Superior Tanzanite Lv. 7 -->
+	</item>
+	<item one="81612" two="82032" commission="100000"> <!-- Superior Tanzanite Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81613" count="1" type="ON_SUCCESS" /> <!-- Superior Tanzanite Lv. 9 -->
+		<reward id="81612" count="1" type="ON_FAILURE" /> <!-- Superior Tanzanite Lv. 8 -->
+	</item>
+	<item one="81613" two="82032" commission="100000"> <!-- Superior Tanzanite Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81614" count="1" type="ON_SUCCESS" /> <!-- Superior Tanzanite Lv. 10 -->
+		<reward id="81613" count="1" type="ON_FAILURE" /> <!-- Superior Tanzanite Lv. 9 -->
+	</item>
+	<item one="81619" two="82032" commission="100000"> <!-- Superior Red Cat's Eye Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81620" count="1" type="ON_SUCCESS" /> <!-- Superior Red Cat's Eye Lv. 6 -->
+		<reward id="81619" count="1" type="ON_FAILURE" /> <!-- Superior Red Cat's Eye Lv. 5 -->
+	</item>
+	<item one="81620" two="82032" commission="100000"> <!-- Superior Red Cat's Eye Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81621" count="1" type="ON_SUCCESS" /> <!-- Superior Red Cat's Eye Lv. 7 -->
+		<reward id="81620" count="1" type="ON_FAILURE" /> <!-- Superior Red Cat's Eye Lv. 6 -->
+	</item>
+	<item one="81621" two="82032" commission="100000"> <!-- Superior Red Cat's Eye Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81622" count="1" type="ON_SUCCESS" /> <!-- Superior Red Cat's Eye Lv. 8 -->
+		<reward id="81621" count="1" type="ON_FAILURE" /> <!-- Superior Red Cat's Eye Lv. 7 -->
+	</item>
+	<item one="81622" two="82032" commission="100000"> <!-- Superior Red Cat's Eye Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81623" count="1" type="ON_SUCCESS" /> <!-- Superior Red Cat's Eye Lv. 9 -->
+		<reward id="81622" count="1" type="ON_FAILURE" /> <!-- Superior Red Cat's Eye Lv. 8 -->
+	</item>
+	<item one="81623" two="82032" commission="100000"> <!-- Superior Red Cat's Eye Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81624" count="1" type="ON_SUCCESS" /> <!-- Superior Red Cat's Eye Lv. 10 -->
+		<reward id="81623" count="1" type="ON_FAILURE" /> <!-- Superior Red Cat's Eye Lv. 9 -->
+	</item>
+	<item one="81629" two="82032" commission="100000"> <!-- Superior Blue Cat's Eye Lv. 5 / Shiny Jewel Energy -->
+		<reward id="81630" count="1" type="ON_SUCCESS" /> <!-- Superior Blue Cat's Eye Lv. 6 -->
+		<reward id="81629" count="1" type="ON_FAILURE" /> <!-- Superior Blue Cat's Eye Lv. 5 -->
+	</item>
+	<item one="81630" two="82032" commission="100000"> <!-- Superior Blue Cat's Eye Lv. 6 / Shiny Jewel Energy -->
+		<reward id="81631" count="1" type="ON_SUCCESS" /> <!-- Superior Blue Cat's Eye Lv. 7 -->
+		<reward id="81630" count="1" type="ON_FAILURE" /> <!-- Superior Blue Cat's Eye Lv. 6 -->
+	</item>
+	<item one="81631" two="82032" commission="100000"> <!-- Superior Blue Cat's Eye Lv. 7 / Shiny Jewel Energy -->
+		<reward id="81632" count="1" type="ON_SUCCESS" /> <!-- Superior Blue Cat's Eye Lv. 8 -->
+		<reward id="81631" count="1" type="ON_FAILURE" /> <!-- Superior Blue Cat's Eye Lv. 7 -->
+	</item>
+	<item one="81632" two="82032" commission="100000"> <!-- Superior Blue Cat's Eye Lv. 8 / Shiny Jewel Energy -->
+		<reward id="81633" count="1" type="ON_SUCCESS" /> <!-- Superior Blue Cat's Eye Lv. 9 -->
+		<reward id="81632" count="1" type="ON_FAILURE" /> <!-- Superior Blue Cat's Eye Lv. 8 -->
+	</item>
+	<item one="81633" two="82032" commission="100000"> <!-- Superior Blue Cat's Eye Lv. 9 / Shiny Jewel Energy -->
+		<reward id="81634" count="1" type="ON_SUCCESS" /> <!-- Superior Blue Cat's Eye Lv. 10 -->
+		<reward id="81633" count="1" type="ON_FAILURE" /> <!-- Superior Blue Cat's Eye Lv. 9 -->
+	</item>
+	<item one="47816" two="82049" commission="100000"> <!-- Sayha's Talisman Lv. 10 / Shining Sayha's Energy -->
+		<reward id="82050" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 1 -->
+		<reward id="47816" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 10 -->
+	</item>
+	<item one="82050" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 1 / Shining Sayha's Energy -->
+		<reward id="82051" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 2 -->
+		<reward id="82050" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 1 -->
+	</item>
+	<item one="82051" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 2 / Shining Sayha's Energy -->
+		<reward id="82052" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 3 -->
+		<reward id="82051" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 2 -->
+	</item>
+	<item one="82052" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 3 / Shining Sayha's Energy -->
+		<reward id="82053" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 4 -->
+		<reward id="82052" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 3 -->
+	</item>
+	<item one="82053" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 4 / Shining Sayha's Energy -->
+		<reward id="82054" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 5 -->
+		<reward id="82053" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 4 -->
+	</item>
+	<item one="82054" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 5 / Shining Sayha's Energy -->
+		<reward id="82055" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 6 -->
+		<reward id="82054" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 5 -->
+	</item>
+	<item one="82055" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 6 / Shining Sayha's Energy -->
+		<reward id="82056" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 7 -->
+		<reward id="82055" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 6 -->
+	</item>
+	<item one="82056" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 7 / Shining Sayha's Energy -->
+		<reward id="82057" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 8 -->
+		<reward id="82056" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 7 -->
+	</item>
+	<item one="82057" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 8 / Shining Sayha's Energy -->
+		<reward id="82058" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 9 -->
+		<reward id="82057" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 8 -->
+	</item>
+	<item one="82058" two="82049" commission="100000"> <!-- Enhanced Sayha's Talisman Lv. 9 / Shining Sayha's Energy -->
+		<reward id="82059" count="1" type="ON_SUCCESS" /> <!-- Enhanced Sayha's Talisman Lv. 10 -->
+		<reward id="82058" count="1" type="ON_FAILURE" /> <!-- Enhanced Sayha's Talisman Lv. 9 -->
+	</item>
+	<item one="39657" two="82084" commission="100000"> <!-- Venir's Talisman Lv. 24 / Soul Shard -->
+		<reward id="82085" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 1 -->
+		<reward id="39657" count="1" type="ON_FAILURE" /> <!-- Venir's Talisman Lv. 24 -->
+	</item>
+	<item one="82085" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 1 / Soul Shard -->
+		<reward id="82086" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 2 -->
+		<reward id="82085" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 1 -->
+	</item>
+	<item one="82086" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 2 / Soul Shard -->
+		<reward id="82087" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 3 -->
+		<reward id="82086" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 2 -->
+	</item>
+	<item one="82087" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 3 / Soul Shard -->
+		<reward id="82088" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 4 -->
+		<reward id="82087" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 3 -->
+	</item>
+	<item one="82088" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 4 / Soul Shard -->
+		<reward id="82089" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 5 -->
+		<reward id="82088" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 4 -->
+	</item>
+	<item one="82089" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 5 / Soul Shard -->
+		<reward id="82090" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 6 -->
+		<reward id="82089" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 5 -->
+	</item>
+	<item one="82090" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 6 / Soul Shard -->
+		<reward id="82091" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 7 -->
+		<reward id="82090" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 6 -->
+	</item>
+	<item one="82091" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 7 / Soul Shard -->
+		<reward id="82092" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 8 -->
+		<reward id="82091" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 7 -->
+	</item>
+	<item one="82092" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 8 / Soul Shard -->
+		<reward id="82093" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 9 -->
+		<reward id="82092" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 8 -->
+	</item>
+	<item one="82093" two="82084" commission="100000"> <!-- Soul Talisman - Lv. 9 / Soul Shard -->
+		<reward id="82094" count="1" type="ON_SUCCESS" /> <!-- Soul Talisman - Lv. 10 -->
+		<reward id="82093" count="1" type="ON_FAILURE" /> <!-- Soul Talisman - Lv. 9 -->
 	</item>
 	<item one="23989" two="24139" commission="100000" chance="100"> <!-- Agathion Virgo - Lv. 1 / Starlight Jar -->
 		<reward id="23990" count="1" type="ON_SUCCESS" /> <!-- Agathion Virgo - Lv. 2 -->
@@ -16960,102 +17320,6 @@
 		<reward id="47815" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 -->
 		<reward id="47814" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 -->
 	</item>
-	<item one="29057" two="29057" commission="100000"> <!-- Sayha's Talisman Lv. 1 - Not Available / Sayha's Talisman Lv. 1 - Not Available -->
-		<reward id="29058" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 - Not Available -->
-		<reward id="29057" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 - Not Available -->
-	</item>
-	<item one="29058" two="29058" commission="100000"> <!-- Sayha's Talisman Lv. 2 - Not Available / Sayha's Talisman Lv. 2 - Not Available -->
-		<reward id="29059" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 - Not Available -->
-		<reward id="29058" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 - Not Available -->
-	</item>
-	<item one="29059" two="29059" commission="100000"> <!-- Sayha's Talisman Lv. 3 - Not Available / Sayha's Talisman Lv. 3 - Not Available -->
-		<reward id="29060" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 - Not Available -->
-		<reward id="29059" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 - Not Available -->
-	</item>
-	<item one="29060" two="29060" commission="100000"> <!-- Sayha's Talisman Lv. 4 - Not Available / Sayha's Talisman Lv. 4 - Not Available -->
-		<reward id="29061" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 - Not Available -->
-		<reward id="29060" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 - Not Available -->
-	</item>
-	<item one="29061" two="29061" commission="100000"> <!-- Sayha's Talisman Lv. 5 - Not Available / Sayha's Talisman Lv. 5 - Not Available -->
-		<reward id="29062" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 - Not Available -->
-		<reward id="29061" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 - Not Available -->
-	</item>
-	<item one="29062" two="29062" commission="100000"> <!-- Sayha's Talisman Lv. 6 - Not Available / Sayha's Talisman Lv. 6 - Not Available -->
-		<reward id="29063" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 - Not Available -->
-		<reward id="29062" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 - Not Available -->
-	</item>
-	<item one="29063" two="29063" commission="100000"> <!-- Sayha's Talisman Lv. 7 - Not Available / Sayha's Talisman Lv. 7 - Not Available -->
-		<reward id="29064" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 - Not Available -->
-		<reward id="29063" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 - Not Available -->
-	</item>
-	<item one="29064" two="29064" commission="100000"> <!-- Sayha's Talisman Lv. 8 - Not Available / Sayha's Talisman Lv. 8 - Not Available -->
-		<reward id="29065" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 - Not Available -->
-		<reward id="29064" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 - Not Available -->
-	</item>
-	<item one="29065" two="29065" commission="100000"> <!-- Sayha's Talisman Lv. 9 - Not Available / Sayha's Talisman Lv. 9 - Not Available -->
-		<reward id="29066" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 10 - Not Available -->
-		<reward id="29065" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 9 - Not Available -->
-	</item>
-	<item one="29057" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 1 - Not Available / Sayha's Energy -->
-		<reward id="29058" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 - Not Available -->
-		<reward id="29057" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 - Not Available -->
-	</item>
-	<item one="29058" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 2 - Not Available / Sayha's Energy -->
-		<reward id="29059" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 - Not Available -->
-		<reward id="29058" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 - Not Available -->
-	</item>
-	<item one="29059" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 3 - Not Available / Sayha's Energy -->
-		<reward id="29060" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 - Not Available -->
-		<reward id="29059" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 - Not Available -->
-	</item>
-	<item one="29060" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 4 - Not Available / Sayha's Energy -->
-		<reward id="29061" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 - Not Available -->
-		<reward id="29060" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 - Not Available -->
-	</item>
-	<item one="29061" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 5 - Not Available / Sayha's Energy -->
-		<reward id="29062" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 - Not Available -->
-		<reward id="29061" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 - Not Available -->
-	</item>
-	<item one="29062" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 6 - Not Available / Sayha's Energy -->
-		<reward id="29063" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 - Not Available -->
-		<reward id="29062" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 - Not Available -->
-	</item>
-	<item one="29063" two="28453" commission="100000"> <!-- Sayha's Talisman Lv. 7 - Not Available / Sayha's Energy -->
-		<reward id="29064" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 - Not Available -->
-		<reward id="29063" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 - Not Available -->
-	</item>
-	<item one="29057" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 1 - Not Available / Sayha's Blessing -->
-		<reward id="29058" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 2 - Not Available -->
-		<reward id="29057" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 1 - Not Available -->
-	</item>
-	<item one="29058" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 2 - Not Available / Sayha's Blessing -->
-		<reward id="29059" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 3 - Not Available -->
-		<reward id="29058" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 2 - Not Available -->
-	</item>
-	<item one="29059" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 3 - Not Available / Sayha's Blessing -->
-		<reward id="29060" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 4 - Not Available -->
-		<reward id="29059" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 3 - Not Available -->
-	</item>
-	<item one="29060" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 4 - Not Available / Sayha's Blessing -->
-		<reward id="29061" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 5 - Not Available -->
-		<reward id="29060" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 4 - Not Available -->
-	</item>
-	<item one="29061" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 5 - Not Available / Sayha's Blessing -->
-		<reward id="29062" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 6 - Not Available -->
-		<reward id="29061" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 5 - Not Available -->
-	</item>
-	<item one="29062" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 6 - Not Available / Sayha's Blessing -->
-		<reward id="29063" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 7 - Not Available -->
-		<reward id="29062" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 6 - Not Available -->
-	</item>
-	<item one="29063" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 7 - Not Available / Sayha's Blessing -->
-		<reward id="29064" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 8 - Not Available -->
-		<reward id="29063" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 7 - Not Available -->
-	</item>
-	<item one="29064" two="28454" commission="100000"> <!-- Sayha's Talisman Lv. 8 - Not Available / Sayha's Blessing -->
-		<reward id="29065" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 9 - Not Available -->
-		<reward id="29064" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 8 - Not Available -->
-	</item>
 	<item one="29131" two="29132" commission="100000"> <!-- Matchstick / Match Head -->
 		<reward id="29133" count="1" type="ON_SUCCESS" /> <!-- Well-made Matchstick -->
 		<reward id="29134" count="1" type="ON_FAILURE" /> <!-- Powerful Matchstick -->
@@ -17072,67 +17336,67 @@
 		<reward id="28376" count="1" type="ON_SUCCESS" /> <!-- Greater Cat's Eye Lv. 1 -->
 		<reward id="26501" count="1" type="ON_FAILURE" /> <!-- Cat's Eye Lv. 5 -->
 	</item>
-	<item one="38859" two="29469" commission="100000"> <!-- Ruby Lv. 5 / Shiny Jewel Energy -->
+	<item one="38859" two="29469" commission="100000"> <!-- Ruby Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47688" count="1" type="ON_SUCCESS" /> <!-- Greater Ruby Lv. 1 -->
 		<reward id="38859" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 5 -->
 	</item>
-	<item one="38931" two="29469" commission="100000"> <!-- Sapphire Lv. 5 / Shiny Jewel Energy -->
+	<item one="38931" two="29469" commission="100000"> <!-- Sapphire Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47689" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 1 -->
 		<reward id="38931" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 5 -->
 	</item>
-	<item one="46684" two="29469" commission="100000"> <!-- Tanzanite Lv. 5 / Shiny Jewel Energy -->
+	<item one="46684" two="29469" commission="100000"> <!-- Tanzanite Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47698" count="1" type="ON_SUCCESS" /> <!-- Greater Tanzanite Lv. 1 -->
 		<reward id="46684" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 5 -->
 	</item>
-	<item one="38874" two="29469" commission="100000"> <!-- Obsidian Lv. 5 / Shiny Jewel Energy -->
+	<item one="38874" two="29469" commission="100000"> <!-- Obsidian Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47690" count="1" type="ON_SUCCESS" /> <!-- Greater Obsidian Lv. 1 -->
 		<reward id="38874" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 5 -->
 	</item>
-	<item one="38879" two="29469" commission="100000"> <!-- Opal Lv. 5 / Shiny Jewel Energy -->
+	<item one="38879" two="29469" commission="100000"> <!-- Opal Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47691" count="1" type="ON_SUCCESS" /> <!-- Greater Opal Lv. 1 -->
 		<reward id="38879" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 5 -->
 	</item>
-	<item one="38884" two="29469" commission="100000"> <!-- Emerald Lv. 5 / Shiny Jewel Energy -->
+	<item one="38884" two="29469" commission="100000"> <!-- Emerald Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47692" count="1" type="ON_SUCCESS" /> <!-- Greater Emerald Lv. 1 -->
 		<reward id="38884" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 5 -->
 	</item>
-	<item one="38889" two="29469" commission="100000"> <!-- Aquamarine Lv. 5 / Shiny Jewel Energy -->
+	<item one="38889" two="29469" commission="100000"> <!-- Aquamarine Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47693" count="1" type="ON_SUCCESS" /> <!-- Greater Aquamarine Lv. 1 -->
 		<reward id="38889" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 5 -->
 	</item>
-	<item one="38894" two="29469" commission="100000"> <!-- Diamond Lv. 5 / Shiny Jewel Energy -->
+	<item one="38894" two="29469" commission="100000"> <!-- Diamond Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47694" count="1" type="ON_SUCCESS" /> <!-- Greater Diamond Lv. 1 -->
 		<reward id="38894" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 5 -->
 	</item>
-	<item one="38899" two="29469" commission="100000"> <!-- Pearl Lv. 5 / Shiny Jewel Energy -->
+	<item one="38899" two="29469" commission="100000"> <!-- Pearl Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47695" count="1" type="ON_SUCCESS" /> <!-- Greater Pearl Lv. 1 -->
 		<reward id="38899" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 5 -->
 	</item>
-	<item one="47681" two="29469" commission="100000"> <!-- Red Cat's Eye Lv. 5 / Shiny Jewel Energy -->
+	<item one="47681" two="29469" commission="100000"> <!-- Red Cat's Eye Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47699" count="1" type="ON_SUCCESS" /> <!-- Greater Red Cat's Eye Lv. 1 -->
 		<reward id="47681" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 5 -->
 	</item>
-	<item one="47686" two="29469" commission="100000"> <!-- Blue Cat's Eye Lv. 5 / Shiny Jewel Energy -->
+	<item one="47686" two="29469" commission="100000"> <!-- Blue Cat's Eye Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47700" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
 		<reward id="47686" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 5 -->
 	</item>
-	<item one="46674" two="29469" commission="100000"> <!-- Vital Stone Lv. 5 / Shiny Jewel Energy -->
+	<item one="46674" two="29469" commission="100000"> <!-- Vital Stone Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47696" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone Lv. 1 -->
 		<reward id="46674" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 5 -->
 	</item>
-	<item one="26506" two="29469" commission="100000"> <!-- Amethyst Lv. 5 / Shiny Jewel Energy -->
+	<item one="26506" two="29469" commission="100000"> <!-- Amethyst Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="28377" count="1" type="ON_SUCCESS" /> <!-- Greater Amethyst Lv. 1 -->
 		<reward id="26506" count="1" type="ON_FAILURE" /> <!-- Amethyst Lv. 5 -->
 	</item>
-	<item one="26501" two="29469" commission="100000"> <!-- Cat's Eye Lv. 5 / Shiny Jewel Energy -->
+	<item one="26501" two="29469" commission="100000"> <!-- Cat's Eye Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="28376" count="1" type="ON_SUCCESS" /> <!-- Greater Cat's Eye Lv. 1 -->
 		<reward id="26501" count="1" type="ON_FAILURE" /> <!-- Cat's Eye Lv. 5 -->
 	</item>
-	<item one="38854" two="29469" commission="100000"> <!-- Topaz Lv. 5 / Shiny Jewel Energy -->
+	<item one="38854" two="29469" commission="100000"> <!-- Topaz Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47687" count="1" type="ON_SUCCESS" /> <!-- Greater Topaz Lv. 1 -->
 		<reward id="38854" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 5 -->
 	</item>
-	<item one="46679" two="29469" commission="100000"> <!-- Garnet Lv. 5 / Shiny Jewel Energy -->
+	<item one="46679" two="29469" commission="100000"> <!-- Garnet Lv. 5 / Enhanced Jewel Energy -->
 		<reward id="47697" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet Lv. 1 -->
 		<reward id="46679" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 5 -->
 	</item>
@@ -17320,28 +17584,68 @@
 		<reward id="29805" count="1" type="ON_SUCCESS" /> <!-- Superior Amethyst Lv. 10 -->
 		<reward id="29796" count="1" type="ON_FAILURE" /> <!-- Superior Amethyst Lv. 1 -->
 	</item>
-	<item one="60047" two="60046" commission="100000"> <!-- Gran Kain's Necklace Lv. 1 - THE HERO / God's Accessory Enhancement Stone - THE HERO -->
-		<reward id="60049" count="1" type="ON_SUCCESS" /> <!-- Gran Kain's Necklace Lv. 3 - THE HERO -->
-		<reward id="60048" count="1" type="ON_FAILURE" /> <!-- Gran Kain's Necklace Lv. 2 - THE HERO -->
+	<item one="60047" two="60046" commission="100000"> <!-- Gran Kain's Necklace Lv. 1 - Event / God's Accessory Enhancement Stone - Not Available -->
+		<reward id="60049" count="1" type="ON_SUCCESS" /> <!-- Gran Kain's Necklace Lv. 3 - Not Available -->
+		<reward id="60048" count="1" type="ON_FAILURE" /> <!-- Gran Kain's Necklace Lv. 2 - Not Available -->
 	</item>
-	<item one="60050" two="60046" commission="100000"> <!-- Einhasad's Necklace Lv. 1 - THE HERO / God's Accessory Enhancement Stone - THE HERO -->
-		<reward id="60052" count="1" type="ON_SUCCESS" /> <!-- Einhasad's Necklace Lv. 3 - THE HERO -->
-		<reward id="60051" count="1" type="ON_FAILURE" /> <!-- Einhasad's Necklace Lv. 2 - THE HERO -->
+	<item one="60050" two="60046" commission="100000"> <!-- Einhasad's Necklace Lv. 1 - Event / God's Accessory Enhancement Stone - Not Available -->
+		<reward id="60052" count="1" type="ON_SUCCESS" /> <!-- Einhasad's Necklace Lv. 3 - Not Available -->
+		<reward id="60051" count="1" type="ON_FAILURE" /> <!-- Einhasad's Necklace Lv. 2 - Not Available -->
 	</item>
-	<item one="60053" two="60046" commission="100000"> <!-- Pa'agrio's Earring Lv. 1 - THE HERO / God's Accessory Enhancement Stone - THE HERO -->
-		<reward id="60055" count="1" type="ON_SUCCESS" /> <!-- Pa'agrio's Earring Lv. 3 - THE HERO -->
-		<reward id="60054" count="1" type="ON_FAILURE" /> <!-- Pa'agrio's Earring Lv. 2 - THE HERO -->
+	<item one="60053" two="60046" commission="100000"> <!-- Pa'agrio's Earring Lv. 1 - Event / God's Accessory Enhancement Stone - Not Available -->
+		<reward id="60055" count="1" type="ON_SUCCESS" /> <!-- Pa'agrio's Earring Lv. 3 - Not Available -->
+		<reward id="60054" count="1" type="ON_FAILURE" /> <!-- Pa'agrio's Earring Lv. 2 - Not Available -->
 	</item>
-	<item one="60056" two="60046" commission="100000"> <!-- Eva's Earring Lv. 1 - THE HERO / God's Accessory Enhancement Stone - THE HERO -->
-		<reward id="60058" count="1" type="ON_SUCCESS" /> <!-- Eva's Earring Lv. 3 - THE HERO -->
-		<reward id="60057" count="1" type="ON_FAILURE" /> <!-- Eva's Earring Lv. 2 - THE HERO -->
+	<item one="60056" two="60046" commission="100000"> <!-- Eva's Earring Lv. 1 - Event / God's Accessory Enhancement Stone - Not Available -->
+		<reward id="60058" count="1" type="ON_SUCCESS" /> <!-- Eva's Earring Lv. 3 - Not Available -->
+		<reward id="60057" count="1" type="ON_FAILURE" /> <!-- Eva's Earring Lv. 2 - Not Available -->
 	</item>
-	<item one="60059" two="60046" commission="100000"> <!-- Sayha's Ring Lv. 1 - THE HERO / God's Accessory Enhancement Stone - THE HERO -->
-		<reward id="60061" count="1" type="ON_SUCCESS" /> <!-- Sayha's Ring Lv. 3 - THE HERO -->
-		<reward id="60060" count="1" type="ON_FAILURE" /> <!-- Sayha's Ring Lv. 2 - THE HERO -->
+	<item one="60059" two="60046" commission="100000"> <!-- Sayha's Ring Lv. 1 - Event / God's Accessory Enhancement Stone - Not Available -->
+		<reward id="60061" count="1" type="ON_SUCCESS" /> <!-- Sayha's Ring Lv. 3 - Not Available -->
+		<reward id="60060" count="1" type="ON_FAILURE" /> <!-- Sayha's Ring Lv. 2 - Not Available -->
 	</item>
-	<item one="60062" two="60046" commission="100000"> <!-- Maphr's Ring Lv. 1 - THE HERO / God's Accessory Enhancement Stone - THE HERO -->
-		<reward id="60064" count="1" type="ON_SUCCESS" /> <!-- Maphr's Ring Lv. 3 - THE HERO -->
-		<reward id="60063" count="1" type="ON_FAILURE" /> <!-- Maphr's Ring Lv. 2 - THE HERO -->
+	<item one="60062" two="60046" commission="100000"> <!-- Maphr's Ring Lv. 1 - Event / God's Accessory Enhancement Stone - Not Available -->
+		<reward id="60064" count="1" type="ON_SUCCESS" /> <!-- Maphr's Ring Lv. 3 - Not Available -->
+		<reward id="60063" count="1" type="ON_FAILURE" /> <!-- Maphr's Ring Lv. 2 - Not Available -->
+	</item>
+	<item one="29810" two="82032" commission="100000"> <!-- Superior Cat's Eye Lv. 5 / Shiny Jewel Energy -->
+		<reward id="29811" count="1" type="ON_SUCCESS" /> <!-- Superior Cat's Eye Lv. 6 -->
+		<reward id="29810" count="1" type="ON_FAILURE" /> <!-- Superior Cat's Eye Lv. 5 -->
+	</item>
+	<item one="29811" two="82032" commission="100000"> <!-- Superior Cat's Eye Lv. 6 / Shiny Jewel Energy -->
+		<reward id="29812" count="1" type="ON_SUCCESS" /> <!-- Superior Cat's Eye Lv. 7 -->
+		<reward id="29811" count="1" type="ON_FAILURE" /> <!-- Superior Cat's Eye Lv. 6 -->
+	</item>
+	<item one="29812" two="82032" commission="100000"> <!-- Superior Cat's Eye Lv. 7 / Shiny Jewel Energy -->
+		<reward id="29813" count="1" type="ON_SUCCESS" /> <!-- Superior Cat's Eye Lv. 8 -->
+		<reward id="29812" count="1" type="ON_FAILURE" /> <!-- Superior Cat's Eye Lv. 7 -->
+	</item>
+	<item one="29813" two="82032" commission="100000"> <!-- Superior Cat's Eye Lv. 8 / Shiny Jewel Energy -->
+		<reward id="29814" count="1" type="ON_SUCCESS" /> <!-- Superior Cat's Eye Lv. 9 -->
+		<reward id="29813" count="1" type="ON_FAILURE" /> <!-- Superior Cat's Eye Lv. 8 -->
+	</item>
+	<item one="29814" two="82032" commission="100000"> <!-- Superior Cat's Eye Lv. 9 / Shiny Jewel Energy -->
+		<reward id="29815" count="1" type="ON_SUCCESS" /> <!-- Superior Cat's Eye Lv. 10 -->
+		<reward id="29814" count="1" type="ON_FAILURE" /> <!-- Superior Cat's Eye Lv. 9 -->
+	</item>
+	<item one="29800" two="82032" commission="100000"> <!-- Superior Amethyst Lv. 5 / Shiny Jewel Energy -->
+		<reward id="29801" count="1" type="ON_SUCCESS" /> <!-- Superior Amethyst Lv. 6 -->
+		<reward id="29800" count="1" type="ON_FAILURE" /> <!-- Superior Amethyst Lv. 5 -->
+	</item>
+	<item one="29801" two="82032" commission="100000"> <!-- Superior Amethyst Lv. 6 / Shiny Jewel Energy -->
+		<reward id="29802" count="1" type="ON_SUCCESS" /> <!-- Superior Amethyst Lv. 7 -->
+		<reward id="29801" count="1" type="ON_FAILURE" /> <!-- Superior Amethyst Lv. 6 -->
+	</item>
+	<item one="29802" two="82032" commission="100000"> <!-- Superior Amethyst Lv. 7 / Shiny Jewel Energy -->
+		<reward id="29803" count="1" type="ON_SUCCESS" /> <!-- Superior Amethyst Lv. 8 -->
+		<reward id="29802" count="1" type="ON_FAILURE" /> <!-- Superior Amethyst Lv. 7 -->
+	</item>
+	<item one="29803" two="82032" commission="100000"> <!-- Superior Amethyst Lv. 8 / Shiny Jewel Energy -->
+		<reward id="29804" count="1" type="ON_SUCCESS" /> <!-- Superior Amethyst Lv. 9 -->
+		<reward id="29803" count="1" type="ON_FAILURE" /> <!-- Superior Amethyst Lv. 8 -->
+	</item>
+	<item one="29804" two="82032" commission="100000"> <!-- Superior Amethyst Lv. 9 / Shiny Jewel Energy -->
+		<reward id="29805" count="1" type="ON_SUCCESS" /> <!-- Superior Amethyst Lv. 10 -->
+		<reward id="29804" count="1" type="ON_FAILURE" /> <!-- Superior Amethyst Lv. 9 -->
 	</item>
 </list>
