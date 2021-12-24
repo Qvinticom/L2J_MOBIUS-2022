@@ -71,7 +71,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		boolean primeReward = false;
+		boolean specialReward = false;
 		final Map<Item, Long> extractedItems = new HashMap<>();
 		final List<Item> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
@@ -114,14 +114,14 @@ public class ExtractableItems implements IItemHandler
 						{
 							player.setPrimePoints(player.getPrimePoints() + (int) createItemAmount);
 							player.sendMessage("You have obtained " + (createItemAmount / 100) + " Euro!");
-							primeReward = true;
+							specialReward = true;
 							continue;
 						}
 						if (expi.getId() == -700) // Honor Coins
 						{
 							player.setHonorCoins(player.getHonorCoins() + (int) createItemAmount);
 							player.sendMessage("You have obtained " + (createItemAmount) + " Honor Coin.");
-							primeReward = true;
+							specialReward = true;
 							continue;
 						}
 						
@@ -176,16 +176,17 @@ public class ExtractableItems implements IItemHandler
 					{
 						player.setPrimePoints(player.getPrimePoints() + (int) createItemAmount);
 						player.sendMessage("You have obtained " + (createItemAmount / 100) + " Euro!");
-						primeReward = true;
+						specialReward = true;
 						continue;
 					}
 					if (expi.getId() == -700) // Honor Coins
 					{
 						player.setHonorCoins(player.getHonorCoins() + (int) createItemAmount);
-						player.sendMessage("You have obtained " + (createItemAmount) + " Honor Points!");
-						primeReward = true;
+						player.sendMessage("You have obtained " + (createItemAmount) + " Honor Coin.");
+						specialReward = true;
 						continue;
 					}
+					
 					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
 						final Item newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
@@ -214,7 +215,7 @@ public class ExtractableItems implements IItemHandler
 			}
 		}
 		
-		if (extractedItems.isEmpty() && !primeReward)
+		if (extractedItems.isEmpty() && !specialReward)
 		{
 			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_THE_ITEM);
 		}

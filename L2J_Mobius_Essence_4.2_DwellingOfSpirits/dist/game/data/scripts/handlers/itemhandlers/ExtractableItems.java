@@ -71,7 +71,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		boolean primeReward = false;
+		boolean specialReward = false;
 		final Map<Item, Long> extractedItems = new HashMap<>();
 		final List<Item> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
@@ -114,7 +114,7 @@ public class ExtractableItems implements IItemHandler
 						{
 							player.setPrimePoints(player.getPrimePoints() + (int) createItemAmount);
 							player.sendMessage("You have obtained " + (createItemAmount / 100) + " Euro!");
-							primeReward = true;
+							specialReward = true;
 							continue;
 						}
 						
@@ -169,7 +169,7 @@ public class ExtractableItems implements IItemHandler
 					{
 						player.setPrimePoints(player.getPrimePoints() + (int) createItemAmount);
 						player.sendMessage("You have obtained " + (createItemAmount / 100) + " Euro!");
-						primeReward = true;
+						specialReward = true;
 						continue;
 					}
 					
@@ -201,7 +201,7 @@ public class ExtractableItems implements IItemHandler
 			}
 		}
 		
-		if (extractedItems.isEmpty() && !primeReward)
+		if (extractedItems.isEmpty() && !specialReward)
 		{
 			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_THE_ITEM);
 		}
