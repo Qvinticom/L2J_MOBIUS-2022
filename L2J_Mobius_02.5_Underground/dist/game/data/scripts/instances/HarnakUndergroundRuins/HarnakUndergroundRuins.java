@@ -508,7 +508,7 @@ public class HarnakUndergroundRuins extends AbstractInstance
 			{
 				case 0:
 				{
-					if (world.getAliveNpcs().isEmpty())
+					if (world.getAliveNpcCount() == 0)
 					{
 						startQuestTimer("spawn_npc2", 100, npc, killer);
 						world.setStatus(1);

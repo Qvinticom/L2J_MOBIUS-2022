@@ -172,7 +172,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 							instance.despawnGroup("BARRICADES_1");
 						}
 					}
-					else if (!instance.getNpcsOfGroup("BARRICADES_2").isEmpty() && instance.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty() && instance.getNpcsOfGroup("BARRICADES_1").isEmpty())
+					else if (!instance.getNpcsOfGroup("BARRICADES_2").isEmpty() && (instance.getAliveNpcCount(CORRIDOR_MOBS_1) == 0) && instance.getNpcsOfGroup("BARRICADES_1").isEmpty())
 					{
 						aliber.setRunning();
 						aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[1]);
@@ -191,7 +191,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 							instance.despawnGroup("BARRICADES_2");
 						}
 					}
-					else if (!instance.getNpcsOfGroup("BARRICADES_3").isEmpty() && instance.getAliveNpcs(CORRIDOR_MOBS_2).isEmpty() && instance.getNpcsOfGroup("BARRICADES_2").isEmpty())
+					else if (!instance.getNpcsOfGroup("BARRICADES_3").isEmpty() && (instance.getAliveNpcCount(CORRIDOR_MOBS_2) == 0) && instance.getNpcsOfGroup("BARRICADES_2").isEmpty())
 					{
 						aliber.setRunning();
 						aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[2]);
@@ -210,7 +210,7 @@ public class EtinaHelperAliber extends AbstractNpcAI
 							instance.despawnGroup("BARRICADES_3");
 						}
 					}
-					else if (!instance.getNpcsOfGroup("BARRICADES_4").isEmpty() && instance.getAliveNpcs(CORRIDOR_MOBS_3).isEmpty() && instance.getNpcsOfGroup("BARRICADES_3").isEmpty())
+					else if (!instance.getNpcsOfGroup("BARRICADES_4").isEmpty() && (instance.getAliveNpcCount(CORRIDOR_MOBS_3) == 0) && instance.getNpcsOfGroup("BARRICADES_3").isEmpty())
 					{
 						aliber.setRunning();
 						aliber.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, SKILL_CAST_LOCATIONS[3]);

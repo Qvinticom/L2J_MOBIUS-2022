@@ -671,7 +671,7 @@ public class DimensionalWrap extends AbstractInstance
 					}
 				}
 				
-				if (world.getAliveNpcs(MONSTERS).isEmpty() && world.getParameters().getBoolean("ThirdWave", false))
+				if ((world.getAliveNpcCount(MONSTERS) == 0) && world.getParameters().getBoolean("ThirdWave", false))
 				{
 					if (worldState == 20)
 					{

@@ -289,7 +289,7 @@ public class TranscendentZone extends AbstractInstance
 			
 			final ScheduledFuture<?> spawnTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
-				if (!instance.getParameters().getBoolean("PlayerIsOut", false) && (instance.getAliveNpcs().size() == 1))
+				if (!instance.getParameters().getBoolean("PlayerIsOut", false) && (instance.getAliveNpcCount() == 1))
 				{
 					if (Rnd.get(5) == 0)
 					{

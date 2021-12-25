@@ -290,7 +290,7 @@ public class DarkCloudMansion extends AbstractInstance
 			{
 				case 0: // Start room
 				{
-					if (world.getAliveNpcs().isEmpty())
+					if (world.getAliveNpcCount() == 0)
 					{
 						world.setStatus(1);
 						world.spawnGroup("hall");
@@ -300,7 +300,7 @@ public class DarkCloudMansion extends AbstractInstance
 				}
 				case 1: // Hall
 				{
-					if (world.getAliveNpcs().isEmpty())
+					if (world.getAliveNpcCount() == 0)
 					{
 						world.setStatus(2);
 						world.spawnGroup("roomA");
@@ -310,7 +310,7 @@ public class DarkCloudMansion extends AbstractInstance
 				}
 				case 2: // Room A - cleared
 				{
-					if (world.getAliveNpcs().isEmpty())
+					if (world.getAliveNpcCount() == 0)
 					{
 						world.setStatus(3);
 						world.spawnGroup("roomAClear");
@@ -320,7 +320,7 @@ public class DarkCloudMansion extends AbstractInstance
 				}
 				case 3: // Hall
 				{
-					if (world.getAliveNpcs(BELETH_SUBORDINATE).isEmpty())
+					if (world.getAliveNpcCount(BELETH_SUBORDINATE) == 0)
 					{
 						world.setStatus(4);
 						world.openCloseDoor(ROOM_B_DOOR, true);
@@ -336,7 +336,7 @@ public class DarkCloudMansion extends AbstractInstance
 				}
 				case 5: // Hall
 				{
-					if (world.getAliveNpcs(BELETH_SUBORDINATE).isEmpty())
+					if (world.getAliveNpcCount(BELETH_SUBORDINATE) == 0)
 					{
 						world.setStatus(6);
 						world.spawnGroup("roomC");
@@ -346,7 +346,7 @@ public class DarkCloudMansion extends AbstractInstance
 				}
 				case 6: // Room C
 				{
-					if (world.getAliveNpcs(BELETH_SUBORDINATE).isEmpty())
+					if (world.getAliveNpcCount(BELETH_SUBORDINATE) == 0)
 					{
 						world.setStatus(7);
 						world.spawnGroup("roomD");

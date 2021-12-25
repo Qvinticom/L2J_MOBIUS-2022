@@ -435,7 +435,7 @@ public class StoryOfTauti extends AbstractInstance
 			case "clone_2":
 			{
 				world.spawnGroup("clone_2");
-				if (world.getAliveNpcs(NPC_1).size() < _count)
+				if (world.getAliveNpcCount(NPC_1) < _count)
 				{
 					startQuestTimer("clone_3", 500, npc, player);
 				}
@@ -444,7 +444,7 @@ public class StoryOfTauti extends AbstractInstance
 			case "clone_3":
 			{
 				world.spawnGroup("clone_3");
-				if (world.getAliveNpcs(NPC_1).size() < _count)
+				if (world.getAliveNpcCount(NPC_1) < _count)
 				{
 					startQuestTimer("clone_4", 500, npc, player);
 				}
@@ -453,7 +453,7 @@ public class StoryOfTauti extends AbstractInstance
 			case "clone_4":
 			{
 				world.spawnGroup("clone_4");
-				if (world.getAliveNpcs(NPC_1).size() < _count)
+				if (world.getAliveNpcCount(NPC_1) < _count)
 				{
 					startQuestTimer("clone_5", 500, npc, player);
 				}
@@ -462,7 +462,7 @@ public class StoryOfTauti extends AbstractInstance
 			case "clone_5":
 			{
 				world.spawnGroup("clone_5");
-				if (world.getAliveNpcs(NPC_1).size() < _count)
+				if (world.getAliveNpcCount(NPC_1) < _count)
 				{
 					startQuestTimer("clone_6", 500, npc, player);
 				}

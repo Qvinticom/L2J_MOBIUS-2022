@@ -181,7 +181,7 @@ public class KrofinNest extends AbstractInstance
 					}
 					case 1:
 					{
-						if (world.getAliveNpcs(FIRST_AREA).isEmpty())
+						if (world.getAliveNpcCount(FIRST_AREA) == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(2);
@@ -193,7 +193,7 @@ public class KrofinNest extends AbstractInstance
 					}
 					case 2:
 					{
-						if (world.getAliveNpcs(SECOND_AREA).isEmpty())
+						if (world.getAliveNpcCount(SECOND_AREA) == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(3);
@@ -205,7 +205,7 @@ public class KrofinNest extends AbstractInstance
 					}
 					case 3:
 					{
-						if (world.getAliveNpcs(THIRD_AREA).isEmpty())
+						if (world.getAliveNpcCount(THIRD_AREA) == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(4);
@@ -217,7 +217,7 @@ public class KrofinNest extends AbstractInstance
 					}
 					case 4:
 					{
-						if (world.getAliveNpcs(FOURTH_AREA).isEmpty())
+						if (world.getAliveNpcCount(FOURTH_AREA) == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.THE_WATER_ENERGY_IS_NO_LONGER_ACTIVE_THE_WAY_IS_CLEAR, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(5);
@@ -279,12 +279,12 @@ public class KrofinNest extends AbstractInstance
 			{
 				if (CommonUtil.contains(KROSHA_FIRST_FORM_MINIONS, npc.getId()))
 				{
-					if (world.getAliveNpcs(KROSHA_FIRST_FORM_MINIONS).isEmpty() && !kroshaFirstFormMinionsSpawnedTwice)
+					if ((world.getAliveNpcCount(KROSHA_FIRST_FORM_MINIONS) == 0) && !kroshaFirstFormMinionsSpawnedTwice)
 					{
 						world.getParameters().set("KROSHA_FIRST_FORM_MINIONS_SPAWNED_TWICE", true);
 						world.spawnGroup("KROSHA_FIRST_FORM_MINIONS");
 					}
-					else if (world.getAliveNpcs(KROSHA_FIRST_FORM_MINIONS).isEmpty() && kroshaFirstFormMinionsSpawnedTwice)
+					else if ((world.getAliveNpcCount(KROSHA_FIRST_FORM_MINIONS) == 0) && kroshaFirstFormMinionsSpawnedTwice)
 					{
 						world.despawnGroup("KROSHA_FIRST_FORM");
 						showOnScreenMsg(world, NpcStringId.QUEEN_KROSHA_HAS_DISAPPEARED, ExShowScreenMessage.TOP_CENTER, 7000, true);
@@ -293,7 +293,7 @@ public class KrofinNest extends AbstractInstance
 				}
 				else if (CommonUtil.contains(ENHANCED_MINIONS, npc.getId()))
 				{
-					if ((world.getAliveNpcs(ENHANCED_MINIONS).isEmpty()))
+					if (world.getAliveNpcCount(ENHANCED_MINIONS) == 0)
 					{
 						world.spawnGroup("KROSHA_FINAL_FORM");
 						showOnScreenMsg(world, NpcStringId.QUEEN_KROSHA_HAS_RETURNED_MORE_POWERFUL_THAN_EVER, ExShowScreenMessage.TOP_CENTER, 7000, true);

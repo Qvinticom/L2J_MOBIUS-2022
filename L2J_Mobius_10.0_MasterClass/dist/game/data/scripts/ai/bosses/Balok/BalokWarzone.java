@@ -258,7 +258,7 @@ public class BalokWarzone extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (npc == _balok)
 		{
-			if (world.getAliveNpcs(BALOK).isEmpty())
+			if (world.getAliveNpcCount(BALOK) == 0)
 			{
 				world.getAliveNpcs(MINION, HELL_DISCIPLE, HELLS_GATE).forEach(guard -> guard.doDie(null));
 				world.removeNpcs();

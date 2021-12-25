@@ -140,7 +140,7 @@ public class FortressOfTheDead extends AbstractInstance
 		{
 			if (npc.getId() == VAMPIRIC_SOLDIER)
 			{
-				if (world.getAliveNpcs(VAMPIRIC_SOLDIER).isEmpty())
+				if (world.getAliveNpcCount(VAMPIRIC_SOLDIER) == 0)
 				{
 					startQuestTimer("vampire_dead", 180, npc, player);
 				}

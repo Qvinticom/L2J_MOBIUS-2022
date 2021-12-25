@@ -108,7 +108,7 @@ public class NornilsGarden extends AbstractInstance
 				}
 				case "stage1_1":
 				{
-					if (!npc.isDead() && world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
+					if (!npc.isDead() && (world.getAliveNpcCount(ATTACABLE_MONSTERS) == 0))
 					{
 						world.spawnGroup("wave_1");
 						npc.setTargetable(true);
@@ -117,7 +117,7 @@ public class NornilsGarden extends AbstractInstance
 				}
 				case "stage2":
 				{
-					if (world.isStatus(5) && world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
+					if (world.isStatus(5) && (world.getAliveNpcCount(ATTACABLE_MONSTERS) == 0))
 					{
 						world.openCloseDoor(16200016, true);
 						cancelQuestTimer("stage2", npc, null);
@@ -127,7 +127,7 @@ public class NornilsGarden extends AbstractInstance
 				}
 				case "stage3":
 				{
-					if (world.isStatus(6) && world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
+					if (world.isStatus(6) && (world.getAliveNpcCount(ATTACABLE_MONSTERS) == 0))
 					{
 						world.openCloseDoor(16200201, true);
 						cancelQuestTimer("stage3", npc, null);
@@ -217,7 +217,7 @@ public class NornilsGarden extends AbstractInstance
 			}
 			case 1:
 			{
-				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcs(BOZ_STAGE2).size() < 6))
+				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcCount(BOZ_STAGE2) < 6))
 				{
 					world.spawnGroup("wave_2_1");
 					world.setStatus(2);
@@ -226,7 +226,7 @@ public class NornilsGarden extends AbstractInstance
 			}
 			case 2:
 			{
-				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcs(BOZ_STAGE2).size() < 5))
+				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcCount(BOZ_STAGE2) < 5))
 				{
 					world.spawnGroup("wave_2_2");
 					world.setStatus(3);
@@ -235,7 +235,7 @@ public class NornilsGarden extends AbstractInstance
 			}
 			case 3:
 			{
-				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcs(BOZ_STAGE2).size() < 4))
+				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcCount(BOZ_STAGE2) < 4))
 				{
 					world.spawnGroup("wave_2_3");
 					world.setStatus(4);
@@ -244,7 +244,7 @@ public class NornilsGarden extends AbstractInstance
 			}
 			case 4:
 			{
-				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcs(BOZ_STAGE2).size() < 3))
+				if ((npc.getId() == BOZ_STAGE2) && (world.getAliveNpcCount(BOZ_STAGE2) < 3))
 				{
 					world.spawnGroup("wave_2_4");
 					startQuestTimer("stage2", 15000, npc, null, true);

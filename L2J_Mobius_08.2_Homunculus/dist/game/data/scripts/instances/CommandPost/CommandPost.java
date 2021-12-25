@@ -193,7 +193,7 @@ public class CommandPost extends AbstractInstance
 					}
 					case 1:
 					{
-						if (world.getAliveNpcs(FIRST_FLOOR).isEmpty())
+						if (world.getAliveNpcCount(FIRST_FLOOR) == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.THE_TELEPORT_GATE_TO_THE_2ND_FLOOR_HAS_BEEN_ACTIVATED, ExShowScreenMessage.TOP_CENTER, 2000, true);
 							world.getNpc(GEORK).teleToLocation(GEORK_FLOOR_2_SPAWN);
@@ -269,7 +269,7 @@ public class CommandPost extends AbstractInstance
 					}
 					case 4:
 					{
-						if (world.getAliveNpcs().size() == 19)
+						if (world.getAliveNpcCount() == 19)
 						{
 							for (Npc monster : world.getNpcsOfGroup("group_2"))
 							{
@@ -285,7 +285,7 @@ public class CommandPost extends AbstractInstance
 					}
 					case 5:
 					{
-						if (world.getAliveNpcs().size() == 14)
+						if (world.getAliveNpcCount() == 14)
 						{
 							for (Npc monster : world.getNpcsOfGroup("group_3"))
 							{
@@ -301,7 +301,7 @@ public class CommandPost extends AbstractInstance
 					}
 					case 6:
 					{
-						if (world.getAliveNpcs().size() == 8)
+						if (world.getAliveNpcCount() == 8)
 						{
 							for (Npc monster : world.getNpcsOfGroup("group_4"))
 							{
@@ -317,7 +317,7 @@ public class CommandPost extends AbstractInstance
 					}
 					case 7:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							showOnScreenMsg(world, NpcStringId.THE_TELEPORT_GATE_TO_THE_3RD_FLOOR_HAS_BEEN_ACTIVATED, ExShowScreenMessage.TOP_CENTER, 2000, true);
 							world.getNpc(GEORK).deleteMe();

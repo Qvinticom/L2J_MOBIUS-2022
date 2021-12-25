@@ -213,7 +213,7 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 				case VERIDAN_WEALTHY:
 				case VERIDAN_ARMED:
 				{
-					if (instance.getAliveNpcs(VERIDAN_NORMAL, VERIDAN_WISE, VERIDAN_WEALTHY, VERIDAN_ARMED).isEmpty())
+					if (instance.getAliveNpcCount(VERIDAN_NORMAL, VERIDAN_WISE, VERIDAN_WEALTHY, VERIDAN_ARMED) == 0)
 					{
 						instance.finishInstance();
 					}

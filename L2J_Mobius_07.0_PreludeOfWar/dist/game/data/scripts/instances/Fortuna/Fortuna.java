@@ -188,7 +188,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 1:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(2);
 							world.spawnGroup("fortuna_2");
@@ -198,7 +198,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 2:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(3);
 							world.spawnGroup("fortuna_3");
@@ -208,7 +208,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 3:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(4);
 							world.spawnGroup("fortuna_4");
@@ -219,7 +219,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 4:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(5);
 							world.spawnGroup("fortuna_5");
@@ -229,7 +229,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 5:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(6);
 							world.spawnGroup("fortuna_6");
@@ -240,7 +240,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 6:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(7);
 							world.spawnGroup("fortuna_7");
@@ -250,7 +250,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 7:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(8);
 							world.spawnGroup("fortuna_8");
@@ -260,7 +260,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 8:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(9);
 							world.spawnGroup("fortuna_9");
@@ -270,7 +270,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 9:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(10);
 							world.spawnGroup("fortuna_10");
@@ -281,7 +281,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 10:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							startQuestTimer("boss_1_pause", 30000, npc, null);
 						}
@@ -293,7 +293,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 11:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(12);
 							world.spawnGroup("fortuna_12");
@@ -303,7 +303,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 12:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(13);
 							world.spawnGroup("fortuna_13");
@@ -313,7 +313,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 13:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(14);
 							world.spawnGroup("fortuna_14");
@@ -323,7 +323,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 14:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(15);
 							world.spawnGroup("fortuna_15");
@@ -334,7 +334,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 15:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							startQuestTimer("boss_2_pause", 30000, npc, null);
 						}
@@ -346,7 +346,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 16:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(17);
 							world.spawnGroup("fortuna_17");
@@ -356,7 +356,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 17:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(18);
 							world.spawnGroup("fortuna_18");
@@ -367,7 +367,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 18:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							startQuestTimer("boss_3_pause", 30000, npc, null);
 						}
@@ -379,7 +379,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 19:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(20);
 							world.spawnGroup("fortuna_20");
@@ -390,7 +390,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 20:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(21);
 							world.spawnGroup("fortuna_21");
@@ -400,7 +400,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 21:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(22);
 							world.spawnGroup("fortuna_22");
@@ -411,7 +411,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 22:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							startQuestTimer("boss_4_pause", 30000, npc, null);
 						}
@@ -423,7 +423,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 23:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(24);
 							world.spawnGroup("fortuna_24");
@@ -433,7 +433,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 24:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							world.setStatus(25);
 							world.spawnGroup("fortuna_25");
@@ -444,7 +444,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 25:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							startQuestTimer("boss_5_pause", 30000, npc, null);
 							showOnScreenMsg(world, NpcStringId.DARKNESS_SWALLOW_EVERYTHING_AWAY, ExShowScreenMessage.TOP_CENTER, 10000, true);
@@ -457,7 +457,7 @@ public class Fortuna extends AbstractInstance
 					}
 					case 26:
 					{
-						if (world.getAliveNpcs().size() == 1)
+						if (world.getAliveNpcCount() == 1)
 						{
 							startQuestTimer("boss_6_pause", 30000, npc, null);
 							showOnScreenMsg(world, NpcStringId.I_NOW_HAVE_TO_GO_AND_HANDLE_IT, ExShowScreenMessage.TOP_CENTER, 10000, true);

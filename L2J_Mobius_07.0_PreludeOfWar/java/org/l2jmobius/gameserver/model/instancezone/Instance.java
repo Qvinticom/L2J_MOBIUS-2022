@@ -579,23 +579,6 @@ public class Instance implements IIdentifiable, INamable
 	}
 	
 	/**
-	 * Get alive NPCs from instance.
-	 * @return set of NPCs from instance
-	 */
-	public List<Npc> getAliveNpcs()
-	{
-		final List<Npc> result = new ArrayList<>();
-		for (Npc npc : _npcs)
-		{
-			if (npc.getCurrentHp() > 0)
-			{
-				result.add(npc);
-			}
-		}
-		return result;
-	}
-	
-	/**
 	 * Get spawned NPCs from instance with specific IDs.
 	 * @param id IDs of NPCs which should be found
 	 * @return list of filtered NPCs from instance
@@ -636,6 +619,41 @@ public class Instance implements IIdentifiable, INamable
 	}
 	
 	/**
+	 * Get alive NPCs from instance.
+	 * @return set of NPCs from instance
+	 */
+	public List<Npc> getAliveNpcs()
+	{
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if (npc.getCurrentHp() > 0)
+			{
+				result.add(npc);
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * Get alive NPCs from instance with specific IDs.
+	 * @param id IDs of NPCs which should be found
+	 * @return list of filtered NPCs from instance
+	 */
+	public List<Npc> getAliveNpcs(int... id)
+	{
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
+			{
+				result.add(npc);
+			}
+		}
+		return result;
+	}
+	
+	/**
 	 * Get spawned and alive NPCs from instance with specific IDs and class type.
 	 * @param <T>
 	 * @param clazz
@@ -658,21 +676,38 @@ public class Instance implements IIdentifiable, INamable
 	}
 	
 	/**
-	 * Get alive NPCs from instance with specific IDs.
-	 * @param id IDs of NPCs which should be found
-	 * @return list of filtered NPCs from instance
+	 * Get alive NPC count from instance.
+	 * @return count of filtered NPCs from instance
 	 */
-	public List<Npc> getAliveNpcs(int... id)
+	public int getAliveNpcCount()
 	{
-		final List<Npc> result = new ArrayList<>();
+		int count = 0;
+		for (Npc npc : _npcs)
+		{
+			if (npc.getCurrentHp() > 0)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	/**
+	 * Get alive NPC count from instance with specific IDs.
+	 * @param id IDs of NPCs which should be counted
+	 * @return count of filtered NPCs from instance
+	 */
+	public int getAliveNpcCount(int... id)
+	{
+		int count = 0;
 		for (Npc npc : _npcs)
 		{
 			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
 			{
-				result.add(npc);
+				count++;
 			}
 		}
-		return result;
+		return count;
 	}
 	
 	/**

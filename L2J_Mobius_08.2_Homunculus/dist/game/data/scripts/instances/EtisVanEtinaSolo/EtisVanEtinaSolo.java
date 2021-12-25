@@ -187,20 +187,20 @@ public class EtisVanEtinaSolo extends AbstractInstance
 					final Monster monsterCheck = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 2500));
 					if (monsterCheck == null)
 					{
-						if (!world.getNpcsOfGroup("BARRICADES_2").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty() && world.getNpcsOfGroup("BARRICADES_1").isEmpty())
+						if (!world.getNpcsOfGroup("BARRICADES_2").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_1) == 0) && world.getNpcsOfGroup("BARRICADES_1").isEmpty())
 						{
 							world.getParameters().set("BARRICADE_DESTROYED", false);
 						}
-						else if (!world.getNpcsOfGroup("BARRICADES_3").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_2).isEmpty() && world.getNpcsOfGroup("BARRICADES_2").isEmpty())
+						else if (!world.getNpcsOfGroup("BARRICADES_3").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_2) == 0) && world.getNpcsOfGroup("BARRICADES_2").isEmpty())
 						{
 							world.getParameters().set("BARRICADE_DESTROYED", false);
 						}
-						else if (!world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_3).isEmpty() && world.getNpcsOfGroup("BARRICADES_3").isEmpty())
+						else if (!world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_3) == 0) && world.getNpcsOfGroup("BARRICADES_3").isEmpty())
 						{
 							world.getParameters().set("BARRICADE_DESTROYED", false);
 						}
 					}
-					if (!mobs1 && world.getNpcsOfGroup("BARRICADES_1").isEmpty() && !world.getNpcsOfGroup("BARRICADES_2").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty())
+					if (!mobs1 && world.getNpcsOfGroup("BARRICADES_1").isEmpty() && !world.getNpcsOfGroup("BARRICADES_2").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_1) == 0))
 					{
 						world.spawnGroup("CORRIDOR_MOBS_1");
 						world.getNpcsOfGroup("CORRIDOR_MOBS_1").forEach(mob ->
@@ -212,7 +212,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						});
 						world.getParameters().set("CORRIDOR_MOBS_1_SPAWNED", true);
 					}
-					if (!mobs2 && world.getNpcsOfGroup("BARRICADES_2").isEmpty() && !world.getNpcsOfGroup("BARRICADES_3").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_2).isEmpty())
+					if (!mobs2 && world.getNpcsOfGroup("BARRICADES_2").isEmpty() && !world.getNpcsOfGroup("BARRICADES_3").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_2) == 0))
 					{
 						world.spawnGroup("CORRIDOR_MOBS_2");
 						world.getNpcsOfGroup("CORRIDOR_MOBS_2").forEach(mob ->
@@ -224,7 +224,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						});
 						world.getParameters().set("CORRIDOR_MOBS_2_SPAWNED", true);
 					}
-					if (!mobs3 && world.getNpcsOfGroup("BARRICADES_3").isEmpty() && !world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_3).isEmpty())
+					if (!mobs3 && world.getNpcsOfGroup("BARRICADES_3").isEmpty() && !world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_3) == 0))
 					{
 						world.spawnGroup("CORRIDOR_MOBS_3");
 						world.getNpcsOfGroup("CORRIDOR_MOBS_3").forEach(mob ->
@@ -236,7 +236,7 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						});
 						world.getParameters().set("CORRIDOR_MOBS_3_SPAWNED", true);
 					}
-					if (!mobs4 && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty())
+					if (!mobs4 && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_4) == 0))
 					{
 						world.spawnGroup("CORRIDOR_MOBS_4");
 						world.spawnGroup("PARAGON");
@@ -255,14 +255,14 @@ public class EtisVanEtinaSolo extends AbstractInstance
 						}
 						npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_T_DEFEAT_PARAGON_WHILE_PARAGON_S_MINIONS_ARE_ALIVE, ExShowScreenMessage.TOP_CENTER, 7000, true));
 					}
-					if (world.getNpcsOfGroup("BARRICADES_4").isEmpty() && world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty() && (world.getNpc(PARAGON) != null) && world.getNpc(PARAGON).isInvul())
+					if (world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcCount(CORRIDOR_MOBS_4) == 0) && (world.getNpc(PARAGON) != null) && world.getNpc(PARAGON).isInvul())
 					{
 						world.getNpc(PARAGON).setInvul(false);
 						world.getNpc(PARAGON).getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 						showOnScreenMsg(world, NpcStringId.PARAGON_IS_NO_LONGER_INVINCIBLE, ExShowScreenMessage.TOP_CENTER, 7000, true);
 						world.getNpc(LEONA_BLACKBIRD).broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TODAY_IS_THE_DAY_THAT_I_WILL_ENTER);
 					}
-					if ((world.getStatus() == 1) && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcs(PARAGON).isEmpty()))
+					if ((world.getStatus() == 1) && world.getNpcsOfGroup("BARRICADES_4").isEmpty() && (world.getAliveNpcCount(PARAGON) == 0))
 					{
 						startQuestTimer("openInnerDoors", 5000, null, player);
 						cancelQuestTimer("checkProgress", npc, player);
@@ -594,28 +594,28 @@ public class EtisVanEtinaSolo extends AbstractInstance
 			}
 			else if (CommonUtil.contains(CORRIDOR_MOBS_1, npc.getId()))
 			{
-				if (world.getAliveNpcs(CORRIDOR_MOBS_1).isEmpty())
+				if (world.getAliveNpcCount(CORRIDOR_MOBS_1) == 0)
 				{
 					world.getParameters().set("BARRICADE_DESTROYED", false);
 				}
 			}
 			else if (CommonUtil.contains(CORRIDOR_MOBS_2, npc.getId()))
 			{
-				if (world.getAliveNpcs(CORRIDOR_MOBS_2).isEmpty())
+				if (world.getAliveNpcCount(CORRIDOR_MOBS_2) == 0)
 				{
 					world.getParameters().set("BARRICADE_DESTROYED", false);
 				}
 			}
 			else if (CommonUtil.contains(CORRIDOR_MOBS_3, npc.getId()))
 			{
-				if (world.getAliveNpcs(CORRIDOR_MOBS_3).isEmpty())
+				if (world.getAliveNpcCount(CORRIDOR_MOBS_3) == 0)
 				{
 					world.getParameters().set("BARRICADE_DESTROYED", false);
 				}
 			}
 			else if (CommonUtil.contains(CORRIDOR_MOBS_4, npc.getId()))
 			{
-				if (world.getAliveNpcs(CORRIDOR_MOBS_4).isEmpty())
+				if (world.getAliveNpcCount(CORRIDOR_MOBS_4) == 0)
 				{
 					world.getNpc(PARAGON).setInvul(false);
 					world.getNpc(PARAGON).getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);

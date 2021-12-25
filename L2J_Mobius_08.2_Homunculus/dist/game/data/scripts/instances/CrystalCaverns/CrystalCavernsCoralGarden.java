@@ -165,7 +165,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 			showOnScreenMsg(instance, NpcStringId.GOLEM_ENTERED_THE_REQUIRED_ZONE, ExShowScreenMessage.MIDDLE_CENTER, 5000);
 			npc.deleteMe();
 			
-			if (instance.getAliveNpcs(GOLEM_1, GOLEM_2).isEmpty())
+			if (instance.getAliveNpcCount(GOLEM_1, GOLEM_2) == 0)
 			{
 				instance.openCloseDoor(BOSS_DOOR_ID, true);
 				

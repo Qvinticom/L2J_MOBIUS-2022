@@ -101,7 +101,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 1:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.LV_2_2, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(2);
@@ -112,7 +112,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 2:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.LV_3_2, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(3);
@@ -123,7 +123,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 3:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.STAGE_4, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(4);
@@ -134,7 +134,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 4:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.STAGE_5, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(5);
@@ -145,7 +145,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 5:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.STAGE_6, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(6);
@@ -156,7 +156,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 6:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							showOnScreenMsg(world, NpcStringId.STAGE_7, ExShowScreenMessage.TOP_CENTER, 10000, true);
 							world.setStatus(7);
@@ -167,7 +167,7 @@ public class KastiaExceptional extends AbstractInstance
 					}
 					case 7:
 					{
-						if (world.getAliveNpcs().isEmpty())
+						if (world.getAliveNpcCount() == 0)
 						{
 							world.spawnGroup("NPC");
 							giveItems(player, KASTIAS_LV4_PACK);

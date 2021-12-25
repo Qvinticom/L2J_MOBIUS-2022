@@ -104,7 +104,7 @@ public class TautiWarzone extends AbstractInstance
 				for (Player member : world.getPlayers())
 				{
 					member.teleToLocation(TAUTI_TELEPORT, world);
-					if (world.getAliveNpcs(TAUTI_EXTREME).isEmpty() && world.getAliveNpcs(TAUTI_EXTREME_AXE).isEmpty())
+					if ((world.getAliveNpcCount(TAUTI_EXTREME) == 0) && (world.getAliveNpcCount(TAUTI_EXTREME_AXE) == 0))
 					{
 						startQuestTimer("PLAY_OPENING_B_MOVIE", 5000, null, member, false);
 					}
@@ -120,7 +120,7 @@ public class TautiWarzone extends AbstractInstance
 			case "SPAWN_TAUTI":
 			{
 				final Instance world = npc.getInstanceWorld();
-				if (world.getAliveNpcs(TAUTI_EXTREME).isEmpty() && world.getAliveNpcs(TAUTI_EXTREME_AXE).isEmpty())
+				if ((world.getAliveNpcCount(TAUTI_EXTREME) == 0) && (world.getAliveNpcCount(TAUTI_EXTREME_AXE) == 0))
 				{
 					world.spawnGroup("boss");
 				}

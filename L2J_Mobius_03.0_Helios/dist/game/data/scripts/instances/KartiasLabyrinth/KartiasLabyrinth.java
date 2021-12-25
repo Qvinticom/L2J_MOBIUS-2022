@@ -367,7 +367,7 @@ public class KartiasLabyrinth extends AbstractInstance
 				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
 				instance.setStatus(3); // Used for notify helper's AI
 			}
-			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && instance.getAliveNpcs(MINI_BOSSES).isEmpty())
+			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && (instance.getAliveNpcCount(MINI_BOSSES) == 0))
 			{
 				param.set("CONTINUE_AFTER_KILL", false);
 				getTimers().addTimer("CALL_PROGRESS", 5000, n -> manageProgressInInstance(instance));
@@ -377,7 +377,7 @@ public class KartiasLabyrinth extends AbstractInstance
 	
 	private void manageWaves(Instance instance)
 	{
-		if ((instance != null) && instance.getAliveNpcs(MONSTERS).isEmpty())
+		if ((instance != null) && (instance.getAliveNpcCount(MONSTERS) == 0))
 		{
 			getTimers().cancelTimers("NEXT_WAVE_DELAY");
 			getTimers().cancelTimers("MONITOR_WAVE");

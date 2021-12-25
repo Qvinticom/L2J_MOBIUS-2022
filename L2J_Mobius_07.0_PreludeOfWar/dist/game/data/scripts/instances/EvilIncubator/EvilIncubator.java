@@ -429,7 +429,7 @@ public class EvilIncubator extends AbstractInstance
 			}
 			else if (waveId < 8)
 			{
-				if (world.getAliveNpcs(MONSTERS).isEmpty())
+				if (world.getAliveNpcCount(MONSTERS) == 0)
 				{
 					getTimers().addTimer("SPAWN_WAVE", 5000, e -> manageWaveSpawn(world));
 				}
