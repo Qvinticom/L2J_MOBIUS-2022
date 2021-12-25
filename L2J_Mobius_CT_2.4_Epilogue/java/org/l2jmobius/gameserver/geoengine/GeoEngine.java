@@ -712,9 +712,8 @@ public class GeoEngine
 		final double m = (double) dy / dx;
 		final MoveDirectionType mdt = MoveDirectionType.getDirection(gtx - gox, gty - goy);
 		
-		// Get cell grid coordinates.
+		// Get cell grid X coordinate.
 		int gridX = ox & 0xFFFFFFF0;
-		int gridY = oy & 0xFFFFFFF0;
 		
 		// Run loop.
 		byte dir;
@@ -723,8 +722,8 @@ public class GeoEngine
 		while ((gox != gtx) || (goy != gty))
 		{
 			// Calculate intersection with cell's X border.
-			int checkX = gridX + mdt.getOffsetX();
-			int checkY = (int) (oy + (m * (checkX - ox)));
+			final int checkX = gridX + mdt.getOffsetX();
+			final int checkY = (int) (oy + (m * (checkX - ox)));
 			
 			if ((mdt.getStepX() != 0) && (getGeoY(checkY) == goy))
 			{
@@ -735,13 +734,7 @@ public class GeoEngine
 			}
 			else
 			{
-				// Calculate intersection with cell's Y border.
-				checkY = gridY + mdt.getOffsetY();
-				checkX = (int) (ox + ((checkY - oy) / m));
-				checkX = CommonUtil.limit(checkX, gridX, gridX + 15);
-				
 				// Set next cell in Y direction.
-				gridY += mdt.getStepY();
 				ny += mdt.getSignumY();
 				dir = mdt.getDirectionY();
 			}
