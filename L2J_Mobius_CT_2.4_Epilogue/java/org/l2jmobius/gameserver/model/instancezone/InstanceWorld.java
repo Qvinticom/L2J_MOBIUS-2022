@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.instancezone;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -176,30 +177,13 @@ public class InstanceWorld
 	}
 	
 	/**
-	 * Get alive NPCs from instance.
-	 * @return set of NPCs from instance
-	 */
-	public List<Npc> getAliveNpcs()
-	{
-		final List<Npc> result = new ArrayList<>();
-		for (Npc npc : _instance.getNpcs())
-		{
-			if (npc.getCurrentHp() > 0)
-			{
-				result.add(npc);
-			}
-		}
-		return result;
-	}
-	
-	/**
 	 * Get spawned NPCs from instance with specific IDs.
 	 * @param id IDs of NPCs which should be found
 	 * @return list of filtered NPCs from instance
 	 */
 	public List<Npc> getNpcs(int... id)
 	{
-		final List<Npc> result = new ArrayList<>();
+		final List<Npc> result = new LinkedList<>();
 		for (Npc npc : _instance.getNpcs())
 		{
 			if (CommonUtil.contains(id, npc.getId()))
@@ -221,12 +205,47 @@ public class InstanceWorld
 	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		for (Npc npc : _instance.getNpcs())
 		{
 			if (((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && clazz.isInstance(npc))
 			{
 				result.add((T) npc);
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * Get alive NPCs from instance.
+	 * @return set of NPCs from instance
+	 */
+	public List<Npc> getAliveNpcs()
+	{
+		final List<Npc> result = new LinkedList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if (npc.getCurrentHp() > 0)
+			{
+				result.add(npc);
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * Get alive NPCs from instance with specific IDs.
+	 * @param id IDs of NPCs which should be found
+	 * @return list of filtered NPCs from instance
+	 */
+	public List<Npc> getAliveNpcs(int... id)
+	{
+		final List<Npc> result = new LinkedList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
+			{
+				result.add(npc);
 			}
 		}
 		return result;
@@ -243,30 +262,12 @@ public class InstanceWorld
 	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		for (Npc npc : _instance.getNpcs())
 		{
 			if ((((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && (npc.getCurrentHp() > 0)) && clazz.isInstance(npc))
 			{
 				result.add((T) npc);
-			}
-		}
-		return result;
-	}
-	
-	/**
-	 * Get alive NPCs from instance with specific IDs.
-	 * @param id IDs of NPCs which should be found
-	 * @return list of filtered NPCs from instance
-	 */
-	public List<Npc> getAliveNpcs(int... id)
-	{
-		final List<Npc> result = new ArrayList<>();
-		for (Npc npc : _instance.getNpcs())
-		{
-			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
-			{
-				result.add(npc);
 			}
 		}
 		return result;

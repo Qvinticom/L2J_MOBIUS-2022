@@ -377,7 +377,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<Player> getPlayersInsideRadius(ILocational object, int radius)
 	{
-		final List<Player> result = new ArrayList<>();
+		final List<Player> result = new LinkedList<>();
 		for (Player player : _players)
 		{
 			if (player.isInsideRadius3D(object, radius))
@@ -460,8 +460,11 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<SpawnGroup> getSpawnGroup(String name)
 	{
-		final List<SpawnGroup> spawns = new ArrayList<>();
-		_spawns.stream().forEach(spawnTemplate -> spawns.addAll(spawnTemplate.getGroupsByName(name)));
+		final List<SpawnGroup> spawns = new LinkedList<>();
+		for (SpawnTemplate spawnTemplate : _spawns)
+		{
+			spawns.addAll(spawnTemplate.getGroupsByName(name));
+		}
 		return spawns;
 	}
 	
@@ -585,7 +588,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<Npc> getNpcs(int... id)
 	{
-		final List<Npc> result = new ArrayList<>();
+		final List<Npc> result = new LinkedList<>();
 		for (Npc npc : _npcs)
 		{
 			if (CommonUtil.contains(id, npc.getId()))
@@ -607,7 +610,7 @@ public class Instance implements IIdentifiable, INamable
 	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		for (Npc npc : _npcs)
 		{
 			if (((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && clazz.isInstance(npc))
@@ -624,7 +627,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<Npc> getAliveNpcs()
 	{
-		final List<Npc> result = new ArrayList<>();
+		final List<Npc> result = new LinkedList<>();
 		for (Npc npc : _npcs)
 		{
 			if (npc.getCurrentHp() > 0)
@@ -642,7 +645,7 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<Npc> getAliveNpcs(int... id)
 	{
-		final List<Npc> result = new ArrayList<>();
+		final List<Npc> result = new LinkedList<>();
 		for (Npc npc : _npcs)
 		{
 			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
@@ -664,7 +667,7 @@ public class Instance implements IIdentifiable, INamable
 	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
-		final List<T> result = new ArrayList<>();
+		final List<T> result = new LinkedList<>();
 		for (Npc npc : _npcs)
 		{
 			if ((((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && (npc.getCurrentHp() > 0)) && clazz.isInstance(npc))
