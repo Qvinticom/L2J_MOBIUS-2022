@@ -103,10 +103,10 @@ public class YeSegiraTeleportDevice extends AbstractNpcAI
 				final QuestState qs = player.getQuestState(Q10365_SeekerEscort.class.getSimpleName());
 				if ((qs != null) && qs.isStarted() && qs.isCond(1))
 				{
-					final Quest quest_10365 = QuestManager.getInstance().getQuest(Q10365_SeekerEscort.class.getSimpleName());
-					if (quest_10365 != null)
+					final Quest q10365 = QuestManager.getInstance().getQuest(Q10365_SeekerEscort.class.getSimpleName());
+					if (q10365 != null)
 					{
-						quest_10365.notifyEvent("TELEPORT_TO_NEXT_STAGE", null, player);
+						q10365.notifyEvent("TELEPORT_TO_NEXT_STAGE", null, player);
 					}
 				}
 			}

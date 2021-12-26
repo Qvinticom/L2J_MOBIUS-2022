@@ -172,7 +172,7 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.RESTORE_PLAYER_INSTANCE)
 		{
 			final PlayerVariables vars = player.getVariables();
-			final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
+			final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 			if ((instance != null) && (instance.getId() == vars.getInt("INSTANCE_RESTORE", 0)))
 			{
 				player.setInstance(instance);

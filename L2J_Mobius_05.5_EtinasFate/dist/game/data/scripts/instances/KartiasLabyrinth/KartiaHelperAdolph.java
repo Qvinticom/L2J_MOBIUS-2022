@@ -159,11 +159,11 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatSet instParams = instance.getTemplateParameters();
-			final SkillHolder skill_01 = instParams.getSkillHolder("adolphHate");
-			final SkillHolder skill_02 = instParams.getSkillHolder("adolphPunish");
-			final SkillHolder skill_03 = instParams.getSkillHolder("adolphShield");
-			final SkillHolder skill_04 = instParams.getSkillHolder("adolphAggression");
-			final SkillHolder skill_05 = instParams.getSkillHolder("adolphChainHydra");
+			final SkillHolder skill1 = instParams.getSkillHolder("adolphHate");
+			final SkillHolder skill2 = instParams.getSkillHolder("adolphPunish");
+			final SkillHolder skill3 = instParams.getSkillHolder("adolphShield");
+			final SkillHolder skill4 = instParams.getSkillHolder("adolphAggression");
+			final SkillHolder skill5 = instParams.getSkillHolder("adolphChainHydra");
 			final SkillHolder lowHpSkill = instParams.getSkillHolder("adolphUltimate");
 			final int numberOfActiveSkills = 5;
 			final int randomSkill = getRandom(numberOfActiveSkills + 1);
@@ -183,10 +183,10 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 					case 0:
 					case 1:
 					{
-						if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+						if ((skill1 != null) && SkillCaster.checkUseConditions(npc, skill1.getSkill()))
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
-							npc.doCast(skill_01.getSkill(), null, true, false);
+							npc.doCast(skill1.getSkill(), null, true, false);
 							final List<Monster> monsterList = World.getInstance().getVisibleObjectsInRange(npc, Monster.class, 300);
 							if (!monsterList.isEmpty())
 							{
@@ -203,37 +203,37 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 					}
 					case 2:
 					{
-						if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+						if ((skill2 != null) && SkillCaster.checkUseConditions(npc, skill2.getSkill()))
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE_3);
-							npc.doCast(skill_02.getSkill(), null, true, false);
+							npc.doCast(skill2.getSkill(), null, true, false);
 						}
 						break;
 					}
 					case 3:
 					{
-						if ((skill_03 != null) && SkillCaster.checkUseConditions(npc, skill_03.getSkill()))
+						if ((skill3 != null) && SkillCaster.checkUseConditions(npc, skill3.getSkill()))
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOR_THE_GODDESS);
-							npc.doCast(skill_03.getSkill(), null, true, false);
+							npc.doCast(skill3.getSkill(), null, true, false);
 						}
 						break;
 					}
 					case 4:
 					{
-						if ((skill_04 != null) && SkillCaster.checkUseConditions(npc, skill_04.getSkill()))
+						if ((skill4 != null) && SkillCaster.checkUseConditions(npc, skill4.getSkill()))
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_BE_DESTROYED);
-							npc.doCast(skill_04.getSkill());
+							npc.doCast(skill4.getSkill());
 						}
 						break;
 					}
 					case 5:
 					{
-						if ((skill_05 != null) && SkillCaster.checkUseConditions(npc, skill_05.getSkill()))
+						if ((skill5 != null) && SkillCaster.checkUseConditions(npc, skill5.getSkill()))
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_DIE);
-							npc.doCast(skill_05.getSkill(), null, true, false);
+							npc.doCast(skill5.getSkill(), null, true, false);
 						}
 						break;
 					}

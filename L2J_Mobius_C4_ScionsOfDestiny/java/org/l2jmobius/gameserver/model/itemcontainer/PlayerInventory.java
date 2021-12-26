@@ -462,7 +462,7 @@ public class PlayerInventory extends Inventory
 	@Override
 	public Item destroyItem(String process, Item item, Player actor, WorldObject reference)
 	{
-		final Item Item = super.destroyItem(process, item, actor, reference);
+		final Item destroyedItem = super.destroyItem(process, item, actor, reference);
 		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
@@ -474,7 +474,7 @@ public class PlayerInventory extends Inventory
 			_ancientAdena = null;
 		}
 		
-		return Item;
+		return destroyedItem;
 	}
 	
 	/**
@@ -542,7 +542,7 @@ public class PlayerInventory extends Inventory
 	@Override
 	public Item dropItem(String process, Item item, Player actor, WorldObject reference)
 	{
-		final Item Item = super.dropItem(process, item, actor, reference);
+		final Item droppedItem = super.dropItem(process, item, actor, reference);
 		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
@@ -554,7 +554,7 @@ public class PlayerInventory extends Inventory
 			_ancientAdena = null;
 		}
 		
-		return Item;
+		return droppedItem;
 	}
 	
 	/**

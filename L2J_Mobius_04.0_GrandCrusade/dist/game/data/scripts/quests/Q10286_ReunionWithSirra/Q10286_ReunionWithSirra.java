@@ -103,7 +103,7 @@ public class Q10286_ReunionWithSirra extends Quest
 				{
 					qs.unset("ex");
 					qs.setMemoState(2);
-					final Instance world = InstanceManager.getInstance().getPlayer(player, true);
+					final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
 					if (world != null)
 					{
 						world.finishInstance(0);

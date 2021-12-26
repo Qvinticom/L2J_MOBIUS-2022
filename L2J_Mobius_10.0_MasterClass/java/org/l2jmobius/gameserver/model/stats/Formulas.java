@@ -984,21 +984,21 @@ public class Formulas
 	 */
 	public static double calcAttributeBonus(Creature attacker, Creature target, Skill skill)
 	{
-		int attack_attribute;
-		int defence_attribute;
+		int attackAttribute;
+		int defenceAttribute;
 		
 		if ((skill != null) && (skill.getAttributeType() != AttributeType.NONE))
 		{
-			attack_attribute = attacker.getAttackElementValue(skill.getAttributeType()) + skill.getAttributeValue();
-			defence_attribute = target.getDefenseElementValue(skill.getAttributeType());
+			attackAttribute = attacker.getAttackElementValue(skill.getAttributeType()) + skill.getAttributeValue();
+			defenceAttribute = target.getDefenseElementValue(skill.getAttributeType());
 		}
 		else
 		{
-			attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement());
-			defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
+			attackAttribute = attacker.getAttackElementValue(attacker.getAttackElement());
+			defenceAttribute = target.getDefenseElementValue(attacker.getAttackElement());
 		}
 		
-		final int diff = attack_attribute - defence_attribute;
+		final int diff = attackAttribute - defenceAttribute;
 		if (diff > 0)
 		{
 			return Math.min(1.025 + (Math.sqrt(Math.pow(diff, 3) / 2) * 0.0001), 1.25);

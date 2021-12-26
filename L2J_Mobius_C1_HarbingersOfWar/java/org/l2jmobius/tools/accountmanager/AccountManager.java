@@ -45,11 +45,11 @@ public class AccountManager
 		System.out.println("3 - Delete existing account (this option _keeps_ character files)");
 		System.out.println("4 - List accounts & access levels");
 		System.out.println("5 - exit");
-		final LineNumberReader _in = new LineNumberReader(new InputStreamReader(System.in));
+		final LineNumberReader in = new LineNumberReader(new InputStreamReader(System.in));
 		while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4") || _mode.equals("5")))
 		{
 			System.out.print("Your choice: ");
-			_mode = _in.readLine();
+			_mode = in.readLine();
 		}
 		if (_mode.equals("1") || _mode.equals("2") || _mode.equals("3"))
 		{
@@ -58,7 +58,7 @@ public class AccountManager
 				while (_uname.isEmpty())
 				{
 					System.out.print("username: ");
-					_uname = _in.readLine();
+					_uname = in.readLine();
 				}
 			}
 			if (_mode.equals("1"))
@@ -66,7 +66,7 @@ public class AccountManager
 				while (_pass.isEmpty())
 				{
 					System.out.print("password: ");
-					_pass = _in.readLine();
+					_pass = in.readLine();
 				}
 			}
 			if (_mode.equals("1") || _mode.equals("2"))
@@ -74,14 +74,14 @@ public class AccountManager
 				while (_level.isEmpty())
 				{
 					System.out.print("access level: ");
-					_level = _in.readLine();
+					_level = in.readLine();
 				}
 			}
 		}
 		if (_mode.equals("3"))
 		{
 			System.out.print("Do you really want to delete this account ? Y/N : ");
-			final String yesno = _in.readLine();
+			final String yesno = in.readLine();
 			if (!yesno.equals("Y"))
 			{
 				_mode = "5";

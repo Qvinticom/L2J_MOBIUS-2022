@@ -31,10 +31,10 @@ public class Snoop implements IClientOutgoingPacket
 	private final String _speaker;
 	private final String _msg;
 	
-	public Snoop(Player snooped, ChatType _chatType, String speaker, String msg)
+	public Snoop(Player snooped, ChatType chatType, String speaker, String msg)
 	{
 		_snooped = snooped;
-		_type = _chatType;
+		_type = chatType;
 		_speaker = speaker;
 		_msg = msg;
 	}

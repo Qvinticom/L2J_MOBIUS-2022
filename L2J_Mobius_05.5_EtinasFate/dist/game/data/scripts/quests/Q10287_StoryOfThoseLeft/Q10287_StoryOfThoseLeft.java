@@ -202,7 +202,7 @@ public class Q10287_StoryOfThoseLeft extends Quest
 								qs.unset("ex1");
 								qs.unset("ex2");
 								
-								final Instance world = InstanceManager.getInstance().getPlayer(player, true);
+								final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
 								if (world != null)
 								{
 									world.finishInstance(0);

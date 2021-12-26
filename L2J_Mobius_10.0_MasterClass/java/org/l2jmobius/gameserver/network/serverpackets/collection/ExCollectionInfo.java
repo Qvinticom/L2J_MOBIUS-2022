@@ -38,12 +38,12 @@ public class ExCollectionInfo implements IClientOutgoingPacket
 	final List<Integer> _favoriteList;
 	final int _category;
 	
-	public ExCollectionInfo(Player Player, int category)
+	public ExCollectionInfo(Player player, int category)
 	{
-		_Player = Player;
-		_categoryList = Player.getCollections().stream().filter(it -> CollectionData.getInstance().getCollection(it.getCollectionId()).getCategory() == category).collect(Collectors.toList());
+		_Player = player;
+		_categoryList = player.getCollections().stream().filter(it -> CollectionData.getInstance().getCollection(it.getCollectionId()).getCategory() == category).collect(Collectors.toList());
 		_collections = _categoryList.stream().map(PlayerCollectionData::getCollectionId).collect(Collectors.toSet());
-		_favoriteList = Player.getCollectionFavorites();
+		_favoriteList = player.getCollectionFavorites();
 		_category = category;
 	}
 	

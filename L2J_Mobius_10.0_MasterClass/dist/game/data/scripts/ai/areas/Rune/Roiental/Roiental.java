@@ -115,7 +115,7 @@ public class Roiental extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
-		final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
+		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 		if ((instance != null) && ((instance.getTemplateId() == TOH_GB_TEMPLATE_ID)))
 		{
 			htmltext = "Roiental-02a.html";

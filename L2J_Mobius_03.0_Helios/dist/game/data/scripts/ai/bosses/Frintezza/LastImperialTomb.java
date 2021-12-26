@@ -662,7 +662,7 @@ public class LastImperialTomb extends AbstractInstance
 		}
 		else // Teleport Cube
 		{
-			final Instance world = getPlayer(player);
+			final Instance world = getPlayerInstance(player);
 			if (world != null)
 			{
 				teleportPlayerOut(player, world);

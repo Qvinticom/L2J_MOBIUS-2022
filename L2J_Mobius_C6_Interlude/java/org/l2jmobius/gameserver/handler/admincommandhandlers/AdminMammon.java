@@ -65,7 +65,7 @@ public class AdminMammon implements IAdminCommandHandler
 					teleportIndex = Integer.parseInt(command.substring(18));
 				}
 			}
-			catch (Exception NumberFormatException)
+			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //mammon_find [teleportIndex] (where 1 = Blacksmith, 2 = Merchant)");
 			}

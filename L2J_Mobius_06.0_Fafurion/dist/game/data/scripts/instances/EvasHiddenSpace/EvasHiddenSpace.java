@@ -74,7 +74,7 @@ public class EvasHiddenSpace extends AbstractInstance
 		}
 		else if (event.equals("exitInstance"))
 		{
-			final Instance world = getPlayer(player);
+			final Instance world = getPlayerInstance(player);
 			if (world != null)
 			{
 				teleportPlayerOut(player, world);

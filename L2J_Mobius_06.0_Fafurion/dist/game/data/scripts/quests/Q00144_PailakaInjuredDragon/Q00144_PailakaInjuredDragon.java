@@ -200,7 +200,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 					{
 						htmltext = getNoQuestLevelRewardMsg(player);
 					}
-					final Instance inst = InstanceManager.getInstance().getPlayer(player, true);
+					final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
 					if (inst != null)
 					{
 						inst.finishInstance();

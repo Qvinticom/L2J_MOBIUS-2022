@@ -94,13 +94,12 @@ public class DrChaos extends AbstractNpcAI
 			final GrandBoss golem = (GrandBoss) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
-			final Npc _golem = golem;
-			_golem.setCurrentHpMp(hp, mp);
-			_golem.setRunning();
+			golem.setCurrentHpMp(hp, mp);
+			golem.setRunning();
 			
 			// start monitoring Dr. Chaos's inactivity
 			_lastAttackVsGolem = Chronos.currentTimeMillis();
-			startQuestTimer("golem_despawn", 60000, _golem, null, true);
+			startQuestTimer("golem_despawn", 60000, golem, null, true);
 		}
 		// Spawn the regular NPC.
 		else

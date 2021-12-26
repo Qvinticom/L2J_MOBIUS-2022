@@ -1385,9 +1385,9 @@ public class Config
 		ALLOW_AIO_IN_EVENTS = generalConfig.getBoolean("AllowAioInEvents", false);
 		if (ENABLE_AIO_SYSTEM)
 		{
-			final String[] AioSkillsSplit = generalConfig.getString("AioSkills", "").split(";");
-			AIO_SKILLS = new HashMap<>(AioSkillsSplit.length);
-			for (String skill : AioSkillsSplit)
+			final String[] aioSkillsSplit = generalConfig.getString("AioSkills", "").split(";");
+			AIO_SKILLS = new HashMap<>(aioSkillsSplit.length);
+			for (String skill : aioSkillsSplit)
 			{
 				final String[] skillSplit = skill.split(",");
 				if (skillSplit.length != 2)

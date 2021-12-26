@@ -1133,8 +1133,8 @@ public class TradeList
 						return false;
 					}
 					
-					final Item Item = (Item) obj;
-					if (item.getEnchant() != Item.getEnchantLevel())
+					final Item foundItem = (Item) obj;
+					if (item.getEnchant() != foundItem.getEnchantLevel())
 					{
 						final String msgErr = "[RequestPrivateStoreSell] player " + _owner.getName() + " tried to change enchant level in a private store (buy), ban this player!";
 						Util.handleIllegalPlayerAction(_owner, msgErr, Config.DEFAULT_PUNISH);

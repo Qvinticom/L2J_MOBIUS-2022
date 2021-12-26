@@ -2840,8 +2840,8 @@ public class Config
 			ENABLE_FIND_PVP = findPvpConfig.getBoolean("EnableFindPvP", false);
 			
 			// Load HellboundStatus config file (if exists)
-			final PropertiesParser HellboundStatusConfig = new PropertiesParser(CUSTOM_HELLBOUND_STATUS_CONFIG_FILE);
-			HELLBOUND_STATUS = HellboundStatusConfig.getBoolean("HellboundStatus", false);
+			final PropertiesParser hellboundStatusConfig = new PropertiesParser(CUSTOM_HELLBOUND_STATUS_CONFIG_FILE);
+			HELLBOUND_STATUS = hellboundStatusConfig.getBoolean("HellboundStatus", false);
 			
 			// Load MerchantZeroSellPrice config file (if exists)
 			final PropertiesParser merchantZeroSellPriceConfig = new PropertiesParser(CUSTOM_MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);

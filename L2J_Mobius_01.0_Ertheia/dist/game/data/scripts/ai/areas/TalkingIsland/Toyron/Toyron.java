@@ -50,7 +50,7 @@ public class Toyron extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final Instance world = InstanceManager.getInstance().getPlayer(player, true);
+		final Instance world = InstanceManager.getInstance().getPlayerInstance(player, true);
 		if (event.equals("museum_teleport"))
 		{
 			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))

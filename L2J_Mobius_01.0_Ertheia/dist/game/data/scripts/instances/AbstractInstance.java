@@ -66,9 +66,9 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 * @param player player who wants get instance world
 	 * @return instance world if found, otherwise null
 	 */
-	public Instance getPlayer(Player player)
+	public Instance getPlayerInstance(Player player)
 	{
-		return InstanceManager.getInstance().getPlayer(player, false);
+		return InstanceManager.getInstance().getPlayerInstance(player, false);
 	}
 	
 	/**
@@ -107,7 +107,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 */
 	protected final void enterInstance(Player player, Npc npc, int templateId)
 	{
-		Instance instance = getPlayer(player);
+		Instance instance = getPlayerInstance(player);
 		if (instance != null) // Player has already any instance active
 		{
 			if (instance.getTemplateId() != templateId)
@@ -153,7 +153,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			// Check if any player from enter group has active instance
 			for (Player member : enterGroup)
 			{
-				if (getPlayer(member) != null)
+				if (getPlayerInstance(member) != null)
 				{
 					enterGroup.forEach(p -> p.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
 					return;

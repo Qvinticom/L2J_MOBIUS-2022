@@ -250,16 +250,16 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	
 	private static void exchangeCrystal(Player player, Attackable mob, int takeid, int giveid, boolean broke)
 	{
-		Item Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
-		if (Item != null)
+		Item item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
+		if (item != null)
 		{
 			// Prepare inventory update packet
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addRemovedItem(Item);
+			playerIU.addRemovedItem(item);
 			
 			// Add new crystal to the killer's inventory
-			Item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, mob);
-			playerIU.addItem(Item);
+			item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, mob);
+			playerIU.addItem(item);
 			
 			// Send a sound event and text message to the player
 			if (broke)

@@ -194,9 +194,9 @@ public class TeredorWarzone extends AbstractInstance
 			}
 			case "checkConditions":
 			{
-				final Instance Player = getPlayer(player);
+				final Instance instance = getPlayerInstance(player);
 				final Party playerParty = player.getParty();
-				if ((Player != null) && (Player.getTemplateId() == TEMPLATE_ID))
+				if ((instance != null) && (instance.getTemplateId() == TEMPLATE_ID))
 				{
 					enterInstance(player, npc, TEMPLATE_ID);
 				}

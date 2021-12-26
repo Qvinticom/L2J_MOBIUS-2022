@@ -175,9 +175,9 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 		if ((instance != null) && !npc.isCastingNow() && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
 		{
 			final StatSet instParams = instance.getTemplateParameters();
-			final SkillHolder skill_01 = instParams.getSkillHolder("hayukPinpointShot");
-			final SkillHolder skill_02 = instParams.getSkillHolder("hayukRecoilShot");
-			final SkillHolder skill_03 = instParams.getSkillHolder("hayukMultipleArrow");
+			final SkillHolder skill1 = instParams.getSkillHolder("hayukPinpointShot");
+			final SkillHolder skill2 = instParams.getSkillHolder("hayukRecoilShot");
+			final SkillHolder skill3 = instParams.getSkillHolder("hayukMultipleArrow");
 			final int numberOfActiveSkills = 3;
 			final int randomSkill = getRandom(numberOfActiveSkills + 1);
 			
@@ -186,28 +186,28 @@ public class KartiaHelperHayuk extends AbstractNpcAI
 				case 0:
 				case 1:
 				{
-					if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+					if ((skill1 != null) && SkillCaster.checkUseConditions(npc, skill1.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
-						npc.doCast(skill_01.getSkill(), null, true, false);
+						npc.doCast(skill1.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 2:
 				{
-					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+					if ((skill2 != null) && SkillCaster.checkUseConditions(npc, skill2.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THOSE_WHO_ARE_IN_FRONT_OF_MY_EYES_WILL_BE_DESTROYED_3);
-						npc.doCast(skill_02.getSkill(), null, true, false);
+						npc.doCast(skill2.getSkill(), null, true, false);
 					}
 					break;
 				}
 				case 3:
 				{
-					if ((skill_03 != null) && SkillCaster.checkUseConditions(npc, skill_03.getSkill()))
+					if ((skill3 != null) && SkillCaster.checkUseConditions(npc, skill3.getSkill()))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOR_THE_GODDESS);
-						npc.doCast(skill_03.getSkill(), null, true, false);
+						npc.doCast(skill3.getSkill(), null, true, false);
 					}
 					break;
 				}

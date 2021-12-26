@@ -233,7 +233,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 				}
 				else
 				{
-					final Instance inst = InstanceManager.getInstance().getPlayer(player, true);
+					final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
 					if (inst != null)
 					{
 						inst.finishInstance();

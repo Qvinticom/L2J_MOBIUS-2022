@@ -53,12 +53,12 @@ public class GameServerRegister
 		System.out.println("Enter The id of the server you want to register or type help to get a list of ids:");
 		
 		try (InputStreamReader ir = new InputStreamReader(System.in);
-			LineNumberReader _in = new LineNumberReader(ir))
+			LineNumberReader in = new LineNumberReader(ir))
 		{
 			while (true)
 			{
 				System.out.println("Your choice:");
-				_choice = _in.readLine();
+				_choice = in.readLine();
 				
 				if (_choice.equalsIgnoreCase("help"))
 				{

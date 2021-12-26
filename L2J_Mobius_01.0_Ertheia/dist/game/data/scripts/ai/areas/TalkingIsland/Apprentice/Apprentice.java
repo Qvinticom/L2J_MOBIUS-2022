@@ -58,10 +58,10 @@ public class Apprentice extends AbstractNpcAI
 				final QuestState qs = player.getQuestState(Q10329_BackupSeekers.class.getSimpleName());
 				if ((qs != null) && qs.isStarted())
 				{
-					final Quest quest_10329 = QuestManager.getInstance().getQuest(Q10329_BackupSeekers.class.getSimpleName());
-					if (quest_10329 != null)
+					final Quest q10329 = QuestManager.getInstance().getQuest(Q10329_BackupSeekers.class.getSimpleName());
+					if (q10329 != null)
 					{
-						quest_10329.notifyEvent("RESPAWN_BART", null, player);
+						q10329.notifyEvent("RESPAWN_BART", null, player);
 					}
 				}
 			}

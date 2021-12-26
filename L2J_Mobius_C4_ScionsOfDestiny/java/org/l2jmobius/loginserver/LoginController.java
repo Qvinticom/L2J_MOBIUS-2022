@@ -170,14 +170,14 @@ public class LoginController
 		return playerCount;
 	}
 	
-	public int getOnlinePlayerCount(int ServerID)
+	public int getOnlinePlayerCount(int serverId)
 	{
 		final List<GameServerThread> gslist = LoginServer.getGameServerListener().getGameServerThreads();
 		synchronized (gslist)
 		{
 			for (GameServerThread gs : gslist)
 			{
-				if (gs.getServerID() == ServerID)
+				if (gs.getServerID() == serverId)
 				{
 					return gs.getCurrentPlayers();
 				}
@@ -186,14 +186,14 @@ public class LoginController
 		return 0;
 	}
 	
-	public int getMaxAllowedOnlinePlayers(int ServerID)
+	public int getMaxAllowedOnlinePlayers(int serverId)
 	{
 		final List<GameServerThread> gslist = LoginServer.getGameServerListener().getGameServerThreads();
 		synchronized (gslist)
 		{
 			for (GameServerThread gs : gslist)
 			{
-				if (gs.getServerID() == ServerID)
+				if (gs.getServerID() == serverId)
 				{
 					return gs.getMaxPlayers();
 				}
@@ -209,12 +209,12 @@ public class LoginController
 	
 	/**
 	 * @param access
-	 * @param ServerID
+	 * @param serverId
 	 * @return
 	 */
-	public boolean loginPossible(int access, int ServerID)
+	public boolean loginPossible(int access, int serverId)
 	{
-		return ((getOnlinePlayerCount(ServerID) < _maxAllowedOnlinePlayers) || (access >= 50));
+		return ((getOnlinePlayerCount(serverId) < _maxAllowedOnlinePlayers) || (access >= 50));
 	}
 	
 	public void setAccountAccessLevel(String account, int banLevel)

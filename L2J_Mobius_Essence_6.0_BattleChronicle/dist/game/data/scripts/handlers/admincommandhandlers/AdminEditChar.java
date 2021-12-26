@@ -1231,7 +1231,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findCharacter(Player activeChar, String characterToFind)
 	{
-		int CharactersFound = 0;
+		int charactersFound = 0;
 		String name;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/charfind.htm");
@@ -1244,7 +1244,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			name = player.getName();
 			if (name.toLowerCase().contains(characterToFind.toLowerCase()))
 			{
-				CharactersFound += 1;
+				charactersFound += 1;
 				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
 				replyMSG.append(name);
 				replyMSG.append("\">");
@@ -1255,7 +1255,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				replyMSG.append(player.getLevel());
 				replyMSG.append("</td></tr>");
 			}
-			if (CharactersFound > 20)
+			if (charactersFound > 20)
 			{
 				break;
 			}
@@ -1263,16 +1263,16 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%results%", replyMSG.toString());
 		
 		final String replyMSG2;
-		if (CharactersFound == 0)
+		if (charactersFound == 0)
 		{
 			replyMSG2 = "s. Please try again.";
 		}
-		else if (CharactersFound > 20)
+		else if (charactersFound > 20)
 		{
 			adminReply.replace("%number%", " more than 20");
 			replyMSG2 = "s.<br>Please refine your search to see all of the results.";
 		}
-		else if (CharactersFound == 1)
+		else if (charactersFound == 1)
 		{
 			replyMSG2 = ".";
 		}
@@ -1281,7 +1281,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			replyMSG2 = "s.";
 		}
 		
-		adminReply.replace("%number%", String.valueOf(CharactersFound));
+		adminReply.replace("%number%", String.valueOf(charactersFound));
 		adminReply.replace("%end%", replyMSG2);
 		activeChar.sendPacket(adminReply);
 	}

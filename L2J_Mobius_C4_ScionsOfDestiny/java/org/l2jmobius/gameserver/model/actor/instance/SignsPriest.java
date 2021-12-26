@@ -466,7 +466,7 @@ public class SignsPriest extends Folk
 					{
 						convertCount = Integer.parseInt(command.substring(19).trim());
 					}
-					catch (Exception NumberFormatException)
+					catch (Exception e)
 					{
 						player.sendMessage("You must enter an integer amount.");
 						break;

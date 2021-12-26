@@ -45,7 +45,7 @@ public class DimensionMakkum extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		final Instance world = getPlayer(player);
+		final Instance world = getPlayerInstance(player);
 		switch (event)
 		{
 			case "enter_instance":

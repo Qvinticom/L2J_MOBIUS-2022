@@ -436,7 +436,7 @@ public class InstanceManager implements IXmlReader
 	 * @param isInside when {@code true} find world where player is currently located, otherwise find world where player can enter
 	 * @return instance if found, otherwise {@code null}
 	 */
-	public Instance getPlayer(Player player, boolean isInside)
+	public Instance getPlayerInstance(Player player, boolean isInside)
 	{
 		for (Instance instance : _instanceWorlds.values())
 		{

@@ -68,7 +68,7 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 			packet.writeS(player.getName());
 			packet.writeD(player.getClassId().getId());
 			packet.writeD(player.getLevel());
-			final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
+			final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 			packet.writeD((instance != null) && (instance.getTemplateId() >= 0) ? instance.getTemplateId() : -1);
 			final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
 			packet.writeD(instanceTimes.size());

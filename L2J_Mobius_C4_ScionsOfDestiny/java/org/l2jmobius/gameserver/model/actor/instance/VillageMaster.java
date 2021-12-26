@@ -236,7 +236,7 @@ public class VillageMaster extends Folk
 					paramOne = Integer.parseInt(command.substring(11, endIndex).trim());
 				}
 			}
-			catch (Exception NumberFormatException)
+			catch (Exception e)
 			{
 			}
 			

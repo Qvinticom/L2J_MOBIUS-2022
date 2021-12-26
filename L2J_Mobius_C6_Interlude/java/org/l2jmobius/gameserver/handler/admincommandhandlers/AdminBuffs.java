@@ -197,15 +197,15 @@ public class AdminBuffs implements IAdminCommandHandler
 		activeChar.sendPacket(ms);
 	}
 	
-	private void removeBuff(Player remover, String playername, int SkillId)
+	private void removeBuff(Player remover, String playername, int skillId)
 	{
 		final Player player = World.getInstance().getPlayer(playername);
-		if ((player != null) && (SkillId > 0))
+		if ((player != null) && (skillId > 0))
 		{
 			final Effect[] effects = player.getAllEffects().toArray(new Effect[0]);
 			for (Effect e : effects)
 			{
-				if ((e != null) && (e.getSkill().getId() == SkillId))
+				if ((e != null) && (e.getSkill().getId() == skillId))
 				{
 					e.exit(true);
 					remover.sendMessage("Removed " + e.getSkill().getName() + " level " + e.getSkill().getLevel() + " from " + playername);

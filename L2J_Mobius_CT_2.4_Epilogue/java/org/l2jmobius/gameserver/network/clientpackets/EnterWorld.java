@@ -582,15 +582,15 @@ public class EnterWorld implements IClientIncomingPacket
 		if (birthday == 0)
 		{
 			final QuestState qs = player.getQuestState("CharacterBirthday");
-			String NextBirthday = null;
+			String nextBirthday = null;
 			if (qs != null)
 			{
-				NextBirthday = qs.get("Birthday");
+				nextBirthday = qs.get("Birthday");
 			}
 			
 			final Calendar now = Calendar.getInstance();
 			now.setTimeInMillis(Chronos.currentTimeMillis());
-			if ((NextBirthday == null) || (Integer.parseInt(NextBirthday) == now.get(Calendar.YEAR)))
+			if ((nextBirthday == null) || (Integer.parseInt(nextBirthday) == now.get(Calendar.YEAR)))
 			{
 				player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
 				player.sendPacket(new ExBirthdayPopup());

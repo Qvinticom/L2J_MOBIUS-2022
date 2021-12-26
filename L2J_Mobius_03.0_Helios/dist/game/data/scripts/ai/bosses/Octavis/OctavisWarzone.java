@@ -138,7 +138,7 @@ public class OctavisWarzone extends AbstractInstance
 			}
 			case "reenterInstance":
 			{
-				final Instance activeInstance = getPlayer(player);
+				final Instance activeInstance = getPlayerInstance(player);
 				if (isInInstance(activeInstance))
 				{
 					enterInstance(player, npc, activeInstance.getTemplateId());

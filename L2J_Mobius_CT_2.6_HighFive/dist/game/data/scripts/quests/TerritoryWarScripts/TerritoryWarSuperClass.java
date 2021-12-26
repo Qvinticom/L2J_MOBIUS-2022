@@ -443,33 +443,33 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private void handleStepsForHonor(Player player)
 	{
-		final QuestState _sfh = player.getQuestState(Q00176_StepsForHonor.class.getSimpleName());
-		if ((_sfh != null) && _sfh.isStarted())
+		final QuestState q176 = player.getQuestState(Q00176_StepsForHonor.class.getSimpleName());
+		if ((q176 != null) && q176.isStarted())
 		{
-			final int cond = _sfh.getCond();
+			final int cond = q176.getCond();
 			if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 7))
 			{
-				final int kills = _sfh.getInt("kills") + 1;
-				_sfh.set("kills", kills);
+				final int kills = q176.getInt("kills") + 1;
+				q176.set("kills", kills);
 				if ((cond == 1) && (kills >= 9))
 				{
-					_sfh.setCond(2);
-					_sfh.set("kills", "0");
+					q176.setCond(2);
+					q176.set("kills", "0");
 				}
 				else if ((cond == 3) && (kills >= 18))
 				{
-					_sfh.setCond(4);
-					_sfh.set("kills", "0");
+					q176.setCond(4);
+					q176.set("kills", "0");
 				}
 				else if ((cond == 5) && (kills >= 27))
 				{
-					_sfh.setCond(6);
-					_sfh.set("kills", "0");
+					q176.setCond(6);
+					q176.set("kills", "0");
 				}
 				else if ((cond == 7) && (kills >= 36))
 				{
-					_sfh.setCond(8);
-					_sfh.unset("kills");
+					q176.setCond(8);
+					q176.unset("kills");
 				}
 			}
 		}

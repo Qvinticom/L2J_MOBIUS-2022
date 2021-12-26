@@ -46,7 +46,7 @@ public class Lydia extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, Player player)
 	{
 		String htmltext = null;
-		final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
+		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 		if ((instance != null) && ((instance.getTemplateId() == OCTAVIS_TEMPLATE_ID) || (instance.getTemplateId() == OCTAVIS_EXTREME_TEMPLATE_ID)))
 		{
 			htmltext = "Lydia-02.html";

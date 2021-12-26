@@ -101,14 +101,14 @@ public class GameServerTable
 	
 	private void loadRSAKeys() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException
 	{
-		final KeyPairGenerator _keyGen = KeyPairGenerator.getInstance("RSA");
+		final KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
 		final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
-		_keyGen.initialize(spec);
+		keyGen.initialize(spec);
 		
 		_keyPairs = new KeyPair[KEYS_SIZE];
 		for (int i = 0; i < 10; i++)
 		{
-			_keyPairs[i] = _keyGen.generateKeyPair();
+			_keyPairs[i] = keyGen.generateKeyPair();
 		}
 		
 		LOGGER.info("Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
@@ -192,11 +192,11 @@ public class GameServerTable
 		}
 	}
 	
-	public GameServerThread getGameServerThread(int ServerID)
+	public GameServerThread getGameServerThread(int serverId)
 	{
 		for (GameServer gs : _gameServerList)
 		{
-			if (gs.serverId == ServerID)
+			if (gs.serverId == serverId)
 			{
 				return gs.gst;
 			}
@@ -204,11 +204,11 @@ public class GameServerTable
 		return null;
 	}
 	
-	public int getGameServerStatus(int ServerID)
+	public int getGameServerStatus(int serverId)
 	{
 		for (GameServer gs : _gameServerList)
 		{
-			if (gs.serverId == ServerID)
+			if (gs.serverId == serverId)
 			{
 				return gs.status;
 			}

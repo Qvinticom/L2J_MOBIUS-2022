@@ -405,7 +405,7 @@ public class GameStatusThread extends Thread
 					{
 						_print.println("Please Enter * amount of seconds to shutdown!");
 					}
-					catch (Exception NumberFormatException)
+					catch (Exception e)
 					{
 						_print.println("Numbers Only!");
 					}
@@ -423,7 +423,7 @@ public class GameStatusThread extends Thread
 					{
 						_print.println("Please Enter * amount of seconds to restart!");
 					}
-					catch (Exception NumberFormatException)
+					catch (Exception e)
 					{
 						_print.println("Numbers Only!");
 					}

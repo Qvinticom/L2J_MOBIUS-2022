@@ -80,13 +80,13 @@ public class SoulShots implements IItemHandler
 		}
 		
 		// Consume Soul shots if player has enough of them
-		int SSCount = weaponItem.getSoulShotCount();
+		int count = weaponItem.getSoulShotCount();
 		if ((weaponItem.getReducedSoulShot() > 0) && (Rnd.get(100) < weaponItem.getReducedSoulShotChance()))
 		{
-			SSCount = weaponItem.getReducedSoulShot();
+			count = weaponItem.getReducedSoulShot();
 		}
 		
-		if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
+		if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), count, null, false))
 		{
 			if (!player.disableAutoShot(itemId))
 			{

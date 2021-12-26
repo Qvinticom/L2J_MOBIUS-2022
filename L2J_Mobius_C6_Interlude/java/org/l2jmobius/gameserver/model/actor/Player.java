@@ -12803,11 +12803,11 @@ public class Player extends Playable
 		}
 	}
 	
-	public void broadcastSnoop(ChatType _chatType, String name, String text, CreatureSay cs)
+	public void broadcastSnoop(ChatType chatType, String name, String text, CreatureSay cs)
 	{
 		if (!_snoopListener.isEmpty())
 		{
-			final Snoop sn = new Snoop(this, _chatType, name, text);
+			final Snoop sn = new Snoop(this, chatType, name, text);
 			for (Player pci : _snoopListener)
 			{
 				if (pci != null)

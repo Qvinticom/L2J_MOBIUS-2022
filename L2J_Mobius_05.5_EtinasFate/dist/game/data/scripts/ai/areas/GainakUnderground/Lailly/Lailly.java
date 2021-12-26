@@ -64,7 +64,7 @@ public class Lailly extends AbstractNpcAI
 			}
 			case "okay":
 			{
-				final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
+				final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 				if ((instance != null) && (instance.getEndTime() > Chronos.currentTimeMillis()))
 				{
 					switch (instance.getTemplateId())

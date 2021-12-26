@@ -386,8 +386,8 @@ public class Race extends Event
 	
 	private void winRace(Player player)
 	{
-		final int[] _reward = _rewards[getRandom(_rewards.length - 1)];
-		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);
+		final int[] reward = _rewards[getRandom(_rewards.length - 1)];
+		player.addItem("eventModRace", reward[0], reward[1], _npc, true);
 		Broadcast.toAllOnlinePlayers(player.getName() + " is a winner!");
 		eventStop();
 	}

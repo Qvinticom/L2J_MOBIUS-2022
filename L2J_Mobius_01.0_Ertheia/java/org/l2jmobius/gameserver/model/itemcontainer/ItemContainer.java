@@ -421,12 +421,12 @@ public abstract class ItemContainer
 	 */
 	public Item detachItem(String process, int itemObjectId, long count, ItemLocation newLocation, Player actor, Object reference)
 	{
-		final Item Item = getItemByObjectId(itemObjectId);
-		if (Item == null)
+		final Item item = getItemByObjectId(itemObjectId);
+		if (item == null)
 		{
 			return null;
 		}
-		return detachItem(process, Item, count, newLocation, actor, reference);
+		return detachItem(process, item, count, newLocation, actor, reference);
 	}
 	
 	/**

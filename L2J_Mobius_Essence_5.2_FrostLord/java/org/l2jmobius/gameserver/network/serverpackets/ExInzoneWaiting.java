@@ -38,7 +38,7 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 	
 	public ExInzoneWaiting(Player player, boolean hide)
 	{
-		final Instance instance = InstanceManager.getInstance().getPlayer(player, false);
+		final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
 		_currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
 		_instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player);
 		_hide = hide;

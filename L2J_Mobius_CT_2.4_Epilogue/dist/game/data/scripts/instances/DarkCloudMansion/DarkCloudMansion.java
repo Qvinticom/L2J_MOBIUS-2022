@@ -965,8 +965,8 @@ public class DarkCloudMansion extends AbstractInstance
 			}
 			if (world.getStatus() == 4)
 			{
-				final DMCRoom SecondRoom = world.getParameters().getObject("SecondRoom", DMCRoom.class);
-				for (DMCNpc mob : SecondRoom.npcList)
+				final DMCRoom secondRoom = world.getParameters().getObject("SecondRoom", DMCRoom.class);
+				for (DMCNpc mob : secondRoom.npcList)
 				{
 					if (mob.golem == npc)
 					{
