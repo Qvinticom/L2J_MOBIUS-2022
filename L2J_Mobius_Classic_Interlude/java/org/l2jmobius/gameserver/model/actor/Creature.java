@@ -2686,9 +2686,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				info = new UserInfo(getActingPlayer(), false);
 				info.addComponentType(UserInfoType.SLOTS, UserInfoType.ENCHANTLEVEL);
 			}
-			for (Stat stat : changed)
+			if (info != null)
 			{
-				if (info != null)
+				for (Stat stat : changed)
 				{
 					switch (stat)
 					{
