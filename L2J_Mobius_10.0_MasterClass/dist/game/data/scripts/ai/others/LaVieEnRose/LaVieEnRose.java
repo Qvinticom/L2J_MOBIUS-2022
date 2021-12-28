@@ -133,6 +133,12 @@ public class LaVieEnRose extends AbstractNpcAI
 			return false;
 		}
 		
+		if (player.isDeathKnight())
+		{
+			player.sendPacket(SystemMessageId.DEATH_KNIGHT_CLASSES_ARE_UNAVAILABLE);
+			return false;
+		}
+		
 		// player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_BEAUTY_SHOP_AS_THE_NPC_SERVER_IS_CURRENTLY_NOT_IN_FUNCTION);
 		// player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_BEAUTY_SHOP_WHILE_USING_THE_AUTOMATIC_REPLACEMENT);
 		return true;
