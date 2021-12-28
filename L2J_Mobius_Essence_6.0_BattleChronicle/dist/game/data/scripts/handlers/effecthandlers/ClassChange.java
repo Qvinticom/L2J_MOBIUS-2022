@@ -152,6 +152,13 @@ public class ClassChange extends AbstractEffect
 					}
 				}
 			}
+			
+			// Fix Death Knight model animation.
+			if (player.isDeathKnight())
+			{
+				player.transform(101, false);
+				ThreadPool.schedule(() -> player.stopTransformation(false), 50);
+			}
 		}, 500);
 	}
 }

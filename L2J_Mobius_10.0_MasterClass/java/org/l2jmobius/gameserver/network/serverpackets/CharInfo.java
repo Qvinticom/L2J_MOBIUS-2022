@@ -130,7 +130,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeS(_player.getAppearance().getVisibleName()); // Confirmed
 		packet.writeH(_player.getRace().ordinal()); // Confirmed
 		packet.writeC(_player.getAppearance().isFemale() ? 1 : 0); // Confirmed
-		packet.writeD(_player.getBaseTemplate().getClassId().getRootClassId().getId());
+		packet.writeD(_player.isDeathKnight() && _player.isSubClassActive() ? 0 : _player.getBaseTemplate().getClassId().getRootClassId().getId());
 		
 		for (int slot : getPaperdollOrder())
 		{

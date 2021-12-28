@@ -30,7 +30,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
@@ -424,15 +426,30 @@ public class AdminEditChar implements IAdminCommandHandler
 						player.getAppearance().setFemale();
 					}
 					
-					// Death Knight sex check.
-					if ((classidval >= 212) && (classidval <= 216))
+					// Death Knight checks.
+					if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, classidval))
 					{
-						player.setDeathKnight(true);
 						player.getAppearance().setMale();
+						if (!player.isDeathKnight() && !player.isSubClassActive())
+						{
+							player.setDeathKnight(true);
+							
+							// Fix Death Knight model animation.
+							player.transform(101, false);
+							ThreadPool.schedule(() -> player.stopTransformation(false), 50);
+						}
 					}
 					else
 					{
-						player.setDeathKnight(false);
+						// Fix Death Knight model animation.
+						if (player.isDeathKnight() && !player.isSubClassActive())
+						{
+							player.setDeathKnight(false);
+							
+							// Fix Death Knight model animation.
+							player.transform(101, false);
+							ThreadPool.schedule(() -> player.stopTransformation(false), 50);
+						}
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();

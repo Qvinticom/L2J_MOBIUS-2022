@@ -31,7 +31,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
@@ -411,21 +413,23 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					// Death Knight checks.
-					if ((classidval >= 196) && (classidval <= 207))
+					if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, classidval))
 					{
-						player.setDeathKnight(true);
 						player.getAppearance().setMale();
+						if (!player.isDeathKnight())
+						{
+							player.setDeathKnight(true);
+						}
 					}
 					else
 					{
-						player.setDeathKnight(false);
+						if (player.isDeathKnight())
+						{
+							player.setDeathKnight(false);
+						}
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-					// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-					// {
-					// SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
-					// }
 					player.store(false);
 					player.broadcastUserInfo();
 					player.sendSkillList();
