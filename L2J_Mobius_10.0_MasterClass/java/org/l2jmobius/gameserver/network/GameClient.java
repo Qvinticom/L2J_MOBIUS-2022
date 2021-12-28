@@ -46,11 +46,16 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
+import org.l2jmobius.gameserver.network.serverpackets.AbnormalStatusUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
+import org.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.security.SecondaryPasswordAuth;
 import org.l2jmobius.gameserver.util.FloodProtectors;
@@ -222,27 +227,36 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return;
 		}
 		
-		// TODO: Set as parameter to packets used?
-		if (Config.MULTILANG_ENABLE && (_player != null))
+		if (_player != null)
 		{
-			final String lang = _player.getLang();
-			if ((lang != null) && !lang.equals("en"))
+			// Avoid flood from class change.
+			if (_player.isChangingClass() && ((packet instanceof SkillList) || (packet instanceof AcquireSkillList) || (packet instanceof ExUserInfoAbnormalVisualEffect) || (packet instanceof AbnormalStatusUpdate) || (packet instanceof ExAbnormalStatusUpdateFromTarget)))
 			{
-				if (packet instanceof SystemMessage)
+				return;
+			}
+			
+			// TODO: Set as parameter to packets used?
+			if (Config.MULTILANG_ENABLE)
+			{
+				final String lang = _player.getLang();
+				if ((lang != null) && !lang.equals("en"))
 				{
-					((SystemMessage) packet).setLang(lang);
-				}
-				else if (packet instanceof NpcSay)
-				{
-					((NpcSay) packet).setLang(lang);
-				}
-				else if (packet instanceof ExShowScreenMessage)
-				{
-					((ExShowScreenMessage) packet).setLang(lang);
-				}
-				else if (packet instanceof NpcInfo)
-				{
-					((NpcInfo) packet).setLang(lang);
+					if (packet instanceof SystemMessage)
+					{
+						((SystemMessage) packet).setLang(lang);
+					}
+					else if (packet instanceof NpcSay)
+					{
+						((NpcSay) packet).setLang(lang);
+					}
+					else if (packet instanceof ExShowScreenMessage)
+					{
+						((ExShowScreenMessage) packet).setLang(lang);
+					}
+					else if (packet instanceof NpcInfo)
+					{
+						((NpcInfo) packet).setLang(lang);
+					}
 				}
 			}
 		}

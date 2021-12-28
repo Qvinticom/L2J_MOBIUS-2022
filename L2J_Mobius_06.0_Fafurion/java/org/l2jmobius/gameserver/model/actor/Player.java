@@ -2523,6 +2523,8 @@ public class Player extends Playable
 		{
 			_subclassLock = false;
 			getStat().recalculateStats(false);
+			updateAbnormalVisualEffects();
+			sendSkillList();
 		}
 	}
 	
@@ -9601,6 +9603,8 @@ public class Player extends Playable
 		{
 			_subclassLock = false;
 			getStat().recalculateStats(false);
+			updateAbnormalVisualEffects();
+			sendSkillList();
 		}
 	}
 	
@@ -9697,6 +9701,8 @@ public class Player extends Playable
 		{
 			_subclassLock = false;
 			getStat().recalculateStats(false);
+			updateAbnormalVisualEffects();
+			sendSkillList();
 		}
 		
 		return addSubClass(newClassId, classIndex, isDualClass);
@@ -9968,6 +9974,8 @@ public class Player extends Playable
 		{
 			_subclassLock = false;
 			getStat().recalculateStats(false);
+			updateAbnormalVisualEffects();
+			sendSkillList();
 		}
 	}
 	
