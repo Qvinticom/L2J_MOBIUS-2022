@@ -32,6 +32,7 @@ public class ExShowUsm implements IClientOutgoingPacket
 	public static final ExShowUsm USM_Q015_E = new ExShowUsm(15); // Chamber of Prophecies instance
 	public static final ExShowUsm ERTHEIA_INTRO_FOR_ERTHEIA = new ExShowUsm(147);
 	public static final ExShowUsm ERTHEIA_INTRO_FOR_OTHERS = new ExShowUsm(148);
+	public static final ExShowUsm ANTHARAS_INTRO = new ExShowUsm(149);
 	
 	private final int _videoId;
 	

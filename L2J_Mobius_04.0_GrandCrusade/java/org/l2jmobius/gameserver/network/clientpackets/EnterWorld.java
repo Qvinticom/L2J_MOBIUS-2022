@@ -443,17 +443,12 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Friend list
 		player.sendPacket(new L2FriendList(player));
-		if (Config.SHOW_GOD_VIDEO_INTRO && player.getVariables().getBoolean("intro_god_video", false))
+		
+		// Intro video.
+		if (Config.SHOW_INTRO_VIDEO && player.getVariables().hasVariable(PlayerVariables.INTRO_VIDEO))
 		{
-			player.getVariables().remove("intro_god_video");
-			if (player.getRace() == Race.ERTHEIA)
-			{
-				player.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_ERTHEIA);
-			}
-			else
-			{
-				player.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
-			}
+			player.getVariables().remove(PlayerVariables.INTRO_VIDEO);
+			player.sendPacket(player.getRace() == Race.ERTHEIA ? ExShowUsm.ERTHEIA_INTRO_FOR_ERTHEIA : ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
 		}
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);

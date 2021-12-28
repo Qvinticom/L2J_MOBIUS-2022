@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.data.xml.BeautyShopData;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -71,6 +70,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -467,16 +467,15 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Friend list
 		player.sendPacket(new L2FriendList(player));
-		if (Config.SHOW_GOD_VIDEO_INTRO && player.getVariables().getBoolean("intro_god_video", false))
+		
+		// Intro video.
+		if (Config.SHOW_INTRO_VIDEO && player.getVariables().hasVariable(PlayerVariables.INTRO_VIDEO))
 		{
-			player.getVariables().remove("intro_god_video");
-			if (player.getRace() == Race.ERTHEIA)
+			player.getVariables().remove(PlayerVariables.INTRO_VIDEO);
+			player.sendPacket(player.isDeathKnight() ? ExShowUsm.DEATH_KNIGHT_INTRO : ExShowUsm.ANTHARAS_INTRO);
+			if (!Config.DISABLE_TUTORIAL)
 			{
-				player.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_ERTHEIA);
-			}
-			else
-			{
-				player.sendPacket(ExShowUsm.ERTHEIA_INTRO_FOR_OTHERS);
+				ThreadPool.schedule(() -> player.sendPacket(new ExShowScreenMessage(NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName())), player.isDeathKnight() ? 30000 : 15000);
 			}
 		}
 		

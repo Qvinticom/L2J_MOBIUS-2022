@@ -40,6 +40,7 @@ public class PlayerVariables extends AbstractVariables
 	
 	// Public variable names
 	public static final String INSTANCE_ORIGIN = "INSTANCE_ORIGIN";
+	public static final String INTRO_VIDEO = "INTRO_VIDEO";
 	public static final String HAIR_ACCESSORY_VARIABLE_NAME = "HAIR_ACCESSORY_ENABLED";
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_USED";
 	public static final String VITALITY_ITEMS_USED_VARIABLE_NAME = "VITALITY_ITEMS_USED";

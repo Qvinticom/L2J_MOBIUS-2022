@@ -313,7 +313,7 @@ public class Config
 	public static boolean STORE_UI_SETTINGS;
 	public static String[] FORBIDDEN_NAMES;
 	public static boolean SILENCE_MODE_EXCLUDE;
-	public static boolean SHOW_GOD_VIDEO_INTRO;
+	public static boolean SHOW_INTRO_VIDEO;
 	
 	// --------------------------------------------------
 	// Castle Settings
@@ -2004,7 +2004,7 @@ public class Config
 			STORE_UI_SETTINGS = characterConfig.getBoolean("StoreCharUiSettings", true);
 			FORBIDDEN_NAMES = characterConfig.getString("ForbiddenNames", "").split(",");
 			SILENCE_MODE_EXCLUDE = characterConfig.getBoolean("SilenceModeExclude", false);
-			SHOW_GOD_VIDEO_INTRO = characterConfig.getBoolean("GoDVideoIntro", true);
+			SHOW_INTRO_VIDEO = characterConfig.getBoolean("ShowIntroVideo", true);
 			PLAYER_MOVEMENT_BLOCK_TIME = characterConfig.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ABILITY_POINTS_RESET_SP = characterConfig.getLong("AbilityPointsResetSP", 500000000);
 			

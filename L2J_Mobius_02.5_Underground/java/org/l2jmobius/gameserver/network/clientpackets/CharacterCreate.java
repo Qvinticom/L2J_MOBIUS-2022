@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import org.l2jmobius.gameserver.model.item.PlayerItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -325,9 +326,9 @@ public class CharacterCreate implements IClientIncomingPacket
 		
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
 		newChar.setOnlineStatus(true, false);
-		if (Config.SHOW_GOD_VIDEO_INTRO)
+		if (Config.SHOW_INTRO_VIDEO)
 		{
-			newChar.getVariables().set("intro_god_video", true);
+			newChar.getVariables().set(PlayerVariables.INTRO_VIDEO, true);
 		}
 		Disconnection.of(client, newChar).storeMe().deleteMe();
 		
