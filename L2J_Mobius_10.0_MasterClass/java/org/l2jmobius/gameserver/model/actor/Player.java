@@ -6765,7 +6765,7 @@ public class Player extends Playable
 					{
 						player._activeClass = activeClassId;
 					}
-					if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getBaseClass()))
+					if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getBaseTemplate().getClassId().getId()))
 					{
 						player._isDeathKnight = true;
 					}
