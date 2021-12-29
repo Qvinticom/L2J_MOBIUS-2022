@@ -844,7 +844,10 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
+		</abnormalTime>
 		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -879,7 +882,10 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
+		</abnormalTime>
 		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -922,7 +928,10 @@
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="5">60</value>
+			<value fromLevel="5" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
+		</abnormalTime>
 		<reuseDelay>180000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -986,7 +995,10 @@
 			<value level="1">96</value>
 			<value level="2">108</value>
 		</mpConsume>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="2">15</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 0.5)}</value>
+		</abnormalTime>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1020,7 +1032,10 @@
 			<value level="1">96</value>
 			<value level="2">108</value>
 		</mpConsume>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="2">15</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 0.5)}</value>
+		</abnormalTime>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1060,7 +1075,10 @@
 			<value level="1">96</value>
 			<value level="2">108</value>
 		</mpConsume>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="2">15</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 0.5)}</value>
+		</abnormalTime>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1137,7 +1155,10 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.05</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -1181,7 +1202,10 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.05</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -1276,7 +1300,10 @@
 					<value level="8">1.10</value>
 					<value level="9">1.10</value>
 				</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>
 					<value fromLevel="1" toLevel="6">0.98</value>
@@ -1313,7 +1340,10 @@
 			<value level="8">51</value>
 			<value level="9">53</value>
 		</mpConsume>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="9">600</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
+		</castRange>
 		<hitTime>2280</hitTime>
 		<coolTime>1000</coolTime>
 		<nextAction>ATTACK</nextAction>
@@ -1369,7 +1399,10 @@
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="6">600</value>
+			<value fromLevel="5" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
+		</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -1740,11 +1773,14 @@
 			</item>
 		</attachSkillList>
 		<effects>
-			<effect name="GetAgro" />
-			<effect name="AddHate">
-				<power>
-					<value level="1">1050350</value>
-				</power>
+			<effect name="PhysicalAttack">
+				<pAtkMod>1.30</pAtkMod>
+				<criticalChance>
+					<value fromLevel="1" toLevel="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
+				<overHit>true</overHit>
+				<pDefMod>0.8</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1761,7 +1797,7 @@
 		<coolTime>300</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<affectLimit>20-30</affectLimit>
-		<effectPoint>-5000</effectPoint>
+		<effectPoint>-167</effectPoint>
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<reuseDelay>30000</reuseDelay>
@@ -1773,20 +1809,18 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.30</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
 			</effect>
 			<effect name="GetAgro" />
 			<effect name="AddHate">
-				<power>50000</power>
-			</effect>
-			<effect name="HateAttack">
-				<amount>50000</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="TargetCancel">
-				<chance>20</chance>
+				<power>
+					<value level="1">1050350</value>
+				</power>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>30</chance>
@@ -1830,7 +1864,10 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.30</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.8</pDefMod>
 			</effect>
@@ -1914,7 +1951,10 @@
 					<value level="5">1.28</value>
 					<value level="6">1.30</value>
 				</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="6">5</value>
+					<value fromLevel="5" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.7</pDefMod>
 			</effect>
@@ -1957,7 +1997,10 @@
 			<value level="8">228</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="9">600</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
+		</castRange>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
 		<coolTime>300</coolTime>
