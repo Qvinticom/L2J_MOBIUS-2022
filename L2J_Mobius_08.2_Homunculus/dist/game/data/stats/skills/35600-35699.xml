@@ -462,7 +462,6 @@
 	</skill>
 	<skill id="35612" toLevel="11" name="Enchantment Effect: Angel's Ring">
 		<!-- Obstruction Resistance +$s1. -->
-	<!-- Obstruction Resistance +10% -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2445,11 +2444,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -2480,11 +2479,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -2515,11 +2514,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -2550,11 +2549,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -2585,11 +2584,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
-			<amount>3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -3508,15 +3507,17 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
-				<value level="1">2</value>
-				<value level="2">3</value>
-				<value level="3">4</value>
-				<value level="4">5</value>
-				<value level="5">6</value>
-				<value level="6">7</value>
-				<value level="7">8</value>
-				<value level="8">9</value>
-				<value level="9">10</value>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+					<value level="7">8</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -3527,12 +3528,14 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
-				<value level="6">6</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3543,12 +3546,14 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
-				<value level="6">6</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3559,12 +3564,14 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
-				<value level="6">6</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3575,11 +3582,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VitalityExpRate">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -3589,11 +3598,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -3603,11 +3614,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3618,11 +3631,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillMasteryRate">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3633,11 +3648,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalRate">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3648,11 +3665,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3663,11 +3682,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalDamage">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3678,11 +3699,13 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
-				<value level="1">1</value>
-				<value level="2">2</value>
-				<value level="3">3</value>
-				<value level="4">4</value>
-				<value level="5">5</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
