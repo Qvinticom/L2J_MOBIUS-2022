@@ -137,7 +137,7 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="27787" level="5" /> <!-- Sayha's Talisman Lv.5 -->
-			<skill id="27789" level="1" /> <!-- Sayha's Grace -->
+			<skill id="27789" level="1" /> <!-- Sayha's Grace Lv. 1 -->
 		</skills>
 	</item>
 	<item id="47812" name="Sayha's Talisman Lv. 6" type="Armor">
@@ -154,8 +154,8 @@
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27787" level="6" /> <!-- Sayha's Talisman Lv.6 -->
-			<skill id="27789" level="1" /> <!-- Sayha's Grace -->
-			<skill id="27790" level="1" /> <!-- Sayha's Encouragement -->
+			<skill id="27789" level="1" /> <!-- Sayha's Grace Lv. 1 -->
+			<skill id="27790" level="1" /> <!-- Sayha's Encouragement Lv. 1 -->
 		</skills>
 	</item>
 	<item id="47813" name="Sayha's Talisman Lv. 7" type="Armor">
@@ -172,9 +172,9 @@
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27787" level="7" /> <!-- Sayha's Talisman Lv.7 -->
-			<skill id="27789" level="1" /> <!-- Sayha's Grace -->
-			<skill id="27790" level="1" /> <!-- Sayha's Encouragement -->
-			<skill id="27791" level="1" /> <!-- Sayha's Anger -->
+			<skill id="27789" level="1" /> <!-- Sayha's Grace Lv. 1 -->
+			<skill id="27790" level="1" /> <!-- Sayha's Encouragement Lv. 1 -->
+			<skill id="27791" level="1" /> <!-- Sayha's Anger Lv. 1 -->
 		</skills>
 	</item>
 	<item id="47814" name="Sayha's Talisman Lv. 8" type="Armor">
@@ -191,10 +191,10 @@
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27787" level="8" /> <!-- Sayha's Talisman Lv.8 -->
-			<skill id="27789" level="2" /> <!-- Sayha's Grace -->
-			<skill id="27790" level="2" /> <!-- Sayha's Encouragement -->
-			<skill id="27791" level="2" /> <!-- Sayha's Anger -->
-			<skill id="27792" level="1" /> <!-- Sayha's Support -->
+			<skill id="27789" level="2" /> <!-- Sayha's Grace Lv. 2 -->
+			<skill id="27790" level="2" /> <!-- Sayha's Encouragement Lv. 2 -->
+			<skill id="27791" level="2" /> <!-- Sayha's Anger Lv. 2 -->
+			<skill id="27792" level="1" /> <!-- Sayha's Support Lv. 1 -->
 		</skills>
 	</item>
 	<item id="47815" name="Sayha's Talisman Lv. 9" type="Armor">
@@ -211,10 +211,10 @@
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27787" level="9" /> <!-- Sayha's Talisman Lv.9 -->
-			<skill id="27789" level="3" /> <!-- Sayha's Grace -->
-			<skill id="27790" level="3" /> <!-- Sayha's Encouragement -->
-			<skill id="27791" level="3" /> <!-- Sayha's Anger -->
-			<skill id="27792" level="2" /> <!-- Sayha's Support -->
+			<skill id="27789" level="3" /> <!-- Sayha's Grace Lv. 3 -->
+			<skill id="27790" level="3" /> <!-- Sayha's Encouragement Lv. 3 -->
+			<skill id="27791" level="3" /> <!-- Sayha's Anger Lv. 3 -->
+			<skill id="27792" level="2" /> <!-- Sayha's Support Lv. 2 -->
 		</skills>
 	</item>
 	<item id="47816" name="Sayha's Talisman Lv. 10" type="Armor">
@@ -231,10 +231,10 @@
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27787" level="10" /> <!-- Sayha's Talisman Lv.10 -->
-			<skill id="27789" level="4" /> <!-- Sayha's Grace -->
-			<skill id="27790" level="4" /> <!-- Sayha's Encouragement -->
-			<skill id="27791" level="4" /> <!-- Sayha's Anger -->
-			<skill id="27792" level="3" /> <!-- Sayha's Support -->
+			<skill id="27789" level="4" /> <!-- Sayha's Grace Lv. 4 -->
+			<skill id="27790" level="4" /> <!-- Sayha's Encouragement Lv. 4 -->
+			<skill id="27791" level="4" /> <!-- Sayha's Anger Lv. 4 -->
+			<skill id="27792" level="3" /> <!-- Sayha's Support Lv. 4 -->
 		</skills>
 	</item>
 	<item id="47817" name="Sayha's Talisman Pack" type="EtcItem">
@@ -247,7 +247,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
+			<item id="47807" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="47818" name="Dimensional Bracelet Pack Lv. 6" type="EtcItem">
@@ -692,6 +692,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18793" level="1" /> <!-- Spellbook: Vitality of the Exalted Lv. 1 -->
 		</skills>
