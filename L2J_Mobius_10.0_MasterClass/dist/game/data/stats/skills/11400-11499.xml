@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11400" toLevel="30" name="Forgotten Power - Physical Attack">
+	<skill id="11400" toLevel="31" name="Forgotten Power - Physical Attack">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill11400</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -38,6 +38,7 @@
 					<value level="28">18</value>
 					<value level="29">19</value>
 					<value level="30">20</value>
+					<value level="31">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -63,6 +64,7 @@
 					<value level="28">13</value>
 					<value level="29">14</value>
 					<value level="30">15</value>
+					<value level="31">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -78,12 +80,41 @@
 					<value level="28">8</value>
 					<value level="29">9</value>
 					<value level="30">10</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11401" toLevel="30" name="Forgotten Power - Magic Attack">
+	<skill id="11401" toLevel="31" name="Forgotten Power - Magic Attack">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.skill11401</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -121,6 +152,7 @@
 					<value level="28">18</value>
 					<value level="29">19</value>
 					<value level="30">20</value>
+					<value level="31">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -146,6 +178,7 @@
 					<value level="28">13</value>
 					<value level="29">14</value>
 					<value level="30">15</value>
+					<value level="31">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -161,12 +194,34 @@
 					<value level="28">8</value>
 					<value level="29">9</value>
 					<value level="30">10</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11402" toLevel="30" name="Forgotten Power - Armor Defense">
+	<skill id="11402" toLevel="31" name="Forgotten Power - Armor Defense">
 		<!-- P./ M. Def. +$s1. -->
 		<icon>icon.skill11402</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -203,7 +258,7 @@
 					<value level="27">17</value>
 					<value level="28">18</value>
 					<value level="29">19</value>
-					<value level="30">20</value>
+					<value level="31">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -239,6 +294,7 @@
 					<value level="28">18</value>
 					<value level="29">19</value>
 					<value level="30">20</value>
+					<value level="31">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -264,6 +320,7 @@
 					<value level="28">-13</value>
 					<value level="29">-14</value>
 					<value level="30">-15</value>
+					<value level="31">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -279,6 +336,7 @@
 					<value level="28">-8</value>
 					<value level="29">-9</value>
 					<value level="30">-10</value>
+					<value level="31">-10</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
@@ -295,6 +353,7 @@
 					<value level="28">-8</value>
 					<value level="29">-9</value>
 					<value level="30">-10</value>
+					<value level="31">-10</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -311,13 +370,20 @@
 					<value level="28">-8</value>
 					<value level="29">-9</value>
 					<value level="30">-10</value>
+					<value level="31">-10</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">10</value>
+				</amount>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="11403" toLevel="30" name="Forgotten Power - Vitalizing">
+	<skill id="11403" toLevel="31" name="Forgotten Power - Vitalizing">
 		<!-- Vitality bonus +$s1. -->
 		<icon>icon.skill11403</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -355,6 +421,7 @@
 					<value level="28">18</value>
 					<value level="29">19</value>
 					<value level="30">20</value>
+					<value level="31">20</value>
 				</amount>
 			</effect>
 			<effect name="VitalityPointsRate">
@@ -379,6 +446,7 @@
 					<value level="28">-13</value>
 					<value level="29">-14</value>
 					<value level="30">-15</value>
+					<value level="31">-15</value>
 				</amount>
 			</effect>
 			<effect name="ExpModify">
@@ -393,11 +461,12 @@
 					<value level="28">8</value>
 					<value level="29">9</value>
 					<value level="30">10</value>
+					<value level="31">40</value>
 				</amount>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11404" toLevel="30" name="Forgotten Power - Elemental Guard">
+	<skill id="11404" toLevel="31" name="Forgotten Power - Elemental Guard">
 		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.skill11404</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -435,6 +504,7 @@
 					<value level="28">140</value>
 					<value level="29">145</value>
 					<value level="30">150</value>
+					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>
 				<attribute>FIRE</attribute>
@@ -471,6 +541,7 @@
 					<value level="28">140</value>
 					<value level="29">145</value>
 					<value level="30">150</value>
+					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>
 				<attribute>WATER</attribute>
@@ -507,6 +578,7 @@
 					<value level="28">140</value>
 					<value level="29">145</value>
 					<value level="30">150</value>
+					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>
 				<attribute>WIND</attribute>
@@ -543,6 +615,7 @@
 					<value level="28">140</value>
 					<value level="29">145</value>
 					<value level="30">150</value>
+					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>
 				<attribute>EARTH</attribute>
@@ -579,6 +652,7 @@
 					<value level="28">140</value>
 					<value level="29">145</value>
 					<value level="30">150</value>
+					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>
 				<attribute>HOLY</attribute>
@@ -614,7 +688,7 @@
 					<value level="27">135</value>
 					<value level="28">140</value>
 					<value level="29">145</value>
-					<value level="30">150</value>
+					<value level="31">220</value>
 				</amount>
 				<mode>DIFF</mode>
 				<attribute>DARK</attribute>
@@ -641,6 +715,7 @@
 					<value level="28">90</value>
 					<value level="29">95</value>
 					<value level="30">100</value>
+					<value level="31">170</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -656,6 +731,7 @@
 					<value level="28">8</value>
 					<value level="29">9</value>
 					<value level="30">10</value>
+					<value level="31">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -671,6 +747,7 @@
 					<value level="28">8</value>
 					<value level="29">9</value>
 					<value level="30">10</value>
+					<value level="31">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
