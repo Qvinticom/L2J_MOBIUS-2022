@@ -13698,6 +13698,10 @@ public class Player extends Playable
 	 */
 	public int getVisualHair()
 	{
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, getClassId().getId()))
+		{
+			return _appearance.getHairStyle();
+		}
 		return getVariables().getInt("visualHairId", _appearance.getHairStyle());
 	}
 	
@@ -13706,6 +13710,10 @@ public class Player extends Playable
 	 */
 	public int getVisualHairColor()
 	{
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, getClassId().getId()))
+		{
+			return _appearance.getHairColor();
+		}
 		return getVariables().getInt("visualHairColorId", _appearance.getHairColor());
 	}
 	
@@ -13714,6 +13722,10 @@ public class Player extends Playable
 	 */
 	public int getVisualFace()
 	{
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, getClassId().getId()))
+		{
+			return _appearance.getFace();
+		}
 		return getVariables().getInt("visualFaceId", _appearance.getFace());
 	}
 	

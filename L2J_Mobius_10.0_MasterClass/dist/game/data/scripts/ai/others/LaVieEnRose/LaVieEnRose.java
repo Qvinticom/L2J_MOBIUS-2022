@@ -16,6 +16,8 @@
  */
 package ai.others.LaVieEnRose;
 
+import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -133,7 +135,7 @@ public class LaVieEnRose extends AbstractNpcAI
 			return false;
 		}
 		
-		if (player.isDeathKnight())
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getClassId().getId()))
 		{
 			player.sendPacket(SystemMessageId.DEATH_KNIGHT_CLASSES_ARE_UNAVAILABLE);
 			return false;

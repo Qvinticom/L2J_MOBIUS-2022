@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
@@ -207,6 +209,10 @@ public class CharSelectInfoPackage
 	
 	public int getFace()
 	{
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, _classId))
+		{
+			return _face;
+		}
 		return _vars.getInt("visualFaceId", _face);
 	}
 	
@@ -217,6 +223,10 @@ public class CharSelectInfoPackage
 	
 	public int getHairColor()
 	{
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, _classId))
+		{
+			return _hairColor;
+		}
 		return _vars.getInt("visualHairColorId", _hairColor);
 	}
 	
@@ -227,6 +237,10 @@ public class CharSelectInfoPackage
 	
 	public int getHairStyle()
 	{
+		if (CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, _classId))
+		{
+			return _hairStyle;
+		}
 		return _vars.getInt("visualHairId", _hairStyle);
 	}
 	
