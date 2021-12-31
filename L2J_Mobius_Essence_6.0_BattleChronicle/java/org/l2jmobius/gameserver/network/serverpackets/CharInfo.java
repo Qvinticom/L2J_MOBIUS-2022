@@ -257,7 +257,7 @@ public class CharInfo implements IClientOutgoingPacket
 		}
 		
 		// Rank.
-		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : RankManager.getInstance().getPlayerClassRank(_player) == 1 ? 4 : 0);
+		packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
 		packet.writeH(0);
 		packet.writeC(0);
 		packet.writeD(_player.getClassId().getId());
