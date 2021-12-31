@@ -26,7 +26,9 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.VariationData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -42,6 +44,7 @@ import org.l2jmobius.gameserver.model.item.EtcItem;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.ActionType;
+import org.l2jmobius.gameserver.model.item.type.ArmorType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
@@ -205,6 +208,14 @@ public class UseItem implements IClientIncomingPacket
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
+			
+			// Prevent equip shields for Death Knight players.
+			if (item.isArmor() && (item.getArmorItem().getItemType() == ArmorType.SHIELD) && CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, player.getClassId().getId()))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return;
+			}
+			
 			// Prevent players to equip weapon while wearing combat flag
 			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
 			if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND))
