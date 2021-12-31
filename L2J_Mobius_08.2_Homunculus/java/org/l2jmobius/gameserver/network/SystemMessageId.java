@@ -17650,6 +17650,9 @@ public class SystemMessageId
 	@ClientString(id = 13136, message = "The enchant value is decreased by 1.")
 	public static SystemMessageId THE_ENCHANT_VALUE_IS_DECREASED_BY_1;
 	
+	@ClientString(id = 13146, message = "I can give you a good luck buff. Will you accept it? (It will cost you 7,000,000 adena.)")
+	public static SystemMessageId I_CAN_GIVE_YOU_A_GOOD_LUCK_BUFF_WILL_YOU_ACCEPT_IT_IT_WILL_COST_YOU_7_000_000_ADENA;
+	
 	@ClientString(id = 13213, message = "A new homunculus is created.")
 	public static SystemMessageId A_NEW_HOMUNCULUS_IS_CREATED;
 	
