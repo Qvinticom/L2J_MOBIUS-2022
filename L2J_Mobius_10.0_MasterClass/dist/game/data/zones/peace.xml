@@ -1029,4 +1029,10 @@
 	<zone name="corroded_fields_6" type="PeaceZone" shape="Cylinder" rad="300" minZ="-2000" maxZ="-4000"> <!-- Corroded Fields -->
 		<node X="81399" Y="226477" />
 	</zone>
+	<zone name="toi_middle" type="PeaceZone" shape="NPoly" minZ="-7000" maxZ="-16000"> <!-- Tower of Insolence (Middle Floor) -->
+		<node X="-146963" Y="21934" />
+		<node X="-146936" Y="20672" />
+		<node X="-148311" Y="20673" />
+		<node X="-148295" Y="21973" />
+	</zone>
 </list>
