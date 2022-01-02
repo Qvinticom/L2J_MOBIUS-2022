@@ -674,7 +674,24 @@
 	<skill id="32966" toLevel="2" name="Angel Lulu's Shining Luck">
 		<!-- By the will of Lulu, the Angel of Luck, LUC +$s1 for 10 sec. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32967" toLevel="2" name="Grace's Shining Luck">
 		<!-- By the will of Grace, the Goddess of Luck, LUC +$s1 for 10 sec. -->

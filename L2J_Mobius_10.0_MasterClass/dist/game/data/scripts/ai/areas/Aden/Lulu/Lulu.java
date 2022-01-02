@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.areas.Giran.Grace;
+package ai.areas.Aden.Lulu;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -37,38 +37,40 @@ import ai.AbstractNpcAI;
 /**
  * @author Index
  */
-public class Grace extends AbstractNpcAI
+public class Lulu extends AbstractNpcAI
 {
-	// NPC
-	private static final int GRACE = 34544;
+	// NPCs
+	private static final int LULU = 34545;
+	private static final int WAEL = 34546;
+	private static final int EILEEN = 34547;
 	// Skills
-	private static final SkillHolder GRACE_LUCK_LV1 = new SkillHolder(32967, 1);
-	private static final SkillHolder GRACE_LUCK_LV2 = new SkillHolder(32967, 2);
+	private static final SkillHolder LULU_LUCK_LV1 = new SkillHolder(32966, 1);
+	private static final SkillHolder LULU_LUCK_LV2 = new SkillHolder(32966, 2);
 	// Misc
 	private static final ConfirmDlg CONFIRM_DIALOG = new ConfirmDlg(SystemMessageId.I_CAN_GIVE_YOU_A_GOOD_LUCK_BUFF_WILL_YOU_ACCEPT_IT_IT_WILL_COST_YOU_7_000_000_ADENA);
 	private static final int ADENA_COST = 7000000;
 	private static final int BUFF_CHANCE = 30;
-	private static Npc _graceNpc;
+	private static Npc _luluNpc;
 	
-	private Grace()
+	private Lulu()
 	{
-		addStartNpc(GRACE);
-		addFirstTalkId(GRACE);
-		addTalkId(GRACE);
+		addStartNpc(LULU);
+		addFirstTalkId(LULU, WAEL, EILEEN);
+		addTalkId(LULU, WAEL, EILEEN);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
-		if (event.equals("GRACE_BLESSING") && (npc != null) && (npc.getId() == GRACE))
+		if (event.equals("LULU_BLESSING") && (npc != null) && (npc.getId() == LULU))
 		{
-			if ((_graceNpc != null) && _graceNpc.isDead())
+			if ((_luluNpc != null) && _luluNpc.isDead())
 			{
-				_graceNpc = null;
+				_luluNpc = null;
 			}
-			if ((_graceNpc == null) && !npc.isDead())
+			if ((_luluNpc == null) && !npc.isDead())
 			{
-				_graceNpc = npc;
+				_luluNpc = npc;
 			}
 			player.sendPacket(CONFIRM_DIALOG);
 		}
@@ -78,8 +80,13 @@ public class Grace extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, Player player)
 	{
-		player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/areas/Giran/Grace/34544.html")));
-		return null;
+		final int npcId = npc.getId();
+		if (npcId == LULU)
+		{
+			player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/areas/Aden/Lulu/34545.html")));
+			return null;
+		}
+		return npcId + ".html";
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_DLG_ANSWER)
@@ -102,30 +109,30 @@ public class Grace extends AbstractNpcAI
 			return;
 		}
 		
-		if (_graceNpc == null)
+		if (_luluNpc == null)
 		{
 			return;
 		}
 		
-		if (!World.getInstance().getVisibleObjects(player, Npc.class).contains(_graceNpc))
+		if (!World.getInstance().getVisibleObjects(player, Npc.class).contains(_luluNpc))
 		{
 			return;
 		}
 		
-		if (player.calculateDistance3D(_graceNpc) > Npc.INTERACTION_DISTANCE)
+		if (player.calculateDistance3D(_luluNpc) > Npc.INTERACTION_DISTANCE)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_TOO_FAR_FROM_THE_NPC_FOR_THAT_TO_WORK);
 			return;
 		}
 		
-		if (player.reduceAdena("Grace", ADENA_COST, _graceNpc, true))
+		if (player.reduceAdena("Lulu", ADENA_COST, _luluNpc, true))
 		{
-			SkillCaster.triggerCast(_graceNpc, player, Rnd.get(100) < BUFF_CHANCE ? GRACE_LUCK_LV2.getSkill() : GRACE_LUCK_LV1.getSkill());
+			SkillCaster.triggerCast(_luluNpc, player, Rnd.get(100) < BUFF_CHANCE ? LULU_LUCK_LV2.getSkill() : LULU_LUCK_LV1.getSkill());
 		}
 	}
 	
 	public static void main(String[] args)
 	{
-		new Grace();
+		new Lulu();
 	}
 }

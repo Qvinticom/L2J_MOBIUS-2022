@@ -18,6 +18,7 @@ package ai.areas.Giran.Grace;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -102,6 +103,11 @@ public class Grace extends AbstractNpcAI
 		}
 		
 		if (_graceNpc == null)
+		{
+			return;
+		}
+		
+		if (!World.getInstance().getVisibleObjects(player, Npc.class).contains(_graceNpc))
 		{
 			return;
 		}
