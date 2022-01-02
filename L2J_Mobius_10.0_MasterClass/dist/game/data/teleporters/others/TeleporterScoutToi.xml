@@ -3,8 +3,15 @@
 	<npc id="34549"> <!-- Teleporter Scout -->
 		<teleport type="OTHER">
 			<location x="-82014" y="16247" z="-15411" /> <!-- Tower of Insolence (1st Floor) -->
-			<location x="-82018" y="16241" z="-12920" /> <!-- Tower of Insolence (2st Floor) -->
-			<location x="-82018" y="16241" z="-10296" /> <!-- Tower of Insolence (3st Floor) -->
+			<location x="-82018" y="16241" z="-12920" /> <!-- Tower of Insolence (2nd Floor) -->
+			<location x="-82018" y="16241" z="-10296" /> <!-- Tower of Insolence (3rd Floor) -->
+		</teleport>
+	</npc>
+	<npc id="34594">
+		<teleport type="OTHER">
+			<location x="-147664" y="21384" z="-14517" /> <!-- Tower of Insolence (4th Floor) -->
+			<location x="-147643" y="21347" z="-12021" /> <!-- Tower of Insolence (5th Floor) -->
+			<location x="-147643" y="21372" z="-9398" /> <!-- Tower of Insolence (6th Floor) -->
 		</teleport>
 	</npc>
 </list>
