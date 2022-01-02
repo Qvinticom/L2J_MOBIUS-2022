@@ -609,7 +609,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39657" toLevel="1" name="Tower of Insolence's Prolongation Stone">
+	<skill id="39657" toLevel="2" name="Tower of Insolence's Prolongation Stone">
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -627,7 +627,10 @@
 		</conditions>
 		<effects>
 			<effect name="AddHuntingTime">
-				<zoneId>8</zoneId>
+				<zoneId>
+					<value level="1">8</value>
+					<value level="2">9</value>
+				</zoneId>
 				<time>3600000</time>
 			</effect>
 		</effects>

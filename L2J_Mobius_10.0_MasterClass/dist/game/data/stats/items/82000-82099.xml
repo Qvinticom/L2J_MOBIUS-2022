@@ -284,10 +284,15 @@
 	<item id="82025" name="Tower of Insolence's Time Stone (Middle Floors)" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time in the Tower of Insolence (Middle Floors). Required level: 110+. -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39657" level="2" /> <!-- Tower of Insolence's Time Stone (Lower Floor) -->
+		</skills>
 	</item>
 	<item id="82026" name="Ultimate Death Knight C - Not Available" additionalName="Blue" type="Armor">
 		<!-- The item is not available. -->

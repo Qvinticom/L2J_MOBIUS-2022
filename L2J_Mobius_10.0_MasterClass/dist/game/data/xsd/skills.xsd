@@ -2109,7 +2109,25 @@
 															<xs:element name="mCritRateMode" type="xs:string" />
 															<xs:element name="DUALBLUNT" type="xs:unsignedByte" />
 															<xs:element name="percentTo" type="xs:unsignedByte" />
-															<xs:element name="zoneId" type="xs:unsignedByte" />
+															<xs:element name="zoneId">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:string">
+																						<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
+																						<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
+																						<xs:attribute name="fromSubLevel" type="xs:unsignedShort" use="optional" />
+																						<xs:attribute name="toSubLevel" type="xs:unsignedShort" use="optional" />
+																						<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="time" type="xs:unsignedInt" />
 														</xs:choice>
 													</xs:sequence>
