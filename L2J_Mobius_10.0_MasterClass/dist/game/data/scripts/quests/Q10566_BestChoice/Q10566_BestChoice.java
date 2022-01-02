@@ -16,6 +16,7 @@
  */
 package quests.Q10566_BestChoice;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -33,7 +34,7 @@ public class Q10566_BestChoice extends Quest
 	// NPC
 	private static final int HERPHAH = 34362;
 	// Misc
-	private static final int MIN_LEVEL = 95;
+	private static final int MIN_LEVEL = 100;
 	// Items
 	private static final int CERTIFICATE_SANTIAGO = 48173;
 	private static final int CERTIFICATE_RUPIO = 48174;
@@ -95,7 +96,14 @@ public class Q10566_BestChoice extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.hasPremiumStatus()) ? "34362-01.htm" : "34362-99.html";
+				if (Config.PREMIUM_SYSTEM_ENABLED)
+				{
+					htmltext = (player.hasPremiumStatus()) ? "34362-01.htm" : "34362-99.html";
+				}
+				else
+				{
+					htmltext = "34362-01.htm";
+				}
 				break;
 			}
 			case State.STARTED:
