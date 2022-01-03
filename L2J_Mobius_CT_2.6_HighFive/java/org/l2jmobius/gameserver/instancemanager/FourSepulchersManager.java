@@ -1040,7 +1040,7 @@ public class FourSepulchersManager
 		final Spawn spawnDat = _mysteriousBoxSpawns.get(npcId);
 		if (spawnDat != null)
 		{
-			_allMobs.add(spawnDat.doSpawn());
+			_allMobs.add(spawnDat.doSpawn(false));
 			spawnDat.stopRespawn();
 		}
 	}
@@ -1099,7 +1099,7 @@ public class FourSepulchersManager
 					keyBoxMobSpawn.setLocation(spawnDat);
 					keyBoxMobSpawn.setRespawnDelay(3600);
 					SpawnTable.getInstance().addNewSpawn(keyBoxMobSpawn, false);
-					mob = (SepulcherMonster) keyBoxMobSpawn.doSpawn();
+					mob = (SepulcherMonster) keyBoxMobSpawn.doSpawn(false);
 					keyBoxMobSpawn.stopRespawn();
 				}
 				catch (Exception e)
@@ -1209,7 +1209,7 @@ public class FourSepulchersManager
 			spawnDat.setXYZ(activeChar);
 			spawnDat.setHeading(activeChar.getHeading());
 			spawnDat.setRespawnDelay(3600);
-			_allMobs.add(spawnDat.doSpawn());
+			_allMobs.add(spawnDat.doSpawn(false));
 			spawnDat.stopRespawn();
 		}
 	}
@@ -1248,7 +1248,7 @@ public class FourSepulchersManager
 		
 		for (Spawn spawnDat : monsterList)
 		{
-			final SepulcherMonster mob = (SepulcherMonster) spawnDat.doSpawn();
+			final SepulcherMonster mob = (SepulcherMonster) spawnDat.doSpawn(false);
 			spawnDat.stopRespawn();
 			
 			if (mob != null)
