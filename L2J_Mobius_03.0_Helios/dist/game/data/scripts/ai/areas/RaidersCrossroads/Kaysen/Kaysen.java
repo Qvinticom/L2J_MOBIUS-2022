@@ -99,9 +99,17 @@ public class Kaysen extends AbstractNpcAI
 			{
 				if (player.calculateDistance3D(npc) < Npc.INTERACTION_DISTANCE)
 				{
+					if (npc.isScriptValue(1))
+					{
+						break;
+					}
+					npc.setScriptValue(1);
+					
 					if (Rnd.get(100) < REWARD_CHANCE)
 					{
-						player.addItem("Kaysen Reward", REWARD, player, true);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_THOUGHT_I_D_BE_A_PUSHOVER_DIDN_T_YOU);
+						giveItems(player, REWARD);
+						startQuestTimer("KAYSEN_DELETE", 3000, npc, null);
 					}
 					else
 					{
@@ -109,6 +117,12 @@ public class Kaysen extends AbstractNpcAI
 						startQuestTimer("KAYSEN_TRANSFORM", 3000, npc, null);
 					}
 				}
+				break;
+			}
+			case "KAYSEN_DELETE":
+			{
+				npc.deleteMe();
+				startQuestTimer("KAYSEN_RESPAWN", 3600000, npc, null);
 				break;
 			}
 			case "KAYSEN_TRANSFORM":
@@ -151,15 +165,19 @@ public class Kaysen extends AbstractNpcAI
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final Player player = killer.getActingPlayer();
-		if (Math.abs(player.getLevel() - npc.getLevel()) > 9)
+		final int diff = player.getLevel() - npc.getLevel();
+		if (diff > -9)
 		{
-			player.addExpAndSp(EXP_REWARD / 40, 0);
+			if (diff > 9)
+			{
+				player.addExpAndSp(EXP_REWARD / diff, 0);
+			}
+			else
+			{
+				player.addExpAndSp(EXP_REWARD, 0);
+			}
+			player.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_OBTAINED_EXTRA_XP, ExShowScreenMessage.TOP_CENTER, 10000));
 		}
-		else
-		{
-			player.addExpAndSp(EXP_REWARD, 0);
-		}
-		player.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_HAVE_OBTAINED_EXTRA_XP, ExShowScreenMessage.TOP_CENTER, 10000));
 		return super.onKill(npc, killer, isSummon);
 	}
 	
