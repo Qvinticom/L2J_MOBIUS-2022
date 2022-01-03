@@ -16,13 +16,18 @@
  */
 package ai.others.GameAssistant;
 
-import java.util.Collection;
 import java.util.HashMap;
 
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -40,6 +45,8 @@ public class GameAssistant extends AbstractNpcAI
 {
 	// NPC
 	private static final int MERCHANT = 32478; // Game Assistant
+	// Multisells
+	private static final int HEIR_SHARDS = 324780016;
 	// Items
 	private static final int MINION_COUPON = 13273; // Minion Coupon (5-hour)
 	private static final int MINION_COUPON_EV = 13383; // Minion Coupon (5-hour) (Event)
@@ -47,9 +54,8 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int SUP_MINION_COUPON_EV = 14074; // Superior Minion Coupon (Event) - 5-hour
 	private static final int ENH_MINION_COUPON = 20914; // Enhanced Rose Spirit Coupon (5-hour)
 	private static final int ENH_MINION_COUPON_EV = 22240; // Enhanced Rose Spirit Coupon (5-hour) - Event
-	private static final int NOBLE_UPG_STONE = 48212; // Noble Upgrade Stone
-	private static final int RADIANT_UPG_STONE = 48213; // Radiant Upgrade Stone
 	// Others
+	private static final String COMMAND_BYPASS = "Quest GameAssistant ";
 	private static final HashMap<String, Integer> MINION_EXCHANGE = new HashMap<>();
 	static
 	{
@@ -69,18 +75,6 @@ public class GameAssistant extends AbstractNpcAI
 		MINION_EXCHANGE.put("lilias", 20918); // Enhanced Rose Necklace: Lilias
 		MINION_EXCHANGE.put("lapham", 20919); // Enhanced Rose Necklace: Lapham
 		MINION_EXCHANGE.put("mafum", 20920); // Enhanced Rose Necklace: Mafum
-	}
-	private static final HashMap<String, Integer> CIRCLET_EXCHANGE = new HashMap<>();
-	static
-	{
-		// Normal
-		CIRCLET_EXCHANGE.put("warrior", 48202); // Warrior's Circlet
-		CIRCLET_EXCHANGE.put("wizard", 48205); // Wizard's Circlet
-		CIRCLET_EXCHANGE.put("knight", 48208); // Knight's Circlet
-		// Noble
-		CIRCLET_EXCHANGE.put("nobleWarrior", 48203); // Noble Warrior's Circlet
-		CIRCLET_EXCHANGE.put("nobleWizard", 48206); // Noble Wizard's Circlet
-		CIRCLET_EXCHANGE.put("nobleKnight", 48209); // Noble Knight's Circlet
 	}
 	
 	private GameAssistant()
@@ -118,11 +112,21 @@ public class GameAssistant extends AbstractNpcAI
 			case "32478-19.html":
 			case "32478-20.html":
 			case "32478-21.html":
-			case "32478-22.html":
 			{
 				htmltext = event;
 				break;
 			}
+			case "Chat_Event":
+			{
+				htmltext = "32478-button1.html";
+				break;
+			}
+			case "Chat_HeirShards":
+			{
+				MultisellData.getInstance().separateAndSend(HEIR_SHARDS, player, null, false);
+				break;
+			}
+			case "Chat_ClaimItemsShop":
 			case "getDimensonalItem":
 			{
 				if (player.getPremiumItemList().isEmpty())
@@ -160,16 +164,7 @@ public class GameAssistant extends AbstractNpcAI
 				htmltext = giveMinion(player, event, ENH_MINION_COUPON, ENH_MINION_COUPON_EV);
 				break;
 			}
-			case "warrior":
-			case "wizard":
-			case "knight":
-			case "nobleWarrior":
-			case "nobleWizard":
-			case "nobleKnight":
-			{
-				htmltext = giveCircletStone(player, event);
-				break;
-			}
+			case "Chat_ItemsTransfer":
 			case "package_deposit":
 			{
 				if (player.getAccountChars().size() < 1)
@@ -182,6 +177,7 @@ public class GameAssistant extends AbstractNpcAI
 				}
 				break;
 			}
+			case "Chat_ClaimItemsTransfer":
 			case "package_withdraw":
 			{
 				final PlayerFreight freight = player.getFreight();
@@ -231,53 +227,15 @@ public class GameAssistant extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private String giveCircletStone(Player player, String event)
+	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerBypass(OnPlayerBypass event)
 	{
-		String htmltext = null;
-		final int circletId = CIRCLET_EXCHANGE.get(event);
-		final Collection<Item> circletNum = player.getInventory().getAllItemsByItemId(circletId);
-		final Collection<Item> enchCircletNum = player.getInventory().getAllItemsByItemId(circletId, 5);
-		if (circletNum.size() == enchCircletNum.size())
+		final Player player = event.getPlayer();
+		if (event.getCommand().startsWith(COMMAND_BYPASS))
 		{
-			switch (enchCircletNum.size())
-			{
-				case 0:
-				default:
-				{
-					htmltext = "32478-21b.html";
-					break;
-				}
-				case 1:
-				{
-					switch (circletId)
-					{
-						case 48202: // Warrior's Circlet
-						case 48205: // Wizard's Circlet
-						case 48208: // Knight's Circlet
-						{
-							takeItems(player, circletId, 1);
-							giveItems(player, NOBLE_UPG_STONE, 1);
-							break;
-						}
-						case 48203: // Noble Warrior's Circlet
-						case 48206: // Noble Wizard's Circlet
-						case 48209: // Noble Knight's Circlet
-						{
-							takeItems(player, circletId, 1);
-							giveItems(player, RADIANT_UPG_STONE, 1);
-							break;
-						}
-					}
-					htmltext = "32478-21a.html";
-					break;
-				}
-			}
+			notifyEvent(event.getCommand().replace(COMMAND_BYPASS, ""), null, player);
 		}
-		else
-		{
-			htmltext = "32478-21b.html";
-		}
-		return htmltext;
 	}
 	
 	public static void main(String[] args)

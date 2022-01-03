@@ -64,7 +64,7 @@ public class ExOpenHtml implements IClientIncomingPacket
 			{
 				if (Config.GAME_ASSISTANT_ENABLED)
 				{
-					client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
+					client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478-button.html")));
 				}
 				break;
 			}

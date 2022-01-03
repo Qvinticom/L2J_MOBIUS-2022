@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>32478</npc> <!-- Game Assistant -->
+	</npcs>
+	<!-- Exchange Upgrade Stone -->
+	<item>
+		<ingredient id="48212" count="2" /> <!-- Circlet Upgrade Stone -->
+		<production id="80839" count="1" /> <!-- Crystal of Dawn -->
+	</item>
+	<item>
+		<ingredient id="48495" count="1" /> <!-- Noble Leather Upgrade Stone -->
+		<production id="80839" count="6" /> <!-- Crystal of Dawn -->
+	</item>
+	<item>
+		<ingredient id="48213" count="1" /> <!-- Radiant Circlet Upgrade Stone -->
+		<production id="80839" count="6" /> <!-- Crystal of Dawn -->
+	</item>
+	<item>
+		<ingredient id="48496" count="1" /> <!-- Radiant Rind Upgrade Stone -->
+		<production id="80839" count="11" /> <!-- Crystal of Dawn -->
+	</item>
+</list>
