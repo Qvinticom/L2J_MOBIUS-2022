@@ -786,7 +786,13 @@ public class Q11025_PathOfDestinyProving extends Quest
 			return;
 		}
 		
+		// Fix for player killed skeleton and Telesha disappears.
 		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(13))
+		{
+			qs.setCond(12, false);
+		}
+		
 		if (Config.DISABLE_TUTORIAL || ((qs != null) && qs.isCompleted()))
 		{
 			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
