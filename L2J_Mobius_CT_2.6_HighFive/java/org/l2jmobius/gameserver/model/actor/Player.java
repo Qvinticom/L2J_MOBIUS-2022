@@ -10044,68 +10044,55 @@ public class Player extends Playable
 	 */
 	public boolean modifySubClass(int classIndex, int newClassId)
 	{
-		if (_subclassLock)
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
+			PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
+			PreparedStatement deleteSkillReuse = con.prepareStatement(DELETE_SKILL_SAVE);
+			PreparedStatement deleteSkills = con.prepareStatement(DELETE_CHAR_SKILLS);
+			PreparedStatement deleteSubclass = con.prepareStatement(DELETE_CHAR_SUBCLASS))
 		{
+			// Remove all henna info stored for this sub-class.
+			deleteHennas.setInt(1, getObjectId());
+			deleteHennas.setInt(2, classIndex);
+			deleteHennas.execute();
+			
+			// Remove all shortcuts info stored for this sub-class.
+			deleteShortcuts.setInt(1, getObjectId());
+			deleteShortcuts.setInt(2, classIndex);
+			deleteShortcuts.execute();
+			
+			// Remove all effects info stored for this sub-class.
+			deleteSkillReuse.setInt(1, getObjectId());
+			deleteSkillReuse.setInt(2, classIndex);
+			deleteSkillReuse.execute();
+			
+			// Remove all skill info stored for this sub-class.
+			deleteSkills.setInt(1, getObjectId());
+			deleteSkills.setInt(2, classIndex);
+			deleteSkills.execute();
+			
+			// Remove all basic info stored about this sub-class.
+			deleteSubclass.setInt(1, getObjectId());
+			deleteSubclass.setInt(2, classIndex);
+			deleteSubclass.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
+			
+			// This must be done in order to maintain data consistency.
+			getSubClasses().remove(classIndex);
 			return false;
 		}
-		_subclassLock = true;
 		
-		try
+		// Notify to scripts before class is removed.
+		if (!getSubClasses().isEmpty()) // also null check
 		{
-			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
-				PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
-				PreparedStatement deleteSkillReuse = con.prepareStatement(DELETE_SKILL_SAVE);
-				PreparedStatement deleteSkills = con.prepareStatement(DELETE_CHAR_SKILLS);
-				PreparedStatement deleteSubclass = con.prepareStatement(DELETE_CHAR_SUBCLASS))
-			{
-				// Remove all henna info stored for this sub-class.
-				deleteHennas.setInt(1, getObjectId());
-				deleteHennas.setInt(2, classIndex);
-				deleteHennas.execute();
-				
-				// Remove all shortcuts info stored for this sub-class.
-				deleteShortcuts.setInt(1, getObjectId());
-				deleteShortcuts.setInt(2, classIndex);
-				deleteShortcuts.execute();
-				
-				// Remove all effects info stored for this sub-class.
-				deleteSkillReuse.setInt(1, getObjectId());
-				deleteSkillReuse.setInt(2, classIndex);
-				deleteSkillReuse.execute();
-				
-				// Remove all skill info stored for this sub-class.
-				deleteSkills.setInt(1, getObjectId());
-				deleteSkills.setInt(2, classIndex);
-				deleteSkills.execute();
-				
-				// Remove all basic info stored about this sub-class.
-				deleteSubclass.setInt(1, getObjectId());
-				deleteSubclass.setInt(2, classIndex);
-				deleteSubclass.execute();
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
-				
-				// This must be done in order to maintain data consistency.
-				getSubClasses().remove(classIndex);
-				return false;
-			}
-			
-			// Notify to scripts before class is removed.
-			if (!getSubClasses().isEmpty()) // also null check
-			{
-				final int classId = getSubClasses().get(classIndex).getClassId();
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
-			}
-			
-			getSubClasses().remove(classIndex);
+			final int classId = getSubClasses().get(classIndex).getClassId();
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
 		}
-		finally
-		{
-			_subclassLock = false;
-		}
+		
+		getSubClasses().remove(classIndex);
 		
 		return addSubClass(newClassId, classIndex);
 	}

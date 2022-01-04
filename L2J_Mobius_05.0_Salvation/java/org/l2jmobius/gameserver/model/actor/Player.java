@@ -9613,90 +9613,74 @@ public class Player extends Playable
 	 */
 	public boolean modifySubClass(int classIndex, int newClassId, boolean isDualClass)
 	{
-		if (_subclassLock)
+		// Notify to scripts before class is removed.
+		if (!getSubClasses().isEmpty()) // also null check
+		{
+			final int classId = getSubClasses().get(classIndex).getClassId();
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
+		}
+		
+		final SubClassHolder subClass = getSubClasses().get(classIndex);
+		if (subClass == null)
 		{
 			return false;
 		}
-		_subclassLock = true;
 		
-		try
+		if (subClass.isDualClass())
 		{
-			// Notify to scripts before class is removed.
-			if (!getSubClasses().isEmpty()) // also null check
+			getVariables().remove(PlayerVariables.ABILITY_POINTS_DUAL_CLASS);
+			getVariables().remove(PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS);
+			int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+			if (revelationSkill != 0)
 			{
-				final int classId = getSubClasses().get(classIndex).getClassId();
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
+				removeSkill(revelationSkill);
 			}
-			
-			final SubClassHolder subClass = getSubClasses().get(classIndex);
-			if (subClass == null)
+			revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+			if (revelationSkill != 0)
 			{
-				return false;
-			}
-			
-			if (subClass.isDualClass())
-			{
-				getVariables().remove(PlayerVariables.ABILITY_POINTS_DUAL_CLASS);
-				getVariables().remove(PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS);
-				int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
-				if (revelationSkill != 0)
-				{
-					removeSkill(revelationSkill);
-				}
-				revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
-				if (revelationSkill != 0)
-				{
-					removeSkill(revelationSkill);
-				}
-			}
-			
-			// Remove after stats are recalculated.
-			getSubClasses().remove(classIndex);
-			
-			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
-				PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
-				PreparedStatement deleteSkillReuse = con.prepareStatement(DELETE_SKILL_SAVE);
-				PreparedStatement deleteSkills = con.prepareStatement(DELETE_CHAR_SKILLS);
-				PreparedStatement deleteSubclass = con.prepareStatement(DELETE_CHAR_SUBCLASS))
-			{
-				// Remove all henna info stored for this sub-class.
-				deleteHennas.setInt(1, getObjectId());
-				deleteHennas.setInt(2, classIndex);
-				deleteHennas.execute();
-				
-				// Remove all shortcuts info stored for this sub-class.
-				deleteShortcuts.setInt(1, getObjectId());
-				deleteShortcuts.setInt(2, classIndex);
-				deleteShortcuts.execute();
-				
-				// Remove all effects info stored for this sub-class.
-				deleteSkillReuse.setInt(1, getObjectId());
-				deleteSkillReuse.setInt(2, classIndex);
-				deleteSkillReuse.execute();
-				
-				// Remove all skill info stored for this sub-class.
-				deleteSkills.setInt(1, getObjectId());
-				deleteSkills.setInt(2, classIndex);
-				deleteSkills.execute();
-				
-				// Remove all basic info stored about this sub-class.
-				deleteSubclass.setInt(1, getObjectId());
-				deleteSubclass.setInt(2, classIndex);
-				deleteSubclass.execute();
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
-				return false;
+				removeSkill(revelationSkill);
 			}
 		}
-		finally
+		
+		// Remove after stats are recalculated.
+		getSubClasses().remove(classIndex);
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
+			PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
+			PreparedStatement deleteSkillReuse = con.prepareStatement(DELETE_SKILL_SAVE);
+			PreparedStatement deleteSkills = con.prepareStatement(DELETE_CHAR_SKILLS);
+			PreparedStatement deleteSubclass = con.prepareStatement(DELETE_CHAR_SUBCLASS))
 		{
-			_subclassLock = false;
-			getStat().recalculateStats(false);
-			updateAbnormalVisualEffects();
-			sendSkillList();
+			// Remove all henna info stored for this sub-class.
+			deleteHennas.setInt(1, getObjectId());
+			deleteHennas.setInt(2, classIndex);
+			deleteHennas.execute();
+			
+			// Remove all shortcuts info stored for this sub-class.
+			deleteShortcuts.setInt(1, getObjectId());
+			deleteShortcuts.setInt(2, classIndex);
+			deleteShortcuts.execute();
+			
+			// Remove all effects info stored for this sub-class.
+			deleteSkillReuse.setInt(1, getObjectId());
+			deleteSkillReuse.setInt(2, classIndex);
+			deleteSkillReuse.execute();
+			
+			// Remove all skill info stored for this sub-class.
+			deleteSkills.setInt(1, getObjectId());
+			deleteSkills.setInt(2, classIndex);
+			deleteSkills.execute();
+			
+			// Remove all basic info stored about this sub-class.
+			deleteSubclass.setInt(1, getObjectId());
+			deleteSubclass.setInt(2, classIndex);
+			deleteSubclass.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
+			return false;
 		}
 		
 		return addSubClass(newClassId, classIndex, isDualClass);
