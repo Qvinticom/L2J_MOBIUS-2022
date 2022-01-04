@@ -84,22 +84,29 @@ public class InstanceWorld
 	
 	public void removeAllowed(Player player)
 	{
-		final Integer playerId = player.getId();
-		_allowed.remove(playerId);
+		_allowed.remove(player.getObjectId());
 	}
 	
+	/**
+	 * Add player who can enter to instance.
+	 * @param player player instance
+	 */
 	public void addAllowed(Player player)
 	{
-		final Integer playerId = player.getId();
-		if (!_allowed.contains(playerId))
+		if (!_allowed.contains(player.getObjectId()))
 		{
-			_allowed.add(playerId);
+			_allowed.add(player.getObjectId());
 		}
 	}
 	
+	/**
+	 * Check if player can enter to instance.
+	 * @param player player itself
+	 * @return {@code true} when can enter, otherwise {@code false}
+	 */
 	public boolean isAllowed(Player player)
 	{
-		return _allowed.contains(player.getId());
+		return _allowed.contains(player.getObjectId());
 	}
 	
 	/**
