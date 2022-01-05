@@ -265,6 +265,7 @@ public enum AbnormalType
 	PK_DEBUFF2(-1),
 	ERATON(-1),
 	DK_AURA(-1),
+	SPIRIT_ALTAR(-1),
 	AB_HAWK_EYE(0),
 	ALL_ATTACK_DOWN(1),
 	ALL_ATTACK_UP(2),
@@ -574,7 +575,8 @@ public enum AbnormalType
 	EVAS_DEBUFF(601),
 	RIGHT_SIDESTEP(602),
 	HONEY_BEER(603),
-	GLOWING_DRAGON_POTION(604);
+	GLOWING_DRAGON_POTION(604),
+	DWARF_GOLEM(605);
 	
 	private int _clientId;
 	

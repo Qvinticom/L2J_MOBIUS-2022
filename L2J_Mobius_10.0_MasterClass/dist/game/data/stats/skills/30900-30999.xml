@@ -739,9 +739,18 @@
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
 		<magicLevel>1</magicLevel>
-		<operateType>T</operateType>
+		<operateType>A5</operateType>
+		<abnormalType>DK_AURA</abnormalType>		
 		<reuseDelay>5000</reuseDelay>
+		<staticReuse>true</staticReuse>		
 		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelayGroup>30946</reuseDelayGroup>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>30947</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30947" toLevel="1" name="Aura of Restraint - Demonstration">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -753,10 +762,19 @@
 		<icon>icon.skill30948</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
-		<magicLevel>1</magicLevel>
-		<operateType>T</operateType>
+		<magicLevel>85</magicLevel>
+		<operateType>A5</operateType>
+		<abnormalType>DK_AURA</abnormalType>		
 		<reuseDelay>5000</reuseDelay>
+		<staticReuse>true</staticReuse>		
 		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelayGroup>30946</reuseDelayGroup>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>30949</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30949" toLevel="1" name="Aura of Fury - Demonstration">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -774,7 +792,7 @@
 			<value level="5">42</value>
 		</mpConsume>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalType>DK_AURA</abnormalType>
+		<abnormalType>SPIRIT_ALTAR</abnormalType>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
@@ -1010,11 +1028,11 @@
 		<attachSkillList>
 			<item>
 				<requiredSkillId>30946</requiredSkillId> <!-- Aura of Restraint -->
-				<skillId>30955</skillId> <!-- Hell Slash (Restraint) -->
+				<skillId>30955</skillId> <!-- Mocking Resilience (Restraint) -->
 			</item>
 			<item>
 				<requiredSkillId>30948</requiredSkillId> <!-- Aura of Fury -->
-				<skillId>30956</skillId> <!-- Hell Slash (Fury) -->
+				<skillId>30956</skillId> <!-- Mocking Resilience (Fury) -->
 			</item>
 		</attachSkillList>
 	</skill>
@@ -1531,6 +1549,7 @@
 			<value level="8">147</value>
 			<value level="9">151</value>
 		</mpConsume>
+		<effectPoint>-167</effectPoint>
 		<castRange>40</castRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -1542,16 +1561,44 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<attachSkillList>
 			<item>
 				<requiredSkillId>30946</requiredSkillId> <!-- Aura of Restraint -->
-				<skillId>30964</skillId> <!-- Hell Slash (Restraint) -->
+				<skillId>30964</skillId> <!-- Hellfire (Restraint) -->
 			</item>
 			<item>
 				<requiredSkillId>30948</requiredSkillId> <!-- Aura of Fury -->
-				<skillId>30965</skillId> <!-- Hell Slash (Fury) -->
+				<skillId>30965</skillId> <!-- Hellfire (Fury) -->
 			</item>
 		</attachSkillList>
+		<effects>
+			<effect name="PhysicalAttack">
+				<pAtkMod>
+					<value level="1">1.10</value>
+					<value level="2">1.12</value>
+					<value level="3">1.14</value>
+					<value level="4">1.16</value>
+					<value level="5">1.18</value>
+					<value level="6">1.21</value>
+					<value level="7">1.24</value>
+					<value level="8">1.27</value>
+					<value level="9">1.30</value>
+				</pAtkMod>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
+				<overHit>true</overHit>
+				<pDefMod>0.95</pDefMod>
+			</effect>
+			</effects>
 	</skill>
 	<skill id="30964" toLevel="9" name="Hellfire (Restraint)">
 		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
@@ -1581,6 +1628,7 @@
 			<value level="8">147</value>
 			<value level="9">151</value>
 		</mpConsume>
+		<effectPoint>-167</effectPoint>
 		<abnormalTime>10</abnormalTime>
 		<castRange>40</castRange>
 		<hitTime>2280</hitTime>
@@ -1593,6 +1641,13 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<pAtkMod>
@@ -1606,7 +1661,10 @@
 					<value level="8">1.27</value>
 					<value level="9">1.30</value>
 				</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.95</pDefMod>
 			</effect>
@@ -1695,6 +1753,7 @@
 			<value level="8">147</value>
 			<value level="9">151</value>
 		</mpConsume>
+		<effectPoint>-167</effectPoint>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1718,7 +1777,10 @@
 					<value level="8">1.27</value>
 					<value level="9">1.30</value>
 				</pAtkMod>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 				<pDefMod>0.90</pDefMod>
 			</effect>
@@ -1818,9 +1880,11 @@
 			</effect>
 			<effect name="GetAgro" />
 			<effect name="AddHate">
-				<power>
-					<value level="1">1050350</value>
-				</power>
+				<power>50000</power>
+			</effect>
+			<effect name="HateAttack">
+				<amount>50000</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>30</chance>
@@ -1862,6 +1926,10 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>30976</skillId> <!-- Hellbringer - Paralysis -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalAttack">
 				<pAtkMod>1.30</pAtkMod>
 				<criticalChance>
@@ -1963,10 +2031,6 @@
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 			</effect>
-			<effect name="CallSkill">
-				<skillId>30976</skillId> <!-- Hellbringer - Paralysis -->
-				<skillLevel>1</skillLevel>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="30971" toLevel="8" name="Furious Eruption">
@@ -1998,8 +2062,8 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>
-			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
+			<value fromLevel="1" toLevel="8">600</value>
+			<value fromLevel="8" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
@@ -2078,7 +2142,10 @@
 			<value level="9">155</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="9">600</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
+		</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
@@ -2280,7 +2347,7 @@
 			<effect name="PullBack">
 				<speed>500</speed>
 				<delay>2000</delay>
-				<type>THROW_UP</type>
+				<type>THROW_HORIZONTAL</type>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203;30516;35190</allowedSkills>
@@ -2326,7 +2393,7 @@
 		<icon>icon.skill30980</icon>
 		<mpConsume>44</mpConsume>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalType>DK_AURA</abnormalType>
+		<abnormalType>SPIRIT_ALTAR</abnormalType>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>NONE</basicProperty>
