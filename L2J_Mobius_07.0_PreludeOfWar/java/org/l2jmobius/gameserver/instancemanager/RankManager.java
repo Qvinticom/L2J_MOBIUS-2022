@@ -29,6 +29,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
@@ -248,6 +249,10 @@ public class RankManager
 	
 	public int getPlayerGlobalRank(Player player)
 	{
+		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		{
+			return 0;
+		}
 		final int playerOid = player.getObjectId();
 		for (Entry<Integer, StatSet> entry : _mainList.entrySet())
 		{
@@ -263,6 +268,10 @@ public class RankManager
 	
 	public int getPlayerRaceRank(Player player)
 	{
+		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		{
+			return 0;
+		}
 		final int playerOid = player.getObjectId();
 		for (StatSet stats : _mainList.values())
 		{
