@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
@@ -221,6 +222,13 @@ public class Joachim extends AbstractNpcAI
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					player.broadcastUserInfo();
+					
+					// Fix Death Knight model animation.
+					if (player.isDeathKnight())
+					{
+						player.transform(101, false);
+						ThreadPool.schedule(() -> player.stopTransformation(false), 50);
+					}
 					
 					// Item rewards
 					player.addItem("subclass", CHAOS_POMANDER_DUAL_CLASS, 2, player, true);
