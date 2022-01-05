@@ -375,11 +375,19 @@
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
-			<effect name="DamageShield">
+			<effect name="DamageByAttack">
 				<amount>
 					<value fromLevel="1" toLevel="30">0</value>
-					<value level="31">10</value>
+					<value level="31">15</value>
 				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value fromLevel="1" toLevel="30">0</value>
+					<value level="31">15</value>
+				</amount>
+				<type>ENEMY_ALL</type>
 			</effect>
 		</effects>
 	</skill>
