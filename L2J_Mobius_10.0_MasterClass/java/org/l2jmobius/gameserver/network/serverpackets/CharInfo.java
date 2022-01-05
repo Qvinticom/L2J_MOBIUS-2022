@@ -20,6 +20,8 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
@@ -132,8 +134,16 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(_player.getAppearance().isFemale() ? 1 : 0); // Confirmed
 		packet.writeD(_player.isDeathKnight() && _player.isSubClassActive() ? 0 : _player.getBaseTemplate().getClassId().getRootClassId().getId());
 		
+		final boolean isDeathKnightClass = CategoryData.getInstance().isInCategory(CategoryType.DEATH_KNIGHT_ALL_CLASS, _player.getClassId().getId());
 		for (int slot : getPaperdollOrder())
 		{
+			// Left hand items do not show on Death Knight characters.
+			if ((slot == Inventory.PAPERDOLL_LHAND) && isDeathKnightClass)
+			{
+				packet.writeD(0);
+				continue;
+			}
+			
 			packet.writeD(_player.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
 		}
 		
@@ -148,6 +158,13 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		for (int slot : getPaperdollOrderVisualId())
 		{
+			// Left hand items do not show on Death Knight characters.
+			if ((slot == Inventory.PAPERDOLL_LHAND) && isDeathKnightClass)
+			{
+				packet.writeD(0);
+				continue;
+			}
+			
 			packet.writeD(_player.getInventory().getPaperdollItemVisualId(slot));
 		}
 		

@@ -41,8 +41,9 @@ import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
  */
 public class ClassChange extends AbstractEffect
 {
-	private final int _index;
 	private static final int IDENTITY_CRISIS_SKILL_ID = 1570;
+	
+	private final int _index;
 	
 	public ClassChange(StatSet params)
 	{

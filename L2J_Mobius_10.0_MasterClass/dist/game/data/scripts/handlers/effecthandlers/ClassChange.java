@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.type.ArmorType;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -159,17 +157,9 @@ public class ClassChange extends AbstractEffect
 				}
 			}
 			
-			// Death Knight adjustments.
+			// Fix Death Knight model animation.
 			if (player.isDeathKnight())
 			{
-				// Unequip shield.
-				final Item lhand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-				if ((lhand != null) && lhand.isArmor() && (lhand.getItemType() == ArmorType.SHIELD))
-				{
-					player.disarmShield();
-				}
-				
-				// Fix Death Knight model animation.
 				player.transform(101, false);
 				ThreadPool.schedule(() -> player.stopTransformation(false), 50);
 			}
