@@ -738,9 +738,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		// Get the active weapon instance (always equipped in the right hand)
-		final Item weaponInst = getActiveWeaponInstance();
-		
 		// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
 		final Weapon weaponItem = getActiveWeaponItem();
 		if ((weaponItem != null) && (weaponItem.getItemType() == WeaponType.ROD))
@@ -849,6 +846,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			((Summon) this).getOwner().rechargeAutoSoulShot(true, false, true);
 		}
+		
+		// Get the active weapon instance (always equipped in the right hand)
+		final Item weaponInst = getActiveWeaponInstance();
 		
 		// Verify if soulshots are charged.
 		boolean wasSSCharged;
@@ -1132,15 +1132,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	private boolean doAttackHitByPole(Attack attack, int sAtk)
 	{
+		if (_target == null)
+		{
+			return false;
+		}
+		
 		boolean hitted = false;
 		double angleChar;
 		double angleTarget;
 		final int maxRadius = (int) getStat().calcStat(Stat.POWER_ATTACK_RANGE, 66, null, null);
 		final int maxAngleDiff = (int) getStat().calcStat(Stat.POWER_ATTACK_ANGLE, 120, null, null);
-		if (_target == null)
-		{
-			return false;
-		}
 		
 		angleTarget = Util.calculateAngleFrom(this, _target);
 		setHeading((int) ((angleTarget / 9.0) * 1610.0));
@@ -1280,7 +1281,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void doCast(Skill skill)
 	{
-		final Creature creature = this;
 		if (skill == null)
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
@@ -1312,14 +1312,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Can't use Hero and resurrect skills during Olympiad
-		if ((creature instanceof Player) && ((Player) creature).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
+		if ((this instanceof Player) && ((Player) this).isInOlympiadMode() && (skill.isHeroSkill() || (skill.getSkillType() == SkillType.RESURRECT)))
 		{
 			sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_GRAND_OLYMPIAD_GAMES_MATCH));
 			return;
 		}
 		
 		// Like L2OFF you can't use skills when you are attacking now
-		if ((creature instanceof Player) && !skill.isPotion())
+		if ((this instanceof Player) && !skill.isPotion())
 		{
 			final Item rhand = ((Player) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)) && isAttackingNow())
@@ -1361,29 +1361,29 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Recharge AutoSoulShot
 		if (skill.useSoulShot())
 		{
-			if (creature instanceof Player)
+			if (this instanceof Player)
 			{
-				((Player) creature).rechargeAutoSoulShot(true, false, false);
+				((Player) this).rechargeAutoSoulShot(true, false, false);
 			}
 			else if (this instanceof Summon)
 			{
-				((Summon) creature).getOwner().rechargeAutoSoulShot(true, false, true);
+				((Summon) this).getOwner().rechargeAutoSoulShot(true, false, true);
 			}
 		}
 		if (skill.useSpiritShot())
 		{
-			if (creature instanceof Player)
+			if (this instanceof Player)
 			{
-				((Player) creature).rechargeAutoSoulShot(false, true, false);
+				((Player) this).rechargeAutoSoulShot(false, true, false);
 			}
 			else if (this instanceof Summon)
 			{
-				((Summon) creature).getOwner().rechargeAutoSoulShot(false, true, true);
+				((Summon) this).getOwner().rechargeAutoSoulShot(false, true, true);
 			}
 		}
 		
 		// Get all possible targets of the skill in a table in function of the skill target type
-		final List<Creature> targets = skill.getTargetList(creature);
+		final List<Creature> targets = skill.getTargetList(this);
 		// Set the target of the skill in function of Skill Type and Target Type
 		Creature target = null;
 		if ((skill.getTargetType() == SkillTargetType.TARGET_AURA) || (skill.getTargetType() == SkillTargetType.TARGET_GROUND) || skill.isPotion())
@@ -1411,19 +1411,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Player can't heal rb config
-		if (!Config.PLAYERS_CAN_HEAL_RB && (creature instanceof Player) && !((Player) creature).isGM() && ((target instanceof RaidBoss) || (target instanceof GrandBoss)) && ((skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.HEAL_PERCENT)))
+		if (!Config.PLAYERS_CAN_HEAL_RB && (this instanceof Player) && !((Player) this).isGM() && ((target instanceof RaidBoss) || (target instanceof GrandBoss)) && ((skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.HEAL_PERCENT)))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if ((creature instanceof Player) && (target instanceof Npc) && Config.DISABLE_ATTACK_NPC_TYPE)
+		if ((this instanceof Player) && (target instanceof Npc) && Config.DISABLE_ATTACK_NPC_TYPE)
 		{
 			final String mobtype = ((Npc) target).getTemplate().getType();
 			if (!Config.LIST_ALLOWED_NPC_TYPES.contains(mobtype))
 			{
-				((Player) creature).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
-				((Player) creature).sendPacket(ActionFailed.STATIC_PACKET);
+				((Player) this).sendMessage("Npc Type " + mobtype + " has Protection - No Attack Allowed!");
+				((Player) this).sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
@@ -1460,10 +1460,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Don't modify the skill time for FORCE_BUFF skills. The skill time for those skills represent the buff time.
 		if (!effectWhileCasting && !forceBuff && !skill.isStaticHitTime())
 		{
-			hitTime = Formulas.getInstance().calcMAtkSpd(creature, skill, hitTime);
+			hitTime = Formulas.getInstance().calcMAtkSpd(this, skill, hitTime);
 			if (coolTime > 0)
 			{
-				coolTime = Formulas.getInstance().calcMAtkSpd(creature, skill, coolTime);
+				coolTime = Formulas.getInstance().calcMAtkSpd(this, skill, coolTime);
 			}
 		}
 		
@@ -1490,7 +1490,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		// Init the reuse time of the skill
 		int reuseDelay = skill.getReuseDelay();
-		if ((creature instanceof Player) && Formulas.getInstance().calcSkillMastery(creature))
+		if ((this instanceof Player) && Formulas.getInstance().calcSkillMastery(this))
 		{
 			reuseDelay = 0;
 		}
@@ -1531,7 +1531,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Send a system message USE_S1 to the Creature
-		if ((creature instanceof Player) && (magicId != 1312))
+		if ((this instanceof Player) && (magicId != 1312))
 		{
 			if (skill.isPotion())
 			{
@@ -1634,7 +1634,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if (hitTime > 210)
 		{
 			// Send a Server->Client packet SetupGauge with the color of the gauge and the casting time
-			if ((creature instanceof Player) && !forceBuff)
+			if ((this instanceof Player) && !forceBuff)
 			{
 				sendPacket(new SetupGauge(SetupGauge.BLUE, hitTime));
 			}
@@ -5623,7 +5623,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public float getWeaponExpertisePenalty()
 	{
-		return 1.f;
+		return 1;
 	}
 	
 	/**
@@ -5632,7 +5632,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public float getArmourExpertisePenalty()
 	{
-		return 1.f;
+		return 1;
 	}
 	
 	/**

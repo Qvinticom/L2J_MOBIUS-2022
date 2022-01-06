@@ -976,13 +976,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			
 			if (!isAlikeDead())
 			{
-				if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target))
-				{
-					getAI().setIntention(AI_INTENTION_ACTIVE);
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				else if (isPlayer() && target.isDead())
+				if (((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target)) || (isPlayer() && target.isDead()))
 				{
 					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
@@ -996,9 +990,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 			
-			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
-			final Weapon weaponItem = getActiveWeaponItem();
-			final WeaponType weaponType = getAttackType();
 			if (getActingPlayer() != null)
 			{
 				if (getActingPlayer().inObserverMode())
@@ -1044,6 +1035,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
+			
+			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
+			final Weapon weaponItem = getActiveWeaponItem();
+			final WeaponType weaponType = getAttackType();
 			
 			// BOW and CROSSBOW checks
 			if (weaponItem != null)
@@ -3924,18 +3919,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			weapon.applyConditionalSkills(this, target, null, ItemSkillType.ON_CRITICAL_SKILL);
 		}
 		
-		if (isPlayer() && !target.isHpBlocked())
+		// If hit by a cursed weapon, CP is reduced to 0.
+		// If a cursed weapon is hit by a Hero, CP is reduced to 0.
+		if (isPlayer() && !target.isHpBlocked() && (((Player) this).isCursedWeaponEquipped() || (((Player) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())))
 		{
-			if (((Player) this).isCursedWeaponEquipped())
-			{
-				// If hit by a cursed weapon, CP is reduced to 0
-				target.setCurrentCp(0);
-			}
-			else if (((Player) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
-			{
-				// If a cursed weapon is hit by a Hero, CP is reduced to 0
-				target.setCurrentCp(0);
-			}
+			target.setCurrentCp(0);
 		}
 	}
 	

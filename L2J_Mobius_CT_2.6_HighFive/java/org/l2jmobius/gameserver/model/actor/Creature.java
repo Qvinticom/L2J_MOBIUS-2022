@@ -1765,9 +1765,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return;
 		}
 		
-		// Get the Identifier of the skill
-		final int magicId = skill.getId();
-		
 		// Get the Base Casting Time of the Skills.
 		int skillTime = (skill.getHitTime() + skill.getCoolTime());
 		if (!skill.isChanneling() || (skill.getChannelingSkillId() == 0))
@@ -1929,7 +1926,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (isPlayer() && !skill.isAbnormalInstant())
 		{
 			SystemMessage sm = null;
-			switch (magicId)
+			switch (skill.getId())
 			{
 				case 1312: // Fishing
 				{
@@ -5665,8 +5662,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		try
 		{
-			final Weapon activeWeapon = getActiveWeaponItem();
-			
 			// Check if the toggle skill effects are already in progress on the Creature
 			if (skill.isToggle() && isAffectedBySkill(skill.getId()))
 			{
@@ -5719,6 +5714,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				if (!skill.isStatic())
 				{
 					// Launch weapon Special ability skill effect if available
+					final Weapon activeWeapon = getActiveWeaponItem();
 					if ((activeWeapon != null) && !target.isDead())
 					{
 						activeWeapon.castOnMagicSkill(this, target, skill);
