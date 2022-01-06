@@ -1631,28 +1631,22 @@ public class Npc extends Creature
 		{
 			if (physical)
 			{
-				if (_soulshotamount == 0)
+				if ((_soulshotamount == 0) || (Rnd.get(100) > getSoulShotChance()))
 				{
 					return;
 				}
-				else if (Rnd.get(100) > getSoulShotChance())
-				{
-					return;
-				}
+				
 				_soulshotamount--;
 				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
 				setChargedShot(ShotType.SOULSHOTS, true);
 			}
 			if (magic)
 			{
-				if (_spiritshotamount == 0)
+				if ((_spiritshotamount == 0) || (Rnd.get(100) > getSpiritShotChance()))
 				{
 					return;
 				}
-				else if (Rnd.get(100) > getSpiritShotChance())
-				{
-					return;
-				}
+				
 				_spiritshotamount--;
 				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
 				setChargedShot(ShotType.SPIRITSHOTS, true);
@@ -1797,10 +1791,6 @@ public class Npc extends Creature
 		Item item = null;
 		for (int i = 0; i < itemCount; i++)
 		{
-			// Randomize drop position.
-			final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-			final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-			final int newZ = getZ() + 20;
 			if (ItemTable.getInstance().getTemplate(itemId) == null)
 			{
 				LOGGER.log(Level.SEVERE, "Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
@@ -1818,15 +1808,17 @@ public class Npc extends Creature
 				item.getDropProtection().protect(creature);
 			}
 			
+			// Randomize drop position.
+			final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
+			final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
+			final int newZ = getZ() + 20;
+			
 			item.dropMe(this, newX, newY, newZ);
 			
 			// Add drop to auto destroy item task.
-			if (!Config.LIST_PROTECTED_ITEMS.contains(itemId))
+			if (!Config.LIST_PROTECTED_ITEMS.contains(itemId) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect())))
 			{
-				if (((Config.AUTODESTROY_ITEM_AFTER > 0) && !item.getItem().hasExImmediateEffect()) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && item.getItem().hasExImmediateEffect()))
-				{
-					ItemsAutoDestroyTaskManager.getInstance().addItem(item);
-				}
+				ItemsAutoDestroyTaskManager.getInstance().addItem(item);
 			}
 			item.setProtected(false);
 			

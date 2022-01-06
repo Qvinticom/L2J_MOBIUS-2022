@@ -1580,10 +1580,6 @@ public class Npc extends Creature
 		Item item = null;
 		for (int i = 0; i < itemCount; i++)
 		{
-			// Randomize drop position.
-			final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-			final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
-			final int newZ = getZ() + 20;
 			if (ItemTable.getInstance().getTemplate(itemId) == null)
 			{
 				LOGGER.severe("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
@@ -1600,6 +1596,11 @@ public class Npc extends Creature
 			{
 				item.getDropProtection().protect(creature);
 			}
+			
+			// Randomize drop position.
+			final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
+			final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
+			final int newZ = getZ() + 20;
 			
 			item.dropMe(this, newX, newY, newZ);
 			

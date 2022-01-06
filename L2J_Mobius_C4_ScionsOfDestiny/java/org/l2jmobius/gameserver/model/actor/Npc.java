@@ -153,49 +153,6 @@ public class Npc extends Creature
 		return false;
 	}
 	
-	public class destroyTemporalNPC implements Runnable
-	{
-		private final Spawn _oldSpawn;
-		
-		public destroyTemporalNPC(Spawn spawn)
-		{
-			_oldSpawn = spawn;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				_oldSpawn.getLastSpawn().deleteMe();
-				_oldSpawn.stopRespawn();
-				SpawnTable.getInstance().deleteSpawn(_oldSpawn, false);
-			}
-			catch (Throwable t)
-			{
-				LOGGER.warning(t.toString());
-			}
-		}
-	}
-	
-	public class destroyTemporalSummon implements Runnable
-	{
-		Summon _summon;
-		Player _player;
-		
-		public destroyTemporalSummon(Summon summon, Player player)
-		{
-			_summon = summon;
-			_player = player;
-		}
-		
-		@Override
-		public void run()
-		{
-			_summon.unSummon(_player);
-		}
-	}
-	
 	/**
 	 * Constructor of Npc (use Creature constructor).<br>
 	 * <br>
@@ -1082,31 +1039,27 @@ public class Npc extends Creature
 		else if (command.equalsIgnoreCase("TerritoryStatus"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			if (getCastle().getOwnerId() > 0)
 			{
-				if (getCastle().getOwnerId() > 0)
-				{
-					html.setFile("/data/html/territorystatus.htm");
-					final Clan clan = ClanTable.getInstance().getClan(getCastle().getOwnerId());
-					html.replace("%clanname%", clan.getName());
-					html.replace("%clanleadername%", clan.getLeaderName());
-				}
-				else
-				{
-					html.setFile("/data/html/territorynoclan.htm");
-				}
+				html.setFile("/data/html/territorystatus.htm");
+				final Clan clan = ClanTable.getInstance().getClan(getCastle().getOwnerId());
+				html.replace("%clanname%", clan.getName());
+				html.replace("%clanleadername%", clan.getLeaderName());
+			}
+			else
+			{
+				html.setFile("/data/html/territorynoclan.htm");
 			}
 			html.replace("%castlename%", getCastle().getName());
 			html.replace("%taxpercent%", "" + getCastle().getTaxPercent());
 			html.replace("%objectId%", String.valueOf(getObjectId()));
+			if (getCastle().getCastleId() > 6)
 			{
-				if (getCastle().getCastleId() > 6)
-				{
-					html.replace("%territory%", "The Kingdom of Elmore");
-				}
-				else
-				{
-					html.replace("%territory%", "The Kingdom of Aden");
-				}
+				html.replace("%territory%", "The Kingdom of Elmore");
+			}
+			else
+			{
+				html.replace("%territory%", "The Kingdom of Aden");
 			}
 			player.sendPacket(html);
 		}
@@ -1688,8 +1641,6 @@ public class Npc extends Creature
 				return;
 			}
 			
-			final int price = Config.ALT_LOTTERY_TICKET_PRICE;
-			final int lotonumber = Lottery.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
 			for (int i = 0; i < 5; i++)
@@ -1708,6 +1659,8 @@ public class Npc extends Creature
 					type2 += Math.pow(2, player.getLoto(i) - 17);
 				}
 			}
+			
+			final int price = Config.ALT_LOTTERY_TICKET_PRICE;
 			if (player.getAdena() < price)
 			{
 				sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -1718,7 +1671,9 @@ public class Npc extends Creature
 			{
 				return;
 			}
+			
 			Lottery.getInstance().increasePrize(price);
+			final int lotonumber = Lottery.getInstance().getId();
 			
 			sm = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 			sm.addNumber(lotonumber);
@@ -1852,7 +1807,6 @@ public class Npc extends Creature
 		}
 		
 		final int neededmoney = 100;
-		SystemMessage sm;
 		if (!player.reduceAdena("RestoreCP", neededmoney, player.getLastFolkNPC(), true))
 		{
 			return;
@@ -1868,6 +1822,7 @@ public class Npc extends Creature
 		
 		player.setCurrentCp(player.getMaxCp());
 		// cp restored
+		SystemMessage sm;
 		sm = new SystemMessage(SystemMessageId.S1_CPS_HAVE_BEEN_RESTORED);
 		sm.addString(player.getName());
 		player.sendPacket(sm);
@@ -2021,7 +1976,7 @@ public class Npc extends Creature
 			}
 		}
 		
-		if ((getTemplate().getType() == "Auctioneer") && (value == 0))
+		if (getTemplate().getType().equals("Auctioneer") && (value == 0))
 		{
 			return;
 		}
