@@ -322,8 +322,8 @@ public class Attackable extends Npc
 	
 	static class PartyContainer
 	{
-		Party party;
-		long damage = 0L;
+		public Party party;
+		public long damage;
 		
 		public PartyContainer(Party party, long damage)
 		{
@@ -1809,12 +1809,11 @@ public class Attackable extends Npc
 		if (object == null)
 		{
 			final WorldObject target = getTarget();
-			final Map<Creature, AggroInfo> aggroList = _aggroList;
-			if ((target != null) && (aggroList != null))
+			if (target != null)
 			{
-				aggroList.remove(target);
+				_aggroList.remove(target);
 			}
-			if ((aggroList != null) && aggroList.isEmpty())
+			if (_aggroList.isEmpty())
 			{
 				if (getAI() instanceof AttackableAI)
 				{

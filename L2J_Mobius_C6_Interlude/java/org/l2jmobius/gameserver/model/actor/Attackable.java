@@ -513,13 +513,10 @@ public class Attackable extends Npc
 		}
 		
 		setChampion(false);
-		if (Config.CHAMPION_ENABLE)
+		// Set champion on next spawn.
+		if (Config.CHAMPION_ENABLE && !(this instanceof GrandBoss) && !(this instanceof RaidBoss) && (this instanceof Monster) /* && !getTemplate().isQuestMonster */ && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LEVEL) && (getLevel() <= Config.CHAMP_MAX_LEVEL) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
 		{
-			// Set champion on next spawn.
-			if (!(this instanceof GrandBoss) && !(this instanceof RaidBoss) && (this instanceof Monster) /* && !getTemplate().isQuestMonster */ && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LEVEL) && (getLevel() <= Config.CHAMP_MAX_LEVEL) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
-			{
-				setChampion(true);
-			}
+			setChampion(true);
 		}
 		
 		return true;
@@ -2542,10 +2539,8 @@ public class Attackable extends Npc
 			return;
 		}
 		
-		final int maxAbsorbLevel = getAbsorbLevel();
-		int minAbsorbLevel = 0;
-		
 		// If this is not a valid Attackable, clears the _absorbersList and just return
+		final int maxAbsorbLevel = getAbsorbLevel();
 		if (maxAbsorbLevel == 0)
 		{
 			resetAbsorbList();
@@ -2553,6 +2548,7 @@ public class Attackable extends Npc
 		}
 		
 		// All boss mobs with maxAbsorbLevel 13 have minAbsorbLevel of 12 else 10
+		int minAbsorbLevel = 0;
 		if (maxAbsorbLevel > 10)
 		{
 			minAbsorbLevel = maxAbsorbLevel > 12 ? 12 : 10;
@@ -2899,8 +2895,7 @@ public class Attackable extends Npc
 		final double overhitExp = (overhitPercentage / 100) * normalExp;
 		
 		// Return the rounded ammount of exp points to be added to the player's normal exp reward
-		final long bonusOverhit = Math.round(overhitExp);
-		return bonusOverhit;
+		return Math.round(overhitExp);
 	}
 	
 	@Override

@@ -338,8 +338,8 @@ public class Attackable extends Npc
 	
 	static class PartyContainer
 	{
-		Party party;
-		long damage = 0L;
+		public Party party;
+		public long damage;
 		
 		public PartyContainer(Party party, long damage)
 		{
