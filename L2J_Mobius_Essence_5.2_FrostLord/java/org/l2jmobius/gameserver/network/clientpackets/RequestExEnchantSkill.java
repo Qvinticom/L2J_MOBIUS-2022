@@ -70,6 +70,11 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().canPerformPlayerAction())
+		{
+			return;
+		}
+		
 		if ((_skillId <= 0) || (_skillLevel <= 0) || (_skillSubLevel < 0))
 		{
 			return;
