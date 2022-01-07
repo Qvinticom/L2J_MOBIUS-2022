@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectSeed;
 
 public class SkillSeed extends Skill
@@ -44,7 +45,7 @@ public class SkillSeed extends Skill
 		for (WorldObject target2 : targets)
 		{
 			final Creature target = (Creature) target2;
-			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
+			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.CORPSE_MOB))
 			{
 				continue;
 			}

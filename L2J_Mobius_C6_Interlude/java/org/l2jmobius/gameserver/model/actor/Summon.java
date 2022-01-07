@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
@@ -40,6 +38,8 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -595,15 +595,15 @@ public abstract class Summon extends Playable
 		switch (skill.getTargetType())
 		{
 			// OWNER_PET should be cast even if no target has been found
-			case TARGET_OWNER_PET:
+			case OWNER_PET:
 			{
 				target = _owner;
 				break;
 			}
 			// PARTY, AURA, SELF should be cast even if no target has been found
-			case TARGET_PARTY:
-			case TARGET_AURA:
-			case TARGET_SELF:
+			case PARTY:
+			case AURA:
+			case SELF:
 			{
 				target = this;
 				break;
@@ -704,7 +704,7 @@ public abstract class Summon extends Playable
 				}
 				
 				// Check if a Forced ATTACK is in progress on non-attackable target
-				if (!target.isAutoAttackable(this) && !forceUse && (skill.getTargetType() != SkillTargetType.TARGET_AURA) && (skill.getTargetType() != SkillTargetType.TARGET_CLAN) && (skill.getTargetType() != SkillTargetType.TARGET_ALLY) && (skill.getTargetType() != SkillTargetType.TARGET_PARTY) && (skill.getTargetType() != SkillTargetType.TARGET_SELF))
+				if (!target.isAutoAttackable(this) && !forceUse && (skill.getTargetType() != SkillTargetType.AURA) && (skill.getTargetType() != SkillTargetType.CLAN) && (skill.getTargetType() != SkillTargetType.ALLY) && (skill.getTargetType() != SkillTargetType.PARTY) && (skill.getTargetType() != SkillTargetType.SELF))
 				{
 					return;
 				}

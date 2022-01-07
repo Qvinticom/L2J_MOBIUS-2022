@@ -97,8 +97,6 @@ import org.l2jmobius.gameserver.model.Request;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.ShortCuts;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.SubClass;
 import org.l2jmobius.gameserver.model.Timestamp;
@@ -161,6 +159,8 @@ import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.skill.BaseStat;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.Stat;
 import org.l2jmobius.gameserver.model.skill.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skill.handlers.SkillSummon;
@@ -649,7 +649,7 @@ public class Player extends Playable
 			// Like L2OFF you can use cupid bow skills on peace zone
 			// Like L2OFF players can use TARGET_AURA skills on peace zone, all targets will be ignored.
 			// Check limited to active target.
-			if (skill.isOffensive() && (isInsidePeaceZone(Player.this, getTarget()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)) && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262/* Double Heart Shot */)))
+			if (skill.isOffensive() && (isInsidePeaceZone(Player.this, getTarget()) && (skill.getTargetType() != SkillTargetType.AURA)) && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262/* Double Heart Shot */)))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
@@ -664,7 +664,7 @@ public class Player extends Playable
 			
 			switch (skill.getTargetType())
 			{
-				case TARGET_GROUND:
+				case GROUND:
 				{
 					return;
 				}
@@ -2435,7 +2435,7 @@ public class Player extends Playable
 			final Skill effectSkill = currenteffect.getSkill();
 			// Ignore all buff skills that are party related (ie. songs, dances) while still remaining weapon dependant on cast though.
 			// Check to rest to assure current effect meets weapon requirements.
-			if (!effectSkill.isOffensive() && ((effectSkill.getTargetType() != SkillTargetType.TARGET_PARTY) || (effectSkill.getSkillType() != SkillType.BUFF)) && !effectSkill.getWeaponDependancy(this))
+			if (!effectSkill.isOffensive() && ((effectSkill.getTargetType() != SkillTargetType.PARTY) || (effectSkill.getSkillType() != SkillType.BUFF)) && !effectSkill.getWeaponDependancy(this))
 			{
 				sendMessage(effectSkill.getName() + " cannot be used with this weapon.");
 				currenteffect.exit();
@@ -9231,7 +9231,7 @@ public class Player extends Playable
 		switch (skillTargetType)
 		{
 			// Target the player if skill type is AURA, PARTY, CLAN or SELF
-			case TARGET_AURA:
+			case AURA:
 			{
 				if (isInOlympiadMode() && !isOlympiadStart())
 				{
@@ -9239,16 +9239,16 @@ public class Player extends Playable
 				}
 				// fallthough?
 			}
-			case TARGET_PARTY:
-			case TARGET_ALLY:
-			case TARGET_CLAN:
-			case TARGET_GROUND:
-			case TARGET_SELF:
+			case PARTY:
+			case ALLY:
+			case CLAN:
+			case GROUND:
+			case SELF:
 			{
 				target = this;
 				break;
 			}
-			case TARGET_PET:
+			case PET:
 			{
 				target = getPet();
 				break;
@@ -9461,14 +9461,14 @@ public class Player extends Playable
 		{
 			if (isInsidePeaceZone(this, target) // Like L2OFF you can use cupid bow skills on peace zone
 				&& ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */) //
-					&& (skillTargetType != SkillTargetType.TARGET_AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
+					&& (skillTargetType != SkillTargetType.AURA))) // Like L2OFF people can use TARGET_AURE skills on peace zone
 			{
 				// If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
 				sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			if (isInOlympiadMode() && !isOlympiadStart() && (skillTargetType != SkillTargetType.TARGET_AURA))
+			if (isInOlympiadMode() && !isOlympiadStart() && (skillTargetType != SkillTargetType.AURA))
 			{
 				// if Player is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -9484,12 +9484,12 @@ public class Player extends Playable
 			// Check if a Forced ATTACK is in progress on non-attackable target
 			if (!target.isAutoAttackable(this) //
 				&& (!forceUse && ((skill.getId() != 3260 /* Forgiveness */) && (skill.getId() != 3261 /* Heart Shot */) && (skill.getId() != 3262 /* Double Heart Shot */))) //
-				&& (skillTargetType != SkillTargetType.TARGET_AURA) //
-				&& (skillTargetType != SkillTargetType.TARGET_CLAN) //
-				&& (skillTargetType != SkillTargetType.TARGET_ALLY) //
-				&& (skillTargetType != SkillTargetType.TARGET_PARTY) //
-				&& (skillTargetType != SkillTargetType.TARGET_SELF) //
-				&& (skillTargetType != SkillTargetType.TARGET_GROUND))
+				&& (skillTargetType != SkillTargetType.AURA) //
+				&& (skillTargetType != SkillTargetType.CLAN) //
+				&& (skillTargetType != SkillTargetType.ALLY) //
+				&& (skillTargetType != SkillTargetType.PARTY) //
+				&& (skillTargetType != SkillTargetType.SELF) //
+				&& (skillTargetType != SkillTargetType.GROUND))
 			{
 				// Send a Server->Client packet ActionFailed to the Player
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -9500,7 +9500,7 @@ public class Player extends Playable
 			if (dontMove)
 			{
 				// Calculate the distance between the Player and the target
-				if (skillTargetType == SkillTargetType.TARGET_GROUND)
+				if (skillTargetType == SkillTargetType.GROUND)
 				{
 					if (!isInsideRadius2D(getCurrentSkillWorldPosition().getX(), getCurrentSkillWorldPosition().getY(), getCurrentSkillWorldPosition().getZ(), skill.getCastRange() + getTemplate().getCollisionRadius()))
 					{
@@ -9534,7 +9534,7 @@ public class Player extends Playable
 			}
 		}
 		// Check if the skill is defensive and if the target is a monster and if force attack is set.. if not then we don't want to cast.
-		if (!skill.isOffensive() && (target instanceof Monster) && !forceUse && (skillTargetType != SkillTargetType.TARGET_PET) && (skillTargetType != SkillTargetType.TARGET_AURA) && (skillTargetType != SkillTargetType.TARGET_CLAN) && (skillTargetType != SkillTargetType.TARGET_SELF) && (skillTargetType != SkillTargetType.TARGET_PARTY) && (skillTargetType != SkillTargetType.TARGET_ALLY) && (skillTargetType != SkillTargetType.TARGET_CORPSE_MOB) && (skillTargetType != SkillTargetType.TARGET_AREA_CORPSE_MOB) && (skillTargetType != SkillTargetType.TARGET_GROUND) && (skillType != SkillType.BEAST_FEED) && (skillType != SkillType.DELUXE_KEY_UNLOCK) && (skillType != SkillType.UNLOCK))
+		if (!skill.isOffensive() && (target instanceof Monster) && !forceUse && (skillTargetType != SkillTargetType.PET) && (skillTargetType != SkillTargetType.AURA) && (skillTargetType != SkillTargetType.CLAN) && (skillTargetType != SkillTargetType.SELF) && (skillTargetType != SkillTargetType.PARTY) && (skillTargetType != SkillTargetType.ALLY) && (skillTargetType != SkillTargetType.CORPSE_MOB) && (skillTargetType != SkillTargetType.AREA_CORPSE_MOB) && (skillTargetType != SkillTargetType.GROUND) && (skillType != SkillType.BEAST_FEED) && (skillType != SkillType.DELUXE_KEY_UNLOCK) && (skillType != SkillType.UNLOCK))
 		{
 			// send the action failed so that the skill doens't go off.
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -9591,7 +9591,7 @@ public class Player extends Playable
 			return;
 		}
 		
-		if ((skillTargetType == SkillTargetType.TARGET_GROUND) && (getCurrentSkillWorldPosition() == null))
+		if ((skillTargetType == SkillTargetType.GROUND) && (getCurrentSkillWorldPosition() == null))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -9600,12 +9600,12 @@ public class Player extends Playable
 		// Check if this is a Pvp skill and target isn't a non-flagged/non-karma player
 		switch (skillTargetType)
 		{
-			case TARGET_PARTY:
-			case TARGET_ALLY: // For such skills, checkPvpSkill() is called from Skill.getTargetList()
-			case TARGET_CLAN: // For such skills, checkPvpSkill() is called from Skill.getTargetList()
-			case TARGET_AURA:
-			case TARGET_SELF:
-			case TARGET_GROUND:
+			case PARTY:
+			case ALLY: // For such skills, checkPvpSkill() is called from Skill.getTargetList()
+			case CLAN: // For such skills, checkPvpSkill() is called from Skill.getTargetList()
+			case AURA:
+			case SELF:
+			case GROUND:
 			{
 				break;
 			}
@@ -9625,7 +9625,7 @@ public class Player extends Playable
 			}
 		}
 		
-		if ((skillTargetType == SkillTargetType.TARGET_HOLY) && !TakeCastle.checkIfOkToCastSealOfRule(this, false))
+		if ((skillTargetType == SkillTargetType.HOLY) && !TakeCastle.checkIfOkToCastSealOfRule(this, false))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			abortCast();

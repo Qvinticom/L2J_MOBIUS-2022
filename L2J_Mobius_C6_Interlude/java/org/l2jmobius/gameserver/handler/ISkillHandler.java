@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.handler;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 
 public interface ISkillHandler
 {

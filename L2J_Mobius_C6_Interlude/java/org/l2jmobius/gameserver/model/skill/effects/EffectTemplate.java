@@ -21,8 +21,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.Env;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.conditions.Condition;
 import org.l2jmobius.gameserver.model.skill.funcs.FuncTemplate;
 import org.l2jmobius.gameserver.model.skill.funcs.Lambda;

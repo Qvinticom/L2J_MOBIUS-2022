@@ -6,9 +6,9 @@
 		<table name="#pvpDam">1 1 1 1 1 1 1.05 1.05 1.05</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 75 80</table>
 		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#val" />
 			<mul order="0x30" stat="maxHp" val="0.85" />
@@ -22,9 +22,9 @@
 		<table name="#pvpDam">1 1 1 1 1 1 1.05 1.05 1.05</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 75</table>
 		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#val" />
 			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpDam" /> <mul order="0x30" stat="pvpMagicalDmg" val="#pvpDam" /> -->
@@ -37,9 +37,9 @@
 		<table name="#pvpDam">1 1 1 1 1 1 1.05 1.05 1.05</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 75</table>
 		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#val" />
 			<!-- <mul order="0x30" stat="pvpPhysDmg" val="#pvpDam" /> <mul order="0x30" stat="pvpMagicalDmg" val="#pvpDam" /> -->

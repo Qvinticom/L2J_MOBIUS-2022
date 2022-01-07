@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuard;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 
 /**
@@ -363,17 +364,17 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				for (Skill sk : skills)
 				{
 					final int castRange = sk.getCastRange();
-					if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
+					if (((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 					{
-						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
+						if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 						{
-							if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
+							if (((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 							{
 								break;
 							}
 							
 							boolean useSkillSelf = true;
-							if (sk.getSkillType() == Skill.SkillType.BUFF)
+							if (sk.getSkillType() == SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())
 								{
@@ -479,15 +480,15 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					final int castRange = sk.getCastRange();
 					if (((castRange * castRange) >= dist2) && (castRange <= 70) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 					{
-						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
+						if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 						{
-							if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
+							if ((sk.getSkillType() == SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
 								break;
 							}
 							
 							boolean useSkillSelf = true;
-							if (sk.getSkillType() == Skill.SkillType.BUFF)
+							if (sk.getSkillType() == SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())
 								{

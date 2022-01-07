@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -62,7 +63,7 @@ public class SkillDrain extends Skill
 				continue;
 			}
 			
-			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
+			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.CORPSE_MOB))
 			{
 				continue;
 			}
@@ -107,7 +108,7 @@ public class SkillDrain extends Skill
 			creature.sendPacket(suhp);
 			
 			// Check to see if we should damage the target
-			if ((damage > 0) && (!target.isDead() || (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB)))
+			if ((damage > 0) && (!target.isDead() || (getTargetType() != SkillTargetType.CORPSE_MOB)))
 			{
 				// Manage attack or cast break of the target (calculating rate, sending message...)
 				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
@@ -117,7 +118,7 @@ public class SkillDrain extends Skill
 				}
 				
 				creature.sendDamageMessage(target, damage, mcrit, false, false);
-				if (hasEffects() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
+				if (hasEffects() && (getTargetType() != SkillTargetType.CORPSE_MOB))
 				{
 					if (target.reflectSkill(this))
 					{
@@ -149,7 +150,7 @@ public class SkillDrain extends Skill
 			}
 			
 			// Check to see if we should do the decay right after the cast
-			if (target.isDead() && (getTargetType() == SkillTargetType.TARGET_CORPSE_MOB) && (target instanceof Npc))
+			if (target.isDead() && (getTargetType() == SkillTargetType.CORPSE_MOB) && (target instanceof Npc))
 			{
 				((Npc) target).endDecayTask();
 			}
@@ -179,7 +180,7 @@ public class SkillDrain extends Skill
 	{
 		for (Creature target : targets)
 		{
-			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
+			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.CORPSE_MOB))
 			{
 				continue;
 			}
@@ -196,7 +197,7 @@ public class SkillDrain extends Skill
 			owner.sendPacket(suhp);
 			
 			// Check to see if we should damage the target
-			if ((damage > 0) && (!target.isDead() || (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB)))
+			if ((damage > 0) && (!target.isDead() || (getTargetType() != SkillTargetType.CORPSE_MOB)))
 			{
 				target.reduceCurrentHp(damage, activeCubic.getOwner());
 				

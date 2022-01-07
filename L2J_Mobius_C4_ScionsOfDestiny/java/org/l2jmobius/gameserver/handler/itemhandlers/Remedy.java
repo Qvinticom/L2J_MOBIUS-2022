@@ -18,11 +18,11 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -65,7 +65,7 @@ public class Remedy implements IItemHandler
 		{
 			for (Effect effect : player.getAllEffects())
 			{
-				if ((effect.getSkill().getSkillType() == Skill.SkillType.POISON) && (effect.getSkill().getLevel() <= 3))
+				if ((effect.getSkill().getSkillType() == SkillType.POISON) && (effect.getSkill().getLevel() <= 3))
 				{
 					effect.exit(true);
 					break;
@@ -80,7 +80,7 @@ public class Remedy implements IItemHandler
 		{
 			for (Effect effect : player.getAllEffects())
 			{
-				if ((effect.getSkill().getSkillType() == Skill.SkillType.POISON) && (effect.getSkill().getLevel() <= 7))
+				if ((effect.getSkill().getSkillType() == SkillType.POISON) && (effect.getSkill().getLevel() <= 7))
 				{
 					effect.exit(true);
 					break;
@@ -95,7 +95,7 @@ public class Remedy implements IItemHandler
 		{
 			for (Effect effect : player.getAllEffects())
 			{
-				if ((effect.getSkill().getSkillType() == Skill.SkillType.BLEED) && (effect.getSkill().getLevel() <= 3))
+				if ((effect.getSkill().getSkillType() == SkillType.BLEED) && (effect.getSkill().getLevel() <= 3))
 				{
 					effect.exit(true);
 					break;
@@ -110,7 +110,7 @@ public class Remedy implements IItemHandler
 		{
 			for (Effect effect : player.getAllEffects())
 			{
-				if ((effect.getSkill().getSkillType() == Skill.SkillType.BLEED) && (effect.getSkill().getLevel() <= 7))
+				if ((effect.getSkill().getSkillType() == SkillType.BLEED) && (effect.getSkill().getLevel() <= 7))
 				{
 					effect.exit(true);
 					break;

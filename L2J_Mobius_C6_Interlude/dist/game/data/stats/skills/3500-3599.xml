@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3500" levels="1" name="Wooden Set">
 		<!-- Increases P. Def. and Max HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -16,9 +16,9 @@
 	</skill>
 	<skill id="3501" levels="1" name="Devotion Set">
 		<!-- Increases Casting Spd. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -28,9 +28,9 @@
 	</skill>
 	<skill id="3502" levels="1" name="Mithril Heavy Armor Set">
 		<!-- Increases resistance to poison attack. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -40,9 +40,9 @@
 	</skill>
 	<skill id="3503" levels="1" name="Reinforced Leather Set">
 		<!-- Increases Maximum MP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -52,9 +52,9 @@
 	</skill>
 	<skill id="3504" levels="1" name="Knowledge Set">
 		<!-- Decreases MP regeneration and increases M. Atk. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -66,9 +66,9 @@
 	</skill>
 	<skill id="3505" levels="1" name="Manticore Set">
 		<!-- Increases Maximum MP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -78,9 +78,9 @@
 	</skill>
 	<skill id="3506" levels="1" name="Brigandine Set">
 		<!-- Increases P. Def. and Max HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -92,9 +92,9 @@
 	</skill>
 	<skill id="3507" levels="1" name="Elven Mithril Set">
 		<!-- Increases Speed. INT-1, WIT+1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -108,9 +108,9 @@
 	</skill>
 	<skill id="3508" levels="1" name="Mithril Light Armor Set">
 		<!-- Increases Evasion. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -120,9 +120,9 @@
 	</skill>
 	<skill id="3509" levels="1" name="Chain Mail Set">
 		<!-- Increases resistance to Dagger attacks. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -132,9 +132,9 @@
 	</skill>
 	<skill id="3510" levels="1" name="Karmian Set">
 		<!-- Increases P. Def. and Casting Spd. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -146,9 +146,9 @@
 	</skill>
 	<skill id="3511" levels="1" name="Plated Leather Set">
 		<!-- STR+4, CON-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -160,9 +160,9 @@
 	</skill>
 	<skill id="3512" levels="1" name="Composite Heavy Armor Set">
 		<!-- Increases your weight capacity. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -172,9 +172,9 @@
 	</skill>
 	<skill id="3513" levels="1" name="Demon's Set">
 		<!-- Reduces maximum HP. INT+4, WIT-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -188,9 +188,9 @@
 	</skill>
 	<skill id="3514" levels="1" name="Theca Leather Light Armor Set">
 		<!-- Increases P. Def. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -200,9 +200,9 @@
 	</skill>
 	<skill id="3515" levels="1" name="Drake Leather Set">
 		<!-- Increases M. Def. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -212,9 +212,9 @@
 	</skill>
 	<skill id="3516" levels="1" name="Full Plate Set">
 		<!-- Increases maximum HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -224,9 +224,9 @@
 	</skill>
 	<skill id="3517" levels="1" name="Divine Set">
 		<!-- Increases P. Def. and Max MP. INT-1, WIT+1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -242,9 +242,9 @@
 	</skill>
 	<skill id="3518" levels="1" name="Zubei's Heavy Armor Set">
 		<!-- Increases P. Def. and Max HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -256,9 +256,9 @@
 	</skill>
 	<skill id="3519" levels="1" name="Avadon Breastplate Heavy Armor Set">
 		<!-- Increases maximum HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -268,9 +268,9 @@
 	</skill>
 	<skill id="3520" levels="1" name="Zubei's Leather Shirt Light Armor Set">
 		<!-- Increases Evasion. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -280,9 +280,9 @@
 	</skill>
 	<skill id="3521" levels="1" name="Avadon Light Armor Set">
 		<!-- Increases M. Def. and maximum weight limit. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -294,9 +294,9 @@
 	</skill>
 	<skill id="3522" levels="1" name="Tunic of Zubei Robe Set">
 		<!-- Decreases MP regeneration and increases M. Atk. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -308,9 +308,9 @@
 	</skill>
 	<skill id="3523" levels="1" name="Avadon Robe Set">
 		<!-- Increases P. Def. and Casting Spd. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -322,9 +322,9 @@
 	</skill>
 	<skill id="3524" levels="1" name="Blue Wolf Heavy Armor Set">
 		<!-- Increases Speed and HP recovery rate. STR+3, CON-1, DEX-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -342,9 +342,9 @@
 	</skill>
 	<skill id="3525" levels="1" name="Doom Heavy Armor Set">
 		<!-- Increases Max HP and lung capacity. STR-3, CON+3 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -360,9 +360,9 @@
 	</skill>
 	<skill id="3526" levels="1" name="Blue Wolf Light Armor Set">
 		<!-- Increases P. Def. and Casting Spd. INT-2, MEN+3, WIT-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -380,9 +380,9 @@
 	</skill>
 	<skill id="3527" levels="1" name="Doom Light Armor Set">
 		<!-- Increases lung capacity, P. Atk., MP recovery rate and resistance to poison attacks. STR-1, CON-2, DEX+3 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -404,9 +404,9 @@
 	</skill>
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
 		<!-- Increases Max MP and MP recovery rate. INT-2, MEN-1, WIT+3 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -424,9 +424,9 @@
 	</skill>
 	<skill id="3529" levels="1" name="Doom Robe Set">
 		<!-- Increases Speed, lung capacity and MP recovery rate. INT+2, MEN+1, WIT-3 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -446,9 +446,9 @@
 	</skill>
 	<skill id="3530" levels="1" name="Dark Crystal Breastplate Heavy Armor Set">
 		<!-- Increases resistance to paralysis attacks and improves effectiveness of HP recovery magic. STR-2, CON+2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -464,9 +464,9 @@
 	</skill>
 	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
 		<!-- Increases resistance to poison/bleeding attacks. Atk. Spd. and maximum weight limit are also increased. STR+2, CON-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -486,9 +486,9 @@
 	</skill>
 	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
 		<!-- Increases resistance to paralysis attacks. Atk. Spd. and P. Atk. are also increased. STR+1, CON-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -506,9 +506,9 @@
 	</skill>
 	<skill id="3533" levels="1" name="Tallum Light Armor Set">
 		<!-- Increases resistance to poison/bleeding attacks. MP recovery rate and Max MP are also increased. MEN+2, WIT-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -528,9 +528,9 @@
 	</skill>
 	<skill id="3534" levels="1" name="Tallum Robe Set">
 		<!-- Increases resistance to poison/bleeding attacks. Casting Spd. and M. Def. are also increased. INT-2, WIT+2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -550,9 +550,9 @@
 	</skill>
 	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
 		<!-- Decreases magic cancel rate and increases resistance to paralysis attacks. P. Def., Casting Spd. and Speed are also increased. WIT+2, MEN-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -574,9 +574,9 @@
 	</skill>
 	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
 		<!-- Increases P. Atk. and resistance to Sleep/Hold attack.. CON+2, DEX-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -594,9 +594,9 @@
 	</skill>
 	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
 		<!-- Increases resistance to shock attacks. P. Atk. and Accuracy are also increased. STR+2. CON-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -614,9 +614,9 @@
 	</skill>
 	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
 		<!-- Increases resistance to Sleep/Hold attack and M. Def. Restores HP by using part of the damage inflicted upon the enemy, excluding damage caused by skill or remote attack. DEX+1, CON-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -636,9 +636,9 @@
 	</skill>
 	<skill id="3539" levels="1" name="Majestic Light Armor Set">
 		<!-- Increases resistance to shock attacks. P. Atk., Max MP and maximum weight limit are also increased. DEX+1, CON-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -662,9 +662,9 @@
 	</skill>
 	<skill id="3540" levels="1" name="Nightmare Robe Set">
 		<!-- Increases MP regeneration, M. Atk. and resistance to sleep/hold attacks. INT+2, WIT-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -684,9 +684,9 @@
 	</skill>
 	<skill id="3541" levels="1" name="Majestic Robe Set">
 		<!-- Increases resistance to shock attacks. Max MP, Casting Spd. and MP recovery rate are also increased. MEN+1, INT-1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -707,18 +707,18 @@
 	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
 		<!-- Inflicts additional damage during critical attacks. -->
 		<table name="#cAtkAdd">203.97 226.51 248.71 269.91 289.4 306.42</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
 		</for>
 	</skill>
 	<skill id="3543" levels="1" name="Equipped with Shield">
 		<!-- Increases maximum HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -727,9 +727,9 @@
 	</skill>
 	<skill id="3544" levels="1" name="Equipped with Shield">
 		<!-- Increases maximum HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -738,9 +738,9 @@
 	</skill>
 	<skill id="3545" levels="1" name="Equipped with Shield">
 		<!-- Increases maximum HP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -749,9 +749,9 @@
 	</skill>
 	<skill id="3546" levels="1" name="Equipped with Shield">
 		<!-- Increases M. Def. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -760,9 +760,9 @@
 	</skill>
 	<skill id="3547" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -771,9 +771,9 @@
 	</skill>
 	<skill id="3548" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -782,9 +782,9 @@
 	</skill>
 	<skill id="3549" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -793,9 +793,9 @@
 	</skill>
 	<skill id="3550" levels="1" name="Equipped with Shield">
 		<!-- Increases shield defense rate. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -804,9 +804,9 @@
 	</skill>
 	<skill id="3551" levels="1" name="Equipped with Shield">
 		<!-- Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -815,9 +815,9 @@
 	</skill>
 	<skill id="3552" levels="2" name="Special Ability: PvP Damage">
 		<!-- Increases damage inflicted during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
@@ -825,9 +825,9 @@
 	</skill>
 	<skill id="3553" levels="1" name="Imperial Crusader Heavy Armor Set">
 		<!-- Increases Max HP, P. Def and resistance to sleep/hold attacks. STR+2, DEX-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -847,9 +847,9 @@
 	</skill>
 	<skill id="3554" levels="1" name="Equipped with Shield">
 		<!-- Additional resistance to Poison/Bleed. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -859,9 +859,9 @@
 	</skill>
 	<skill id="3555" levels="1" name="Draconic Light Armor Set">
 		<!-- Increases Max MP, Atk. Spd, P. Atk, and maximum weight limit. DEX+1, STR+1, CON-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -883,9 +883,9 @@
 	</skill>
 	<skill id="3556" levels="1" name="Major Arcana Robe Set">
 		<!-- Decreases chance of magic casting being canceled. Increases resistance to shock attacks, M. Atk., Speed and maximum weight limit. WIT+1, INT+1, MEN-2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -909,9 +909,9 @@
 	</skill>
 	<skill id="3557" levels="1" name="Necklace of Valakas">
 		<!-- Increases resistance to fire/water attacks, Max HP, P. Atk., M. Atk. and damage magic critical attack rate. Decreases skill re-use time. Reflects some of the physical damage received back upon the enemy (does not include damage from skill or range attacks). -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="maxHp" val="445" />
 			<mul order="0x30" stat="pAtk" val="1.04" />
@@ -926,9 +926,9 @@
 	</skill>
 	<skill id="3558" levels="1" name="Earring of Antharas">
 		<!-- Increases resistance to earth attacks and bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic. Decreases skill MP consumption and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="singleEffect" val="true" />
 		<for>
 			<mul order="0x30" stat="bleedVuln" val="0.2" />
@@ -943,9 +943,9 @@
 	</skill>
 	<skill id="3559" levels="1" name="Earring of Zaken">
 		<!-- Increases resistance to bleed/shock/mental attacks, improves the effect of HP regeneration magic and restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="singleEffect" val="true" />
 		<for>
 			<mul order="0x30" stat="bleedVuln" val="0.4" />
@@ -957,9 +957,9 @@
 	</skill>
 	<skill id="3560" levels="1" name="Earring of Orfen">
 		<!-- Increases healing from heal spells and resistance to Bleed attack. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="singleEffect" val="true" />
 		<for>
 			<mul order="0x30" stat="bleedVuln" val="0.6" />
@@ -968,9 +968,9 @@
 	</skill>
 	<skill id="3561" levels="1" name="Ring of Baium">
 		<!-- Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy, Atk. Spd. and Casting Spd. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="singleEffect" val="true" />
 		<for>
 			<mul order="0x30" stat="poisonVuln" val="0.2" />
@@ -983,9 +983,9 @@
 	</skill>
 	<skill id="3562" levels="1" name="Ring of Ant Queen">
 		<!-- Increases resistance to poison/hold attacks and critical attack damage. Also increases Accuracy. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="singleEffect" val="true" />
 		<for>
 			<mul order="0x30" stat="poisonVuln" val="0.4" />
@@ -996,9 +996,9 @@
 	</skill>
 	<skill id="3563" levels="1" name="Ring of Core">
 		<!-- Increases Accuracy, and resistance to Poison attack. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="singleEffect" val="true" />
 		<for>
 			<mul order="0x30" stat="poisonVuln" val="0.6" />
@@ -1007,9 +1007,9 @@
 	</skill>
 	<skill id="3564" levels="1" name="Special Ability: Haste">
 		<!-- Increases Atk.Speed and enhances damage to target during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.07" />
 			<!-- <target pvp="1" /> </mul> <mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> -->
@@ -1017,31 +1017,31 @@
 	</skill>
 	<skill id="3565" levels="1" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="NONE" />
+		<set name="skillType" val="NOT_DONE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 	</skill>
 	<skill id="3566" levels="1" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="NONE" />
+		<set name="skillType" val="NOT_DONE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 	</skill>
 	<skill id="3567" levels="2" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="NONE" />
+		<set name="skillType" val="NOT_DONE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 	</skill>
 	<skill id="3568" levels="1" name="Special Ability: HP Drain">
 		<!-- Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Enhances damage to target during PvP. -->
 		<table name="#absorbDam">6 7 8 9 10 14</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="absorbDam" val="#absorbDam" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
@@ -1050,10 +1050,10 @@
 	</skill>
 	<skill id="3569" levels="1" name="Special Ability: HP Regeneration">
 		<!-- Increases HP regeneration rate and enhances damage to target during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1063,9 +1063,9 @@
 	</skill>
 	<skill id="3570" levels="1" name="Special Ability: Robust Health">
 		<!-- Increases Max HP, Max MP, Max CP and enhances damage to target during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="magicLevel" val="75" />
 		<set name="castRange" val="-1" />
 		<for>
@@ -1090,9 +1090,9 @@
 		<!-- Temporarily stuns and paralyzes target. -->
 		<set name="magiclvl" val="80" />
 		<set name="effectPoint" val="100" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="activateRate" val="27" />
 		<set name="levelModifier" val="1" />
 		<set name="saveVs" val="CON" />
@@ -1104,9 +1104,9 @@
 	<skill id="3572" levels="1" name="Special Ability: Crt. Damage">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
 		<table name="#cAtkAdd">265 906 999 1059</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -1116,9 +1116,9 @@
 	</skill>
 	<skill id="3573" levels="1" name="Special Ability: Guidance">
 		<!-- Increases Accuracy and enhances damage to target during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1131,10 +1131,10 @@
 		<set name="magicLevel" val="74" />
 		<set name="power" val="80" />
 		<set name="levelModifier" val="2" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
@@ -1145,19 +1145,19 @@
 	</skill>
 	<skill id="3575" levels="1" name="Special Ability: Empower Option">
 		<!-- Increases M. Atk. Enhances damage to target during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.25" />
 		</for>
 	</skill>
 	<skill id="3576" levels="1" name="Special Ability: MP Regeneration">
 		<!-- Increases MP regeneration rate and enhances damage to target during PvP. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1172,12 +1172,12 @@
 		<set name="magiclvl" val="75" />
 		<set name="levelModifier" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="skillType" val="ROOT" />
 		<set name="power" val="100" />
 		<!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="lvlDepend" val="2" />
 		<for>
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="30" val="0" />
@@ -1186,9 +1186,9 @@
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
 		<!-- Decreases enemy's P. Def. during critical attacks. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="5" />
 		<set name="triggeredId" val="3579" />
@@ -1218,11 +1218,11 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<for>
 			<effect count="1" name="Debuff" time="120" val="0" stackOrder="0.77" stackType="pDefDown">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -1232,9 +1232,9 @@
 	<skill id="3580" levels="1" name="Special Ability: Infinity Axe">
 		<!-- Dazzles the enemy to distraction during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks). -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="20" />
 		<set name="triggeredId" val="3581" />
@@ -1262,11 +1262,11 @@
 		<set name="bestowed" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<for>
 			<effect count="5" name="Confusion" time="4" val="0" />
 		</for>
@@ -1274,9 +1274,9 @@
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
 		<!-- Increases critical attack success rate/power, Max HP, Max CP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="504" />
 			<!-- P.Atk. +504 on a critical hit -->
@@ -1301,9 +1301,9 @@
 	<skill id="3583" levels="1" name="Special Ability: Infinity Crusher">
 		<!-- Throws enemy into a state of shock during a critical attack. Increases Max HP, Max CP, Atk. Spd. and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="25" />
 		<set name="triggeredId" val="3584" />
@@ -1333,10 +1333,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<set name="skillType" val="STUN" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<for>
 			<effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun" />
 		</for>
@@ -1344,9 +1344,9 @@
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, critical attack rate and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="10" />
 		<set name="triggeredId" val="3586" />
@@ -1378,11 +1378,11 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
 		<set name="skillType" val="MUTE" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<for>
 			<effect count="1" name="PsychicalMute" time="30" val="0" stackOrder="1" stackType="silence" />
 			<!-- time 60? -->
@@ -1391,9 +1391,9 @@
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
 		<!-- Throws the enemy into a state of shock during a critical attack. Increases Max HP, Max MP, Max CP, Evasion and damage inflicted during PvP. Reflects debuff attack back on enemy. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="25" />
 		<set name="triggeredId" val="3588" />
@@ -1425,10 +1425,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<set name="skillType" val="STUN" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<for>
 			<effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun" />
 		</for>
@@ -1436,9 +1436,9 @@
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
 		<!-- Blocks enemy's ability to use magic skills during a critical attack. Increases Max MP, Max CP, Atk. Spd., MP regeneration rate, critical attack rate when attacking the enemy from behind, and damage inflicted during PvP. Restores HP by using some of the damage inflicted upon the enemy (does not include damage from skill or range attacks). -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="5" />
 		<set name="triggeredId" val="3590" />
@@ -1474,10 +1474,10 @@
 		<set name="lvlDepend" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<set name="skillType" val="MUTE" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<for>
 			<effect count="1" name="Mute" time="30" val="0" stackOrder="1" stackType="silence" />
 			<!-- time 120? -->
@@ -1486,9 +1486,9 @@
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
 		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases the character's Maximum HP, Maximum CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on an enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="10" />
 		<set name="triggeredId" val="3592" />
@@ -1518,19 +1518,19 @@
 		<set name="bestowed" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="negateSkillTypes" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
 		<set name="skillType" val="CANCEL" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="negatePower" val="5" />
 	</skill>
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<!-- Decreases enemy's Speed during a critical attack. Increases Max MP, Max CP and damage inflicted during PvP. The skill re-use time is shortened, and MP consumption is reduced. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="7" />
 		<set name="triggeredId" val="3594" />
@@ -1554,11 +1554,11 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="80" />
 		<!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="effectPoint" val="100" />
 		<for>
 			<effect count="1" name="Debuff" time="30" val="0" stackOrder="0.5" stackType="RunSpeedDown">
@@ -1569,9 +1569,9 @@
 	<skill id="3595" levels="1" name="Special Ability: Infinity Scepter">
 		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, M. Atk., damage magic critical attack rate and damage inflicted during PvP. When casting magic, reduces MP consumption and cancel rate. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_MAGIC_GOOD" />
 		<set name="activationChance" val="3" />
 		<set name="triggeredId" val="3596" />
@@ -1601,17 +1601,17 @@
 		<set name="aggroPoints" val="100" />
 		<set name="bestowed" val="true" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="100" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
 		<!-- When using good magic, regenerates HP by 100%. Also increases Max HP, Max CP, Casting Spd., MP regeneration rate and damage inflicted during PvP. -->
 		<set name="magicLevel" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_CHANCE" />
+		<set name="operateType" val="CHANCE" />
 		<set name="chanceType" val="ON_MAGIC_GOOD" />
 		<set name="activationChance" val="3" />
 		<set name="triggeredId" val="3598" />
@@ -1637,16 +1637,16 @@
 		<set name="aggroPoints" val="100" />
 		<set name="bestowed" val="true" />
 		<set name="magicLevel" val="80" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="100" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 	</skill>
 	<skill id="3599" levels="1" name="Polearm Multi-attack">
 		<!-- Enables the character to attack multiple opponents. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="poleTargetCount" val="4" />
 		</for>

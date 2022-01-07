@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skill.BaseStat;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -80,7 +81,7 @@ public class SkillChargeDmg extends Skill
 		
 		double modifier = 0;
 		modifier = (effect.getLevel() - getNumCharges()) * 0.33;
-		if ((getTargetType() != SkillTargetType.TARGET_AREA) && (getTargetType() != SkillTargetType.TARGET_MULTIFACE))
+		if ((getTargetType() != SkillTargetType.AREA) && (getTargetType() != SkillTargetType.MULTIFACE))
 		{
 			effect.numCharges -= getNumCharges();
 		}

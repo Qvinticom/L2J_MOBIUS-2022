@@ -30,9 +30,10 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Cubic;
-import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -79,10 +80,11 @@ public class SkillSummon extends Skill
 			final Player player = (Player) creature;
 			if (_isCubic)
 			{
-				if (getTargetType() != Skill.SkillTargetType.TARGET_SELF)
+				if (getTargetType() != SkillTargetType.SELF)
 				{
 					return true; // Player is always able to cast mass cubic skill
 				}
+				
 				final int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
 				final int count = player.getCubics().size();
 				if (count > mastery)
@@ -97,6 +99,7 @@ public class SkillSummon extends Skill
 				{
 					return false;
 				}
+				
 				if (player.getPet() != null)
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_ALREADY_HAVE_A_PET));
@@ -236,7 +239,7 @@ public class SkillSummon extends Skill
 		World.getInstance().storeObject(summon);
 		
 		// Check to see if we should do the decay right after the cast
-		if (getTargetType() == SkillTargetType.TARGET_CORPSE_MOB)
+		if (getTargetType() == SkillTargetType.CORPSE_MOB)
 		{
 			final Creature target = targets.get(0);
 			if (target.isDead() && (target instanceof Npc))

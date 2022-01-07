@@ -24,10 +24,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skill.Env;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectTemplate;
 import org.l2jmobius.gameserver.model.skill.funcs.Func;
 import org.l2jmobius.gameserver.model.skill.funcs.FuncTemplate;

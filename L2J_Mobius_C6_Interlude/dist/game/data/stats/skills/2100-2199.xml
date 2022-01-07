@@ -1,28 +1,28 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2100" levels="1" name="Escape: 1 second">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 	</skill>
 	<skill id="2101" levels="1" name="Feed: General Strider">
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="BEAST_FEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5168" /> <!-- Food for Strider -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
 	<skill id="2102" levels="1" name="Feed: Clan Hall Strider">
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="BEAST_FEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5169" /> <!-- Deluxe Food for Strider -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="40" />
@@ -32,9 +32,9 @@
 		<!-- Enlarges the user's head. -->
 		<set name="isPotion" val="true" />
 		<set name="magicLevel" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<for>
 			<effect count="1" name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="300" stackType="big_head" />
 		</for>
@@ -44,9 +44,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="1835" /> <!-- Soulshot: No Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -56,9 +56,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="1463" /> <!-- Soulshot: D-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -68,9 +68,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="1464" /> <!-- Soulshot: C-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -80,9 +80,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="1465" /> <!-- Soulshot: B-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -92,9 +92,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="1466" /> <!-- Soulshot: A-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -104,9 +104,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="1467" /> <!-- Soulshot: S-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -116,9 +116,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="2509" /> <!-- Spiritshot: No Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -128,9 +128,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="2510" /> <!-- Spiritshot: D-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -140,9 +140,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="2511" /> <!-- Spiritshot: C-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -152,9 +152,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="2512" /> <!-- Spiritshot: B-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -164,9 +164,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="2513" /> <!-- Spiritshot: A-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -176,9 +176,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="2514" /> <!-- Spiritshot: S-grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -188,9 +188,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="3947" /> <!-- Blessed Spiritshot: No Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -200,9 +200,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="3948" /> <!-- Blessed Spiritshot: D-Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -212,9 +212,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="3949" /> <!-- Blessed Spiritshot: C-Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -224,9 +224,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="3950" /> <!-- Blessed Spiritshot: B-Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -236,9 +236,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="3951" /> <!-- Blessed Spiritshot: A-Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -248,9 +248,9 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="createItemId" val="3952" /> <!-- Blessed Spiritshot: S Grade -->
 		<set name="createItemCount" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -258,10 +258,10 @@
 	<skill id="2122" levels="1" name="Facelifting Potion">
 		<set name="itemConsumeId" val="5235" /> <!-- Facelifting Potion - A -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -269,10 +269,10 @@
 	<skill id="2123" levels="1" name="Facelifting Potion">
 		<set name="itemConsumeId" val="5236" /> <!-- Facelifting Potion - B -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -280,19 +280,19 @@
 	<skill id="2124" levels="1" name="Facelifting Potion">
 		<set name="itemConsumeId" val="5237" /> <!-- Facelifting Potion - C -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2125" levels="1" name="Dye Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5238" /> <!-- Dye Potion - A -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -300,10 +300,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2126" levels="1" name="Dye Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5239" /> <!-- Dye Potion - B -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -311,10 +311,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2127" levels="1" name="Dye Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5240" /> <!-- Dye Potion - C -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -322,10 +322,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2128" levels="1" name="Dye Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5241" /> <!-- Dye Potion - D -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -333,10 +333,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2129" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5242" /> <!-- Hair Style Change Potion - A -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -344,10 +344,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2130" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5243" /> <!-- Hair Style Change Potion - B -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -355,10 +355,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2131" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5244" /> <!-- Hair Style Change Potion - C -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -366,10 +366,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2132" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5245" /> <!-- Hair Style Change Potion - D -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -377,10 +377,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2133" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5246" /> <!-- Hair Style Change Potion - E -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -388,10 +388,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2134" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5247" /> <!-- Hair Style Change Potion - F -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -399,10 +399,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2135" levels="1" name="Hair Style Change Potion">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5248" /> <!-- Hair Style Change Potion - G -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="-1" />
@@ -413,17 +413,17 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="5283" /> <!-- Rice Cake -->
 		<set name="magicLevel" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="3" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<!-- Needs Core support: Heal HP 3% & heal MP 1% at the same time -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="isPotion" val="true" />
 	</skill>
 	<skill id="2137" levels="1" name="Summon Regular Tree">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SUMMON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5560" /> <!-- Christmas Tree -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="npcId" val="13006" /> <!-- Christmas Tree -->
@@ -434,9 +434,9 @@
 		<set name="hitTime" val="6000" />
 	</skill>
 	<skill id="2138" levels="1" name="Summon Special Tree">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SUMMON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5561" /> <!-- Special Christmas Tree -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="npcId" val="13007" /> <!-- Special Christmas Tree -->
@@ -448,9 +448,9 @@
 	</skill>
 	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
 		<!-- Produces a special Holiday Tree during the Holiday event. Increases HP and MP regeneration. -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -464,9 +464,9 @@
 		</for>
 	</skill>
 	<skill id="2140" levels="1" name="Carol Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5562" /> <!-- Echo Crystal - 1st Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -475,9 +475,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2141" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5563" /> <!-- Echo Crystal - 2nd Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -486,9 +486,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2142" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5564" /> <!-- Echo Crystal - 3rd Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -497,9 +497,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2143" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5565" /> <!-- Echo Crystal - 4th Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -508,9 +508,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2144" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5566" /> <!-- Echo Crystal - 5th Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -519,9 +519,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2145" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5583" /> <!-- Echo Crystal - 6th Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -530,9 +530,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2146" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5584" /> <!-- Echo Crystal - 7th Carol -->
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
@@ -541,9 +541,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2147" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5585" /> <!-- Echo Crystal - 8th Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -552,9 +552,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2148" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5586" /> <!-- Echo Crystal - 9th Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -563,9 +563,9 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2149" levels="1" name="Item - Carol Sound Crystal">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5587" /> <!-- Echo Crystal - 10th Carol -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="500" />
@@ -576,10 +576,10 @@
 	<skill id="2150" levels="1" name="Soulshot: D Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="1" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -589,10 +589,10 @@
 	<skill id="2151" levels="1" name="Soulshot: C Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="2" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -602,10 +602,10 @@
 	<skill id="2152" levels="1" name="Soulshot: B Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="3" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -615,10 +615,10 @@
 	<skill id="2153" levels="1" name="Soulshot: A Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="4" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -628,10 +628,10 @@
 	<skill id="2154" levels="1" name="Soulshot: S Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="5" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -641,10 +641,10 @@
 	<skill id="2155" levels="1" name="Spiritshot: D Grade">
 		<table name="#multiplier">1.5</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="1" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -654,10 +654,10 @@
 	<skill id="2156" levels="1" name="Spiritshot: C Grade">
 		<table name="#multiplier">1.5</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="2" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -667,10 +667,10 @@
 	<skill id="2157" levels="1" name="Spiritshot: B Grade">
 		<table name="#multiplier">1.5</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="3" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -680,10 +680,10 @@
 	<skill id="2158" levels="1" name="Spiritshot: A Grade">
 		<table name="#multiplier">1.5</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="4" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -693,10 +693,10 @@
 	<skill id="2159" levels="1" name="Spiritshot: S Grade">
 		<table name="#multiplier">1.5</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="5" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -706,10 +706,10 @@
 	<skill id="2160" levels="1" name="Blessed Spiritshot: D Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="1" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -719,10 +719,10 @@
 	<skill id="2161" levels="1" name="Blessed Spiritshot: C Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="2" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -732,10 +732,10 @@
 	<skill id="2162" levels="1" name="Blessed Spiritshot: B Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="3" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -745,10 +745,10 @@
 	<skill id="2163" levels="1" name="Blessed Spiritshot: A Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="4" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -758,10 +758,10 @@
 	<skill id="2164" levels="1" name="Blessed Spiritshot: S Grade">
 		<table name="#multiplier">2.0</table>
 		<!-- wtf what is it? -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="element" val="5" />
 		<set name="skillType" val="SOULSHOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -771,9 +771,9 @@
 	<skill id="2165" levels="1" name="Energy Stone">
 		<set name="itemConsumeId" val="5589" /> <!-- Energy Stone -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CHARGE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="charges" val="2" />
 		<set name="altUse" val="true" />
 		<set name="isHandler" val="true" />
@@ -784,9 +784,9 @@
 	<skill id="2166" levels="2" name="CP Gauge Potion">
 		<table name="#power">50 200</table>
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="600" />
 		<!-- Guess - Retail 0 but them have kind protection for flood -->
 		<set name="isPotion" val="true" />
@@ -800,18 +800,18 @@
 		<set name="magicLevel" val="1" />
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="GIVE_SP" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 	</skill>
 	<skill id="2168" levels="6" name="Raid Blessing">
 		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/Raid Monsters. Effect 1. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -823,9 +823,9 @@
 		<!-- Increases Casting Spd. Effect 2. -->
 		<table name="#mAtkSpd">1.23 1.3</table>
 		<!-- <table name="#itemConsumeId">6035 6036</table> -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -838,9 +838,9 @@
 		</for>
 	</skill>
 	<skill id="2170" levels="1" name="Scroll: Cancel Sleep">
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="skillType" val="NEGATE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="600" />
@@ -848,9 +848,9 @@
 		<set name="negatePower" val="9" />
 	</skill>
 	<skill id="2171" levels="1" name="Spellbook Paper">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -858,9 +858,9 @@
 		<set name="itemConsumeCount" val="1" />
 	</skill>
 	<skill id="2172" levels="1" name="Scroll of Giants">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -868,9 +868,9 @@
 		<set name="itemConsumeCount" val="1" />
 	</skill>
 	<skill id="2173" levels="1" name="Book of Giants">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -878,9 +878,9 @@
 		<set name="itemConsumeCount" val="1" />
 	</skill>
 	<skill id="2174" levels="3" name="Ingredient Bag">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -889,9 +889,9 @@
 		<set name="itemConsumeCount" val="1" />
 	</skill>
 	<skill id="2175" levels="1" name="Ingredient Box">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -899,9 +899,9 @@
 		<set name="itemConsumeCount" val="1" />
 	</skill>
 	<skill id="2176" levels="4" name="Ancient Papyrus">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -913,10 +913,10 @@
 		<set name="itemConsumeId" val="5858" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="clanhall" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -925,20 +925,20 @@
 		<set name="itemConsumeId" val="5859" /> <!-- Blessed Scroll of Escape: Castle -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castle" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_CORPSE_PET" />
+		<set name="target" val="CORPSE_PET" />
 		<set name="hitTime" val="15000" />
 		<set name="skillType" val="RESURRECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 		<set name="itemConsumeId" val="6387" /> <!-- Blessed Scroll of Resurrection for Pets -->
@@ -946,10 +946,10 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2180" levels="1" name="Feed: Castle Strider">
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="BEAST_FEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="5168" /> <!-- Food for Strider -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="40" />
@@ -958,9 +958,9 @@
 	<skill id="2181" levels="1" name="Item - Fishing Shot">
 		<set name="itemConsumeId" val="6535" /> <!-- Fishing Shot: non-grade -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -968,9 +968,9 @@
 	<skill id="2182" levels="1" name="Item - Fishing Shot">
 		<set name="itemConsumeId" val="6536" /> <!-- Fishing Shot: D-grade -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -978,9 +978,9 @@
 	<skill id="2183" levels="1" name="Item - Fishing Shot">
 		<set name="itemConsumeId" val="3537" /> <!-- Delivery Goods 16 -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -988,9 +988,9 @@
 	<skill id="2184" levels="1" name="Item - Fishing Shot">
 		<set name="itemConsumeId" val="6538" /> <!-- Fishing Shot: B-grade -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -998,9 +998,9 @@
 	<skill id="2185" levels="1" name="Item - Fishing Shot">
 		<set name="itemConsumeId" val="6539" /> <!-- Fishing Shot: A-grade -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1008,9 +1008,9 @@
 	<skill id="2186" levels="1" name="Item - Fishing Shot">
 		<set name="itemConsumeId" val="6540" /> <!-- Fishing Shot: S-grade -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1018,18 +1018,18 @@
 	<skill id="2187" levels="1" name="Item - Special Sound Crystal">
 		<set name="itemConsumeId" val="6903" /> <!-- Music Box M -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2188" levels="1" name="Golden Spice">
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="BEAST_FEED" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="itemConsumeId" val="6643" /> <!-- Golden Spice -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="40" />
@@ -1037,12 +1037,12 @@
 		<set name="magicLevel" val="1" />
 	</skill>
 	<skill id="2189" levels="1" name="Crystal Spice">
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="BEAST_FEED" />
 		<set name="itemConsumeId" val="6644" /> <!-- Crystal Spice -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="magicLevel" val="1" />
@@ -1051,9 +1051,9 @@
 		<table name="#itemConsumeId">6411 6412 6413 6414 6415 6416 6417 6418 6419</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1062,9 +1062,9 @@
 		<table name="#itemConsumeId">6420 6421 6422 6423 6424 6425 6426 6427 6428</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1073,9 +1073,9 @@
 		<table name="#itemConsumeId">6429 6430 6431 6432 6433 6434 6435 6436 6437</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1084,9 +1084,9 @@
 		<table name="#itemConsumeId">6438 6439 6440 6441 6442 6443 6444 6445 6446</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1095,9 +1095,9 @@
 		<table name="#itemConsumeId">6447 6448 6449 6450 6451 6452 6453 6454 6455</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1106,9 +1106,9 @@
 		<table name="#itemConsumeId">6456 6457 6458 6459 6460 6461 6462 6463 6464</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1117,9 +1117,9 @@
 		<table name="#itemConsumeId">6465 6466 6467 6468 6469 6470 6471 6472 6473</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1128,9 +1128,9 @@
 		<table name="#itemConsumeId">6474 6475 6476 6477 6478 6479 6480 6481 6482</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1139,9 +1139,9 @@
 		<table name="#itemConsumeId">6483 6484 6485 6486 6487 6488 6489 6490 6491</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />
@@ -1150,9 +1150,9 @@
 		<table name="#itemConsumeId">6492 6493 6494</table>
 		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="magicLevel" val="1" />

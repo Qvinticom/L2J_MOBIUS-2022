@@ -55,7 +55,7 @@ import org.l2jmobius.gameserver.handler.skillhandlers.TakeCastle;
 import org.l2jmobius.gameserver.handler.skillhandlers.Unlock;
 import org.l2jmobius.gameserver.handler.skillhandlers.ZakenPlayer;
 import org.l2jmobius.gameserver.handler.skillhandlers.ZakenSelf;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 
 public class SkillHandler
 {

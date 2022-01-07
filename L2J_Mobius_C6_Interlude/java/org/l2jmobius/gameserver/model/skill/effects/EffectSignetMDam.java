@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -35,6 +34,7 @@ import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.skill.handlers.SkillSignetCasttime;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -81,7 +81,7 @@ public class EffectSignetMDam extends Effect
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
-		if ((getEffector() instanceof Player) && (getSkill().getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
+		if ((getEffector() instanceof Player) && (getSkill().getTargetType() == SkillTargetType.GROUND))
 		{
 			final Location wordPosition = ((Player) getEffector()).getCurrentSkillWorldPosition();
 			if (wordPosition != null)

@@ -9,9 +9,9 @@
 		<table name="#ench1runSpd">0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20</table>
 		<table name="#ench2cAtk">113 127 141 155 169 183 196 210 224 238 252 266 279 293 307 321 335 349 362 376 390 404 418 432 445 459 473 487 501 515</table>
 		<set name="weaponsAllowed" val="16392" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -40,9 +40,9 @@
 		<!-- Increases P. Atk. when using a bow. -->
 		<table name="#pAtk">10.3 11.4 27.6 32.8 35.6 38.6 45.2 48.9 52.7 61.1 65.6 70.4 80.9 86.5 92.4 105.1 111.9 178.8 189.9 201.4 213.5 226 239.1 252.7 266.7 281.3 296.4 311.9 328 344.5 361.6 379.1 397 415.4 434.3 453.5 473.2 493.1 513.5 534.2 555.1 576.3 597.8 619.4 641.2 663.1 685 707.1 729.1 751 772.9 794.6</table>
 		<set name="weaponsAllowed" val="32" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -55,9 +55,9 @@
 		<!-- Increases P. Atk. when using a dagger. -->
 		<table name="#pAtk">3.6 6 7.4 9 10.8 12.8 15.1 17.6 20.3 21.8 23.4 25 26.6 28.4 30.2 32.1 34.1 36.1 38.2 40.4 42.7 45 47.4 49.9 52.4 55 57.7 60.4 63.2 66.1 69 71.9 74.9 78 81.1 84.2 87.3 90.5 93.7 96.8 100 103.2 106.4 109.6 112.8</table>
 		<set name="weaponsAllowed" val="16" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -70,9 +70,9 @@
 		<!-- Increases P. Atk. when using a hand-to-hand combat weapon. -->
 		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
 		<set name="weaponsAllowed" val="1280" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -89,9 +89,9 @@
 		<table name="#hp">60 100 150 200 250 300 350 400 440 480</table>
 		<table name="#ench1hp">483 486 490 493 496 500 503 506 510 513 516 520 523 526 530 533 536 540 543 546 550 553 556 560 563 566 570 573 576 580</table>
 		<table name="#ench2cp">10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 180 190 200 210 220 230 240 250 260 270 280 290 300</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -108,9 +108,9 @@
 	<skill id="212" levels="8" name="Fast HP Recovery">
 		<!-- Increases HP regeneration. -->
 		<table name="#hp">1.1 1.6 1.7 2.1 2.6 2.7 3.4 4</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -120,9 +120,9 @@
 	<skill id="213" levels="8" name="Boost Mana">
 		<!-- Increases maximum MP. -->
 		<table name="#mp">30 50 70 100 140 152 180 200</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -131,9 +131,9 @@
 	</skill>
 	<skill id="214" levels="1" name="Mana Recovery">
 		<!-- Increases MP regeneration when wearing a robe jacket and robe pants. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -147,9 +147,9 @@
 		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
 		<table name="#atkCountMax">5 5 5 5 5 5 5 5 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10</table>
 		<set name="weaponsAllowed" val="64" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -165,9 +165,9 @@
 		<!-- Increases P. Atk. when using a sword or blunt weapon. -->
 		<table name="#pAtk">1.5 3.1 4.1 5.2 6.5 7.9 9.4 11.1 13 14 15.1 16.2 17.3 18.5 19.8 21.1 22.4 23.8 25.3 26.8 28.3 29.9 31.6 33.3 35 36.8 38.6 40.5 42.4 44.4 46.4 48.4 50.4 52.5 54.6 56.8 58.9 61.1 63.3 65.5 67.6 69.8 72 74.2 76.4</table>
 		<set name="weaponsAllowed" val="18444" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -179,9 +179,9 @@
 	<skill id="221" levels="1" name="Silent Move">
 		<!-- Disables preemptive attacks from enemies. Continuously consumes MP. -->
 		<set name="mpConsume" val="7" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -194,9 +194,9 @@
 		<!-- Greatly increases one's Atk. Spd. Continuously consumes HP. -->
 		<set name="weaponsAllowed" val="1024" />
 		<set name="mpConsume" val="8" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<cond msg="Dual Fist required.">
@@ -230,14 +230,14 @@
 		<set name="saveVs" val="CON" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="11000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="effectPower" val="#ench1Chance" />
@@ -251,10 +251,10 @@
 	<skill id="225" levels="3" name="Acrobatic Move">
 		<!-- Dodging abilities increase when running. -->
 		<table name="#gain">4 5 6</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="condition" val="1" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -266,9 +266,9 @@
 	<skill id="226" levels="1" name="Relax">
 		<!-- Recovers HP quickly when sitting. -->
 		<set name="mpConsume" val="2" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -281,9 +281,9 @@
 		<!-- Increases P. Def. and Evasion when wearing light armor. -->
 		<table name="#pDef">4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8 16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9 29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2 42.8 44.5 46.1 47.8 49.5 51.3 53 54.8 56.6 58.4 60.2 62.1 64 65.8 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.3</table>
 		<table name="#rEvas">3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -298,9 +298,9 @@
 	<skill id="228" levels="3" name="Fast Spell Casting">
 		<!-- Spell casting speed increases. -->
 		<table name="#rate">1.05 1.07 1.1</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -310,9 +310,9 @@
 	<skill id="229" levels="7" name="Fast Mana Recovery">
 		<!-- Increases MP regeneration. -->
 		<table name="#regMp">1.1 1.5 1.9 2.3 2.7 3.1 3.4</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -333,12 +333,12 @@
 		<table name="#aggro">219 495</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="#aggro" />
@@ -358,9 +358,9 @@
 	<skill id="231" levels="50" name="Heavy Armor Mastery">
 		<!-- Increases P. Def. when wearing heavy armor. -->
 		<table name="#pDef">1.9 3.3 4.8 6.4 8.1 8.9 9.8 11.7 12.7 13.7 15.8 16.9 18 20.4 21.6 22.8 24.1 25.4 26.7 28 29.4 30.8 32.2 33.7 35.2 36.7 38.2 39.8 41.4 43 44.6 46.3 48 49.7 51.4 53.2 55 56.7 58.6 60.4 62.2 64.1 66 67.8 69.7 71.6 73.6 75.5 77.4 79.3</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -373,9 +373,9 @@
 		<!-- Increases P. Def. when wearing heavy armor. -->
 		<table name="#pDef">17.7 19.1 20.5 23.5 25 26.7 30 31.8 33.6 37.4 39.3 41.3 45.6 47.7 50 54.6 57.1 59.5 62.1 64.6 67.3 70 72.7 75.5 78.4 81.3 84.3 87.3 90.4 93.5 96.7 99.9 103.2 106.5 109.9 113.3 116.8 120.3 123.8 127.4 131 134.7 138.4 142.1 145.8 149.6 153.4 157.2 161 164.9 168.7 172.6</table>
 		<table name="#critVuln">0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -391,9 +391,9 @@
 		<!-- Increases P. Def. when wearing light armor. -->
 		<table name="#pDef">1.3 2.2 3.2 4.2 5.3 6.8 8.4 10.1 11.9 13.7 15.7 16.7 17.8 18.8 19.9 21.1 22.2 23.4 24.5 25.8 27 28.2 29.5 30.8 32.1 33.5 34.8 36.2 37.6 39.1 40.5 42 43.5 44.9 46.5 48 49.5 51.1 52.7 54.2 55.8 57.4 59.1 60.7 62.3 63.9 65.6</table>
 		<table name="#rEvas">4 4 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -408,9 +408,9 @@
 	<skill id="234" levels="41" name="Robe Mastery">
 		<!-- Increases P. Def. when wearing a robe. -->
 		<table name="#pDef">1.7 2.7 4.3 5.4 7.2 8.5 10.6 12.1 14.5 15.3 16.2 17.9 18.8 19.8 21.7 22.7 23.7 25.8 26.8 27.9 30.1 31.2 32.4 33.5 34.7 35.9 37.1 38.4 39.6 40.8 42.1 43.4 44.7 45.9 47.3 48.6 49.9 51.2 52.5 53.9 55.2</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -422,9 +422,9 @@
 	<skill id="235" levels="41" name="Robe Mastery">
 		<!-- Increases P. Def. when wearing a robe. -->
 		<table name="#pDef">7.2 8.6 11 12.7 15.4 17.4 20.5 22.7 26.3 27.6 28.8 31.5 32.9 34.2 37.1 38.6 40.1 43.2 44.8 46.4 49.8 51.5 53.2 54.9 56.7 58.5 60.3 62.1 64 65.9 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.4 83.4 85.4 87.4</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -436,9 +436,9 @@
 	<skill id="236" levels="41" name="Light Armor Mastery">
 		<!-- Increases P. Def., Casting Spd., Atk. Spd. and MP regeneration when wearing light armor. -->
 		<table name="#pDef">5.4 6.3 7.8 8.8 10.9 12.5 15 16.9 19.8 20.8 21.8 24 25.1 26.3 28.6 29.8 31 33.6 34.9 36.2 38.9 40.3 41.7 43.1 44.6 46 47.5 49 50.5 52.1 53.6 55.2 56.7 58.3 59.9 61.5 63.1 64.7 66.4 68 69.6</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -458,41 +458,41 @@
 	</skill>
 	<skill id="239" levels="5" name="Expertise S">
 		<!-- You become familiar with D-grade equipment. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="canLearn" val="" />
 	</skill>
 	<skill id="240" levels="1" name="Expertise C Deleted">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="canLearn" val="" />
 	</skill>
 	<skill id="241" levels="1" name="Expertise B Deleted">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="canLearn" val="" />
 	</skill>
 	<skill id="242" levels="1" name="Expertise A Deleted">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="canLearn" val="" />
 	</skill>
 	<skill id="243" levels="1" name="Expertise S Deleted">
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="PASSIVE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="canLearn" val="" />
@@ -500,9 +500,9 @@
 	<skill id="244" levels="3" name="Armor Mastery">
 		<!-- Defense increase. -->
 		<table name="#pDef">6.7 8 9.2</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -519,7 +519,7 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="nextActionAttack" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="target" val="AREA" />
 		<set name="skillRadius" val="150" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
@@ -527,7 +527,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
@@ -535,13 +535,13 @@
 		<!-- Engraves on the ancient holy artifact guarding the castle of which you are the ruler. -->
 		<set name="mpInitialConsume" val="50" />
 		<set name="mpConsume" val="0" />
-		<set name="target" val="TARGET_HOLY" />
+		<set name="target" val="HOLY" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="180000" />
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="skillType" val="TAKECASTLE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="85" />
 		<set name="effectRange" val="400" />
 	</skill>
@@ -551,19 +551,19 @@
 		<set name="mpConsume" val="0" />
 		<set name="itemConsumeId" val="2131" /> <!-- Gemstone C -->
 		<set name="itemConsumeCount" val="300" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="SIEGEFLAG" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 	</skill>
 	<skill id="248" levels="5" name="Crystallize">
 		<!-- Makes crystallization possible. -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 	</skill>
 	<skill id="249" levels="42" name="Weapon Mastery">
@@ -572,9 +572,9 @@
 		<table name="#mAtk">1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3</table>
 		<table name="#mulpAtk">1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45</table>
 		<table name="#mulmAtk">1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -600,9 +600,9 @@
 		<table name="#mAtk">1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3</table>
 		<table name="#mulpAtk">1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45</table>
 		<table name="#mulmAtk">1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -625,9 +625,9 @@
 	<skill id="251" levels="45" name="Robe Mastery">
 		<!-- Increases P. Def. when wearing a robe. -->
 		<table name="#pDef">11.6 13.4 16.1 18.4 20.9 23.8 26.9 29.1 32.8 35.4 39.6 42.6 47.3 49 50.7 54.2 56.1 57.9 61.8 63.7 65.7 69.9 72 74.2 78.6 80.9 83.2 85.5 87.8 90.2 92.6 95.1 97.6 100.1 102.6 105.1 107.7 110.3 112.9 115.5 118.1 120.8 123.4 126.1 128.8</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -644,9 +644,9 @@
 	<skill id="252" levels="45" name="Light Armor Mastery">
 		<!-- Increases P. Def., Casting Spd., Atk. Spd. and MP regeneration when wearing light armor. -->
 		<table name="#pDef">12.6 14.5 17.5 19.3 21.2 23.2 25.5 27 30.1 32.5 36.3 39.1 43.5 45 46.6 49.8 51.5 53.2 56.7 58.5 60.4 64.2 66.1 68.1 72.2 74.2 76.3 78.5 80.6 82.8 85.1 87.3 89.6 91.9 94.2 96.5 98.9 101.2 103.6 106 108.5 110.9 113.3 115.8 118.2</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -687,9 +687,9 @@
 	<skill id="253" levels="43" name="Heavy Armor Mastery">
 		<!-- Increases P. Def., Casting Spd., and Atk. Spd. when wearing heavy armor. -->
 		<table name="#pDef">11.6 13.3 15.2 17.2 19.5 21.1 23.7 25.6 28.7 30.8 34.3 35.5 36.7 39.3 40.6 41.9 44.7 46.1 47.6 50.6 52.1 53.7 56.9 58.6 60.2 61.9 63.6 65.3 67.1 68.9 70.7 72.5 74.3 76.1 78 79.9 81.7 83.6 85.5 87.5 89.4 91.3 93.3</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -730,12 +730,12 @@
 		<table name="#ench2Power">0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1800" />
 		<set name="skillType" val="SPOIL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -759,14 +759,14 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="nextActionAttack" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="13000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
@@ -777,9 +777,9 @@
 		<enchant1 name="magicLevel" val="#enchantMagicLvl" />
 		<set name="mpConsume" val="1" />
 		<set name="magicLevel" val="24" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<for>
 			<effect count="0x7fffffff" name="MpConsumePerLevel" time="5" val="0.2">
 				<add order="0x40" stat="accCombat" val="3" />
@@ -795,9 +795,9 @@
 		<!-- Increases P. Atk when using a sword or blunt weapon. -->
 		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
 		<set name="weaponsAllowed" val="18444" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -811,9 +811,9 @@
 	<skill id="258" levels="33" name="Light Armor Mastery">
 		<!-- Increases P. Def., Casting Spd., Atk. Spd. and MP regeneration when wearing light armor. -->
 		<table name="#pDef">11.1 11.8 12.5 14 14.8 15.6 17.3 18.1 19 20.8 21.7 22.6 24.5 25.5 26.4 27.4 28.4 29.5 30.5 31.6 32.6 33.7 34.8 35.9 37 38.1 39.2 40.3 41.4 42.6 43.7 44.8 46</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -854,9 +854,9 @@
 	<skill id="259" levels="33" name="Heavy Armor Mastery">
 		<!-- Increases P. Def., Casting Spd., and Atk. Spd. when wearing heavy armor. -->
 		<table name="#pDef">14.8 15.6 16.5 18.3 19.2 20.2 22.1 23.1 24.1 26.2 27.3 28.4 30.6 31.8 33 34.1 35.3 36.5 37.8 39 40.3 41.5 42.8 44.1 45.4 46.7 48 49.4 50.7 52 53.4 54.7 56.1</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -904,7 +904,7 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="ignoreShld" val="true" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
@@ -912,7 +912,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
@@ -938,7 +938,7 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="nextActionAttack" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="conditionValue" val="3" />
 		<set name="ignoreShld" val="true" />
 		<set name="SSBoost" val="2.0" />
@@ -947,7 +947,7 @@
 		<set name="hitTime" val="1667" />
 		<set name="coolTime" val="133" />
 		<set name="skillType" val="CHARGEDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="baseCritRate" val="15" />
@@ -971,12 +971,12 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="#aggro" />
@@ -998,14 +998,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="condition" val="16" />
 		<set name="reuseDelay" val="12000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="BLOW" />
 		<set name="lethal1" val="2" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1021,13 +1021,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="523" />
@@ -1054,13 +1054,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="495" />
@@ -1087,13 +1087,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="549" />
@@ -1120,13 +1120,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="379" />
@@ -1153,13 +1153,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="438" />
@@ -1186,13 +1186,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="467" />
@@ -1219,13 +1219,13 @@
 		<table name="#ench2MpConsume">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="408" />
@@ -1253,13 +1253,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="523" />
@@ -1287,13 +1287,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="438" />
@@ -1321,13 +1321,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="467" />
@@ -1355,13 +1355,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="379" />
@@ -1389,13 +1389,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="549" />
@@ -1423,13 +1423,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="495" />
@@ -1459,13 +1459,13 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="aggroPoints" val="408" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1491,12 +1491,12 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<!-- Summon-specific -->
@@ -1527,13 +1527,13 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="1000" />
 		<enchant1 name="power" val="#enchant1Power" />
@@ -1556,7 +1556,7 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="nextActionAttack" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="weaponsAllowed" val="1024" />
 		<set name="element" val="2" />
 		<set name="ignoreShld" val="true" />
@@ -1565,7 +1565,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="hitTime" val="1900" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1590,7 +1590,7 @@
 		<set name="power" val="#power" />
 		<set name="nextActionAttack" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="weaponsAllowed" val="1024" />
 		<set name="ignoreShld" val="true" />
 		<set name="overHit" val="true" />
@@ -1599,7 +1599,7 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="coolTime" val="#coolTime" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="effectPower" val="#ench1effectPower" />
@@ -1613,11 +1613,11 @@
 		<!-- The spirit of the puma possesses you, temporarily increasing Accuracy and Atk. Spd. when using hand-to-hand combat weapons. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024" />
 		<set name="mpConsume" val="18" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
 			<using kind="Fist, Dual Fist" />
 		</cond>
@@ -1651,12 +1651,12 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<table name="#npcIds">14799 14800 14801 14802 14803 14804 14805</table>
@@ -1679,7 +1679,7 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="nextActionAttack" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="weaponsAllowed" val="1024" />
 		<set name="conditionValue" val="2" />
 		<set name="ignoreShld" val="true" />
@@ -1689,7 +1689,7 @@
 		<set name="hitTime" val="1360" />
 		<set name="coolTime" val="440" />
 		<set name="skillType" val="CHARGEDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="baseCritRate" val="15" />
@@ -1701,9 +1701,9 @@
 	<skill id="285" levels="27" name="Higher Mana Gain">
 		<!-- Increases the recovery rate when MP is being recovered by recharge. -->
 		<table name="#gainMp">22 24 28 29 31 32 38 39 41 42 48 49 50 52 53 59 61 62 64 66 72 73 75 76 78 79 81</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1717,12 +1717,12 @@
 		<table name="#skillRadius">500 700 900</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="500" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="skillRadius" val="#skillRadius" />
 		<set name="reuseDelay" val="15000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="AGGDAMAGE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 	</skill>
@@ -1732,11 +1732,11 @@
 		<table name="#vuln">0.6 0.4 0.2</table>
 		<table name="#aggro">341 467 582</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="#aggro" />
@@ -1763,9 +1763,9 @@
 		<table name="#ench1val">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<table name="#ench2val">75.24 74.48 74.48 74.69 74.69 73.92 74.88 74.1 74.1 74.26 74.26 73.47 74.4 73.6 73.6 73.71 73.71 72.9 73.8 72.98 72.98 73.04 73.04 72.21 73.08 72.24 72.24 72.25 72.25 71.4</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -1804,13 +1804,13 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="element" val="6" />
 		<set name="reuseDelay" val="15000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="DRAIN" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="absorbPart" val="0.8" />
@@ -1821,9 +1821,9 @@
 	<skill id="290" levels="14" name="Final Frenzy">
 		<!-- Automatically increases P. Atk when HP level falls. -->
 		<table name="#final">32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.1 93.1 100.2 107.5 114.8 122.1 129.3</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1835,9 +1835,9 @@
 	<skill id="291" levels="11" name="Final Fortress">
 		<!-- Automatically increases P. Def. when HP level falls. -->
 		<table name="#final">116.9 129 141.6 150.4 159.3 168.4 177.7 187 196.5 206.2 215.8</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1850,11 +1850,11 @@
 		<!-- The spirit of the bison possesses you, temporarily increasing Accuracy when using hand-to-hand combat weapons. When HP is low, P. Atk. and critical attack rate are also increased. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024" />
 		<set name="mpConsume" val="32" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="624" />
@@ -1892,9 +1892,9 @@
 		<table name="#Attack">4.5 7.3 10.7 15.1 20.5 27.1 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.1 93.1 100.2 107.5 114.8 122.1 129.3</table>
 		<table name="#Accuracy">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<set name="weaponsAllowed" val="18432" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1908,9 +1908,9 @@
 	</skill>
 	<skill id="294" levels="1" name="Shadow Sense">
 		<!-- Increases Accuracy at night. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1922,9 +1922,9 @@
 	</skill>
 	<skill id="295" levels="1" name="Iron Body">
 		<!-- Resist damage from falling. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1934,9 +1934,9 @@
 	<skill id="296" levels="1" name="Chameleon Rest">
 		<!-- Allows one to sit and rest while being protected from a monster's pre-emptive attack. MP will continuously be consumed. -->
 		<set name="mpConsume" val="9" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<for>
@@ -1950,11 +1950,11 @@
 		<table name="#aggro">597 646</table>
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="aggroPoints" val="#aggro" />
@@ -1976,11 +1976,11 @@
 		<!-- The spirit of the rabbit possesses you, temporarily increasing Speed and Evasion when using hand-to-hand combat weapons. Accuracy and P. Atk. are decreased while the effect lasts. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024" />
 		<set name="mpConsume" val="29" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="aggroPoints" val="582" />
 		<cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
 			<using kind="Fist, Dual Fist" />
@@ -2016,11 +2016,11 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="1000" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="300000" />
 		<set name="skillType" val="SUMMON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<set name="npcId" val="14768" /> <!-- Wild Hog Cannon -->

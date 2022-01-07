@@ -21,15 +21,15 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 
 public class ZakenSelf implements ISkillHandler
 {
 	private static final SkillType[] SKILL_TYPES =
 	{
-		SkillType.ZAKENSELF
+		SkillType.ZAKEN_SELF
 	};
 	
 	@Override

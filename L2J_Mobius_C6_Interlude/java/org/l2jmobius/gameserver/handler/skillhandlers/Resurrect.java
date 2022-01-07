@@ -21,13 +21,13 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
@@ -63,7 +63,7 @@ public class Resurrect implements ISkillHandler
 				targetPlayer = (Player) target;
 				
 				// Check for same party or for same clan, if target is for clan.
-				if ((skill.getTargetType() == SkillTargetType.TARGET_CORPSE_CLAN) && ((player == null) || (player.getClanId() != targetPlayer.getClanId())))
+				if ((skill.getTargetType() == SkillTargetType.CORPSE_CLAN) && ((player == null) || (player.getClanId() != targetPlayer.getClanId())))
 				{
 					continue;
 				}

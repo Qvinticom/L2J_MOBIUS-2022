@@ -16,13 +16,13 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="element" val="5" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="11000" />
 		<set name="hitTime" val="1300" />
 		<set name="skillType" val="PDAM" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
@@ -50,13 +50,13 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="element" val="6" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="11000" />
 		<set name="hitTime" val="1300" />
 		<set name="skillType" val="PDAM" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
@@ -80,11 +80,11 @@
 		<set name="power" val="80" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="ROOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="isDebuff" val="true" />
@@ -103,13 +103,13 @@
 		<table name="#chance">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#mpConsume">25 27 28 29 30 31 32 33 34 34</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="power" val="80" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="ROOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -128,14 +128,14 @@
 		<table name="#chance">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#mpConsume">40 43 46 59 51</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="skillRadius" val="100" />
 		<set name="power" val="40" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="40000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="ROOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="power" val="#power" />
 		<enchant2 name="power" val="#chance" />
@@ -160,10 +160,10 @@
 		<set name="power" val="30" />
 		<!-- Base Land Rate -->
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_UNDEAD" />
+		<set name="target" val="UNDEAD" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="FEAR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="lethal2" val="#lethal2" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="300" />
@@ -183,12 +183,12 @@
 		<table name="#rCrit">33 66 100</table>
 		<table name="#mpConsume">133 153 170</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="condition" val="32" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<cond msg="Can be only used when HP is 30% or lower">
 			<player hp="30" />
 		</cond>
@@ -226,13 +226,13 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="skillRadius" val="150" />
 		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="30" val="0" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="runSpd" val="#debuff" />
@@ -253,13 +253,13 @@
 		<set name="saveVs" val="MEN" />
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="skillRadius" val="150" />
 		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="weaponsAllowed" val="512" />
 		<for>
 			<effect count="1" name="Buff" time="30" val="0" effectPower="40" effectType="DEBUFF">
@@ -278,14 +278,14 @@
 		<set name="weaponsAllowed" val="16" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="condition" val="16" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="1300" />
 		<set name="coolTime" val="700" />
 		<set name="skillType" val="BLOW" />
 		<set name="lethal1" val="5" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -311,9 +311,9 @@
 		<set name="weaponsAllowed" val="16" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<enchant1for>
 			<effect count="1" name="Buff" time="120" val="0">
 				<mul order="0x30" stat="blowRate" val="1.3" />
@@ -343,10 +343,10 @@
 		<table name="#amount">0.55 0.7 0.85</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="120000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<enchant1 name="mpConsume" val="#ench1Cost" />
@@ -387,10 +387,10 @@
 		<set name="skillRadius" val="150" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<enchant1 name="mpConsume" val="#ench1Cost" />
 		<enchant2 name="power" val="#ench2Chanse" />
 		<for>
@@ -404,9 +404,9 @@
 		<table name="#mpConsume">28 29 30 31 32 33 34 34</table>
 		<table name="#atk">62 67 73 78 83 88 94 100</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="2000" />
 		<set name="weaponsAllowed" val="32" />
@@ -435,11 +435,11 @@
 		<table name="#cAtk">1.15 1.15 1.15 1.17 1.17 1.17 1.2 1.2</table>
 		<set name="weaponsAllowed" val="32" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="120" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="0.8">
@@ -462,11 +462,11 @@
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#MpConsumeRate">0.9 0.8 0.7</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
@@ -478,11 +478,11 @@
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#pReuseRate">0.9 0.8 0.7</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0">
 				<mul order="0x30" stat="pReuse" val="#pReuseRate" />
@@ -497,19 +497,19 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="false" />
 		<set name="skillType" val="MANAHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 	</skill>
 	<skill id="418" levels="3" name="Quiver of Holding">
 		<!-- Increases your weight capacity. -->
 		<table name="#rate">1.5 1.75 2.0</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="maxLoad" val="#rate" />
 		</for>
@@ -523,9 +523,9 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SUMMON_TREASURE_KEY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 	</skill>
 	<skill id="420" levels="3" name="Zealot">
 		<!-- By the will of a Guardian God, you instantly and significantly increase your fighting ability. While in use, the effects of HP regeneration magic significantly decreases. This skill is only available when your HP is at 30% or lower. Effect 1. -->
@@ -540,9 +540,9 @@
 		<set name="condition" val="32" />
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<cond msg="Zealot cannot be used due to unsuitable terms.">
 			<player hp="30" />
 		</cond>
@@ -573,9 +573,9 @@
 		<table name="#atkCountMax">1 2 3 4 5</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="weaponsAllowed" val="64" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="2000" />
 		<for>
@@ -589,9 +589,9 @@
 		<table name="#mpConsume">11 13 14</table>
 		<table name="#accCombat">2 3 4</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
 				<add order="0x40" stat="accCombat" val="#accCombat">
@@ -606,12 +606,12 @@
 		<table name="#vuln">0.85 0.77 0.7</table>
 		<table name="#stack">15 23 30</table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="false" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="300" val="0" stackOrder="#stack" stackType="MagicDefUpAtr">
 				<mul order="0x30" stat="fireVuln" val="#vuln" />
@@ -625,9 +625,9 @@
 		<table name="#sleepvuln">0.9 0.8 0.7</table>
 		<table name="#magicLevel">58 66 74</table>
 		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
 				<mul order="0x30" stat="stunVuln" val="#stunvuln" />
@@ -640,11 +640,11 @@
 		<set name="weaponsAllowed" val="1024" />
 		<set name="magicLevel" val="74" />
 		<set name="mpConsume" val="34" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
 				<add order="0x40" stat="rCrit" val="100">
@@ -665,10 +665,10 @@
 		<set name="magicLevel" val="77" />
 		<set name="triggeredId" val="5104" />
 		<set name="triggeredLevel" val="1" />
-		<set name="target" val="TARGET_PARTY_OTHER" />
+		<set name="target" val="PARTY_OTHER" />
 		<set name="hitTime" val="19000" />
 		<set name="skillType" val="FORCE_BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="reuseDelay" val="30000" />
@@ -680,10 +680,10 @@
 		<set name="magicLevel" val="77" />
 		<set name="triggeredId" val="5105" />
 		<set name="triggeredLevel" val="1" />
-		<set name="target" val="TARGET_PARTY_OTHER" />
+		<set name="target" val="PARTY_OTHER" />
 		<set name="hitTime" val="19000" />
 		<set name="skillType" val="FORCE_BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="reuseDelay" val="30000" />
@@ -691,19 +691,19 @@
 	</skill>
 	<skill id="428" levels="1" name="Inner Rhythm">
 		<!-- MP consumption for singing and dancing is decreased. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
 		</for>
 	</skill>
 	<skill id="429" levels="1" name="Knighthood">
 		<!-- Increases P. Def. when wearing heavy armor. Shield defense is increased. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="magicLevel" val="78" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="pDef" val="86.9">
 				<using kind="Heavy" />
@@ -716,9 +716,9 @@
 	<skill id="430" levels="1" name="Master of Combat">
 		<!-- Increases the attack strength of a sword, blunt weapon, spear, dual-bladed or hand-to-hand combat weapon. Also increases maximum CP. -->
 		<set name="weaponsAllowed" val="20300" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="pAtk" val="80">
 				<and>
@@ -734,9 +734,9 @@
 	</skill>
 	<skill id="431" levels="1" name="Archery">
 		<!-- Increases attack strength and maximum attack range while using a bow. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="pAtk" val="200">
 				<using kind="Bow" />
@@ -749,9 +749,9 @@
 	<skill id="432" levels="1" name="Assassination">
 		<!-- Increases attack strength and the rate of deadly attack while using a dagger. -->
 		<set name="weaponsAllowed" val="16" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="pAtk" val="70">
 				<using kind="Dagger" />
@@ -776,9 +776,9 @@
 	</skill>
 	<skill id="433" levels="1" name="Arcane Roar">
 		<!-- Increases resistance to elemental attacks and increases magic power. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="fireVuln" val="0.95" />
 			<mul order="0x30" stat="windVuln" val="0.95" />
@@ -789,9 +789,9 @@
 	</skill>
 	<skill id="434" levels="1" name="Necromancy">
 		<!-- Increases resistance to dark attacks and increases magic power. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="darkVuln" val="0.90" />
 			<mul order="0x30" stat="mAtk" val="1.03" />
@@ -799,9 +799,9 @@
 	</skill>
 	<skill id="435" levels="1" name="Summon Lore">
 		<!-- Increases P. Def. when equipped with Robe/Light Armor and increases Casting Speed. Decreases MP consumption for magic skills. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<add order="0x40" stat="pDef" val="60">
 				<using kind="Magic" />
@@ -820,9 +820,9 @@
 	</skill>
 	<skill id="436" levels="1" name="Divine Lore">
 		<!-- MP consumption for magical skills is decreased. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="PASSIVE" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 		</for>
@@ -834,9 +834,9 @@
 		<set name="lvlDepend" val="1" />
 		<set name="skillRadius" val="150" />
 		<set name="saveVs" val="MEN" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="power" val="60" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2500" />
@@ -854,13 +854,13 @@
 		<set name="mpConsume" val="200" />
 		<set name="itemConsumeId" val="8873" /> <!-- Phoenix Blood -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="buffDuration" val="1800000" />
 		<for>
 			<effect count="1" name="PhoenixBless" time="1800" val="0" />
@@ -870,9 +870,9 @@
 		<!-- Temporarily reflects damage from melee attack skills back to the enemy. -->
 		<set name="magicLevel" val="79" />
 		<set name="mpConsume" val="87" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="4000" />
 		<for>
@@ -885,23 +885,23 @@
 		<!-- Recovers 1000 CP by increasing your will to fight. Power 1000. -->
 		<set name="mpConsume" val="57" />
 		<set name="power" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="COMBATPOINTHEAL" />
 		<set name="isMagic" val="false" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="buffDuration" val="20000" />
 	</skill>
 	<skill id="441" levels="1" name="Force Meditation">
 		<!-- Meditate to increase HP/MP regeneration. Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked. Level 3 Focused Force charge required. -->
 		<set name="mpConsume" val="0" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="CHARGE_EFFECT" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="num_charges" val="3" />
 		<set name="charge_skill_id" val="50" /> <!-- Focused Force -->
 		<for>
@@ -918,11 +918,11 @@
 		<set name="charge_skill_id" val="8" /> <!-- Sonic Focus -->
 		<set name="weaponsAllowed" val="512" />
 		<set name="mpConsume" val="65" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="CHARGE_EFFECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<for>
 			<effect count="1" name="Invincible" time="10" val="0" />
 		</for>
@@ -930,12 +930,12 @@
 	<skill id="443" levels="1" name="Force Barrier">
 		<!-- Uses spiritual forces to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. An equipped hand-to-hand combat weapon is required to use this skill. Level 4 Focused Force charge required. -->
 		<set name="mpConsume" val="72" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="weaponsAllowed" val="1024" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="CHARGE_EFFECT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="num_charges" val="4" />
 		<set name="charge_skill_id" val="50" /> <!-- Focused Force -->
 		<for>
@@ -949,9 +949,9 @@
 		<set name="mpConsume" val="12" />
 		<set name="magicLevel" val="78" />
 		<set name="skillRadius" val="85" />
-		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
+		<set name="target" val="AREA_CORPSE_MOB" />
 		<set name="skillType" val="SWEEP" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="23000" />
 		<set name="hitTime" val="5000" />
 	</skill>
@@ -961,10 +961,10 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLevel" val="79" />
 		<set name="mpConsume" val="43" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="triggeredId" val="5144" />
 		<set name="triggeredLevel" val="1" />
 		<for>
@@ -976,9 +976,9 @@
 		<set name="aggroPoints" val="669" />
 		<set name="mpConsume" val="29" />
 		<set name="magicLevel" val="79" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="isMagic" val="false" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="500" />
@@ -994,9 +994,9 @@
 		<set name="mpInitialConsume" val="29" />
 		<set name="mpConsume" val="20" />
 		<set name="magicLevel" val="79" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="500" />
 		<for>
@@ -1019,11 +1019,11 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="1000" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="10000" />
 		<set name="skillType" val="SUMMON" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="14839" /> <!-- Swoop Cannon -->
 		<set name="expPenalty" val="0.0" />
@@ -1042,12 +1042,12 @@
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<!-- Summon-specific -->
 		<set name="power" val="#mAtk" />
 		<set name="npcId" val="9" />
@@ -1074,9 +1074,9 @@
 		<set name="power" val="30" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="skillType" val="FEAR" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="lethal2" val="25" />
 		<set name="castRange" val="150" />
@@ -1099,10 +1099,10 @@
 		<set name="weaponsAllowed" val="512" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="60000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="charge_skill_id" val="8" /> <!-- Sonic Focus -->
 		<set name="num_charges" val="#charges" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="skillType" val="CHARGE_EFFECT" />
 		<set name="isMagic" val="false" />
 		<for>
@@ -1124,11 +1124,11 @@
 		<set name="power" val="80" />
 		<enchant1 name="power" val="#ench1power" />
 		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="target" val="AURA" />
 		<set name="reuseDelay" val="13000" />
 		<set name="hitTime" val="500" />
 		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="effectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
@@ -1139,19 +1139,19 @@
 	<skill id="453" levels="1" name="Escape Shackle">
 		<!-- Allows you to escape from a captured state. -->
 		<set name="mpConsume" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NEGATE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="negateSkillTypes" val="ROOT PARALYZE" />
 		<set name="negatePower" val="8" />
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
 		<!-- Generates a symbol that maximizes the defense abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1176,9 +1176,9 @@
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
 		<!-- Generates a symbol that cancels the singing or dancing abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_GROUND" />
+		<set name="target" val="GROUND" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1207,9 +1207,9 @@
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
 		<!-- Generates a symbol that maximizes resistance to abnormal states of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1234,9 +1234,9 @@
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
 		<!-- Generates a symbol that maximizes the HP/CP recovery rate of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1261,9 +1261,9 @@
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
 		<!-- Generates a symbol that increases P. Atk. and force for those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1288,9 +1288,9 @@
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
 		<!-- Generates a symbol that maximizes the archery skill of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1315,9 +1315,9 @@
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
 		<!-- Generates a symbol that maximizes your dodging ability and increases the chance of inflicting a deadly attack for those near to you. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="SIGNET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="3600000" />
@@ -1347,14 +1347,14 @@
 		<table name="#numcharge">2 3</table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="weaponsAllowed" val="1024" />
 		<set name="condition" val="128" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="NEGATE" />
 		<set name="negateSkillTypes" val="ROOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="num_charges" val="#numcharge" />
 	</skill>
 </list>

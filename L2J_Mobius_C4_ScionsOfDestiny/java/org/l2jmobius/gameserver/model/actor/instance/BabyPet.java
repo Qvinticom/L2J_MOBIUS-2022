@@ -25,6 +25,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 
 /**
  * @version $Revision: 1.15.2.10.2.16 $ $Date: 2005/04/06 16:13:40 $
@@ -45,7 +47,7 @@ public class BabyPet extends Pet
 		for (Skill skill : getTemplate().getSkills().values())
 		{
 			// just in case, also allow cp heal and mp recharges to be considered here...you never know ;)
-			if (skill.isActive() && (skill.getTargetType() == Skill.SkillTargetType.TARGET_OWNER_PET) && ((skill.getSkillType() == Skill.SkillType.HEAL) || (skill.getSkillType() == Skill.SkillType.HOT) || (skill.getSkillType() == Skill.SkillType.BALANCE_LIFE) || (skill.getSkillType() == Skill.SkillType.HEAL_PERCENT) || (skill.getSkillType() == Skill.SkillType.HEAL_STATIC) || (skill.getSkillType() == Skill.SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == Skill.SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == Skill.SkillType.CPHOT) || (skill.getSkillType() == Skill.SkillType.MANAHEAL) || (skill.getSkillType() == Skill.SkillType.MANA_BY_LEVEL) || (skill.getSkillType() == Skill.SkillType.MANAHEAL_PERCENT) || (skill.getSkillType() == Skill.SkillType.MANARECHARGE) || (skill.getSkillType() == Skill.SkillType.MPHOT)))
+			if (skill.isActive() && (skill.getTargetType() == SkillTargetType.OWNER_PET) && ((skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.HOT) || (skill.getSkillType() == SkillType.BALANCE_LIFE) || (skill.getSkillType() == SkillType.HEAL_PERCENT) || (skill.getSkillType() == SkillType.HEAL_STATIC) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == SkillType.CPHOT) || (skill.getSkillType() == SkillType.MANAHEAL) || (skill.getSkillType() == SkillType.MANA_BY_LEVEL) || (skill.getSkillType() == SkillType.MANAHEAL_PERCENT) || (skill.getSkillType() == SkillType.MANARECHARGE) || (skill.getSkillType() == SkillType.MPHOT)))
 			{
 				// only consider two skills. If the pet has more, too bad...they won't be used by its AI.
 				// for now assign the first two skills in the order they come. Once we have both skills, re-arrange them

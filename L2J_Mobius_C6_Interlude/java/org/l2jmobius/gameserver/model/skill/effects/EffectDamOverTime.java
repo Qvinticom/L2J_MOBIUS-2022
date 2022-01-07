@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.skill.effects;
 
 import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.skill.Env;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -66,7 +66,7 @@ class EffectDamOverTime extends Effect
 			}
 		}
 		
-		final boolean awake = !(getEffected() instanceof Attackable) && ((getSkill().getTargetType() != SkillTargetType.TARGET_SELF) || !getSkill().isToggle());
+		final boolean awake = !(getEffected() instanceof Attackable) && ((getSkill().getTargetType() != SkillTargetType.SELF) || !getSkill().isToggle());
 		getEffected().reduceCurrentHpByDamOverTime(damage, getEffector(), awake, getPeriod());
 		return true;
 	}

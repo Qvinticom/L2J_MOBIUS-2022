@@ -56,8 +56,6 @@ import org.l2jmobius.gameserver.model.ForceBuff;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.WorldRegion;
@@ -91,6 +89,8 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skill.Calculator;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.Stat;
 import org.l2jmobius.gameserver.model.skill.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skill.funcs.Func;
@@ -1380,7 +1380,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return;
 			}
 			boolean canCast = true;
-			if ((skill.getTargetType() == SkillTargetType.TARGET_GROUND) && (this instanceof Player))
+			if ((skill.getTargetType() == SkillTargetType.GROUND) && (this instanceof Player))
 			{
 				final Location wp = ((Player) this).getCurrentSkillWorldPosition();
 				if (!region.checkEffectRangeInsidePeaceZone(skill, wp.getX(), wp.getY(), wp.getZ()))
@@ -1429,7 +1429,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		final List<Creature> targets = skill.getTargetList(this);
 		// Set the target of the skill in function of Skill Type and Target Type
 		Creature target = null;
-		if ((skill.getTargetType() == SkillTargetType.TARGET_AURA) || (skill.getTargetType() == SkillTargetType.TARGET_GROUND) || skill.isPotion())
+		if ((skill.getTargetType() == SkillTargetType.AURA) || (skill.getTargetType() == SkillTargetType.GROUND) || skill.isPotion())
 		{
 			target = this;
 		}
@@ -1438,7 +1438,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
 		}
-		else if (((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == SkillType.MANAHEAL) || (skill.getSkillType() == SkillType.REFLECT) || (skill.getSkillType() == SkillType.SEED) || (skill.getTargetType() == SkillTargetType.TARGET_SELF) || (skill.getTargetType() == SkillTargetType.TARGET_PET) || (skill.getTargetType() == SkillTargetType.TARGET_PARTY) || (skill.getTargetType() == SkillTargetType.TARGET_CLAN) || (skill.getTargetType() == SkillTargetType.TARGET_ALLY)) && !skill.isPotion())
+		else if (((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == SkillType.MANAHEAL) || (skill.getSkillType() == SkillType.REFLECT) || (skill.getSkillType() == SkillType.SEED) || (skill.getTargetType() == SkillTargetType.SELF) || (skill.getTargetType() == SkillTargetType.PET) || (skill.getTargetType() == SkillTargetType.PARTY) || (skill.getTargetType() == SkillTargetType.CLAN) || (skill.getTargetType() == SkillTargetType.ALLY)) && !skill.isPotion())
 		{
 			target = targets.get(0);
 		}
@@ -1942,8 +1942,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		switch (skill.getTargetType())
 		{
-			case TARGET_AURA: // AURA, SELF should be cast even if no target has been found
-			case TARGET_SELF:
+			case AURA: // AURA, SELF should be cast even if no target has been found
+			case SELF:
 			{
 				target = this;
 				break;
@@ -6867,7 +6867,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void onMagicLaunchedTimer(List<Creature> targets, Skill skill, int coolTime, boolean instant)
 	{
-		if ((skill == null) || (((targets == null) || targets.isEmpty()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)))
+		if ((skill == null) || (((targets == null) || targets.isEmpty()) && (skill.getTargetType() != SkillTargetType.AURA)))
 		{
 			_skillCast = null;
 			enableAllSkills();
@@ -6925,7 +6925,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 			}
 			
-			if (targetList.isEmpty() && (skill.getTargetType() != SkillTargetType.TARGET_AURA))
+			if (targetList.isEmpty() && (skill.getTargetType() != SkillTargetType.AURA))
 			{
 				if (this instanceof Player)
 				{
@@ -6996,7 +6996,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void onMagicHitTimer(List<Creature> targets, Skill skill, int coolTime, boolean instant)
 	{
-		if ((skill == null) || (((targets == null) || targets.isEmpty()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)))
+		if ((skill == null) || (((targets == null) || targets.isEmpty()) && (skill.getTargetType() != SkillTargetType.AURA)))
 		{
 			_skillCast = null;
 			enableAllSkills();

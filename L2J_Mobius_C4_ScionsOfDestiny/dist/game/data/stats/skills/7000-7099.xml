@@ -3,12 +3,12 @@
 	<skill id="7001" levels="1" name="Dispel Buff">
 		<set name="mpConsume" val="96" />
 		<set name="magicLevel" val="99" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -17,12 +17,12 @@
 	</skill>
 	<skill id="7002" levels="1" name="Dispel Debuff">
 		<set name="mpConsume" val="154" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -31,12 +31,12 @@
 	</skill>
 	<skill id="7003" levels="1" name="Dispel All">
 		<set name="mpConsume" val="74" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -46,9 +46,9 @@
 	<skill id="7004" levels="2" name="Dispel Petrification">
 		<!-- Cures petrification with the effect of 2 or less. -->
 		<set name="mpConsume" val="73" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="ONE" />
 		<set name="skillType" val="NEGATE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="true" />
@@ -62,12 +62,12 @@
 		<set name="magicLevel" val="74" />
 		<set name="mpInitialConsume" val="55" />
 		<set name="mpConsume" val="217" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="target" val="CLAN_MEMBER" />
 		<set name="skillRadius" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="20000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -82,10 +82,10 @@
 	<skill id="7006" levels="13" name="The Love of Pa'agrio">
 		<!-- Greatly enhances alliance members' HP restoration. Effect 6. -->
 		<set name="mpConsume" val="272" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="CLAN" />
 		<set name="skillType" val="PASSIVE" />
 		<set name="hitTime" val="2500" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -94,18 +94,18 @@
 	<skill id="7007" levels="4" name="Greater Seal of Flame">
 		<!-- A protective ring of fire that continuously reduces HP of surrounding enemies and their alliance members. Effect 8. -->
 		<set name="mpConsume" val="153" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="PASSIVE" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
 	<skill id="7028" levels="1" name="For Stationary NPCs">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="SELF" />
+		<set name="skillType" val="CORE_DONE" />
+		<set name="operateType" val="PASSIVE" />
 	</skill>
 	<skill id="7029" levels="4" name="Super Haste">
 		<!-- Speed is increased. -->
@@ -115,9 +115,9 @@
 		<table name="#pAtkSpd">2 3 4 5</table>
 		<table name="#pAtk">250 500 750 1500</table>
 		<table name="#mAtk">250 500 750 1500</table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_TOGGLE" />
+		<set name="operateType" val="TOGGLE" />
 		<for>
 			<effect count="0x7fffffff" name="MpConsumePerLevel" time="100000" val="0.0001">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
@@ -136,13 +136,13 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="itemConsumeCount" val="8" />
 		<set name="reuseDelay" val="18600000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="20150" /> <!-- King Bugbear -->
 		<set name="expPenalty" val="0.3" />
@@ -155,13 +155,13 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="itemConsumeCount" val="8" />
 		<set name="reuseDelay" val="18600000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<!-- Summon-specific -->
@@ -176,13 +176,13 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="SELF" />
 		<set name="itemConsumeCount" val="8" />
 		<set name="reuseDelay" val="18600000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="ACTIVE" />
 		<set name="castRange" val="-1" />
 		<set name="effectRange" val="-1" />
 		<!-- Summon-specific -->

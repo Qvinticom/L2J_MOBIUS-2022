@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -48,22 +47,15 @@ import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skill.BaseStat;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillOperateType;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.Stat;
 import org.l2jmobius.gameserver.model.skill.conditions.Condition;
 import org.l2jmobius.gameserver.model.skill.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skill.effects.EffectTemplate;
 import org.l2jmobius.gameserver.model.skill.funcs.Func;
 import org.l2jmobius.gameserver.model.skill.funcs.FuncTemplate;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillCharge;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillChargeDmg;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillChargeEffect;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillCreateItem;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillDefault;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillDrain;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillSeed;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillSignet;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillSignetCasttime;
-import org.l2jmobius.gameserver.model.skill.handlers.SkillSummon;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -88,203 +80,6 @@ public abstract class Skill
 	public static final int SKILL_FAKE_DEX = 9005;
 	public static final int SKILL_FAKE_STR = 9006;
 	
-	private final int _targetConsumeId;
-	private final int _targetConsume;
-	
-	public enum SkillOpType
-	{
-		OP_PASSIVE,
-		OP_ACTIVE,
-		OP_TOGGLE,
-		OP_CHANCE
-	}
-	
-	/** Target types of skills : SELF, PARTY, CLAN, PET... */
-	public enum SkillTargetType
-	{
-		TARGET_NONE,
-		TARGET_SELF,
-		TARGET_ONE,
-		TARGET_PARTY,
-		TARGET_ALLY,
-		TARGET_CLAN,
-		TARGET_PET,
-		TARGET_AREA,
-		TARGET_AURA,
-		TARGET_CORPSE,
-		TARGET_UNDEAD,
-		TARGET_AREA_UNDEAD,
-		TARGET_MULTIFACE,
-		TARGET_CORPSE_ALLY,
-		TARGET_CORPSE_CLAN,
-		TARGET_CORPSE_PLAYER,
-		TARGET_CORPSE_PET,
-		TARGET_ITEM,
-		TARGET_AREA_CORPSE_MOB,
-		TARGET_CORPSE_MOB,
-		TARGET_UNLOCKABLE,
-		TARGET_HOLY,
-		TARGET_PARTY_MEMBER,
-		TARGET_PARTY_OTHER,
-		TARGET_ENEMY_SUMMON,
-		TARGET_OWNER_PET,
-		TARGET_GROUND,
-		TARGET_SIEGE,
-		TARGET_TYRANNOSAURUS,
-		TARGET_AREA_AIM_CORPSE,
-		TARGET_CLAN_MEMBER
-	}
-	
-	public enum SkillType
-	{
-		// Damage
-		PDAM,
-		MDAM,
-		CPDAM,
-		MANADAM,
-		DOT,
-		MDOT,
-		DRAIN_SOUL,
-		DRAIN(SkillDrain.class),
-		DEATHLINK,
-		FATALCOUNTER,
-		BLOW,
-		
-		// Disablers
-		BLEED,
-		POISON,
-		STUN,
-		ROOT,
-		CONFUSION,
-		FEAR,
-		SLEEP,
-		CONFUSE_MOB_ONLY,
-		MUTE,
-		PARALYZE,
-		WEAKNESS,
-		
-		// hp, mp, cp
-		HEAL,
-		HOT,
-		BALANCE_LIFE,
-		HEAL_PERCENT,
-		HEAL_STATIC,
-		COMBATPOINTHEAL,
-		COMBATPOINTPERCENTHEAL,
-		CPHOT,
-		MANAHEAL,
-		MANA_BY_LEVEL,
-		MANAHEAL_PERCENT,
-		MANARECHARGE,
-		MPHOT,
-		
-		// Aggro
-		AGGDAMAGE,
-		AGGREDUCE,
-		AGGREMOVE,
-		AGGREDUCE_CHAR,
-		AGGDEBUFF,
-		
-		// Fishing
-		FISHING,
-		PUMPING,
-		REELING,
-		
-		// MISC
-		UNLOCK,
-		ENCHANT_ARMOR,
-		ENCHANT_WEAPON,
-		SOULSHOT,
-		SPIRITSHOT,
-		SIEGEFLAG,
-		TAKECASTLE,
-		DELUXE_KEY_UNLOCK,
-		SOW,
-		HARVEST,
-		GET_PLAYER,
-		
-		// Creation
-		COMMON_CRAFT,
-		DWARVEN_CRAFT,
-		CREATE_ITEM(SkillCreateItem.class),
-		SUMMON_TREASURE_KEY,
-		
-		// Summons
-		SUMMON(SkillSummon.class),
-		FEED_PET,
-		DEATHLINK_PET,
-		STRSIEGEASSAULT,
-		ERASE,
-		BETRAY,
-		
-		// Cancel
-		CANCEL,
-		MAGE_BANE,
-		WARRIOR_BANE,
-		NEGATE,
-		
-		BUFF,
-		DEBUFF,
-		PASSIVE,
-		CONT,
-		SIGNET(SkillSignet.class),
-		SIGNET_CASTTIME(SkillSignetCasttime.class),
-		
-		RESURRECT,
-		CHARGE(SkillCharge.class),
-		CHARGE_EFFECT(SkillChargeEffect.class),
-		CHARGEDAM(SkillChargeDmg.class),
-		MHOT,
-		DETECT_WEAKNESS,
-		LUCK,
-		RECALL,
-		SUMMON_FRIEND,
-		REFLECT,
-		SPOIL,
-		SWEEP,
-		FAKE_DEATH,
-		UNBLEED,
-		UNPOISON,
-		UNDEAD_DEFENSE,
-		SEED(SkillSeed.class),
-		BEAST_FEED,
-		FORCE_BUFF,
-		CLAN_GATE,
-		GIVE_SP,
-		COREDONE,
-		ZAKENPLAYER,
-		ZAKENSELF,
-		
-		// unimplemented
-		NOTDONE;
-		
-		private final Class<? extends Skill> _class;
-		
-		public Skill makeSkill(StatSet set)
-		{
-			try
-			{
-				final Constructor<? extends Skill> c = _class.getConstructor(StatSet.class);
-				return c.newInstance(set);
-			}
-			catch (Exception e)
-			{
-				throw new RuntimeException(e);
-			}
-		}
-		
-		private SkillType()
-		{
-			_class = SkillDefault.class;
-		}
-		
-		private SkillType(Class<? extends Skill> classType)
-		{
-			_class = classType;
-		}
-	}
-	
-	protected ChanceCondition _chanceCondition = null;
 	// elements
 	public static final int ELEMENT_WIND = 1;
 	public static final int ELEMENT_FIRE = 2;
@@ -386,7 +181,7 @@ public abstract class Skill
 	
 	// not needed, just for easier debug
 	private final String _name;
-	private final SkillOpType _operateType;
+	private final SkillOperateType _operateType;
 	private final boolean _magic;
 	private final boolean _staticReuse;
 	private final boolean _staticHitTime;
@@ -504,6 +299,11 @@ public abstract class Skill
 	private final boolean _advancedFlag;
 	private final int _advancedMultiplier;
 	
+	private final int _targetConsumeId;
+	private final int _targetConsume;
+	
+	protected ChanceCondition _chanceCondition = null;
+	
 	protected Skill(StatSet set)
 	{
 		_id = set.getInt("skill_id", 0);
@@ -512,7 +312,7 @@ public abstract class Skill
 		_advancedMultiplier = set.getInt("advancedMultiplier", 1);
 		_displayId = set.getInt("displayId", _id);
 		_name = set.getString("name");
-		_operateType = set.getEnum("operateType", SkillOpType.class);
+		_operateType = set.getEnum("operateType", SkillOperateType.class);
 		_magic = set.getBoolean("isMagic", false);
 		_staticReuse = set.getBoolean("staticReuse", false);
 		_staticHitTime = set.getBoolean("staticHitTime", false);
@@ -572,7 +372,7 @@ public abstract class Skill
 		_bestowed = set.getBoolean("bestowed", false);
 		_targetConsume = set.getInt("targetConsumeCount", 0);
 		_targetConsumeId = set.getInt("targetConsumeId", 0);
-		if (_operateType == SkillOpType.OP_CHANCE)
+		if (_operateType == SkillOperateType.CHANCE)
 		{
 			_chanceCondition = ChanceCondition.parse(set);
 		}
@@ -1048,22 +848,22 @@ public abstract class Skill
 	
 	public boolean isActive()
 	{
-		return _operateType == SkillOpType.OP_ACTIVE;
+		return _operateType == SkillOperateType.ACTIVE;
 	}
 	
 	public boolean isPassive()
 	{
-		return _operateType == SkillOpType.OP_PASSIVE;
+		return _operateType == SkillOperateType.PASSIVE;
 	}
 	
 	public boolean isToggle()
 	{
-		return _operateType == SkillOpType.OP_TOGGLE;
+		return _operateType == SkillOperateType.TOGGLE;
 	}
 	
 	public boolean isChance()
 	{
-		return _operateType == SkillOpType.OP_CHANCE;
+		return _operateType == SkillOperateType.CHANCE;
 	}
 	
 	public ChanceCondition getChanceCondition()
@@ -1421,7 +1221,7 @@ public abstract class Skill
 		switch (_targetType)
 		{
 			// The skill can only be used on the Creature targeted, or on the caster itself
-			case TARGET_ONE:
+			case ONE:
 			{
 				boolean canTargetSelf = false;
 				switch (_skillType)
@@ -1522,13 +1322,13 @@ public abstract class Skill
 				targetList.add(target);
 				return targetList;
 			}
-			case TARGET_SELF:
-			case TARGET_GROUND:
+			case SELF:
+			case GROUND:
 			{
 				targetList.add(creature);
 				return targetList;
 			}
-			case TARGET_HOLY:
+			case HOLY:
 			{
 				if ((creature instanceof Player) && (creature.getTarget() instanceof Artefact))
 				{
@@ -1538,7 +1338,7 @@ public abstract class Skill
 				return null;
 			}
 			
-			case TARGET_PET:
+			case PET:
 			{
 				target = creature.getPet();
 				if ((target != null) && !target.isDead())
@@ -1548,7 +1348,7 @@ public abstract class Skill
 				}
 				return null;
 			}
-			case TARGET_OWNER_PET:
+			case OWNER_PET:
 			{
 				if (creature instanceof Summon)
 				{
@@ -1561,7 +1361,7 @@ public abstract class Skill
 				}
 				return null;
 			}
-			case TARGET_CORPSE_PET:
+			case CORPSE_PET:
 			{
 				if (creature instanceof Player)
 				{
@@ -1574,7 +1374,7 @@ public abstract class Skill
 				}
 				return null;
 			}
-			case TARGET_AURA:
+			case AURA:
 			{
 				final int radius = _skillRadius;
 				final boolean srcInArena = creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE);
@@ -1682,7 +1482,7 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_AREA:
+			case AREA:
 			{
 				// Like L2OFF players can use TARGET_AREA skills on NPC in peacezone
 				if ((!(target instanceof Attackable) && !(target instanceof Playable) && !(target instanceof Npc)) || // Target is not Attackable or PlayableInstance or Npc
@@ -1863,7 +1663,7 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_MULTIFACE:
+			case MULTIFACE:
 			{
 				if (!(target instanceof Attackable) && !(target instanceof Player))
 				{
@@ -1940,7 +1740,7 @@ public abstract class Skill
 				return targetList;
 				// TODO multiface targets all around right now. need it to just get targets the character is facing.
 			}
-			case TARGET_PARTY:
+			case PARTY:
 			{
 				targetList.add(creature);
 				if (onlyFirst)
@@ -2005,7 +1805,7 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_PARTY_MEMBER:
+			case PARTY_MEMBER:
 			{
 				if ((target != null) && !target.isDead() && ((target == creature) || ((creature.getParty() != null) && (target.getParty() != null) && (creature.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())) || (creature.getPet() == target) || (creature == target.getPet())))
 				{
@@ -2016,7 +1816,7 @@ public abstract class Skill
 				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
-			case TARGET_PARTY_OTHER:
+			case PARTY_OTHER:
 			{
 				if ((target != creature) && (target != null) && !target.isDead() && (creature.getParty() != null) && (target.getParty() != null) && (creature.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID()))
 				{
@@ -2027,15 +1827,15 @@ public abstract class Skill
 				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
-			case TARGET_CORPSE_ALLY:
-			case TARGET_ALLY:
+			case CORPSE_ALLY:
+			case ALLY:
 			{
 				if (creature instanceof Player)
 				{
 					final int radius = _skillRadius;
 					final Player player = (Player) creature;
 					final Clan clan = player.getClan();
-					if (_targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpse, the caster is not included
+					if (_targetType != SkillTargetType.CORPSE_ALLY) // if corpse, the caster is not included
 					{
 						if (player.isInOlympiadMode())
 						{
@@ -2059,7 +1859,7 @@ public abstract class Skill
 							{
 								continue;
 							}
-							if (newPlayer.isDead() && (_targetType != SkillTargetType.TARGET_CORPSE_ALLY))
+							if (newPlayer.isDead() && (_targetType != SkillTargetType.CORPSE_ALLY))
 							{
 								continue;
 							}
@@ -2082,15 +1882,15 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_CORPSE_CLAN:
-			case TARGET_CLAN:
+			case CORPSE_CLAN:
+			case CLAN:
 			{
 				if (creature instanceof Player)
 				{
 					final int radius = _skillRadius;
 					final Player player = (Player) creature;
 					final Clan clan = player.getClan();
-					if (_targetType != SkillTargetType.TARGET_CORPSE_CLAN)
+					if (_targetType != SkillTargetType.CORPSE_CLAN)
 					{
 						if (player.isInOlympiadMode())
 						{
@@ -2129,11 +1929,11 @@ public abstract class Skill
 							}
 							
 							final Summon pet = newTarget.getPet();
-							if ((pet != null) && Util.checkIfInRange(radius, creature, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_CLAN) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
+							if ((pet != null) && Util.checkIfInRange(radius, creature, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.CORPSE_CLAN) && pet.isDead()) || ((_targetType == SkillTargetType.CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
 								targetList.add(pet);
 							}
-							if (_targetType == SkillTargetType.TARGET_CORPSE_CLAN)
+							if (_targetType == SkillTargetType.CORPSE_CLAN)
 							{
 								if (!newTarget.isDead())
 								{
@@ -2195,7 +1995,7 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_CORPSE_PLAYER:
+			case CORPSE_PLAYER:
 			{
 				if ((target != null) && target.isDead())
 				{
@@ -2259,7 +2059,7 @@ public abstract class Skill
 				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
-			case TARGET_CORPSE_MOB:
+			case CORPSE_MOB:
 			{
 				if (!(target instanceof Attackable) || !target.isDead())
 				{
@@ -2270,7 +2070,7 @@ public abstract class Skill
 				targetList.add(target);
 				return targetList;
 			}
-			case TARGET_AREA_CORPSE_MOB:
+			case AREA_CORPSE_MOB:
 			{
 				if (!(target instanceof Attackable) || !target.isDead())
 				{
@@ -2387,7 +2187,7 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_UNLOCKABLE:
+			case UNLOCKABLE:
 			{
 				if (!(target instanceof Door) && !(target instanceof Chest))
 				{
@@ -2399,12 +2199,12 @@ public abstract class Skill
 				targetList.add(target);
 				return targetList;
 			}
-			case TARGET_ITEM:
+			case ITEM:
 			{
 				creature.sendMessage("Target type of skill is not currently handled.");
 				return null;
 			}
-			case TARGET_UNDEAD:
+			case UNDEAD:
 			{
 				if ((target instanceof Npc) || (target instanceof Servitor))
 				{
@@ -2420,7 +2220,7 @@ public abstract class Skill
 				creature.sendPacket(new SystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET));
 				return null;
 			}
-			case TARGET_AREA_UNDEAD:
+			case AREA_UNDEAD:
 			{
 				Creature cha;
 				final int radius = _skillRadius;
@@ -2486,7 +2286,7 @@ public abstract class Skill
 				}
 				return targetList;
 			}
-			case TARGET_ENEMY_SUMMON:
+			case ENEMY_SUMMON:
 			{
 				if (target instanceof Summon)
 				{
@@ -2499,7 +2299,7 @@ public abstract class Skill
 				}
 				return null;
 			}
-			case TARGET_SIEGE:
+			case SIEGE:
 			{
 				if ((target != null) && !target.isDead() && ((target instanceof Door) || (target instanceof ControlTower)))
 				{
@@ -2508,7 +2308,7 @@ public abstract class Skill
 				}
 				return null;
 			}
-			case TARGET_TYRANNOSAURUS:
+			case TYRANNOSAURUS:
 			{
 				if (target instanceof Player)
 				{
@@ -2522,7 +2322,7 @@ public abstract class Skill
 				}
 				return null;
 			}
-			case TARGET_AREA_AIM_CORPSE:
+			case AREA_AIM_CORPSE:
 			{
 				if ((target != null) && target.isDead())
 				{
@@ -2532,7 +2332,7 @@ public abstract class Skill
 				return null;
 			}
 			// npc only for now - untested
-			case TARGET_CLAN_MEMBER:
+			case CLAN_MEMBER:
 			{
 				if (creature instanceof Npc)
 				{

@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Effect.EffectType;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -43,6 +42,8 @@ import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
 import org.l2jmobius.gameserver.model.actor.tasks.player.CancelSkillRestoreTask;
 import org.l2jmobius.gameserver.model.skill.Formulas;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -298,7 +299,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 						{
-							if (skill.getTargetType() == Skill.SkillTargetType.TARGET_UNDEAD)
+							if (skill.getTargetType() == SkillTargetType.UNDEAD)
 							{
 								if (target.isUndead())
 								{

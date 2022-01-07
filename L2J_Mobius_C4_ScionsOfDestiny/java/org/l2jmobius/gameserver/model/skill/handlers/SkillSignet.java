@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 
 public class SkillSignet extends Skill
 {
@@ -58,7 +59,7 @@ public class SkillSignet extends Skill
 		int x = caster.getX();
 		int y = caster.getY();
 		int z = caster.getZ();
-		if ((caster instanceof Player) && (getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
+		if ((caster instanceof Player) && (getTargetType() == SkillTargetType.GROUND))
 		{
 			final Location wordPosition = ((Player) caster).getCurrentSkillWorldPosition();
 			if (wordPosition != null)

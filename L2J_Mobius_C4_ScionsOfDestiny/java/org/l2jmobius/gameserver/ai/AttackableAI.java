@@ -53,6 +53,7 @@ import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -880,17 +881,17 @@ public class AttackableAI extends CreatureAI
 						inRange = true;
 					}
 					
-					if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.get(100) <= 5))
+					if (((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL) || inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.get(100) <= 5))
 					{
-						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
+						if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 						{
-							if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
+							if ((sk.getSkillType() == SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
 								break;
 							}
 							
 							boolean useSkillSelf = true;
-							if (sk.getSkillType() == Skill.SkillType.BUFF)
+							if (sk.getSkillType() == SkillType.BUFF)
 							{
 								for (Effect effect : _actor.getAllEffects())
 								{
@@ -940,15 +941,15 @@ public class AttackableAI extends CreatureAI
 			{
 				if (/* sk.getCastRange() >= dist && sk.getCastRange() <= 70 && */!sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk) && ((Rnd.get(100) <= 8) || ((_actor instanceof PenaltyMonster) && (Rnd.get(100) <= 20))))
 				{
-					if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
+					if ((sk.getSkillType() == SkillType.BUFF) || (sk.getSkillType() == SkillType.HEAL))
 					{
-						if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
+						if ((sk.getSkillType() == SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 						{
 							break;
 						}
 						
 						useSkillSelf = true;
-						if (sk.getSkillType() == Skill.SkillType.BUFF)
+						if (sk.getSkillType() == SkillType.BUFF)
 						{
 							for (Effect effect : _actor.getAllEffects())
 							{
