@@ -230,17 +230,17 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId(), (int) _product.getCount(), 0));
 					player.addItem("LCoinShop", _product.getProductionId(), _product.getCount(), player, true);
 				}
-				else if (Rnd.get(100) < _product.getChance2())
+				else if ((Rnd.get(100) < _product.getChance2()) || (_product.getProductionId3() == 0))
 				{
 					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId2(), (int) _product.getCount2(), 1));
 					player.addItem("LCoinShop", _product.getProductionId2(), _product.getCount2(), player, true);
 				}
-				else if (Rnd.get(100) < _product.getChance3())
+				else if ((Rnd.get(100) < _product.getChance3()) || (_product.getProductionId4() == 0))
 				{
 					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId3(), (int) _product.getCount3(), 2));
 					player.addItem("LCoinShop", _product.getProductionId3(), _product.getCount3(), player, true);
 				}
-				else if (Rnd.get(100) < _product.getChance4())
+				else if ((Rnd.get(100) < _product.getChance4()) || (_product.getProductionId5() == 0))
 				{
 					rewards.add(new LimitShopRandomCraftReward(_product.getProductionId4(), (int) _product.getCount4(), 3));
 					player.addItem("LCoinShop", _product.getProductionId4(), _product.getCount4(), player, true);
