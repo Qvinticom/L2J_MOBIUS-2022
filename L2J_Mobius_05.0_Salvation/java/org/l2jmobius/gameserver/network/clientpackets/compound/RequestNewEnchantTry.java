@@ -103,10 +103,6 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			return;
 		}
 		
-		final InventoryUpdate iu = new InventoryUpdate();
-		iu.addRemovedItem(itemOne);
-		iu.addRemovedItem(itemTwo);
-		
 		if (player.destroyItem("Compound-Item-One", itemOne, 1, null, true) && player.destroyItem("Compound-Item-Two", itemTwo, 1, null, true))
 		{
 			final double random = (Rnd.nextDouble() * 100);
@@ -123,7 +119,25 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			}
 		}
 		
+		final InventoryUpdate iu = new InventoryUpdate();
+		if (itemOne.isStackable() && (itemOne.getCount() > 0))
+		{
+			iu.addModifiedItem(itemOne);
+		}
+		else
+		{
+			iu.addRemovedItem(itemOne);
+		}
+		if (itemTwo.isStackable() && (itemTwo.getCount() > 0))
+		{
+			iu.addModifiedItem(itemTwo);
+		}
+		else
+		{
+			iu.addRemovedItem(itemTwo);
+		}
 		player.sendInventoryUpdate(iu);
+		
 		player.removeRequest(request.getClass());
 	}
 }
