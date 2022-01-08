@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.ActionType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -65,6 +66,12 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		// Check if Blessed SpiritShot is already active (it can be charged over SpiritShot)
 		if (player.isChargedShot(ShotType.BLESSED_SPIRITSHOTS))
+		{
+			return false;
+		}
+		
+		// Check for correct grade
+		if (!item.isEtcItem() || (item.getEtcItem().getDefaultAction() != ActionType.SPIRITSHOT) || (weaponInst.getItem().getCrystalTypePlus() != item.getItem().getCrystalTypePlus()))
 		{
 			return false;
 		}
