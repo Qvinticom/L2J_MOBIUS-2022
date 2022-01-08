@@ -383,8 +383,10 @@ public class Transform implements IIdentifiable
 				
 				player.sendPacket(ExBasicActionList.STATIC_PACKET);
 				
-				player.getEffectList().stopEffects(AbnormalType.TRANSFORM);
-				player.getEffectList().stopEffects(AbnormalType.CHANGEBODY);
+				if (!player.getEffectList().stopEffects(AbnormalType.TRANSFORM))
+				{
+					player.getEffectList().stopEffects(AbnormalType.CHANGEBODY);
+				}
 				
 				if (hasTransformSkills)
 				{

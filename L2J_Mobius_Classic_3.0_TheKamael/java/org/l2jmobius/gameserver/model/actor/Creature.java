@@ -2539,9 +2539,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void stopTransformation(boolean removeEffects)
 	{
-		if (removeEffects)
+		if (removeEffects && !_effectList.stopEffects(AbnormalType.TRANSFORM))
 		{
-			_effectList.stopEffects(AbnormalType.TRANSFORM);
 			_effectList.stopEffects(AbnormalType.CHANGEBODY);
 		}
 		
