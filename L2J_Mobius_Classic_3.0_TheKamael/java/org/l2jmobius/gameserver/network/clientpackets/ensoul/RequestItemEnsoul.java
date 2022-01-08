@@ -227,8 +227,22 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				success = 1;
 			}
 			
-			iu.addRemovedItem(soulCrystal);
-			iu.addModifiedItem(gemStones);
+			if (soulCrystal.isStackable() && (soulCrystal.getCount() > 0))
+			{
+				iu.addModifiedItem(soulCrystal);
+			}
+			else
+			{
+				iu.addRemovedItem(soulCrystal);
+			}
+			if (gemStones.isStackable() && (gemStones.getCount() > 0))
+			{
+				iu.addModifiedItem(gemStones);
+			}
+			else
+			{
+				iu.addRemovedItem(gemStones);
+			}
 			iu.addModifiedItem(item);
 		}
 		player.sendInventoryUpdate(iu);
