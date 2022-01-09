@@ -780,7 +780,7 @@ public class EnterWorld implements IClientIncomingPacket
 							}
 						}
 					}
-					if (count >= Config.MAX_PLAYERS_PER_HWID)
+					if (count > Config.MAX_PLAYERS_PER_HWID)
 					{
 						Disconnection.of(client).defaultSequence(LeaveWorld.STATIC_PACKET);
 					}

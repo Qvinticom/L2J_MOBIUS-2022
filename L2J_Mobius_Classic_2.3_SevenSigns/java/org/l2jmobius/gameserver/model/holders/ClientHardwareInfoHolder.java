@@ -293,32 +293,6 @@ public class ClientHardwareInfoHolder
 	@Override
 	public boolean equals(Object obj)
 	{
-		if (obj instanceof ClientHardwareInfoHolder)
-		{
-			final ClientHardwareInfoHolder info = (ClientHardwareInfoHolder) obj;
-			if ((_macAddress.equals(info.getMacAddress())) && //
-				(_windowsPlatformId == info.getWindowsPlatformId()) && //
-				(_windowsMajorVersion == info.getWindowsMajorVersion()) && //
-				(_windowsMinorVersion == info.getWindowsMinorVersion()) && //
-				(_windowsBuildNumber == info.getWindowsBuildNumber()) && //
-				(_directxVersion == info.getDirectxVersion()) && //
-				(_directxRevision == info.getDirectxRevision()) && //
-				(_cpuName.equals(info.getCpuName())) && //
-				(_cpuSpeed == info.getCpuSpeed()) && //
-				(_cpuCoreCount == info.getCpuCoreCount()) && //
-				(_vgaCount == info.getVgaCount()) && //
-				(_vgaPcxSpeed == info.getVgaPcxSpeed()) && //
-				(_physMemorySlot1 == info.getPhysMemorySlot1()) && //
-				(_physMemorySlot2 == info.getPhysMemorySlot2()) && //
-				(_physMemorySlot3 == info.getPhysMemorySlot3()) && //
-				(_videoMemory == info.getVideoMemory()) && //
-				(_vgaVersion == info.getVgaVersion()) && //
-				(_vgaName.equals(info.getVgaName())) && //
-				(_vgaDriverVersion.equals(info.getVgaDriverVersion())))
-			{
-				return true;
-			}
-		}
-		return false;
+		return (obj instanceof ClientHardwareInfoHolder) && _macAddress.equals(((ClientHardwareInfoHolder) obj).getMacAddress());
 	}
 }
