@@ -71,24 +71,24 @@
 	<enchant id="93255" targetGrade="A" maxEnchant="16" />
 
 	<!-- Cursed Scrolls: Enchant Weapon -->
-	<enchant id="93257" targetGrade="A" minEnchant="2" />
-	<enchant id="93270" targetGrade="A" minEnchant="2" />
-	<enchant id="95700" targetGrade="B" minEnchant="2" />
-	<enchant id="95706" targetGrade="B" minEnchant="2" />
-	<enchant id="95702" targetGrade="C" minEnchant="2" />
-	<enchant id="95708" targetGrade="C" minEnchant="2" />
-	<enchant id="95704" targetGrade="D" minEnchant="2" />
-	<enchant id="95710" targetGrade="D" minEnchant="2" />
+	<enchant id="93257" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="93270" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95700" targetGrade="B" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95706" targetGrade="B" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95702" targetGrade="C" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95708" targetGrade="C" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95704" targetGrade="D" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95710" targetGrade="D" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
 
 	<!-- Cursed Scrolls: Enchant Armor -->
-	<enchant id="93258" targetGrade="A" minEnchant="2" />
-	<enchant id="93271" targetGrade="A" minEnchant="2" />
-	<enchant id="95701" targetGrade="B" minEnchant="2" />
-	<enchant id="95707" targetGrade="B" minEnchant="2" />
-	<enchant id="95703" targetGrade="C" minEnchant="2" />
-	<enchant id="95709" targetGrade="C" minEnchant="2" />
-	<enchant id="95705" targetGrade="D" minEnchant="2" />
-	<enchant id="95711" targetGrade="D" minEnchant="2" />
+	<enchant id="93258" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="93271" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95701" targetGrade="B" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95707" targetGrade="B" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95703" targetGrade="C" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95709" targetGrade="C" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95705" targetGrade="D" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="95711" targetGrade="D" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
 
 	<!-- Fire Dragon Pendant -->
 	<enchant id="49469" maxEnchant="10" safeEnchant="3">

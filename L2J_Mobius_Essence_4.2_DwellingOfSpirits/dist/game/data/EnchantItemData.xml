@@ -69,12 +69,12 @@
 	<enchant id="93255" targetGrade="A" maxEnchant="16" />
 
 	<!-- Cursed Scrolls: Enchant Weapon -->
-	<enchant id="93257" targetGrade="A" minEnchant="2" />
-	<enchant id="93270" targetGrade="A" minEnchant="2" />
+	<enchant id="93257" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="93270" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
 
 	<!-- Cursed Scrolls: Enchant Armor -->
-	<enchant id="93258" targetGrade="A" minEnchant="2" />
-	<enchant id="93271" targetGrade="A" minEnchant="2" />
+	<enchant id="93258" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
+	<enchant id="93271" targetGrade="A" minEnchant="2" maxEnchant="16" safeEnchant="16"/>
 
 	<!-- Fire Dragon Pendant -->
 	<enchant id="49469" maxEnchant="10" safeEnchant="3">
@@ -265,7 +265,7 @@
 	</enchant>
 
 	<!-- Scroll Enchant Aden Weapon -->
-	<enchant id="93038" targetGrade="D" maxEnchant="4" bonusRate="100">
+	<enchant id="93038" targetGrade="D" safeEnchant="4" maxEnchant="10" bonusRate="100">
 		<item id="93028" />
 		<item id="93029" />
 		<item id="93030" />
