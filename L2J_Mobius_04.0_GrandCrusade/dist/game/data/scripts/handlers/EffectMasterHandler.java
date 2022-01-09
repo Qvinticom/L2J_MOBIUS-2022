@@ -337,6 +337,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("StatBonusSkillCritical", StatBonusSkillCritical::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSpeed", StatBonusSpeed::new);
 		EffectHandler.getInstance().registerHandler("StatByMoveType", StatByMoveType::new);
+		EffectHandler.getInstance().registerHandler("StatMulForLevel", StatMulForLevel::new);
 		EffectHandler.getInstance().registerHandler("StatUp", StatUp::new);
 		EffectHandler.getInstance().registerHandler("StealAbnormal", StealAbnormal::new);
 		EffectHandler.getInstance().registerHandler("Summon", Summon::new);

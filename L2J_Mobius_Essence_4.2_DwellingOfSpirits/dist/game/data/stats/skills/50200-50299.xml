@@ -2397,12 +2397,12 @@
 		<icon>icon.weapon_terakan_i00</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="StatAddForLevel">
+			<effect name="StatMulForLevel">
 				<stat>PHYSICAL_ATTACK</stat>
 				<level>60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</level>
 				<amount>3,3,3,3,4,4,4,5,5,5,8,8,8,8,8,8,8,8,8,8,13,20,26,32,38,38,40,44,48,50,56,57,58,59,60,61,62,63,64,65</amount>
 			</effect>
-			<effect name="StatAddForLevel">
+			<effect name="StatMulForLevel">
 				<stat>MAGIC_ATTACK</stat>
 				<level>60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</level>
 				<amount>2,2,2,2,2,3,3,3,3,3,5,5,5,5,5,5,5,5,5,5,8,14,19,24,29,30,36,41,46,51,54,55,56,57,58,59,60,61,62,63</amount>
