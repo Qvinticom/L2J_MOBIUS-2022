@@ -139,7 +139,7 @@ public class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isFestivalParticipant() || target.isFlyingMounted() || target.isCombatFlagEquipped() || !target.isOnEvent())
+		if (target.isFestivalParticipant() || target.isFlyingMounted() || target.isCombatFlagEquipped() || target.isOnEvent())
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 			return false;
