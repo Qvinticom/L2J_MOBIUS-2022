@@ -54,7 +54,7 @@ public class FortSiegeGuardManager
 			{
 				for (Spawn spawnDat : monsterList)
 				{
-					spawnDat.doSpawn();
+					spawnDat.doSpawn(false);
 					if (spawnDat.getRespawnDelay() == 0)
 					{
 						spawnDat.stopRespawn();

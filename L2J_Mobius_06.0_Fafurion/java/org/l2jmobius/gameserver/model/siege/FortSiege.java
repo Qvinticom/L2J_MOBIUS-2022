@@ -1097,7 +1097,7 @@ public class FortSiege implements Siegable
 				spawnDat.setXYZ(_sp.getLocation());
 				spawnDat.setHeading(_sp.getLocation().getHeading());
 				spawnDat.setRespawnDelay(60);
-				spawnDat.doSpawn();
+				spawnDat.doSpawn(false);
 				spawnDat.stopRespawn();
 				_commanders.add(spawnDat);
 			}
@@ -1168,7 +1168,7 @@ public class FortSiege implements Siegable
 		{
 			for (Spawn spawnDat : _siegeGuards)
 			{
-				spawnDat.doSpawn();
+				spawnDat.doSpawn(false);
 				if (spawnDat.getRespawnDelay() == 0)
 				{
 					spawnDat.stopRespawn();

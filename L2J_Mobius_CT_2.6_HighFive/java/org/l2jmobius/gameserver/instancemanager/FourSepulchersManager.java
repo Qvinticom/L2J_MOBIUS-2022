@@ -303,7 +303,7 @@ public class FourSepulchersManager
 				}
 				_managers.add(spawnDat);
 				SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-				spawnDat.doSpawn();
+				spawnDat.doSpawn(false);
 				spawnDat.startRespawn();
 				LOGGER.info(getClass().getSimpleName() + ": spawned " + spawnDat.getTemplate().getName());
 			}
@@ -1111,7 +1111,7 @@ public class FourSepulchersManager
 			}
 			else
 			{
-				mob = (SepulcherMonster) spawnDat.doSpawn();
+				mob = (SepulcherMonster) spawnDat.doSpawn(false);
 				spawnDat.stopRespawn();
 			}
 			
@@ -1228,7 +1228,7 @@ public class FourSepulchersManager
 			spawnDat.setXYZ(activeChar);
 			spawnDat.setHeading(activeChar.getHeading());
 			spawnDat.setRespawnDelay(3600);
-			_allMobs.add(spawnDat.doSpawn());
+			_allMobs.add(spawnDat.doSpawn(false));
 			spawnDat.stopRespawn();
 		}
 	}
@@ -1272,7 +1272,7 @@ public class FourSepulchersManager
 		{
 			for (Spawn spawnDat : monsterList)
 			{
-				_allMobs.add(spawnDat.doSpawn());
+				_allMobs.add(spawnDat.doSpawn(false));
 				spawnDat.stopRespawn();
 			}
 		}
@@ -1309,7 +1309,7 @@ public class FourSepulchersManager
 		final Spawn spawnDat = _shadowSpawns.get(npcId);
 		if (spawnDat != null)
 		{
-			final SepulcherMonster mob = (SepulcherMonster) spawnDat.doSpawn();
+			final SepulcherMonster mob = (SepulcherMonster) spawnDat.doSpawn(false);
 			spawnDat.stopRespawn();
 			
 			if (mob != null)

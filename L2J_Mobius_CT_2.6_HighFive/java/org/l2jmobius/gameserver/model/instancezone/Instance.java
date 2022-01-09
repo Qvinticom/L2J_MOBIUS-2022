@@ -433,7 +433,7 @@ public class Instance
 					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));
 					spawnDat.setInstanceId(_id);
 					spawnDat.setRandomWalking(set.getBoolean("allowRandomWalk"));
-					final Npc spawned = spawnDat.doSpawn();
+					final Npc spawned = spawnDat.doSpawn(false);
 					if ((set.getInt("delay") >= 0) && spawned.isAttackable())
 					{
 						((Attackable) spawned).setOnKillDelay(set.getInt("delay"));

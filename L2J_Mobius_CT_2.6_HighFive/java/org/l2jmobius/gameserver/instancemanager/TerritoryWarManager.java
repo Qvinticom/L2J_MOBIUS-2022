@@ -557,7 +557,7 @@ public class TerritoryWarManager implements Siegable
 						{
 							if (wardSpawn.getId() == twWard.getTerritoryId())
 							{
-								wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn());
+								wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn(false));
 								twWard.unSpawnMe();
 								twWard.setNpc(wardSpawn.getNpc());
 							}
@@ -970,7 +970,7 @@ public class TerritoryWarManager implements Siegable
 				{
 					if (!ward.getNpc().isSpawned())
 					{
-						ward.setNPC(ward.getNpc().getSpawn().doSpawn());
+						ward.setNPC(ward.getNpc().getSpawn().doSpawn(false));
 					}
 					_territoryWards.add(new TerritoryWard(ward.getId(), ward.getLocation().getX(), ward.getLocation().getY(), ward.getLocation().getZ(), 0, ward.getId() + 13479, t.getCastleId(), ward.getNpc()));
 				}
@@ -1072,7 +1072,7 @@ public class TerritoryWarManager implements Siegable
 					{
 						if (!ward.getNpc().isSpawned() && SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
 						{
-							ward.setNPC(ward.getNpc().getSpawn().doSpawn());
+							ward.setNPC(ward.getNpc().getSpawn().doSpawn(false));
 						}
 						else if (ward.getNpc().isSpawned() && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
 						{

@@ -1491,7 +1491,7 @@ public class Siege implements Siegable
 			{
 				final Spawn spawn = new Spawn(ts.getId());
 				spawn.setLocation(ts.getLocation());
-				_controlTowers.add((ControlTower) spawn.doSpawn());
+				_controlTowers.add((ControlTower) spawn.doSpawn(false));
 			}
 		}
 		catch (Exception e)
@@ -1512,7 +1512,7 @@ public class Siege implements Siegable
 			{
 				final Spawn spawn = new Spawn(ts.getId());
 				spawn.setLocation(ts.getLocation());
-				final FlameTower tower = (FlameTower) spawn.doSpawn();
+				final FlameTower tower = (FlameTower) spawn.doSpawn(false);
 				tower.setUpgradeLevel(ts.getUpgradeLevel());
 				tower.setZoneList(ts.getZoneList());
 				_flameTowers.add(tower);

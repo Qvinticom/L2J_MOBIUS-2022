@@ -305,7 +305,7 @@ public class TerritoryWarSuperClass extends Quest
 					{
 						if (wardSpawn.getId() == ward.getTerritoryId())
 						{
-							wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn());
+							wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn(false));
 							ward.unSpawnMe();
 							ward.setNpc(wardSpawn.getNpc());
 						}

@@ -114,7 +114,7 @@ public class DimensionalRiftRoom
 	{
 		for (Spawn spawn : _roomSpawns)
 		{
-			spawn.doSpawn();
+			spawn.doSpawn(false);
 			spawn.startRespawn();
 		}
 	}

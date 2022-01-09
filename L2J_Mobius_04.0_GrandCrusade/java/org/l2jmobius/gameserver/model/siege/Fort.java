@@ -1080,11 +1080,11 @@ public class Fort extends AbstractResidence
 		{
 			return;
 		}
+		
 		_isSuspiciousMerchantSpawned = true;
-		initSiegeNpcs();
 		for (Spawn spawnDat : _siegeNpcs)
 		{
-			spawnDat.doSpawn();
+			spawnDat.doSpawn(false);
 			spawnDat.startRespawn();
 		}
 	}
@@ -1107,7 +1107,7 @@ public class Fort extends AbstractResidence
 	{
 		for (Spawn spawnDat : _npcCommanders)
 		{
-			spawnDat.doSpawn();
+			spawnDat.doSpawn(false);
 			spawnDat.startRespawn();
 		}
 	}
@@ -1125,7 +1125,7 @@ public class Fort extends AbstractResidence
 	{
 		for (Spawn spawnDat : _specialEnvoys)
 		{
-			spawnDat.doSpawn();
+			spawnDat.doSpawn(false);
 			spawnDat.startRespawn();
 		}
 	}
@@ -1147,7 +1147,7 @@ public class Fort extends AbstractResidence
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(60);
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-					spawnDat.doSpawn();
+					spawnDat.doSpawn(false);
 					spawnDat.startRespawn();
 				}
 			}
