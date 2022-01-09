@@ -28,7 +28,6 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.skill.AbnormalType;
 import org.l2jmobius.gameserver.model.skill.BuffInfo;
 import org.l2jmobius.gameserver.model.skill.Skill;
 
@@ -109,11 +108,6 @@ public class Summon extends AbstractEffect
 		for (BuffInfo effect : player.getEffectList().getEffects())
 		{
 			final Skill sk = effect.getSkill();
-			if (sk.getAbnormalType() == AbnormalType.CHANGEBODY)
-			{
-				continue;
-			}
-			
 			if (!sk.isBad() && !sk.isTransformation())
 			{
 				sk.applyEffects(player, summon, false, effect.getTime());
