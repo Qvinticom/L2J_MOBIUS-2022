@@ -1183,6 +1183,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1200,6 +1201,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1217,6 +1219,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1396,12 +1399,16 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39626" level="1" /> <!-- Craft Effect - Assault Lv. 1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1413,12 +1420,16 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39626" level="2" /> <!-- Craft Effect - Assault Lv. 2 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1430,12 +1441,16 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39626" level="3" /> <!-- Craft Effect - Assault Lv. 3 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1447,12 +1462,16 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39627" level="1" /> <!-- Craft Effect - Security Lv. 1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -1464,12 +1483,16 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39627" level="2" /> <!-- Craft Effect - Security Lv. 2 -->
+		</skills>
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -1481,12 +1504,16 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39627" level="3" /> <!-- Craft Effect - Security Lv. 3 -->
+		</skills>
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -1498,6 +1525,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1515,6 +1543,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
