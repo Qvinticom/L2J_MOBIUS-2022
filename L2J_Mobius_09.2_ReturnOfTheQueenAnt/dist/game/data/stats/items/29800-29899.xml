@@ -406,38 +406,70 @@
 	<item id="29835" name="Lucky Jewelry Box" additionalName="Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Ultimate Jewelry Box or Lucky Jewelry Box Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28470" min="1" max="1" chance="60" /> <!-- Ultimate Jewelry Box -->
+			<item id="29836" min="1" max="1" chance="40" /> <!-- Lucky Jewelry Box Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="29836" name="Lucky Jewelry Box" additionalName="Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain Ultimate Jewelry Box (2 pcs.) or Lucky Jewelry Box Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28470" min="2" max="2" chance="60" /> <!-- Ultimate Jewelry Box -->
+			<item id="29837" min="1" max="1" chance="40" /> <!-- Lucky Jewelry Box Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="29837" name="Lucky Jewelry Box" additionalName="Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Ultimate Jewelry Box Lv. 3 or Lucky Jewelry Box Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47711" min="1" max="1" chance="60" /> <!-- Ultimate Jewelry Box Lv. 3 -->
+			<item id="29838" min="1" max="1" chance="40" /> <!-- Lucky Jewelry Box Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="29838" name="Lucky Jewelry Box" additionalName="Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Ultimate Jewelry Box Lv. 4 or Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48838" min="1" max="1" chance="60" /> <!-- Ultimate Jewelry Box Lv. 4 -->
+			<item id="48839" min="1" max="1" chance="40" /> <!-- Ultimate Jewelry Box Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="29839" name="Dragon Weapon Upgrade Pack" type="EtcItem">
 		<!-- Double-click to obtain a random upgrade material for Dragon weapons. -->
@@ -918,13 +950,20 @@
 	<item id="29890" name="Ethereal Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.icon_ether" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81215" min="100" max="100" chance="100" /> <!-- Aether -->
+		</capsuled_items>
 	</item>
 	<item id="29891" name="Mystical Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
