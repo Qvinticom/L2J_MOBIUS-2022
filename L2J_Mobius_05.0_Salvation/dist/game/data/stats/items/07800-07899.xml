@@ -893,9 +893,11 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="7838" name="Santa Hat" type="EtcItem">
+	<item id="7838" name="Santa Hat" type="Armor">
 		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />

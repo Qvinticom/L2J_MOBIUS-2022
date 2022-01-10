@@ -648,9 +648,11 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="9139" name="Santa Hat" type="EtcItem">
+	<item id="9139" name="Santa Hat" type="Armor">
 		<!-- Wear it for some holiday fun! -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1021,9 +1023,11 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="9161" name="Santa's Antlers" type="EtcItem">
+	<item id="9161" name="Santa's Antlers" type="Armor">
 		<!-- Festive Santa hat with antlers. Ideal for celebrating the holidays. This item can only be equipped during the year end. -->
 		<set name="icon" val="icon.accessory_santas_antler_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
