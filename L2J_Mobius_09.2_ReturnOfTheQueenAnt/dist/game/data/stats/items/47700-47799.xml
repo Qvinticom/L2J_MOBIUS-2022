@@ -623,6 +623,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -639,6 +640,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -655,6 +657,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -671,6 +674,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -687,6 +691,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -770,58 +775,10 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<!-- Dimmensional Bracelet (Couldn't find Zodiac Stage 5) -->
 		<capsuled_items>
-			<item id="39943" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - Basic -->
-			<item id="39944" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR -->
-			<item id="39945" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX -->
-			<item id="39946" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON -->
-			<item id="39947" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT -->
-			<item id="39948" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN -->
-			<item id="39949" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT -->
-			<item id="39950" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC -->
-			<item id="39951" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA -->
-			<item id="39952" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+1 -->
-			<item id="39953" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+2 -->
-			<item id="39954" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+3 -->
-			<item id="39955" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+4 -->
-			<item id="39956" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR +5 -->
-			<item id="39957" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+1 -->
-			<item id="39958" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+2 -->
-			<item id="39959" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+3 -->
-			<item id="39960" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+4 -->
-			<item id="39961" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX +5 -->
-			<item id="39962" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+1 -->
-			<item id="39963" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+2 -->
-			<item id="39964" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+3 -->
-			<item id="39965" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+4 -->
-			<item id="39966" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON +5 -->
-			<item id="39967" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+1 -->
-			<item id="39968" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+2 -->
-			<item id="39969" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+3 -->
-			<item id="39970" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+4 -->
-			<item id="39971" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT +5 -->
-			<item id="39972" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+1 -->
-			<item id="39973" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+2 -->
-			<item id="39974" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+3 -->
-			<item id="39975" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+4 -->
-			<item id="39976" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN +5 -->
-			<item id="39977" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+1 -->
-			<item id="39978" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+2 -->
-			<item id="39979" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+3 -->
-			<item id="39980" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+4 -->
-			<item id="39981" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT +5 -->
-			<item id="39982" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +1 -->
-			<item id="39983" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +2 -->
-			<item id="39984" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +3 -->
-			<item id="39985" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +4 -->
-			<item id="39986" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +5 -->
-			<item id="39987" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +1 -->
-			<item id="39988" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +2 -->
-			<item id="39989" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +3 -->
-			<item id="39990" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +4 -->
-			<item id="39991" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +5 -->
-	</capsuled_items>
+			<item id="48063" min="1" max="1" chance="50" /> <!-- Top-grade Seed Bracelet -->
+			<item id="48064" min="1" max="1" chance="50" /> <!-- Superior Seed Bracelet Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="47751" name="Capsule: +8 Eternal Heavy Armor" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Heavy Set. -->

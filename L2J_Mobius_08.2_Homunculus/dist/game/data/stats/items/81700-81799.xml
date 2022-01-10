@@ -476,6 +476,21 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<skills>
+			<skill id="35849" level="1" /> <!-- Effect: Anhel's Blessing Lv1 -->
+			<skill id="35849" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Anhel's Blessing Lv2 -->
+			<skill id="35849" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Anhel's Blessing Lv3 -->
+			<skill id="35849" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Anhel's Blessing Lv4 -->
+			<skill id="35849" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Anhel's Blessing Lv5 -->
+			<skill id="35849" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Anhel's Blessing Lv6 -->
+			<skill id="35849" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Anhel's Blessing Lv7 -->
+			<skill id="35849" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Anhel's Blessing Lv8 -->
+			<skill id="35849" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Anhel's Blessing Lv9 -->
+			<skill id="35849" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Anhel's Blessing Lv10 -->
+			<skill id="35849" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Anhel's Blessing Lv11 -->
+		</skills>
 	</item>
 	<item id="81737" name="Scroll: Enchant Anhel's Protection" additionalName="Event" type="EtcItem">
 		<!-- For Anhel's Protection enchantment. In case of failure, enchant value remains the same. The maximum enchant value is +10. -->

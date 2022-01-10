@@ -476,12 +476,27 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<skills>
+			<skill id="35849" level="1" /> <!-- Effect: Anhel's Blessing Lv1 -->
+			<skill id="35849" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Anhel's Blessing Lv2 -->
+			<skill id="35849" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Anhel's Blessing Lv3 -->
+			<skill id="35849" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Anhel's Blessing Lv4 -->
+			<skill id="35849" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Anhel's Blessing Lv5 -->
+			<skill id="35849" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Anhel's Blessing Lv6 -->
+			<skill id="35849" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Anhel's Blessing Lv7 -->
+			<skill id="35849" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Anhel's Blessing Lv8 -->
+			<skill id="35849" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Anhel's Blessing Lv9 -->
+			<skill id="35849" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Anhel's Blessing Lv10 -->
+			<skill id="35849" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Anhel's Blessing Lv11 -->
+		</skills>
 	</item>
 	<item id="81737" name="Scroll: Enchant the 17th Anniversary Guardian Angel's Ring" additionalName="Event" type="EtcItem">
 		<!-- For Anhel's Protection enchantment. In case of failure, enchant value remains the same. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.ev_2020_mask_enchant_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -721,30 +736,63 @@
 	<item id="81757" name="Water Dragon's Scroll Bundle" type="EtcItem">
 		<!-- A bundle of scroll used by the warriors of Water Dragon's Legion that live in the Corroded Fields. Double-click to randomly receive a PA Scroll of Storm. -->
 		<set name="icon" val="br_cashtex.item.br_cash_fighter_buff_set_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80746" min="18" max="24" chance="100" /> <!-- PA Scroll of Storm -->
+		</capsuled_items>
 	</item>
 	<item id="81758" name="Water Dragon's Elite Supplies" type="EtcItem">
 		<!-- Supplies of the elite warriors of Water Dragon's Legion that live in the Corroded Fields. Double-click to obtain a Talisman of Insanity, an Accessory Augmenting Stone and a Forgotten Spellbook Chapter 1 with a certain chance as well as other supplies and materials. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39572" min="1" max="1" chance="14.28" /> <!-- Talisman of Insanity -->
+			<item id="48876" min="1" max="1" chance="14.28" /> <!-- Forgotten Spellbook Chapter 1 -->
+			<item id="80636" min="1" max="1" chance="14.28" /> <!-- Artifact Crystal -->
+			<item id="80746" min="1" max="1" chance="14.28" /> <!-- PA Scroll of Storm -->
+			<item id="81053" min="1" max="1" chance="14.28" /> <!-- Vitality -->
+			<item id="81729" min="1" max="1" chance="14.28" /> <!-- Accessory Augmenting Stone-->
+			<item id="81878" min="1" max="1" chance="14.28" /> <!-- Atlas' Earring Upgrade Stone -->
+		</capsuled_items>
 	</item>
 	<item id="81759" name="Glowing Royal Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
 		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min.\n\nThe effect remains after death. Cooldown: 5 min.\nCannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<skills>
+			<skill id="39205" level="2" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="81760" name="Enhanced Talisman of Protection Lv. 1" type="Armor">
 		<!-- Applies the following effects.\nP. Def. +5000, M. Def. +3250, Attribute Resistance +160.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
@@ -882,6 +930,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81771" name="Einhasad's Blue Box" type="EtcItem">
 		<!-- A box prepared on the occasion of minting of Einhasad's Golden Coins. Double-click to obtain one rare item with a certain chance. -->
@@ -1021,6 +1070,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1035,9 +1085,13 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39626" level="1" /> <!-- Craft Effect - Assault Lv. 1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1049,9 +1103,13 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39626" level="2" /> <!-- Craft Effect - Assault Lv. 2 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1063,9 +1121,13 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39626" level="3" /> <!-- Craft Effect - Assault Lv. 3 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1077,6 +1139,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1091,9 +1154,13 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39627" level="1" /> <!-- Craft Effect - Security Lv. 1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -1105,9 +1172,13 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39627" level="2" /> <!-- Craft Effect - Security Lv. 2 -->
+		</skills>
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -1119,9 +1190,13 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="78" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39627" level="3" /> <!-- Craft Effect - Security Lv. 3 -->
+		</skills>
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -1133,6 +1208,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1147,9 +1223,13 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39628" level="1" /> <!-- Craft Effect - Elements Lv. 1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">101</stat>
 		</stats>
@@ -1161,9 +1241,13 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39628" level="2" /> <!-- Craft Effect - Elements Lv. 2 -->
+		</skills>
 		<stats>
 			<stat type="mDef">101</stat>
 		</stats>
@@ -1175,9 +1259,13 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="39628" level="3" /> <!-- Craft Effect - Elements Lv. 3 -->
+		</skills>
 		<stats>
 			<stat type="mDef">101</stat>
 		</stats>
@@ -1189,6 +1277,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
@@ -1206,12 +1295,16 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39626" level="1" /> <!-- Craft Effect - Assault Lv. 1 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1223,12 +1316,16 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39626" level="2" /> <!-- Craft Effect - Assault Lv. 2 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
@@ -1240,12 +1337,16 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="73" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39626" level="3" /> <!-- Craft Effect - Assault Lv. 3 -->
+		</skills>
 		<stats>
 			<stat type="mDef">202</stat>
 		</stats>
