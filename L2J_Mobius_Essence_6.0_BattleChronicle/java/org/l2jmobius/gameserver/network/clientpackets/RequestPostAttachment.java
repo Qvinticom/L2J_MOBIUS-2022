@@ -228,10 +228,8 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		{
 			player.sendInventoryUpdate(playerIU);
 		}
-		else
-		{
-			player.sendItemList();
-		}
+		// Send full list to avoid duplicates.
+		player.sendItemList();
 		
 		msg.removeAttachments();
 		
