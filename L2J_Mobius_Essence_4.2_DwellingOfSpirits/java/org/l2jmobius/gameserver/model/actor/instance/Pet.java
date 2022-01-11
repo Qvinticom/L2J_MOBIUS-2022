@@ -1436,10 +1436,10 @@ public class Pet extends Summon
 	}
 	
 	@Override
-	public void updateAndBroadcastStatus()
+	public void updateAndBroadcastStatus(int value)
 	{
 		refreshOverloaded();
-		super.updateAndBroadcastStatus();
+		super.updateAndBroadcastStatus(value);
 	}
 	
 	@Override

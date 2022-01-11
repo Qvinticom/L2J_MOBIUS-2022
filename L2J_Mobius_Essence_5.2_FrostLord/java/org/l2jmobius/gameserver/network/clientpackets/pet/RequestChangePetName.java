@@ -85,6 +85,6 @@ public class RequestChangePetName implements IClientIncomingPacket
 		}
 		
 		pet.setName(_name);
-		pet.updateAndBroadcastStatus();
+		pet.updateAndBroadcastStatus(1);
 	}
 }

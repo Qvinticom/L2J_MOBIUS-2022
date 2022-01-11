@@ -155,7 +155,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			_statusMask |= 0x04;
 		}
-		_statusMask |= 0x08;
+		_statusMask |= 0x08; // Show name (current on retail is empty).
 		if (_statusMask != 0x00)
 		{
 			addComponentType(NpcInfoType.VISUAL_STATE);

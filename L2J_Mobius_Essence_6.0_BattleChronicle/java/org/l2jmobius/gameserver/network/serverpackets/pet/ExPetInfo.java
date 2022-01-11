@@ -155,7 +155,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			_statusMask |= 0x04;
 		}
-		_statusMask |= 0x08;
+		_statusMask |= 0x08; // Show name (current on retail is empty).
 		if (_statusMask != 0x00)
 		{
 			addComponentType(NpcInfoType.VISUAL_STATE);
@@ -208,7 +208,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		OutgoingPackets.EX_PET_INFO.writeId(packet);
 		packet.writeD(_summon.getObjectId());
 		packet.writeC(_value); // 0=teleported 1=default 2=summoned
-		packet.writeH(37); // mask_bits_37
+		packet.writeH(38); // 338 - mask_bits_38
 		packet.writeB(_masks);
 		// Block 1
 		packet.writeC(_initSize);

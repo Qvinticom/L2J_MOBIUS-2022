@@ -118,7 +118,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 			}
 			
 			player.sendPacket(new PetItemList(pet.getInventory().getItems()));
-			pet.updateAndBroadcastStatus();
+			pet.updateAndBroadcastStatus(1);
 		}
 		else
 		{
@@ -133,7 +133,7 @@ public class RequestPetUseItem implements IClientIncomingPacket
 						player.addTimeStampItem(item, reuseDelay);
 					}
 					player.sendPacket(new PetItemList(pet.getInventory().getItems()));
-					pet.updateAndBroadcastStatus();
+					pet.updateAndBroadcastStatus(1);
 				}
 			}
 			else

@@ -287,7 +287,7 @@ public class PlayerStat extends PlayableStat
 				pet.setCurrentHp(pet.getMaxHp());
 				pet.setCurrentMp(pet.getMaxMp());
 				pet.broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
-				pet.updateAndBroadcastStatus();
+				pet.updateAndBroadcastStatus(1);
 			}
 		}
 		

@@ -37,7 +37,7 @@ public class PetStat extends SummonStat
 			return false;
 		}
 		
-		getActiveChar().updateAndBroadcastStatus();
+		getActiveChar().updateAndBroadcastStatus(1);
 		return true;
 	}
 	
@@ -51,7 +51,7 @@ public class PetStat extends SummonStat
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_XP);
 		sm.addLong(finalExp);
-		getActiveChar().updateAndBroadcastStatus();
+		getActiveChar().updateAndBroadcastStatus(1);
 		getActiveChar().sendPacket(sm);
 		return true;
 	}
@@ -71,7 +71,7 @@ public class PetStat extends SummonStat
 			getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
 		}
 		// Send a Server->Client packet PetInfo to the Player
-		getActiveChar().updateAndBroadcastStatus();
+		getActiveChar().updateAndBroadcastStatus(1);
 		
 		if (getActiveChar().getControlItem() != null)
 		{

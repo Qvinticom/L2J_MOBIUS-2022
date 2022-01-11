@@ -431,7 +431,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.VISUAL_STATE))
 		{
-			packet.writeC(_statusMask);
+			packet.writeD(_statusMask);
 		}
 		if (containsMask(NpcInfoType.ABNORMALS))
 		{

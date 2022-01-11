@@ -123,7 +123,7 @@ public abstract class Summon extends Playable
 		}
 		
 		setFollowStatus(true);
-		updateAndBroadcastStatus();
+		updateAndBroadcastStatus(0);
 		if (isPet())
 		{
 			final Pet pet = (Pet) this;
@@ -133,13 +133,13 @@ public abstract class Summon extends Playable
 		
 		if (_owner != null)
 		{
-			_owner.sendPacket(new PetInfo(this, 1));
-			_owner.sendPacket(new ExPetSkillList(true, this));
+			sendPacket(new PetInfo(this, 1));
+			sendPacket(new ExPetSkillList(true, this));
 			if (getInventory() != null)
 			{
-				_owner.sendPacket(new PetItemList(getInventory().getItems()));
+				sendPacket(new PetItemList(getInventory().getItems()));
 			}
-			_owner.sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
+			sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
 		}
 		World.getInstance().forEachVisibleObject(getOwner(), Player.class, player -> player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player))));
 		final Party party = _owner.getParty();
@@ -199,14 +199,14 @@ public abstract class Summon extends Playable
 	public void stopAllEffects()
 	{
 		super.stopAllEffects();
-		updateAndBroadcastStatus();
+		updateAndBroadcastStatus(1);
 	}
 	
 	@Override
 	public void stopAllEffectsExceptThoseThatLastThroughDeath()
 	{
 		super.stopAllEffectsExceptThoseThatLastThroughDeath();
-		updateAndBroadcastStatus();
+		updateAndBroadcastStatus(1);
 	}
 	
 	@Override
@@ -384,7 +384,7 @@ public abstract class Summon extends Playable
 	public void broadcastStatusUpdate(Creature caster)
 	{
 		super.broadcastStatusUpdate(caster);
-		updateAndBroadcastStatus();
+		updateAndBroadcastStatus(1);
 	}
 	
 	public void deleteMe(Player owner)
@@ -836,17 +836,18 @@ public abstract class Summon extends Playable
 		return _owner;
 	}
 	
-	public void updateAndBroadcastStatus()
+	public void updateAndBroadcastStatus(int value)
 	{
 		if (_owner == null)
 		{
 			return;
 		}
 		
+		sendPacket(new PetInfo(this, value));
 		sendPacket(new PetStatusUpdate(this));
 		if (isSpawned())
 		{
-			broadcastNpcInfo(0);
+			broadcastNpcInfo(value);
 		}
 		final Party party = _owner.getParty();
 		if (party != null)
@@ -886,9 +887,10 @@ public abstract class Summon extends Playable
 	@Override
 	public void sendInfo(Player player)
 	{
+		// Check if the Player is the owner of the Pet
 		if (player == _owner)
 		{
-			player.sendPacket(new PetInfo(this, 1));
+			player.sendPacket(new PetInfo(this, isDead() ? 0 : 1));
 			if (isPet())
 			{
 				player.sendPacket(new PetItemList(getInventory().getItems()));
@@ -896,7 +898,7 @@ public abstract class Summon extends Playable
 		}
 		else
 		{
-			player.sendPacket(new ExPetInfo(this, player, isShowSummonAnimation() ? 2 : isDead() ? 0 : 1));
+			player.sendPacket(new ExPetInfo(this, player, 0));
 		}
 	}
 	

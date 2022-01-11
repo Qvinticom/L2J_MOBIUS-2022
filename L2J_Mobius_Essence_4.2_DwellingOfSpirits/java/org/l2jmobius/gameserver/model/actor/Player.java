@@ -10426,7 +10426,7 @@ public class Player extends Playable
 			((SummonAI) _pet.getAI()).setStartFollowController(true);
 			_pet.setFollowStatus(true);
 			_pet.setInstance(getInstanceWorld());
-			_pet.updateAndBroadcastStatus();
+			_pet.updateAndBroadcastStatus(0);
 			sendPacket(new PetInfo(_pet, 0));
 		}
 		
@@ -10437,7 +10437,7 @@ public class Player extends Playable
 			((SummonAI) s.getAI()).setStartFollowController(true);
 			s.setFollowStatus(true);
 			s.setInstance(getInstanceWorld());
-			s.updateAndBroadcastStatus();
+			s.updateAndBroadcastStatus(0);
 			sendPacket(new PetInfo(s, 0));
 		});
 		
