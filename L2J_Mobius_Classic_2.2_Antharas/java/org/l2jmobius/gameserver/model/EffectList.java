@@ -870,18 +870,20 @@ public class EffectList
 			return;
 		}
 		
+		final Skill skill = info.getSkill();
+		
 		// Prevent adding and initializing buffs/effects on dead creatures.
-		if (info.getEffected().isDead() && !info.getSkill().isStayAfterDeath())
+		if (info.getEffected().isDead() && (skill != null) && !skill.isPassive() && !skill.isStayAfterDeath())
 		{
 			return;
 		}
 		
-		if (info.getSkill() == null)
+		if (skill == null)
 		{
 			// Only options are without skills.
 			addOption(info);
 		}
-		else if (info.getSkill().isPassive())
+		else if (skill.isPassive())
 		{
 			// Passive effects are treated specially
 			addPassive(info);
@@ -901,7 +903,7 @@ public class EffectList
 		final Skill skill = info.getSkill();
 		
 		// Cannot add active buff to dead creature. Even in retail if you are dead with Lv. 3 Shillien's Breath, it will disappear instead of going 1 level down.
-		if (info.getEffected().isDead() && !info.getSkill().isStayAfterDeath())
+		if (info.getEffected().isDead() && !skill.isStayAfterDeath())
 		{
 			return;
 		}
