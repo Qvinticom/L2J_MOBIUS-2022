@@ -29,7 +29,7 @@ import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.skill.Skill;
 
 /**
  * @author Mobius
@@ -69,49 +69,53 @@ public class AgathionData implements IXmlReader
 			
 			final int enchant = set.getInt("enchant", 0);
 			
-			final Map<Integer, List<SkillHolder>> mainSkills = AGATHION_SKILLS.containsKey(id) ? AGATHION_SKILLS.get(id).getMainSkills() : new HashMap<>();
-			final List<SkillHolder> mainSkillList = new ArrayList<>();
+			final Map<Integer, List<Skill>> mainSkills = AGATHION_SKILLS.containsKey(id) ? AGATHION_SKILLS.get(id).getMainSkills() : new HashMap<>();
+			final List<Skill> mainSkillList = new ArrayList<>();
 			final String main = set.getString("mainSkill", "");
-			for (String skill : main.split(";"))
+			for (String ids : main.split(";"))
 			{
-				if (skill.isEmpty())
+				if (ids.isEmpty())
 				{
 					continue;
 				}
 				
-				final String[] split = skill.split(",");
+				final String[] split = ids.split(",");
 				final int skillId = Integer.parseInt(split[0]);
 				final int level = Integer.parseInt(split[1]);
-				if (SkillData.getInstance().getSkill(skillId, level) == null)
+				
+				final Skill skill = SkillData.getInstance().getSkill(skillId, level);
+				if (skill == null)
 				{
 					LOGGER.info(getClass().getSimpleName() + ": Could not find agathion skill id " + skillId + ".");
 					return;
 				}
 				
-				mainSkillList.add(new SkillHolder(skillId, level));
+				mainSkillList.add(skill);
 			}
 			mainSkills.put(enchant, mainSkillList);
 			
-			final Map<Integer, List<SkillHolder>> subSkills = AGATHION_SKILLS.containsKey(id) ? AGATHION_SKILLS.get(id).getSubSkills() : new HashMap<>();
-			final List<SkillHolder> subSkillList = new ArrayList<>();
+			final Map<Integer, List<Skill>> subSkills = AGATHION_SKILLS.containsKey(id) ? AGATHION_SKILLS.get(id).getSubSkills() : new HashMap<>();
+			final List<Skill> subSkillList = new ArrayList<>();
 			final String sub = set.getString("subSkill", "");
-			for (String skill : sub.split(";"))
+			for (String ids : sub.split(";"))
 			{
-				if (skill.isEmpty())
+				if (ids.isEmpty())
 				{
 					continue;
 				}
 				
-				final String[] split = skill.split(",");
+				final String[] split = ids.split(",");
 				final int skillId = Integer.parseInt(split[0]);
 				final int level = Integer.parseInt(split[1]);
-				if (SkillData.getInstance().getSkill(skillId, level) == null)
+				
+				final Skill skill = SkillData.getInstance().getSkill(skillId, level);
+				if (skill == null)
 				{
 					LOGGER.info(getClass().getSimpleName() + ": Could not find agathion skill id " + skillId + ".");
 					return;
 				}
 				
-				subSkillList.add(new SkillHolder(skillId, level));
+				subSkillList.add(skill);
 			}
 			subSkills.put(enchant, subSkillList);
 			

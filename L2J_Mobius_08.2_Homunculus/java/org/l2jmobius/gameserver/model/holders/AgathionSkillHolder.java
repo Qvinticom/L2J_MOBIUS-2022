@@ -20,31 +20,33 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.model.skill.Skill;
+
 /**
  * @author Mobius
  */
 public class AgathionSkillHolder
 {
-	private final Map<Integer, List<SkillHolder>> _mainSkill;
-	private final Map<Integer, List<SkillHolder>> _subSkill;
+	private final Map<Integer, List<Skill>> _mainSkill;
+	private final Map<Integer, List<Skill>> _subSkill;
 	
-	public AgathionSkillHolder(Map<Integer, List<SkillHolder>> mainSkill, Map<Integer, List<SkillHolder>> subSkill)
+	public AgathionSkillHolder(Map<Integer, List<Skill>> mainSkill, Map<Integer, List<Skill>> subSkill)
 	{
 		_mainSkill = mainSkill;
 		_subSkill = subSkill;
 	}
 	
-	public Map<Integer, List<SkillHolder>> getMainSkills()
+	public Map<Integer, List<Skill>> getMainSkills()
 	{
 		return _mainSkill;
 	}
 	
-	public Map<Integer, List<SkillHolder>> getSubSkills()
+	public Map<Integer, List<Skill>> getSubSkills()
 	{
 		return _subSkill;
 	}
 	
-	public List<SkillHolder> getMainSkills(int enchantLevel)
+	public List<Skill> getMainSkills(int enchantLevel)
 	{
 		if (!_mainSkill.containsKey(enchantLevel))
 		{
@@ -53,7 +55,7 @@ public class AgathionSkillHolder
 		return _mainSkill.get(enchantLevel);
 	}
 	
-	public List<SkillHolder> getSubSkills(int enchantLevel)
+	public List<Skill> getSubSkills(int enchantLevel)
 	{
 		if (!_subSkill.containsKey(enchantLevel))
 		{

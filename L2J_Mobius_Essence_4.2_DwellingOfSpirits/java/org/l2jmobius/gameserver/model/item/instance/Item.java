@@ -70,7 +70,6 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemPi
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.EtcItem;
@@ -947,36 +946,36 @@ public class Item extends WorldObject
 			{
 				boolean update = false;
 				// Remove old skills.
-				for (SkillHolder holder : agathionSkills.getMainSkills(_enchantLevel))
+				for (Skill skill : agathionSkills.getMainSkills(_enchantLevel))
 				{
-					getActingPlayer().removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+					getActingPlayer().removeSkill(skill, false, skill.isPassive());
 					update = true;
 				}
-				for (SkillHolder holder : agathionSkills.getSubSkills(_enchantLevel))
+				for (Skill skill : agathionSkills.getSubSkills(_enchantLevel))
 				{
-					getActingPlayer().removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+					getActingPlayer().removeSkill(skill, false, skill.isPassive());
 					update = true;
 				}
 				// Add new skills.
 				if (getLocationSlot() == Inventory.PAPERDOLL_AGATHION1)
 				{
-					for (SkillHolder holder : agathionSkills.getMainSkills(enchantLevel))
+					for (Skill skill : agathionSkills.getMainSkills(enchantLevel))
 					{
-						if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
+						if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
 						{
 							continue;
 						}
-						getActingPlayer().addSkill(holder.getSkill(), false);
+						getActingPlayer().addSkill(skill, false);
 						update = true;
 					}
 				}
-				for (SkillHolder holder : agathionSkills.getSubSkills(enchantLevel))
+				for (Skill skill : agathionSkills.getSubSkills(enchantLevel))
 				{
-					if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
+					if (skill.isPassive() && !skill.checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
 					{
 						continue;
 					}
-					getActingPlayer().addSkill(holder.getSkill(), false);
+					getActingPlayer().addSkill(skill, false);
 					update = true;
 				}
 				if (update)
