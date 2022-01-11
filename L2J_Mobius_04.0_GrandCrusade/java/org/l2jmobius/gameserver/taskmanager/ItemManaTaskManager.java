@@ -59,7 +59,7 @@ public class ItemManaTaskManager implements Runnable
 				final Player player = item.getActingPlayer();
 				if ((player == null) || player.isInOfflineMode())
 				{
-					return;
+					continue;
 				}
 				
 				item.decreaseMana(item.isEquipped());
