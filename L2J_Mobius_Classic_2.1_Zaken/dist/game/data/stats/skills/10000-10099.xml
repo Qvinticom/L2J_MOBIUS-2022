@@ -45,27 +45,18 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="1">40</value>
-		</activateRate>
+		<activateRate>40</activateRate>
 		<affectLimit>10-10</affectLimit>
-		<affectRange>100</affectRange>
-		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<itemConsumeId>1785</itemConsumeId>
-		<itemConsumeCount>
-			<value level="1">1</value>
-		</itemConsumeCount>
-		<lvlBonusRate>1</lvlBonusRate>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<icon>icon.skll10094</icon>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<magicLevel>
-			<value level="1">85</value>
-		</magicLevel>
-		<mpConsume>
-			<value level="1">140</value>
-		</mpConsume>
+		<isMagic>0</isMagic>
+		<magicLevel>80</magicLevel>
+		<mpConsume>140</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<hitTime>1500</hitTime>
@@ -74,20 +65,15 @@
 		<effectPoint>-828</effectPoint>
 		<isDebuff>true</isDebuff>
 		<trait>PARALYZE</trait>
-		<conditions>
-			<condition name="EquipShield" />
-		</conditions>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">11997</value>
-				</power>
+				<power>1997</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
-			</effect>
-			<effect name="DefenceTrait">
-				<PARALYZE>100</PARALYZE>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

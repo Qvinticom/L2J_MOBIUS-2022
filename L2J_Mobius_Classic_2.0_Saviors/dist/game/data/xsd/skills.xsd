@@ -616,7 +616,7 @@
 															</xs:element>
 															<xs:element name="item" type="xs:string" />
 															<xs:element name="expMultiplier" type="xs:decimal" />
-															<xs:element name="allowedSkills" type="xs:unsignedShort" />
+															<xs:element name="allowedSkills" type="xs:string" />
 															<xs:element name="ticks" type="xs:unsignedByte" />
 															<xs:element name="percentage">
 																<xs:complexType mixed="true">
@@ -836,12 +836,8 @@
 															<xs:element name="accuracyAmount" type="xs:unsignedByte" />
 															<xs:element name="accuracyMode" type="xs:string" />
 															<xs:element name="hpPercent" type="xs:unsignedByte" />
-															<xs:element name="mpPercent" type="xs:unsignedByte" />
-															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="attribute" type="xs:string" />
 															<xs:element name="attackerType" type="xs:string" />
-															<xs:element name="minAttackerLevel" type="xs:unsignedByte" />
-															<xs:element name="maxAttackerLevel" type="xs:unsignedByte" />
 															<xs:element name="minDamage">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1661,6 +1657,7 @@
 											<xs:element name="condition">
 												<xs:complexType>
 													<xs:sequence>
+														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="alignment" type="xs:string" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
@@ -1669,6 +1666,8 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
+														<xs:element minOccurs="0" name="affectType" type="xs:string" />
+														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
 														<xs:element minOccurs="0" name="armorType">
 															<xs:complexType>
 																<xs:sequence>
@@ -1677,9 +1676,6 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="minLevel" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="affectType" type="xs:string" />
-														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
 														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
 														<xs:element minOccurs="0" name="weaponType">
 															<xs:complexType>
@@ -1760,21 +1756,12 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="blockedInOlympiad" type="xs:boolean" />
-								<xs:element name="channelingSkillId" type="xs:unsignedShort" />
-								<xs:element name="mpPerChanneling" type="xs:unsignedByte" />
-								<xs:element name="channelingStart" type="xs:decimal" />
-								<xs:element name="channelingTickInterval" type="xs:unsignedByte" />
-								<xs:element name="removedOnDamage" type="xs:boolean" />
-								<xs:element name="removedOnAnyActionExceptMove" type="xs:boolean" />
-								<xs:element name="itemConsumeSteps" type="xs:unsignedByte" />
-								<xs:element name="soulMaxConsumeCount" type="xs:unsignedByte" />
 								<xs:element name="targetConditions">
 									<xs:complexType>
 										<xs:sequence>
 											<xs:element name="condition">
 												<xs:complexType>
-													<xs:sequence>
+													<xs:sequence minOccurs="0">
 														<xs:element minOccurs="0" name="distance" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
@@ -1797,6 +1784,15 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
+								<xs:element name="blockedInOlympiad" type="xs:boolean" />
+								<xs:element name="channelingSkillId" type="xs:unsignedShort" />
+								<xs:element name="mpPerChanneling" type="xs:unsignedByte" />
+								<xs:element name="channelingStart" type="xs:decimal" />
+								<xs:element name="channelingTickInterval" type="xs:unsignedByte" />
+								<xs:element name="removedOnDamage" type="xs:boolean" />
+								<xs:element name="removedOnAnyActionExceptMove" type="xs:boolean" />
+								<xs:element name="itemConsumeSteps" type="xs:unsignedByte" />
+								<xs:element name="soulMaxConsumeCount" type="xs:unsignedByte" />
 								<xs:element name="endEffects">
 									<xs:complexType>
 										<xs:sequence>
