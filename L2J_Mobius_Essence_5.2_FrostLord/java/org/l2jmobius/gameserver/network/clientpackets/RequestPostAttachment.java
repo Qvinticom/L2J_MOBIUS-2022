@@ -207,7 +207,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			
 			if (playerIU != null)
 			{
-				if (newItem.getCount() > count)
+				if (newItem.isStackable() && (newItem.getCount() > count))
 				{
 					playerIU.addModifiedItem(newItem);
 				}
@@ -216,6 +216,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 					playerIU.addNewItem(newItem);
 				}
 			}
+			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_X_S2);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
