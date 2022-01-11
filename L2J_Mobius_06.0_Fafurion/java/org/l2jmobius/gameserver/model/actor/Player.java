@@ -3495,7 +3495,14 @@ public class Player extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(destoyedItem);
+			if (destoyedItem.isStackable() && (destoyedItem.getCount() > 0))
+			{
+				playerIU.addModifiedItem(destoyedItem);
+			}
+			else
+			{
+				playerIU.addRemovedItem(destoyedItem);
+			}
 			sendInventoryUpdate(playerIU);
 		}
 		else
@@ -3604,7 +3611,14 @@ public class Player extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			if (item.isStackable() && (item.getCount() > 0))
+			{
+				playerIU.addModifiedItem(item);
+			}
+			else
+			{
+				playerIU.addRemovedItem(item);
+			}
 			sendInventoryUpdate(playerIU);
 		}
 		else

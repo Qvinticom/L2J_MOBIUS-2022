@@ -489,7 +489,14 @@ public class PlayerInventory extends Inventory
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
 					final InventoryUpdate playerIU = new InventoryUpdate();
-					playerIU.addItem(item);
+					if (item.isStackable() && (item.getCount() > count))
+					{
+						playerIU.addModifiedItem(item);
+					}
+					else
+					{
+						playerIU.addNewItem(item);
+					}
 					actor.sendInventoryUpdate(playerIU);
 				}
 				else
