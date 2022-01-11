@@ -90,6 +90,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				}
 				sm.addInt(targetItem.getEnchantLevel());
 				sm.addItemName(targetItem);
+				sm.addAttribute(realElement.getClientId());
 				if (targetItem.isArmor())
 				{
 					sm.addAttribute(realElement.getClientId());

@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class RequestStopPledgeWar implements IClientIncomingPacket
@@ -82,7 +83,10 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 			}
 			if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(member.getPlayer()))
 			{
-				player.sendPacket(SystemMessageId.THE_CLAN_WAR_CANNOT_BE_STOPPED_BECAUSE_SOMEONE_FROM_YOUR_CLAN_IS_STILL_ENGAGED_IN_BATTLE_CLAN_MEMBERS_IN_BATTLE_S1);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CLAN_WAR_CANNOT_BE_STOPPED_BECAUSE_SOMEONE_FROM_YOUR_CLAN_IS_STILL_ENGAGED_IN_BATTLE_CLAN_MEMBERS_IN_BATTLE_S1);
+				sm.addString(member.getName());
+				player.sendPacket(sm);
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
