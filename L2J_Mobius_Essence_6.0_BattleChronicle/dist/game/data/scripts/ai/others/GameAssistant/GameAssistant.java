@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import org.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulExtractionWindow;
@@ -55,6 +56,11 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int RED_SAYHA_CLOAK = 91212;
 	private static final int PACKAGE_CLOAK = 93303;
 	private static final int SAYHA_CLOAK_COUPON = 91227;
+	private static final int ADVENTURER_MARK_LV_1 = 91654;
+	private static final int ADVENTURER_MARK_LV_2 = 91655;
+	private static final int ADVENTURER_MARK_LV_3 = 91656;
+	private static final int ADVENTURER_MARK_LV_4 = 91657;
+	private static final int ADVENTURER_MARK_LV_5 = 91931;
 	// Multisells
 	private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
 	private static final int EX_BOSS_WEAPON_SHOP = 3247813;
@@ -74,6 +80,10 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int EX_ARMOR_4_C_GRADE = 3247831;
 	private static final int EX_AGATHION_SPIRIT = 3247835;
 	private static final int EX_SOULSHOT = 3247838;
+	private static final int EX_DYES1 = 3247843;
+	private static final int EX_DYES2 = 3247844;
+	private static final int EX_DYES3 = 3247845;
+	private static final int EX_DYES4 = 3247846;
 	// Others
 	private static final String COMMAND_BYPASS = "Quest GameAssistant ";
 	
@@ -190,16 +200,24 @@ public class GameAssistant extends AbstractNpcAI
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/armors.html")));
 				break;
 			}
-			
 			case "Chat_Agathions":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/agathions.html")));
 				break;
 			}
-			
 			case "Chat_Soulshots":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/soulshots.html")));
+				break;
+			}
+			case "Chat_Adventures_Mark":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/adventuremark.html")));
+				break;
+			}
+			case "Chat_Dyes":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/dyes.html")));
 				break;
 			}
 			// Actions
@@ -308,6 +326,94 @@ public class GameAssistant extends AbstractNpcAI
 			case "Ex_Soulshot":
 			{
 				MultisellData.getInstance().separateAndSend(EX_SOULSHOT, player, null, false);
+				break;
+			}
+			case "Take_Adventures_Mark":
+			{
+				if ((player.getLevel() >= 20) || (player.getLevel() <= 30))
+				{
+					final long itemCount = getQuestItemsCount(player, ADVENTURER_MARK_LV_1);
+					if (itemCount >= 1)
+					{
+						player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/items.html")));
+						player.sendPacket(new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/checkurinv.html")));
+						return null;
+					}
+					
+					player.addItem("GameAssistant", ADVENTURER_MARK_LV_1, 1, null, false);
+				}
+				if ((player.getLevel() >= 30) || (player.getLevel() <= 40))
+				{
+					final long itemCount = getQuestItemsCount(player, ADVENTURER_MARK_LV_2);
+					if (itemCount >= 1)
+					{
+						player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/items.html")));
+						player.sendPacket(new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/checkurinv.html")));
+						return null;
+					}
+					
+					player.addItem("GameAssistant", ADVENTURER_MARK_LV_2, 1, null, false);
+				}
+				if ((player.getLevel() >= 40) || (player.getLevel() <= 60))
+				{
+					final long itemCount = getQuestItemsCount(player, ADVENTURER_MARK_LV_3);
+					if (itemCount >= 1)
+					{
+						player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/items.html")));
+						player.sendPacket(new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/checkurinv.html")));
+						return null;
+					}
+					
+					player.addItem("GameAssistant", ADVENTURER_MARK_LV_3, 1, null, false);
+				}
+				if ((player.getLevel() >= 60) || (player.getLevel() <= 75))
+				{
+					final long itemCount = getQuestItemsCount(player, ADVENTURER_MARK_LV_4);
+					if (itemCount >= 1)
+					{
+						player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/items.html")));
+						player.sendPacket(new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/checkurinv.html")));
+						return null;
+					}
+					
+					player.addItem("GameAssistant", ADVENTURER_MARK_LV_4, 1, null, false);
+				}
+				if ((player.getLevel() >= 76) || (player.getLevel() <= 99))
+				{
+					final long itemCount = getQuestItemsCount(player, ADVENTURER_MARK_LV_5);
+					if (itemCount >= 1)
+					{
+						player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/items.html")));
+						player.sendPacket(new NpcHtmlMessage(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/checkurinv.html")));
+						return null;
+					}
+					
+					player.addItem("GameAssistant", ADVENTURER_MARK_LV_5, 1, null, false);
+				}
+				break;
+			}
+			case "Ex_Dyes1":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/dyes.html")));
+				MultisellData.getInstance().separateAndSend(EX_DYES1, player, null, false);
+				break;
+			}
+			case "Ex_Dyes2":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/dyes.html")));
+				MultisellData.getInstance().separateAndSend(EX_DYES2, player, null, false);
+				break;
+			}
+			case "Ex_Dyes3":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/dyes.html")));
+				MultisellData.getInstance().separateAndSend(EX_DYES3, player, null, false);
+				break;
+			}
+			case "Ex_Dyes4":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/dyes.html")));
+				MultisellData.getInstance().separateAndSend(EX_DYES4, player, null, false);
 				break;
 			}
 			case "exc_black_sayha_cloak":
