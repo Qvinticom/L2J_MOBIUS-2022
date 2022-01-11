@@ -10114,6 +10114,7 @@ public class Player extends Playable
 			rewardSkills();
 			regiveTemporarySkills();
 			getInventory().applyItemSkills();
+			restoreCollectionBonuses();
 			
 			// Prevents some issues when changing between subclases that shares skills
 			resetDisabledSkills();
