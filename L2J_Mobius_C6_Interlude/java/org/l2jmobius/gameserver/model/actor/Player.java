@@ -455,7 +455,6 @@ public class Player extends Playable
 	private double _mpUpdateDecCheck = .0;
 	private double _mpUpdateInterval = .0;
 	private long _timerToAttack;
-	private boolean _isInOfflineMode = false;
 	private boolean _isTradeOff = false;
 	private long _offlineShopStart = 0;
 	public int _originalNameColorOffline = 0xFFFFFF;
@@ -8140,15 +8139,7 @@ public class Player extends Playable
 			statement.setLong(33, getDeleteTimer());
 			statement.setString(34, getTitle());
 			statement.setInt(35, getAccessLevel().getLevel());
-			if (_isInOfflineMode || isOnline()) // in offline mode or online
-			{
-				statement.setInt(36, 1);
-			}
-			else
-			{
-				statement.setInt(36, isOnline() ? 1 : 0);
-			}
-			
+			statement.setInt(36, isOnlineInt());
 			statement.setInt(37, isIn7sDungeon() ? 1 : 0);
 			statement.setInt(38, getClanPrivileges());
 			statement.setInt(39, getWantsPeace());
@@ -8310,12 +8301,32 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * Return True if the Player is online.
-	 * @return if player is online
+	 * @return True if the Player is online.
 	 */
 	public boolean isOnline()
 	{
 		return _isOnline;
+	}
+	
+	public int isOnlineInt()
+	{
+		if (_isOnline && (_client != null))
+		{
+			return _client.isDetached() ? 2 : 1;
+		}
+		return 0;
+	}
+	
+	/**
+	 * Verifies if the player is in offline mode.<br>
+	 * The offline mode may happen for different reasons:<br>
+	 * Abnormally: Player gets abruptly disconnected from server.<br>
+	 * Normally: The player gets into offline shop mode, only available by enabling the offline shop mod.
+	 * @return {@code true} if the player is in offline mode, {@code false} otherwise
+	 */
+	public boolean isInOfflineMode()
+	{
+		return (_client == null) || _client.isDetached();
 	}
 	
 	/**
@@ -14638,24 +14649,6 @@ public class Player extends Playable
 			}
 		}
 		return color;
-	}
-	
-	/**
-	 * Checks if is offline.
-	 * @return true, if is offline
-	 */
-	public boolean isInOfflineMode()
-	{
-		return _isInOfflineMode;
-	}
-	
-	/**
-	 * Sets the offline.
-	 * @param set the new offline
-	 */
-	public void setOfflineMode(boolean set)
-	{
-		_isInOfflineMode = set;
 	}
 	
 	/**

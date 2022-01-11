@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 
 /**
@@ -54,7 +55,14 @@ public class ItemManaTaskManager implements Runnable
 			{
 				final Item item = entry.getKey();
 				ITEMS.remove(item);
-				item.decreaseMana(true);
+				
+				final Player player = item.getActingPlayer();
+				if ((player == null) || player.isInOfflineMode())
+				{
+					return;
+				}
+				
+				item.decreaseMana(item.isEquipped());
 			}
 		}
 		

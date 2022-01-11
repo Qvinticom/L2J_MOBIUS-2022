@@ -664,7 +664,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 					{
 						if (!Config.OFFLINE_MODE_IN_PEACE_ZONE || (Config.OFFLINE_MODE_IN_PEACE_ZONE && player.isInsideZone(ZoneId.PEACE)))
 						{
-							player.setOfflineMode(true);
 							player.setOnlineStatus(false);
 							player.leaveParty();
 							player.store();

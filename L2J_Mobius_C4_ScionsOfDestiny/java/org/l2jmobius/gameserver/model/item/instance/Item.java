@@ -79,7 +79,10 @@ public class Item extends WorldObject
 		FREIGHT
 	}
 	
+	/** Owner */
 	private int _ownerId;
+	private Player _owner;
+	
 	private int _count;
 	private int _initCount;
 	private int _time;
@@ -171,6 +174,7 @@ public class Item extends WorldObject
 			return;
 		}
 		
+		_owner = null;
 		_ownerId = ownerId;
 		_storedInDb = false;
 	}
@@ -1072,6 +1076,11 @@ public class Item extends WorldObject
 		{
 			ItemsOnGroundManager.getInstance().save(this);
 		}
+		
+		if ((dropper != null) && dropper.isPlayer())
+		{
+			_owner = null;
+		}
 	}
 	
 	/**
@@ -1368,5 +1377,15 @@ public class Item extends WorldObject
 	public boolean isItem()
 	{
 		return true;
+	}
+	
+	@Override
+	public Player getActingPlayer()
+	{
+		if ((_owner == null) && (_ownerId != 0))
+		{
+			_owner = World.getInstance().getPlayer(_ownerId);
+		}
+		return _owner;
 	}
 }

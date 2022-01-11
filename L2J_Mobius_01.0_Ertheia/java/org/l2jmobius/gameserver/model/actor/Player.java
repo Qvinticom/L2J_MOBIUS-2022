@@ -7352,7 +7352,7 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * @return True if the Player is on line.
+	 * @return True if the Player is online.
 	 */
 	public boolean isOnline()
 	{

@@ -200,7 +200,6 @@ public class OfflineTraderTable
 					client.setPlayer(player);
 					client.setAccountName(player.getAccountName());
 					player.setClient(client);
-					player.setOfflineMode(true);
 					player.setOnlineStatus(false);
 					player.setOfflineStartTime(time);
 					if (Config.OFFLINE_SLEEP_EFFECT)
