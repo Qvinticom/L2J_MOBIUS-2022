@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.AgathionData;
 import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.TradeItem;
@@ -40,10 +41,13 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemAd
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDestroy;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemDrop;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemTransfer;
+import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
+import org.l2jmobius.gameserver.model.skill.SkillConditionScope;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -1009,6 +1013,43 @@ public class PlayerInventory extends Inventory
 			if (item.isEquipped())
 			{
 				item.applySpecialAbilities();
+				
+				if (((item.getLocationSlot() >= Inventory.PAPERDOLL_AGATHION1) && (item.getLocationSlot() <= Inventory.PAPERDOLL_AGATHION5)))
+				{
+					final AgathionSkillHolder agathionSkills = AgathionData.getInstance().getSkills(item.getId());
+					if (agathionSkills != null)
+					{
+						// Remove old skills.
+						for (SkillHolder holder : agathionSkills.getMainSkills(item.getEnchantLevel()))
+						{
+							_owner.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+						}
+						for (SkillHolder holder : agathionSkills.getSubSkills(item.getEnchantLevel()))
+						{
+							_owner.removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+						}
+						// Add new skills.
+						if (item.getLocationSlot() == Inventory.PAPERDOLL_AGATHION1)
+						{
+							for (SkillHolder holder : agathionSkills.getMainSkills(item.getEnchantLevel()))
+							{
+								if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, _owner, _owner))
+								{
+									continue;
+								}
+								_owner.addSkill(holder.getSkill(), false);
+							}
+						}
+						for (SkillHolder holder : agathionSkills.getSubSkills(item.getEnchantLevel()))
+						{
+							if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, _owner, _owner))
+							{
+								continue;
+							}
+							_owner.addSkill(holder.getSkill(), false);
+						}
+					}
+				}
 			}
 		}
 	}
