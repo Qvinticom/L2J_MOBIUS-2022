@@ -668,7 +668,6 @@
 																			</xs:complexType>
 																		</xs:element>
 																	</xs:sequence>
-																	<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="mode">
@@ -1113,12 +1112,8 @@
 															<xs:element name="pAccuracyAmount" type="xs:decimal" />
 															<xs:element name="pAccuracyMode" type="xs:string" />
 															<xs:element name="hpPercent" type="xs:unsignedByte" />
-															<xs:element name="mpPercent" type="xs:unsignedByte" />
-															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="attribute" type="xs:string" />
 															<xs:element name="attackerType" type="xs:string" />
-															<xs:element name="minAttackerLevel" type="xs:unsignedByte" />
-															<xs:element name="maxAttackerLevel" type="xs:unsignedByte" />
 															<xs:element name="minDamage">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -2068,6 +2063,8 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="mpPercent" type="xs:unsignedByte" />
+															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="FIRE" type="xs:byte" />
 															<xs:element name="hp" type="xs:unsignedByte" />
 															<xs:element name="mp" type="xs:unsignedByte" />
@@ -2095,6 +2092,7 @@
 															<xs:element name="skills" type="xs:string" />
 															<xs:element name="isSummonSpawn" type="xs:boolean" />
 															<xs:element name="randomOffset" type="xs:unsignedByte" />
+															<xs:element name="percentTo" type="xs:unsignedByte" />
 															<xs:element name="debuffModifier" type="xs:decimal" />
 															<xs:element name="HATE">
 																<xs:complexType mixed="true">
@@ -2247,45 +2245,47 @@
 											<xs:element maxOccurs="unbounded" name="condition">
 												<xs:complexType>
 													<xs:sequence minOccurs="0">
-														<xs:element minOccurs="0" name="type" type="xs:string" />
-														<xs:element minOccurs="0" name="level" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="hasAbnormal" type="xs:boolean" />
-														<xs:element minOccurs="0" name="alignment" type="xs:string" />
-														<xs:element minOccurs="0" name="amount" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="percentType" type="xs:string" />
-														<xs:element minOccurs="0" name="skillIds">
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-														<xs:element minOccurs="0" name="classIds">
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element maxOccurs="unbounded" name="item" type="xs:string" />
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-														<xs:element minOccurs="0" name="armorType">
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="item" type="xs:string" />
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-														<xs:element minOccurs="0" name="minLevel" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="maxLevel" type="xs:unsignedByte" />
-														<xs:element minOccurs="0" name="affectType" type="xs:string" />
-														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
-														<xs:element minOccurs="0" name="includeMe" type="xs:boolean" />
-														<xs:element minOccurs="0" name="weaponType">
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element maxOccurs="unbounded" name="item" type="xs:string" />
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
+														<xs:choice maxOccurs="unbounded">
+															<xs:element name="classIds">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="item" type="xs:string" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="affectType" type="xs:string" />
+															<xs:element name="isWithin" type="xs:boolean" />
+															<xs:element name="armorType">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="item" type="xs:string" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="minLevel" type="xs:unsignedByte" />
+															<xs:element name="maxLevel" type="xs:unsignedByte" />
+															<xs:element name="includeMe" type="xs:boolean" />
+															<xs:element name="weaponType">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="item" type="xs:string" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="skillIds">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedShort" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="amount" type="xs:unsignedByte" />
+															<xs:element name="percentType" type="xs:string" />
+															<xs:element name="alignment" type="xs:string" />
+															<xs:element name="type" type="xs:string" />
+															<xs:element name="level" type="xs:unsignedByte" />
+															<xs:element name="hasAbnormal" type="xs:boolean" />
+														</xs:choice>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 												</xs:complexType>

@@ -2015,6 +2015,7 @@
 															<xs:element name="replacementSkillId" type="xs:unsignedShort" />
 															<xs:element name="isSummonSpawn" type="xs:boolean" />
 															<xs:element name="randomOffset" type="xs:unsignedByte" />
+															<xs:element name="percentTo" type="xs:unsignedByte" />
 															<xs:element name="debuffModifier" type="xs:decimal" />
 															<xs:element name="HATE">
 																<xs:complexType mixed="true">

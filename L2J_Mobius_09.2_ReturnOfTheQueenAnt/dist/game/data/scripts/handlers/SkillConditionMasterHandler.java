@@ -54,6 +54,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("ConsumeBody", ConsumeBodySkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EnergySaved", EnergySavedSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipArmor", EquipArmorSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("EquippedCloakEnchant", EquippedCloakEnchantSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipShield", EquipShieldSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipSigil", EquipSigilSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipWeapon", EquipWeaponSkillCondition::new);
