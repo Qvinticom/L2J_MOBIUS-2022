@@ -356,7 +356,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.VISUAL_STATE))
 		{
-			packet.writeD(_statusMask);
+			packet.writeC(_statusMask);
 		}
 		if (containsMask(NpcInfoType.ABNORMALS))
 		{
