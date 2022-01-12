@@ -2406,7 +2406,7 @@
 		<!-- Attribute Attack increased when upgraded -->
 		<icon>icon.artifact_b_attribute_att_up</icon>
 		<operateType>P</operateType>
-		<effects>		
+		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>
 					<value level="1">0</value>
@@ -2720,7 +2720,7 @@
 					<value level="8">9</value>
 					<value level="9">11</value>
 					<value level="10">13</value>
-					<value level="11">15</value>				
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2736,7 +2736,7 @@
 					<value level="8">9</value>
 					<value level="9">11</value>
 					<value level="10">13</value>
-					<value level="11">15</value>				
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2752,7 +2752,7 @@
 					<value level="8">9</value>
 					<value level="9">11</value>
 					<value level="10">13</value>
-					<value level="11">15</value>				
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2768,7 +2768,7 @@
 					<value level="8">9</value>
 					<value level="9">11</value>
 					<value level="10">13</value>
-					<value level="11">15</value>				
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2784,7 +2784,7 @@
 					<value level="8">9</value>
 					<value level="9">11</value>
 					<value level="10">13</value>
-					<value level="11">15</value>				
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2800,7 +2800,7 @@
 					<value level="8">9</value>
 					<value level="9">11</value>
 					<value level="10">13</value>
-					<value level="11">15</value>				
+					<value level="11">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2810,7 +2810,7 @@
 		<!-- Debuff Resistance increased when upgraded. -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
-		<effects>		
+		<effects>
 			<effect name="ResistAbnormalByCategory">
 				<amount>
 					<value level="1">0</value>
@@ -2823,7 +2823,7 @@
 					<value level="8">-11</value>
 					<value level="9">-14</value>
 					<value level="10">-17</value>
-					<value level="11">-20</value>				
+					<value level="11">-20</value>
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
@@ -3323,7 +3323,7 @@
 		<!-- Debuff Resistance increased when upgraded. -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
-		<effects>		
+		<effects>
 			<effect name="ResistAbnormalByCategory">
 				<amount>
 					<value level="1">0</value>
@@ -3427,7 +3427,7 @@
 					<value level="7">2690</value>
 					<value level="8">3140</value>
 					<value level="9">3590</value>
-					<value level="10">4040</value>				
+					<value level="10">4040</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3442,7 +3442,7 @@
 					<value level="7">1748</value>
 					<value level="8">2042</value>
 					<value level="9">2334</value>
-					<value level="10">2626</value>				
+					<value level="10">2626</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3457,7 +3457,7 @@
 					<value level="7">90</value>
 					<value level="8">100</value>
 					<value level="9">120</value>
-					<value level="10">150</value>				
+					<value level="10">150</value>
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>

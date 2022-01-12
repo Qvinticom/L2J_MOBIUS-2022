@@ -526,7 +526,7 @@
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
-		</effects>		
+		</effects>
 	</skill>
 	<skill id="32841" toLevel="1" name="Fantasia Harmony - PA">
 		<!-- For PA. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
@@ -1321,7 +1321,7 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-	 		<effect name="PAtk">
+			<effect name="PAtk">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1345,11 +1345,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-		 	<effect name="MaxHp">
+			<effect name="MaxHp">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-		 	<effect name="PhysicalDefence">
+			<effect name="PhysicalDefence">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>

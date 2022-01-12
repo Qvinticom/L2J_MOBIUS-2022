@@ -75,7 +75,7 @@
 		</effects>
 	</skill>
 	<skill id="30701" toLevel="2" name="Intermediate Weapon Mastery">
-		<!-- P. Atk. +15%, additional P. Atk. +124, Atk. Spd +10%, P. Accuracy +5 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +1. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->		<icon>icon.skill10251</icon>
+		<!-- P. Atk. +15%, additional P. Atk. +124, Atk. Spd +10%, P. Accuracy +5 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +1. Depending on your STR, the Cooldown resets or the duration increases by 2 times. --><icon>icon.skill10251</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -3535,7 +3535,7 @@
 			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
-				<weaponType>				
+				<weaponType>
 					<item>SWORD</item>
 					<item>DUALBLUNT</item>
 					<item>POLE</item>

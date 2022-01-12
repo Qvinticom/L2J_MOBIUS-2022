@@ -404,7 +404,7 @@
 		</stats>
 		<skills>
 			<skill id="50370" level="1" /> <!-- Aden's Sword -->
-		</skills>	
+		</skills>
 	</item>
 	<item id="93029" name="Aden Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
@@ -460,7 +460,7 @@
 		</stats>
 		<skills>
 			<skill id="50372" level="1" /> <!-- Aden's Bow -->
-		</skills>	
+		</skills>
 	</item>
 	<item id="93031" name="Aden Club" type="Weapon">
 		<set name="icon" val="icon.weapon_war_pick_i00" />
@@ -515,7 +515,7 @@
 		</stats>
 		<skills>
 			<skill id="50374" level="1" /> <!-- Aden's Two-handed Sword -->
-		</skills>		
+		</skills>
 	</item>
 	<item id="93033" name="Two-Handed Blunt Weapon of Aden" type="Weapon">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
@@ -544,7 +544,7 @@
 		</stats>
 		<skills>
 			<skill id="50375" level="1" /> <!-- Aden's Two-handed Blunt Weapon -->
-		</skills>	
+		</skills>
 	</item>
 	<item id="93034" name="Aden Spear" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
@@ -572,7 +572,7 @@
 		<skills>
 			<skill id="50376" level="1" /> <!-- Aden's Spear -->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-		</skills>	
+		</skills>
 	</item>
 	<item id="93035" name="Aden Fist" type="Weapon">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
@@ -600,7 +600,7 @@
 		</stats>
 		<skills>
 			<skill id="50377" level="1" /> <!-- Aden's Fists -->
-		</skills>	
+		</skills>
 	</item>
 	<item id="93036" name="Aden Rapier" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
@@ -627,7 +627,7 @@
 		</stats>
 		<skills>
 			<skill id="50378" level="1" /> <!-- Aden's Rapier -->
-		</skills>		
+		</skills>
 	</item>
 	<item id="93037" name="Aden Ancient Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
@@ -654,7 +654,7 @@
 		</stats>
 		<skills>
 			<skill id="50379" level="1" /> <!-- Aden's Ancient Sword -->
-		</skills>	
+		</skills>
 	</item>
 	<item id="93038" name="Scroll: Enchant Aden Weapon" type="EtcItem">
 		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. Only for Aden weapons</font>. <font color=ff6666>Max enchant value: +4</font> -->
@@ -746,7 +746,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
+		<set name="etcitem_type" val="ENCHT_AM" /> <!-- BLESS_ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
@@ -776,7 +776,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
+		<set name="etcitem_type" val="ENCHT_AM" /> <!-- BLESS_ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
@@ -793,7 +793,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
+		<set name="etcitem_type" val="ENCHT_AM" /> <!-- BLESS_ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->

@@ -516,7 +516,7 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-		</effects>		
+		</effects>
 	</skill>
 	<skill id="32841" toLevel="1" name="Fantasia Harmony - PC Cafe">
 		<!-- For 1 h., P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +1 h.0, Shield Def. +1 h.1, Skill Cooldown -1 h.2, All Skills MP Consumption -1 h.3. PC Cafe only. -->
@@ -1312,7 +1312,7 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-	 		<effect name="PAtk">
+			<effect name="PAtk">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1336,11 +1336,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-		 	<effect name="MaxHp">
+			<effect name="MaxHp">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-		 	<effect name="PhysicalDefence">
+			<effect name="PhysicalDefence">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>

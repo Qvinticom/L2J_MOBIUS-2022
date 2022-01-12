@@ -507,7 +507,6 @@
 					<value level="3">50</value>
 					<value level="4">80</value>
 				</pAtkSpeedAmount>
-				<pAtkSpeedMode></pAtkSpeedMode>
 				<pAtkAmount>
 					<value level="1">40</value>
 					<value level="2">50</value>
@@ -926,7 +925,7 @@
 				<allowWeapons>BLUNT,POLE</allowWeapons>
 				<skillId>1616</skillId> <!-- Physical Damage -->
 				<skillLevel>1</skillLevel>
-			</effect>						
+			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
@@ -946,7 +945,7 @@
 				<allowWeapons>BLUNT,POLE</allowWeapons>
 				<skillId>1616</skillId> <!-- Physical Damage -->
 				<skillLevel>2</skillLevel>
-			</effect>						
+			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>

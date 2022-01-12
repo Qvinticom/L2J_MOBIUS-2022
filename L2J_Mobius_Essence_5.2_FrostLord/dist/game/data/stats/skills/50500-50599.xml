@@ -1542,7 +1542,7 @@
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-			  <amount>
+			<amount>
 				<value level="1">1</value>
 				<value level="2">1</value>
 				<value level="3">1</value>
@@ -1633,33 +1633,33 @@
 			</effect>
 			<effect name="StatUp">
 				<amount>
-				<value level="1">1</value>
-				<value level="2">1</value>
-				<value level="3">1</value>
-				<value level="4">1</value>
-				<value level="5">2</value>
-				<value level="6">3</value>
-				<value level="7">4</value>
-				<value level="8">5</value>
-				<value level="9">6</value>
-				<value level="10">7</value>
-				<value level="11">12</value>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">5</value>
+					<value level="9">6</value>
+					<value level="10">7</value>
+					<value level="11">12</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-			  	<amount>
-				<value level="1">1</value>
-				<value level="2">1</value>
-				<value level="3">1</value>
-				<value level="4">1</value>
-				<value level="5">2</value>
-				<value level="6">3</value>
-				<value level="7">4</value>
-				<value level="8">5</value>
-				<value level="9">6</value>
-				<value level="10">7</value>
-				<value level="11">12</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">5</value>
+					<value level="9">6</value>
+					<value level="10">7</value>
+					<value level="11">12</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -1738,7 +1738,7 @@
 				</skillLevel>
 			</effect>
 			<effect name="StatUp">
-			  <amount>
+			<amount>
 				<value level="1">1</value>
 				<value level="2">1</value>
 				<value level="3">1</value>
@@ -1754,7 +1754,7 @@
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-			 <amount>
+			<amount>
 				<value level="1">1</value>
 				<value level="2">1</value>
 				<value level="3">1</value>
@@ -2459,7 +2459,7 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				 <chance>
+				<chance>
 					<value level="1">2</value>
 					<value level="2">0</value>
 				</chance>

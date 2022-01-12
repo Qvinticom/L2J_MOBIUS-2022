@@ -208,7 +208,7 @@
 	</skill>
 	<skill id="45413" toLevel="1" name="Titan Champion">
 		<!-- P. Atk. $s1 P. Critical Rate $s2 P. Critical Damage $s3 P. Skill Critical Rate $s4 P. Skill Critical Damage $s5 Max HP $s5 Speed $s6 Consumes $s7 Spirit Ore. -->
-		<icon>icon.champion_of_titan</icon>	
+		<icon>icon.champion_of_titan</icon>
 		<effectPoint>100</effectPoint>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -223,12 +223,12 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>		
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
 				<amount>20</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 			<effect name="CriticalRate">
 				<amount>100</amount>
 				<mode>DIFF</mode>
@@ -292,7 +292,7 @@
 				<pAtkMode>PER</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="45415" toLevel="1" name="Demolition Impact">

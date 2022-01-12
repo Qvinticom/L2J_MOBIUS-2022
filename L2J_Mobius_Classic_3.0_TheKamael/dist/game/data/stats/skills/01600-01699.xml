@@ -869,7 +869,7 @@
 				<allowWeapons>BLUNT,POLE</allowWeapons>
 				<skillId>1616</skillId>
 				<skillLevel>1</skillLevel>
-			</effect>						
+			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
@@ -889,7 +889,7 @@
 				<allowWeapons>BLUNT,POLE</allowWeapons>
 				<skillId>1616</skillId>
 				<skillLevel>2</skillLevel>
-			</effect>						
+			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
@@ -1217,8 +1217,7 @@
 		</effects>
 	</skill>
 	<skill id="1624" toLevel="4" name="Unbreakable Sonic">
-		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1. The target is engulfed by Momentum.
-			 Damage received -$s2, and becomes unable to use skills or move. Requires a dual sword. Requires Momentum Stage 5 recharge. -->
+		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1. The target is engulfed by Momentum. Damage received -$s2, and becomes unable to use skills or move. Requires a dual sword. Requires Momentum Stage 5 recharge. -->
 		<icon>icon.skill1624</icon>
 		<abnormalLevel>
 			<value level="1">10</value>

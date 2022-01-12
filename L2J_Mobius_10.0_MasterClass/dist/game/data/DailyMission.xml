@@ -1336,7 +1336,7 @@
 	<reward id="4112" name="Hunting in the Corroded Fields" requiredCompletion="900" isOneTime="false">
 		Kill 900 monsters in the Corroded Fields.
 		<handler name="monster">
-		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="ids"></param> TODO: Add correct monster ids. 
 			<param name="minLevel">100</param>
 			<param name="maxLevel">255</param>
 		</handler>
@@ -1349,7 +1349,7 @@
 	<reward id="4113" name="Great Hunt" requiredCompletion="1800" isOneTime="false">
 		Fight fire with fire! Kill 1800 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.)
 		<handler name="useitem">
-		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="ids"></param> TODO: Add correct monster ids. 
 			<param name="minLevel">105</param>
 			<param name="maxLevel">255</param>
 		</handler>
@@ -1362,7 +1362,7 @@
 	<reward id="4114" name="Great Hunt in Group Instance Zones" requiredCompletion="3" isOneTime="false">
 		Fight fire with fire! Defeat any of the bosses in the following group instance zones of any difficulty level 3 times: Crystal Prison (Baylor), Nightmare Kamaloka, Ashen Shadow Camp, Krofin's Nest
 		<handler name="useitem">
-		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="ids"></param> TODO: Add correct monster ids. 
 			<param name="minLevel">105</param>
 			<param name="maxLevel">255</param>
 		</handler>

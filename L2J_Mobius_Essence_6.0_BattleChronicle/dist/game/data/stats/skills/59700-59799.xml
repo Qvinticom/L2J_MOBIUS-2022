@@ -584,9 +584,9 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
- 	<skill id="59731" toLevel="1" name="XP Bonus Rune">
- 		<!-- Acquired XP/ SP +150%. -->
- 		<icon>icon.skill0000</icon>
+	<skill id="59731" toLevel="1" name="XP Bonus Rune">
+		<!-- Acquired XP/ SP +150%. -->
+		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
@@ -599,7 +599,7 @@
 				<amount>150</amount>
 			</effect>
 		</effects>
- 	</skill>
+	</skill>
 	<skill id="59732" toLevel="1" name="+3 ~ +8 Talisman/ Belt Coupon Box">
 		<icon>icon.bm_gold_lure_box</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
