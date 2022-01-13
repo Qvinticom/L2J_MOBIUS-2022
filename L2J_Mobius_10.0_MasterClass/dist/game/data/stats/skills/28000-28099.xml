@@ -142,6 +142,7 @@
 		<activateRate>100</activateRate>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<trait>DERANGEMENT</trait>
@@ -210,7 +211,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>10</abnormalTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -365,6 +368,7 @@
 				<CHANGEBODY>100</CHANGEBODY>
 				<PARALYZE>100</PARALYZE>
 				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
 				<KNOCKBACK>100</KNOCKBACK>
 				<KNOCKDOWN>100</KNOCKDOWN>
 				<AIRBIND>100</AIRBIND>
