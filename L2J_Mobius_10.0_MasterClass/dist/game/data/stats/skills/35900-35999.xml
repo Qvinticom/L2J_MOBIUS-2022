@@ -969,7 +969,138 @@
 	<skill id="35958" toLevel="5" name="Enchant Effect: +6 Blessed Exalted Light Armor">
 		<!-- Increases set effects. M. Def. +$s1, P. Evasion +$s2, MP Recovery Rate +$s3 while standing/ sitting, Debuff Resistance +$s4. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>42</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>5</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>5</value>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">3423</value>
+					<value level="3">3423</value>
+					<value level="4">3423</value>
+					<value level="5">3423</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-7</value>
+					<value level="4">-7</value>
+					<value level="5">-7</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</CROSSBOW>
+				<TWOHANDCROSSBOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</TWOHANDCROSSBOW>
+				<DAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</DUALDAGGER>
+			</effect>
+			<effect name="RealDamageResist">
+				<damage>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</damage>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35959" toLevel="5" name="Enchant Effect: +6 Blessed Exalted Robe">
 		<!-- Increases set effects. P. Def. +$s1, MP Recovery Rate while standing/ sitting +$s2, Weight limit +$s3. -->
@@ -1580,128 +1711,496 @@
 		</effects>
 	</skill>
 	<skill id="35975" toLevel="1" name="Tower of Insolence Collection 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Damage +1%, received damage -1%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-1</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-1</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35976" toLevel="1" name="Tower of Insolence Collection 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Damage +1%, received damage -1%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-1</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-1</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35977" toLevel="1" name="Tower of Insolence Collection 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Attack/ Resistance +30 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35978" toLevel="1" name="Tower of Insolence Collection 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Attack/ Resistance +30 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35979" toLevel="1" name="Collection_0407">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Vitality bonus +10%, P. Critical Rate, P. Skill Critical Rate and M. Skill Critical Rate +10%, Critical Damage for basic attacks and P./ M. Skill Critical Damage +5%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>0.7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillMasteryRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35980" toLevel="1" name="Collection_0526_Enhanced Krishna Buster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Power of basic attacks and P./ M. skills +2% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage"> <!-- TO DO: Add Power of basic attacks stat -->
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35981" toLevel="1" name="Collection_0526_Enhanced Krishna Retributer">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Power of basic attacks and P./ M. skills +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage"> <!-- TO DO: Add Power of basic attacks stat -->
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35982" toLevel="1" name="Collection_0526_Enhanced Krishna Cutter">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Critical Damage for basic attacks and P./ M. Skill Critical Damage +2% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35983" toLevel="1" name="Collection_0526_Enhanced Krishna Stormer">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Critical Damage for basic attacks and P./ M. Skill Critical Damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35984" toLevel="1" name="Collection_0526_Crystal of Determination">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attribute Resistance +20 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35985" toLevel="1" name="Collection_0526_Enhanced Krishna Guardian">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received P. Skill Critical Rate -3.5%, received P. Skill Critical Damage -3.5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>-3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35986" toLevel="1" name="Collection_0526_Enhanced Krishna Dual Swords">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received Critical Rate from basic attacks -3.5%, received Critical Damage from basic attacks -3.5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>-3.5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35987" toLevel="1" name="Collection_0526_Enhanced Krishna Avenger">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received M. Skill Critical Rate -3.5%, received M. Skill Critical Damage -3.5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceMagicCriticalDamage">
+			<amount>-3.5</amount>
+			<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>-3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35988" toLevel="1" name="Collection_0526_Enhanced Krishna Shaper">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Critical Rate +3%, Critical Damage for basic attacks +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35989" toLevel="1" name="Collection_0526_Enhanced Krishna Caster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Critical Rate +3%, M. Skill Critical Damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35990" toLevel="1" name="Collection_0526_Enhanced Krishna Thrower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Skill Critical Rate +3%, P. Skill Critical Damage +1% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35991" toLevel="1" name="Collection_0526_Enhanced Krishna Fighter">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Backstab damage +3.5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamagePosition">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+				<position>BACK</position>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35992" toLevel="1" name="Collection_0526_Enhanced Krishna Buster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Skill Mastery Rate +5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillMasteryRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35993" toLevel="1" name="Collection_0526_Enhanced Krishna Caster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Damage to immobilized targets +3.5%] -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>TARGET</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ImmobileDamageBonus">
+				<amount>3.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35994" toLevel="1" name="Collection_0526_Helios Shaper">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Dagger Resistance +2% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<DAGGER>2</DAGGER>
+				<DUALDAGGER>2</DUALDAGGER>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35995" toLevel="1" name="Collection_0526_Helios Cutter">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Sword Resistance +2% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<DUAL>2</DUAL>
+				<SWORD>2</SWORD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35996" toLevel="1" name="Collection_0526_Helios Buster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received. M. damage -2% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35997" toLevel="1" name="Collection_0526_Helios Fighter">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Fixed Damage Resistance +3% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="RealDamageResist">
+				<damage>3</damage>>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35998" toLevel="1" name="Collection_0526_Helios Dual Swords">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bow/ Crossbow Resistance +2% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>2</BOW>
+				<CROSSBOW>2</CROSSBOW>
+				<TWOHANDCROSSBOW>2</TWOHANDCROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35999" toLevel="1" name="Collection_0526_Helios Guardian">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. +0.5% -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>0.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>
