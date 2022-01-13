@@ -974,7 +974,138 @@
 	<skill id="35959" toLevel="5" name="Enchant Effect: +6 Blessed Exalted Robe">
 		<!-- Increases set effects. P. Def. +$s1, MP Recovery Rate while standing/ sitting +$s2, Weight limit +$s3. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>42</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>5</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>5</value>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">3423</value>
+					<value level="3">3423</value>
+					<value level="4">3423</value>
+					<value level="5">3423</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-7</value>
+					<value level="4">-7</value>
+					<value level="5">-7</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</CROSSBOW>
+				<TWOHANDCROSSBOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</TWOHANDCROSSBOW>
+				<DAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</DUALDAGGER>
+			</effect>
+			<effect name="RealDamageResist">
+				<damage>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</damage>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35960" toLevel="1" name="PA Cheering Bonus">
 		<!-- Attribute Attack/ Resistance +30, Vitality bonus +5%. -->
