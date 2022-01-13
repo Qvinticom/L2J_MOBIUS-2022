@@ -1,6 +1,6 @@
 L2J-Mobius Master Class
-Client: https://drive.google.com/u/0/uc?id=1wyjR4gvaICOzNypE4uoxgZHzQyp37d6E&export=download
-System: https://mega.nz/file/x0lHSaYA#ihsaJiur93qLlqImessY5Ca6lPEKmbHqgwvXGBPGTdA
+Client: https://drive.google.com/u/0/uc?id=1_Z4eK_0T8SomK_BAnYWinkiECOztVYOw&export=download
+System: https://mega.nz/file/ks0h3KBD#lRbvF39DyT3cuXAdO5JMfaP6e4dFT6qhlxSb7_4B6uI
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe

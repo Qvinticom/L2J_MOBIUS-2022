@@ -1,6 +1,6 @@
 L2J-Mobius Battle Chronicle
-Client: https://drive.google.com/u/0/uc?id=1wyjR4gvaICOzNypE4uoxgZHzQyp37d6E&export=download
-System: https://mega.nz/file/BwtxGAxA#dpK01J5FNU6k5Ps_HyavDYe-1eZ-1ttUGbTu6VVAbkI
+Client: https://drive.google.com/u/0/uc?id=1_Z4eK_0T8SomK_BAnYWinkiECOztVYOw&export=download
+System: https://mega.nz/file/w08TmAjQ#VTEo135CJp718sA5sXzepoKxY0Gf9eaoHzW7yZS6gu4
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
 XAMPP: https://www.mediafire.com/file/hkehxpyjn81ybsw/xampp-windows-x64-8.0.11-2-VS16-installer.exe
