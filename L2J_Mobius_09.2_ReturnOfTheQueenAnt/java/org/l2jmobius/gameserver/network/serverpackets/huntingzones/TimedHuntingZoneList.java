@@ -70,7 +70,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 			packet.writeC(0); // bCanReEnter
 			packet.writeC(0); // bIsInZonePCCafeUserOnly
 			packet.writeC(0); // bIsPCCafeUser
-			packet.writeC(0); // bWorldInZone
+			packet.writeC(holder.useWorldPrefix() ? 1 : 0); // bWorldInZone
 		}
 		return true;
 	}

@@ -38,12 +38,13 @@ public class TimedHuntingZoneHolder
 	private final int _instanceId;
 	private final boolean _soloInstance;
 	private final boolean _weekly;
+	private final boolean _useWorldPrefix;
 	private final Location _enterLocation;
 	private final Location _exitLocation;
 	private final int _mapX;
 	private final int _mapY;
 	
-	public TimedHuntingZoneHolder(int id, String name, int initialTime, int maximumAddedTime, int resetDelay, int entryItemId, int entryFee, int minLevel, int maxLevel, int remainRefillTime, int refillTimeMax, int instanceId, boolean soloInstance, boolean weekly, Location enterLocation, Location exitLocation)
+	public TimedHuntingZoneHolder(int id, String name, int initialTime, int maximumAddedTime, int resetDelay, int entryItemId, int entryFee, int minLevel, int maxLevel, int remainRefillTime, int refillTimeMax, int instanceId, boolean soloInstance, boolean weekly, boolean useWorldPrefix, Location enterLocation, Location exitLocation)
 	{
 		_id = id;
 		_name = name;
@@ -59,6 +60,7 @@ public class TimedHuntingZoneHolder
 		_instanceId = instanceId;
 		_soloInstance = soloInstance;
 		_weekly = weekly;
+		_useWorldPrefix = useWorldPrefix;
 		_enterLocation = enterLocation;
 		_exitLocation = exitLocation;
 		_mapX = ((_enterLocation.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
@@ -133,6 +135,11 @@ public class TimedHuntingZoneHolder
 	public boolean isWeekly()
 	{
 		return _weekly;
+	}
+	
+	public boolean useWorldPrefix()
+	{
+		return _useWorldPrefix;
 	}
 	
 	public Location getEnterLocation()
