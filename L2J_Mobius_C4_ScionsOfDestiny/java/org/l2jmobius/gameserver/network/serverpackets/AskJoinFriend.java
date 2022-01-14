@@ -19,25 +19,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-/**
- * sample
- * <p>
- * 7d c1 b2 e0 4a 00 00 00 00
- * <p>
- * format cdd
- * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
- */
 public class AskJoinFriend implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	
-	/**
-	 * @param requestorName
-	 */
 	public AskJoinFriend(String requestorName)
 	{
 		_requestorName = requestorName;
-		// _itemDistribution = itemDistribution;
 	}
 	
 	@Override
@@ -46,6 +34,6 @@ public class AskJoinFriend implements IClientOutgoingPacket
 		OutgoingPackets.ASK_JOIN_FRIEND.writeId(packet);
 		packet.writeS(_requestorName);
 		packet.writeD(0);
-		return false;
+		return true;
 	}
 }

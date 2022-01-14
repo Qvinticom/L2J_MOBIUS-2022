@@ -11828,7 +11828,7 @@ public class Player extends Playable
 		
 		revalidateZone(true);
 		
-		notifyFriends(false);
+		notifyFriends(true);
 		
 		// Fix against exploit on anti-target on login
 		decayMe();
@@ -13086,7 +13086,7 @@ public class Player extends Playable
 			_chanceSkills = null;
 		}
 		
-		notifyFriends(true);
+		notifyFriends(false);
 		
 		// Remove WorldObject object from _allObjects of World
 		World.getInstance().removeObject(this);
