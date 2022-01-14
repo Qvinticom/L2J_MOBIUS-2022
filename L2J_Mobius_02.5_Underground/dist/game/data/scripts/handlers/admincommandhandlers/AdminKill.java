@@ -108,7 +108,7 @@ public class AdminKill implements IAdminCommandHandler
 			else
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj instanceof ControllableMob) || !obj.isCreature())
+				if ((obj == null) || (obj instanceof ControllableMob) || !obj.isCreature())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
