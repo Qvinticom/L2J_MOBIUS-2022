@@ -1236,7 +1236,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
+		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, shld1, attack.hasSoulshot(), true), sAtk);
 		
 		// Calculate and set the disable delay of the bow in function of the Attack Speed
 		_disableBowAttackEndTime = ((sAtk + reuse) / GameTimeTaskManager.MILLIS_IN_TICK) + GameTimeTaskManager.getInstance().getGameTicks();
@@ -1306,7 +1306,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
+		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, shld1, attack.hasSoulshot(), true), sAtk);
 		
 		// Calculate and set the disable delay of the bow in function of the Attack Speed
 		_disableBowAttackEndTime = ((sAtk + reuse) / GameTimeTaskManager.MILLIS_IN_TICK) + GameTimeTaskManager.getInstance().getGameTicks();
@@ -1377,17 +1377,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority for hit 1
-		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk / 2);
+		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, shld1, attack.hasSoulshot(), true), sAtk / 2);
 		
 		// Create a new hit task with Medium priority for hit 2 with a higher delay
-		ThreadPool.schedule(new HitTask(this, target, damage2, crit2, miss2, attack.hasSoulshot(), shld2), sAtk);
+		ThreadPool.schedule(new HitTask(this, target, damage2, crit2, miss2, shld2, attack.hasSoulshot(), false), sAtk);
 		
 		// Add those hits to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
 		attack.addHit(target, damage2, miss2, crit2, shld2);
 		
 		// Return true if hit 1 or hit 2 isn't missed
-		return (!miss1 || !miss2);
+		return !miss1 || !miss2;
 	}
 	
 	/**
@@ -1407,7 +1407,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private boolean doAttackHitByPole(Attack attack, Creature target, int sAtk)
 	{
 		// Perform the main target hit.
-		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk);
+		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk, true);
 		
 		// H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
 		int attackCountMax = (int) _stat.calcStat(Stat.ATTACK_COUNT_MAX, 1, null, null);
@@ -1459,7 +1459,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 				
 				// Launch a simple attack against the additional target.
-				hitted |= doAttackHitSimple(attack, obj, attackpercent, sAtk);
+				hitted |= doAttackHitSimple(attack, obj, attackpercent, sAtk, false);
 				attackpercent /= 1.15;
 				if (--attackCountMax <= 0)
 				{
@@ -1491,10 +1491,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	private boolean doAttackHitSimple(Attack attack, Creature target, int sAtk)
 	{
-		return doAttackHitSimple(attack, target, 100, sAtk);
+		return doAttackHitSimple(attack, target, 100, sAtk, true);
 	}
 	
-	private boolean doAttackHitSimple(Attack attack, Creature target, double attackpercent, int sAtk)
+	private boolean doAttackHitSimple(Attack attack, Creature target, double attackpercent, int sAtk, boolean rechargeShots)
 	{
 		int damage1 = 0;
 		byte shld1 = 0;
@@ -1521,7 +1521,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
+		ThreadPool.schedule(new HitTask(this, target, damage1, crit1, miss1, shld1, attack.hasSoulshot(), rechargeShots), sAtk);
 		
 		// Add this hit to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
@@ -4739,10 +4739,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param damageValue Number of HP to reduce
 	 * @param crit True if hit is critical
 	 * @param miss True if hit is missed
-	 * @param soulshot True if SoulShot are charged
 	 * @param shld True if shield is efficient
+	 * @param soulshot True if SoulShot are charged
+	 * @param rechargeShots True if SoulShots are re-charged
 	 */
-	public void onHitTimer(Creature target, int damageValue, boolean crit, boolean miss, boolean soulshot, byte shld)
+	public void onHitTimer(Creature target, int damageValue, boolean crit, boolean miss, byte shld, boolean soulshot, boolean rechargeShots)
 	{
 		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
 		// and send a Server->Client packet ActionFailed (if attacker is a Player)
@@ -4763,7 +4764,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			// Some times attack is processed but target die before the hit
 			// So we need to recharge shot for next attack
-			rechargeShots(true, false);
+			if (rechargeShots)
+			{
+				rechargeShots(true, false);
+			}
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -4914,14 +4918,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					}
 				}
 			}
+			
 			// Launch weapon onCritical Special ability effect if available
 			if (crit && (weapon != null))
 			{
 				weapon.castOnCriticalSkill(this, target);
 			}
 		}
+		
 		// Recharge any active auto-soulshot tasks for current creature.
-		rechargeShots(true, false);
+		if (rechargeShots)
+		{
+			rechargeShots(true, false);
+		}
 	}
 	
 	/**

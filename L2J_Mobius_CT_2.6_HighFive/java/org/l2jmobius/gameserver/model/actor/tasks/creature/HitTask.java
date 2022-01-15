@@ -38,8 +38,9 @@ public class HitTask implements Runnable
 	private final boolean _miss;
 	private final byte _shld;
 	private final boolean _soulshot;
+	private final boolean _rechargeShots;
 	
-	public HitTask(Creature creature, Creature target, int damage, boolean crit, boolean miss, boolean soulshot, byte shld)
+	public HitTask(Creature creature, Creature target, int damage, boolean crit, boolean miss, byte shld, boolean soulshot, boolean rechargeShots)
 	{
 		_creature = creature;
 		_hitTarget = target;
@@ -48,6 +49,7 @@ public class HitTask implements Runnable
 		_shld = shld;
 		_miss = miss;
 		_soulshot = soulshot;
+		_rechargeShots = rechargeShots;
 	}
 	
 	@Override
@@ -55,7 +57,7 @@ public class HitTask implements Runnable
 	{
 		if (_creature != null)
 		{
-			_creature.onHitTimer(_hitTarget, _damage, _crit, _miss, _soulshot, _shld);
+			_creature.onHitTimer(_hitTarget, _damage, _crit, _miss, _shld, _soulshot, _rechargeShots);
 		}
 	}
 }
