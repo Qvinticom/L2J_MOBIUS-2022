@@ -489,7 +489,9 @@ public class Raina extends AbstractNpcAI
 				
 				player.setActiveClass(player.getTotalSubClasses());
 				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NEW_SLOT_USED));
-				player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS);
+				sm.addItemName(player.getActiveClass());
+				player.sendPacket(sm);
 				player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
 				break;
 			}
@@ -553,7 +555,9 @@ public class Raina extends AbstractNpcAI
 					player.setActiveClass(classIndex);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
-					player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS);
+					sm.addItemName(player.getActiveClass());
+					player.sendPacket(sm);
 				}
 				break;
 			}
@@ -631,7 +635,9 @@ public class Raina extends AbstractNpcAI
 				{
 					player.setActiveClass(player.getTotalSubClasses());
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NEW_SLOT_USED));
-					player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS);
+					sm.addItemName(player.getActiveClass());
+					player.sendPacket(sm);
 					player.sendPacket(getNpcHtmlMessage(player, npc, "addSuccess.html"));
 					SkillTreeData.getInstance().cleanSkillUponChangeClass(player);
 					player.restoreDualSkills();

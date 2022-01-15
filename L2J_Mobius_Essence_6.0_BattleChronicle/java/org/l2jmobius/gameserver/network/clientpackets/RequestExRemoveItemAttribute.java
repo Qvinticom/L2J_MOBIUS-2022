@@ -94,7 +94,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				if (targetItem.isArmor())
 				{
 					sm.addAttribute(realElement.getClientId());
-					sm.addAttribute(realElement.getOpposite().getClientId());
 				}
 			}
 			else
