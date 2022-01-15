@@ -34,6 +34,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 {
 	private final Summon _summon;
 	private final Player _attacker;
+	private final long _relation;
 	private final int _value;
 	private final byte[] _masks = new byte[]
 	{
@@ -58,6 +59,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 	{
 		_summon = summon;
 		_attacker = attacker;
+		_relation = (attacker != null) && (summon.getOwner() != null) ? summon.getOwner().getRelation(attacker) : 0;
 		_title = (summon.getOwner() != null) && summon.getOwner().isOnline() ? summon.getOwner().getName() : "";
 		_value = value;
 		_abnormalVisualEffects = summon.getEffectList().getCurrentAbnormalVisualEffects();
@@ -217,7 +219,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.RELATIONS))
 		{
-			packet.writeQ(0);
+			packet.writeQ(_relation);
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{
