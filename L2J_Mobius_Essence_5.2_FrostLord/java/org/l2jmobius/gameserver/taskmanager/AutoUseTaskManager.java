@@ -85,7 +85,7 @@ public class AutoUseTaskManager implements Runnable
 				continue;
 			}
 			
-			final boolean isInPeaceZone = player.isInsideZone(ZoneId.PEACE);
+			final boolean isInPeaceZone = player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.SAYUNE);
 			
 			if (Config.ENABLE_AUTO_ITEM && !isInPeaceZone)
 			{
