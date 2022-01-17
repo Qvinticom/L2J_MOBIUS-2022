@@ -4,6 +4,18 @@
 	<pet id="1572" itemId="20919" index="2012">
 		<set name="sync_level" val="1" />
 		<set name="load" val="45540" />
+		<skills>
+			<skill minLevel="1" skillId="5190" skillLevel="6" />
+			<skill minLevel="1" skillId="5192" skillLevel="2" />
+			<skill minLevel="1" skillId="5193" skillLevel="3" />
+			<skill minLevel="1" skillId="5194" skillLevel="3" />
+			<skill minLevel="1" skillId="5587" skillLevel="3" />
+			<skill minLevel="1" skillId="5771" skillLevel="1" />
+			<skill minLevel="1" skillId="5749" skillLevel="1" /> <!-- Thunder Bolt -->
+			<skill minLevel="1" skillId="5750" skillLevel="1" /> <!-- Flash -->
+			<skill minLevel="1" skillId="5751" skillLevel="1" /> <!-- Lightning Wave -->
+			<skill minLevel="1" skillId="23168" skillLevel="1" /> <!-- Critical Seduction -->
+		</skills>
 		<stats>
 			<!-- plain retail stats - need recheck ingame -->
 			<stat level="1">

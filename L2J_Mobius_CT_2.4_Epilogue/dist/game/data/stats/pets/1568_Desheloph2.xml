@@ -4,6 +4,14 @@
 	<pet id="1568" itemId="20915" index="2008">
 		<set name="sync_level" val="1" />
 		<set name="load" val="45540" />
+		<skills>
+			<skill minLevel="1" skillId="5771" skillLevel="1" /> <!-- Buff Control -->
+			<skill minLevel="1" skillId="6046" skillLevel="1" /> <!-- Piercing Attack -->
+			<skill minLevel="1" skillId="6047" skillLevel="1" /> <!-- Spin Attack (Whirlwind) -->
+			<skill minLevel="1" skillId="6048" skillLevel="1" /> <!-- Impale (Lance Smash) -->
+			<skill minLevel="1" skillId="6049" skillLevel="1" /> <!-- Battle Cry -->
+			<skill minLevel="1" skillId="23168" skillLevel="1" /> <!-- Critical Seduction -->
+		</skills>
 		<stats>
 			<!-- plain retail stats - need recheck ingame -->
 			<stat level="1">

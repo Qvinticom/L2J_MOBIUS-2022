@@ -265,8 +265,12 @@
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="30" />
 		<set name="affectLimit" val="5-12" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="attributePower" val="20" />
 		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-975" />
+		<set name="effectRange" val="2000" />
 		<set name="fanRange" val="0,0,1500,60" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0100" />
@@ -277,15 +281,31 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="PhysicalAttack">
+				<param power="3553" />
+			</effect>
+			<effect name="Stun" />
+		</for>
 	</skill>
 	<skill id="5717" levels="1" name="Fire Breath">
+		<!-- High Five Confirmed -->
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="attributePower" val="20" />
+		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-650" />
+		<set name="effectRange" val="2000" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLevel" val="73" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack">
+				<param power="107" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5718" levels="1" name="Anger">
 		<!-- P. Def. is decreased and P. Atk. is greatly increased because of rage. -->
@@ -300,7 +320,13 @@
 		<set name="magicLevel" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="0.75" />
+				<mul stat="pAtk" val="1.50" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5719" levels="1" name="Kamabion Susceptibility">
 		<set name="abnormalLevel" val="1" />
@@ -761,16 +787,36 @@
 		</for>
 	</skill>
 	<skill id="5742" levels="5" name="Area Recharge - Per">
+		<!-- High Five Confirmed -->
+		<table name="#magicLvl">10 20 30 40 50</table>
+		<table name="#mpPerMaxPower">20 40 60 80 100</table>
 		<set name="effectPoint" val="100" />
-		<set name="magicLevel" val="10" />
+		<set name="magicLevel" val="#magicLvl" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ManaHealByLevel">
+				<param power="#mpPerMaxPower" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5743" levels="1" name="Area Full Recovery">
+		<!-- High Five Confirmed -->
 		<set name="effectPoint" val="100" />
 		<set name="magicLevel" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MaxCp">
+				<param amount="5000" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="100" />
+			</effect>
+			<effect name="ManaHealByLevel">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5744" levels="1" name="Invincible">
 		<!-- Temporarily invincible. -->
@@ -784,7 +830,15 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLevel" val="99" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Stun" />
+			<effect name="Invincible" />
+			<effect name="Buff">
+				<set stat="debuffImmunity" val="1" />
+				<sub stat="cancelVuln" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5745" levels="12" name="Death Blow">
 		<!-- Draws on your HP to summon your strength and unleash a punishing attack. Power 183. -->
@@ -882,7 +936,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="20000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5749" levels="12" name="Thunder Bolt">
 		<!-- Pours forth the power of thunder upon the enemy. Power 18. -->
@@ -1079,12 +1133,70 @@
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="castRange" val="900" />
 		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="1400" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLevel" val="99" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.03" />
+			</effect>
+			<effect name="Buff">
+				<add stat="rEvas" val="1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="critDmgPos" val="1.05">
+					<player behind="true" />
+				</mul>
+			</effect>
+			<effect name="Buff">
+				<mul stat="critRatePos" val="1.05">
+					<player behind="true" />
+				</mul>
+			</effect>
+			<effect name="Buff">
+				<add stat="accCombat" val="1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<add stat="mCritRate" val="1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.03" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.05" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="5" />
+				<param type="PER" />
+			</effect>
+			<effect name="ManaHealByLevel">
+				<param power="5" />
+				<param type="PER" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<add stat="absorbDam" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5763" levels="1" name="Wink">
 		<!-- See a summoned Agathion perform tricks. -->
@@ -1180,22 +1292,40 @@
 		</for>
 	</skill>
 	<skill id="5769" levels="12" name="not_used">
+		<!-- High Five Confirmed -->
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="418" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLevel" val="10" />
+		<set name="magicLevel" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="rEvas" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5770" levels="12" name="not_used">
+		<!-- High Five Confirmed -->
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="418" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLevel" val="10" />
+		<set name="magicLevel" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="rEvas" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5771" levels="1" name="Buff Control">
 		<!-- Limits to prevent a buff upon the master. -->
@@ -1266,7 +1396,59 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLevel" val="99" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<add stat="rEvas" val="2" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="critDmgPos" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="critRatePos" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<add stat="accCombat" val="2" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<add stat="mCritRate" val="1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.1" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="ManaHealByLevel">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.1" />
+			</effect>
+			<effect name="Buff">
+				<add stat="absorbDam" val="3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5776" levels="1" name="Raid Boss">
 		<!-- Lost Warden: Kamaloka - Leader of those who watch over the Labyrinth of the Abyss. He watches over those inside Kamaloka to make sure they properly perform their roles. -->
