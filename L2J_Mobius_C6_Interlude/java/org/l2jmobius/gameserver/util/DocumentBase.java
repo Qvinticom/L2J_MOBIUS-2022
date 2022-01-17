@@ -258,7 +258,7 @@ public abstract class DocumentBase
 		if (attrs.getNamedItem("time") != null)
 		{
 			time = Integer.decode(getValue(attrs.getNamedItem("time").getNodeValue(), template));
-			if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(((Skill) template).getId()))
+			if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(((Skill) template).getId()) && !((Skill) template).isToggle())
 			{
 				if (((Skill) template).getLevel() < 100)
 				{

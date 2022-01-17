@@ -237,7 +237,7 @@ public class Skill implements IIdentifiable
 		_abnormalLevel = set.getInt("abnormalLevel", 0);
 		_abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
 		int abnormalTime = set.getInt("abnormalTime", 0);
-		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id))
+		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id) && (_operateType != SkillOperateType.T))
 		{
 			if ((_level < 100) || (_level > 140))
 			{
@@ -248,7 +248,6 @@ public class Skill implements IIdentifiable
 				abnormalTime += Config.SKILL_DURATION_LIST.get(_id);
 			}
 		}
-		
 		_abnormalTime = abnormalTime;
 		_isAbnormalInstant = set.getBoolean("abnormalInstant", false);
 		parseAbnormalVisualEffect(set.getString("abnormalVisualEffect", null));
