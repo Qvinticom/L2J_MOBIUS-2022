@@ -30,7 +30,7 @@ public class SummonRequestHolder
 	public SummonRequestHolder(Player summoner)
 	{
 		_summoner = summoner;
-		_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
+		_location = summoner == null ? null : new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
 	}
 	
 	public Player getSummoner()

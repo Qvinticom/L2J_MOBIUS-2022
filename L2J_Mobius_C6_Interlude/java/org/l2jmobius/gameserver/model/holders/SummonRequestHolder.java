@@ -32,7 +32,7 @@ public class SummonRequestHolder
 	public void setTarget(Player summoner, Skill skill)
 	{
 		_summoner = summoner;
-		_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
+		_location = summoner == null ? null : new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
 		_skill = skill;
 	}
 	
