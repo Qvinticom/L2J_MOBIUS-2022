@@ -150,7 +150,6 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final int itemId = item.getItemId();
 		/*
 		 * Alt game - Karma punishment // SOE 736 Scroll of Escape 1538 Blessed Scroll of Escape 1829 Scroll of Escape: Clan Hall 1830 Scroll of Escape: Castle 3958 L2Day - Blessed Scroll of Escape 5858 Blessed Scroll of Escape: Clan Hall 5859 Blessed Scroll of Escape: Castle 6663 Scroll of Escape:
 		 * Orc Village 6664 Scroll of Escape: Silenos Village 7117 Scroll of Escape to Talking Island 7118 Scroll of Escape to Elven Village 7119 Scroll of Escape to Dark Elf Village 7120 Scroll of Escape to Orc Village 7121 Scroll of Escape to Dwarven Village 7122 Scroll of Escape to Gludin Village
@@ -159,6 +158,7 @@ public class UseItem implements IClientIncomingPacket
 		 * Island 7555 Scroll of Escape to Elven Village 7556 Scroll of Escape to Dark Elf Village 7557 Scroll of Escape to Orc Village 7558 Scroll of Escape to Dwarven Village 7559 Scroll of Escape to Giran Castle Town 7618 Scroll of Escape - Ketra Orc Village 7619 Scroll of Escape - Varka Silenos
 		 * Village 10129 Scroll of Escape : Fortress 10130 Blessed Scroll of Escape : Fortress
 		 */
+		final int itemId = item.getItemId();
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getKarma() > 0) && ((itemId == 736) || (itemId == 1538) || (itemId == 1829) || (itemId == 1830) || (itemId == 3958) || (itemId == 5858) || (itemId == 5859) || (itemId == 6663) || (itemId == 6664) || ((itemId >= 7117) && (itemId <= 7135)) || ((itemId >= 7554) && (itemId <= 7559)) || (itemId == 7618) || (itemId == 7619) || (itemId == 10129) || (itemId == 10130)))
 		{
 			return;
@@ -255,13 +255,6 @@ public class UseItem implements IClientIncomingPacket
 			}
 		}
 		
-		/*
-		 * //You can't equip Shield if you have specific weapon equiped, not retail Weapon curwep = activeChar.getActiveWeaponItem(); if(curwep != null) { if(curwep.getItemType() == WeaponType.DUAL && item.getItemType() == WeaponType.NONE) { activeChar.sendMessage("You are not allowed to do this.");
-		 * return; } else if(curwep.getItemType() == WeaponType.BOW && item.getItemType() == WeaponType.NONE) { activeChar.sendMessage("You are not allowed to do this."); return; } else if(curwep.getItemType() == WeaponType.BIGBLUNT && item.getItemType() == WeaponType.NONE) {
-		 * activeChar.sendMessage("You are not allowed to do this."); return; } else if(curwep.getItemType() == WeaponType.BIGSWORD && item.getItemType() == WeaponType.NONE) { activeChar.sendMessage("You are not allowed to do this."); return; } else if(curwep.getItemType() == WeaponType.POLE &&
-		 * item.getItemType() == WeaponType.NONE) { activeChar.sendMessage("You are not allowed to do this."); return; } else if(curwep.getItemType() == WeaponType.DUALFIST && item.getItemType() == WeaponType.NONE) { activeChar.sendMessage("You are not allowed to do this."); return; } }
-		 */
-		
 		// Char cannot use item when dead
 		if (player.isDead())
 		{
@@ -298,8 +291,6 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			int bodyPart = item.getItem().getBodyPart();
-			
 			// Like L2OFF you can't use equips while you are casting
 			if ((player.isCastingNow() || player.isCastingPotionNow() || player.isMounted()))
 			{
@@ -307,13 +298,8 @@ public class UseItem implements IClientIncomingPacket
 				return;
 			}
 			
-			// Like L2OFF, since c5 you can equip weapon
-			// Don't allow weapon/shield equipment if wearing formal wear
-			/*
-			 * if (activeChar.isWearingFormalWear() && (bodyPart == Item.SLOT_LR_HAND || bodyPart == Item.SLOT_L_HAND || bodyPart == Item.SLOT_R_HAND)) { SystemMessage sm = SystemMessageId.CANNOT_USE_ITEMS_SKILLS_WITH_FORMALWEAR); activeChar.sendPacket(sm); return; }
-			 */
-			
 			// Over enchant protection
+			int bodyPart = item.getItem().getBodyPart();
 			if (Config.PROTECTED_ENCHANT)
 			{
 				switch (bodyPart)
@@ -450,14 +436,7 @@ public class UseItem implements IClientIncomingPacket
 					sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_DISARMED);
 					sm.addItemName(itemId);
 				}
-				
 				player.sendPacket(sm);
-				
-				// Remove augementation bonus on unequipment
-				if (item.isAugmented())
-				{
-					item.getAugmentation().removeBonus(player);
-				}
 				
 				switch (item.getEquipSlot())
 				{
@@ -501,6 +480,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 				}
 				
+				// unEquipItem will call also the remove boni for augument
 				items = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart);
 			}
 			else
@@ -520,7 +500,7 @@ public class UseItem implements IClientIncomingPacket
 				final int tempBodyPart = item.getItem().getBodyPart();
 				Item tempItem = player.getInventory().getPaperdollItemByItemId(tempBodyPart);
 				
-				// remove augmentation stats for replaced items currently weapons only..
+				// remove augmentation stats for replaced items currently weapons only.
 				if ((tempItem != null) && tempItem.isAugmented())
 				{
 					tempItem.getAugmentation().removeBonus(player);
@@ -532,31 +512,31 @@ public class UseItem implements IClientIncomingPacket
 					// dont allow an item to replace a wear-item
 					return;
 				}
-				else if (tempBodyPart == 0x4000) // left+right hand equipment
+				else if (tempBodyPart == ItemTemplate.SLOT_LR_HAND)
 				{
 					// this may not remove left OR right hand equipment
-					tempItem = player.getInventory().getPaperdollItem(7);
+					tempItem = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 					if ((tempItem != null) && tempItem.isWear())
 					{
 						return;
 					}
 					
-					tempItem = player.getInventory().getPaperdollItem(8);
+					tempItem = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 					if ((tempItem != null) && tempItem.isWear())
 					{
 						return;
 					}
 				}
-				else if (tempBodyPart == 0x8000) // fullbody armor
+				else if (tempBodyPart == ItemTemplate.SLOT_FULL_ARMOR)
 				{
-					// this may not remove chest or leggins
-					tempItem = player.getInventory().getPaperdollItem(10);
+					// this may not remove chest or leggings
+					tempItem = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 					if ((tempItem != null) && tempItem.isWear())
 					{
 						return;
 					}
 					
-					tempItem = player.getInventory().getPaperdollItem(11);
+					tempItem = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 					if ((tempItem != null) && tempItem.isWear())
 					{
 						return;
@@ -564,7 +544,7 @@ public class UseItem implements IClientIncomingPacket
 				}
 				
 				// Left hand
-				tempItem = player.getInventory().getPaperdollItem(7);
+				tempItem = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 				// Elrokian Trap like L2OFF, remove skills
 				if ((tempItem != null) && (tempItem.getItemId() == 8763))
 				{
