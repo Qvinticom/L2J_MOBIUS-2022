@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Fisherman;
 import org.l2jmobius.gameserver.model.actor.instance.Merchant;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -139,10 +140,9 @@ public class RequestSellItem implements IClientIncomingPacket
 				return;
 			}
 			
-			Item item = player.checkItemManipulation(objectId, count, "sell");
-			
 			// Check Item
-			if ((item == null) || !item.getItem().isSellable())
+			final Item item = player.checkItemManipulation(objectId, count, "sell");
+			if ((item == null) || !item.getItem().isSellable() || (item.getItemLocation() != ItemLocation.INVENTORY))
 			{
 				continue;
 			}

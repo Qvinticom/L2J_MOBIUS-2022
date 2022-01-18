@@ -130,10 +130,17 @@ public class CastleWarehouse extends Folk
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
-		if (player.getActiveEnchantItem() != null)
+		if ((player.getActiveEnchantItem() != null) || (player.getActiveTradeList() != null))
 		{
 			LOGGER.info("Player " + player.getName() + " trying to use enchant exploit, ban this player!");
 			player.closeNetConnection();
+			return;
+		}
+		
+		if ((player.getPrivateStoreType() != 0) || player.isInStoreMode())
+		{
+			player.sendPacket(SystemMessageId.ITEMS_CANNOT_BE_DISCARDED_WHILE_IN_PRIVATE_STORE_STATUS);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

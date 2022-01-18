@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class SellListProcure implements IClientOutgoingPacket
@@ -46,7 +47,7 @@ public class SellListProcure implements IClientOutgoingPacket
 		for (CropProcure c : _procureList)
 		{
 			final Item item = _player.getInventory().getItemByItemId(c.getId());
-			if ((item != null) && (c.getAmount() > 0))
+			if ((item != null) && (c.getAmount() > 0) && (item.getItemLocation() == ItemLocation.INVENTORY))
 			{
 				_sellList.put(item, c.getAmount());
 			}

@@ -132,10 +132,12 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Set online status
 		player.setOnlineStatus(true);
-		
-		player.setRunning(); // running is default
-		player.standUp(); // standing is default
-		player.broadcastKarma(); // include UserInfo
+		// running is default
+		player.setRunning();
+		// standing is default
+		player.standUp();
+		// include UserInfo
+		player.broadcastKarma();
 		
 		// Engage and notify Partner
 		if (Config.ALLOW_WEDDING)
@@ -237,7 +239,7 @@ public class EnterWorld implements IClientIncomingPacket
 		player.getMacroses().sendUpdate();
 		
 		// Send packets info
-		player.sendPacket(new ClientSetTime()); // SetClientTime
+		player.sendPacket(new ClientSetTime());
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new HennaInfo(player));
 		player.sendPacket(new FriendList(player));
@@ -271,8 +273,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		PetitionManager.getInstance().checkPetitionMessages(player);
 		
-		// Send user info again .. just like the real client
-		// sendPacket(ui);
 		if ((player.getClanId() != 0) && (player.getClan() != null))
 		{
 			player.sendPacket(new PledgeShowMemberListAll(player.getClan(), player));

@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -132,7 +133,8 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if (player.getActiveTradeList() != null)
 		{
 			player.cancelActiveTrade();
-			player.sendMessage("Your trade canceled");
+			player.sendMessage("Your trade was cancelled.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -141,12 +143,27 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		{
 			player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.setActiveEnchantItem(null);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!player.isOnline())
 		{
 			player.setActiveEnchantItem(null);
+			return;
+		}
+		
+		if ((player.getPrivateStoreType() != 0) || player.isInStoreMode())
+		{
+			player.sendPacket(SystemMessageId.ITEMS_CANNOT_BE_DISCARDED_WHILE_IN_PRIVATE_STORE_STATUS);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if ((player.getActiveWarehouse() != null) || (player.getActiveTradeList() != null))
+		{
+			player.sendMessage("You can't enchant items when you got active warehouse or active trade.");
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

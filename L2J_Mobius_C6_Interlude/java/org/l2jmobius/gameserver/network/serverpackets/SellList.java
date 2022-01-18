@@ -23,6 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -41,6 +42,7 @@ public class SellList implements IClientOutgoingPacket
 		for (Item item : _player.getInventory().getItems())
 		{
 			if ((item != null) && !item.isEquipped() && // Not equipped
+				(item.getItemLocation() == ItemLocation.INVENTORY) && // exploit fix
 				item.getItem().isSellable() && // Item is sellable
 				(item.getItem().getItemId() != 57) && // Adena is not sellable
 				((_player.getPet() == null) || // Pet not summoned or

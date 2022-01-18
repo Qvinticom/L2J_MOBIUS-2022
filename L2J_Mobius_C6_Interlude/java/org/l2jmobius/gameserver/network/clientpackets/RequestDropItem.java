@@ -57,6 +57,12 @@ public class RequestDropItem implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		// Flood protect drop to avoid packet lag
+		if (!client.getFloodProtectors().canDropItem())
+		{
+			return;
+		}
+		
 		final Player player = client.getPlayer();
 		if ((player == null) || player.isDead())
 		{
@@ -73,12 +79,6 @@ public class RequestDropItem implements IClientIncomingPacket
 		if (player.getActiveEnchantItem() != null)
 		{
 			player.sendPacket(SystemMessage.sendString("You can't discard items during enchant."));
-			return;
-		}
-		
-		// Flood protect drop to avoid packet lag
-		if (!client.getFloodProtectors().canDropItem())
-		{
 			return;
 		}
 		
@@ -111,6 +111,12 @@ public class RequestDropItem implements IClientIncomingPacket
 		{
 			player.sendMessage("Drop item disabled for GM by config!");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		// Don't allow if it's flying
+		if (player.isFlying())
+		{
 			return;
 		}
 		
