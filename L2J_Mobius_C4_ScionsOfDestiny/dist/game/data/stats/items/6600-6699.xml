@@ -754,7 +754,7 @@
 		<set name="item_skill_lvl" val="1" />
 		<set name="onCrit_skill_id" val="3592" /> <!-- Dispell -->
 		<set name="onCrit_skill_lvl" val="1" />
-		<set name="onCrit_skill_chance" val="20" />
+		<set name="onCrit_skill_chance" val="100" />
 		<for>
 			<set val="297" order="0x08" stat="pAtk" />
 			<set val="137" order="0x08" stat="mAtk" />
@@ -764,8 +764,6 @@
 			<set val="325" order="0x08" stat="pAtkSpd" />
 			<enchant val="0" order="0x0C" stat="pAtk" />
 			<enchant val="0" order="0x0C" stat="mAtk" />
-			<skill onCrit="1" id="3592" lvl="1" chance="10" />
-			<!-- 10% chance to cancel each buff from target on a critical hit -->
 		</for>
 	</item>
 	<item id="6622" type="EtcItem" name="Secret Book of Giants">

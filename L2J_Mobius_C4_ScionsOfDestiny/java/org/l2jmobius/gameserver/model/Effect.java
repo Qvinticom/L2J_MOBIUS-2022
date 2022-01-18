@@ -102,7 +102,8 @@ public abstract class Effect
 		BLOCK_DEBUFF,
 		PREVENT_BUFF,
 		CLAN_GATE,
-		NEGATE
+		NEGATE,
+		HERO_CANCEL
 	}
 	
 	// member _effector is the instance of Creature that cast/used the spell/skill that is causing this effect. Do not confuse with the instance of Creature that is being affected by this effect.

@@ -1515,15 +1515,18 @@
 		</for>
 	</skill>
 	<skill id="3592" levels="1" name="Dispell">
-		<set name="bestowed" val="true" />
-		<set name="magicLevel" val="80" />
-		<set name="negateSkillTypes" val="BUFF" />
-		<set name="operateType" val="ACTIVE" />
-		<set name="power" val="80" />
-		<!-- Base Land Rate -->
-		<set name="skillType" val="CANCEL" />
-		<set name="target" val="ONE" />
-		<set name="negatePower" val="5" />
+		<set name="bestowed" val="true"/>
+		<set name="magicLvl" val="80"/>
+		<set name="operateType" val="ACTIVE"/>
+		<set name="power" val="80"/>
+		<set name="skillType" val="CORE_DONE"/>  
+		<set name="target" val="ONE"/>
+		<!-- Negate power is max cancel buffs -->
+		<set name="negateSkillTypes" val="BUFF"/>
+		<set name="negatePower" val="5"/>
+		<for>
+			<effect count="1" name="HeroCancel" time="1" noicon="1" val="0"/>
+		</for>
 	</skill>
 	<skill id="3593" levels="1" name="Special Ability: Infinity Bow">
 		<!-- Decreases enemy's Speed during a critical attack. Increases Max MP, Max CP and damage inflicted during PvP. The skill re-use time is shortened, and MP consumption is reduced. -->
