@@ -58,41 +58,12 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class Shutdown extends Thread
 {
-	public enum ShutdownModeType1
-	{
-		SIGTERM("Terminating"),
-		SHUTDOWN("Shutting down"),
-		RESTART("Restarting"),
-		ABORT("Aborting");
-		
-		private final String _modeText;
-		
-		ShutdownModeType1(String modeText)
-		{
-			_modeText = modeText;
-		}
-		
-		public String getText()
-		{
-			return _modeText;
-		}
-	}
-	
 	protected static final Logger LOGGER = Logger.getLogger(Shutdown.class.getName());
 	
-	private static Shutdown _counterInstance = null;
-	
-	private int _secondsShut;
-	
-	private int _shutdownMode;
-	
-	private boolean _shutdownStarted;
-	
-	public static final int SIGTERM = 0;
-	public static final int GM_SHUTDOWN = 1;
-	public static final int GM_RESTART = 2;
-	public static final int ABORT = 3;
-	
+	private static final int SIGTERM = 0;
+	private static final int GM_SHUTDOWN = 1;
+	private static final int GM_RESTART = 2;
+	private static final int ABORT = 3;
 	private static final String[] MODE_TEXT =
 	{
 		"SIGTERM",
@@ -100,6 +71,12 @@ public class Shutdown extends Thread
 		"restarting",
 		"aborting"
 	};
+	
+	private static Shutdown _counterInstance = null;
+	
+	private int _secondsShut;
+	private int _shutdownMode;
+	private boolean _shutdownStarted;
 	
 	/**
 	 * Default constructor is only used internal to create the shutdown-hook instance

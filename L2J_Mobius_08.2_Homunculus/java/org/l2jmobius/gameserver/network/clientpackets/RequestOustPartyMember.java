@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.model.Party.MessageType;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -46,7 +46,7 @@ public class RequestOustPartyMember implements IClientIncomingPacket
 		
 		if (player.isInParty() && player.getParty().isLeader(player))
 		{
-			player.getParty().removePartyMember(_name, MessageType.EXPELLED);
+			player.getParty().removePartyMember(_name, PartyMessageType.EXPELLED);
 		}
 	}
 }

@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
+import org.l2jmobius.gameserver.enums.FishingEndReason;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
-import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 
 /**
  * @author UnAfraid

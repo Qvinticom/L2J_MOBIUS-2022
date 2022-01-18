@@ -27,6 +27,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import org.l2jmobius.gameserver.ai.PlayerAI.IntentionCommand;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -36,7 +37,6 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Boat;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.item.instance.Item;
-import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.ZoneId;

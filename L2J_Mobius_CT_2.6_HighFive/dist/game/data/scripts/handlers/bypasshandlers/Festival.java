@@ -21,9 +21,9 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -287,7 +287,7 @@ public class Festival implements IBypassHandler
 					{
 						if (party.getMemberCount() > Config.ALT_FESTIVAL_MIN_PLAYER)
 						{
-							party.removePartyMember(player, MessageType.EXPELLED);
+							party.removePartyMember(player, PartyMessageType.EXPELLED);
 						}
 						else
 						{

@@ -17,8 +17,8 @@
 package ai.areas.Hellbound.AI.NPC.Warpgate;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;

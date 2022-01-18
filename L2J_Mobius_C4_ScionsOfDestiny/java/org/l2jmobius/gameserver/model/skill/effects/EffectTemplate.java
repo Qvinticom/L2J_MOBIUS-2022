@@ -20,7 +20,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.effects.Effect;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.model.skill.conditions.Condition;

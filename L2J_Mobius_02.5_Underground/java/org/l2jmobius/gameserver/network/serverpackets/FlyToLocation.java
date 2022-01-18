@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -37,20 +38,6 @@ public class FlyToLocation implements IClientOutgoingPacket
 	private int _flySpeed;
 	private int _flyDelay;
 	private int _animationSpeed;
-	
-	public enum FlyType
-	{
-		THROW_UP,
-		THROW_HORIZONTAL,
-		DUMMY,
-		CHARGE,
-		PUSH_HORIZONTAL,
-		JUMP_EFFECTED,
-		NOT_USED,
-		PUSH_DOWN_HORIZONTAL,
-		WARP_BACK,
-		WARP_FORWARD
-	}
 	
 	public FlyToLocation(Creature creature, int destX, int destY, int destZ, FlyType type)
 	{

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.request.PartyRequest;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
@@ -101,12 +101,12 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 			
 			if (party.getMemberCount() == 1)
 			{
-				party.removePartyMember(requestor, MessageType.NONE);
+				party.removePartyMember(requestor, PartyMessageType.NONE);
 			}
 		}
 		else if (party.getMemberCount() == 1)
 		{
-			party.removePartyMember(requestor, MessageType.NONE);
+			party.removePartyMember(requestor, PartyMessageType.NONE);
 		}
 		
 		party.setPendingInvitation(false);

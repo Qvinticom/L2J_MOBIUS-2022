@@ -24,6 +24,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.PunishmentType;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
@@ -31,7 +32,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.Player.PunishLevel;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -558,7 +558,7 @@ public class Say2 implements IClientIncomingPacket
 			{
 				if (Config.CHAT_FILTER_PUNISHMENT.equalsIgnoreCase("chat"))
 				{
-					player.setPunishLevel(PunishLevel.CHAT, Config.CHAT_FILTER_PUNISHMENT_PARAM1);
+					player.setPunishLevel(PunishmentType.CHAT, Config.CHAT_FILTER_PUNISHMENT_PARAM1);
 					player.sendMessage("Administrator banned you chat from " + Config.CHAT_FILTER_PUNISHMENT_PARAM1 + " minutes");
 				}
 				else if (Config.CHAT_FILTER_PUNISHMENT.equalsIgnoreCase("karma"))
@@ -568,7 +568,7 @@ public class Say2 implements IClientIncomingPacket
 				}
 				else if (Config.CHAT_FILTER_PUNISHMENT.equalsIgnoreCase("jail"))
 				{
-					player.setPunishLevel(PunishLevel.JAIL, Config.CHAT_FILTER_PUNISHMENT_PARAM1);
+					player.setPunishLevel(PunishmentType.JAIL, Config.CHAT_FILTER_PUNISHMENT_PARAM1);
 				}
 				player.sendMessage("The word " + _text + " is not allowed!");
 				_text = filteredText;

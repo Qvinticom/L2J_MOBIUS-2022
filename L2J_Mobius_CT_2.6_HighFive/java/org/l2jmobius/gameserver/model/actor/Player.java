@@ -81,13 +81,16 @@ import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.enums.PlayerAction;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
@@ -130,9 +133,7 @@ import org.l2jmobius.gameserver.model.MacroList;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.Nevit;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.PetLevelData;
-import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.PremiumItem;
 import org.l2jmobius.gameserver.model.Radar;
 import org.l2jmobius.gameserver.model.RecipeList;
@@ -287,7 +288,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExStartScenePlayer;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
-import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.FriendStatusPacket;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
@@ -6518,7 +6518,7 @@ public class Player extends Playable
 	{
 		if (isInParty())
 		{
-			_party.removePartyMember(this, MessageType.DISCONNECTED);
+			_party.removePartyMember(this, PartyMessageType.DISCONNECTED);
 			_party = null;
 		}
 	}
@@ -9446,7 +9446,7 @@ public class Player extends Playable
 		
 		if (_party != null)
 		{
-			_party.removePartyMember(this, MessageType.EXPELLED);
+			_party.removePartyMember(this, PartyMessageType.EXPELLED);
 		}
 		
 		_olympiadGameId = id;

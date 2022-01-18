@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.ClassType;
 import org.l2jmobius.gameserver.enums.PlayerClass;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.SkillAquireType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -1025,7 +1026,7 @@ public class VillageMaster extends Folk
 			return;
 		}
 		
-		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Clan);
+		final AquireSkillList asl = new AquireSkillList(SkillAquireType.CLAN);
 		int counts = 0;
 		for (PledgeSkillLearn s : SkillTreeTable.getInstance().getAvailablePledgeSkills(player))
 		{

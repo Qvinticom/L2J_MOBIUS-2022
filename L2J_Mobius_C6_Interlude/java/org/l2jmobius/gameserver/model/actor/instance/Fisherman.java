@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.enums.SkillAquireType;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.instancemanager.TradeManager;
 import org.l2jmobius.gameserver.model.Skill;
@@ -148,7 +149,7 @@ public class Fisherman extends Folk
 	
 	public void showSkillList(Player player)
 	{
-		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Fishing);
+		final AquireSkillList asl = new AquireSkillList(SkillAquireType.FISHING);
 		int counts = 0;
 		for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player))
 		{

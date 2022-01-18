@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import java.util.Arrays;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.Elementals;
-import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.item.Weapon;

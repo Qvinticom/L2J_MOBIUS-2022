@@ -22,7 +22,6 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -31,6 +30,8 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.WeaponType;
 import org.l2jmobius.gameserver.model.skill.BaseStat;
@@ -294,7 +295,7 @@ public class Pdam implements ISkillHandler
 			
 			if ((skill.getId() == 345) || (skill.getId() == 346)) // Sonic Rage or Raging Force.
 			{
-				final EffectCharge effect = (EffectCharge) creature.getFirstEffect(Effect.EffectType.CHARGE);
+				final EffectCharge effect = (EffectCharge) creature.getFirstEffect(EffectType.CHARGE);
 				if (effect != null)
 				{
 					int effectcharge = effect.getLevel();

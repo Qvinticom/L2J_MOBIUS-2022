@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.handler.ActionHandler;
 import org.l2jmobius.gameserver.handler.ActionShiftHandler;

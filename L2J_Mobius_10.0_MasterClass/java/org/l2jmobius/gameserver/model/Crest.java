@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import org.l2jmobius.gameserver.enums.CrestType;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -23,37 +24,6 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
  */
 public class Crest implements IIdentifiable
 {
-	public enum CrestType
-	{
-		PLEDGE(1),
-		PLEDGE_LARGE(2),
-		ALLY(3);
-		
-		private final int _id;
-		
-		CrestType(int id)
-		{
-			_id = id;
-		}
-		
-		public int getId()
-		{
-			return _id;
-		}
-		
-		public static CrestType getById(int id)
-		{
-			for (CrestType crestType : values())
-			{
-				if (crestType.getId() == id)
-				{
-					return crestType;
-				}
-			}
-			return null;
-		}
-	}
-	
 	private final int _id;
 	private final byte[] _data;
 	private final CrestType _type;

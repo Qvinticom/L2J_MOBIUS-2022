@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.handler.AutoChatHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -714,7 +715,7 @@ public class MercTicketManager
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
 							final Item dropticket = new Item(IdManager.getInstance().getNextId(), itemId);
-							dropticket.setLocation(Item.ItemLocation.VOID);
+							dropticket.setLocation(ItemLocation.VOID);
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
 							World.getInstance().storeObject(dropticket);
@@ -837,7 +838,7 @@ public class MercTicketManager
 				
 				// create the ticket in the gameworld
 				final Item dropticket = new Item(IdManager.getInstance().getNextId(), itemId);
-				dropticket.setLocation(Item.ItemLocation.INVENTORY);
+				dropticket.setLocation(ItemLocation.INVENTORY);
 				dropticket.dropMe(null, x, y, z);
 				dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
 				World.getInstance().storeObject(dropticket); // add to the world

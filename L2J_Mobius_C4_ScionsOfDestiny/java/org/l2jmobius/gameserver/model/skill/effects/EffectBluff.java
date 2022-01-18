@@ -16,13 +16,14 @@
  */
 package org.l2jmobius.gameserver.model.skill.effects;
 
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.instance.Artefact;
 import org.l2jmobius.gameserver.model.actor.instance.ControlTower;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPoint;
 import org.l2jmobius.gameserver.model.actor.instance.Folk;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlag;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummon;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;

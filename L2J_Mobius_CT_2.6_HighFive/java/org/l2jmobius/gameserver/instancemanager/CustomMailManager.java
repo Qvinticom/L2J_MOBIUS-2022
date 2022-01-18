@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
+import org.l2jmobius.gameserver.enums.MessageSenderType;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -63,7 +64,7 @@ public class CustomMailManager
 					{
 						// Create message.
 						final String items = rs.getString("items");
-						final Message msg = new Message(playerId, rs.getString("subject"), rs.getString("message"), Message.SendBySystem.PLAYER);
+						final Message msg = new Message(playerId, rs.getString("subject"), rs.getString("message"), MessageSenderType.PLAYER);
 						final List<ItemHolder> itemHolders = new ArrayList<>();
 						for (String str : items.split(";"))
 						{

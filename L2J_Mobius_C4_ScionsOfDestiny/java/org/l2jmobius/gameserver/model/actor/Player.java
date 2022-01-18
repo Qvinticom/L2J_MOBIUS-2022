@@ -63,6 +63,7 @@ import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.PunishmentType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -83,7 +84,6 @@ import org.l2jmobius.gameserver.instancemanager.RecipeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.BlockList;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Fish;
 import org.l2jmobius.gameserver.model.Fishing;
 import org.l2jmobius.gameserver.model.Location;
@@ -124,6 +124,8 @@ import org.l2jmobius.gameserver.model.actor.status.PlayerStatus;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
@@ -473,7 +475,7 @@ public class Player extends Playable
 	private volatile int _fallingDamage = 0;
 	private Future<?> _fallingDamageTask = null;
 	private final Location _lastPartyPosition = new Location(0, 0, 0);
-	private PunishLevel _punishLevel = PunishLevel.NONE;
+	private PunishmentType _punishLevel = PunishmentType.NONE;
 	private long _punishTimer = 0;
 	private ScheduledFuture<?> _punishTask;
 	private final GatesRequest _gatesRequest = new GatesRequest();
@@ -3097,7 +3099,7 @@ public class Player extends Playable
 			if (_relax)
 			{
 				setRelax(false);
-				stopEffects(Effect.EffectType.RELAXING);
+				stopEffects(EffectType.RELAXING);
 			}
 			
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
@@ -7546,7 +7548,7 @@ public class Player extends Playable
 				player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
 				player.setIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
 				player.setPunishLevel(rset.getInt("punish_level"));
-				if (player.getPunishLevel() != PunishLevel.NONE)
+				if (player.getPunishLevel() != PunishmentType.NONE)
 				{
 					player.setPunishTimer(rset.getLong("punish_timer"));
 				}
@@ -9415,7 +9417,7 @@ public class Player extends Playable
 		
 		if ((skill.getNumCharges() > 0) && (skill.getSkillType() != SkillType.CHARGE) && (skill.getSkillType() != SkillType.CHARGEDAM) && (skill.getSkillType() != SkillType.CHARGE_EFFECT) && (skill.getSkillType() != SkillType.PDAM))
 		{
-			final EffectCharge effect = (EffectCharge) getFirstEffect(Effect.EffectType.CHARGE);
+			final EffectCharge effect = (EffectCharge) getFirstEffect(EffectType.CHARGE);
 			if ((effect == null) || (effect.numCharges < skill.getNumCharges()))
 			{
 				sendPacket(new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE).addSkillName(skillId));
@@ -14677,39 +14679,6 @@ public class Player extends Playable
 		_isStored = a;
 	}
 	
-	public enum PunishLevel
-	{
-		NONE(0, ""),
-		CHAT(1, "chat banned"),
-		JAIL(2, "jailed"),
-		CHAR(3, "banned"),
-		ACC(4, "banned");
-		
-		private final int punValue;
-		private final String punString;
-		
-		/**
-		 * Instantiates a new punish level.
-		 * @param value the value
-		 * @param string the string
-		 */
-		PunishLevel(int value, String string)
-		{
-			punValue = value;
-			punString = string;
-		}
-		
-		public int value()
-		{
-			return punValue;
-		}
-		
-		public String string()
-		{
-			return punString;
-		}
-	}
-	
 	private static class GatesRequest
 	{
 		private Door _target = null;
@@ -14757,7 +14726,7 @@ public class Player extends Playable
 	 * returns punishment level of player.
 	 * @return the punish level
 	 */
-	public PunishLevel getPunishLevel()
+	public PunishmentType getPunishLevel()
 	{
 		return _punishLevel;
 	}
@@ -14768,7 +14737,7 @@ public class Player extends Playable
 	 */
 	public boolean isInJail()
 	{
-		return _punishLevel == PunishLevel.JAIL;
+		return _punishLevel == PunishmentType.JAIL;
 	}
 	
 	/**
@@ -14777,7 +14746,7 @@ public class Player extends Playable
 	 */
 	public boolean isChatBanned()
 	{
-		return _punishLevel == PunishLevel.CHAT;
+		return _punishLevel == PunishmentType.CHAT;
 	}
 	
 	/**
@@ -14790,27 +14759,27 @@ public class Player extends Playable
 		{
 			case 0:
 			{
-				_punishLevel = PunishLevel.NONE;
+				_punishLevel = PunishmentType.NONE;
 				break;
 			}
 			case 1:
 			{
-				_punishLevel = PunishLevel.CHAT;
+				_punishLevel = PunishmentType.CHAT;
 				break;
 			}
 			case 2:
 			{
-				_punishLevel = PunishLevel.JAIL;
+				_punishLevel = PunishmentType.JAIL;
 				break;
 			}
 			case 3:
 			{
-				_punishLevel = PunishLevel.CHAR;
+				_punishLevel = PunishmentType.CHAR;
 				break;
 			}
 			case 4:
 			{
-				_punishLevel = PunishLevel.ACC;
+				_punishLevel = PunishmentType.ACC;
 				break;
 			}
 		}
@@ -14821,7 +14790,7 @@ public class Player extends Playable
 	 * @param state the state
 	 * @param delayInMinutes the delay in minutes
 	 */
-	public void setPunishLevel(PunishLevel state, int delayInMinutes)
+	public void setPunishLevel(PunishmentType state, int delayInMinutes)
 	{
 		final long delayInMilliseconds = delayInMinutes * 60000;
 		setPunishLevel(state, delayInMilliseconds);
@@ -14832,7 +14801,7 @@ public class Player extends Playable
 	 * @param state the state
 	 * @param delayInMilliseconds 0 - Indefinite
 	 */
-	public void setPunishLevel(PunishLevel state, long delayInMilliseconds)
+	public void setPunishLevel(PunishmentType state, long delayInMilliseconds)
 	{
 		switch (state)
 		{
@@ -14872,7 +14841,7 @@ public class Player extends Playable
 			case CHAT: // Chat Ban
 			{
 				// not allow player to escape jail using chat ban
-				if (_punishLevel == PunishLevel.JAIL)
+				if (_punishLevel == PunishmentType.JAIL)
 				{
 					break;
 				}
@@ -14982,7 +14951,7 @@ public class Player extends Playable
 	 */
 	private void updatePunishState()
 	{
-		if (getPunishLevel() != PunishLevel.NONE)
+		if (getPunishLevel() != PunishmentType.NONE)
 		{
 			// If punish timer exists, restart punishtask.
 			if (_punishTimer > 0)
@@ -14991,7 +14960,7 @@ public class Player extends Playable
 				sendMessage("You are still " + getPunishLevel().string() + " for " + (_punishTimer / 60000) + " minutes.");
 			}
 			// If player escaped, put him back in jail
-			if ((getPunishLevel() == PunishLevel.JAIL) && !isInsideZone(ZoneId.JAIL))
+			if ((getPunishLevel() == PunishmentType.JAIL) && !isInsideZone(ZoneId.JAIL))
 			{
 				teleToLocation(MapRegionData.JAIL_LOCATION, false);
 			}
@@ -15036,7 +15005,7 @@ public class Player extends Playable
 		@Override
 		public void run()
 		{
-			_player.setPunishLevel(PunishLevel.NONE, 0);
+			_player.setPunishLevel(PunishmentType.NONE, 0);
 		}
 	}
 	

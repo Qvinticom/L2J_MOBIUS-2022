@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skill.conditions;
 
-import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.effects.Effect;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.model.skill.effects.EffectBattleForce;
 import org.l2jmobius.gameserver.model.skill.effects.EffectSpellForce;

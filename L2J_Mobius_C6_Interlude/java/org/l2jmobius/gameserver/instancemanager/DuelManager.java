@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Duel;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.effects.Effect;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class DuelManager

@@ -27,6 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
+import org.l2jmobius.gameserver.communitybbs.TopicConstructorType;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.BB.Post;
 import org.l2jmobius.gameserver.communitybbs.BB.Topic;
@@ -62,7 +63,7 @@ public class TopicBBSManager extends BaseBBSManager
 			}
 			
 			f.vload();
-			final Topic t = new Topic(Topic.ConstructorType.CREATE, getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), player.getName(), player.getObjectId(), Topic.MEMO, 0);
+			final Topic t = new Topic(TopicConstructorType.CREATE, getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), player.getName(), player.getObjectId(), Topic.MEMO, 0);
 			f.addTopic(t);
 			getInstance().setMaxID(t.getID(), f);
 			

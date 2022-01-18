@@ -30,13 +30,13 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.NpcRace;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate.Race;
 import org.l2jmobius.gameserver.model.skill.BaseStat;
 import org.l2jmobius.gameserver.model.skill.Stat;
 
@@ -114,8 +114,8 @@ public class NpcTable
 				
 				if (skillId == 4416)
 				{
-					final Race race = npcDat.getRace();
-					if ((race == null) || (race == Race.UNKNOWN))
+					final NpcRace race = npcDat.getRace();
+					if ((race == null) || (race == NpcRace.UNKNOWN))
 					{
 						npcDat.setRace(level);
 					}

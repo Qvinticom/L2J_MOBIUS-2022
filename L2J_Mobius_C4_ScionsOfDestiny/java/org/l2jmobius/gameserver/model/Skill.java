@@ -43,8 +43,11 @@ import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.instance.Servitor;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skill.BaseStat;
+import org.l2jmobius.gameserver.model.skill.ChanceCondition;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.model.skill.Formulas;
 import org.l2jmobius.gameserver.model.skill.SkillOperateType;
@@ -284,7 +287,7 @@ public abstract class Skill
 	protected Condition _itemPreCondition;
 	protected FuncTemplate[] _funcTemplates;
 	private EffectTemplate[] _effectTemplates;
-	protected EffectTemplate[] _effectTemplatesSelf;
+	public EffectTemplate[] _effectTemplatesSelf;
 	
 	private final boolean _nextActionIsAttack;
 	
@@ -2498,10 +2501,10 @@ public abstract class Skill
 			if (e != null)
 			{
 				// Implements effect charge
-				if (e.getEffectType() == Effect.EffectType.CHARGE)
+				if (e.getEffectType() == EffectType.CHARGE)
 				{
 					env.skill = SkillTable.getInstance().getSkill(8, effector.getSkillLevel(8));
-					final EffectCharge effect = (EffectCharge) env.target.getFirstEffect(Effect.EffectType.CHARGE);
+					final EffectCharge effect = (EffectCharge) env.target.getFirstEffect(EffectType.CHARGE);
 					if (effect != null)
 					{
 						int effectcharge = effect.getLevel();

@@ -29,8 +29,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.enums.CrestType;
 import org.l2jmobius.gameserver.model.Crest;
-import org.l2jmobius.gameserver.model.Crest.CrestType;
 import org.l2jmobius.gameserver.model.clan.Clan;
 
 /**

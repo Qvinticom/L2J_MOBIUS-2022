@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.communitybbs.TopicConstructorType;
 import org.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
 public class Topic
@@ -49,7 +50,7 @@ public class Topic
 	 * @param type
 	 * @param cReply
 	 */
-	public Topic(ConstructorType ct, int id, int fid, String name, long date, String oname, int oid, int type, int cReply)
+	public Topic(TopicConstructorType ct, int id, int fid, String name, long date, String oname, int oid, int type, int cReply)
 	{
 		_id = id;
 		_forumId = fid;
@@ -61,7 +62,7 @@ public class Topic
 		_cReply = cReply;
 		TopicBBSManager.getInstance().addTopic(this);
 		
-		if (ct == ConstructorType.CREATE)
+		if (ct == TopicConstructorType.CREATE)
 		{
 			insertIntoDb();
 		}
@@ -87,12 +88,6 @@ public class Topic
 		{
 			LOGGER.warning("Error while saving new Topic to db " + e);
 		}
-	}
-	
-	public enum ConstructorType
-	{
-		RESTORE,
-		CREATE
 	}
 	
 	public int getID()

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.SkillAquireType;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -30,15 +31,8 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class AquireSkillList implements IClientOutgoingPacket
 {
-	public enum skillType
-	{
-		Usual,
-		Fishing,
-		Clan
-	}
-	
 	private final List<Skill> _skills;
-	private final skillType _fishingSkills;
+	private final SkillAquireType _fishingSkills;
 	
 	private class Skill
 	{
@@ -58,7 +52,7 @@ public class AquireSkillList implements IClientOutgoingPacket
 		}
 	}
 	
-	public AquireSkillList(skillType type)
+	public AquireSkillList(SkillAquireType type)
 	{
 		_skills = new ArrayList<>();
 		_fishingSkills = type;

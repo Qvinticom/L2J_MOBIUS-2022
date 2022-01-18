@@ -16,8 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.skill.effects;
 
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;

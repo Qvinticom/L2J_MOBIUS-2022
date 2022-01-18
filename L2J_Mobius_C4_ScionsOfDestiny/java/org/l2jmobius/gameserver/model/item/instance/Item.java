@@ -30,6 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.DropProtection;
@@ -62,22 +63,6 @@ public class Item extends WorldObject
 	private static final Logger _logItems = Logger.getLogger("item");
 	
 	private final DropProtection _dropProtection = new DropProtection();
-	
-	/**
-	 * Enumeration of locations for item.
-	 */
-	public enum ItemLocation
-	{
-		VOID,
-		INVENTORY,
-		PAPERDOLL,
-		WAREHOUSE,
-		CLANWH,
-		PET,
-		PET_EQUIP,
-		LEASE,
-		FREIGHT
-	}
 	
 	/** Owner */
 	private int _ownerId;

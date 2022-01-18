@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.enums.PunishmentType;
 import org.l2jmobius.gameserver.model.actor.Player;
 
 /**
@@ -101,7 +102,7 @@ public class IllegalPlayerAction implements Runnable
 			}
 			case PUNISH_JAIL:
 			{
-				_actor.setPunishLevel(Player.PunishLevel.JAIL, Config.DEFAULT_PUNISH_PARAM);
+				_actor.setPunishLevel(PunishmentType.JAIL, Config.DEFAULT_PUNISH_PARAM);
 				break;
 			}
 		}

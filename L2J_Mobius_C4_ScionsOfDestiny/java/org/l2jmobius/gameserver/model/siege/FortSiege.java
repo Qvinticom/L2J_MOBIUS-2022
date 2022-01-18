@@ -28,14 +28,13 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.enums.FortTeleportWhoType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager.SiegeSpawn;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
-import org.l2jmobius.gameserver.model.SiegeClan;
-import org.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -58,15 +57,6 @@ import org.l2jmobius.gameserver.util.Broadcast;
 public class FortSiege
 {
 	protected static final Logger LOGGER = Logger.getLogger(FortSiege.class.getName());
-	
-	public enum TeleportWhoType
-	{
-		All,
-		Attacker,
-		DefenderNotOwner,
-		Owner,
-		Spectator
-	}
 	
 	public class ScheduleEndSiegeTask implements Runnable
 	{
@@ -252,13 +242,13 @@ public class FortSiege
 			unSpawnFlags();
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
+			teleportPlayer(FortTeleportWhoType.Attacker, TeleportWhereType.TOWN);
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.DefenderNotOwner, TeleportWhereType.TOWN);
+			teleportPlayer(FortTeleportWhoType.DefenderNotOwner, TeleportWhereType.TOWN);
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.Spectator, TeleportWhereType.TOWN);
+			teleportPlayer(FortTeleportWhoType.Spectator, TeleportWhereType.TOWN);
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
@@ -398,7 +388,7 @@ public class FortSiege
 			updatePlayerSiegeStateFlags(false);
 			
 			// Teleport to the closest town
-			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
+			teleportPlayer(FortTeleportWhoType.Attacker, TeleportWhereType.TOWN);
 			
 			// Spawn commander
 			spawnCommander(getFort().getFortId());
@@ -970,7 +960,7 @@ public class FortSiege
 	 * @param teleportWho the teleport who
 	 * @param teleportWhere the teleport where
 	 */
-	public void teleportPlayer(TeleportWhoType teleportWho, TeleportWhereType teleportWhere)
+	public void teleportPlayer(FortTeleportWhoType teleportWho, TeleportWhereType teleportWhere)
 	{
 		List<Player> players;
 		switch (teleportWho)

@@ -27,25 +27,14 @@ import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
  */
 public class ConditionGameTime extends Condition
 {
-	/**
-	 * The Enum CheckGameTime.
-	 */
-	public enum CheckGameTime
-	{
-		NIGHT
-	}
-	
-	private final CheckGameTime _check;
 	private final boolean _required;
 	
 	/**
 	 * Instantiates a new condition game time.
-	 * @param check the check
 	 * @param required the required
 	 */
-	public ConditionGameTime(CheckGameTime check, boolean required)
+	public ConditionGameTime(boolean required)
 	{
-		_check = check;
 		_required = required;
 	}
 	
@@ -56,13 +45,6 @@ public class ConditionGameTime extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item)
 	{
-		switch (_check)
-		{
-			case NIGHT:
-			{
-				return GameTimeTaskManager.getInstance().isNight() == _required;
-			}
-		}
-		return !_required;
+		return GameTimeTaskManager.getInstance().isNight() == _required;
 	}
 }

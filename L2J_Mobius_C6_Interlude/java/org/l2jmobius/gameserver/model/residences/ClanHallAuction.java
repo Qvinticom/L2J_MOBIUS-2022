@@ -58,16 +58,6 @@ public class ClanHallAuction
 	private int _startingBid = 0;
 	private final Map<Integer, Bidder> _bidders = new HashMap<>();
 	
-	private static final String[] ItemTypeName =
-	{
-		"ClanHall"
-	};
-	
-	public enum ItemTypeEnum
-	{
-		ClanHall
-	}
-	
 	public class Bidder
 	{
 		private final String _name;
@@ -278,16 +268,6 @@ public class ClanHallAuction
 		}
 		
 		ThreadPool.schedule(new AutoEndTask(), taskDelay);
-	}
-	
-	/**
-	 * Gets the item type name.
-	 * @param value the value
-	 * @return the item type name
-	 */
-	public static String getItemTypeName(ItemTypeEnum value)
-	{
-		return ItemTypeName[value.ordinal()];
 	}
 	
 	/**

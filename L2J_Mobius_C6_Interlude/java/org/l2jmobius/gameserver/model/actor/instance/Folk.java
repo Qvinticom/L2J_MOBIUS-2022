@@ -22,6 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.enums.SkillAquireType;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -98,7 +99,7 @@ public class Folk extends Npc
 			return;
 		}
 		
-		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Usual);
+		final AquireSkillList asl = new AquireSkillList(SkillAquireType.USUAL);
 		int counts = 0;
 		for (SkillLearn s : SkillTreeTable.getInstance().getAvailableSkills(player, classId))
 		{

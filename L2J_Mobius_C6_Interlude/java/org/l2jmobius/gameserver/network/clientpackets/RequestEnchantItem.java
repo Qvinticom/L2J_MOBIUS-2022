@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -615,7 +616,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					return;
 				}
 				
-				if ((item.getItemLocation() != Item.ItemLocation.INVENTORY) && (item.getItemLocation() != Item.ItemLocation.PAPERDOLL))
+				if ((item.getItemLocation() != ItemLocation.INVENTORY) && (item.getItemLocation() != ItemLocation.PAPERDOLL))
 				{
 					player.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 					return;

@@ -48,8 +48,6 @@ import org.l2jmobius.gameserver.handler.itemhandlers.Potions;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
-import org.l2jmobius.gameserver.model.ChanceSkillList;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.ForceBuff;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -76,6 +74,8 @@ import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.item.Weapon;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -86,6 +86,7 @@ import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skill.Calculator;
+import org.l2jmobius.gameserver.model.skill.ChanceSkillList;
 import org.l2jmobius.gameserver.model.skill.Formulas;
 import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.skill.SkillType;
@@ -2956,7 +2957,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			if ((effect.getSkill().getId() == newEffect.getSkill().getId()) && (effect.getEffectType() == newEffect.getEffectType()) && (effect.getStackType().equals(newEffect.getStackType())))
 			{
-				if (((newEffect.getSkill().getSkillType() == SkillType.BUFF) || (newEffect.getEffectType() == Effect.EffectType.BUFF) || (newEffect.getEffectType() == Effect.EffectType.HEAL_OVER_TIME)) && (newEffect.getStackOrder() >= effect.getStackOrder()))
+				if (((newEffect.getSkill().getSkillType() == SkillType.BUFF) || (newEffect.getEffectType() == EffectType.BUFF) || (newEffect.getEffectType() == EffectType.HEAL_OVER_TIME)) && (newEffect.getStackOrder() >= effect.getStackOrder()))
 				{
 					effect.exit(false);
 				}
@@ -3338,7 +3339,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void stopBetray()
 	{
-		stopEffects(Effect.EffectType.BETRAY);
+		stopEffects(EffectType.BETRAY);
 		setBetrayed(false);
 		updateAbnormalEffect();
 	}
@@ -3383,7 +3384,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.IMMOBILEUNTILATTACKED);
+			stopEffects(EffectType.IMMOBILEUNTILATTACKED);
 		}
 		else
 		{
@@ -3410,7 +3411,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.CONFUSION);
+			stopEffects(EffectType.CONFUSION);
 		}
 		else
 		{
@@ -3460,7 +3461,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>Update active skills in progress icones on player client</li><br>
 	 * @param type The type of effect to stop ((ex : BUFF, DMG_OVER_TIME...)
 	 */
-	public void stopEffects(Effect.EffectType type)
+	public void stopEffects(EffectType type)
 	{
 		for (Effect effect : _effects)
 		{
@@ -3519,7 +3520,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.FAKE_DEATH);
+			stopEffects(EffectType.FAKE_DEATH);
 		}
 		else
 		{
@@ -3553,7 +3554,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.FEAR);
+			stopEffects(EffectType.FEAR);
 		}
 		else
 		{
@@ -3578,7 +3579,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.MUTE);
+			stopEffects(EffectType.MUTE);
 		}
 		else
 		{
@@ -3597,7 +3598,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.PSYCHICAL_MUTE);
+			stopEffects(EffectType.PSYCHICAL_MUTE);
 		}
 		else
 		{
@@ -3622,7 +3623,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.ROOT);
+			stopEffects(EffectType.ROOT);
 		}
 		else
 		{
@@ -3648,7 +3649,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.SLEEP);
+			stopEffects(EffectType.SLEEP);
 		}
 		else
 		{
@@ -3679,7 +3680,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.STUN);
+			stopEffects(EffectType.STUN);
 		}
 		else
 		{
@@ -3782,7 +3783,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				continue;
 			}
 			
-			if ((effect.getEffectType() == Effect.EffectType.CHARGE) && (player != null))
+			if ((effect.getEffectType() == EffectType.CHARGE) && (player != null))
 			{
 				// handled by EtcStatusUpdate
 				continue;
@@ -4002,7 +4003,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param tp The Effect Type of skills whose effect must be returned
 	 * @return The first Effect corresponding to the Effect Type
 	 */
-	public Effect getFirstEffect(Effect.EffectType tp)
+	public Effect getFirstEffect(EffectType tp)
 	{
 		Effect effNotInUse = null;
 		for (Effect effect : _effects)
@@ -4741,7 +4742,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isCastingNow()
 	{
-		final Effect mog = getFirstEffect(Effect.EffectType.SIGNET_GROUND);
+		final Effect mog = getFirstEffect(EffectType.SIGNET_GROUND);
 		if (mog != null)
 		{
 			return true;
@@ -4835,7 +4836,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				_forceBuff.onCastAbort();
 			}
 			
-			final Effect mog = getFirstEffect(Effect.EffectType.SIGNET_GROUND);
+			final Effect mog = getFirstEffect(EffectType.SIGNET_GROUND);
 			if (mog != null)
 			{
 				mog.exit(true);
@@ -6968,7 +6969,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		final Effect mog = getFirstEffect(Effect.EffectType.SIGNET_GROUND);
+		final Effect mog = getFirstEffect(EffectType.SIGNET_GROUND);
 		if (mog != null)
 		{
 			_skillCast = null;
@@ -7008,7 +7009,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					// If the skill is type STEALTH(ex: Dance of Shadow)
 					if (skill.isAbnormalEffectByName(ABNORMAL_EFFECT_STEALTH))
 					{
-						final Effect silentMove = target.getFirstEffect(Effect.EffectType.SILENT_MOVE);
+						final Effect silentMove = target.getFirstEffect(EffectType.SILENT_MOVE);
 						if (silentMove != null)
 						{
 							silentMove.exit(true);

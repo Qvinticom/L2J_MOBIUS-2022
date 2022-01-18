@@ -22,10 +22,10 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.LoginServer;
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.enums.LoginFailReason;
+import org.l2jmobius.loginserver.enums.PlayFailReason;
 import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
-import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.PlayOk;
 
 /**

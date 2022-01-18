@@ -26,9 +26,11 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.DuelResult;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.effects.Effect;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -61,17 +63,6 @@ public class Duel
 	private int _countdown = 4;
 	private boolean _finished = false;
 	private Map<Integer, PlayerCondition> _playerConditions;
-	
-	public enum DuelResultEnum
-	{
-		Continue,
-		Team1Win,
-		Team2Win,
-		Team1Surrender,
-		Team2Surrender,
-		Canceled,
-		Timeout
-	}
 	
 	/**
 	 * Instantiates a new duel.
@@ -254,14 +245,14 @@ public class Duel
 		{
 			try
 			{
-				final DuelResultEnum status = _duel.checkEndDuelCondition();
-				if (status == DuelResultEnum.Canceled)
+				final DuelResult status = _duel.checkEndDuelCondition();
+				if (status == DuelResult.CANCELED)
 				{
 					// do not schedule duel end if it was interrupted
 					setFinished(true);
 					_duel.endDuel(status);
 				}
-				else if (status != DuelResultEnum.Continue)
+				else if (status != DuelResult.CONTINUE)
 				{
 					setFinished(true);
 					playKneelAnimation();
@@ -342,14 +333,14 @@ public class Duel
 	public static class ScheduleEndDuelTask implements Runnable
 	{
 		private final Duel _duel;
-		private final DuelResultEnum _result;
+		private final DuelResult _result;
 		
 		/**
 		 * Instantiates a new schedule end duel task.
 		 * @param duel the duel
 		 * @param result the result
 		 */
-		public ScheduleEndDuelTask(Duel duel, DuelResultEnum result)
+		public ScheduleEndDuelTask(Duel duel, DuelResult result)
 		{
 			_duel = duel;
 			_result = result;
@@ -823,7 +814,7 @@ public class Duel
 	 * The duel has reached a state in which it can no longer continue.
 	 * @param result the result
 	 */
-	public void endDuel(DuelResultEnum result)
+	public void endDuel(DuelResult result)
 	{
 		if ((_playerA == null) || (_playerB == null))
 		{
@@ -838,8 +829,8 @@ public class Duel
 		SystemMessage sm = null;
 		switch (result)
 		{
-			case Team2Surrender:
-			case Team1Win:
+			case TEAM_2_SURRENDER:
+			case TEAM_1_WIN:
 			{
 				restorePlayerConditions(false);
 				// send SystemMessage
@@ -856,8 +847,8 @@ public class Duel
 				broadcastToTeam2(sm);
 				break;
 			}
-			case Team1Surrender:
-			case Team2Win:
+			case TEAM_1_SURRENDER:
+			case TEAM_2_WIN:
 			{
 				restorePlayerConditions(false);
 				// send SystemMessage
@@ -874,7 +865,7 @@ public class Duel
 				broadcastToTeam2(sm);
 				break;
 			}
-			case Canceled:
+			case CANCELED:
 			{
 				stopFighting();
 				// dont restore hp, mp, cp
@@ -886,7 +877,7 @@ public class Duel
 				broadcastToTeam2(sm);
 				break;
 			}
-			case Timeout:
+			case TIMEOUT:
 			{
 				stopFighting();
 				// hp,mp,cp seem to be restored in a timeout too...
@@ -923,12 +914,12 @@ public class Duel
 	 * Did a situation occur in which the duel has to be ended?.
 	 * @return DuelResultEnum duel status
 	 */
-	public DuelResultEnum checkEndDuelCondition()
+	public DuelResult checkEndDuelCondition()
 	{
 		// one of the players might leave during duel
 		if ((_playerA == null) || (_playerB == null))
 		{
-			return DuelResultEnum.Canceled;
+			return DuelResult.CANCELED;
 		}
 		
 		// got a duel surrender request?
@@ -936,26 +927,26 @@ public class Duel
 		{
 			if (_surrenderRequest == 1)
 			{
-				return DuelResultEnum.Team1Surrender;
+				return DuelResult.TEAM_1_SURRENDER;
 			}
-			return DuelResultEnum.Team2Surrender;
+			return DuelResult.TEAM_2_SURRENDER;
 		}
 		// duel timed out
 		else if (getRemainingTime() <= 0)
 		{
-			return DuelResultEnum.Timeout;
+			return DuelResult.TIMEOUT;
 		}
 		else if (_playerA.getDuelState() == DUELSTATE_WINNER)
 		{
 			// If there is a Winner already there should be no more fighting going on
 			stopFighting();
-			return DuelResultEnum.Team1Win;
+			return DuelResult.TEAM_1_WIN;
 		}
 		else if (_playerB.getDuelState() == DUELSTATE_WINNER)
 		{
 			// If there is a Winner already there should be no more fighting going on
 			stopFighting();
-			return DuelResultEnum.Team2Win;
+			return DuelResult.TEAM_2_WIN;
 		}
 		
 		// More end duel conditions for 1on1 duels
@@ -964,29 +955,29 @@ public class Duel
 			// Duel was interrupted e.g.: player was attacked by mobs / other players
 			if ((_playerA.getDuelState() == DUELSTATE_INTERRUPTED) || (_playerB.getDuelState() == DUELSTATE_INTERRUPTED))
 			{
-				return DuelResultEnum.Canceled;
+				return DuelResult.CANCELED;
 			}
 			
 			// Are the players too far apart?
 			if (!_playerA.isInsideRadius2D(_playerB, 1600))
 			{
-				return DuelResultEnum.Canceled;
+				return DuelResult.CANCELED;
 			}
 			
 			// Did one of the players engage in PvP combat?
 			if (isDuelistInPvp(true))
 			{
-				return DuelResultEnum.Canceled;
+				return DuelResult.CANCELED;
 			}
 			
 			// is one of the players in a Siege, Peace or PvP zone?
 			if (_playerA.isInsideZone(ZoneId.PEACE) || _playerB.isInsideZone(ZoneId.PEACE) || _playerA.isInsideZone(ZoneId.SIEGE) || _playerB.isInsideZone(ZoneId.SIEGE) || _playerA.isInsideZone(ZoneId.PVP) || _playerB.isInsideZone(ZoneId.PVP))
 			{
-				return DuelResultEnum.Canceled;
+				return DuelResult.CANCELED;
 			}
 		}
 		
-		return DuelResultEnum.Continue;
+		return DuelResult.CONTINUE;
 	}
 	
 	/**

@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skill.effects;
 
-import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Env;
 
 public class EffectMeditation extends Effect
@@ -29,7 +30,7 @@ public class EffectMeditation extends Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return Effect.EffectType.MEDITATION;
+		return EffectType.MEDITATION;
 	}
 	
 	@Override

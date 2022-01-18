@@ -16,8 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.skill.effects;
 
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Env;
 
 public class EffectPetrification extends Effect
@@ -30,7 +31,7 @@ public class EffectPetrification extends Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return Effect.EffectType.PETRIFICATION;
+		return EffectType.PETRIFICATION;
 	}
 	
 	@Override

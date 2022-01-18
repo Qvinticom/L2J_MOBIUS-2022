@@ -60,10 +60,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
 public class Shutdown extends Thread
 {
 	private static final Logger LOGGER = Logger.getLogger(Shutdown.class.getName());
-	private static Shutdown _counterInstance = null;
 	
-	private int _secondsShut;
-	private int _shutdownMode;
 	private static final int SIGTERM = 0;
 	private static final int GM_SHUTDOWN = 1;
 	private static final int GM_RESTART = 2;
@@ -75,6 +72,11 @@ public class Shutdown extends Thread
 		"restarting",
 		"aborting"
 	};
+	
+	private static Shutdown _counterInstance = null;
+	
+	private int _secondsShut;
+	private int _shutdownMode;
 	
 	/**
 	 * This function starts a shutdown count down from Telnet (Copied from Function startShutdown())

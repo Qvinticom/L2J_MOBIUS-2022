@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.ai.FortSiegeGuardAI;
 import org.l2jmobius.gameserver.ai.SiegeGuardAI;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.ManorSeedData;
+import org.l2jmobius.gameserver.enums.AbsorbCrystalType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
@@ -2558,7 +2559,7 @@ public class Attackable extends Npc
 		boolean isSuccess = true;
 		boolean doLevelup = true;
 		final boolean isBossMob = maxAbsorbLevel > 10;
-		final NpcTemplate.AbsorbCrystalType absorbType = getTemplate().getAbsorbType();
+		final AbsorbCrystalType absorbType = getTemplate().getAbsorbType();
 		final Player killer = attacker instanceof Summon ? ((Summon) attacker).getOwner() : (Player) attacker;
 		
 		// If this mob is a boss, then skip some checkings
@@ -2608,11 +2609,11 @@ public class Attackable extends Npc
 		// 3- Everything is correct, but it failed. The crystal scatters. A sound event is played. (10%)
 		// 4- Everything is correct, the crystal level up. A sound event is played. (32.5%)
 		List<Player> players = new ArrayList<>();
-		if ((absorbType == NpcTemplate.AbsorbCrystalType.FULL_PARTY) && killer.isInParty())
+		if ((absorbType == AbsorbCrystalType.FULL_PARTY) && killer.isInParty())
 		{
 			players = killer.getParty().getPartyMembers();
 		}
-		else if ((absorbType == NpcTemplate.AbsorbCrystalType.PARTY_ONE_RANDOM) && killer.isInParty())
+		else if ((absorbType == AbsorbCrystalType.PARTY_ONE_RANDOM) && killer.isInParty())
 		{
 			// This is a naive method for selecting a random member. It gets any random party member and
 			// then checks if the member has a valid crystal. It does not select the random party member
@@ -2753,7 +2754,7 @@ public class Attackable extends Npc
 			final int chanceLevelUp = isBossMob ? 70 : SoulCrystal.LEVEL_CHANCE;
 			
 			// If succeeds or it is a full party absorb, level up the crystal.
-			if (((absorbType == NpcTemplate.AbsorbCrystalType.FULL_PARTY) && doLevelup) || (dice <= chanceLevelUp))
+			if (((absorbType == AbsorbCrystalType.FULL_PARTY) && doLevelup) || (dice <= chanceLevelUp))
 			{
 				// Give staged crystal
 				exchangeCrystal(player, crystalOLD, crystalNEW, false);

@@ -18,10 +18,10 @@ package org.l2jmobius.loginserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.loginserver.enums.LoginFailReason;
 import org.l2jmobius.loginserver.network.ConnectionState;
 import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.serverpackets.GGAuth;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
 /**
  * Format: ddddd

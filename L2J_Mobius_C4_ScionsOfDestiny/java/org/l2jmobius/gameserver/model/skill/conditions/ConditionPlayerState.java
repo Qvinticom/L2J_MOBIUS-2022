@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skill.conditions;
 
+import org.l2jmobius.gameserver.enums.PlayerState;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.skill.Env;
 
@@ -24,21 +25,10 @@ import org.l2jmobius.gameserver.model.skill.Env;
  */
 public class ConditionPlayerState extends Condition
 {
-	public enum CheckPlayerState
-	{
-		RESTING,
-		MOVING,
-		RUNNING,
-		FLYING,
-		BEHIND,
-		FRONT,
-		SIDE
-	}
-	
-	private final CheckPlayerState _check;
+	private final PlayerState _check;
 	private final boolean _required;
 	
-	public ConditionPlayerState(CheckPlayerState check, boolean required)
+	public ConditionPlayerState(PlayerState check, boolean required)
 	{
 		_check = check;
 		_required = required;

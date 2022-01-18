@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.enums.MessageSenderType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -56,7 +57,7 @@ public class SendMail implements ITelnetCommand
 		final int objectId = CharNameTable.getInstance().getIdByName(args[0]);
 		if (objectId > 0)
 		{
-			final Message msg = new Message(objectId, args[1].replace("_", " "), args[2].replace("_", " "), Message.SendBySystem.NEWS);
+			final Message msg = new Message(objectId, args[1].replace("_", " "), args[2].replace("_", " "), MessageSenderType.NEWS);
 			final List<ItemHolder> itemHolders = new ArrayList<>();
 			int counter = -1;
 			for (String str : args)

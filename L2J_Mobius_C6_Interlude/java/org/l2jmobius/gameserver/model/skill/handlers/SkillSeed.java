@@ -18,11 +18,12 @@ package org.l2jmobius.gameserver.model.skill.handlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectSeed;
 
@@ -62,7 +63,7 @@ public class SkillSeed extends Skill
 			
 			for (Effect effect : target.getAllEffects())
 			{
-				if (effect.getEffectType() == Effect.EffectType.SEED)
+				if (effect.getEffectType() == EffectType.SEED)
 				{
 					effect.rescheduleEffect();
 				}

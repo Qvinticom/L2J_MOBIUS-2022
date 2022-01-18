@@ -39,7 +39,6 @@ import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -48,6 +47,7 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
@@ -1066,7 +1066,7 @@ public class VanHalter extends Quest
 			{
 				if (_vanHalter.isAfraid())
 				{
-					_vanHalter.stopEffects(Effect.EffectType.FEAR);
+					_vanHalter.stopEffects(EffectType.FEAR);
 					_vanHalter.setAfraid(false);
 					_vanHalter.updateAbnormalEffect();
 				}
@@ -1078,7 +1078,7 @@ public class VanHalter extends Quest
 						final Location pos = new Location(-16397, -53308, -10448, 0);
 						if ((_vanHalter.getX() == pos.getX()) && (_vanHalter.getY() == pos.getY()))
 						{
-							_vanHalter.stopEffects(Effect.EffectType.FEAR);
+							_vanHalter.stopEffects(EffectType.FEAR);
 							_vanHalter.setAfraid(false);
 							_vanHalter.updateAbnormalEffect();
 						}
@@ -1106,7 +1106,7 @@ public class VanHalter extends Quest
 			}
 			else
 			{
-				_vanHalter.stopEffects(Effect.EffectType.FEAR);
+				_vanHalter.stopEffects(EffectType.FEAR);
 				_vanHalter.setAfraid(false);
 				_vanHalter.updateAbnormalEffect();
 				if (_halterEscapeTask != null)
@@ -1152,9 +1152,9 @@ public class VanHalter extends Quest
 		}
 		for (Player pc : _bleedingPlayers.get(npcId))
 		{
-			if (pc.getFirstEffect(Effect.EffectType.DMG_OVER_TIME) != null)
+			if (pc.getFirstEffect(EffectType.DMG_OVER_TIME) != null)
 			{
-				pc.stopEffects(Effect.EffectType.DMG_OVER_TIME);
+				pc.stopEffects(EffectType.DMG_OVER_TIME);
 			}
 		}
 		_bleedingPlayers.remove(npcId);

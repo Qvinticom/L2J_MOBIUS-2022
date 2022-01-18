@@ -19,6 +19,7 @@ package quests.Q10575_LetsGoFishing;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.gameserver.enums.FishingEndReason;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -34,7 +35,6 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
-import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 
 import quests.Q10566_BestChoice.Q10566_BestChoice;
 

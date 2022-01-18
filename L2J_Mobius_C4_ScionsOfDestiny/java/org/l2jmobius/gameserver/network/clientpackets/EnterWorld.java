@@ -43,13 +43,14 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.RebirthManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Wedding;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMaster;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -192,14 +193,14 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		for (Effect effect : player.getAllEffects())
 		{
-			if (effect.getEffectType() == Effect.EffectType.HEAL_OVER_TIME)
+			if (effect.getEffectType() == EffectType.HEAL_OVER_TIME)
 			{
-				player.stopEffects(Effect.EffectType.HEAL_OVER_TIME);
+				player.stopEffects(EffectType.HEAL_OVER_TIME);
 				player.removeEffect(effect);
 			}
-			if (effect.getEffectType() == Effect.EffectType.COMBAT_POINT_HEAL_OVER_TIME)
+			if (effect.getEffectType() == EffectType.COMBAT_POINT_HEAL_OVER_TIME)
 			{
-				player.stopEffects(Effect.EffectType.COMBAT_POINT_HEAL_OVER_TIME);
+				player.stopEffects(EffectType.COMBAT_POINT_HEAL_OVER_TIME);
 				player.removeEffect(effect);
 			}
 		}

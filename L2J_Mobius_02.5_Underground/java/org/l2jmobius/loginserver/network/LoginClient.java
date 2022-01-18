@@ -32,11 +32,11 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.enums.LoginFailReason;
+import org.l2jmobius.loginserver.enums.PlayFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.Init;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.PlayFail;
-import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;

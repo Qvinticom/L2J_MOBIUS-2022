@@ -32,11 +32,11 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -341,7 +341,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 			final Party party = player.getParty();
 			if (party != null)
 			{
-				party.removePartyMember(player, MessageType.EXPELLED);
+				party.removePartyMember(player, PartyMessageType.EXPELLED);
 			}
 			
 			// Cancel any started action

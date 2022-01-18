@@ -24,6 +24,7 @@ import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
+import org.l2jmobius.gameserver.enums.WarehouseListType;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
@@ -37,26 +38,6 @@ import org.l2jmobius.gameserver.network.PacketLogger;
 
 public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 {
-	public enum WarehouseListType
-	{
-		WEAPON,
-		ARMOR,
-		ETCITEM,
-		MATERIAL,
-		RECIPE,
-		AMULETT,
-		SPELLBOOK,
-		SHOT,
-		SCROLL,
-		CONSUMABLE,
-		SEED,
-		POTION,
-		QUEST,
-		PET,
-		OTHER,
-		ALL
-	}
-	
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure

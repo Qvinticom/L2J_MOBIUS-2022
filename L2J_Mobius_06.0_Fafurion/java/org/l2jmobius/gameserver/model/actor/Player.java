@@ -97,8 +97,10 @@ import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.NextActionType;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2jmobius.gameserver.enums.PlayerAction;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
@@ -139,10 +141,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroList;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.PetLevelData;
-import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.PremiumItem;
 import org.l2jmobius.gameserver.model.Radar;
 import org.l2jmobius.gameserver.model.Request;
@@ -6245,7 +6245,7 @@ public class Player extends Playable
 	{
 		if (isInParty())
 		{
-			_party.removePartyMember(this, MessageType.DISCONNECTED);
+			_party.removePartyMember(this, PartyMessageType.DISCONNECTED);
 			_party = null;
 		}
 	}
@@ -9066,7 +9066,7 @@ public class Player extends Playable
 		
 		if (_party != null)
 		{
-			_party.removePartyMember(this, MessageType.EXPELLED);
+			_party.removePartyMember(this, PartyMessageType.EXPELLED);
 		}
 		
 		_olympiadGameId = id;

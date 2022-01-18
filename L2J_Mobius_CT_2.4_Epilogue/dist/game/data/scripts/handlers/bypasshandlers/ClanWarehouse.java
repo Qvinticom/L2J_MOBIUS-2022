@@ -19,6 +19,7 @@ package handlers.bypasshandlers;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.WarehouseListType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -31,7 +32,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SortedWareHouseWithdrawalList;
-import org.l2jmobius.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 

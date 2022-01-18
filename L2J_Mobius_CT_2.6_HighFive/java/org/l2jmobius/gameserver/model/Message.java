@@ -26,6 +26,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.enums.MessageSenderType;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
@@ -62,14 +63,6 @@ public class Message
 	private boolean _hasAttachments;
 	private Mail _attachments = null;
 	private ScheduledFuture<?> _unloadTask = null;
-	
-	public enum SendBySystem
-	{
-		PLAYER,
-		NEWS,
-		NONE,
-		ALEGRIA
-	}
 	
 	/*
 	 * Constructor for restoring from DB.
@@ -112,7 +105,7 @@ public class Message
 	/*
 	 * This constructor used for System Mails
 	 */
-	public Message(int receiverId, String subject, String content, SendBySystem sendBySystem)
+	public Message(int receiverId, String subject, String content, MessageSenderType sendBySystem)
 	{
 		_messageId = IdManager.getInstance().getNextId();
 		_senderId = -1;
@@ -143,7 +136,7 @@ public class Message
 		_unread = true;
 		_deletedBySender = true;
 		_deletedByReceiver = false;
-		_sendBySystem = SendBySystem.NONE.ordinal();
+		_sendBySystem = MessageSenderType.NONE.ordinal();
 		_returned = true;
 		_reqAdena = 0;
 		_hasAttachments = true;

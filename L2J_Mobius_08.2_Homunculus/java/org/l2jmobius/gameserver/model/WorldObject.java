@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.handler.ActionHandler;
 import org.l2jmobius.gameserver.handler.ActionShiftHandler;
 import org.l2jmobius.gameserver.handler.IActionHandler;

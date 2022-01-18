@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.actor.Player.PunishLevel;
+import org.l2jmobius.gameserver.enums.PunishmentType;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
@@ -154,7 +154,7 @@ public class FloodProtectorAction
 	{
 		if (_client.getPlayer() != null)
 		{
-			_client.getPlayer().setPunishLevel(PunishLevel.ACC, _config.PUNISHMENT_TIME);
+			_client.getPlayer().setPunishLevel(PunishmentType.ACC, _config.PUNISHMENT_TIME);
 			_client.getPlayer().logout();
 		}
 		if (LOGGER.isLoggable(Level.WARNING))
@@ -173,7 +173,7 @@ public class FloodProtectorAction
 			return;
 		}
 		
-		_client.getPlayer().setPunishLevel(PunishLevel.JAIL, _config.PUNISHMENT_TIME);
+		_client.getPlayer().setPunishLevel(PunishmentType.JAIL, _config.PUNISHMENT_TIME);
 		
 		if (LOGGER.isLoggable(Level.WARNING))
 		{

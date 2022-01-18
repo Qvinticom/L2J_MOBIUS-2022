@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.stats;
 import java.util.OptionalDouble;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.PlayerCondOverride;
+import org.l2jmobius.gameserver.enums.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
 import org.l2jmobius.gameserver.model.actor.transform.TransformType;

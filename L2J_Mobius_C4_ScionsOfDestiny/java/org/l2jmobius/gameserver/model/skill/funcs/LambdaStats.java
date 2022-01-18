@@ -23,17 +23,9 @@ import org.l2jmobius.gameserver.model.skill.Env;
  */
 public class LambdaStats extends Lambda
 {
-	public enum StatType
-	{
-		PLAYER_LEVEL,
-		TARGET_LEVEL,
-		PLAYER_MAX_HP,
-		PLAYER_MAX_MP
-	}
+	private final LambdaStatType _stat;
 	
-	private final StatType _stat;
-	
-	public LambdaStats(StatType stat)
+	public LambdaStats(LambdaStatType stat)
 	{
 		_stat = stat;
 	}

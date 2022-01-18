@@ -32,6 +32,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.enums.PlayerState;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -48,7 +49,6 @@ import org.l2jmobius.gameserver.model.skill.conditions.ConditionElementSeed;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionForceBuff;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionGameChance;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionGameTime;
-import org.l2jmobius.gameserver.model.skill.conditions.ConditionGameTime.CheckGameTime;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionLogicAnd;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionLogicNot;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionLogicOr;
@@ -59,7 +59,6 @@ import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerLevel;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerMp;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerRace;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerState;
-import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerState.CheckPlayerState;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionSkillStats;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionSlotItemId;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionTargetAggro;
@@ -76,6 +75,7 @@ import org.l2jmobius.gameserver.model.skill.funcs.Lambda;
 import org.l2jmobius.gameserver.model.skill.funcs.LambdaCalc;
 import org.l2jmobius.gameserver.model.skill.funcs.LambdaConst;
 import org.l2jmobius.gameserver.model.skill.funcs.LambdaStats;
+import org.l2jmobius.gameserver.model.skill.funcs.LambdaStatType;
 
 /**
  * @author mkizub
@@ -549,37 +549,37 @@ public abstract class DocumentBase
 			else if ("resting".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.RESTING, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.RESTING, val));
 			}
 			else if ("flying".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.FLYING, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.FLYING, val));
 			}
 			else if ("moving".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.MOVING, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.MOVING, val));
 			}
 			else if ("running".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.RUNNING, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.RUNNING, val));
 			}
 			else if ("behind".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.BEHIND, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.BEHIND, val));
 			}
 			else if ("front".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.FRONT, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.FRONT, val));
 			}
 			else if ("side".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionPlayerState(CheckPlayerState.SIDE, val));
+				cond = joinAnd(cond, new ConditionPlayerState(PlayerState.SIDE, val));
 			}
 			else if ("hp".equalsIgnoreCase(a.getNodeName()))
 			{
@@ -827,7 +827,7 @@ public abstract class DocumentBase
 			if ("night".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, val));
+				cond = joinAnd(cond, new ConditionGameTime(val));
 			}
 			
 			if ("chance".equalsIgnoreCase(a.getNodeName()))
@@ -898,22 +898,22 @@ public abstract class DocumentBase
 			{
 				if (val.equalsIgnoreCase("$player_level"))
 				{
-					return new LambdaStats(LambdaStats.StatType.PLAYER_LEVEL);
+					return new LambdaStats(LambdaStatType.PLAYER_LEVEL);
 				}
 				
 				if (val.equalsIgnoreCase("$target_level"))
 				{
-					return new LambdaStats(LambdaStats.StatType.TARGET_LEVEL);
+					return new LambdaStats(LambdaStatType.TARGET_LEVEL);
 				}
 				
 				if (val.equalsIgnoreCase("$player_max_hp"))
 				{
-					return new LambdaStats(LambdaStats.StatType.PLAYER_MAX_HP);
+					return new LambdaStats(LambdaStatType.PLAYER_MAX_HP);
 				}
 				
 				if (val.equalsIgnoreCase("$player_max_mp"))
 				{
-					return new LambdaStats(LambdaStats.StatType.PLAYER_MAX_MP);
+					return new LambdaStats(LambdaStatType.PLAYER_MAX_MP);
 				}
 				
 				// try to find value out of item fields

@@ -17,10 +17,11 @@
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.skill.SkillType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -133,7 +134,7 @@ public class Remedy implements IItemHandler
 			
 			player.setImmobilized(false);
 			
-			if (player.getFirstEffect(Effect.EffectType.ROOT) == null)
+			if (player.getFirstEffect(EffectType.ROOT) == null)
 			{
 				player.stopRooting(null);
 			}

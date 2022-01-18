@@ -34,6 +34,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
@@ -106,17 +107,6 @@ public class Party extends AbstractPlayerGroup
 		2666,
 		2667
 	};
-	
-	/**
-	 * The message type send to the party members.
-	 */
-	public enum MessageType
-	{
-		EXPELLED,
-		LEFT,
-		NONE,
-		DISCONNECTED
-	}
 	
 	/**
 	 * Construct a new Party object with a single member - the leader.
@@ -499,9 +489,9 @@ public class Party extends AbstractPlayerGroup
 	/**
 	 * Removes a party member using its name.
 	 * @param name player the player to be removed from the party.
-	 * @param type the message type {@link MessageType}.
+	 * @param type the message type {@link PartyMessageType}.
 	 */
-	public void removePartyMember(String name, MessageType type)
+	public void removePartyMember(String name, PartyMessageType type)
 	{
 		removePartyMember(getPlayerByName(name), type);
 	}
@@ -509,14 +499,14 @@ public class Party extends AbstractPlayerGroup
 	/**
 	 * Removes a party member instance.
 	 * @param player the player to be removed from the party.
-	 * @param type the message type {@link MessageType}.
+	 * @param type the message type {@link PartyMessageType}.
 	 */
-	public void removePartyMember(Player player, MessageType type)
+	public void removePartyMember(Player player, PartyMessageType type)
 	{
 		if (_members.contains(player))
 		{
 			final boolean isLeader = isLeader(player);
-			if (!_disbanding && ((_members.size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != MessageType.DISCONNECTED))))
+			if (!_disbanding && ((_members.size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != PartyMessageType.DISCONNECTED))))
 			{
 				disbandParty();
 				return;
@@ -548,14 +538,14 @@ public class Party extends AbstractPlayerGroup
 			}
 			
 			SystemMessage msg;
-			if (type == MessageType.EXPELLED)
+			if (type == PartyMessageType.EXPELLED)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
 				msg = new SystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY);
 				msg.addString(player.getName());
 				broadcastPacket(msg);
 			}
-			else if ((type == MessageType.LEFT) || (type == MessageType.DISCONNECTED))
+			else if ((type == PartyMessageType.LEFT) || (type == PartyMessageType.DISCONNECTED))
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
 				msg = new SystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY);
@@ -581,7 +571,7 @@ public class Party extends AbstractPlayerGroup
 			{
 				player.sendPacket(ExCloseMPCC.STATIC_PACKET);
 			}
-			if (isLeader && (_members.size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == MessageType.DISCONNECTED)))
+			if (isLeader && (_members.size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == PartyMessageType.DISCONNECTED)))
 			{
 				msg = new SystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 				msg.addString(getLeader().getName());
@@ -642,7 +632,7 @@ public class Party extends AbstractPlayerGroup
 		{
 			if (member != null)
 			{
-				removePartyMember(member, MessageType.NONE);
+				removePartyMember(member, PartyMessageType.NONE);
 			}
 		}
 		World.getInstance().decrementParty();

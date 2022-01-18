@@ -20,19 +20,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.EnchantSkillType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExEnchantSkillList implements IClientOutgoingPacket
 {
-	public enum EnchantSkillType
-	{
-		NORMAL,
-		SAFE,
-		UNTRAIN,
-		CHANGE_ROUTE,
-	}
-	
 	private final EnchantSkillType _type;
 	private final List<Skill> _skills = new LinkedList<>();
 	

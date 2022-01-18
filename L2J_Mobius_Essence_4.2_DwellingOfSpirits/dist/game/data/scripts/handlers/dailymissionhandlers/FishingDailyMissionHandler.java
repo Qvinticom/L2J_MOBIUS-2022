@@ -17,6 +17,7 @@
 package handlers.dailymissionhandlers;
 
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
+import org.l2jmobius.gameserver.enums.FishingEndReason;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
@@ -25,7 +26,6 @@ import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.network.serverpackets.fishing.ExFishingEnd.FishingEndReason;
 
 /**
  * @author UnAfraid

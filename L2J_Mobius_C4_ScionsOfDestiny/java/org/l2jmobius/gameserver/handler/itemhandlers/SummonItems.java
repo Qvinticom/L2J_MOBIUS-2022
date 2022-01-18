@@ -20,6 +20,7 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.SummonItemData;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Skill;
@@ -217,7 +218,7 @@ public class SummonItems implements IItemHandler
 				_player.sendPacket(new MagicSkillLaunched(_player, 2046, 1));
 				
 				// check for summon item validity
-				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getItemLocation() != Item.ItemLocation.INVENTORY))
+				if ((_item == null) || (_item.getOwnerId() != _player.getObjectId()) || (_item.getItemLocation() != ItemLocation.INVENTORY))
 				{
 					return;
 				}

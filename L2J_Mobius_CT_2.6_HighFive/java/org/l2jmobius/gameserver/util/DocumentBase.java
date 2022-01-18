@@ -44,7 +44,6 @@ import org.l2jmobius.gameserver.model.conditions.ConditionCategoryType;
 import org.l2jmobius.gameserver.model.conditions.ConditionChangeWeapon;
 import org.l2jmobius.gameserver.model.conditions.ConditionGameChance;
 import org.l2jmobius.gameserver.model.conditions.ConditionGameTime;
-import org.l2jmobius.gameserver.model.conditions.ConditionGameTime.CheckGameTime;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicAnd;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicNot;
 import org.l2jmobius.gameserver.model.conditions.ConditionLogicOr;
@@ -1224,7 +1223,7 @@ public abstract class DocumentBase
 			if ("night".equalsIgnoreCase(a.getNodeName()))
 			{
 				final boolean val = Boolean.parseBoolean(a.getNodeValue());
-				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, val));
+				cond = joinAnd(cond, new ConditionGameTime(val));
 			}
 			if ("chance".equalsIgnoreCase(a.getNodeName()))
 			{

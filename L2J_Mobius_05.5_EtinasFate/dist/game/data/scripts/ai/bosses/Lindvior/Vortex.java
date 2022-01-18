@@ -19,6 +19,7 @@ package ai.bosses.Lindvior;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.FlyType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -64,7 +65,7 @@ public class Vortex extends AbstractNpcAI
 						final int y = (int) (attackers.getY() + (600 * Math.sin(radians)));
 						final int z = attackers.getZ();
 						final Location loc = GeoEngine.getInstance().getValidLocation(attackers.getX(), attackers.getY(), attackers.getZ(), x, y, z, attackers.getInstanceWorld());
-						attackers.broadcastPacket(new FlyToLocation(attackers, x, y, z, FlyToLocation.FlyType.THROW_UP, 800, 800, 800));
+						attackers.broadcastPacket(new FlyToLocation(attackers, x, y, z, FlyType.THROW_UP, 800, 800, 800));
 						attackers.setXYZ(loc);
 						attackers.broadcastPacket(new ValidateLocation(attackers));
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);

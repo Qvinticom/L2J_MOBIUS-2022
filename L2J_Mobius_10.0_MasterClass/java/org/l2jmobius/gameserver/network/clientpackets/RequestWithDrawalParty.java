@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.enums.PartyMessageType;
 import org.l2jmobius.gameserver.model.Party;
-import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -46,7 +46,7 @@ public class RequestWithDrawalParty implements IClientIncomingPacket
 		final Party party = player.getParty();
 		if (party != null)
 		{
-			party.removePartyMember(player, MessageType.LEFT);
+			party.removePartyMember(player, PartyMessageType.LEFT);
 			
 			final MatchingRoom room = player.getMatchingRoom();
 			if (room != null)

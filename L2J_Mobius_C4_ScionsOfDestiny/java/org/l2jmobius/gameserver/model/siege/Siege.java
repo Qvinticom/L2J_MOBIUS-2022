@@ -33,14 +33,13 @@ import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.enums.SiegeTeleportWhoType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager.SiegeSpawn;
-import org.l2jmobius.gameserver.model.SiegeClan;
-import org.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -103,15 +102,6 @@ public class Siege
 	
 	protected static final Logger LOGGER = Logger.getLogger(Siege.class.getName());
 	private final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
-	
-	public enum TeleportWhoType
-	{
-		All,
-		Attacker,
-		DefenderNotOwner,
-		Owner,
-		Spectator
-	}
 	
 	private int _controlTowerCount;
 	private int _controlTowerMaxCount;
@@ -327,13 +317,13 @@ public class Siege
 			removeFlags();
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
+			teleportPlayer(SiegeTeleportWhoType.Attacker, TeleportWhereType.TOWN);
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.DefenderNotOwner, TeleportWhereType.TOWN);
+			teleportPlayer(SiegeTeleportWhoType.DefenderNotOwner, TeleportWhereType.TOWN);
 			
 			// Teleport to the second closest town
-			teleportPlayer(TeleportWhoType.Spectator, TeleportWhereType.TOWN);
+			teleportPlayer(SiegeTeleportWhoType.Spectator, TeleportWhereType.TOWN);
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
@@ -499,10 +489,10 @@ public class Siege
 				}
 				
 				// Teleport to the second closest town
-				teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.SIEGEFLAG);
+				teleportPlayer(SiegeTeleportWhoType.Attacker, TeleportWhereType.SIEGEFLAG);
 				
 				// Teleport to the second closest town
-				teleportPlayer(TeleportWhoType.Spectator, TeleportWhereType.TOWN);
+				teleportPlayer(SiegeTeleportWhoType.Spectator, TeleportWhereType.TOWN);
 				
 				// Removes defenders' flags
 				removeDefenderFlags();
@@ -560,7 +550,7 @@ public class Siege
 			updatePlayerSiegeStateFlags(false);
 			
 			// Teleport to the closest town
-			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
+			teleportPlayer(SiegeTeleportWhoType.Attacker, TeleportWhereType.TOWN);
 			_controlTowerCount = 0;
 			_controlTowerMaxCount = 0;
 			
@@ -1092,7 +1082,7 @@ public class Siege
 	 * @param teleportWho the teleport who
 	 * @param teleportWhere the teleport where
 	 */
-	public void teleportPlayer(TeleportWhoType teleportWho, TeleportWhereType teleportWhere)
+	public void teleportPlayer(SiegeTeleportWhoType teleportWho, TeleportWhereType teleportWhere)
 	{
 		List<Player> players;
 		switch (teleportWho)

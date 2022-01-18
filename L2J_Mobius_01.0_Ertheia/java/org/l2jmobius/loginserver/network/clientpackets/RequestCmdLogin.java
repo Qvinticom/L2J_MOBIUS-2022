@@ -28,13 +28,12 @@ import org.l2jmobius.commons.network.IIncomingPacket;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import org.l2jmobius.loginserver.LoginController;
-import org.l2jmobius.loginserver.LoginController.AuthLoginResult;
+import org.l2jmobius.loginserver.enums.AccountKickedReason;
+import org.l2jmobius.loginserver.enums.LoginFailReason;
 import org.l2jmobius.loginserver.model.data.AccountInfo;
 import org.l2jmobius.loginserver.network.ConnectionState;
 import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.serverpackets.AccountKicked;
-import org.l2jmobius.loginserver.network.serverpackets.AccountKicked.AccountKickedReason;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
 import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
@@ -103,8 +102,7 @@ public class RequestCmdLogin implements IIncomingPacket<LoginClient>
 			return;
 		}
 		
-		final AuthLoginResult result = lc.tryCheckinAccount(client, clientAddr, info);
-		switch (result)
+		switch (lc.tryCheckinAccount(client, clientAddr, info))
 		{
 			case AUTH_SUCCESS:
 			{

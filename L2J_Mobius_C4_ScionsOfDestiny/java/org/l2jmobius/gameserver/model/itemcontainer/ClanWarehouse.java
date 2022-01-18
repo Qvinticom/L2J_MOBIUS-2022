@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.itemcontainer;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.item.instance.Item.ItemLocation;
 
 public class ClanWarehouse extends Warehouse
 {

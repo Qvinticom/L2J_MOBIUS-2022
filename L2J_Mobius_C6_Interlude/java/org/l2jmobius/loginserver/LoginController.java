@@ -43,9 +43,10 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
+import org.l2jmobius.loginserver.enums.LoginFailReason;
+import org.l2jmobius.loginserver.enums.LoginResult;
 import org.l2jmobius.loginserver.model.data.AccountInfo;
 import org.l2jmobius.loginserver.network.LoginClient;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
 public class LoginController
 {
@@ -226,26 +227,26 @@ public class LoginController
 		}
 	}
 	
-	public AuthLoginResult tryCheckinAccount(LoginClient client, InetAddress address, AccountInfo info)
+	public LoginResult tryCheckinAccount(LoginClient client, InetAddress address, AccountInfo info)
 	{
 		if (info.getAccessLevel() < 0)
 		{
-			return AuthLoginResult.ACCOUNT_BANNED;
+			return LoginResult.ACCOUNT_BANNED;
 		}
 		
-		AuthLoginResult ret = AuthLoginResult.INVALID_PASSWORD;
+		LoginResult ret = LoginResult.INVALID_PASSWORD;
 		// check auth
 		if (canCheckin(client, address, info))
 		{
 			// login was successful, verify presence on Gameservers
-			ret = AuthLoginResult.ALREADY_ON_GS;
+			ret = LoginResult.ALREADY_ON_GS;
 			if (!isAccountInAnyGameServer(info.getLogin()))
 			{
 				// account isnt on any GS verify LS itself
-				ret = AuthLoginResult.ALREADY_ON_LS;
+				ret = LoginResult.ALREADY_ON_LS;
 				if (_loginServerClients.putIfAbsent(info.getLogin(), client) == null)
 				{
-					ret = AuthLoginResult.AUTH_SUCCESS;
+					ret = LoginResult.AUTH_SUCCESS;
 				}
 			}
 		}
@@ -531,14 +532,5 @@ public class LoginController
 				}
 			}
 		}
-	}
-	
-	public enum AuthLoginResult
-	{
-		INVALID_PASSWORD,
-		ACCOUNT_BANNED,
-		ALREADY_ON_LS,
-		ALREADY_ON_GS,
-		AUTH_SUCCESS
 	}
 }

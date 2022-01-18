@@ -16,12 +16,13 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.knownlist.PlayableKnownList;
 import org.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import org.l2jmobius.gameserver.model.actor.status.PlayableStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 
 /**
  * This class represents all Playable characters in the world.<br>
@@ -239,7 +240,7 @@ public abstract class Playable extends Creature
 		
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.NOBLESSE_BLESSING);
+			stopEffects(EffectType.NOBLESSE_BLESSING);
 		}
 		else
 		{
@@ -296,7 +297,7 @@ public abstract class Playable extends Creature
 		
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.PROTECTION_BLESSING);
+			stopEffects(EffectType.PROTECTION_BLESSING);
 		}
 		else
 		{
@@ -353,7 +354,7 @@ public abstract class Playable extends Creature
 		
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.PHOENIX_BLESSING);
+			stopEffects(EffectType.PHOENIX_BLESSING);
 		}
 		else
 		{
@@ -432,7 +433,7 @@ public abstract class Playable extends Creature
 		
 		if (effect == null)
 		{
-			stopEffects(Effect.EffectType.CHARM_OF_LUCK);
+			stopEffects(EffectType.CHARM_OF_LUCK);
 		}
 		else
 		{

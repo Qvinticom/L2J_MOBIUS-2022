@@ -21,10 +21,10 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.ClanHallTable;
+import org.l2jmobius.gameserver.enums.NpcRace;
+import org.l2jmobius.gameserver.enums.PlayerState;
 import org.l2jmobius.gameserver.instancemanager.ClassDamageManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
-import org.l2jmobius.gameserver.model.Effect;
-import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.Cubic;
 import org.l2jmobius.gameserver.model.actor.instance.Door;
 import org.l2jmobius.gameserver.model.actor.instance.Pet;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
+import org.l2jmobius.gameserver.model.effects.Effect;
 import org.l2jmobius.gameserver.model.item.Armor;
 import org.l2jmobius.gameserver.model.item.ItemTemplate;
 import org.l2jmobius.gameserver.model.item.Weapon;
@@ -46,8 +46,8 @@ import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.siege.Siege;
+import org.l2jmobius.gameserver.model.siege.SiegeClan;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerState;
-import org.l2jmobius.gameserver.model.skill.conditions.ConditionPlayerState.CheckPlayerState;
 import org.l2jmobius.gameserver.model.skill.conditions.ConditionUsingItemType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectTemplate;
 import org.l2jmobius.gameserver.model.skill.funcs.Func;
@@ -143,7 +143,7 @@ public class Formulas
 		private FuncMultRegenResting(Stat pStat)
 		{
 			super(pStat, 0x20, null);
-			setCondition(new ConditionPlayerState(CheckPlayerState.RESTING, true));
+			setCondition(new ConditionPlayerState(PlayerState.RESTING, true));
 		}
 		
 		/**
@@ -1541,32 +1541,32 @@ public class Formulas
 		if (attacker instanceof Npc)
 		{
 			// Skill Race : Undead
-			if (((Npc) attacker).getTemplate().getRace() == NpcTemplate.Race.UNDEAD)
+			if (((Npc) attacker).getTemplate().getRace() == NpcRace.UNDEAD)
 			{
 				damage /= attacker.getPDefUndead(target);
 			}
 			
-			if (((Npc) attacker).getTemplate().getRace() == NpcTemplate.Race.PLANT)
+			if (((Npc) attacker).getTemplate().getRace() == NpcRace.PLANT)
 			{
 				damage /= attacker.getPDefPlants(target);
 			}
 			
-			if (((Npc) attacker).getTemplate().getRace() == NpcTemplate.Race.BUG)
+			if (((Npc) attacker).getTemplate().getRace() == NpcRace.BUG)
 			{
 				damage /= attacker.getPDefInsects(target);
 			}
 			
-			if (((Npc) attacker).getTemplate().getRace() == NpcTemplate.Race.ANIMAL)
+			if (((Npc) attacker).getTemplate().getRace() == NpcRace.ANIMAL)
 			{
 				damage /= attacker.getPDefAnimals(target);
 			}
 			
-			if (((Npc) attacker).getTemplate().getRace() == NpcTemplate.Race.BEAST)
+			if (((Npc) attacker).getTemplate().getRace() == NpcRace.BEAST)
 			{
 				damage /= attacker.getPDefMonsters(target);
 			}
 			
-			if (((Npc) attacker).getTemplate().getRace() == NpcTemplate.Race.DRAGON)
+			if (((Npc) attacker).getTemplate().getRace() == NpcRace.DRAGON)
 			{
 				damage /= attacker.getPDefDragons(target);
 			}

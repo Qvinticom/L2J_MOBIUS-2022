@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.item.instance.Item;
@@ -50,7 +51,7 @@ public class ItemsAutoDestroyTaskManager implements Runnable
 		final long curtime = Chronos.currentTimeMillis();
 		for (Item item : _items)
 		{
-			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != Item.ItemLocation.VOID))
+			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemLocation.VOID))
 			{
 				_items.remove(item);
 			}

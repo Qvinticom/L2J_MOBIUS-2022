@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.WarehouseListType;
 import org.l2jmobius.gameserver.model.TeleportLocation;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -34,7 +35,6 @@ import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SortedWareHouseWithdrawalList;
-import org.l2jmobius.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 

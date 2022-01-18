@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skill.effects;
 
-import org.l2jmobius.gameserver.model.Effect;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Env;
 
 /**
@@ -32,7 +33,7 @@ public class EffectPsychicalMute extends Effect
 	@Override
 	public EffectType getEffectType()
 	{
-		return Effect.EffectType.PSYCHICAL_MUTE;
+		return EffectType.PSYCHICAL_MUTE;
 	}
 	
 	@Override

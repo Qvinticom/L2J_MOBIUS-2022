@@ -24,6 +24,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.LoginServerThread;
+import org.l2jmobius.gameserver.enums.PunishmentType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -112,7 +113,7 @@ public class AdminBan implements IAdminCommandHandler
 			}
 			else
 			{
-				targetPlayer.setPunishLevel(Player.PunishLevel.ACC, 0);
+				targetPlayer.setPunishLevel(PunishmentType.ACC, 0);
 				BuilderUtil.sendSysMessage(activeChar, "Account " + targetPlayer.getAccountName() + " banned.");
 				auditAction(command, activeChar, targetPlayer.getAccountName());
 			}
@@ -142,7 +143,7 @@ public class AdminBan implements IAdminCommandHandler
 					return false;
 				}
 				String banLengthStr = "";
-				targetPlayer.setPunishLevel(Player.PunishLevel.CHAT, duration);
+				targetPlayer.setPunishLevel(PunishmentType.CHAT, duration);
 				if (duration > 0)
 				{
 					banLengthStr = " for " + duration + " minutes";
@@ -167,7 +168,7 @@ public class AdminBan implements IAdminCommandHandler
 			{
 				if (targetPlayer.isChatBanned())
 				{
-					targetPlayer.setPunishLevel(Player.PunishLevel.NONE, 0);
+					targetPlayer.setPunishLevel(PunishmentType.NONE, 0);
 					activeChar.sendMessage(targetPlayer.getName() + "'s chat ban has now been lifted.");
 					auditAction(command, activeChar, targetPlayer.getName());
 				}
@@ -234,7 +235,7 @@ public class AdminBan implements IAdminCommandHandler
 			}
 			if (targetPlayer != null)
 			{
-				targetPlayer.setPunishLevel(Player.PunishLevel.JAIL, duration);
+				targetPlayer.setPunishLevel(PunishmentType.JAIL, duration);
 				BuilderUtil.sendSysMessage(activeChar, "Character " + targetPlayer.getName() + " jailed for " + (duration > 0 ? duration + " minutes." : "ever!"));
 				auditAction(command, activeChar, targetPlayer.getName());
 				if (targetPlayer.getParty() != null)
@@ -257,7 +258,7 @@ public class AdminBan implements IAdminCommandHandler
 			}
 			else if (targetPlayer != null)
 			{
-				targetPlayer.setPunishLevel(Player.PunishLevel.NONE, 0);
+				targetPlayer.setPunishLevel(PunishmentType.NONE, 0);
 				BuilderUtil.sendSysMessage(activeChar, "Character " + targetPlayer.getName() + " removed from jail");
 				auditAction(command, activeChar, targetPlayer.getName());
 			}
@@ -287,12 +288,12 @@ public class AdminBan implements IAdminCommandHandler
 		long value = 0;
 		if (ban)
 		{
-			level = Player.PunishLevel.CHAT.value();
+			level = PunishmentType.CHAT.value();
 			value = (delay > 0 ? delay * 60000 : 60000);
 		}
 		else
 		{
-			level = Player.PunishLevel.NONE.value();
+			level = PunishmentType.NONE.value();
 			value = 0;
 		}
 		
@@ -333,7 +334,7 @@ public class AdminBan implements IAdminCommandHandler
 			statement.setInt(1, -114356);
 			statement.setInt(2, -249645);
 			statement.setInt(3, -2984);
-			statement.setInt(4, Player.PunishLevel.JAIL.value());
+			statement.setInt(4, PunishmentType.JAIL.value());
 			statement.setLong(5, (delay > 0 ? delay * 60000 : 0));
 			statement.setString(6, name);
 			statement.execute();

@@ -61,6 +61,8 @@ import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.ItemLocation;
+import org.l2jmobius.gameserver.enums.PunishmentType;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
@@ -601,7 +603,7 @@ public class GameStatusThread extends Thread
 						// Player playerObj = World.getInstance().getPlayer(player);
 						if (playerObj != null)
 						{
-							playerObj.setPunishLevel(Player.PunishLevel.JAIL, delay);
+							playerObj.setPunishLevel(PunishmentType.JAIL, delay);
 							_print.println("Character " + playerObj.getName() + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
 						}
 						else
@@ -626,7 +628,7 @@ public class GameStatusThread extends Thread
 						final Player playerObj = World.getInstance().getPlayer(playerName);
 						if (playerObj != null)
 						{
-							playerObj.setPunishLevel(Player.PunishLevel.NONE, 0);
+							playerObj.setPunishLevel(PunishmentType.NONE, 0);
 							_print.println("Character " + playerObj.getName() + " removed from jail");
 						}
 						else
@@ -896,7 +898,7 @@ public class GameStatusThread extends Thread
 			statement.setInt(1, -114356);
 			statement.setInt(2, -249645);
 			statement.setInt(3, -2984);
-			statement.setInt(4, Player.PunishLevel.JAIL.value());
+			statement.setInt(4, PunishmentType.JAIL.value());
 			statement.setLong(5, delay * 60000);
 			statement.setString(6, name);
 			statement.execute();
@@ -1006,7 +1008,7 @@ public class GameStatusThread extends Thread
 			}
 			if (obj instanceof Item)
 			{
-				if (((Item) obj).getItemLocation() == Item.ItemLocation.VOID)
+				if (((Item) obj).getItemLocation() == ItemLocation.VOID)
 				{
 					itemVoidCount++;
 				}

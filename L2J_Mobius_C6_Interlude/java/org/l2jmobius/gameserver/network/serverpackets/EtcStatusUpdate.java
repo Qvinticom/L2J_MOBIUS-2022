@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -34,7 +34,7 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 	public EtcStatusUpdate(Player player)
 	{
 		_player = player;
-		_effect = (EffectCharge) _player.getFirstEffect(Effect.EffectType.CHARGE);
+		_effect = (EffectCharge) _player.getFirstEffect(EffectType.CHARGE);
 	}
 	
 	@Override

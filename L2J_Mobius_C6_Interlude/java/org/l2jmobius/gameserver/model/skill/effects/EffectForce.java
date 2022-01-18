@@ -19,8 +19,9 @@ package org.l2jmobius.gameserver.model.skill.effects;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.SkillTable;
-import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.effects.Effect;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skill.Env;
 import org.l2jmobius.gameserver.util.Util;
 
