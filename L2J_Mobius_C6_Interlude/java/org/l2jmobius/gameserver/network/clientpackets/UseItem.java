@@ -480,7 +480,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 				}
 				
-				// unEquipItem will call also the remove boni for augument
+				// unEquipItem will call also the remove bonus for augment
 				items = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart);
 			}
 			else
@@ -567,12 +567,6 @@ public class UseItem implements IClientIncomingPacket
 				}
 				player.sendPacket(sm);
 				
-				// Apply augementation boni on equip
-				if (item.isAugmented())
-				{
-					item.getAugmentation().applyBonus(player);
-				}
-				
 				// Apply cupid's bow skills on equip
 				if (item.isCupidBow())
 				{
@@ -589,11 +583,20 @@ public class UseItem implements IClientIncomingPacket
 				}
 				
 				items = player.getInventory().equipItemAndRecord(item);
+				
+				// Apply augementation bonus on equip
+				// This check must be done here after equipItemAndRecord() that will call the removebonus for old item
+				if (item.isAugmented())
+				{
+					item.getAugmentation().applyBonus(player);
+				}
+				
+				// Charge Soulshot/Spiritshot like L2OFF
 				if (item.getItem() instanceof Weapon)
 				{
-					// Charge Soulshot/Spiritshot like L2OFF
 					player.rechargeAutoSoulShot(true, true, false);
 				}
+				
 				// Consume mana - will start a task if required; returns if item is not a shadow item.
 				item.decreaseMana(false);
 			}

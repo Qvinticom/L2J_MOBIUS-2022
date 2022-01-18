@@ -449,7 +449,7 @@ public class UseItem implements IClientIncomingPacket
 					}
 				}
 				
-				// unEquipItem will call also the remove boni for augument
+				// unEquipItem will call also the remove bonus for augment
 				items = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart);
 			}
 			else
@@ -535,11 +535,13 @@ public class UseItem implements IClientIncomingPacket
 				}
 				
 				items = player.getInventory().equipItemAndRecord(item);
+				
+				// Charge Soulshot/Spiritshot like L2OFF
 				if (item.getItem() instanceof Weapon)
 				{
-					// Charge Soulshot/Spiritshot like L2OFF
 					player.rechargeAutoSoulShot(true, true, false);
 				}
+				
 				// Consume mana - will start a task if required; returns if item is not a shadow item.
 				item.decreaseMana(false);
 			}
