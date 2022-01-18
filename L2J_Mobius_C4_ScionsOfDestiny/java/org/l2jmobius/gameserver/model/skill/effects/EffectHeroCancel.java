@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skill.effects;
 
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.skill.Env;
@@ -27,6 +28,19 @@ import org.l2jmobius.gameserver.model.skill.SkillType;
  */
 public class EffectHeroCancel extends Effect
 {
+	private static final int CHANCE = 10;
+	private static final int[] IGNORED_SKILLS =
+	{
+		110, // Ultimate Defense
+		111, // Ultimate Evasion
+		1323, // Noblesse Blessing
+		1325, // Fortune of Noblesse
+		4082, // Poison of Death
+		4215, // Raid Curse
+		4515, // Raid Curse
+		5182, // Blessing of Protection
+	};
+	
 	public EffectHeroCancel(final Env env, final EffectTemplate template)
 	{
 		super(env, template);
@@ -53,21 +67,13 @@ public class EffectHeroCancel extends Effect
 				}
 			}
 			
-			if ((e.getSkill().getId() != 4082) && (e.getSkill().getId() != 4215) && (e.getSkill().getId() != 5182) && (e.getSkill().getId() != 4515) && (e.getSkill().getId() != 110) && (e.getSkill().getId() != 111) && (e.getSkill().getId() != 1323) && (e.getSkill().getId() != 1325))
+			if (!CommonUtil.contains(IGNORED_SKILLS, e.getSkill().getId()) && (e.getSkill().getSkillType() == SkillType.BUFF) && (Rnd.get(100) < CHANCE))
 			{
-				if (e.getSkill().getSkillType() == SkillType.BUFF)
+				e.exit(true);
+				maxdisp--;
+				if (maxdisp == 0)
 				{
-					int rate = 10;
-					
-					if (Rnd.get(100) < rate)
-					{
-						e.exit(true);
-						maxdisp--;
-						if (maxdisp == 0)
-						{
-							break;
-						}
-					}
+					break;
 				}
 			}
 		}
