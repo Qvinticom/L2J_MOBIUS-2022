@@ -59,7 +59,7 @@ public class CreatureStat
 	 */
 	public double calcStat(Stat stat, double init, Creature target, Skill skill)
 	{
-		if (_creature == null)
+		if ((_creature == null) || (stat == null))
 		{
 			return init;
 		}
@@ -106,6 +106,7 @@ public class CreatureStat
 				case STAT_WIT:
 				{
 					env.value = 1;
+					break;
 				}
 			}
 		}
