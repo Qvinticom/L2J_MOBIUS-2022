@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
+import org.l2jmobius.gameserver.util.Util;
 
 public class SendWareHouseWithDrawList implements IClientIncomingPacket
 {
@@ -138,10 +139,12 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 			
 			// Calculate needed slots
 			final Item item = warehouse.getItemByObjectId(objectId);
-			if (item == null)
+			if ((item == null) || (item.getCount() < count))
 			{
-				continue;
+				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to withdraw non-existent item from warehouse.", Config.DEFAULT_PUNISH);
+				return;
 			}
+			
 			weight += count * item.getItem().getWeight();
 			if (!item.isStackable())
 			{

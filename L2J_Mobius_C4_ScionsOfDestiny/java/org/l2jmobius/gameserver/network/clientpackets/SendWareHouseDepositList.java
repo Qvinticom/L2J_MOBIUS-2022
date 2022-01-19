@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.item.type.EtcItemType;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -224,6 +225,11 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			if (oldItem == null)
 			{
 				PacketLogger.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
+				continue;
+			}
+			
+			if (!oldItem.isAvailable(player, true, warehouse instanceof PlayerWarehouse))
+			{
 				continue;
 			}
 			
