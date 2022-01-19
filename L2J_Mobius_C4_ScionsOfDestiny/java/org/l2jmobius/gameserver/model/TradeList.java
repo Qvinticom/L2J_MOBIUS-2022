@@ -351,14 +351,13 @@ public class TradeList
 			return null;
 		}
 		
-		if (count > item.getCount())
+		if ((count <= 0) || (count > item.getCount()))
 		{
 			return null;
 		}
 		
 		if (!item.isStackable() && (count > 1))
 		{
-			LOGGER.warning(_owner.getName() + ": Attempt to add non-stackable item to TradeList with count > 1!");
 			return null;
 		}
 		
