@@ -963,17 +963,18 @@ public class Attackable extends Npc
 		ai._damage += damage;
 		
 		// Set the intention to the Attackable to AI_INTENTION_ACTIVE
-		if ((getAI() != null) && (aggro > 0) && (getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		final CreatureAI activeAI = getAI();
+		if ((activeAI != null) && (aggro > 0) && (activeAI.getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
-			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+			activeAI.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}
 		
 		// Notify the Attackable AI with EVT_ATTACKED
 		if (damage > 0)
 		{
-			if (getAI() != null)
+			if (activeAI != null)
 			{
-				getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
+				activeAI.notifyEvent(CtrlEvent.EVT_ATTACKED, attacker);
 			}
 			
 			try
