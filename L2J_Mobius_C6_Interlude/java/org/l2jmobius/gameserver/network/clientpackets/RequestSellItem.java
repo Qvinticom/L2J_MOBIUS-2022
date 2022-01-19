@@ -40,9 +40,6 @@ public class RequestSellItem implements IClientIncomingPacket
 	private int _count;
 	private int[] _items; // count*3
 	
-	/**
-	 * packet type id 0x1e sample 1e 00 00 00 00 // list id 02 00 00 00 // number of items 71 72 00 10 // object id ea 05 00 00 // item id 01 00 00 00 // item count 76 4b 00 10 // object id 2e 0a 00 00 // item id 01 00 00 00 // item count format: cdd (ddd)
-	 */
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
@@ -88,18 +85,23 @@ public class RequestSellItem implements IClientIncomingPacket
 			return;
 		}
 		
+		if (_items == null)
+		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		// Alt game - Karma punishment
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getKarma() > 0))
 		{
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final WorldObject target = player.getTarget();
-		if (!player.isGM() && ((target == null) // No target (ie GM Shop)
-			|| !(target instanceof Merchant) // Target not a merchant and not mercmanager
-			|| !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)))
+		if (!player.isGM() && (!(target instanceof Merchant) || !player.isInsideRadius2D(target, Npc.INTERACTION_DISTANCE)))
 		{
-			return; // Distance is too far
+			return;
 		}
 		
 		String htmlFolder = "";
@@ -129,18 +131,16 @@ public class RequestSellItem implements IClientIncomingPacket
 		// Proceed the sell
 		for (int i = 0; i < _count; i++)
 		{
-			final int objectId = _items[(i * 3) + 0];
-			final int count = _items[(i * 3) + 2];
-			
 			// Check count
+			final int count = _items[(i * 3) + 2];
 			if ((count <= 0) || (count > Integer.MAX_VALUE))
 			{
-				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " items at the same time.", Config.DEFAULT_PUNISH);
 				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
 			
 			// Check Item
+			final int objectId = _items[i * 3];
 			final Item item = player.checkItemManipulation(objectId, count, "sell");
 			if ((item == null) || !item.getItem().isSellable() || (item.getItemLocation() != ItemLocation.INVENTORY))
 			{
@@ -153,7 +153,6 @@ public class RequestSellItem implements IClientIncomingPacket
 			// Fix exploit during Sell
 			if (((Integer.MAX_VALUE / count) < price) || (totalPrice > Integer.MAX_VALUE))
 			{
-				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
 				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
@@ -161,7 +160,6 @@ public class RequestSellItem implements IClientIncomingPacket
 			// Check totalPrice
 			if (totalPrice <= 0)
 			{
-				// Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " adena worth of goods.", Config.DEFAULT_PUNISH);
 				player.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 				return;
 			}
