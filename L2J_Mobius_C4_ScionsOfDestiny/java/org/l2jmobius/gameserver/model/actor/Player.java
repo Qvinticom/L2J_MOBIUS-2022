@@ -10490,30 +10490,6 @@ public class Player extends Playable
 	}
 	
 	/**
-	 * Leave olympiad observer mode.
-	 */
-	public void leaveOlympiadObserverMode()
-	{
-		setTarget(null);
-		sendPacket(new ExOlympiadMode(0, this));
-		teleToLocation(_obsX, _obsY, _obsZ, true);
-		getAppearance().setVisible();
-		setInvul(false);
-		if (getAI() != null)
-		{
-			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		}
-		Olympiad.getInstance();
-		Olympiad.removeSpectator(_olympiadGameId, this);
-		_olympiadGameId = -1;
-		_observerMode = false;
-		if (!_wasInvisible)
-		{
-			broadcastUserInfo();
-		}
-	}
-	
-	/**
 	 * Update name title color.
 	 */
 	public void updateNameTitleColor()
@@ -15211,6 +15187,11 @@ public class Player extends Playable
 	
 	public void leaveOlympiadObserverMode(boolean olymp)
 	{
+		if (_olympiadGameId == -1)
+		{
+			return;
+		}
+		
 		setTarget(null);
 		sendPacket(new ExOlympiadMode(0, this));
 		teleToLocation(_obsX, _obsY, _obsZ, true);
@@ -15230,9 +15211,17 @@ public class Player extends Playable
 		{
 			Olympiad.removeSpectator(_olympiadGameId, this);
 		}
+		
 		_olympiadGameId = -1;
 		_observerMode = false;
-		broadcastUserInfo();
+		_obsX = getX();
+		_obsY = getY();
+		_obsZ = getZ();
+		
+		if (!_wasInvisible)
+		{
+			broadcastUserInfo();
+		}
 	}
 	
 	public void setHero(boolean hero)

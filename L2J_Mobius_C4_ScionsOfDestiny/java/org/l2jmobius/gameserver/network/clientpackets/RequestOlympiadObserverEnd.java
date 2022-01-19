@@ -43,7 +43,7 @@ public class RequestOlympiadObserverEnd implements IClientIncomingPacket
 		
 		if (player.inObserverMode())
 		{
-			player.leaveOlympiadObserverMode();
+			player.leaveOlympiadObserverMode(false);
 		}
 	}
 }
