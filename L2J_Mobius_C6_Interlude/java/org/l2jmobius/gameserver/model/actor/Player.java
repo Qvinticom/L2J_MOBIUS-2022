@@ -4171,26 +4171,26 @@ public class Player extends Playable
 	{
 		if (World.getInstance().findObject(objectId) == null)
 		{
-			LOGGER.warning(getObjectId() + ": player tried to " + action + " item not available in World");
+			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item not available in World.");
 			return null;
 		}
 		
 		final Item item = getInventory().getItemByObjectId(objectId);
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
-			LOGGER.warning(getObjectId() + ": player tried to " + action + " item he is not owner of");
+			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item he is not owner of.");
 			return null;
 		}
 		
 		if ((count < 0) || ((count > 1) && !item.isStackable()))
 		{
-			LOGGER.warning(getObjectId() + ": player tried to " + action + " item with invalid count: " + count);
+			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item with invalid count: " + count);
 			return null;
 		}
 		
 		if (count > item.getCount())
 		{
-			LOGGER.warning(getObjectId() + ": player tried to " + action + " more items than he owns");
+			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " more items than he owns.");
 			return null;
 		}
 		
@@ -4205,9 +4205,15 @@ public class Player extends Playable
 			return null;
 		}
 		
+		// We cannot put a Weapon with Augmention in WH while casting (Possible Exploit)
+		if (item.isAugmented() && (isCastingNow()))
+		{
+			return null;
+		}
+		
+		// cannot drop/trade wear-items
 		if (item.isWear())
 		{
-			// cannot drop/trade wear-items
 			return null;
 		}
 		
@@ -12919,24 +12925,25 @@ public class Player extends Playable
 		final Item item = getInventory().getItemByItemId(itemId);
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
-			LOGGER.warning(getObjectId() + ": player tried to " + action + " item he is not owner of");
+			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item he is not owner of");
 			return false;
 		}
+		
 		if ((getActiveEnchantItem() != null) && (getActiveEnchantItem().getItemId() == itemId))
 		{
-			LOGGER.warning(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
+			LOGGER.warning(getObjectId() + ":player " + this + " tried to " + action + " an enchant scroll he was using");
 			return false;
 		}
 		
+		// can not trade a cursed weapon
 		if (CursedWeaponsManager.getInstance().isCursed(itemId))
 		{
-			// can not trade a cursed weapon
 			return false;
 		}
 		
+		// cannot drop/trade wear-items
 		if (item.isWear())
 		{
-			// cannot drop/trade wear-items
 			return false;
 		}
 		
@@ -12954,7 +12961,7 @@ public class Player extends Playable
 		final Item item = getInventory().getItemByObjectId(objectId);
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
-			LOGGER.warning(getObjectId() + ": player tried to " + action + " item he is not owner of");
+			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item he is not owner of");
 			return false;
 		}
 		
@@ -12969,15 +12976,15 @@ public class Player extends Playable
 			return false;
 		}
 		
+		// can not trade a cursed weapon
 		if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
 		{
-			// can not trade a cursed weapon
 			return false;
 		}
 		
+		// cannot drop/trade wear-items
 		if (item.isWear())
 		{
-			// cannot drop/trade wear-items
 			return false;
 		}
 		
