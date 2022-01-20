@@ -1,5 +1,5 @@
 L2J-Mobius Master Class
-Client: https://drive.google.com/u/0/uc?id=1_Z4eK_0T8SomK_BAnYWinkiECOztVYOw&export=download
+Client: https://drive.google.com/u/0/uc?id=1GA0TYYTQgaV5V0jK3qAuyEMPcX8EvAQp&export=download
 System: https://mega.nz/file/EwdSFZKD#1yIxgst5gzrpc7DQvSm1aokgfan7vfl3tRpMi6nZ51U
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
