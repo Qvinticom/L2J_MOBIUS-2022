@@ -686,12 +686,12 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		final ClassId newClass = Arrays.stream(ClassId.values()).filter(cid -> player.getClassId() == cid.getParent()).findAny().orElse(null);
 		if (newClass == null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": No new classId found for player " + player);
+			LOGGER.warning(getClass().getSimpleName() + ": No new classId found for " + player);
 			return false;
 		}
 		else if (newClass == player.getClassId())
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": New classId found for player " + player + " is exactly the same as the one he currently is!");
+			LOGGER.warning(getClass().getSimpleName() + ": New classId found for " + player + " is exactly the same as the one he currently is!");
 			return false;
 		}
 		else if (checkIfClassChangeHasOptions(player))

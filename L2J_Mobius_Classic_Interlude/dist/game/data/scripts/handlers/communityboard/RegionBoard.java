@@ -80,7 +80,7 @@ public class RegionBoard implements IWriteBoardHandler
 			final String id = command.replace("_bbsloc;", "");
 			if (!Util.isDigit(id))
 			{
-				LOG.warning(RegionBoard.class.getSimpleName() + ": Player " + player + " sent and invalid region bypass " + command + "!");
+				LOG.warning(RegionBoard.class.getSimpleName() + ": " + player + " sent and invalid region bypass " + command + "!");
 				return false;
 			}
 			

@@ -1561,7 +1561,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 					final Quest q = QuestManager.getInstance().getQuest(questId);
 					if (q == null)
 					{
-						LOGGER.finer("Unknown quest " + questId + " for player " + player.getName());
+						LOGGER.finer("Unknown quest " + questId + " for " + player);
 						if (Config.AUTODELETE_INVALID_QUEST_DATA)
 						{
 							invalidQuestData.setInt(1, player.getObjectId());
@@ -1592,7 +1592,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 						final QuestState qs = player.getQuestState(questId);
 						if (qs == null)
 						{
-							LOGGER.finer("Lost variable " + var + " in quest " + questId + " for player " + player.getName());
+							LOGGER.finer("Lost variable " + var + " in quest " + questId + " for " + player);
 							if (Config.AUTODELETE_INVALID_QUEST_DATA)
 							{
 								invalidQuestDataVar.setInt(1, player.getObjectId());

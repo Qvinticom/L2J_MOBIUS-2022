@@ -71,7 +71,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		}
 		if (msg.getSenderId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to cancel not own post!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to cancel not own post!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -123,19 +123,19 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 			
 			if (item.getOwnerId() != player.getObjectId())
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get not own item from cancelled attachment!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get not own item from cancelled attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (item.getItemLocation() != ItemLocation.MAIL)
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items not from mail !", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get items not from mail !", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (item.getLocationSlot() != msg.getId())
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			

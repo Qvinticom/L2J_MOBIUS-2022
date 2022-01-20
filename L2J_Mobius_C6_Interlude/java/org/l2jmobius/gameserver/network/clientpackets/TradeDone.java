@@ -54,7 +54,7 @@ public class TradeDone implements IClientIncomingPacket
 		final TradeList trade = player.getActiveTradeList();
 		if (trade == null)
 		{
-			// LOGGER.warning("player.getTradeList == null in " + getType() + " for player " + player.getName());
+			// LOGGER.warning("player.getTradeList == null in " + getType() + " for " + player);
 			return;
 		}
 		

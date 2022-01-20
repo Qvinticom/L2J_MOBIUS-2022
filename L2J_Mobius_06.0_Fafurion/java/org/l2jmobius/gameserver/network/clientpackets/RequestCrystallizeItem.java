@@ -89,7 +89,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			if ((player.getRace() != Race.DWARF) && (player.getClassId().getId() != 117) && (player.getClassId().getId() != 55))
 			{
-				PacketLogger.info("Player " + player + " used crystalize with classid: " + player.getClassId().getId());
+				PacketLogger.info(player + " used crystalize with classid: " + player.getClassId().getId());
 			}
 			return;
 		}

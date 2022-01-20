@@ -50,7 +50,7 @@ public class SetPrivateStoreMsgBuy implements IClientIncomingPacket
 		
 		if ((_storeMsg != null) && (_storeMsg.length() > MAX_MSG_LENGTH))
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow private store buy message", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to overflow private store buy message", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

@@ -135,7 +135,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		
 		if ((storePlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL) && (storeList.getItemCount() > _items.size()))
 		{
-			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
+			final String msgErr = "[RequestPrivateStoreBuy] " + player + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
 			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 			return;
 		}

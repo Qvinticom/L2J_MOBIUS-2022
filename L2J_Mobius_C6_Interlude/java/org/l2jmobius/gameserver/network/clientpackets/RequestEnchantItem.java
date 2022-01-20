@@ -200,7 +200,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if (item.isWear())
 		{
 			player.setActiveEnchantItem(null);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant a weared Item", IllegalPlayerAction.PUNISH_KICK);
+			Util.handleIllegalPlayerAction(player, player + " tried to enchant a weared Item", IllegalPlayerAction.PUNISH_KICK);
 			return;
 		}
 		
@@ -591,7 +591,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if (scroll == null)
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a scroll he doesnt have", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to enchant with a scroll he doesnt have", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

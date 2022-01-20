@@ -50,9 +50,9 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
- * @author sandman TODO: Gatekeepers shouting some text when doors get opened..so far unknown in leaked C4 is this text: 1000502 [brushes hinders competitor's monster.] which is really ugly translation TODO: Victim should attack one npc, when u save this NPC debuff zones will not be activated and
+ * @author sandman TODO: Gatekeepers shouting some text when doors get opened..so far unknown in leaked C4 is this text: 1000502 [brushes hinders competitor's monster.] which is really ugly translation TODO: Victim should attack one npc, when you save this NPC debuff zones will not be activated and
  *         NPC will polymorph into some kind of Tammed Beast xD and shout: 1000503 [many thanks rescue.] which is again really ugly translation. When Victim kill this NPC, debuff zones will get activated with current core its impossible to make attack npc * npc i will try to search where is this
- *         prevented but still is unknown which npc u need to save to survive in next room without debuffs
+ *         prevented but still is unknown which npc you need to save to survive in next room without debuffs
  */
 public class FourSepulchersManager extends GrandBossManager
 {
@@ -953,7 +953,7 @@ public class FourSepulchersManager extends GrandBossManager
 			{
 				if (!player.isGM())
 				{
-					LOGGER.warning("Player " + player.getName() + "(" + player.getObjectId() + ") tried to cheat in four sepulchers.");
+					LOGGER.warning(player + " tried to cheat in four sepulchers.");
 					Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " tried to enter four sepulchers with invalid npc id.", Config.DEFAULT_PUNISH);
 				}
 				return;

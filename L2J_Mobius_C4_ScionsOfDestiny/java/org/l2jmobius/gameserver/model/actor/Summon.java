@@ -824,6 +824,12 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
+	public String toString()
+	{
+		return super.toString() + "(" + getNpcId() + ") Owner: " + _owner;
+	}
+	
+	@Override
 	public Player getActingPlayer()
 	{
 		return _owner;

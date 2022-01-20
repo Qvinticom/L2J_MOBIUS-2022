@@ -108,7 +108,7 @@ public class SoulCrystals implements IItemHandler
 			return;
 		}
 		
-		// u can use soul crystal only when target hp goes below 50%
+		// you can use soul crystal only when target hp goes below 50%
 		if (((Monster) target).getCurrentHp() > (((Monster) target).getMaxHp() / 2.0))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);

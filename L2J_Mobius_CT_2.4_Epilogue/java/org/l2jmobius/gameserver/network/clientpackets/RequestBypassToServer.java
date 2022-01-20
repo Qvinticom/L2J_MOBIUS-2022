@@ -84,7 +84,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		
 		if (_command.isEmpty())
 		{
-			PacketLogger.warning("Player " + player.getName() + " sent empty bypass!");
+			PacketLogger.warning(player + " sent empty bypass!");
 			Disconnection.of(client, player).defaultSequence(LeaveWorld.STATIC_PACKET);
 			return;
 		}
@@ -254,7 +254,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			PacketLogger.warning("Exception processing bypass from player " + player.getName() + ": " + _command + " " + e.getMessage());
+			PacketLogger.warning("Exception processing bypass from " + player + ": " + _command + " " + e.getMessage());
 			if (player.isGM())
 			{
 				final StringBuilder sb = new StringBuilder(200);

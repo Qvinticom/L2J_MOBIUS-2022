@@ -71,7 +71,7 @@ public class RequestRestart implements IClientIncomingPacket
 		
 		if (player.isChangingClass())
 		{
-			PacketLogger.warning("Player " + player.getName() + " tried to restart during class change.");
+			PacketLogger.warning(player + " tried to restart during class change.");
 			player.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

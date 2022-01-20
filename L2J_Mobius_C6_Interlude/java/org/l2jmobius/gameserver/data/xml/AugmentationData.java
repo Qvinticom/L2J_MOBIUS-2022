@@ -334,7 +334,7 @@ public class AugmentationData
 		
 		// Second: decide which grade the augmentation result is going to have:
 		// 0:yellow, 1:blue, 2:purple, 3:red
-		// The chances used here are most likely custom, whats known is: u can also get a red result from a normal grade lifeStone however I will make it so that a higher grade lifeStone will more likely result in a higher grade augmentation...
+		// The chances used here are most likely custom, whats known is: you can also get a red result from a normal grade lifeStone however I will make it so that a higher grade lifeStone will more likely result in a higher grade augmentation...
 		// and the augmentation result will at least have the grade of the life stone
 		// Second: Calculate the subblock offset for the choosen color, and the level of the lifeStone
 		// Whats is known: you cant have yellow with skill(or baseStatModifier) noGrade stone can not have glow, mid only with skill, high has a chance(custom), top allways glow

@@ -103,7 +103,7 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 			final RecipeList list = RecipeData.getInstance().getRecipeList(i.getRecipeId());
 			if (!player.getDwarvenRecipeBook().contains(list) && !player.getCommonRecipeBook().contains(list))
 			{
-				Util.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Warning!! " + player + " of account " + player.getAccountName() + " tried to set recipe which he does not have.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			

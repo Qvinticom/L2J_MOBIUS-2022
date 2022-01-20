@@ -111,7 +111,7 @@ public class SubClassSkills extends AbstractNpcAI
 		{
 			for (Skill s : certSkills)
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
+				Util.handleIllegalPlayerAction(player, player + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
 				if (Config.SKILL_CHECK_REMOVE)
 				{
 					player.removeSkill(s);
@@ -268,11 +268,11 @@ public class SubClassSkills extends AbstractNpcAI
 				{
 					if (cSkills[i][1] == skill.getLevel())
 					{
-						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + ")", IllegalActionPunishmentType.NONE);
+						Util.handleIllegalPlayerAction(player, player + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + ")", IllegalActionPunishmentType.NONE);
 					}
 					else
 					{
-						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + "), level too high", IllegalActionPunishmentType.NONE);
+						Util.handleIllegalPlayerAction(player, player + " has invalid cert skill :" + skill.getName() + "(" + skill.getId() + "/" + skill.getLevel() + "), level too high", IllegalActionPunishmentType.NONE);
 					}
 					
 					if (Config.SKILL_CHECK_REMOVE)

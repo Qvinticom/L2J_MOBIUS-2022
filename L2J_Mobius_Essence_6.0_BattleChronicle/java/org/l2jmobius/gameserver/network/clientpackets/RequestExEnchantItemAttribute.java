@@ -126,7 +126,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			default:
 			{
 				player.removeRequest(request.getClass());
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 				return;
 			}
 		}
@@ -159,7 +159,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 				if (attribute.getType() == opositeElement)
 				{
 					player.removeRequest(request.getClass());
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
+					Util.handleIllegalPlayerAction(player, player + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
 					return;
 				}
 			}

@@ -64,7 +64,7 @@ public class RequestSentPost implements IClientIncomingPacket
 		
 		if (msg.getSenderId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to read not own post!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to read not own post!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

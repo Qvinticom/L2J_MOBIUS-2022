@@ -245,7 +245,7 @@ public class Attackable extends Npc
 	private final Map<Creature, AggroInfo> _aggroList = new ConcurrentHashMap<>();
 	
 	/**
-	 * Use this to Remove Object from this Map This Should be Synchronized While Interacting over This Map - ie u cant Interacting and removing object at once
+	 * Use this to Remove Object from this Map This Should be Synchronized While Interacting over This Map - ie you cant Interacting and removing object at once
 	 * @return
 	 */
 	public Map<Creature, AggroInfo> getAggroList()

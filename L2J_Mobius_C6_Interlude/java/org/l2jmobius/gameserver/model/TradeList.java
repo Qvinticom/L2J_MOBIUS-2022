@@ -871,7 +871,7 @@ public class TradeList
 			if (!found)
 			{
 				final String msg = "Requested Item is not available to buy... You are perfoming illegal operation, it has been segnalated";
-				LOGGER.warning("ATTENTION: Player " + player.getName() + " has performed buy illegal operation..");
+				LOGGER.warning("ATTENTION: " + player + " has performed buy illegal operation..");
 				player.sendMessage(msg);
 				return false;
 			}
@@ -1149,7 +1149,7 @@ public class TradeList
 			if (!found)
 			{
 				final String msg = "Requested Item is not available to sell... You are perfoming illegal operation, it has been segnalated";
-				LOGGER.warning("ATTENTION: Player " + player.getName() + " has performed sell illegal operation..");
+				LOGGER.warning("ATTENTION: " + player + " has performed sell illegal operation..");
 				player.sendMessage(msg);
 				return false;
 			}

@@ -124,7 +124,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			final InstanceTemplate template = manager.getInstanceTemplate(templateId);
 			if (template == null)
 			{
-				LOGGER.warning("Player " + player.getName() + " (" + player.getObjectId() + ") wants to create instance with unknown template id " + templateId + "!");
+				LOGGER.warning(player + " wants to create instance with unknown template id " + templateId + "!");
 				return;
 			}
 			

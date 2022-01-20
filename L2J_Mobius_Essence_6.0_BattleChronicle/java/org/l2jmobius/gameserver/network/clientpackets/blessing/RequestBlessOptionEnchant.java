@@ -115,7 +115,7 @@ public class RequestBlessOptionEnchant implements IClientIncomingPacket
 		if (player.getInventory().destroyItem("Blessing", targetScroll.getObjectId(), 1, player, item) == null)
 		{
 			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to bless with a scroll he doesn't have", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to bless with a scroll he doesn't have", Config.DEFAULT_PUNISH);
 			player.sendPacket(new ExBlessOptionEnchant(EnchantResult.ERROR));
 			return;
 		}

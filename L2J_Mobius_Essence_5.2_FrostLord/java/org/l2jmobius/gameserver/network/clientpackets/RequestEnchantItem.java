@@ -132,7 +132,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		// Lowered value to 500 (from 2000) On Essence, some enchantments are much faster than normal ones.
 		if ((request.getTimestamp() == 0) || ((Chronos.currentTimeMillis() - request.getTimestamp()) < 500))
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " use autoenchant program ", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
 			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
@@ -142,7 +142,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if (player.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, player, item) == null)
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
 			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
@@ -152,7 +152,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		if ((support != null) && (player.getInventory().destroyItem("Enchant", support.getObjectId(), 1, player, item) == null))
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
 			player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
@@ -361,7 +361,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							if (player.getInventory().destroyItem("Enchant", item, player, null) == null)
 							{
 								// unable to destroy item, cheater ?
-								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
+								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from " + player + ", possible cheater !", Config.DEFAULT_PUNISH);
 								player.removeRequest(request.getClass());
 								player.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 								if (Config.LOG_ITEM_ENCHANTS)

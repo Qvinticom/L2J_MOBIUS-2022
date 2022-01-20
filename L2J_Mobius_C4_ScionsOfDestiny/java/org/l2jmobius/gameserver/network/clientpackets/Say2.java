@@ -156,7 +156,7 @@ public class Say2 implements IClientIncomingPacket
 		
 		if (Config.L2WALKER_PROTECTION && (chatType == ChatType.WHISPER) && checkBot(_text))
 		{
-			Util.handleIllegalPlayerAction(player, "Client Emulator Detect: Player " + player.getName() + " using l2walker.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, "Client Emulator Detect: " + player + " using L2Walker.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		_text = _text.replaceAll("\\\\n", "");

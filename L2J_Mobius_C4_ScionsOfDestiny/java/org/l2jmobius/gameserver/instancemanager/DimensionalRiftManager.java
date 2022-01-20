@@ -568,7 +568,7 @@ public class DimensionalRiftManager
 		showHtmlFile(player, "data/html/seven_signs/rift/Cheater.htm", npc);
 		if (!player.isGM())
 		{
-			LOGGER.warning("Player " + player.getName() + "(" + player.getObjectId() + ") was cheating in dimension rift area!");
+			LOGGER.warning(player + " was cheating in dimension rift area!");
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " tried to cheat in dimensional rift.", Config.DEFAULT_PUNISH);
 		}
 	}

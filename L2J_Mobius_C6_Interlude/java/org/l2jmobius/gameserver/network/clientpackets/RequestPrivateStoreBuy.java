@@ -119,7 +119,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		{
 			if ((ir.getCount() > Integer.MAX_VALUE) || (ir.getCount() < 0))
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried an overflow exploit, ban this player!";
+				final String msgErr = "[RequestPrivateStoreBuy] " + player + " tried an overflow exploit, ban this player!";
 				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
@@ -127,14 +127,14 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 			final TradeItem sellersItem = storeList.getItem(ir.getObjectId());
 			if (sellersItem == null)
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy an item not sold in a private store (buy), ban this player!";
+				final String msgErr = "[RequestPrivateStoreBuy] " + player + " tried to buy an item not sold in a private store (buy), ban this player!";
 				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (ir.getPrice() != sellersItem.getPrice())
 			{
-				final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to change the seller's price in a private store (buy), ban this player!";
+				final String msgErr = "[RequestPrivateStoreBuy] " + player + " tried to change the seller's price in a private store (buy), ban this player!";
 				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
@@ -157,7 +157,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		// FIXME: this check should be (and most probably is) done in the TradeList mechanics
 		if ((priceTotal < 0) || (priceTotal > Integer.MAX_VALUE))
 		{
-			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried an overflow exploit, ban this player!";
+			final String msgErr = "[RequestPrivateStoreBuy] " + player + " tried an overflow exploit, ban this player!";
 			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 			return;
 		}
@@ -180,7 +180,7 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 		
 		if ((storePlayer.getPrivateStoreType() == Player.STORE_PRIVATE_PACKAGE_SELL) && (storeList.getItemCount() > _count))
 		{
-			final String msgErr = "[RequestPrivateStoreBuy] player " + player.getName() + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
+			final String msgErr = "[RequestPrivateStoreBuy] " + player + " tried to buy less items then sold by package-sell, ban this player for bot-usage!";
 			Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 			return;
 		}

@@ -285,7 +285,7 @@ public class UseItem implements IClientIncomingPacket
 			if ((Config.MAX_ITEM_ENCHANT_KICK > 0) && !player.isGM() && (item.getEnchantLevel() > Config.MAX_ITEM_ENCHANT_KICK))
 			{
 				player.sendMessage("You have been kicked for using an item overenchanted!");
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has item Overenchanted! Kicked ", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " has item Overenchanted! Kicked ", Config.DEFAULT_PUNISH);
 				// player.closeNetConnection();
 				return;
 			}
@@ -311,7 +311,7 @@ public class UseItem implements IClientIncomingPacket
 						{
 							// player.setAccountAccesslevel(-1); //ban
 							player.sendMessage("You have been banned for using an item wich is over enchanted!"); // message
-							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has item Overenchanted! ", Config.DEFAULT_PUNISH);
+							Util.handleIllegalPlayerAction(player, player + " has item Overenchanted! ", Config.DEFAULT_PUNISH);
 							// player.closeNetConnection(); //kick
 							return;
 						}
@@ -329,7 +329,7 @@ public class UseItem implements IClientIncomingPacket
 						{
 							// player.setAccountAccesslevel(-1); //ban
 							player.sendMessage("You have been banned for using an item wich is over enchanted!"); // message
-							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has item Overenchanted! ", Config.DEFAULT_PUNISH);
+							Util.handleIllegalPlayerAction(player, player + " has item Overenchanted! ", Config.DEFAULT_PUNISH);
 							// player.closeNetConnection(); //kick
 							return;
 						}
@@ -345,7 +345,7 @@ public class UseItem implements IClientIncomingPacket
 						{
 							// player.setAccountAccesslevel(-1); //ban
 							player.sendMessage("You have been banned for using an item wich is over enchanted!"); // message
-							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has item Overenchanted! ", Config.DEFAULT_PUNISH);
+							Util.handleIllegalPlayerAction(player, player + " has item Overenchanted! ", Config.DEFAULT_PUNISH);
 							// player.closeNetConnection(); //kick
 							return;
 						}

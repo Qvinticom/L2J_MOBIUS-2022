@@ -2750,7 +2750,7 @@ public class Player extends Playable
 			}
 			else
 			{
-				LOGGER.warning("Skipping null auto-get skill for player: " + toString());
+				LOGGER.warning("Skipping null auto-get skill for " + this);
 			}
 		}
 	}
@@ -6366,7 +6366,7 @@ public class Player extends Playable
 		AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
 		if (accessLevel == null)
 		{
-			LOGGER.warning("Can't find access level " + level + " for character " + toString());
+			LOGGER.warning("Can't find access level " + level + " for " + this);
 			accessLevel = AdminData.getInstance().getAccessLevel(0);
 		}
 		
@@ -6400,7 +6400,7 @@ public class Player extends Playable
 			}
 			catch (SQLException e)
 			{
-				LOGGER.log(Level.WARNING, "Failed to update character's accesslevel in db: " + toString(), e);
+				LOGGER.log(Level.WARNING, "Failed to update character's accesslevel in db: " + this, e);
 			}
 		}
 		
@@ -6408,7 +6408,7 @@ public class Player extends Playable
 		
 		if (accessLevel == null)
 		{
-			LOGGER.warning("Tryed to set unregistered access level " + level + " for " + toString() + ". Setting access level without privileges!");
+			LOGGER.warning("Tryed to set unregistered access level " + level + " for " + this + ". Setting access level without privileges!");
 		}
 		else if (level > 0)
 		{
@@ -6740,7 +6740,7 @@ public class Player extends Playable
 						// a possible restart-while-modifysubclass cheat has been attempted.
 						// Switching to use base class
 						player.setClassId(player.getBaseClass());
-						LOGGER.warning("Player " + player.getName() + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
+						LOGGER.warning(player + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
 					}
 					else
 					{
@@ -13086,12 +13086,12 @@ public class Player extends Playable
 		
 		if (nextLevel == -1)
 		{
-			LOGGER.info("Removing skill " + skill + " from player " + toString());
+			LOGGER.info("Removing skill " + skill + " from " + this);
 			removeSkill(skill, true); // there is no lower skill
 		}
 		else
 		{
-			LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for player " + toString());
+			LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for " + this);
 			addSkill(SkillData.getInstance().getSkill(skill.getId(), nextLevel), true); // replace with lower one
 		}
 	}

@@ -320,7 +320,7 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on player " + player.getName() + " removals, an error has been occurred: " + e);
+				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on " + player + " removals, an error has been occurred: " + e);
 			}
 		}
 	}
@@ -457,7 +457,7 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on player " + player.getName() + " additions, an error has been occurred: " + e);
+				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on " + player + " additions, an error has been occurred: " + e);
 			}
 		}
 	}
@@ -484,7 +484,7 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on player " + player.getName() + " sendMessage, an error has been occurred: " + e);
+				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on " + player + " sendMessage, an error has been occurred: " + e);
 			}
 		}
 	}
@@ -559,7 +559,7 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on player " + player.getName() + " PlayersStatusBack, an error has been occurred: " + e);
+				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on " + player + " PlayersStatusBack, an error has been occurred: " + e);
 			}
 		}
 	}
@@ -904,7 +904,7 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on player " + player.getName() + " makeCompetitionStart, an error has been occurred: " + e);
+				LOGGER.warning("Olympiad System: Game - " + _stadiumID + " on " + player + " makeCompetitionStart, an error has been occurred: " + e);
 				_aborted = true;
 			}
 		}
@@ -1039,7 +1039,7 @@ class OlympiadGameTask implements Runnable
 	{
 		if ((player != null) && player.inObserverMode())
 		{
-			LOGGER.info("[OLYMPIAD DEBUG] Player " + player.getName() + "is in Observer mode!");
+			LOGGER.info("[OLYMPIAD DEBUG] " + player + "is in Observer mode!");
 			return true;
 		}
 		return false;
@@ -1077,7 +1077,7 @@ class OlympiadGameTask implements Runnable
 		player.sendPacket(new ExOlympiadMode(2, player));
 		player.broadcastUserInfo();
 		
-		LOGGER.info("[OLYMPIAD DEBUG] Player " + player.getName() + "was on observer mode! Status restored!");
+		LOGGER.info("[OLYMPIAD DEBUG] " + player + "was on observer mode! Status restored!");
 	}
 	
 	protected boolean checkBattleStatus()

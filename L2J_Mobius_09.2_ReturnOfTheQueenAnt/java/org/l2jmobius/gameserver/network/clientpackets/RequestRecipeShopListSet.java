@@ -131,13 +131,13 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 			}
 			if (!player.hasRecipeList(recipe.getId()))
 			{
-				Util.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Warning!! " + player + " of account " + player.getAccountName() + " tried to set recipe which he does not have.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (recipeCost > MAX_ADENA)
 			{
-				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price of " + recipeCost + " adena in Private Manufacture.", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, "Warning!! " + player + " of account " + player.getAccountName() + " tried to set price of " + recipeCost + " adena in Private Manufacture.", Config.DEFAULT_PUNISH);
 				return;
 			}
 		}

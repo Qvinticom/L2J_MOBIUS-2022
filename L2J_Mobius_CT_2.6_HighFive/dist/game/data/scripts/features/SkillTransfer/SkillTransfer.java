@@ -126,7 +126,7 @@ public class SkillTransfer extends AbstractNpcAI
 						if (count < 0)
 						{
 							final String className = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-							Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + className, IllegalActionPunishmentType.BROADCAST);
+							Util.handleIllegalPlayerAction(player, player + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + className, IllegalActionPunishmentType.BROADCAST);
 							if (Config.SKILL_CHECK_REMOVE)
 							{
 								player.removeSkill(sk);

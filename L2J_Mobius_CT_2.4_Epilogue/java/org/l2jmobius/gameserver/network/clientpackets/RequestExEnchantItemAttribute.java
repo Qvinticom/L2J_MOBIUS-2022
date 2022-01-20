@@ -127,7 +127,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			default:
 			{
 				player.setActiveEnchantAttrItemId(Player.ID_NONE);
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 				return;
 			}
 		}
@@ -163,7 +163,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 				if (elm.getElement() == opositeElement)
 				{
 					player.setActiveEnchantAttrItemId(Player.ID_NONE);
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
+					Util.handleIllegalPlayerAction(player, player + " tried to add oposite attribute to item!", Config.DEFAULT_PUNISH);
 					return;
 				}
 			}
@@ -186,7 +186,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if (!player.destroyItem("AttrEnchant", stone, 1, player, true))
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to attribute enchant with a stone he doesn't have", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to attribute enchant with a stone he doesn't have", Config.DEFAULT_PUNISH);
 			player.setActiveEnchantAttrItemId(Player.ID_NONE);
 			return;
 		}

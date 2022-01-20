@@ -677,7 +677,7 @@ public class Door extends Creature
 	@Override
 	public String toString()
 	{
-		return "door " + _doorId;
+		return getClass().getSimpleName() + "[" + _doorId + "](" + getObjectId() + ")";
 	}
 	
 	/**

@@ -669,6 +669,12 @@ public abstract class WorldObject
 	}
 	
 	@Override
+	public boolean equals(Object obj)
+	{
+		return (obj instanceof WorldObject) && (((WorldObject) obj).getObjectId() == getObjectId());
+	}
+	
+	@Override
 	public String toString()
 	{
 		return getClass().getSimpleName() + ":" + _name + "[" + _objectId + "]";

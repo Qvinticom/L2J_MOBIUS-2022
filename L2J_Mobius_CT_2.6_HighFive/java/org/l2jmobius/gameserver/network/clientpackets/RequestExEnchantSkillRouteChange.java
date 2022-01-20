@@ -104,7 +104,7 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 		}
 		
 		final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
-		// do u have this skill enchanted?
+		// do you have this skill enchanted?
 		if (beforeEnchantSkillLevel <= 100)
 		{
 			return;

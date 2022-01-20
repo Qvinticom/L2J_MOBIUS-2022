@@ -82,7 +82,7 @@ public class Teleporter extends Npc
 				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), listName);
 				if (holder == null)
 				{
-					LOGGER.warning("Player " + player.getObjectId() + " requested show teleports for list with name " + listName + " at NPC " + getId() + "!");
+					LOGGER.warning(player + " requested show teleports for list with name " + listName + " at NPC " + getId() + "!");
 					return;
 				}
 				holder.showTeleportList(player, this);
@@ -99,7 +99,7 @@ public class Teleporter extends Npc
 				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), listName);
 				if (holder == null)
 				{
-					LOGGER.warning("Player " + player.getObjectId() + " requested show teleports for hunting list with name " + listName + " at NPC " + getId() + "!");
+					LOGGER.warning(player + " requested show teleports for hunting list with name " + listName + " at NPC " + getId() + "!");
 					return;
 				}
 				holder.showTeleportList(player, this);
@@ -110,7 +110,7 @@ public class Teleporter extends Npc
 				// Check for required count of params.
 				if (st.countTokens() != 2)
 				{
-					LOGGER.warning("Player " + player.getObjectId() + " send unhandled teleport command: " + command);
+					LOGGER.warning(player + " send unhandled teleport command: " + command);
 					return;
 				}
 				
@@ -118,7 +118,7 @@ public class Teleporter extends Npc
 				final TeleportHolder holder = TeleporterData.getInstance().getHolder(getId(), listName);
 				if (holder == null)
 				{
-					LOGGER.warning("Player " + player.getObjectId() + " requested unknown teleport list: " + listName + " for npc: " + getId() + "!");
+					LOGGER.warning(player + " requested unknown teleport list: " + listName + " for npc: " + getId() + "!");
 					return;
 				}
 				holder.doTeleport(player, this, parseNextInt(st, -1));

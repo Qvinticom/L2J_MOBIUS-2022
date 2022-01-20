@@ -77,7 +77,7 @@ public class RequestDeleteSentPost implements IClientIncomingPacket
 			}
 			if (msg.getSenderId() != player.getObjectId())
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to delete not own post!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to delete not own post!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			

@@ -77,7 +77,7 @@ public class ClanBoard implements IWriteBoardHandler
 				catch (Exception e)
 				{
 					clanList(player, 1);
-					LOG.warning(ClanBoard.class.getSimpleName() + ": Player " + player + " send invalid clan list bypass " + command + "!");
+					LOG.warning(ClanBoard.class.getSimpleName() + ": " + player + " send invalid clan list bypass " + command + "!");
 				}
 			}
 		}
@@ -97,7 +97,7 @@ public class ClanBoard implements IWriteBoardHandler
 				catch (Exception e)
 				{
 					clanHome(player);
-					LOG.warning(ClanBoard.class.getSimpleName() + ": Player " + player + " send invalid clan home bypass " + command + "!");
+					LOG.warning(ClanBoard.class.getSimpleName() + ": " + player + " send invalid clan home bypass " + command + "!");
 				}
 			}
 		}

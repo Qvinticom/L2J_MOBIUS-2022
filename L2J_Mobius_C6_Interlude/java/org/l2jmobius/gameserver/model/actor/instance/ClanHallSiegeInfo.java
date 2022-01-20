@@ -222,7 +222,7 @@ public class ClanHallSiegeInfo extends Npc
 			final Clan playerClan = player.getClan();
 			if ((playerClan == null) || !playerClan.getLeaderName().equalsIgnoreCase(player.getName()) || (playerClan.getLevel() < 4))
 			{
-				LOGGER.warning("Attention!!! player " + player.getName() + " use packet hack, try unregister clan.");
+				LOGGER.warning("Attention!!! " + player + " used packet hack, try unregister clan.");
 				return;
 			}
 			if (!BanditStrongholdSiege.getInstance().isRegistrationPeriod())
@@ -246,7 +246,7 @@ public class ClanHallSiegeInfo extends Npc
 			}
 			else
 			{
-				LOGGER.warning("Attention!!! player " + player.getName() + " use packet hack, try unregister clan.");
+				LOGGER.warning("Attention!!! " + player + " used packet hack, try unregister clan.");
 			}
 		}
 		else if (command.startsWith("PlayerList"))

@@ -91,7 +91,7 @@ public class RequestActionUse implements IClientIncomingPacket
 			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
-				PacketLogger.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().get().getId());
+				PacketLogger.warning(player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().get().getId());
 				return;
 			}
 		}

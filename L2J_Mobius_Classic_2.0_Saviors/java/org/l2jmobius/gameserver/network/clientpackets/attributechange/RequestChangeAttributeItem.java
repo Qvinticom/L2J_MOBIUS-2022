@@ -67,7 +67,7 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			player.sendPacket(ExChangeAttributeFail.STATIC);
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to change attribute without an attribute change crystal.", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

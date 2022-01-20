@@ -62,7 +62,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			if (Config.L2WALKER_PROTECTION)
 			{
 				final Player player = client.getPlayer();
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " is trying to use L2Walker and got kicked.", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " is trying to use L2Walker and got kicked.", Config.DEFAULT_PUNISH);
 			}
 		}
 		return true;

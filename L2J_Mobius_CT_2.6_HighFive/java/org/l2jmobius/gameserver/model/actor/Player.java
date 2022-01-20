@@ -2676,7 +2676,7 @@ public class Player extends Playable
 			}
 			else
 			{
-				LOGGER.warning("Skipping null auto-get skill for player: " + toString());
+				LOGGER.warning("Skipping null auto-get skill for " + this);
 			}
 		}
 	}
@@ -6566,7 +6566,7 @@ public class Player extends Playable
 		
 		if (!AdminData.getInstance().hasAccessLevel(level))
 		{
-			LOGGER.warning("Tried to set unregistered access level " + level + " for " + toString() + ". Setting access level without privileges!");
+			LOGGER.warning("Tried to set unregistered access level " + level + " for " + this + ". Setting access level without privileges!");
 		}
 		else if (level > 0)
 		{
@@ -6865,7 +6865,7 @@ public class Player extends Playable
 						// a possible restart-while-modifysubclass cheat has been attempted.
 						// Switching to use base class
 						player.setClassId(player.getBaseClass());
-						LOGGER.warning("Player " + player.getName() + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
+						LOGGER.warning(player + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
 					}
 					else
 					{
@@ -13582,12 +13582,12 @@ public class Player extends Playable
 		
 		if (nextLevel == -1)
 		{
-			LOGGER.info("Removing skill " + skill + " from player " + toString());
+			LOGGER.info("Removing skill " + skill + " from " + this);
 			removeSkill(skill, true); // there is no lower skill
 		}
 		else
 		{
-			LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for player " + toString());
+			LOGGER.info("Decreasing skill " + skill + " to " + nextLevel + " for " + this);
 			addSkill(SkillData.getInstance().getSkill(skill.getId(), nextLevel), true); // replace with lower one
 		}
 	}

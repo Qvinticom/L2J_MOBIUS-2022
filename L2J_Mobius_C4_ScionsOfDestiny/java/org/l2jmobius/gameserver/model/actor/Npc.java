@@ -2639,7 +2639,7 @@ public class Npc extends Creature
 	@Override
 	public String toString()
 	{
-		return getTemplate().getName();
+		return getClass().getSimpleName() + ":" + getName() + "(" + getNpcId() + ")[" + getObjectId() + "]";
 	}
 	
 	/**

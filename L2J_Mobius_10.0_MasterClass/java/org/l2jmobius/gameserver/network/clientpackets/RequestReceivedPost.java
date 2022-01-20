@@ -65,7 +65,7 @@ public class RequestReceivedPost implements IClientIncomingPacket
 		
 		if (msg.getReceiverId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to receive not own post!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to receive not own post!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

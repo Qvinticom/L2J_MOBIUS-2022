@@ -132,7 +132,7 @@ public class CastleWarehouse extends Folk
 	{
 		if ((player.getActiveEnchantItem() != null) || (player.getActiveTradeList() != null))
 		{
-			LOGGER.info("Player " + player.getName() + " trying to use enchant exploit, ban this player!");
+			LOGGER.info(player + " trying to use enchant exploit, ban this player!");
 			player.closeNetConnection();
 			return;
 		}

@@ -833,7 +833,7 @@ public class FourSepulchersManager
 			{
 				if (!player.isGM())
 				{
-					LOGGER.warning("Player " + player.getName() + "(" + player.getObjectId() + ") tried to cheat in four sepulchers.");
+					LOGGER.warning(player + " tried to cheat in four sepulchers.");
 					Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " tried to enter four sepulchers with invalid npc id.", Config.DEFAULT_PUNISH);
 				}
 				return;

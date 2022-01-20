@@ -244,7 +244,7 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
-					LOGGER.warning("TerritoryWar: Missing Kill the quest for player " + player.getName() + " whose class id: " + player.getClassId().getId());
+					LOGGER.warning("TerritoryWar: Missing Kill the quest for " + player + " whose class id: " + player.getClassId().getId());
 				}
 			}
 		}
@@ -372,7 +372,7 @@ public class TerritoryWarSuperClass extends Quest
 						}
 						else
 						{
-							LOGGER.warning("TerritoryWar: Missing Kill the quest for player " + player.getName() + " whose class id: " + player.getClassId().getId());
+							LOGGER.warning("TerritoryWar: Missing Kill the quest for " + player + " whose class id: " + player.getClassId().getId());
 						}
 					}
 				}

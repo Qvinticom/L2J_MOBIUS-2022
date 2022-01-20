@@ -62,7 +62,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 		final Pet pet = (Pet) player.getPet();
 		if (player.getActiveEnchantItem() != null)
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " Tried To Use Enchant Exploit , And Got Banned!", IllegalPlayerAction.PUNISH_KICKBAN);
+			Util.handleIllegalPlayerAction(player, player + " tried to use enchant exploit and got banned!", IllegalPlayerAction.PUNISH_KICKBAN);
 			return;
 		}
 		

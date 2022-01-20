@@ -8045,12 +8045,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		return weaponItem.getRandomDamage();
 	}
 	
-	@Override
-	public String toString()
-	{
-		return "Creature " + getObjectId();
-	}
-	
 	/**
 	 * Gets the attack end time.
 	 * @return the attack end time

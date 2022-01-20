@@ -76,7 +76,7 @@ public class RequestHennaRemove implements IClientIncomingPacket
 		// TODO: Test.
 		if (!found)
 		{
-			PacketLogger.warning(getClass().getSimpleName() + ": Player " + player + " requested Henna Draw remove without any henna.");
+			PacketLogger.warning(getClass().getSimpleName() + ": " + player + " requested Henna Draw remove without any henna.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}

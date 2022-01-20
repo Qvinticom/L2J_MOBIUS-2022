@@ -61,37 +61,37 @@ public class RequestCommissionRegister implements IClientIncomingPacket
 		
 		if ((_feeDiscountType < 0) || (_feeDiscountType > 2))
 		{
-			PacketLogger.warning("Player " + player + " sent incorrect commission discount type: " + _feeDiscountType + ".");
+			PacketLogger.warning(player + " sent incorrect commission discount type: " + _feeDiscountType + ".");
 			return;
 		}
 		
 		if ((_feeDiscountType == 1) && (player.getInventory().getItemByItemId(22351) == null))
 		{
-			PacketLogger.warning("Player " + player + ": Auction House Fee 30% Voucher not found in inventory.");
+			PacketLogger.warning(player + ": Auction House Fee 30% Voucher not found in inventory.");
 			return;
 		}
 		else if ((_feeDiscountType == 2) && (player.getInventory().getItemByItemId(22352) == null))
 		{
-			PacketLogger.warning("Player " + player + ": Auction House Fee 100% Voucher not found in inventory.");
+			PacketLogger.warning(player + ": Auction House Fee 100% Voucher not found in inventory.");
 			return;
 		}
 		
 		if ((_durationType < 0) || (_durationType > 5))
 		{
-			PacketLogger.warning("Player " + player + " sent incorrect commission duration type: " + _durationType + ".");
+			PacketLogger.warning(player + " sent incorrect commission duration type: " + _durationType + ".");
 			return;
 		}
 		
 		if ((_durationType == 4) && (player.getInventory().getItemByItemId(22353) == null))
 		{
 			
-			PacketLogger.warning("Player " + player + ": Auction House (15-day) Extension not found in inventory.");
+			PacketLogger.warning(player + ": Auction House (15-day) Extension not found in inventory.");
 			return;
 			
 		}
 		else if ((_durationType == 5) && (player.getInventory().getItemByItemId(22354) == null))
 		{
-			PacketLogger.warning("Player " + player + ": Auction House (30-day) Extension not found in inventory.");
+			PacketLogger.warning(player + ": Auction House (30-day) Extension not found in inventory.");
 			return;
 		}
 		

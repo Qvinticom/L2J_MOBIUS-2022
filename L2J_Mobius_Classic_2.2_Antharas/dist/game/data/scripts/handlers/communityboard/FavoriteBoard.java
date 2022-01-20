@@ -83,7 +83,7 @@ public class FavoriteBoard implements IParseBoardHandler
 			}
 			catch (Exception e)
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't load favorite links for player " + player.getName());
+				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't load favorite links for " + player);
 			}
 		}
 		else if (command.startsWith("bbs_add_fav"))
@@ -110,7 +110,7 @@ public class FavoriteBoard implements IParseBoardHandler
 				}
 				catch (Exception e)
 				{
-					LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link " + bypass + " for player " + player.getName());
+					LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't add favorite link " + bypass + " for " + player);
 				}
 			}
 		}
@@ -134,7 +134,7 @@ public class FavoriteBoard implements IParseBoardHandler
 			}
 			catch (Exception e)
 			{
-				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + player.getName());
+				LOG.warning(FavoriteBoard.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for " + player);
 			}
 		}
 		return true;

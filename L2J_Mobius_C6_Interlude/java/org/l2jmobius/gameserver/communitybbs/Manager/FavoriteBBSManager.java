@@ -78,7 +78,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't load favorite links for player " + player.getName());
+				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't load favorite links for " + player);
 			}
 		}
 		else if (command.startsWith("bbs_add_fav"))
@@ -105,7 +105,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 				}
 				catch (Exception e)
 				{
-					LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't add favorite link " + command + " for player " + player.getName());
+					LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't add favorite link " + command + " for " + player);
 				}
 			}
 		}
@@ -129,7 +129,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for player " + player.getName());
+				LOGGER.warning(FavoriteBBSManager.class.getSimpleName() + ": Couldn't delete favorite link ID " + favId + " for " + player);
 			}
 		}
 	}

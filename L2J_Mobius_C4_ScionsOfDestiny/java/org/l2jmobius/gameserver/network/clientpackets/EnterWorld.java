@@ -223,7 +223,7 @@ public class EnterWorld implements IClientIncomingPacket
 					// Message with screen
 					player.sendPacket(new ExShowScreenMessage(" You have an over enchanted item, you will be kicked from server! ", 6000));
 					// Punishment e LOGGER in audit
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has Overenchanted  item! Kicked! ", Config.DEFAULT_PUNISH);
+					Util.handleIllegalPlayerAction(player, player + " has overenchanted item! Kicked! ", Config.DEFAULT_PUNISH);
 					// Logger in console
 					PacketLogger.info("#### ATTENTION ####");
 					PacketLogger.info(i + " item has been removed from " + player);

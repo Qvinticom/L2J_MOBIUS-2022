@@ -239,7 +239,7 @@ public class MultisellData implements IXmlReader
 				}
 				else
 				{
-					LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
+					LOGGER.warning(getClass().getSimpleName() + ": " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
 					return;
 				}
 			}

@@ -115,7 +115,7 @@ public class RebirthManager
 		// Check to see if Rebirth is enabled to avoid hacks
 		if (!Config.REBIRTH_ENABLE)
 		{
-			LOGGER.warning("[WARNING] Player " + player.getName() + " is trying to use rebirth system when it's disabled.");
+			LOGGER.warning("[WARNING] " + player + " is trying to use rebirth system when it's disabled.");
 			return;
 		}
 		

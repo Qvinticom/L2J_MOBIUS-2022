@@ -331,7 +331,7 @@ public class VillageMaster extends Folk
 					// Subclass exploit fix during add subclass
 					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
-						LOGGER.warning("Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(player + " has performed a subclass change too fast");
 						player.setLocked(false);
 						return;
 					}
@@ -432,7 +432,7 @@ public class VillageMaster extends Folk
 					// Subclass exploit fix during change subclass
 					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
-						LOGGER.warning("Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(player + " has performed a subclass change too fast");
 						player.setLocked(false);
 						return;
 					}
@@ -493,7 +493,7 @@ public class VillageMaster extends Folk
 					// Subclass exploit fix during delete subclass
 					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
-						LOGGER.warning("Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(player + " has performed a subclass change too fast");
 						player.setLocked(false);
 						return;
 					}

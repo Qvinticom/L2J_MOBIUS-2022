@@ -70,7 +70,7 @@ public class SellListProcure implements IClientOutgoingPacket
 			packet.writeD(entry.getValue()); // count
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(0); // unknown
-			packet.writeD(0); // price, u shouldnt get any adena for crops, only raw materials
+			packet.writeD(0); // price, you shouldnt get any adena for crops, only raw materials
 		}
 		return true;
 	}

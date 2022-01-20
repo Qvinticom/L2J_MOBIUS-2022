@@ -47,8 +47,8 @@ public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 		// Fix for privatestore exploit during login
 		if (!player.isSpawned() || player.isLocked())
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " try exploit at login with privatestore!", Config.DEFAULT_PUNISH);
-			PacketLogger.warning("Player " + player.getName() + " try exploit at login with privatestore!");
+			Util.handleIllegalPlayerAction(player, player + " try exploit at login with privatestore!", Config.DEFAULT_PUNISH);
+			PacketLogger.warning(player + " try exploit at login with privatestore!");
 			return;
 		}
 		

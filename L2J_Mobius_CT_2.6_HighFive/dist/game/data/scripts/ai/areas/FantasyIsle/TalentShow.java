@@ -364,7 +364,7 @@ public class TalentShow extends AbstractNpcAI
 	{
 		if ((event == null) || event.isEmpty())
 		{
-			LOGGER.warning("MC_Show: Null/Empty event for npc " + npc + " and player " + player + "!");
+			LOGGER.warning("MC_Show: Null/Empty event for " + npc + " and " + player + "!");
 			return null;
 		}
 		

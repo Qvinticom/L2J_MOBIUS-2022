@@ -117,7 +117,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 			final int price = _items[(i * 3) + 2];
 			if (price <= 0)
 			{
-				final String msgErr = "[SetPrivateStoreListSell] player " + player.getName() + " tried an overflow exploit (use PHX), ban this player!";
+				final String msgErr = "[SetPrivateStoreListSell] " + player + " tried an overflow exploit (use PHX), ban this player!";
 				Util.handleIllegalPlayerAction(player, msgErr, Config.DEFAULT_PUNISH);
 				_count = 0;
 				return;

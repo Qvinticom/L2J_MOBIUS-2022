@@ -51,20 +51,20 @@ public class RequestLinkHtml implements IClientIncomingPacket
 		
 		if (_link.isEmpty())
 		{
-			PacketLogger.warning("Player " + player.getName() + " sent empty html link!");
+			PacketLogger.warning(player + " sent empty html link!");
 			return;
 		}
 		
 		if (_link.contains(".."))
 		{
-			PacketLogger.warning("Player " + player.getName() + " sent invalid html link: link " + _link);
+			PacketLogger.warning(player + " sent invalid html link: link " + _link);
 			return;
 		}
 		
 		final int htmlObjectId = player.validateHtmlAction("link " + _link);
 		if (htmlObjectId == -1)
 		{
-			PacketLogger.warning("Player " + player.getName() + " sent non cached html link: link " + _link);
+			PacketLogger.warning(player + " sent non cached html link: link " + _link);
 			return;
 		}
 		

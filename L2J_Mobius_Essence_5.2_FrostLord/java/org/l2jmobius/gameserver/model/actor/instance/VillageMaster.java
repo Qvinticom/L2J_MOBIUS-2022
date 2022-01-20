@@ -532,7 +532,7 @@ public class VillageMaster extends Folk
 					 */
 					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
-						LOGGER.warning(VillageMaster.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(VillageMaster.class.getName() + ": " + player + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -592,7 +592,7 @@ public class VillageMaster extends Folk
 					 */
 					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
-						LOGGER.warning(VillageMaster.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(VillageMaster.class.getName() + ": " + player + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -672,7 +672,7 @@ public class VillageMaster extends Folk
 					 */
 					if (!player.getClient().getFloodProtectors().canChangeSubclass())
 					{
-						LOGGER.warning(VillageMaster.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(VillageMaster.class.getName() + ": " + player + " has performed a subclass change too fast");
 						return;
 					}
 					

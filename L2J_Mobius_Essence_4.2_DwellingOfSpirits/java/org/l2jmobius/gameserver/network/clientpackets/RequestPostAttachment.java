@@ -108,7 +108,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		
 		if (msg.getReceiverId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get not own attachment!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to get not own attachment!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
@@ -135,19 +135,19 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			// Calculate needed slots
 			if (item.getOwnerId() != msg.getSenderId())
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (ownerId != senderId) from attachment!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get wrong item (ownerId != senderId) from attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (item.getItemLocation() != ItemLocation.MAIL)
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get wrong item (Location != MAIL) from attachment!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get wrong item (Location != MAIL) from attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			if (item.getLocationSlot() != msg.getId())
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
@@ -194,7 +194,7 @@ public class RequestPostAttachment implements IClientIncomingPacket
 			
 			if (item.getOwnerId() != msg.getSenderId())
 			{
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to get items with owner != sender !", Config.DEFAULT_PUNISH);
+				Util.handleIllegalPlayerAction(player, player + " tried to get items with owner != sender !", Config.DEFAULT_PUNISH);
 				return;
 			}
 			

@@ -95,7 +95,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		
 		if (player.getActiveEnchantItemId() != Player.ID_NONE)
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

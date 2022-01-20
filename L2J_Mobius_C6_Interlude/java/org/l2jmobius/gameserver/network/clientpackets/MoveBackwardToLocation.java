@@ -63,7 +63,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			{
 				final Player player = client.getPlayer();
 				player.sendPacket(SystemMessageId.A_HACKING_TOOL_HAS_BEEN_DISCOVERED_PLEASE_TRY_PLAYING_AGAIN_AFTER_CLOSING_UNNECESSARY_PROGRAMS);
-				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
+				Util.handleIllegalPlayerAction(player, player + " trying to use L2Walker!", IllegalPlayerAction.PUNISH_KICK);
 			}
 		}
 		

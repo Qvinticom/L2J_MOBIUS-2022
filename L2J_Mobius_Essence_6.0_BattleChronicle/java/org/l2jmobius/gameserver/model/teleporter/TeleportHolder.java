@@ -135,7 +135,7 @@ public class TeleportHolder
 	{
 		if (isNoblesse() && !player.isNoble())
 		{
-			LOGGER.warning("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
+			LOGGER.warning(player + " requested noblesse teleport without being noble!");
 			return;
 		}
 		
@@ -194,14 +194,14 @@ public class TeleportHolder
 	{
 		if (isNoblesse() && !player.isNoble())
 		{
-			LOGGER.warning("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
+			LOGGER.warning(player + " requested noblesse teleport without being noble!");
 			return;
 		}
 		
 		final TeleportLocation loc = getLocation(locId);
 		if (loc == null)
 		{
-			LOGGER.warning("Player " + player.getObjectId() + " requested unknown teleport location " + locId + " within list " + _name + "!");
+			LOGGER.warning(player + " requested unknown teleport location " + locId + " within list " + _name + "!");
 			return;
 		}
 		

@@ -77,7 +77,7 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 		
 		if (msg.getReceiverId() != player.getObjectId())
 		{
-			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to reject not own attachment!", Config.DEFAULT_PUNISH);
+			Util.handleIllegalPlayerAction(player, player + " tried to reject not own attachment!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		

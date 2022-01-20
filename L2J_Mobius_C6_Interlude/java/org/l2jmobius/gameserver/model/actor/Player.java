@@ -4171,26 +4171,26 @@ public class Player extends Playable
 	{
 		if (World.getInstance().findObject(objectId) == null)
 		{
-			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item not available in World.");
+			LOGGER.warning(this + " tried to " + action + " item not available in World.");
 			return null;
 		}
 		
 		final Item item = getInventory().getItemByObjectId(objectId);
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
-			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item he is not owner of.");
+			LOGGER.warning(this + " tried to " + action + " item he is not owner of.");
 			return null;
 		}
 		
 		if ((count < 0) || ((count > 1) && !item.isStackable()))
 		{
-			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item with invalid count: " + count);
+			LOGGER.warning(this + " tried to " + action + " item with invalid count: " + count);
 			return null;
 		}
 		
 		if (count > item.getCount())
 		{
-			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " more items than he owns.");
+			LOGGER.warning(this + " tried to " + action + " more items than he owns.");
 			return null;
 		}
 		
@@ -7687,7 +7687,7 @@ public class Player extends Playable
 					// Subclass in use but doesn't exist in DB - a possible restart-while-modifysubclass cheat has been attempted.
 					// Switching to use base class
 					player.setClassId(player.getBaseClass());
-					LOGGER.warning("Player " + player.getName() + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
+					LOGGER.warning(player + " reverted to base class. Possibly has tried a relogin exploit while subclassing.");
 				}
 				else
 				{
@@ -10172,12 +10172,6 @@ public class Player extends Playable
 			
 			_cubics.clear();
 		}
-	}
-	
-	@Override
-	public String toString()
-	{
-		return "player " + getName();
 	}
 	
 	/**
@@ -12925,13 +12919,13 @@ public class Player extends Playable
 		final Item item = getInventory().getItemByItemId(itemId);
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
-			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item he is not owner of");
+			LOGGER.warning(this + " tried to " + action + " item he is not owner of");
 			return false;
 		}
 		
 		if ((getActiveEnchantItem() != null) && (getActiveEnchantItem().getItemId() == itemId))
 		{
-			LOGGER.warning(getObjectId() + ":player " + this + " tried to " + action + " an enchant scroll he was using");
+			LOGGER.warning(this + " tried to " + action + " an enchant scroll he was using");
 			return false;
 		}
 		
@@ -12961,7 +12955,7 @@ public class Player extends Playable
 		final Item item = getInventory().getItemByObjectId(objectId);
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
-			LOGGER.warning(getObjectId() + ": player " + this + " tried to " + action + " item he is not owner of");
+			LOGGER.warning(this + " tried to " + action + " item he is not owner of");
 			return false;
 		}
 		

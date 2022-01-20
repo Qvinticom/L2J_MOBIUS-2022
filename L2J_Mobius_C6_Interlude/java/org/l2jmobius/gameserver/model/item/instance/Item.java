@@ -1243,7 +1243,7 @@ public class Item extends WorldObject
 	@Override
 	public String toString()
 	{
-		return "" + _item;
+		return _item + "[" + getObjectId() + "]";
 	}
 	
 	/**

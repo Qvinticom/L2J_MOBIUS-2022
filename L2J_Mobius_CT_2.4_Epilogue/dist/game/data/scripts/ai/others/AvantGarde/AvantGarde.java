@@ -228,7 +228,7 @@ public class AvantGarde extends AbstractNpcAI
 									}
 									else
 									{
-										LOGGER.warning("Invalid Sub-Class Skill Id: " + skillIdVar + " for player " + player.getName() + "!");
+										LOGGER.warning("Invalid Sub-Class Skill Id: " + skillIdVar + " for " + player + "!");
 									}
 								}
 								else if (!qvar.isEmpty() && !qvar.equals("0"))
@@ -258,7 +258,7 @@ public class AvantGarde extends AbstractNpcAI
 									}
 									else
 									{
-										LOGGER.warning("Invalid item object Id: " + qvar + " for player " + player.getName() + "!");
+										LOGGER.warning("Invalid item object Id: " + qvar + " for " + player + "!");
 									}
 								}
 							}
@@ -275,7 +275,7 @@ public class AvantGarde extends AbstractNpcAI
 						final Item item = player.getInventory().getItemByItemId(itemId);
 						if (item != null)
 						{
-							LOGGER.warning(getClass().getName() + ": player " + player + " had 'extra' certification skill books while cancelling sub-class certifications!");
+							LOGGER.warning(getClass().getName() + ": " + player + " had 'extra' certification skill books while cancelling sub-class certifications!");
 							player.destroyItem("CancelCertificationExtraBooks", item, npc, false);
 						}
 					}
