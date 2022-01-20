@@ -39,19 +39,20 @@ final class EffectImobileBuff extends Effect
 	@Override
 	public void onStart()
 	{
+		super.onStart();
 		getEffector().setImmobilized(true);
 	}
 	
 	@Override
 	public void onExit()
 	{
+		super.onExit();
 		getEffector().setImmobilized(false);
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
-		// just stop this effect
 		return false;
 	}
 }

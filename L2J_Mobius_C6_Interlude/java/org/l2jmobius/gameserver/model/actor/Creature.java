@@ -158,7 +158,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private boolean _isMuted = false; // Cannot use magic
 	private boolean _isPhysicalMuted = false; // Cannot use psychical skills
 	private boolean _isKilledAlready = false;
-	private int _isImmobilized = 0;
+	private boolean _isImmobilized = false;
 	private boolean _isOverloaded = false; // the char is carrying too much
 	private boolean _isParalyzed = false;
 	private boolean _isRiding = false; // Is Riding strider?
@@ -2202,7 +2202,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public boolean isImmobilized()
 	{
-		return _isImmobilized > 0;
+		return _isImmobilized;
 	}
 	
 	/**
@@ -2214,13 +2214,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// Stop this if he is moving
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
-		if (value)
+		if (_isImmobilized != value)
 		{
-			_isImmobilized++;
-		}
-		else
-		{
-			_isImmobilized--;
+			_isImmobilized = value;
 		}
 	}
 	
@@ -8588,7 +8584,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		_nextReducingHPByOverTime = Chronos.currentTimeMillis() + (period * 1000);
+		_nextReducingHPByOverTime = Chronos.currentTimeMillis() + (period * 880);
 		reduceCurrentHp(amount, attacker, awake);
 	}
 	
@@ -8601,7 +8597,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		_nextReducingMPByOverTime = Chronos.currentTimeMillis() + (period * 1000);
+		_nextReducingMPByOverTime = Chronos.currentTimeMillis() + (period * 880);
 		reduceCurrentMp(amount);
 	}
 	
