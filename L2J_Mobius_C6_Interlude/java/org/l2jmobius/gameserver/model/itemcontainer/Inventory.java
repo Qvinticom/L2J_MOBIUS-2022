@@ -602,6 +602,11 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public Item dropItem(String process, Item item, Player actor, WorldObject reference)
 	{
+		if (item == null)
+		{
+			return null;
+		}
+		
 		synchronized (item)
 		{
 			if (!_items.contains(item))
@@ -617,6 +622,7 @@ public abstract class Inventory extends ItemContainer
 			item.updateDatabase();
 			refreshWeight();
 		}
+		
 		return item;
 	}
 	
