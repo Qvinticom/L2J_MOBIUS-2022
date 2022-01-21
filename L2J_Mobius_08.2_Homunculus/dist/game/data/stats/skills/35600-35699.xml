@@ -2818,7 +2818,21 @@
 	<skill id="35654" toLevel="1" name="Exalted Augmentation">
 		<!-- P. Critical Damage and P./ M. Skill Critical Damage +5%. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35655" toLevel="1" name="Primary Skill: Agathion Guardian Angel Chuchu">
 		<!-- Acquired XP +$s1, Max HP +$s2, Vampiric Rage +$s3. -->
