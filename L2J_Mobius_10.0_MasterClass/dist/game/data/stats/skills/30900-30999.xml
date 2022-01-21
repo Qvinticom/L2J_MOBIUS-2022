@@ -741,6 +741,7 @@
 		<magicLevel>1</magicLevel>
 		<operateType>A5</operateType>
 		<abnormalType>DK_AURA</abnormalType>
+		<abnormalVisualEffect>DK2_EQUAL_AURA</abnormalVisualEffect>
 		<reuseDelay>5000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -765,6 +766,7 @@
 		<magicLevel>85</magicLevel>
 		<operateType>A5</operateType>
 		<abnormalType>DK_AURA</abnormalType>
+		<abnormalVisualEffect>DK2_RAGE_AURA</abnormalVisualEffect>
 		<reuseDelay>5000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1041,6 +1043,7 @@
 		<icon>icon.skill30963</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A2</operateType>
+		<abnormalVisualEffect>DK2_SARDONIC_FORTITUDEB</abnormalVisualEffect>
 		<reuseDelayGroup>30954</reuseDelayGroup>
 		<magicLevel>
 			<value level="1">100</value>
@@ -1084,6 +1087,7 @@
 		<icon>icon.skill30963</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A2</operateType>
+		<abnormalVisualEffect>DK2_SARDONIC_FORTITUDEA</abnormalVisualEffect>
 		<reuseDelayGroup>30954</reuseDelayGroup>
 		<magicLevel>
 			<value level="1">100</value>
@@ -2233,8 +2237,7 @@
 		</effects>
 	</skill>
 	<skill id="30974" toLevel="1" name="Valakas' Protection">
-		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
+		<abnormalVisualEffect>DK2_ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<abnormalTime>30</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2278,6 +2281,7 @@
 	<skill id="30975" toLevel="1" name="Valakas' Roar">
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
+		<abnormalVisualEffect>DK2_ROAR</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectPoint>707</effectPoint>
 		<abnormalTime>30</abnormalTime>
