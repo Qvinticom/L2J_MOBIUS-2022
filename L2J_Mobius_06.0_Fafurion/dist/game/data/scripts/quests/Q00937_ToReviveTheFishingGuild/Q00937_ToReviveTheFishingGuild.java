@@ -160,21 +160,24 @@ public class Q00937_ToReviveTheFishingGuild extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerFishing(OnPlayerFishing event)
 	{
-		final Player player = event.getPlayer();
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1) && (event.getReason() == FishingEndReason.WIN))
+		if (event.getReason() == FishingEndReason.WIN)
 		{
-			int count = qs.getInt(COUNT_VAR);
-			qs.set(COUNT_VAR, ++count);
-			if (count >= 100)
+			final Player player = event.getPlayer();
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && qs.isCond(1))
 			{
-				qs.setCond(2, true);
+				int count = qs.getInt(COUNT_VAR);
+				qs.set(COUNT_VAR, ++count);
+				if (count >= 100)
+				{
+					qs.setCond(2, true);
+				}
+				else
+				{
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+				sendNpcLogList(player);
 			}
-			else
-			{
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			sendNpcLogList(player);
 		}
 	}
 	

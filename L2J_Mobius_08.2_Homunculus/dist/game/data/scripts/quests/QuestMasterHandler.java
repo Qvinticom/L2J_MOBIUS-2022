@@ -28,6 +28,7 @@ import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00933_TombRaiders.Q00933_TombRaiders;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
+import quests.Q00938_TheFishermansOtherHobby.Q00938_TheFishermansOtherHobby;
 import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10454_FinalEmbryoApostle.Q10454_FinalEmbryoApostle;
 import quests.Q10507_ObtainingNewPower.Q10507_ObtainingNewPower;
@@ -99,6 +100,7 @@ public class QuestMasterHandler
 		Q00840_RequestFromTheKingdomsRoyalGuard.class, // TODO: Not done.
 		Q00933_TombRaiders.class,
 		Q00937_ToReviveTheFishingGuild.class,
+		Q00938_TheFishermansOtherHobby.class,
 		Q01900_StormIsleSecretSpot.class, // TODO: Not done.
 		Q01901_StormIsleFurtiveDeal.class, // TODO: Not done.
 		Q10423_EmbryoStrongholdRaid.class,

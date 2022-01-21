@@ -221,6 +221,7 @@ import quests.Q00930_DisparagingThePhantoms.Q00930_DisparagingThePhantoms;
 import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
 import quests.Q00932_SayhasEnergy.Q00932_SayhasEnergy;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
+import quests.Q00938_TheFishermansOtherHobby.Q00938_TheFishermansOtherHobby;
 import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
 import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
 import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
@@ -804,6 +805,7 @@ public class QuestMasterHandler
 		Q00931_MemoriesOfTheWind.class,
 		Q00932_SayhasEnergy.class,
 		Q00937_ToReviveTheFishingGuild.class,
+		Q00938_TheFishermansOtherHobby.class,
 		Q00985_AdventureGuildsSpecialRequestLv1.class, // TODO: Not done.
 		Q00986_AdventureGuildsSpecialRequestLv2.class, // TODO: Not done.
 		Q00987_AdventureGuildsSpecialRequestLv3.class, // TODO: Not done.
