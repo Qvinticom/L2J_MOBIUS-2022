@@ -416,7 +416,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				}
 				else
 				{
-					getVars = getVars.replace("%ar" + i + "_icon%", item.getIcon());
+					getVars = getVars.replace("%ar" + i + "_icon%", item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon());
 					// if enchant value is 0 - show "blank instead of 0
 					if (currentEnch != 0)
 					{
@@ -454,7 +454,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				}
 				else
 				{
-					getVars = getVars.replace("%ag" + i + "_icon%", item.getIcon());
+					getVars = getVars.replace("%ag" + i + "_icon%", item.getIcon() == null ? "icon.etc_question_mark_i00" : item.getIcon());
 					// if enchant value is 0 - show "blank instead of 0
 					if (currentEnch != 0)
 					{
