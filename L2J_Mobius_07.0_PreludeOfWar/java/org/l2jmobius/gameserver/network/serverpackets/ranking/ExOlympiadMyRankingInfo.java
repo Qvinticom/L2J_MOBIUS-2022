@@ -61,113 +61,85 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		int year = calendar.get(Calendar.YEAR);
 		// Add one to month {0 - 11}
 		int month = calendar.get(Calendar.MONTH) + 1;
-		if (Olympiad.getInstance().getCurrentCycle() > 1)
+		
+		int currentPlace = 0;
+		int currentWins = 0;
+		int currentLoses = 0;
+		int currentPoints = 0;
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(GET_CURRENT_CYCLE_DATA))
 		{
-			if (month == 1)
+			statement.setInt(1, _player.getBaseClass());
+			try (ResultSet rset = statement.executeQuery())
 			{
-				year--;
-				month = 12;
-			}
-			else
-			{
-				month--;
-			}
-			int currentPlace = 0;
-			int currentWins = 0;
-			int currentLoses = 0;
-			int currentPoints = 0;
-			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement statement = con.prepareStatement(GET_CURRENT_CYCLE_DATA))
-			{
-				statement.setInt(1, _player.getBaseClass());
-				try (ResultSet rset = statement.executeQuery())
+				int i = 1;
+				while (rset.next())
 				{
-					int i = 1;
-					while (rset.next())
+					if (rset.getInt("charId") == _player.getObjectId())
 					{
-						if (rset.getInt("charId") == _player.getObjectId())
-						{
-							currentPlace = i;
-							currentWins = rset.getInt("competitions_won");
-							currentLoses = rset.getInt("competitions_lost");
-							currentPoints = rset.getInt("olympiad_points");
-						}
-						i++;
+						currentPlace = i;
+						currentWins = rset.getInt("competitions_won");
+						currentLoses = rset.getInt("competitions_lost");
+						currentPoints = rset.getInt("olympiad_points");
 					}
+					i++;
 				}
 			}
-			catch (SQLException e)
+		}
+		catch (SQLException e)
+		{
+			PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
+		}
+		int previousPlace = 0;
+		int previousWins = 0;
+		int previousLoses = 0;
+		int previousPoints = 0;
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement statement = con.prepareStatement(GET_PREVIOUS_CYCLE_DATA))
+		{
+			statement.setInt(1, _player.getBaseClass());
+			try (ResultSet rset = statement.executeQuery())
 			{
-				PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
-			}
-			int previousPlace = 0;
-			int previousWins = 0;
-			int previousLoses = 0;
-			int previousPoints = 0;
-			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement statement = con.prepareStatement(GET_PREVIOUS_CYCLE_DATA))
-			{
-				statement.setInt(1, _player.getBaseClass());
-				try (ResultSet rset = statement.executeQuery())
+				int i = 1;
+				while (rset.next())
 				{
-					int i = 1;
-					while (rset.next())
+					if (rset.getInt("charId") == _player.getObjectId())
 					{
-						if (rset.getInt("charId") == _player.getObjectId())
-						{
-							previousPlace = i;
-							previousWins = rset.getInt("competitions_won");
-							previousLoses = rset.getInt("competitions_lost");
-							previousPoints = rset.getInt("olympiad_points");
-						}
-						i++;
+						previousPlace = i;
+						previousWins = rset.getInt("competitions_won");
+						previousLoses = rset.getInt("competitions_lost");
+						previousPoints = rset.getInt("olympiad_points");
 					}
+					i++;
 				}
 			}
-			catch (SQLException e)
-			{
-				PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
-			}
-			int heroCount = 0;
-			int legendCount = 0;
-			if (Hero.getInstance().getCompleteHeroes().containsKey(_player.getObjectId()))
-			{
-				final StatSet hero = Hero.getInstance().getCompleteHeroes().get(_player.getObjectId());
-				heroCount = hero.getInt("count", 0);
-				legendCount = hero.getInt("legend_count", 0);
-			}
-			packet.writeD(year); // Year
-			packet.writeD(month); // Month
-			packet.writeD(Olympiad.getInstance().getCurrentCycle() - 1); // cycle ?
-			packet.writeD(currentPlace); // Place on current cycle ?
-			packet.writeD(currentWins); // Wins
-			packet.writeD(currentLoses); // Loses
-			packet.writeD(currentPoints); // Points
-			packet.writeD(previousPlace); // Place on previous cycle
-			packet.writeD(previousWins); // win count & lose count previous cycle? lol
-			packet.writeD(previousLoses); // ??
-			packet.writeD(previousPoints); // Points on previous cycle
-			packet.writeD(heroCount); // Hero counts
-			packet.writeD(legendCount); // Legend counts
-			packet.writeD(0); // change to 1 causes shows nothing
 		}
-		else
+		catch (SQLException e)
 		{
-			packet.writeD(year); // Year
-			packet.writeD(month); // Month
-			packet.writeD(0); // cycle
-			packet.writeD(0); // ??
-			packet.writeD(0); // Wins
-			packet.writeD(0); // Loses
-			packet.writeD(0); // Points
-			packet.writeD(0); // Place on previous cycle
-			packet.writeD(0); // win count & lose count previous cycle? lol
-			packet.writeD(0); // ??
-			packet.writeD(0); // Points on previous cycle
-			packet.writeD(0); // Hero counts
-			packet.writeD(0); // Legend counts
-			packet.writeD(0); // change to 1 causes shows nothing
+			PacketLogger.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 		}
+		int heroCount = 0;
+		int legendCount = 0;
+		if (Hero.getInstance().getCompleteHeroes().containsKey(_player.getObjectId()))
+		{
+			final StatSet hero = Hero.getInstance().getCompleteHeroes().get(_player.getObjectId());
+			heroCount = hero.getInt("count", 0);
+			legendCount = hero.getInt("legend_count", 0);
+		}
+		packet.writeD(year); // Year
+		packet.writeD(month); // Month
+		packet.writeD(Math.min(Olympiad.getInstance().getCurrentCycle() - 1, 0)); // cycle ?
+		packet.writeD(currentPlace); // Place on current cycle ?
+		packet.writeD(currentWins); // Wins
+		packet.writeD(currentLoses); // Loses
+		packet.writeD(currentPoints); // Points
+		packet.writeD(previousPlace); // Place on previous cycle
+		packet.writeD(previousWins); // win count & lose count previous cycle? lol
+		packet.writeD(previousLoses); // ??
+		packet.writeD(previousPoints); // Points on previous cycle
+		packet.writeD(heroCount); // Hero counts
+		packet.writeD(legendCount); // Legend counts
+		packet.writeD(0); // change to 1 causes shows nothing
 		return true;
 	}
 }

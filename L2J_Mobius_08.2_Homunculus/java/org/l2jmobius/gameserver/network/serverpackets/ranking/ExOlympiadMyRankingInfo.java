@@ -61,15 +61,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		int year = calendar.get(Calendar.YEAR);
 		// Add one to month {0 - 11}
 		int month = calendar.get(Calendar.MONTH) + 1;
-		if (month == 1)
-		{
-			year--;
-			month = 12;
-		}
-		else
-		{
-			month--;
-		}
+		
 		int currentPlace = 0;
 		int currentWins = 0;
 		int currentLoses = 0;
