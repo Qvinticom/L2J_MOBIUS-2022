@@ -647,12 +647,20 @@
 		<ingredient id="17371" count="633" /> <!-- R-grade Crystal -->
 		<production id="80119" chance="60" id2="81215" count2="147" chance2="40" /> <!-- Leviathan Shoes -->
 	</product>
-	<product id="1091" category="4">
+	<product id="1091" category="1">
 		<ingredient id="81215" count="1478" /> <!-- Aether -->
 		<ingredient id="81219" count="264" /> <!-- Angel's Feather -->
 		<ingredient id="19440" count="11" /> <!-- R-grade Gemstone -->
 		<ingredient id="17371" count="633" /> <!-- R-grade Crystal -->
-		<production id="80120" chance="60" id2="81215" count2="147" chance2="40" /> <!-- Armor Augmenting Stone -->
+		<production id="80120" chance="60" id2="81215" count2="147" chance2="40" /> <!-- Leviathan Sigil -->
+	</product>
+	<product id="1092" category="4">
+		<ingredient id="81217" count="16" /> <!-- Oriharukon Ore -->
+		<ingredient id="81218" count="16" /> <!-- Dragon Scale -->
+		<ingredient id="81219" count="16" /> <!-- Angel's Feather -->
+		<ingredient id="35562" count="3" /> <!-- Destructive Energy -->
+		<ingredient id="35563" count="3" /> <!-- Giant's Energy -->
+		<production id="81728" chance="60" id2="81215" count2="1" chance2="40" /> <!-- Armor Augmenting Stone -->
 	</product>
 	<product id="1093" category="4">
 		<ingredient id="81215" count="1000" /> <!-- Aether -->
@@ -732,136 +740,141 @@
 		<ingredient id="57" count="114560000" /> <!-- Adena -->
 		<production id="82169" chance="10" id2="48876" count2="3" chance2="90" /> <!-- Forgotten Spellbook - Finale -->
 	</product>
-	<product id="5001" category="3">
+	<product id="1184" category="3">
 		<ingredient id="26418" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 1 -->
 		<ingredient id="60091" count="1" /> <!-- Abundance Mark -->
 		<production id="26338" chance="25" id2="81215" count2="1" chance2="75" /> <!-- High-grade Talisman of Abundance Lv. 1 -->
 	</product>
-	<product id="5002" category="3">
+	<product id="1185" category="3">
 		<ingredient id="26419" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 2 -->
 		<ingredient id="26338" count="1" /> <!-- High-grade Talisman of Abundance Lv. 1 -->
 		<ingredient id="60091" count="1" /> <!-- Abundance Mark -->
 		<production id="26339" chance="25" id2="81215" count2="1" chance2="75" /> <!-- High-grade Talisman of Abundance Lv. 2 -->
 	</product>
-	<product id="5003" category="3">
+	<product id="1186" category="3">
 		<ingredient id="26419" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 3 -->
 		<ingredient id="26339" count="1" /> <!-- High-grade Talisman of Abundance Lv. 2 -->
 		<ingredient id="60091" count="1" /> <!-- Abundance Mark -->
 		<production id="26340" chance="25" id2="81215" count2="1" chance2="75" /> <!-- High-grade Talisman of Abundance Lv. 3 -->
 	</product>
-	<product id="5004" category="3">
+	<product id="1187" category="3">
 		<ingredient id="26419" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 4 -->
 		<ingredient id="26340" count="1" /> <!-- High-grade Talisman of Abundance Lv. 3 -->
 		<ingredient id="60091" count="1" /> <!-- Abundance Mark -->
 		<production id="26341" chance="25" id2="81215" count2="1" chance2="75" /> <!-- High-grade Talisman of Abundance Lv. 4 -->
 	</product>
-	<product id="5005" category="3">
+	<product id="1188" category="3">
 		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter -->
 		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer -->
 		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer -->
 		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw -->
 		<production id="60091" chance="100" /> <!-- Abundance Mark -->
 	</product>
-	<product id="5047" category="3">
+	<product id="1189" category="3">
 		<ingredient id="57" count="500000000" /> <!-- Adena -->
 		<production id="29750" chance="100" /> <!-- Heir's Radiance Lv. 1 - PvE -->
 	</product>
-	<product id="5048" category="3">
+	<product id="1190" category="3">
 		<ingredient id="29750" count="1" /> <!-- Heir's Radiance Lv. 1 - PvE -->
 		<ingredient id="29759" count="60" /> <!-- Heir's Radiance Shard -->
 		<production id="29751" chance="30" id2="29750" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 2 - PvE -->
 	</product>
-	<product id="5049" category="3">
+	<product id="1191" category="3">
 		<ingredient id="29751" count="1" /> <!-- Heir's Radiance Lv. 2 - PvE -->
 		<ingredient id="29759" count="800" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="800000000" /> <!-- Adena -->
 		<production id="29752" chance="30" id2="29751" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 3 - PvE -->
 	</product>
-	<product id="5050" category="3">
+	<product id="1192" category="3">
 		<ingredient id="29752" count="1" /> <!-- Heir's Radiance Lv. 3 - PvE -->
 		<ingredient id="29759" count="1600" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="800000000" /> <!-- Adena -->
 		<production id="29753" chance="30" id2="29752" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 4- PvE -->
 	</product>
-	<product id="5051" category="3">
+	<product id="1193" category="3">
 		<ingredient id="29753" count="1" /> <!-- Heir's Radiance Lv. 4 - PvE -->
 		<ingredient id="29759" count="2400" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="1600000000" /> <!-- Adena -->
 		<production id="29899" chance="30" id2="29753" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 5- PvE -->
 	</product>
-	<product id="5052" category="3">
+	<product id="1194" category="3">
 		<ingredient id="29899" count="1" /> <!-- Heir's Radiance Lv. 5 - PvE -->
 		<ingredient id="29759" count="2500" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="1600000000" /> <!-- Adena -->
 		<production id="29900" chance="30" id2="29899" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 6- PvE -->
 	</product>
-	<product id="5053" category="3">
+	<product id="1195" category="3">
 		<ingredient id="29900" count="1" /> <!-- Heir's Radiance Lv. 6 - PvE -->
 		<ingredient id="29759" count="3150" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="2400000000" /> <!-- Adena -->
 		<production id="29901" chance="30" id2="29900" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 7- PvE -->
 	</product>
-	<product id="5054" category="3">
+	<product id="1196" category="3">
 		<ingredient id="57" count="500000000" /> <!-- Adena -->
 		<production id="29754" chance="100" /> <!-- Heir's Radiance Lv. 1 - PvP -->
 	</product>
-	<product id="5055" category="3">
+	<product id="1197" category="3">
 		<ingredient id="29754" count="1" /> <!-- Heir's Radiance Lv. 1 - PvP -->
 		<ingredient id="29759" count="60" /> <!-- Heir's Radiance Shard -->
 		<production id="29755" chance="30" id2="29754" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 2 - PvP -->
 	</product>
-	<product id="5056" category="3">
+	<product id="1198" category="3">
 		<ingredient id="29755" count="1" /> <!-- Heir's Radiance Lv. 2 - PvP -->
 		<ingredient id="29759" count="800" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="800000000" /> <!-- Adena -->
 		<production id="29756" chance="30" id2="29755" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 3 - PvP -->
 	</product>
-	<product id="5057" category="3">
+	<product id="1199" category="3">
 		<ingredient id="29756" count="1" /> <!-- Heir's Radiance Lv. 3 - PvP -->
 		<ingredient id="29759" count="1600" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="800000000" /> <!-- Adena -->
 		<production id="29757" chance="30" id2="29756" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 4- PvP -->
 	</product>
-	<product id="5058" category="3">
+	<product id="1200" category="3">
 		<ingredient id="29757" count="1" /> <!-- Heir's Radiance Lv. 4 - PvP -->
 		<ingredient id="29759" count="2400" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="1600000000" /> <!-- Adena -->
 		<production id="29902" chance="30" id2="29757" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 5- PvP -->
 	</product>
-	<product id="5059" category="3">
+	<product id="1201" category="3">
 		<ingredient id="29902" count="1" /> <!-- Heir's Radiance Lv. 5 - PvP -->
 		<ingredient id="29759" count="2500" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="1600000000" /> <!-- Adena -->
 		<production id="29903" chance="30" id2="29902" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 6- PvP -->
 	</product>
-	<product id="5060" category="3">
+	<product id="1202" category="3">
 		<ingredient id="29903" count="1" /> <!-- Heir's Radiance Lv. 6 - PvP -->
 		<ingredient id="29759" count="3150" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="2400000000" /> <!-- Adena -->
 		<production id="29904" chance="30" id2="29903" count2="1" chance2="70" /> <!-- Heir's Radiance Lv. 7- PvP -->
 	</product>
-	<product id="5061" category="3">
+	<product id="1203" category="3">
 		<ingredient id="29901" count="1" /> <!-- Heir's Radiance Lv. 7 - PvE -->
 		<ingredient id="29759" count="4000" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="3200000000" /> <!-- Adena -->
 		<production id="60096" chance="7" id2="29901" count2="1" chance2="93" /> <!-- Heir's Radiance Lv. 8 - PvP/ PvE -->
 	</product>
-	<product id="5062" category="3">
+	<product id="1204" category="3">
 		<ingredient id="29904" count="1" /> <!-- Heir's Radiance Lv. 7 - PvP -->
 		<ingredient id="29759" count="4000" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="3200000000" /> <!-- Adena -->
 		<production id="60096" chance="7" id2="29904" count2="1" chance2="93" /> <!-- Heir's Radiance Lv. 8 - PvP/ PvE -->
 	</product>
-	<product id="5063" category="3">
+	<product id="1205" category="3">
 		<ingredient id="60096" count="1" /> <!-- Heir's Radiance Lv. 8 - PvP -->
 		<ingredient id="29759" count="6000" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="3600000000" /> <!-- Adena -->
 		<production id="60097" chance="3" id2="60096" count2="1" chance2="97" /> <!-- Heir's Radiance Lv. 9 - PvP/ PvE -->
 	</product>
-	<product id="5064" category="3">
+	<product id="1206" category="3">
 		<ingredient id="60097" count="1" /> <!-- Heir's Radiance Lv. 9 - PvP -->
 		<ingredient id="29759" count="8000" /> <!-- Heir's Radiance Shard -->
 		<ingredient id="57" count="4000000000" /> <!-- Adena -->
 		<production id="60098" chance="2" id2="60097" count2="1" chance2="98" /> <!-- Heir's Radiance Lv. 10 - PvP/ PvE -->
+	</product>
+	<product id="1244" category="4">
+		<ingredient id="81215" count="10" /> <!-- Aether -->
+		<ingredient id="19440" count="25" /> <!-- R-grade Gemstone -->
+		<production id="37560" chance="100" /> <!-- Emperor's Vitality Tonic -->
 	</product>
 </list>
