@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="211" parentClassId="210">
+		<skill skillName="Weapon Mastery" skillId="141" skillLevel="5" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="5" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
+		</skill>
+		<skill skillName="Evolution Defense" skillId="45188" skillLevel="1" getLevel="76">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="8000000">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expanded Potential of Dyes" skillId="45269" skillLevel="1" getLevel="76" levelUpSp="0">
+			<item id="96613" count="1" /> <!-- Pattern Slot Expansion Ticket -->
+		</skill>
+		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0">
+			<item id="57" count="10000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Goring Charge" skillId="47001" skillLevel="1" getLevel="76" levelUpSp="8000000">
+			<item id="95350" count="1" /> <!-- Spellbook: Goring Charge -->
+			<item id="57" count="10000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="21" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Wild Dance" skillId="47019" skillLevel="1" getLevel="76" levelUpSp="8000000" />
 		<skill skillName="Elemental Focus" skillId="47021" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="94363" count="1" /> <!-- Master's Book: Focus -->
 		</skill>
@@ -28,47 +54,29 @@
 		<skill skillName="Elemental Empower" skillId="47029" skillLevel="4" getLevel="76" levelUpSp="8000000">
 			<item id="94361" count="1" /> <!-- Master's Book: Empower -->
 		</skill>
-		<skill skillName="Berserker Spirit" skillId="45112" skillLevel="3" getLevel="76" levelUpSp="8000000">
-			<item id="94366" count="1" /> <!-- Master's Book: Berserker Spirit -->
-		</skill>
-		<skill skillName="Clarity" skillId="45113" skillLevel="4" getLevel="76" levelUpSp="8000000">
-			<item id="94367" count="1" /> <!-- Master's Book: Clarity -->
-		</skill>
-		<skill skillName="Wild Magic" skillId="45106" skillLevel="3" getLevel="76" levelUpSp="8000000">
+		<skill skillName="Elemental Wild Magic" skillId="47030" skillLevel="3" getLevel="76" levelUpSp="8000000">
 			<item id="94368" count="1" /> <!-- Master's Book: Wild Magic -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="8000000">
-			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
+		<skill skillName="Elemental Berserker Spirit" skillId="47031" skillLevel="3" getLevel="76" levelUpSp="8000000">
+			<item id="94366" count="1" /> <!-- Master's Book: Berserker Spirit -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="8000000">
-			<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
+		<skill skillName=" ElementalClarity" skillId="47032" skillLevel="4" getLevel="76" levelUpSp="8000000">
+			<item id="94367" count="1" /> <!-- Master's Book: Clarity -->
 		</skill>
-		<skill skillName="Weapon Mastery" skillId="141" skillLevel="5" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Armor Mastery" skillId="142" skillLevel="5" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Evolution Defense" skillId="45188" skillLevel="1" getLevel="76">
-			<item id="57" count="5000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="8000000">
-			<item id="57" count="5000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="76" levelUpSp="0" />
-		<skill skillName="Goring Charge" skillId="47001" skillLevel="1" getLevel="76" levelUpSp="8000000">
-			<item id="95350" count="1" /> <!-- Spellbook: Goring Charge -->
-		</skill>
-		<skill skillName="Dual Blow" skillId="47002" skillLevel="21" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Wild Dance" skillId="47019" skillLevel="1" getLevel="76" levelUpSp="8000000" />
 		<skill skillName="Elemental Changing" skillId="47045" skillLevel="1" getLevel="76" levelUpSp="8000000">
 			<item id="95352" count="1" /> <!-- Spellbook: Elemental Changing -->
 		</skill>
 		<skill skillName="Elemental Care" skillId="47054" skillLevel="2" getLevel="76" levelUpSp="8000000">
 			<item id="95654" count="1" /> <!-- Spellbook: Elemental Care Lv. 2 -->
 		</skill>
-		<skill skillName="Elemental Wind" skillId="47061" skillLevel="2" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Wind" skillId="47061" skillLevel="2" getLevel="76" levelUpSp="8000000">
+			<item id="95359" count="1" /> <!-- Spellbook: Elemental Wind Lv. 2 -->
+		</skill>
 		<skill skillName="Time Burst" skillId="47062" skillLevel="2" getLevel="76" levelUpSp="8000000">
 			<item id="95357" count="1" /> <!-- Spellbook: Time Burst Lv. 2 -->
 		</skill>
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="8" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="8" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="8" getLevel="76" levelUpSp="8000000" />
 		<skill skillName="Extra Hit" skillId="47085" skillLevel="1" getLevel="76" levelUpSp="8000000">
 			<item id="95356" count="1" /> <!-- Spellbook: Extra Hit -->
 		</skill>
@@ -84,7 +92,7 @@
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="23" getLevel="78" levelUpSp="12000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="5" getLevel="78" levelUpSp="12000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="9" getLevel="78" levelUpSp="12000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="9" getLevel="78" levelUpSp="12000000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="24" getLevel="79" levelUpSp="15000000" />
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="9" getLevel="79" levelUpSp="15000000" />
@@ -92,7 +100,9 @@
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0" />
+		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="2" getLevel="80" levelUpSp="0">
+			<item id="57" count="40000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="25" getLevel="80" levelUpSp="18000000" />
 		<skill skillName="Stealthy Swiftness" skillId="47008" skillLevel="1" getLevel="80" levelUpSp="18000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="6" getLevel="80" levelUpSp="18000000" />
@@ -107,25 +117,33 @@
 		</skill>
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="26" getLevel="81" levelUpSp="160000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="10" getLevel="81" levelUpSp="160000000" />
-
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="10" getLevel="81" levelUpSp="160000000" />
+		
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="27" getLevel="82" levelUpSp="200000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="7" getLevel="82" levelUpSp="200000000" />
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="10" getLevel="82" levelUpSp="200000000" />
 		<skill skillName="Quick Reload" skillId="47083" skillLevel="5" getLevel="82" levelUpSp="200000000" />
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="6" getLevel="82" levelUpSp="200000000" />
+		<skill skillName="Dragon Slayer Appearance" skillId="54231" skillLevel="1" getLevel="82" levelUpSp="0">
+			<item id="96300" count="1" /> <!-- Spellbook: Dragon Slayer -->
+		</skill>
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="28" getLevel="83" levelUpSp="240000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="11" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="11" getLevel="83" levelUpSp="240000000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="29" getLevel="84" levelUpSp="350000000" />
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="11" getLevel="84" levelUpSp="350000000" />
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="7" getLevel="84" levelUpSp="350000000" />
 
-		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0" />
+		<skill skillName="Detection" skillId="45190" skillLevel="2" getLevel="85" levelUpSp="840000000">
+			<item id="57" count="10000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="3" getLevel="85" levelUpSp="0">
+			<item id="57" count="100000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="30" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="8" getLevel="85" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="12" getLevel="85" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="12" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Elemental Connection" skillId="47104" skillLevel="5" getLevel="85" levelUpSp="840000000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="31" getLevel="86" levelUpSp="840000000" />
@@ -133,7 +151,7 @@
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="8" getLevel="86" levelUpSp="840000000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="32" getLevel="87" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="13" getLevel="87" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="13" getLevel="87" levelUpSp="840000000" />
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="33" getLevel="88" levelUpSp="840000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="9" getLevel="88" levelUpSp="840000000" />
@@ -142,52 +160,15 @@
 
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="34" getLevel="89" levelUpSp="840000000" />
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="14" getLevel="89" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="14" getLevel="89" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="14" getLevel="89" levelUpSp="840000000" />
 
-		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0" />
+		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="4" getLevel="90" levelUpSp="0">
+			<item id="57" count="200000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Dual Blow" skillId="47002" skillLevel="35" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Freezing Wound" skillId="47011" skillLevel="10" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="15" getLevel="90" levelUpSp="840000000" />
-		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="15" getLevel="90" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="47082" skillLevel="15" getLevel="90" levelUpSp="840000000" />
 		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="10" getLevel="90" levelUpSp="840000000" />
-		<skill skillName="Elemental Wind" skillId="47061" skillLevel="2" getLevel="90" levelUpSp="840000000">
-			<item id="95359" count="1" /> <!-- Spellbook: Elemental Wind Lv. 2 -->
-		</skill>
-		
-		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="1" getLevel="88" autoGet="true" />
-		<skill skillName="Glorious Warrior's Special Teleport" skillId="45472" skillLevel="1" getLevel="88" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="1" getLevel="88" autoGet="true" />
-		
-		<skill skillName="Expand Glorious Warrior's Special Teleports" skillId="45473" skillLevel="1" getLevel="89" autoGet="true" />
-		
-		<skill skillName="Glorious Warrior's Unique Title Color" skillId="45474" skillLevel="1" getLevel="90" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Hair Accessory Slots" skillId="45475" skillLevel="1" getLevel="90" autoGet="true" />
-		<skill skillName="Glorious Warrior's Ability" skillId="45361" skillLevel="1" getLevel="90">
-			<item id="94046" count="1" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 1 -->
-		</skill>
-		
-		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="2" getLevel="91" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="2" getLevel="91" autoGet="true" />
-		<skill skillName="Glorious Warrior's Ability" skillId="45361" skillLevel="2" getLevel="91">
-			<item id="95890" count="1" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 2 -->
-		</skill>
-		<skill skillName="Glorious Warrior's Resurrection Cost Decrease" skillId="47240" skillLevel="1" getLevel="91" autoGet="true" />
-		
-		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="3" getLevel="92" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="3" getLevel="92" autoGet="true" />
-		<skill skillName="Glorious Warrior's Ability" skillId="45361" skillLevel="3" getLevel="92">
-			<item id="95891" count="1" /> <!-- Spellbook: Glorious Warrior's Ability Lv. 3 -->
-		</skill>
-		
-		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="4" getLevel="93" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="4" getLevel="93" autoGet="true" />
-		
-		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="5" getLevel="94" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="5" getLevel="94" autoGet="true" />
-		
-		<skill skillName="Glorious Warrior's Elixir Upgrade" skillId="45471" skillLevel="6" getLevel="95" autoGet="true" />
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="6" getLevel="95" autoGet="true" />
-
-		<skill skillName="Expand Glorious Warrior's Magic Lamp" skillId="45483" skillLevel="7" getLevel="96" autoGet="true" />
 	</skillTree>
 </list>
