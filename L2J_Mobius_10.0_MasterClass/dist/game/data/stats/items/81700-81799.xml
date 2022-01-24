@@ -589,21 +589,79 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="81745" name="+1 Shining Artifact Pack" additionalName="Balance" type="EtcItem">
+	<item id="81745" name="+1 Balance Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a balance artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48969" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - P. Atk. Balance -->
+			<item id="48970" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - M. Atk. Balance -->
+			<item id="48971" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - P. Accuracy Balance -->
+			<item id="48972" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - M. Accuracy Balance -->
+			<item id="48973" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Critical Rate for Basic Attacks Balance -->
+			<item id="48974" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - P. Skill Critical Rate Balance -->
+			<item id="48975" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - M. Critical Rate Balance -->
+			<item id="48976" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Recovery Potions' Effect Balance -->
+			<item id="48977" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Received Damage When Immobilized Balance -->
+			<item id="48985" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Fixed Damage Resistance Balance -->
+			<item id="80656" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - P. Def. Balance -->
+			<item id="80657" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - M. Def. Balance -->
+			<item id="80658" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Critical Damage for Basic Attacks Balance -->
+			<item id="80659" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - P. Skill Critical Damage Balance -->
+			<item id="80660" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - M. Skill Critical Damage Balance -->
+			<item id="80661" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Atk. Spd. Balance -->
+			<item id="80662" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Casting Spd. Balance -->
+			<item id="81439" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Vitality Bonus Balance -->
+			<item id="81440" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Received Healing Balance -->
+			<item id="81441" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Skill MP Consumption Balance -->
+			<item id="81442" min="1" max="1" minEnchant="1" maxEnchant="1" chance="4.76" /> <!-- +1 Artifact - Received P. Critical Rate Balance -->
+		</capsuled_items>
 	</item>
-	<item id="81746" name="+3 Shining Artifact Pack" additionalName="Balance" type="EtcItem">
+	<item id="81746" name="+3 Balance Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a balance artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48969" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - P. Atk. Balance -->
+			<item id="48970" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - M. Atk. Balance -->
+			<item id="48971" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - P. Accuracy Balance -->
+			<item id="48972" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - M. Accuracy Balance -->
+			<item id="48973" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Critical Rate for Basic Attacks Balance -->
+			<item id="48974" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - P. Skill Critical Rate Balance -->
+			<item id="48975" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - M. Critical Rate Balance -->
+			<item id="48976" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Recovery Potions' Effect Balance -->
+			<item id="48977" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Received Damage When Immobilized Balance -->
+			<item id="48985" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Fixed Damage Resistance Balance -->
+			<item id="80656" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - P. Def. Balance -->
+			<item id="80657" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - M. Def. Balance -->
+			<item id="80658" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Critical Damage for Basic Attacks Balance -->
+			<item id="80659" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - P. Skill Critical Damage Balance -->
+			<item id="80660" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - M. Skill Critical Damage Balance -->
+			<item id="80661" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Atk. Spd. Balance -->
+			<item id="80662" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Casting Spd. Balance -->
+			<item id="81439" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Vitality Bonus Balance -->
+			<item id="81440" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Received Healing Balance -->
+			<item id="81441" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Skill MP Consumption Balance -->
+			<item id="81442" min="1" max="1" minEnchant="3" maxEnchant="3" chance="4.76" /> <!-- +3 Artifact - Received P. Critical Rate Balance -->
+		</capsuled_items>
 	</item>
 	<item id="81747" name="Royal Honey Dark Beer" type="EtcItem">
 		<!-- For 30 min. all basic stats +3, Vitality bonus +50%, P./ M. Def. +15%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->

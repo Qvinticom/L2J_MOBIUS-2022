@@ -653,65 +653,159 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="82158" name="+1 Attack Artifact Pack" type="EtcItem">
+	<item id="82158" name="+1 Attack Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48957" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - P. Atk. Attack -->
+			<item id="48958" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - M. Atk. Attack -->
+			<item id="48959" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - Atk. Spd. Attack -->
+			<item id="48960" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - Casting Spd. Attack -->
+			<item id="80647" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - Critical Damage for Basic Attacks Attack -->
+			<item id="80649" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - M. Skill Critical Damage Attack -->
+			<item id="81430" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - Attribute Attack Attack -->
+			<item id="81431" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - P. Skill Power Attack -->
+			<item id="81432" min="1" max="1" minEnchant="1" maxEnchant="1" chance="11.11" /> <!-- +1 Artifact - M. Skill Power Attack -->
+		</capsuled_items>
 	</item>
-	<item id="82159" name="+3 Attack Artifact Pack" type="EtcItem">
+	<item id="82159" name="+3 Attack Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48957" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - P. Atk. Attack -->
+			<item id="48958" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - M. Atk. Attack -->
+			<item id="48959" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - Atk. Spd. Attack -->
+			<item id="48960" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - Casting Spd. Attack -->
+			<item id="80647" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - Critical Damage for Basic Attacks Attack -->
+			<item id="80649" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - M. Skill Critical Damage Attack -->
+			<item id="81430" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - Attribute Attack Attack -->
+			<item id="81431" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - P. Skill Power Attack -->
+			<item id="81432" min="1" max="1" minEnchant="3" maxEnchant="3" chance="11.11" /> <!-- +3 Artifact - M. Skill Power Attack -->
+		</capsuled_items>
 	</item>
-	<item id="82160" name="+1 Defense Artifact Pack" type="EtcItem">
+	<item id="82160" name="+1 Defense Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48961" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - P. Def. Defense -->
+			<item id="48962" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - M. Def. Defense -->
+			<item id="48963" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Max HP Defense -->
+			<item id="48964" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Max MP Defense -->
+			<item id="80650" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Bow Resistance Defense -->
+			<item id="80651" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Dagger Resistance Defense -->
+			<item id="80652" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Sword Resistance Defense -->
+			<item id="81433" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Attribute Resistance Defense -->
+			<item id="81434" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Received Damage When Immobilized Defense -->
+			<item id="81435" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Received P. Critical Damage Defense -->
+		</capsuled_items>
 	</item>
-	<item id="82161" name="+3 Defense Artifact Pack" type="EtcItem">
-		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
+	<item id="82161" name="+3 Defense Artifact Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain an attack artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48961" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - P. Def. Defense -->
+			<item id="48962" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - M. Def. Defense -->
+			<item id="48963" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Max HP Defense -->
+			<item id="48964" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Max MP Defense -->
+			<item id="80650" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Bow Resistance Defense -->
+			<item id="80651" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Dagger Resistance Defense -->
+			<item id="80652" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Sword Resistance Defense -->
+			<item id="81433" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Attribute Resistance Defense -->
+			<item id="81434" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Received Damage When Immobilized Defense -->
+			<item id="81435" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Received P. Critical Damage Defense -->
+		</capsuled_items>
 	</item>
-	<item id="82162" name="+1 Support Artifact Pack" type="EtcItem">
+	<item id="82162" name="+1 Support Artifact Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48965" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Acquired XP Support -->
+			<item id="48966" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Vampiric Rage Support -->
+			<item id="48967" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Speed Support -->
+			<item id="48968" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Received Healing Support -->
+			<item id="80653" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Vitality Bonus Support -->
+			<item id="80654" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Vitality Consumption Support -->
+			<item id="80655" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Skill MP Consumption Support -->
+			<item id="81436" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Recovery Potions' Effect Support -->
+			<item id="81437" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Fixed Damage Resistance Support -->
+			<item id="81438" min="1" max="1" minEnchant="1" maxEnchant="1" chance="10" /> <!-- +1 Artifact - Damage Reflection Resistance Support -->
+		</capsuled_items>
 	</item>
-	<item id="82163" name="+3 Support Artifact Pack" type="EtcItem">
-		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
+	<item id="82163" name="+3 Support Artifact Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain an attack artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48965" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Acquired XP Support -->
+			<item id="48966" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Vampiric Rage Support -->
+			<item id="48967" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Speed Support -->
+			<item id="48968" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Received Healing Support -->
+			<item id="80653" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Vitality Bonus Support -->
+			<item id="80654" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Vitality Consumption Support -->
+			<item id="80655" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Skill MP Consumption Support -->
+			<item id="81436" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Recovery Potions' Effect Support -->
+			<item id="81437" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Fixed Damage Resistance Support -->
+			<item id="81438" min="1" max="1" minEnchant="3" maxEnchant="3" chance="10" /> <!-- +3 Artifact - Damage Reflection Resistance Support -->
+		</capsuled_items>
 	</item>
 	<item id="82164" name="Collection Item Box - All as One" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Orb of Abyss Lv. 1, Orb of Abyss Lv. 3, Orb of Abyss Lv. 7 (1 of each). -->
