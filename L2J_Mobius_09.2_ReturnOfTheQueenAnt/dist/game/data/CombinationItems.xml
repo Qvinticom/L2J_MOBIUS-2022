@@ -2432,39 +2432,39 @@
 		<reward id="80959" count="1" type="ON_SUCCESS" /> <!-- Epic Talisman -->
 		<reward id="37717" count="1" type="ON_FAILURE" /> <!-- Talisman of Seven Signs -->
 	</item>
-	<item one="80637" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 1 / Energy of Protection -->
+	<item one="80637" two="80964" commission="100000" chance="45"> <!-- Talisman of Protection Lv. 1 / Energy of Protection -->
 		<reward id="80638" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 2 -->
 		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
 	</item>
-	<item one="80638" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 2 / Energy of Protection -->
+	<item one="80638" two="80964" commission="100000" chance="40"> <!-- Talisman of Protection Lv. 2 / Energy of Protection -->
 		<reward id="80639" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 3 -->
 		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
 	</item>
-	<item one="80639" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 3 / Energy of Protection -->
+	<item one="80639" two="80964" commission="100000" chance="35"> <!-- Talisman of Protection Lv. 3 / Energy of Protection -->
 		<reward id="80640" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 4 -->
 		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
 	</item>
-	<item one="80640" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 4 / Energy of Protection -->
+	<item one="80640" two="80964" commission="100000" chance="30"> <!-- Talisman of Protection Lv. 4 / Energy of Protection -->
 		<reward id="80641" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 5 -->
 		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
 	</item>
-	<item one="80641" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 5 / Energy of Protection -->
+	<item one="80641" two="80964" commission="100000" chance="40"> <!-- Talisman of Protection Lv. 5 / Energy of Protection -->
 		<reward id="80642" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 6 -->
 		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
 	</item>
-	<item one="80642" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 6 / Energy of Protection -->
+	<item one="80642" two="80964" commission="100000" chance="35"> <!-- Talisman of Protection Lv. 6 / Energy of Protection -->
 		<reward id="80643" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 7 -->
 		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
 	</item>
-	<item one="80643" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 7 / Energy of Protection -->
+	<item one="80643" two="80964" commission="100000" chance="30"> <!-- Talisman of Protection Lv. 7 / Energy of Protection -->
 		<reward id="80644" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 8 -->
 		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
 	</item>
-	<item one="80644" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 8 / Energy of Protection -->
+	<item one="80644" two="80964" commission="100000" chance="25"> <!-- Talisman of Protection Lv. 8 / Energy of Protection -->
 		<reward id="80645" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 9 -->
 		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
 	</item>
-	<item one="80645" two="80964" commission="100000"> <!-- Talisman of Protection Lv. 9 / Energy of Protection -->
+	<item one="80645" two="80964" commission="100000" chance="20"> <!-- Talisman of Protection Lv. 9 / Energy of Protection -->
 		<reward id="80646" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 10 -->
 		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
 	</item>
