@@ -1109,7 +1109,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="material" val="STEEL" />
 		<capsuled_items>
-			<item id="23085" min="1" max="1" chance="100" /> <!-- Power Shirt - Event -->
+			<item id="23085" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Power Shirt - Event -->
 		</capsuled_items>
 	</item>
 	<item id="23088" name="Discovery Package" type="EtcItem">
