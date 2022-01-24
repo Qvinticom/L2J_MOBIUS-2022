@@ -21,6 +21,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -43,7 +44,6 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_LIST.writeId(packet);
-		int remainingTime;
 		final long currentTime = Chronos.currentTimeMillis();
 		packet.writeD(TimedHuntingZoneData.getInstance().getSize()); // zone count
 		for (TimedHuntingZoneHolder holder : TimedHuntingZoneData.getInstance().getAllHuntingZones())
@@ -56,14 +56,14 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 			packet.writeD(holder.getMinLevel());
 			packet.writeD(holder.getMaxLevel());
 			packet.writeD(holder.getInitialTime() / 1000); // remain time base
-			remainingTime = _player.getTimedHuntingZoneRemainingTime(holder.getZoneId());
+			int remainingTime = _player.getTimedHuntingZoneRemainingTime(holder.getZoneId());
 			if ((remainingTime == 0) && ((_player.getTimedHuntingZoneInitialEntry(holder.getZoneId()) + holder.getResetDelay()) < currentTime))
 			{
 				remainingTime = holder.getInitialTime();
 			}
 			packet.writeD(remainingTime / 1000); // remain time
 			packet.writeD(holder.getMaximumAddedTime() / 1000);
-			packet.writeD(holder.getRemainRefillTime());
+			packet.writeD(_player.getVariables().getInt(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + holder.getZoneId(), holder.getRemainRefillTime()));
 			packet.writeD(holder.getRefillTimeMax());
 			packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
 			packet.writeC(0); // bUserBound

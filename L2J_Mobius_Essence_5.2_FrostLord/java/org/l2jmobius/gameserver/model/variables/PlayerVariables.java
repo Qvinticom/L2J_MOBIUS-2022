@@ -61,6 +61,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String AUTO_USE_SHORTCUTS = "AUTO_USE_SHORTCUTS";
 	public static final String HUNTING_ZONE_ENTRY = "HUNTING_ZONE_ENTRY_";
 	public static final String HUNTING_ZONE_TIME = "HUNTING_ZONE_TIME_";
+	public static final String HUNTING_ZONE_REMAIN_REFILL_ = "HUNTING_ZONE_REMAIN_REFILL_";
 	public static final String SAYHA_GRACE_SUPPORT_ENDTIME = "SAYHA_GRACE_SUPPORT_ENDTIME";
 	public static final String LIMITED_SAYHA_GRACE_ENDTIME = "LIMITED_SAYHA_GRACE_ENDTIME";
 	public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";

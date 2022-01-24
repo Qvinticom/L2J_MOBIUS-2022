@@ -403,10 +403,11 @@ public class DailyTaskManager
 			
 			// Update data for offline players.
 			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var IN (?, ?)"))
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var IN (?, ?, ?)"))
 			{
 				ps.setString(1, PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				ps.setString(2, PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				ps.setString(3, PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + holder.getZoneId());
 				ps.executeUpdate();
 			}
 			catch (Exception e)
@@ -419,6 +420,7 @@ public class DailyTaskManager
 			{
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + holder.getZoneId());
 				player.getVariables().storeMe();
 			}
 		}
@@ -437,10 +439,11 @@ public class DailyTaskManager
 			
 			// Update data for offline players.
 			try (Connection con = DatabaseFactory.getConnection();
-				PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var IN (?, ?)"))
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var IN (?, ?, ?)"))
 			{
 				ps.setString(1, PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				ps.setString(2, PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				ps.setString(3, PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + holder.getZoneId());
 				ps.executeUpdate();
 			}
 			catch (Exception e)
@@ -453,6 +456,7 @@ public class DailyTaskManager
 			{
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_ENTRY + holder.getZoneId());
 				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_TIME + holder.getZoneId());
+				player.getVariables().remove(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + holder.getZoneId());
 				player.getVariables().storeMe();
 			}
 		}

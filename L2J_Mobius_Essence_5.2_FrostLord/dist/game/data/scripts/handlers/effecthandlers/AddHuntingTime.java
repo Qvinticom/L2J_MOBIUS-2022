@@ -65,7 +65,7 @@ public class AddHuntingTime extends AbstractEffect
 		}
 		
 		final long currentTime = Chronos.currentTimeMillis();
-		long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
+		final long endTime = currentTime + player.getTimedHuntingZoneRemainingTime(_zoneId);
 		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= holder.getMaximumAddedTime()))
 		{
 			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
@@ -73,23 +73,22 @@ public class AddHuntingTime extends AbstractEffect
 			return;
 		}
 		
+		final long remainRefill = player.getVariables().getInt(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + _zoneId, holder.getRemainRefillTime());
+		if ((_time < remainRefill) || (remainRefill == 0))
+		{
+			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
+			player.sendMessage("You cannot exceed the time zone limit.");
+			return;
+		}
+		
+		final long remainTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, holder.getInitialTime());
+		player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, remainTime + _time);
+		player.getVariables().set(PlayerVariables.HUNTING_ZONE_REMAIN_REFILL_ + _zoneId, remainRefill - (_time / 1000));
+		
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, _time + player.getTimedHuntingZoneRemainingTime(_zoneId));
 			player.startTimedHuntingZone(_zoneId, endTime);
 			player.sendPacket(new TimedHuntingZoneEnter(player, _zoneId));
-		}
-		else
-		{
-			if ((endTime + holder.getResetDelay()) < currentTime)
-			{
-				endTime = currentTime + holder.getInitialTime();
-			}
-			else if (endTime < currentTime)
-			{
-				endTime = currentTime;
-			}
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_TIME + _zoneId, (endTime - currentTime) + _time);
 		}
 		
 		player.sendPacket(new TimedHuntingZoneList(player));
