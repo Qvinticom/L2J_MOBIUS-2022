@@ -1,8 +1,5 @@
 L2J-Mobius Salvation
-
-Client: https://mega.nz/#!ROAm2A4I!yghC8lp3OJIkPsue7AK2h9PlVPklMmjTM9GKOi0h71E
-Use mega downloader to download https://megadownloader.en.softonic.com/
-
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=15_953CYA3rfxezDKzSbXJoYKZCEWwr0S&export=download
 System: https://mega.nz/#!ZgtSUQKR!CNGdlcf2TRiDKvH8NJowEQUfafoJyzsv-g2SM9kpOB4
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

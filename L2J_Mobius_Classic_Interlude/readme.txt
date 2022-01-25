@@ -1,6 +1,6 @@
 L2J-Mobius Classic Interlude
 
-Client: https://drive.google.com/u/0/uc?id=1mWvvdTC611lTqF1OU8cKgUiSqnZ3DhOT&export=download
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1wXbBRRoh3NvvPjUjYLyIWn-gn88pr0DR&export=download
 System: https://www.mediafire.com/file/669nqj7u0hqbtf2/L2J_Mobius_Classic_Interlude_System_v12.zip
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

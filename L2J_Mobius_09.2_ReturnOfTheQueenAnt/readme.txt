@@ -1,5 +1,5 @@
 L2J-Mobius Return of the Queen Ant Chapter 2
-Client: https://drive.google.com/u/0/uc?id=1wvBeoNFljviXafRBRey8McnEdVF-z0fK&export=download
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1_rBiTiFu8OrFwFOA4HRnLG8mdiONMs8Y&export=download
 System: https://mega.nz/file/o4sSWCDS#62_BEm7U-kKFwxAeVPkJl7lhn5Za4JiiPkcMvMeNDqg
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

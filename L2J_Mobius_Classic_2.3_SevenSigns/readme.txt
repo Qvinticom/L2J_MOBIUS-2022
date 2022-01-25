@@ -1,6 +1,5 @@
 L2J-Mobius Classic Seven Signs
-
-Client: https://drive.google.com/uc?id=1L4hcPsh5T3TOf_LcePonnMeQvcDm9DDV&export=download
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1-LrJURgBxEAQKt_Rox-1Yf1_alEg2PJ1&export=download
 System: https://mega.nz/#!B10W0QSR!xon-5i8Z8g5-VoJPTt16leYVIVV8GosQE_OSH1j7pnM
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

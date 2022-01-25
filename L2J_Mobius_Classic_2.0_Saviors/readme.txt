@@ -1,6 +1,5 @@
 L2J-Mobius Classic Saviors
-
-Client: https://drive.google.com/uc?id=0B0Pl9EOrFIjuSVNPXzRpRFRZWlk&export=download
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=12bg2PXdd3daZl5rIUIDAYSihEdpngsVC&export=download
 System: https://mega.nz/#!Fp8QBYYD!jLmMH7wisNk198-A7AYqhA1VMDru_OXpJbunXpBh4ww
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

@@ -1,9 +1,5 @@
 L2J-Mobius Secret of Empire
-
-Client mirror 1: https://mega.nz/#!AHA1EQgQ!cjt1DxvIh4CIFkuyqEGMLLmfOcZslfWfH-vWjCYhYrc
-Use mega downloader to download https://megadownloader.en.softonic.com/
-
-Client mirror 2: https://drive.google.com/uc?id=1yeYwrQEIcmAz5Ha1R05c3QgntRPy9y0V&export=download
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1EW-r8oUNWuRXUXmQ_tPbY8zIBEATgvZV&export=download
 System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

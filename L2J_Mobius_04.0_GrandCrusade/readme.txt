@@ -1,7 +1,5 @@
 L2J-Mobius Grand Crusade
-
-Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=download
-Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1LpjE7GPJSZHFN9V5dMP0vC5YUsuAtA21&export=download
 System: https://mega.nz/#!Fk0SAK6L!v3JSzKN6QuNzINgel0wp7zXovh0DOYzqxcm7etQOSLI
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

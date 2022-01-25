@@ -1,5 +1,5 @@
 L2J-Mobius Frost Lord
-Client: https://drive.google.com/u/0/uc?id=1wvBeoNFljviXafRBRey8McnEdVF-z0fK&export=download
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1_rBiTiFu8OrFwFOA4HRnLG8mdiONMs8Y&export=download
 System: https://mega.nz/file/p4VViajQ#8wtYL65IeCNymkt9zHV10aMit-NplvcnKqSfnno2_XA
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

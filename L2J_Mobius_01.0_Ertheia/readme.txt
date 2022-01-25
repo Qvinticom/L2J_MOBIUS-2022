@@ -1,8 +1,5 @@
 L2J-Mobius Ertheia
-
-Client: https://mega.nz/#F!BxkyzLBA!CIuE1GQOO1JMel7S7UxPfQ
-Use mega downloader to download https://megadownloader.en.softonic.com/
-
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1MhjWZwmgfNVQeuTLWPJsFIDfeZi2300T&export=download
 System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

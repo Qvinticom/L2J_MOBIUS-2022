@@ -1,6 +1,5 @@
 L2J-Mobius Epilogue
-
-Client: https://drive.google.com/uc?id=0BxcFDPsm5786MHpWQmR5Ym96VXc&export=download
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=10cLvBIhj5mL_ldtRrEYSHpg-FZBv-ady&export=download
 System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

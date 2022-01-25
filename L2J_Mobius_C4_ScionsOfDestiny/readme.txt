@@ -1,7 +1,7 @@
 L2J-Mobius C4
 Base idea is to use C6 branch for C4 client.
 
-Client: https://mega.nz/file/dwcyga6Q#70bMDfvuQ6aiQEA_aI7JrPn66NzIZ289iZ0QfJj5MmE
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1c5MoWXtlbWaITxhe_d7G6gE7uf0wSYh4&export=download
 System: https://mega.nz/file/c09XTS7Y#MoIzoOZ8q-aAiKuE4XzB4JpJU67Eql61SHD4VhqP9Mw
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

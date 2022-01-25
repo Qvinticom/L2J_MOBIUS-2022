@@ -1,6 +1,5 @@
 L2J-Mobius Prelude of War
-Client Mirror 1: https://drive.google.com/uc?id=1rXtgV9l67b5lBeK_wmCKITE1DQ7EgEJ8&export=download
-Client Mirror 2: https://drive.google.com/uc?id=1IugZjcpS5n9_EJPLCecB3H_tLmVlqo2L&export=download
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1FpOy82whmZdQacf4ZAjRsyc6sWYq14in&export=download
 System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

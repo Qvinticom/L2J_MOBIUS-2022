@@ -1,7 +1,5 @@
 L2J-Mobius High Five
-
-Client mirror 1: https://cloud.mail.ru/public/8GTQ/NzhxB6dHq
-Client mirror 2: https://mega.nz/#!BZVjgI7L!bIJp-VpomuUGkqUZSGBE-VUXs_eLEpX21s_IaIM6g8E
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1anK5v2JPq4dxZQcA5ofA5ip82eBPtELb&export=download
 System: https://mega.nz/file/B5sVlTgJ#a19JJWZ7llbAZF9XnU91Z98ZbO_Rb56s9AvQ_QyDz-c
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

@@ -1,7 +1,5 @@
 L2J-Mobius Helios
-
-Client: https://drive.google.com/uc?id=0B_wJFNF_2fcJTE5oVm96emtlSlE&export=download
-Mirror: https://mega.nz/#!Uo9TTCSQ!JDstscgcLFY3GeM3Q6j8nUq7jpixzqIV1Gl4z2ob0eA
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=12bg2PXdd3daZl5rIUIDAYSihEdpngsVC&export=download
 System: https://mega.nz/#!Fp8QBYYD!jLmMH7wisNk198-A7AYqhA1VMDru_OXpJbunXpBh4ww
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

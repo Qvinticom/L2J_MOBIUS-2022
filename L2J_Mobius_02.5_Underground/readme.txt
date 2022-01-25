@@ -1,7 +1,5 @@
 L2J-Mobius Underground
-
-Client: https://drive.google.com/uc?id=0Bz1qNvCniabUMDhOd3RpUzBNSW8&export=download
-Mirror: https://mega.nz/#!h1FXyByZ!XmyZBtk4qSOlKb435rx7X372_NreN1PTH8l7A4lNCoo
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=1trszRfL3gj3-dS7E06SZC48FGnQRw7UT&export=download
 System: https://mega.nz/#!Rx1SCIBC!W5pM7xljB_6UwXaHp_aW8sqY1SJXp5LFa121YGRrb74
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

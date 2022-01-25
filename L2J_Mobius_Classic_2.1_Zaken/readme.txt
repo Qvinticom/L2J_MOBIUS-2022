@@ -1,6 +1,5 @@
 L2J-Mobius Classic Zaken
-
-Client: https://drive.google.com/uc?id=1_kioRKR5FTOmINAtUQe0KCxrvPzY18Nd&export=download
+Client (password L2jMobius): https://drive.google.com/u/1/uc?id=1LpjE7GPJSZHFN9V5dMP0vC5YUsuAtA21&export=download
 System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi

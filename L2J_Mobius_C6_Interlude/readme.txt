@@ -1,6 +1,6 @@
 L2J-Mobius Interlude
 
-Client: https://drive.google.com/uc?id=1LcKCQTbRXJvteJcuvc_rnX8i2gT1fcHB&export=download
+Client (password L2jMobius): https://drive.google.com/u/0/uc?id=12GNl8NXeFySVhVcYD1FH2Ab8giFXLh4b&export=download
 System: https://mega.nz/#!t49wiKgZ!PzVAcxcg2o8gRkAiMjH7CUO6lKrBG27npg2JPL1uEq8
 
 JDK: https://www.mediafire.com/file/7n2v2ws8281knej/bellsoft-jdk17%252B35-windows-amd64.msi
