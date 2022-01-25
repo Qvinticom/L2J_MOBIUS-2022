@@ -19,16 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
-import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionRewardCount;
 
@@ -49,20 +44,16 @@ public class RequestExPledgeMissionReward implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().canPerformPlayerAction())
+		{
+			return;
+		}
+		
 		final Player player = client.getPlayer();
 		if ((player == null) || (player.getClan() == null))
 		{
 			return;
 		}
-		
-		if (player.hasRequest(RewardRequest.class))
-		{
-			PacketLogger.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
-			Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
-			return;
-		}
-		
-		player.addRequest(new RewardRequest(player));
 		
 		final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
 		if ((reward != null) && !reward.isEmpty())
@@ -71,10 +62,5 @@ public class RequestExPledgeMissionReward implements IClientIncomingPacket
 			client.sendPacket(new ExPledgeMissionRewardCount(player));
 			client.sendPacket(new ExPledgeMissionInfo(player));
 		}
-		
-		ThreadPool.schedule(() ->
-		{
-			player.removeRequest(RewardRequest.class);
-		}, 50);
 	}
 }

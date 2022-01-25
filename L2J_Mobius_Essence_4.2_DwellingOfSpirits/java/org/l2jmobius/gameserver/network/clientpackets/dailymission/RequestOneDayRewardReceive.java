@@ -19,16 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets.dailymission;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.request.RewardRequest;
-import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.PacketLogger;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
@@ -49,6 +44,11 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
+		if (!client.getFloodProtectors().canPerformPlayerAction())
+		{
+			return;
+		}
+		
 		final Player player = client.getPlayer();
 		if (player == null)
 		{
@@ -61,14 +61,6 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.hasRequest(RewardRequest.class))
-		{
-			PacketLogger.warning("Kicked " + player + " for spamming " + getClass().getSimpleName());
-			Disconnection.of(player).defaultSequence(ServerClose.STATIC_PACKET);
-			return;
-		}
-		player.addRequest(new RewardRequest(player));
-		
 		for (DailyMissionDataHolder holder : rewards)
 		{
 			if (holder.isDisplayable(player))
@@ -79,10 +71,5 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 		
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-		
-		ThreadPool.schedule(() ->
-		{
-			player.removeRequest(RewardRequest.class);
-		}, 50);
 	}
 }
