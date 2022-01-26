@@ -138,9 +138,9 @@ public class UseItem implements IClientIncomingPacket
 			player.cancelActiveTrade();
 		}
 		
+		// No unequipping wear-items.
 		if (item.isWear())
 		{
-			// No unequipping wear-items
 			return;
 		}
 		
@@ -164,93 +164,93 @@ public class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		// Items that cannot be used
+		// Items that cannot be used.
 		if (itemId == 57)
 		{
 			return;
 		}
 		
-		if ((itemId == 5858) && (ClanHallTable.getInstance().getClanHallByOwner(player.getClan()) == null))
-		{
-			player.sendMessage("Blessed Scroll of Escape: Clan Hall cannot be used due to unsuitable terms.");
-			return;
-		}
-		else if ((itemId == 5859) && (CastleManager.getInstance().getCastleByOwner(player.getClan()) == null))
-		{
-			player.sendMessage("Blessed Scroll of Escape: Castle cannot be used due to unsuitable terms.");
-			return;
-		}
-		
+		// You cannot do anything else while fishing.
 		if (player.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
-			// You cannot do anything else while fishing
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3));
 			return;
 		}
 		
 		if ((player.getPkKills() > 0) && ((itemId >= 7816) && (itemId <= 7831)))
 		{
-			// Retail messages... same L2OFF
-			player.sendMessage("You do not meet the required condition to equip that item.");
-			player.sendMessage("You are unable to equip this item when your PK count is greater than or equal to one.");
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_UNABLE_TO_EQUIP_THIS_ITEM_WHEN_YOUR_PK_COUNT_IS_GREATER_THAN_OR_EQUAL_TO_ONE));
 			return;
 		}
 		
-		final Clan cl = player.getClan();
-		// A shield that can only be used by the members of a clan that owns a castle.
-		if (((cl == null) || (cl.getCastleId() == 0)) && (itemId == 7015) && Config.CASTLE_SHIELD && !player.isGM())
+		// Scroll of resurrection like L2OFF if you are casting you can't use them.
+		if (((itemId == 737) || (itemId == 3936) || (itemId == 3959) || (itemId == 6387)) && player.isCastingNow())
 		{
-			player.sendMessage("You can't equip that.");
+			return;
+		}
+		
+		final Clan clan = player.getClan();
+		if ((itemId == 5858) && ((clan == null) || (ClanHallTable.getInstance().getClanHallByOwner(clan) == null)))
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(5858));
+			return;
+		}
+		
+		if ((itemId == 5859) && ((clan == null) || (CastleManager.getInstance().getCastleByOwner(clan) == null)))
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(5859));
+			return;
+		}
+		
+		// A shield that can only be used by the members of a clan that owns a castle.
+		if (((clan == null) || (clan.getCastleId() == 0)) && (itemId == 7015) && Config.CASTLE_SHIELD && !player.isGM())
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 			return;
 		}
 		
 		// A shield that can only be used by the members of a clan that owns a clan hall.
-		if (((cl == null) || (cl.getHideoutId() == 0)) && (itemId == 6902) && Config.CLANHALL_SHIELD && !player.isGM())
+		if (((clan == null) || (clan.getHideoutId() == 0)) && (itemId == 6902) && Config.CLANHALL_SHIELD && !player.isGM())
 		{
-			player.sendMessage("You can't equip that.");
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 			return;
 		}
 		
 		// Apella armor used by clan members may be worn by a Baron or a higher level Aristocrat.
-		if ((itemId >= 7860) && (itemId <= 7879) && Config.APELLA_ARMORS && ((cl == null) || (player.getPledgeClass() < 5)) && !player.isGM())
+		if ((itemId >= 7860) && (itemId <= 7879) && Config.APELLA_ARMORS && ((clan == null) || (player.getPledgeClass() < 5)) && !player.isGM())
 		{
-			player.sendMessage("You can't equip that.");
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 			return;
 		}
 		
-		// Clan Oath armor used by all clan members
-		if ((itemId >= 7850) && (itemId <= 7859) && Config.OATH_ARMORS && (cl == null) && !player.isGM())
+		// Clan Oath armor used by all clan members.
+		if ((itemId >= 7850) && (itemId <= 7859) && Config.OATH_ARMORS && (clan == null) && !player.isGM())
 		{
-			player.sendMessage("You can't equip that.");
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 			return;
 		}
 		
-		// The Lord's Crown used by castle lords only
-		if ((itemId == CrownTable.CROWN_OF_THE_LORD) && Config.CASTLE_CROWN && ((cl == null) || (cl.getCastleId() == 0) || !player.isClanLeader()) && !player.isGM())
+		// The Lord's Crown used by castle lords only.
+		if ((itemId == CrownTable.CROWN_OF_THE_LORD) && Config.CASTLE_CROWN && ((clan == null) || (clan.getCastleId() == 0) || !player.isClanLeader()) && !player.isGM())
 		{
-			player.sendMessage("You can't equip that.");
-			return;
-		}
-		
-		// Scroll of resurrection like L2OFF if you are casting you can't use them
-		if (((itemId == 737) || (itemId == 3936) || (itemId == 3959) || (itemId == 6387)) && player.isCastingNow())
-		{
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 			return;
 		}
 		
 		// Castle circlets used by the members of a clan that owns a castle, academy members are excluded.
 		if (Config.CASTLE_CIRCLETS && (((itemId >= 6834) && (itemId <= 6840)) || (itemId == 8182) || (itemId == 8183)))
 		{
-			if (cl == null)
+			if (clan == null)
 			{
-				player.sendMessage("You can't equip that.");
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 				return;
 			}
 			
-			final int circletId = CastleManager.getInstance().getCircletByCastleId(cl.getCastleId());
+			final int circletId = CastleManager.getInstance().getCircletByCastleId(clan.getCastleId());
 			if ((player.getPledgeType() == -1) || (circletId != itemId))
 			{
-				player.sendMessage("You can't equip that.");
+				player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM));
 				return;
 			}
 		}
