@@ -180,7 +180,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 			
 			if (playerIU != null)
 			{
-				if (newItem.getCount() > count)
+				if (newItem.isStackable() && (newItem.getCount() > count))
 				{
 					playerIU.addModifiedItem(newItem);
 				}
@@ -202,10 +202,8 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		{
 			player.sendPacket(playerIU);
 		}
-		else
-		{
-			player.sendPacket(new ItemList(player, false));
-		}
+		// Send full list to avoid duplicates.
+		player.sendPacket(new ItemList(player, false));
 		
 		// Update current load status on player
 		final StatusUpdate su = new StatusUpdate(player);
