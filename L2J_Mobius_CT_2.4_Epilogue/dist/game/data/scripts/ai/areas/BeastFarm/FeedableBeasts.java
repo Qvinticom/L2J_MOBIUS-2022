@@ -354,6 +354,17 @@ public class FeedableBeasts extends AbstractNpcAI
 	
 	private void spawnNext(Npc npc, int growthLevel, Player player, int food)
 	{
+		if (npc.isScriptValue(1))
+		{
+			return;
+		}
+		npc.setScriptValue(1);
+		
+		if (!npc.isSpawned())
+		{
+			return;
+		}
+		
 		final int npcId = npc.getId();
 		int nextNpcId = 0;
 		
@@ -397,6 +408,7 @@ public class FeedableBeasts extends AbstractNpcAI
 		{
 			FEED_INFO.remove(npc.getObjectId());
 		}
+		
 		// despawn the old mob
 		// TODO: same code? FIXED?
 		// @formatter:off

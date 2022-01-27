@@ -342,6 +342,17 @@ public class FeedableBeasts extends Quest
 	
 	private void spawnNext(Npc npc, int growthLevel, Player player, int food)
 	{
+		if (npc.isScriptValue(1))
+		{
+			return;
+		}
+		npc.setScriptValue(1);
+		
+		if (!npc.isSpawned())
+		{
+			return;
+		}
+		
 		final int npcId = npc.getNpcId();
 		int nextNpcId = 0;
 		
