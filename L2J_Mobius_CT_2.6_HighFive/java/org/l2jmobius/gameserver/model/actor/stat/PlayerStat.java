@@ -135,8 +135,8 @@ public class PlayerStat extends PlayableStat
 		
 		final double baseExp = addToExp;
 		final double baseSp = addToSp;
-		double bonusExp = 1.;
-		double bonusSp = 1.;
+		double bonusExp = 1;
+		double bonusSp = 1;
 		
 		// Start Nevit's Hourglass
 		if (Config.NEVIT_ENABLED && (addToExp > 0) && !player.isInsideZone(ZoneId.PEACE))

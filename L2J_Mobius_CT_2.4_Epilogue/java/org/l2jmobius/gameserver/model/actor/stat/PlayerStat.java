@@ -130,8 +130,8 @@ public class PlayerStat extends PlayableStat
 			addToSp *= Config.PREMIUM_RATE_SP;
 		}
 		
-		double bonusExp = 1.;
-		double bonusSp = 1.;
+		double bonusExp = 1;
+		double bonusSp = 1;
 		if (useBonuses)
 		{
 			bonusExp = getExpBonusMultiplier();

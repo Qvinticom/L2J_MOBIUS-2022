@@ -119,8 +119,8 @@ public class PlayerStat extends PlayableStat
 		
 		final double baseExp = addToExp;
 		final double baseSp = addToSp;
-		double bonusExp = 1.;
-		double bonusSp = 1.;
+		double bonusExp = 1;
+		double bonusSp = 1;
 		if (useBonuses)
 		{
 			if (player.isFishing())

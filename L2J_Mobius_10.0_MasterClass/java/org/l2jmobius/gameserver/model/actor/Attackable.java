@@ -1394,7 +1394,7 @@ public class Attackable extends Npc
 					}
 					default:
 					{
-						mul = 1.;
+						mul = 1;
 						break;
 					}
 				}
