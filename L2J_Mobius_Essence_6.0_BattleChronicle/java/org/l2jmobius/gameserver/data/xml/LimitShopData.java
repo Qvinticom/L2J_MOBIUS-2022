@@ -121,11 +121,14 @@ public class LimitShopData implements IXmlReader
 									final long ingredientQuantity = parseLong(attrs, "count", 1L);
 									final int ingredientEnchant = parseInteger(attrs, "enchant", 0);
 									
-									final ItemTemplate item = ItemTable.getInstance().getTemplate(ingredientId);
-									if (item == null)
+									if (ingredientId > 0)
 									{
-										LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + productionId + " productId: " + id);
-										continue;
+										final ItemTemplate item = ItemTable.getInstance().getTemplate(ingredientId);
+										if (item == null)
+										{
+											LOGGER.severe(getClass().getSimpleName() + ": Item template null for itemId: " + productionId + " productId: " + id);
+											continue;
+										}
 									}
 									
 									if (ingredientIds[0] == 0)
