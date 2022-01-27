@@ -20,7 +20,6 @@ import java.util.Collection;
 import java.util.Collections;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.LimitShopClanData;
 import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
@@ -97,21 +96,13 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			// Check limits.
 			if (product.getAccountDailyLimit() > 0) // Sale period.
 			{
-				if (_player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountDailyLimit())
+				if (_player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + product.getProductionId(), 0) >= product.getAccountDailyLimit())
 				{
-					if ((_player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
-					{
-						packet.writeD(0);
-					}
-					else // Reset limit.
-					{
-						_player.getAccountVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId());
-						packet.writeD(product.getAccountDailyLimit());
-					}
+					packet.writeD(0);
 				}
 				else
 				{
-					packet.writeD(product.getAccountDailyLimit() - _player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0));
+					packet.writeD(product.getAccountDailyLimit() - _player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + product.getProductionId(), 0));
 				}
 			}
 			else if (product.getAccountBuyLimit() > 0) // Count limit.

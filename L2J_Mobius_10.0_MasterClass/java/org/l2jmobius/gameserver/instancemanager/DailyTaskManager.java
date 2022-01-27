@@ -31,15 +31,18 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.LimitShopData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.holders.LimitShopProductHolder;
 import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TimedHuntingZoneHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -100,10 +103,10 @@ public class DailyTaskManager
 		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)
 		{
 			clanLeaderApply();
-			resetVitalityWeekly();
 			resetClanContribution();
 			resetDailyMissionRewards();
 			resetTimedHuntingZonesWeekly();
+			resetVitalityWeekly();
 		}
 		else // All days, except Wednesday.
 		{
@@ -111,14 +114,15 @@ public class DailyTaskManager
 		}
 		
 		// Daily tasks.
-		resetDailySkills();
-		resetWorldChatPoints();
-		resetRecommends();
-		resetTrainingCamp();
-		resetThroneOfHeroes();
-		resetTimedHuntingZones();
-		resetHomunculusResetPoints();
 		resetAttendanceRewards();
+		resetDailySkills();
+		resetDailyLimitShopData();
+		resetHomunculusResetPoints();
+		resetRecommends();
+		resetTimedHuntingZones();
+		resetThroneOfHeroes();
+		resetTrainingCamp();
+		resetWorldChatPoints();
 	}
 	
 	private void onSave()
@@ -588,6 +592,32 @@ public class DailyTaskManager
 			
 			LOGGER.info("Attendance Rewards has been resetted.");
 		}
+	}
+	
+	public void resetDailyLimitShopData()
+	{
+		for (LimitShopProductHolder holder : LimitShopData.getInstance().getProducts())
+		{
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var=?"))
+			{
+				ps.setString(1, AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
+				ps.executeUpdate();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset LimitShopData: " + e);
+			}
+			
+			// Update data for online players.
+			for (Player player : World.getInstance().getPlayers())
+			{
+				player.getVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + holder.getProductionId());
+				player.getAccountVariables().storeMe();
+			}
+		}
+		LOGGER.info("LimitShopData has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()

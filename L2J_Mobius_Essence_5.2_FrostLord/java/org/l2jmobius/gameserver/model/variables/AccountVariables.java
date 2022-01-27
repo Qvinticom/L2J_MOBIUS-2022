@@ -42,8 +42,8 @@ public class AccountVariables extends AbstractVariables
 	// Public variable names
 	public static final String HWID = "HWID";
 	public static final String HWIDSLIT_VAR = "	";
-	public static final String LCOIN_SHOP_PRODUCT_TIME = "LCSTime";
 	public static final String LCOIN_SHOP_PRODUCT_COUNT = "LCSCount";
+	public static final String LCOIN_SHOP_PRODUCT_DAILY_COUNT = "LCSDailyCount";
 	public static final String VIP_POINTS = "VipPoints";
 	public static final String VIP_TIER = "VipTier";
 	public static final String VIP_EXPIRATION = "VipExpiration";

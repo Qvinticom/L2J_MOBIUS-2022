@@ -22,7 +22,6 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.LimitShopCraftData;
 import org.l2jmobius.gameserver.data.xml.LimitShopData;
@@ -115,16 +114,11 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Check limits.
 		if (_product.getAccountDailyLimit() > 0) // Sale period.
 		{
-			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) >= (_product.getAccountDailyLimit() * _amount))
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + _product.getProductionId(), 0) >= (_product.getAccountDailyLimit() * _amount))
 			{
-				if ((player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + _product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
-				{
-					player.sendMessage("You have reached your daily limit."); // TODO: Retail system message?
-					player.removeRequest(PrimeShopRequest.class);
-					return;
-				}
-				// Reset limit.
-				player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0);
+				player.sendMessage("You have reached your daily limit."); // TODO: Retail system message?
+				player.removeRequest(PrimeShopRequest.class);
+				return;
 			}
 		}
 		else if (_product.getAccountBuyLimit() > 0) // Count limit.
@@ -242,8 +236,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Update account variables.
 		if (_product.getAccountDailyLimit() > 0)
 		{
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + _product.getProductionId(), Chronos.currentTimeMillis());
-			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + _product.getProductionId(), 0) + _amount);
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + _product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_DAILY_COUNT + _product.getProductionId(), 0) + _amount);
 		}
 		else if (_product.getAccountBuyLimit() > 0)
 		{
