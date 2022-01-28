@@ -329,29 +329,39 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55399" level="1" /> <!-- Tryout Glorious Cloak -->
+		</skills>
 	</item>
 	<item id="70330" name="Commemorative Olympiad Bracelet" additionalName="Event" type="Armor">
 		<!-- Bracelet, given to those warriors who have showen the best results during the Tryout. Activates 2 Talisman slots, Max. HP/MP/CP + 3%. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55400" level="1" /> <!-- Commemorative Olympiad Bracelet -->
+		</skills>
 	</item>
 	<item id="70331" name="Olympiad Warrior's Talisman" additionalName="30 days" type="Armor">
 		<!-- Talisman, given to those warriors who have showen the best results during the Tryout. P. / M. Skill Critical Damage +7%. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55401" level="1" /> <!-- Olympiad Warrior's Talisman -->
+		</skills>
 	</item>
 	<item id="70332" name="Olympiad Warrior's Belt" additionalName="Event" type="Armor">
 		<!-- Belt, given to those warriors who have showen the best results during the Tryout. P. Def. +15, weight limit + 2000. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
@@ -365,6 +375,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55402" level="1" /> <!-- Olympiad Warrior's Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
