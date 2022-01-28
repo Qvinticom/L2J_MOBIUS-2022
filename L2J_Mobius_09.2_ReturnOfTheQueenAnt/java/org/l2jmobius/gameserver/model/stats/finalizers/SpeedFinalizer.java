@@ -61,7 +61,7 @@ public class SpeedFinalizer implements IStatFunction
 			baseValue += bonusDex;
 		}
 		
-		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, creature.isPlayer() ? Config.MAX_RUN_SPEED : Double.MAX_VALUE);
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue), 1, creature.isPlayable() ? Config.MAX_RUN_SPEED : Double.MAX_VALUE);
 	}
 	
 	@Override

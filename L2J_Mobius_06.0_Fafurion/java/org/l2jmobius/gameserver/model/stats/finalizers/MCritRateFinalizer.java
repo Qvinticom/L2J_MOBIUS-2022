@@ -43,7 +43,7 @@ public class MCritRateFinalizer implements IStatFunction
 		}
 		
 		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1.;
-		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, creature.isPlayer() ? creature.getStat().getValue(Stat.MAX_MAGIC_CRITICAL_RATE, Config.MAX_MCRIT_RATE) : Double.MAX_VALUE);
+		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, creature.isPlayable() ? creature.getStat().getValue(Stat.MAX_MAGIC_CRITICAL_RATE, Config.MAX_MCRIT_RATE) : Double.MAX_VALUE);
 	}
 	
 	@Override
