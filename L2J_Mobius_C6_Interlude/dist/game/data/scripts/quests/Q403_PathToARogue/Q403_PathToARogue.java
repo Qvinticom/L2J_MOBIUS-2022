@@ -16,7 +16,6 @@
  */
 package quests.Q403_PathToARogue;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -241,7 +240,7 @@ public class Q403_PathToARogue extends Quest
 			{
 				if (st.isCond(5))
 				{
-					final int randomItem = Rnd.get(STOLEN_JEWELRY, STOLEN_NECKLACE);
+					final int randomItem = getRandom(STOLEN_JEWELRY, STOLEN_NECKLACE);
 					if (!st.hasQuestItems(randomItem))
 					{
 						st.giveItems(randomItem, 1);

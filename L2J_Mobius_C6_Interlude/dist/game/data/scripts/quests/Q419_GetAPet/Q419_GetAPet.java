@@ -20,7 +20,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -259,7 +258,7 @@ public class Q419_GetAPet extends Quest
 		if (answers < 10)
 		{
 			final String[] questions = st.getString("quiz").split(" ");
-			final int index = Rnd.get(questions.length - 1);
+			final int index = getRandom(questions.length - 1);
 			final String question = questions[index];
 			if (questions.length > (10 - answers))
 			{

@@ -153,23 +153,23 @@ public class Q00351_BlackSwan extends Quest
 		final int random = getRandom(20);
 		if (random < 10)
 		{
-			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 1, 0, 1.0, true);
+			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 1, 0, 1, true);
 			if (getRandom(20) == 0)
 			{
-				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, false);
+				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1, false);
 			}
 		}
 		else if (random < 15)
 		{
-			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 2, 0, 1.0, true);
+			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 2, 0, 1, true);
 			if (getRandom(20) == 0)
 			{
-				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, false);
+				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1, false);
 			}
 		}
 		else if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
 		{
-			giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, true);
+			giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1, true);
 		}
 		
 		return super.onKill(npc, killer, isSummon);

@@ -192,7 +192,7 @@ public class Q00928_100DaySubjugationOperation extends Quest
 				case LOST_DIMENSION_EVIL:
 				case ROAMING_VENGEANCE:
 				{
-					if (giveItemRandomly(killer, npc, ATTACKERS_SOUL, 1, 100, 1.0, true))
+					if (giveItemRandomly(killer, npc, ATTACKERS_SOUL, 1, 100, 1, true))
 					{
 						qs.setCond(2, true);
 					}

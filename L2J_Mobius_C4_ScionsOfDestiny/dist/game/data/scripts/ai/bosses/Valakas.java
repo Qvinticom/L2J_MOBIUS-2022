@@ -23,7 +23,6 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -426,21 +425,21 @@ public class Valakas extends Quest
 		{
 			if (((damage * 1000) + 1000) > i_quest2)
 			{
-				i_quest2 = ((damage * 1000) + Rnd.get(3000));
+				i_quest2 = ((damage * 1000) + getRandom(3000));
 			}
 		}
 		else if (attacker == c_quest3)
 		{
 			if (((damage * 1000) + 1000) > i_quest3)
 			{
-				i_quest3 = ((damage * 1000) + Rnd.get(3000));
+				i_quest3 = ((damage * 1000) + getRandom(3000));
 			}
 		}
 		else if (attacker == c_quest4)
 		{
 			if (((damage * 1000) + 1000) > i_quest4)
 			{
-				i_quest4 = ((damage * 1000) + Rnd.get(3000));
+				i_quest4 = ((damage * 1000) + getRandom(3000));
 			}
 		}
 		else if (i_quest2 > i_quest3)
@@ -449,7 +448,7 @@ public class Valakas extends Quest
 		}
 		else if (i_quest2 == i_quest3)
 		{
-			if (Rnd.get(100) < 50)
+			if (getRandom(100) < 50)
 			{
 				i1 = 2;
 			}
@@ -470,7 +469,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest2 == i_quest4)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 2;
 				}
@@ -492,7 +491,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest3 == i_quest4)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 3;
 				}
@@ -508,17 +507,17 @@ public class Valakas extends Quest
 		}
 		if (i1 == 2)
 		{
-			i_quest2 = (damage * 1000) + Rnd.get(3000);
+			i_quest2 = (damage * 1000) + getRandom(3000);
 			c_quest2 = attacker;
 		}
 		else if (i1 == 3)
 		{
-			i_quest3 = (damage * 1000) + Rnd.get(3000);
+			i_quest3 = (damage * 1000) + getRandom(3000);
 			c_quest3 = attacker;
 		}
 		else if (i1 == 4)
 		{
-			i_quest4 = (damage * 1000) + Rnd.get(3000);
+			i_quest4 = (damage * 1000) + getRandom(3000);
 			c_quest4 = attacker;
 		}
 		
@@ -530,7 +529,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest2 == i_quest4)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 2;
 				}
@@ -552,7 +551,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest3 == i_quest4)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 3;
 				}
@@ -568,17 +567,17 @@ public class Valakas extends Quest
 		}
 		if (i1 == 2)
 		{
-			i_quest2 = (((damage / 150) * 1000) + Rnd.get(3000));
+			i_quest2 = (((damage / 150) * 1000) + getRandom(3000));
 			c_quest2 = attacker;
 		}
 		else if (i1 == 3)
 		{
-			i_quest3 = (((damage / 150) * 1000) + Rnd.get(3000));
+			i_quest3 = (((damage / 150) * 1000) + getRandom(3000));
 			c_quest3 = attacker;
 		}
 		else if (i1 == 4)
 		{
-			i_quest4 = (((damage / 150) * 1000) + Rnd.get(3000));
+			i_quest4 = (((damage / 150) * 1000) + getRandom(3000));
 			c_quest4 = attacker;
 		}
 		getRandomSkill(npc);
@@ -592,7 +591,7 @@ public class Valakas extends Quest
 		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
 		startQuestTimer("1111", 500, npc, null);
 		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
-		final long respawnTime = (Config.VALAKAS_RESP_FIRST + Rnd.get(Config.VALAKAS_RESP_SECOND)) * 3600000;
+		final long respawnTime = (Config.VALAKAS_RESP_FIRST + getRandom(Config.VALAKAS_RESP_SECOND)) * 3600000;
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// Also save the respawn time so that the info is maintained past restarts.
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
@@ -660,7 +659,7 @@ public class Valakas extends Quest
 		}
 		if (i2 > 0)
 		{
-			if (Rnd.get(100) < 70)
+			if (getRandom(100) < 70)
 			{
 				if (i1 == 2)
 				{
@@ -686,28 +685,28 @@ public class Valakas extends Quest
 				}
 				if (c2.getZ() < (npc.getZ() + 200))
 				{
-					if (Rnd.get(100) < 20)
+					if (getRandom(100) < 20)
 					{
 						skill = SkillTable.getInstance().getSkill(4690, 1);
 					}
-					else if (Rnd.get(100) < 15)
+					else if (getRandom(100) < 15)
 					{
 						skill = SkillTable.getInstance().getSkill(4689, 1);
 					}
-					else if ((Rnd.get(100) < 15) && (i0 == 1) && (i_quest0 == 1))
+					else if ((getRandom(100) < 15) && (i0 == 1) && (i_quest0 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4685, 1);
 						i_quest0 = 0;
 					}
-					else if ((Rnd.get(100) < 10) && (i1 == 1))
+					else if ((getRandom(100) < 10) && (i1 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4688, 1);
 					}
-					else if (Rnd.get(100) < 35)
+					else if (getRandom(100) < 35)
 					{
 						skill = SkillTable.getInstance().getSkill(4683, 1);
 					}
-					else if (Rnd.nextBoolean())
+					else if (getRandomBoolean())
 					{
 						skill = SkillTable.getInstance().getSkill(4681, 1); // left hand
 					}
@@ -716,11 +715,11 @@ public class Valakas extends Quest
 						skill = SkillTable.getInstance().getSkill(4682, 1); // right hand
 					}
 				}
-				else if (Rnd.get(100) < 20)
+				else if (getRandom(100) < 20)
 				{
 					skill = SkillTable.getInstance().getSkill(4690, 1);
 				}
-				else if (Rnd.get(100) < 15)
+				else if (getRandom(100) < 15)
 				{
 					skill = SkillTable.getInstance().getSkill(4689, 1);
 				}
@@ -740,28 +739,28 @@ public class Valakas extends Quest
 				}
 				if (c2.getZ() < (npc.getZ() + 200))
 				{
-					if (Rnd.get(100) < 5)
+					if (getRandom(100) < 5)
 					{
 						skill = SkillTable.getInstance().getSkill(4690, 1);
 					}
-					else if (Rnd.get(100) < 10)
+					else if (getRandom(100) < 10)
 					{
 						skill = SkillTable.getInstance().getSkill(4689, 1);
 					}
-					else if ((Rnd.get(100) < 10) && (i0 == 1) && (i_quest0 == 1))
+					else if ((getRandom(100) < 10) && (i0 == 1) && (i_quest0 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4685, 1);
 						i_quest0 = 0;
 					}
-					else if ((Rnd.get(100) < 10) && (i1 == 1))
+					else if ((getRandom(100) < 10) && (i1 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4688, 1);
 					}
-					else if (Rnd.get(100) < 20)
+					else if (getRandom(100) < 20)
 					{
 						skill = SkillTable.getInstance().getSkill(4683, 1);
 					}
-					else if (Rnd.nextBoolean())
+					else if (getRandomBoolean())
 					{
 						skill = SkillTable.getInstance().getSkill(4681, 1); // left hand
 					}
@@ -770,11 +769,11 @@ public class Valakas extends Quest
 						skill = SkillTable.getInstance().getSkill(4682, 1); // right hand
 					}
 				}
-				else if (Rnd.get(100) < 5)
+				else if (getRandom(100) < 5)
 				{
 					skill = SkillTable.getInstance().getSkill(4690, 1);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (getRandom(100) < 10)
 				{
 					skill = SkillTable.getInstance().getSkill(4689, 1);
 				}
@@ -794,28 +793,28 @@ public class Valakas extends Quest
 				}
 				if (c2.getZ() < (npc.getZ() + 200))
 				{
-					if (Rnd.get(100) < 0)
+					if (getRandom(100) < 0)
 					{
 						skill = SkillTable.getInstance().getSkill(4690, 1);
 					}
-					else if (Rnd.get(100) < 5)
+					else if (getRandom(100) < 5)
 					{
 						skill = SkillTable.getInstance().getSkill(4689, 1);
 					}
-					else if ((Rnd.get(100) < 5) && (i0 == 1) && (i_quest0 == 1))
+					else if ((getRandom(100) < 5) && (i0 == 1) && (i_quest0 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4685, 1);
 						i_quest0 = 0;
 					}
-					else if ((Rnd.get(100) < 10) && (i1 == 1))
+					else if ((getRandom(100) < 10) && (i1 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4688, 1);
 					}
-					else if (Rnd.get(100) < 15)
+					else if (getRandom(100) < 15)
 					{
 						skill = SkillTable.getInstance().getSkill(4683, 1);
 					}
-					else if (Rnd.nextBoolean())
+					else if (getRandomBoolean())
 					{
 						skill = SkillTable.getInstance().getSkill(4681, 1); // left hand
 					}
@@ -824,11 +823,11 @@ public class Valakas extends Quest
 						skill = SkillTable.getInstance().getSkill(4682, 1); // right hand
 					}
 				}
-				else if (Rnd.get(100) < 0)
+				else if (getRandom(100) < 0)
 				{
 					skill = SkillTable.getInstance().getSkill(4690, 1);
 				}
-				else if (Rnd.get(100) < 5)
+				else if (getRandom(100) < 5)
 				{
 					skill = SkillTable.getInstance().getSkill(4689, 1);
 				}
@@ -848,28 +847,28 @@ public class Valakas extends Quest
 				}
 				if (c2.getZ() < (npc.getZ() + 200))
 				{
-					if (Rnd.get(100) < 0)
+					if (getRandom(100) < 0)
 					{
 						skill = SkillTable.getInstance().getSkill(4690, 1);
 					}
-					else if (Rnd.get(100) < 10)
+					else if (getRandom(100) < 10)
 					{
 						skill = SkillTable.getInstance().getSkill(4689, 1);
 					}
-					else if ((Rnd.get(100) < 5) && (i0 == 1) && (i_quest0 == 1))
+					else if ((getRandom(100) < 5) && (i0 == 1) && (i_quest0 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4685, 1);
 						i_quest0 = 0;
 					}
-					else if ((Rnd.get(100) < 10) && (i1 == 1))
+					else if ((getRandom(100) < 10) && (i1 == 1))
 					{
 						skill = SkillTable.getInstance().getSkill(4688, 1);
 					}
-					else if (Rnd.get(100) < 15)
+					else if (getRandom(100) < 15)
 					{
 						skill = SkillTable.getInstance().getSkill(4683, 1);
 					}
-					else if (Rnd.nextBoolean())
+					else if (getRandomBoolean())
 					{
 						skill = SkillTable.getInstance().getSkill(4681, 1); // left hand
 					}
@@ -878,11 +877,11 @@ public class Valakas extends Quest
 						skill = SkillTable.getInstance().getSkill(4682, 1); // right hand
 					}
 				}
-				else if (Rnd.get(100) < 0)
+				else if (getRandom(100) < 0)
 				{
 					skill = SkillTable.getInstance().getSkill(4690, 1);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (getRandom(100) < 10)
 				{
 					skill = SkillTable.getInstance().getSkill(4689, 1);
 				}
@@ -974,7 +973,7 @@ public class Valakas extends Quest
 		}
 		if (!result.isEmpty())
 		{
-			return result.get(Rnd.get(result.size()));
+			return result.get(getRandom(result.size()));
 		}
 		return null;
 	}
@@ -1007,21 +1006,21 @@ public class Valakas extends Quest
 				{
 					if (((10 * 1000) + 1000) > i_quest2)
 					{
-						i_quest2 = ((10 * 1000) + Rnd.get(3000));
+						i_quest2 = ((10 * 1000) + getRandom(3000));
 					}
 				}
 				else if (player == c_quest3)
 				{
 					if (((10 * 1000) + 1000) > i_quest3)
 					{
-						i_quest3 = ((10 * 1000) + Rnd.get(3000));
+						i_quest3 = ((10 * 1000) + getRandom(3000));
 					}
 				}
 				else if (player == c_quest4)
 				{
 					if (((10 * 1000) + 1000) > i_quest4)
 					{
-						i_quest4 = ((10 * 1000) + Rnd.get(3000));
+						i_quest4 = ((10 * 1000) + getRandom(3000));
 					}
 				}
 				else if (i_quest2 > i_quest3)
@@ -1030,7 +1029,7 @@ public class Valakas extends Quest
 				}
 				else if (i_quest2 == i_quest3)
 				{
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						i1 = 2;
 					}
@@ -1051,7 +1050,7 @@ public class Valakas extends Quest
 					}
 					else if (i_quest2 == i_quest4)
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							i1 = 2;
 						}
@@ -1073,7 +1072,7 @@ public class Valakas extends Quest
 					}
 					else if (i_quest3 == i_quest4)
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							i1 = 3;
 						}
@@ -1089,17 +1088,17 @@ public class Valakas extends Quest
 				}
 				if (i1 == 2)
 				{
-					i_quest2 = ((10 * 1000) + Rnd.get(3000));
+					i_quest2 = ((10 * 1000) + getRandom(3000));
 					c_quest2 = player;
 				}
 				else if (i1 == 3)
 				{
-					i_quest3 = ((10 * 1000) + Rnd.get(3000));
+					i_quest3 = ((10 * 1000) + getRandom(3000));
 					c_quest3 = player;
 				}
 				else if (i1 == 4)
 				{
-					i_quest4 = ((10 * 1000) + Rnd.get(3000));
+					i_quest4 = ((10 * 1000) + getRandom(3000));
 					c_quest4 = player;
 				}
 			}
@@ -1109,21 +1108,21 @@ public class Valakas extends Quest
 				{
 					if (((6 * 1000) + 1000) > i_quest2)
 					{
-						i_quest2 = ((6 * 1000) + Rnd.get(3000));
+						i_quest2 = ((6 * 1000) + getRandom(3000));
 					}
 				}
 				else if (player == c_quest3)
 				{
 					if (((6 * 1000) + 1000) > i_quest3)
 					{
-						i_quest3 = ((6 * 1000) + Rnd.get(3000));
+						i_quest3 = ((6 * 1000) + getRandom(3000));
 					}
 				}
 				else if (player == c_quest4)
 				{
 					if (((6 * 1000) + 1000) > i_quest4)
 					{
-						i_quest4 = ((6 * 1000) + Rnd.get(3000));
+						i_quest4 = ((6 * 1000) + getRandom(3000));
 					}
 				}
 				else if (i_quest2 > i_quest3)
@@ -1132,7 +1131,7 @@ public class Valakas extends Quest
 				}
 				else if (i_quest2 == i_quest3)
 				{
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						i1 = 2;
 					}
@@ -1153,7 +1152,7 @@ public class Valakas extends Quest
 					}
 					else if (i_quest2 == i_quest4)
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							i1 = 2;
 						}
@@ -1175,7 +1174,7 @@ public class Valakas extends Quest
 					}
 					else if (i_quest3 == i_quest4)
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							i1 = 3;
 						}
@@ -1191,17 +1190,17 @@ public class Valakas extends Quest
 				}
 				if (i1 == 2)
 				{
-					i_quest2 = ((6 * 1000) + Rnd.get(3000));
+					i_quest2 = ((6 * 1000) + getRandom(3000));
 					c_quest2 = player;
 				}
 				else if (i1 == 3)
 				{
-					i_quest3 = ((6 * 1000) + Rnd.get(3000));
+					i_quest3 = ((6 * 1000) + getRandom(3000));
 					c_quest3 = player;
 				}
 				else if (i1 == 4)
 				{
-					i_quest4 = ((6 * 1000) + Rnd.get(3000));
+					i_quest4 = ((6 * 1000) + getRandom(3000));
 					c_quest4 = player;
 				}
 			}
@@ -1211,21 +1210,21 @@ public class Valakas extends Quest
 				{
 					if (((3 * 1000) + 1000) > i_quest2)
 					{
-						i_quest2 = ((3 * 1000) + Rnd.get(3000));
+						i_quest2 = ((3 * 1000) + getRandom(3000));
 					}
 				}
 				else if (player == c_quest3)
 				{
 					if (((3 * 1000) + 1000) > i_quest3)
 					{
-						i_quest3 = ((3 * 1000) + Rnd.get(3000));
+						i_quest3 = ((3 * 1000) + getRandom(3000));
 					}
 				}
 				else if (player == c_quest4)
 				{
 					if (((3 * 1000) + 1000) > i_quest4)
 					{
-						i_quest4 = ((3 * 1000) + Rnd.get(3000));
+						i_quest4 = ((3 * 1000) + getRandom(3000));
 					}
 				}
 				else if (i_quest2 > i_quest3)
@@ -1234,7 +1233,7 @@ public class Valakas extends Quest
 				}
 				else if (i_quest2 == i_quest3)
 				{
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						i1 = 2;
 					}
@@ -1255,7 +1254,7 @@ public class Valakas extends Quest
 					}
 					else if (i_quest2 == i_quest4)
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							i1 = 2;
 						}
@@ -1277,7 +1276,7 @@ public class Valakas extends Quest
 					}
 					else if (i_quest3 == i_quest4)
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							i1 = 3;
 						}
@@ -1293,17 +1292,17 @@ public class Valakas extends Quest
 				}
 				if (i1 == 2)
 				{
-					i_quest2 = ((3 * 1000) + Rnd.get(3000));
+					i_quest2 = ((3 * 1000) + getRandom(3000));
 					c_quest2 = player;
 				}
 				else if (i1 == 3)
 				{
-					i_quest3 = ((3 * 1000) + Rnd.get(3000));
+					i_quest3 = ((3 * 1000) + getRandom(3000));
 					c_quest3 = player;
 				}
 				else if (i1 == 4)
 				{
-					i_quest4 = ((3 * 1000) + Rnd.get(3000));
+					i_quest4 = ((3 * 1000) + getRandom(3000));
 					c_quest4 = player;
 				}
 			}
@@ -1311,21 +1310,21 @@ public class Valakas extends Quest
 			{
 				if (((2 * 1000) + 1000) > i_quest2)
 				{
-					i_quest2 = ((2 * 1000) + Rnd.get(3000));
+					i_quest2 = ((2 * 1000) + getRandom(3000));
 				}
 			}
 			else if (player == c_quest3)
 			{
 				if (((2 * 1000) + 1000) > i_quest3)
 				{
-					i_quest3 = ((2 * 1000) + Rnd.get(3000));
+					i_quest3 = ((2 * 1000) + getRandom(3000));
 				}
 			}
 			else if (player == c_quest4)
 			{
 				if (((2 * 1000) + 1000) > i_quest4)
 				{
-					i_quest4 = ((2 * 1000) + Rnd.get(3000));
+					i_quest4 = ((2 * 1000) + getRandom(3000));
 				}
 			}
 			else if (i_quest2 > i_quest3)
@@ -1334,7 +1333,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest2 == i_quest3)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 2;
 				}
@@ -1355,7 +1354,7 @@ public class Valakas extends Quest
 				}
 				else if (i_quest2 == i_quest4)
 				{
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						i1 = 2;
 					}
@@ -1377,7 +1376,7 @@ public class Valakas extends Quest
 				}
 				else if (i_quest3 == i_quest4)
 				{
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						i1 = 3;
 					}
@@ -1393,17 +1392,17 @@ public class Valakas extends Quest
 			}
 			if (i1 == 2)
 			{
-				i_quest2 = ((2 * 1000) + Rnd.get(3000));
+				i_quest2 = ((2 * 1000) + getRandom(3000));
 				c_quest2 = player;
 			}
 			else if (i1 == 3)
 			{
-				i_quest3 = ((2 * 1000) + Rnd.get(3000));
+				i_quest3 = ((2 * 1000) + getRandom(3000));
 				c_quest3 = player;
 			}
 			else if (i1 == 4)
 			{
-				i_quest4 = ((2 * 1000) + Rnd.get(3000));
+				i_quest4 = ((2 * 1000) + getRandom(3000));
 				c_quest4 = player;
 			}
 		}
@@ -1411,21 +1410,21 @@ public class Valakas extends Quest
 		{
 			if (((1 * 1000) + 1000) > i_quest2)
 			{
-				i_quest2 = ((1 * 1000) + Rnd.get(3000));
+				i_quest2 = ((1 * 1000) + getRandom(3000));
 			}
 		}
 		else if (player == c_quest3)
 		{
 			if (((1 * 1000) + 1000) > i_quest3)
 			{
-				i_quest3 = ((1 * 1000) + Rnd.get(3000));
+				i_quest3 = ((1 * 1000) + getRandom(3000));
 			}
 		}
 		else if (player == c_quest4)
 		{
 			if (((1 * 1000) + 1000) > i_quest4)
 			{
-				i_quest4 = ((1 * 1000) + Rnd.get(3000));
+				i_quest4 = ((1 * 1000) + getRandom(3000));
 			}
 		}
 		else if (i_quest2 > i_quest3)
@@ -1434,7 +1433,7 @@ public class Valakas extends Quest
 		}
 		else if (i_quest2 == i_quest3)
 		{
-			if (Rnd.get(100) < 50)
+			if (getRandom(100) < 50)
 			{
 				i1 = 2;
 			}
@@ -1455,7 +1454,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest2 == i_quest4)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 2;
 				}
@@ -1477,7 +1476,7 @@ public class Valakas extends Quest
 			}
 			else if (i_quest3 == i_quest4)
 			{
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
 					i1 = 3;
 				}
@@ -1493,17 +1492,17 @@ public class Valakas extends Quest
 		}
 		if (i1 == 2)
 		{
-			i_quest2 = ((1 * 1000) + Rnd.get(3000));
+			i_quest2 = ((1 * 1000) + getRandom(3000));
 			c_quest2 = player;
 		}
 		else if (i1 == 3)
 		{
-			i_quest3 = ((1 * 1000) + Rnd.get(3000));
+			i_quest3 = ((1 * 1000) + getRandom(3000));
 			c_quest3 = player;
 		}
 		else if (i1 == 4)
 		{
-			i_quest4 = ((1 * 1000) + Rnd.get(3000));
+			i_quest4 = ((1 * 1000) + getRandom(3000));
 			c_quest4 = player;
 		}
 		if (status == FIGHTING)

@@ -161,7 +161,7 @@ public class Q00634_InSearchOfFragmentsOfDimension extends Quest
 			final int i0 = (int) ((0.15 * npc.getLevel()) + 1.6);
 			if (getRandom(100) < 10)
 			{
-				giveItemRandomly(qs.getPlayer(), npc, DIMENSIONAL_FRAGMENT, i0, 0, 1.0, true);
+				giveItemRandomly(qs.getPlayer(), npc, DIMENSIONAL_FRAGMENT, i0, 0, 1, true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

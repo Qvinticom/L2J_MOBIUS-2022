@@ -16,7 +16,6 @@
  */
 package quests.Q337_AudienceWithTheLandDragon;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -507,7 +506,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			// reward jewel fragment
 			if (percentHp < 33)
 			{
-				if ((Rnd.get(100) < 33) && (st.getInt("drop" + npcInfo[2]) == 1))
+				if ((getRandom(100) < 33) && (st.getInt("drop" + npcInfo[2]) == 1))
 				{
 					final int itemId = npcInfo[3];
 					if (!st.hasQuestItems(itemId))
@@ -520,7 +519,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			// spawn monsters and register spawned
 			else if (percentHp < 66)
 			{
-				if ((Rnd.get(100) < 33) && (st.getInt("drop" + npcInfo[2]) == 1))
+				if ((getRandom(100) < 33) && (st.getInt("drop" + npcInfo[2]) == 1))
 				{
 					boolean spawn;
 					if (npcId == ABYSSAL_JEWEL_3)
@@ -540,7 +539,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 					{
 						for (int i = 0; i < npcInfo[4]; i++)
 						{
-							final Npc mob = addSpawn(npcInfo[5], npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), npc.getHeading(), true, 60000);
+							final Npc mob = addSpawn(npcInfo[5], npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), npc.getHeading(), true, 60000);
 							mob.setRunning();
 							((Attackable) mob).addDamageHate(attacker, 0, 500);
 							mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -631,7 +630,7 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 				{
 					for (int i = 0; i < 8; i++)
 					{
-						addSpawn(SACRIFICE_OF_THE_SACRIFICED, npc.getX() + Rnd.get(-100, 100), npc.getY() + Rnd.get(-100, 100), npc.getZ(), npc.getHeading(), true, 60000);
+						addSpawn(SACRIFICE_OF_THE_SACRIFICED, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000);
 					}
 				}
 				break;
@@ -639,11 +638,11 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			case HARIT_LIZARDMAN_SHAMAN:// Kendra's request
 			case HARIT_LIZARDMAN_MATRIARCH:
 			{
-				if ((cond == 1) && (Rnd.get(5) == 0) && (st.getInt("drop2") == 1) && !st.hasQuestItems(TOTEM_OF_LAND_DRAGON))
+				if ((cond == 1) && (getRandom(5) == 0) && (st.getInt("drop2") == 1) && !st.hasQuestItems(TOTEM_OF_LAND_DRAGON))
 				{
 					for (int i = 0; i < 3; i++)
 					{
-						addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + Rnd.get(-50, 50), npc.getY() + Rnd.get(-50, 50), npc.getZ(), npc.getHeading(), true, 60000);
+						addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000);
 					}
 				}
 				break;
@@ -653,9 +652,9 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 			case CAVE_KEEPER_1:
 			case CAVE_KEEPER_2:
 			{
-				if ((cond == 4) && (Rnd.get(5) == 0) && !st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL))
+				if ((cond == 4) && (getRandom(5) == 0) && !st.hasQuestItems(THIRD_FRAGMENT_OF_ABYSS_JEWEL))
 				{
-					addSpawn(ABYSSAL_JEWEL_3, npc.getX() + Rnd.get(-50, 50), npc.getY() + Rnd.get(-50, 50), npc.getZ(), npc.getHeading(), true, 60000);
+					addSpawn(ABYSSAL_JEWEL_3, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000);
 				}
 				break;
 			}

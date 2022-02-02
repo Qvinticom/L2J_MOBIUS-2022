@@ -41,7 +41,7 @@ public class PCriticalRateFinalizer implements IStatFunction
 			// Enchanted legs bonus
 			baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_LEGS);
 		}
-		final double dexBonus = creature.getDEX() > 0 ? BaseStat.DEX.calcBonus(creature) : 1.;
+		final double dexBonus = creature.getDEX() > 0 ? BaseStat.DEX.calcBonus(creature) : 1;
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, creature.isPlayable() ? Config.MAX_PCRIT_RATE : Double.MAX_VALUE);
 	}
 	

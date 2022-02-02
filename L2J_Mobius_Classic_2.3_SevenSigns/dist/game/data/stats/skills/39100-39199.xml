@@ -1019,16 +1019,53 @@
 	<skill id="39156" toLevel="1" name="Scroll of Heavenly Protection">
 		<!-- For 20 min., Paralysis Resistance +15, Mental Attack Resistance +10. -->
 		<icon>icon.scroll_of_verification_i08</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>1</effectPoint>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>POTION_OF_GENESIS</abnormalType>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLevel>1</magicLevel>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49768</itemConsumeId>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>15</PARALYZE>
+				<DERANGEMENT>10</DERANGEMENT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39157" toLevel="1" name="Unidentified Rock">
 		<icon>icon.etc_magical_stone_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="90">
+						<item id="49767" count="1" />
+					</item>
+					<item chance="10">
+						<item id="49759" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39158" toLevel="1" name="Secret Scroll Box: Emperor Baium's Enchant">
 		<icon>icon.npoint_valakas_30day_box</icon>

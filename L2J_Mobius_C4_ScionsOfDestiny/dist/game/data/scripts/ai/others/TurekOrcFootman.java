@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -44,7 +43,7 @@ public class TurekOrcFootman extends Quest
 	{
 		if (npc.isScriptValue(1))
 		{
-			if (Rnd.get(100) < 40)
+			if (getRandom(100) < 40)
 			{
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "There is no reason for you to kill me! I have nothing you need!"));
 			}

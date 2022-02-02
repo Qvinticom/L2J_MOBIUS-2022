@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.instance.Monster;
@@ -358,7 +357,7 @@ public class NewbieHelper extends Quest
 					qs1.playTutorialVoice(isMage && !isOrcMage ? "tutorial_voice_027" : "tutorial_voice_026");
 					qs1.giveItems(isMage && !isOrcMage ? SPIRITSHOT_NOVICE : SOULSHOT_NOVICE, isMage && !isOrcMage ? 100 : 200);
 					qs1.giveItems(TOKEN, 12);
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						qs1.giveItems(SCROLL, 2);
 					}
@@ -403,7 +402,7 @@ public class NewbieHelper extends Quest
 			qs2.showQuestionMark(3);
 			qs2.set("Ex", "2");
 		}
-		else if ((ex <= 2) && (qs1.getState() == State.STARTED) && (qs2.getInt("Gemstone") == 0) && (Rnd.get(100) < 50))
+		else if ((ex <= 2) && (qs1.getState() == State.STARTED) && (qs2.getInt("Gemstone") == 0) && (getRandom(100) < 50))
 		{
 			((Monster) npc).dropItem(player, BLUE_GEM, 1);
 			qs1.playSound("ItemSound.quest_tutorial");

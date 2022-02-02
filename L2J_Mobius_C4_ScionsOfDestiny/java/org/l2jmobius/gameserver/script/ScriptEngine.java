@@ -19,26 +19,23 @@ package org.l2jmobius.gameserver.script;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.script.faenor.FaenorInterface;
-
 /**
  * @author Luis Arias
  */
 public class ScriptEngine
 {
-	protected EngineInterface _utils = FaenorInterface.getInstance();
-	public static final Map<String, ParserFactory> parserFactories = new HashMap<>();
+	public static final Map<String, ParserFactory> PARSER_FACTORIES = new HashMap<>();
 	
 	protected static Parser createParser(String name) throws ParserNotCreatedException
 	{
-		ParserFactory s = parserFactories.get(name);
+		ParserFactory s = PARSER_FACTORIES.get(name);
 		if (s == null) // Shape not found.
 		{
 			try
 			{
 				Class.forName("org.l2jmobius.gameserver.script." + name);
 				// By now the static block with no function would have been executed if the shape was found. The shape is expected to have put its factory in the hashtable.
-				s = parserFactories.get(name);
+				s = PARSER_FACTORIES.get(name);
 				if (s == null) // If the shape factory is not there even now.
 				{
 					throw new ParserNotCreatedException();

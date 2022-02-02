@@ -843,6 +843,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -903,9 +904,16 @@
 	<item id="49766" name="Unidentified Stone" type="EtcItem">
 		<!-- Double-click to get one of the following items: Celestial Shard or Broken Celestial Shard. -->
 		<set name="icon" val="icon.etc_magical_stone_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="PAPER" />		
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="39157" level="1" /> <!-- Unidentified Rock -->
+		</skills>
 	</item>
 	<item id="49767" name="Broken Celestial Shard" type="EtcItem">
 		<!-- Broken Celestial Shard. Take it to the Dimensional Vortex at the 1st floor of the Tower of Insolence. -->
@@ -918,10 +926,16 @@
 		<!-- Activates Resistance to Paralysis / Mental Attacks for 20 minutes. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="39156" level="1" /> <!-- Scroll of Heavenly Protection -->
+		</skills>
 	</item>
 	<item id="49769" name="Improved Scroll Box: Emperor Baium's Enchant" type="EtcItem">
 		<!-- Double-click to get one of the following scrolls: Solid Scroll: Enchant Weapon (C)/(B), Improved Scroll: Enchant Weapon (C)/(B), or Normal Scroll: Enchant Weapon (C)/(B). Cannot be sold in the grocery store. -->

@@ -285,7 +285,7 @@ public class Q00216_TrialOfTheGuildsman extends Quest
 					
 					if (count > 0)
 					{
-						giveItemRandomly(qs.getPlayer(), npc, AMBER_BEAD, count, 70, 1.0, true);
+						giveItemRandomly(qs.getPlayer(), npc, AMBER_BEAD, count, 70, 1, true);
 					}
 				}
 				break;

@@ -26,6 +26,7 @@ public enum AnnouncementType
 {
 	NORMAL,
 	CRITICAL,
+	EVENT,
 	AUTO_NORMAL,
 	AUTO_CRITICAL;
 	

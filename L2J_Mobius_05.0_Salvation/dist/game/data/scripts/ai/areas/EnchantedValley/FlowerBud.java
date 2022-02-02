@@ -19,7 +19,6 @@ package ai.areas.EnchantedValley;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 
@@ -53,7 +52,7 @@ public class FlowerBud extends AbstractNpcAI
 	{
 		if (event.equals("spawn") && npc.isDead())
 		{
-			final Npc elegant = addSpawn(FLOWER_SPAWNS.get(Rnd.get(FLOWER_SPAWNS.size())), npc, false, 120000, false);
+			final Npc elegant = addSpawn(FLOWER_SPAWNS.get(getRandom(FLOWER_SPAWNS.size())), npc, false, 120000, false);
 			addAttackPlayerDesire(elegant, player);
 		}
 		return event;

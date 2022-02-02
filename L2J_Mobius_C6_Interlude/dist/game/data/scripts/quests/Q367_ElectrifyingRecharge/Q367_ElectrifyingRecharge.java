@@ -16,7 +16,6 @@
  */
 package quests.Q367_ElectrifyingRecharge;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -157,7 +156,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 				{
 					htmltext = "30673-06.htm";
 					st.takeItems(5879, 1);
-					st.rewardItems(REWARD[Rnd.get(REWARD.length)], 1);
+					st.rewardItems(REWARD[getRandom(REWARD.length)], 1);
 					st.playSound(QuestState.SOUND_FINISH);
 				}
 				break;
@@ -177,7 +176,7 @@ public class Q367_ElectrifyingRecharge extends Quest
 		
 		if ((skill.getId() == 4072) && st.hasQuestItems(LORAIN_LAMP))
 		{
-			final int randomItem = Rnd.get(5876, 5880);
+			final int randomItem = getRandom(5876, 5880);
 			st.takeItems(LORAIN_LAMP, 1);
 			st.giveItems(randomItem, 1);
 			if (randomItem == 5879)

@@ -16,7 +16,6 @@
  */
 package quests.Q218_TestimonyOfLife;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -564,7 +563,7 @@ public class Q218_TestimonyOfLife extends Quest
 			case 20581:
 			case 20582:
 			{
-				if (st.isCond(15) && Rnd.nextBoolean())
+				if (st.isCond(15) && getRandomBoolean())
 				{
 					for (int itemId : TALINS_PIECES)
 					{

@@ -19,7 +19,6 @@ package quests.Q359_ForSleeplessDeadmen;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -80,7 +79,7 @@ public class Q359_ForSleeplessDeadmen extends Quest
 		}
 		else if (event.equals("30857-10.htm"))
 		{
-			st.giveItems(REWARD[Rnd.get(REWARD.length)], 4);
+			st.giveItems(REWARD[getRandom(REWARD.length)], 4);
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
 		}

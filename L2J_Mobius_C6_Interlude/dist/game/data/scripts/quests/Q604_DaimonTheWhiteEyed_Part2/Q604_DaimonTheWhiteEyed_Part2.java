@@ -18,7 +18,6 @@ package quests.Q604_DaimonTheWhiteEyed_Part2;
 
 import java.util.logging.Level;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -130,7 +129,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 				if (st.hasQuestItems(ESSENCE_OF_DAIMON))
 				{
 					st.takeItems(ESSENCE_OF_DAIMON, 1);
-					st.rewardItems(REWARD_DYE[Rnd.get(REWARD_DYE.length)], 5);
+					st.rewardItems(REWARD_DYE[getRandom(REWARD_DYE.length)], 5);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}
@@ -286,7 +285,7 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBoss.checkAndReturnToSpawn())
-			// raid.getSpawn().setLoc(185900, -44000, -3160, Rnd.get(65536));
+			// raid.getSpawn().setLoc(185900, -44000, -3160, getRandom(65536));
 			
 			addSpawn(DAIMON_THE_WHITE_EYED, 185900, -44000, -3160, 100, false, 0);
 			raid.broadcastNpcSay("Who called me?");

@@ -16,7 +16,6 @@
  */
 package quests.Q293_TheHiddenVeins;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -181,7 +180,7 @@ public class Q293_TheHiddenVeins extends Quest
 			return null;
 		}
 		
-		final int chance = Rnd.get(100);
+		final int chance = getRandom(100);
 		if (chance > 50)
 		{
 			st.dropItemsAlways(CHRYSOLITE_ORE, 1, 0);

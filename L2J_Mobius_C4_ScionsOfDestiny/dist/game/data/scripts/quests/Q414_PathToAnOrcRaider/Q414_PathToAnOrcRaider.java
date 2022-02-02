@@ -16,7 +16,6 @@
  */
 package quests.Q414_PathToAnOrcRaider;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -231,7 +230,7 @@ public class Q414_PathToAnOrcRaider extends Quest
 			{
 				if (st.isCond(1))
 				{
-					if (st.getQuestItemsCount(GREEN_BLOOD) <= Rnd.get(20))
+					if (st.getQuestItemsCount(GREEN_BLOOD) <= getRandom(20))
 					{
 						st.playSound(QuestState.SOUND_ITEMGET);
 						st.giveItems(GREEN_BLOOD, 1);
@@ -254,7 +253,7 @@ public class Q414_PathToAnOrcRaider extends Quest
 			}
 			case UMBAR_ORC:
 			{
-				if ((st.isCond(3) || st.isCond(4)) && (st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2) && (Rnd.get(10) < 2))
+				if ((st.isCond(3) || st.isCond(4)) && (st.getQuestItemsCount(HEAD_OF_BETRAYER) < 2) && (getRandom(10) < 2))
 				{
 					if (st.isCond(3))
 					{

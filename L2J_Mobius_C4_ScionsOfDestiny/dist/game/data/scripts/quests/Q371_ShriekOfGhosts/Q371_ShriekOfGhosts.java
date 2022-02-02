@@ -19,7 +19,6 @@ package quests.Q371_ShriekOfGhosts;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -100,7 +99,7 @@ public class Q371_ShriekOfGhosts extends Quest
 			{
 				if (st.hasQuestItems(PORCELAIN))
 				{
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					st.takeItems(PORCELAIN, 1);
 					if (chance < 2)
 					{
@@ -200,7 +199,7 @@ public class Q371_ShriekOfGhosts extends Quest
 		}
 		
 		final int[] chances = CHANCES.get(npc.getNpcId());
-		final int random = Rnd.get(100);
+		final int random = getRandom(100);
 		if (random < chances[1])
 		{
 			st.dropItemsAlways((random < chances[0]) ? URN : PORCELAIN, 1, 0);

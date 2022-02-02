@@ -85,7 +85,7 @@ public class Q00294_CovertBusiness extends Quest
 				count++;
 				if (chance > i)
 				{
-					if (giveItemRandomly(killer, npc, BAT_FANG, count, 100, 1.0, true))
+					if (giveItemRandomly(killer, npc, BAT_FANG, count, 100, 1, true))
 					{
 						qs.setCond(2);
 					}

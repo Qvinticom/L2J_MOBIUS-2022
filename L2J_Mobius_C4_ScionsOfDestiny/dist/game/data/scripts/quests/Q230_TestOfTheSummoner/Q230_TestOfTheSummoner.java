@@ -19,7 +19,6 @@ package quests.Q230_TestOfTheSummoner;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -188,14 +187,14 @@ public class Q230_TestOfTheSummoner extends Quest
 				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.takeItems(GALATEA_LETTER, 1);
-				final int random = Rnd.get(5);
+				final int random = getRandom(5);
 				st.giveItems(LARA_LISTS[random][0], 1);
 				st.set("Lara", String.valueOf(random + 1)); // avoid 0
 				break;
 			}
 			case "30063-04.htm":
 			{
-				final int random = Rnd.get(5);
+				final int random = getRandom(5);
 				st.playSound(QuestState.SOUND_ITEMGET);
 				st.giveItems(LARA_LISTS[random][0], 1);
 				st.set("Lara", String.valueOf(random + 1));

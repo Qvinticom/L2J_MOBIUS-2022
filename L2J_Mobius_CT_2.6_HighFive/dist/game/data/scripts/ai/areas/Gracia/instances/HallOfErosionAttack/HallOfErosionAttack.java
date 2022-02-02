@@ -24,7 +24,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.SoIManager;
@@ -417,7 +416,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				}
 				
 				player.destroyItemByItemId("SOI", 13797, 1, player, true);
-				final Location loc = world.deadTumors.get(Rnd.get(world.deadTumors.size())).getLocation();
+				final Location loc = world.deadTumors.get(getRandom(world.deadTumors.size())).getLocation();
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
@@ -454,9 +453,9 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final HEAWorld world = (HEAWorld) tmpworld;
 			if (npc.getId() == 18668)
 			{
-				for (int i = 0; i < Rnd.get(1, 4); i++)
+				for (int i = 0; i < getRandom(1, 4); i++)
 				{
-					addSpawn(mobs[Rnd.get(mobs.length)], npc.getLocation(), world.getInstanceId());
+					addSpawn(mobs[getRandom(mobs.length)], npc.getLocation(), world.getInstanceId());
 				}
 				npc.doDie(npc);
 			}
@@ -539,7 +538,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			if (npc.getId() == TUMOR_ALIVE)
 			{
 				world.addTumorCount(-1);
-				npc.dropItem(player, 13797, Rnd.get(2, 5));
+				npc.dropItem(player, 13797, getRandom(2, 5));
 				npc.deleteMe();
 				world.deadTumor = addSpawn(TUMOR_DEAD, loc, world.getInstanceId());
 				world.deadTumors.add(world.deadTumor);
@@ -553,7 +552,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				if ((world.tumorCount == 0) && (world.cohemenes == null))
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.ALL_THE_TUMORS_INSIDE_S1_HAVE_BEEN_DESTROYED_DRIVEN_INTO_A_CORNER_COHEMENES_APPEARS_CLOSE_BY, 2, 8000));
-					final int[] spawn = COHEMENES_SPAWN[Rnd.get(0, COHEMENES_SPAWN.length - 1)];
+					final int[] spawn = COHEMENES_SPAWN[getRandom(0, COHEMENES_SPAWN.length - 1)];
 					final Npc n = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 					n.broadcastPacket(new NpcSay(n.getObjectId(), ChatType.SHOUT, n.getId(), NpcStringId.C_MON_C_MON_SHOW_YOUR_FACE_YOU_LITTLE_RATS_LET_ME_SEE_WHAT_THE_DOOMED_WEAKLINGS_ARE_SCHEMING));
 					world.cohemenes = n;

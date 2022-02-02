@@ -42,7 +42,7 @@ public class MCritRateFinalizer implements IStatFunction
 			baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_LEGS);
 		}
 		
-		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1.;
+		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1;
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * witBonus * 10), 0, creature.isPlayable() ? creature.getStat().getValue(Stat.MAX_MAGIC_CRITICAL_RATE, Config.MAX_MCRIT_RATE) : Double.MAX_VALUE);
 	}
 	

@@ -255,7 +255,7 @@ public class Q00501_ProofOfClanAlliance extends Quest
 				{
 					if ((getRandom(10) == 1) && (lqs.getMemoState() >= 3) && (lqs.getMemoState() < 6))
 					{
-						giveItemRandomly(player, npc, HERB_OF_OEL_MAHUM, 1, 0, 1.0, true);
+						giveItemRandomly(player, npc, HERB_OF_OEL_MAHUM, 1, 0, 1, true);
 					}
 					break;
 				}
@@ -263,7 +263,7 @@ public class Q00501_ProofOfClanAlliance extends Quest
 				{
 					if ((getRandom(10) == 1) && (lqs.getMemoState() >= 3) && (lqs.getMemoState() < 6))
 					{
-						giveItemRandomly(player, npc, HERB_OF_HARIT, 1, 0, 1.0, true);
+						giveItemRandomly(player, npc, HERB_OF_HARIT, 1, 0, 1, true);
 					}
 					break;
 				}
@@ -271,7 +271,7 @@ public class Q00501_ProofOfClanAlliance extends Quest
 				{
 					if ((getRandom(10) == 1) && (lqs.getMemoState() >= 3) && (lqs.getMemoState() < 6))
 					{
-						giveItemRandomly(player, npc, HERB_OF_VANOR, 1, 0, 1.0, true);
+						giveItemRandomly(player, npc, HERB_OF_VANOR, 1, 0, 1, true);
 					}
 					break;
 				}

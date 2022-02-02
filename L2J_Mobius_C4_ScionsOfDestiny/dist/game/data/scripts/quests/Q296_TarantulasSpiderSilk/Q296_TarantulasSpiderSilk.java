@@ -16,7 +16,6 @@
  */
 package quests.Q296_TarantulasSpiderSilk;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -83,7 +82,7 @@ public class Q296_TarantulasSpiderSilk extends Quest
 				{
 					htmltext = "30548-03.htm";
 					st.takeItems(TARANTULA_SPINNERETTE, -1);
-					st.giveItems(TARANTULA_SPIDER_SILK, count * (15 + Rnd.get(10)));
+					st.giveItems(TARANTULA_SPIDER_SILK, count * (15 + getRandom(10)));
 				}
 				break;
 			}
@@ -149,7 +148,7 @@ public class Q296_TarantulasSpiderSilk extends Quest
 			return null;
 		}
 		
-		final int rnd = Rnd.get(100);
+		final int rnd = getRandom(100);
 		if (rnd > 95)
 		{
 			st.dropItemsAlways(TARANTULA_SPINNERETTE, 1, 0);

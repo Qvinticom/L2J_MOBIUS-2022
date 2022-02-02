@@ -16,7 +16,6 @@
  */
 package quests.Q623_TheFinestFood;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -72,7 +71,7 @@ public class Q623_TheFinestFood extends Quest
 			st.takeItems(BUFFALO_MEAT, -1);
 			st.takeItems(ANTELOPE_HORN, -1);
 			
-			final int luck = Rnd.get(100);
+			final int luck = getRandom(100);
 			if (luck < 11)
 			{
 				st.rewardItems(57, 25000);

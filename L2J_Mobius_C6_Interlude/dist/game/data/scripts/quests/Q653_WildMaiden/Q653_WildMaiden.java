@@ -16,7 +16,6 @@
  */
 package quests.Q653_WildMaiden;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -78,12 +77,12 @@ public class Q653_WildMaiden extends Quest
 		}
 		else if (event.equals("apparition_npc"))
 		{
-			int chance = Rnd.get(4);
+			int chance = getRandom(4);
 			
 			// Loop to avoid to spawn to the same place.
 			while (chance == _currentPosition)
 			{
-				chance = Rnd.get(4);
+				chance = getRandom(4);
 			}
 			
 			// Register new position.

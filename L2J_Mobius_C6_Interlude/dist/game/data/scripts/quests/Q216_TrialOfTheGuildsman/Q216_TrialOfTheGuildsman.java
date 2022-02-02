@@ -16,7 +16,6 @@
  */
 package quests.Q216_TrialOfTheGuildsman;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -464,7 +463,7 @@ public class Q216_TrialOfTheGuildsman extends Quest
 			case ANT_CAPTAIN:
 			{
 				// Different cases if player is a wannabe BH or WS.
-				if (st.hasQuestItems(PINTER_INSTRUCTIONS) && st.dropItemsAlways(AMBER_BEAD, ((player.getClassId() == ClassId.SCAVENGER) && (npc.getSpoiledBy() == player.getObjectId())) ? 10 : 5, 70) && (player.getClassId() == ClassId.ARTISAN) && Rnd.nextBoolean())
+				if (st.hasQuestItems(PINTER_INSTRUCTIONS) && st.dropItemsAlways(AMBER_BEAD, ((player.getClassId() == ClassId.SCAVENGER) && (npc.getSpoiledBy() == player.getObjectId())) ? 10 : 5, 70) && (player.getClassId() == ClassId.ARTISAN) && getRandomBoolean())
 				{
 					st.giveItems(AMBER_LUMP, 1);
 				}

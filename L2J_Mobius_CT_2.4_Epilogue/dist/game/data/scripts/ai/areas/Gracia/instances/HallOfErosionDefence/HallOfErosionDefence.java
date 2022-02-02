@@ -24,7 +24,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
@@ -439,7 +438,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				}
 				
 				player.destroyItemByItemId("SOI", 13797, 1, player, true);
-				final Location loc = world.deadTumors.get(Rnd.get(world.deadTumors.size())).getLocation();
+				final Location loc = world.deadTumors.get(getRandom(world.deadTumors.size())).getLocation();
 				if (loc != null)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
@@ -476,9 +475,9 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			final HEDWorld world = (HEDWorld) tmpworld;
 			if (npc.getId() == 18668)
 			{
-				for (int i = 0; i < Rnd.get(1, 4); i++)
+				for (int i = 0; i < getRandom(1, 4); i++)
 				{
-					addSpawn(mobs[Rnd.get(mobs.length)], npc.getLocation(), world.getInstanceId());
+					addSpawn(mobs[getRandom(mobs.length)], npc.getLocation(), world.getInstanceId());
 				}
 				npc.deleteMe();
 			}
@@ -522,7 +521,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			final HEDWorld world = (HEDWorld) tmpworld;
 			if (npc.getId() == TUMOR_ALIVE)
 			{
-				npc.dropItem(player, 13797, Rnd.get(2, 5));
+				npc.dropItem(player, 13797, getRandom(2, 5));
 				npc.deleteMe();
 				notifyTumorDeath(npc, world);
 				world.deadTumor = addSpawn(TUMOR_DEAD, npc.getLocation(), world.getInstanceId());

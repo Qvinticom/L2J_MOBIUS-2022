@@ -16,7 +16,6 @@
  */
 package quests.Q345_MethodToRaiseTheDead;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -90,7 +89,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 			{
 				if (st.isCond(3))
 				{
-					final int chance = Rnd.get(3);
+					final int chance = getRandom(3);
 					if (chance == 0)
 					{
 						st.setCond(6);
@@ -194,7 +193,7 @@ public class Q345_MethodToRaiseTheDead extends Quest
 								st.rewardItems(57, 3040 + amount);
 								
 								// Reward can be either an Imperial Diamond or bills.
-								if (Rnd.get(100) < 10)
+								if (getRandom(100) < 10)
 								{
 									st.giveItems(IMPERIAL_DIAMOND, 1);
 								}
@@ -254,9 +253,9 @@ public class Q345_MethodToRaiseTheDead extends Quest
 			return null;
 		}
 		
-		if (Rnd.get(4) == 0)
+		if (getRandom(4) == 0)
 		{
-			final int randomPart = Rnd.get(VICTIM_ARM_BONE, VICTIM_SPINE);
+			final int randomPart = getRandom(VICTIM_ARM_BONE, VICTIM_SPINE);
 			if (!st.hasQuestItems(randomPart))
 			{
 				st.playSound(QuestState.SOUND_ITEMGET);

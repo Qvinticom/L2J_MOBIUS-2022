@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
@@ -65,11 +64,11 @@ public class RetreatOnAttack extends Quest
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		if ((npcId == EPLY) || ((npc.getStatus().getCurrentHp() <= ((npc.getMaxHp() * 50) / 100)) && (Rnd.get(100) < 10)))
+		if ((npcId == EPLY) || ((npc.getStatus().getCurrentHp() <= ((npc.getMaxHp() * 50) / 100)) && (getRandom(100) < 10)))
 		{
 			if (npcId == OL_MAHUM_GUARD)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), OL_MAHUM_GUARD_TEXT[Rnd.get(OL_MAHUM_GUARD_TEXT.length)]));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), OL_MAHUM_GUARD_TEXT[getRandom(OL_MAHUM_GUARD_TEXT.length)]));
 			}
 			int posX = npc.getX();
 			int posY = npc.getY();

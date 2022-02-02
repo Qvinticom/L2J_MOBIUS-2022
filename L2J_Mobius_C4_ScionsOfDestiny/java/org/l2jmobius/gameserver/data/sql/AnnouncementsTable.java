@@ -104,6 +104,7 @@ public class AnnouncementsTable
 	{
 		sendAnnouncements(player, AnnouncementType.NORMAL);
 		sendAnnouncements(player, AnnouncementType.CRITICAL);
+		sendAnnouncements(player, AnnouncementType.EVENT);
 	}
 	
 	/**

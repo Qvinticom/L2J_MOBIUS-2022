@@ -140,7 +140,7 @@
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<effectPoint>673</effectPoint>
 		<mpConsume>32</mpConsume>
 		<abnormalLevel>1</abnormalLevel>
@@ -160,6 +160,20 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="WeaponAttackAngleBonus">
+				<amount>360</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="HitNumber">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
 			<effect name="PhysicalAttackRange">
 				<amount>100</amount>
 				<mode>DIFF</mode>
@@ -198,6 +212,20 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="WeaponAttackAngleBonus">
+				<amount>360</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+			<effect name="HitNumber">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
 			<effect name="PhysicalAttackRange">
 				<amount>100</amount>
 				<mode>DIFF</mode>

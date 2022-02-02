@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -158,7 +157,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 			}
 			case "30757-03.htm":
 			{
-				if (Rnd.get(10) > 5)
+				if (getRandom(10) > 5)
 				{
 					final QuestState st2 = getClanLeaderQuestState(player, npc);
 					st.setState(State.STARTED);
@@ -186,7 +185,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 					st.takeItems(ADENA, 10000);
 					for (int[] coords : CHESTS_SPAWN)
 					{
-						st.addSpawn(CHEST_IDS.get(Rnd.get(CHEST_IDS.size())), coords[0], coords[1], coords[2], 0, false, 0);
+						st.addSpawn(CHEST_IDS.get(getRandom(CHEST_IDS.size())), coords[0], coords[1], coords[2], 0, false, 0);
 					}
 					
 					_isSpawned = true;
@@ -457,7 +456,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 		{
 			final int itemId = DROP.get(npcId);
 			final List<Integer> herbs = getHerbs(cl.getString("herbs"));
-			if ((Rnd.get(10) == 1) && !st.hasQuestItems(itemId) && !hasOtherItems(st, itemId) && !herbs.contains(itemId))
+			if ((getRandom(10) == 1) && !st.hasQuestItems(itemId) && !hasOtherItems(st, itemId) && !herbs.contains(itemId))
 			{
 				if (herbs.isEmpty())
 				{
@@ -475,7 +474,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 		{
 			final int chests = cl.getInt("chests");
 			final int bingo = cl.getInt("bingo");
-			if ((((chests == 15) && (bingo == 3)) || ((chests == 14) && (bingo == 2)) || ((chests == 13) && (bingo == 1)) || ((chests == 12) && (bingo == 0))) || ((bingo < 4) && (Rnd.get(4) == 0)))
+			if ((((chests == 15) && (bingo == 3)) || ((chests == 14) && (bingo == 2)) || ((chests == 13) && (bingo == 1)) || ((chests == 12) && (bingo == 0))) || ((bingo < 4) && (getRandom(4) == 0)))
 			{
 				npc.broadcastNpcSay("##########Bingo!##########");
 				cl.set("bingo", String.valueOf(bingo + 1));

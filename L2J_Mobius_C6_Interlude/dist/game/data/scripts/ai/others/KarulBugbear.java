@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -44,7 +43,7 @@ public class KarulBugbear extends Quest
 	{
 		if (npc.isScriptValue(1))
 		{
-			if (Rnd.get(100) < 4)
+			if (getRandom(100) < 4)
 			{
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Your rear is practically unguarded!"));
 			}
@@ -52,7 +51,7 @@ public class KarulBugbear extends Quest
 		else
 		{
 			npc.setScriptValue(1);
-			if (Rnd.get(100) < 4)
+			if (getRandom(100) < 4)
 			{
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Watch your back!"));
 			}

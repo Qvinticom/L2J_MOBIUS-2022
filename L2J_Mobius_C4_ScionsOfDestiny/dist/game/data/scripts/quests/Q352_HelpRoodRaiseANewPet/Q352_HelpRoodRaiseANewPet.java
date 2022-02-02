@@ -16,7 +16,6 @@
  */
 package quests.Q352_HelpRoodRaiseANewPet;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -129,7 +128,7 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		final int random = Rnd.get(100);
+		final int random = getRandom(100);
 		final int chance = ((npcId == 20786) || (npcId == 21644)) ? 44 : 58;
 		if (random < chance)
 		{

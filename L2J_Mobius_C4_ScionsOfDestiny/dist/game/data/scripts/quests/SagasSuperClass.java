@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -523,7 +522,7 @@ public class SagasSuperClass extends Quest
 				if (st.getInt("Quest0") == 0)
 				{
 					startQuestTimer("Mob_2 Timer 3", 13000, npc, player);
-					if (Rnd.nextBoolean())
+					if (getRandomBoolean())
 					{
 						npc.broadcastNpcSay(_text[9].replace("PLAYERNAME", player.getName()));
 					}
@@ -1004,7 +1003,7 @@ public class SagasSuperClass extends Quest
 					}
 					if (!partyQuestMembers.isEmpty())
 					{
-						final QuestState st2 = partyQuestMembers.get(Rnd.get(partyQuestMembers.size()));
+						final QuestState st2 = partyQuestMembers.get(getRandom(partyQuestMembers.size()));
 						giveHallishaMark(st2);
 					}
 				}

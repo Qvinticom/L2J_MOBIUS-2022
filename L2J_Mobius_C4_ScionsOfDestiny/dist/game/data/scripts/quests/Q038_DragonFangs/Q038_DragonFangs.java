@@ -19,7 +19,6 @@ package quests.Q038_DragonFangs;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -133,7 +132,7 @@ public class Q038_DragonFangs extends Quest
 			{
 				if (st.getQuestItemsCount(TOOTH_OF_DRAGON) >= 50)
 				{
-					final int position = Rnd.get(REWARD.length);
+					final int position = getRandom(REWARD.length);
 					htmltext = "30034-06.htm";
 					st.takeItems(TOOTH_OF_DRAGON, 50);
 					st.giveItems(REWARD[position][0], 1);

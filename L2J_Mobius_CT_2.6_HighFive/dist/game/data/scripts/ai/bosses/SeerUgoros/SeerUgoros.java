@@ -19,7 +19,6 @@ package ai.bosses.SeerUgoros;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -313,7 +312,7 @@ public class SeerUgoros extends AbstractNpcAI
 				{
 					// Dummy, just wait.
 				}
-				else if (Rnd.get(10) < 6)
+				else if (getRandom(10) < 6)
 				{
 					_weed = null;
 					for (Attackable attackable : World.getInstance().getVisibleObjectsInRange(_ugoros, Attackable.class, 2000))

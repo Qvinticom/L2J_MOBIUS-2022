@@ -17,7 +17,6 @@
 package events.DreamMaker;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -65,7 +64,7 @@ public class DreamMaker extends LongTimeEvent
 			{
 				if (!player.getVariables().getBoolean("DREAM_MAKER_GIFT_RECEIVED", false))
 				{
-					giveItems(player, Rnd.get(LUCKY_POUCH_GROWTH, LUCKY_POUCH_HARMONY), 1);
+					giveItems(player, getRandom(LUCKY_POUCH_GROWTH, LUCKY_POUCH_HARMONY), 1);
 					player.getVariables().set("DREAM_MAKER_GIFT_RECEIVED", true);
 					htmltext = "34590-successful.htm";
 				}

@@ -16,7 +16,6 @@
  */
 package quests.Q503_PursuitOfClanAmbition;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -685,14 +684,14 @@ public class Q503_PursuitOfClanAmbition extends Quest
 							final Npc coffer = addSpawn(COFFER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 180000);
 							coffer.broadcastNpcSay("Curse of the gods on the one that defiles the property of the empire!");
 						}
-						else if ((element[0] == GRAVE_GUARD) && (st.getQuestItemsCount(IMP_KEYS) < 6) && (Rnd.get(50) < chance))
+						else if ((element[0] == GRAVE_GUARD) && (st.getQuestItemsCount(IMP_KEYS) < 6) && (getRandom(50) < chance))
 						{
 							addSpawn(GRAVE_KEYMASTER, player.getX(), player.getY(), player.getZ(), player.getHeading(), true, 0);
 						}
 					}
 					if ((item2 != 0) && (item3 != 0))
 					{
-						if (Rnd.get(4) == 0)
+						if (getRandom(4) == 0)
 						{
 							st.dropItems(item2, 1, maxCount, chance);
 						}
@@ -713,7 +712,7 @@ public class Q503_PursuitOfClanAmbition extends Quest
 	{
 		if ((npc.getMaxHp() / 2) > npc.getCurrentHp())
 		{
-			if (Rnd.get(100) < 4)
+			if (getRandom(100) < 4)
 			{
 				addSpawn(IMPERIAL_SLAVE, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
 			}

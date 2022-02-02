@@ -23,7 +23,6 @@ import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -133,7 +132,7 @@ public class AetherDrops extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if ((killer.getLevel() >= PLAYER_LEVEL) && (Rnd.get(100) < CHANCE))
+		if ((killer.getLevel() >= PLAYER_LEVEL) && (getRandom(100) < CHANCE))
 		{
 			final int count = killer.getVariables().getInt(AETHER_DROP_COUNT_VAR, 0);
 			if (count < DROP_DAILY)

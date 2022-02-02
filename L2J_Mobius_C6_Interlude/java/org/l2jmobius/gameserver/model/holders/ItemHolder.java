@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.holders;
 
 /**
- * A simple DTO for items; contains item ID and count.<br>
+ * A simple DTO for items; contains item ID and count.
  * @author UnAfraid
  */
 public class ItemHolder

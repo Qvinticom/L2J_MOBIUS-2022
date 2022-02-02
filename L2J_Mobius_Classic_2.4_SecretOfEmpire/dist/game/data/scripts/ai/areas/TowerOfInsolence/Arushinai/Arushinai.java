@@ -17,7 +17,6 @@
 package ai.areas.TowerOfInsolence.Arushinai;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HeavenlyRiftManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -80,7 +79,7 @@ public class Arushinai extends AbstractNpcAI
 				return null; // TODO: Find html?
 			}
 			
-			final int riftLevel = Rnd.get(1, 3);
+			final int riftLevel = getRandom(1, 3);
 			GlobalVariablesManager.getInstance().set("heavenly_rift_level", riftLevel);
 			GlobalVariablesManager.getInstance().set("heavenly_rift_complete", 4);
 			switch (riftLevel)

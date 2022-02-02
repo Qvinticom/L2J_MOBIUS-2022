@@ -120,7 +120,7 @@ public class Q00379_FantasyWine extends Quest
 		}
 		
 		final ItemHolder dropItem = ((npc.getId() == ENKU_ORC_CHAMPION) ? LEAF_OF_EUCALYPTUS : STONE_OF_CHILL);
-		if (giveItemRandomly(killer, npc, dropItem.getId(), 1, dropItem.getCount(), 1.0, true) && hasAllItems(killer, true, LEAF_OF_EUCALYPTUS, STONE_OF_CHILL))
+		if (giveItemRandomly(killer, npc, dropItem.getId(), 1, dropItem.getCount(), 1, true) && hasAllItems(killer, true, LEAF_OF_EUCALYPTUS, STONE_OF_CHILL))
 		{
 			qs.setCond(2);
 		}

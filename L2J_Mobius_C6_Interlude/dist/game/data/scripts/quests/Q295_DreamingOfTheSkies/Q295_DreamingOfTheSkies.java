@@ -16,7 +16,6 @@
  */
 package quests.Q295_DreamingOfTheSkies;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -115,7 +114,7 @@ public class Q295_DreamingOfTheSkies extends Quest
 			return null;
 		}
 		
-		if (st.dropItemsAlways(FLOATING_STONE, (Rnd.get(100) > 25) ? 1 : 2, 50))
+		if (st.dropItemsAlways(FLOATING_STONE, (getRandom(100) > 25) ? 1 : 2, 50))
 		{
 			st.setCond(2);
 		}

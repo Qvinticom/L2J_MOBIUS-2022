@@ -71,16 +71,16 @@ public class Orfen extends AbstractNpcAI
 	// private static final int RIBA = 29017;
 	private static final int RIBA_IREN = 29018;
 	
-	private static boolean _IsTeleported;
-	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
-	private static ZoneType ZONE;
-	
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
 	
 	private static final SkillHolder PARALYSIS = new SkillHolder(4064, 1);
 	private static final SkillHolder BLOW = new SkillHolder(4067, 4);
 	private static final SkillHolder ORFEN_HEAL = new SkillHolder(4516, 1);
+	
+	private static boolean _isTeleported;
+	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
+	private static ZoneType _zone;
 	
 	private Orfen()
 	{
@@ -91,8 +91,8 @@ public class Orfen extends AbstractNpcAI
 			RIBA_IREN
 		};
 		registerMobs(mobs);
-		_IsTeleported = false;
-		ZONE = ZoneManager.getInstance().getZoneById(12013);
+		_isTeleported = false;
+		_zone = ZoneManager.getInstance().getZoneById(12013);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ORFEN);
 		final int status = GrandBossManager.getInstance().getBossStatus(ORFEN);
 		if (status == DEAD)
@@ -199,12 +199,12 @@ public class Orfen extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("check_orfen_pos"))
 		{
-			if ((_IsTeleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))) || (!ZONE.isInsideZone(npc) && !_IsTeleported))
+			if ((_isTeleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))) || (!_zone.isInsideZone(npc) && !_isTeleported))
 			{
 				setSpawnPoint(npc, getRandom(3) + 1);
-				_IsTeleported = false;
+				_isTeleported = false;
 			}
-			else if (_IsTeleported && !ZONE.isInsideZone(npc))
+			else if (_isTeleported && !_zone.isInsideZone(npc))
 			{
 				setSpawnPoint(npc, 0);
 			}
@@ -292,9 +292,9 @@ public class Orfen extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (npcId == ORFEN)
 		{
-			if (!_IsTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)))
+			if (!_isTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)))
 			{
-				_IsTeleported = true;
+				_isTeleported = true;
 				setSpawnPoint(npc, 0);
 			}
 			else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (getRandom(10) == 0))

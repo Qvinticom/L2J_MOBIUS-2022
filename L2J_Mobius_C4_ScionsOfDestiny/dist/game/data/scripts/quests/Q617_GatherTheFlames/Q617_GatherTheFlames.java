@@ -19,7 +19,6 @@ package quests.Q617_GatherTheFlames;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -110,7 +109,7 @@ public class Q617_GatherTheFlames extends Quest
 			{
 				htmltext = "31539-07.htm";
 				st.takeItems(TORCH, 1000);
-				st.giveItems(REWARD[Rnd.get(REWARD.length)], 1);
+				st.giveItems(REWARD[getRandom(REWARD.length)], 1);
 			}
 		}
 		else if (event.equals("31539-08.htm"))

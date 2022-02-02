@@ -16,7 +16,6 @@
  */
 package quests.Q294_CovertBusiness;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -118,7 +117,7 @@ public class Q294_CovertBusiness extends Quest
 		}
 		
 		int count = 1;
-		final int chance = Rnd.get(10);
+		final int chance = getRandom(10);
 		final boolean isBarded = (npc.getNpcId() == 20370);
 		
 		if (chance < 3)

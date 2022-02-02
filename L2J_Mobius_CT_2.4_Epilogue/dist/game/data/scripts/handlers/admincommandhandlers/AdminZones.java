@@ -27,7 +27,6 @@ import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -63,8 +62,6 @@ import ai.AbstractNpcAI;
  */
 public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminZones.class.getName());
-	
 	private final Map<Integer, ZoneNodeHolder> _zones = new ConcurrentHashMap<>();
 	
 	private static final String[] COMMANDS =

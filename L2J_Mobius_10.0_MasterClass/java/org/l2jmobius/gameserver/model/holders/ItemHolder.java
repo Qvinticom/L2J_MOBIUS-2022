@@ -20,8 +20,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
- * A simple DTO for items; contains item ID and count.<br>
- * Extended by {@link ItemChanceHolder}, {@link QuestItemHolder}, {@link UniqueItemHolder}.
+ * A simple DTO for items; contains item ID and count.
  * @author UnAfraid
  */
 public class ItemHolder implements IIdentifiable

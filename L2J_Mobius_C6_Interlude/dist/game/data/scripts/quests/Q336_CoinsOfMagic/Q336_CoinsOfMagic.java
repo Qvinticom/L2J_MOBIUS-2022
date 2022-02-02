@@ -16,7 +16,6 @@
  */
 package quests.Q336_CoinsOfMagic;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -352,7 +351,7 @@ public class Q336_CoinsOfMagic extends Quest
 		final int npcId = npc.getNpcId();
 		if ((npcId == HARIT_LIZARDMAN_MATRIARCH) || (npcId == HARIT_LIZARDMAN_SHAMAN))
 		{
-			if ((cond == 2) && (Rnd.get(1000) < 63))
+			if ((cond == 2) && (getRandom(1000) < 63))
 			{
 				st.giveItems(KALDIS_COIN, 1);
 				st.setCond(3);
@@ -366,7 +365,7 @@ public class Q336_CoinsOfMagic extends Quest
 		{
 			if (e[0] == npcId)
 			{
-				if (Rnd.get(100) < chance)
+				if (getRandom(100) < chance)
 				{
 					st.giveItems(e[1], 1);
 				}
@@ -378,9 +377,9 @@ public class Q336_CoinsOfMagic extends Quest
 		{
 			if (u == npcId)
 			{
-				if (Rnd.get(100) < (chance * npc.getTemplate().getBaseHpConsumeRate()))
+				if (getRandom(100) < (chance * npc.getTemplate().getBaseHpConsumeRate()))
 				{
-					st.giveItems(BASIC_COINS[Rnd.get(BASIC_COINS.length)], 1);
+					st.giveItems(BASIC_COINS[getRandom(BASIC_COINS.length)], 1);
 				}
 				return null;
 			}

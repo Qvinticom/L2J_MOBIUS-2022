@@ -16,7 +16,6 @@
  */
 package quests.Q246_PossessorOfAPreciousSoul;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -254,7 +253,7 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 				return null;
 			}
 			
-			if (Rnd.get(10) < 2)
+			if (getRandom(10) < 2)
 			{
 				final int neklaceOrRing = (npcId == PILGRIM_OF_SPLENDOR) ? WATERBINDER : EVERGREEN;
 				if (!st.hasQuestItems(neklaceOrRing))

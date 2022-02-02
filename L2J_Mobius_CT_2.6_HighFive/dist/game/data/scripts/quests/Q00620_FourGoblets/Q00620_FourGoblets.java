@@ -465,12 +465,12 @@ public class Q00620_FourGoblets extends Quest
 					else if (MOB2.containsKey(npcId))
 					{
 						final int itemCount = ((getRandom(100) < MOB2.get(npc.getId())) ? 2 : 1);
-						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1.0, true);
+						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1, true);
 					}
 					else
 					{
 						final int itemCount = ((getRandom(100) < MOB3.get(npc.getId())) ? 5 : 4);
-						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1.0, true);
+						giveItemRandomly(qs.getPlayer(), npc, SEALED_BOX, itemCount, 0, 1, true);
 					}
 				}
 				break;

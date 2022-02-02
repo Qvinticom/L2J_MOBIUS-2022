@@ -266,7 +266,7 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBoss.checkAndReturnToSpawn())
-			// raid.getSpawn().setLoc(104771, -36993, -1149, Rnd.get(65536));
+			// raid.getSpawn().setLoc(104771, -36993, -1149, getRandom(65536));
 			
 			addSpawn(SOUL_OF_WATER_ASHUTAR, 104771, -36993, -1149, 100, false, 0);
 			raid.broadcastNpcSay("You didn’t come into this world. You came out of it, like a wave from the ocean. You are not a stranger here.");

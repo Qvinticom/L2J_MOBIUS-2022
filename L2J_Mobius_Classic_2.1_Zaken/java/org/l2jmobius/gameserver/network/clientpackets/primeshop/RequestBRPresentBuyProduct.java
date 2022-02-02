@@ -207,13 +207,13 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 		{
 			if (!player.getInventory().validateCapacity(slots))
 			{
-				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
+				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
 				return false;
 			}
 		}
 		else
 		{
-			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTROY_OVERFLOW));
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
 			return false;
 		}
 		

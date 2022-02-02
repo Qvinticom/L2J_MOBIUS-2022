@@ -24,7 +24,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 
 import ai.AbstractNpcAI;
 
@@ -48,25 +48,25 @@ public class Alexandria extends AbstractNpcAI
 		new ItemHolder(9817, 5),
 	};
 	// Agathions
-	private static final QuestItemHolder[] LITTLE_DEVILS = new QuestItemHolder[]
+	private static final ItemChanceHolder[] LITTLE_DEVILS = new ItemChanceHolder[]
 	{
-		new AdditionalQuestItemHolder(10321, 600, 1, 10408),
-		new QuestItemHolder(10322, 10),
-		new QuestItemHolder(10323, 10),
-		new QuestItemHolder(10324, 5),
-		new QuestItemHolder(10325, 5),
-		new QuestItemHolder(10326, 370),
+		new AdditionalItemChanceHolder(10321, 600, 1, 10408),
+		new ItemChanceHolder(10322, 10),
+		new ItemChanceHolder(10323, 10),
+		new ItemChanceHolder(10324, 5),
+		new ItemChanceHolder(10325, 5),
+		new ItemChanceHolder(10326, 370),
 	};
-	private static final QuestItemHolder[] LITTLE_ANGELS = new QuestItemHolder[]
+	private static final ItemChanceHolder[] LITTLE_ANGELS = new ItemChanceHolder[]
 	{
-		new AdditionalQuestItemHolder(10315, 600, 1, 10408),
-		new QuestItemHolder(10316, 10),
-		new QuestItemHolder(10317, 10),
-		new QuestItemHolder(10318, 5),
-		new QuestItemHolder(10319, 5),
-		new QuestItemHolder(10320, 370),
+		new AdditionalItemChanceHolder(10315, 600, 1, 10408),
+		new ItemChanceHolder(10316, 10),
+		new ItemChanceHolder(10317, 10),
+		new ItemChanceHolder(10318, 5),
+		new ItemChanceHolder(10319, 5),
+		new ItemChanceHolder(10320, 370),
 	};
-	private static final Map<String, List<QuestItemHolder>> AGATHIONS = new HashMap<>();
+	private static final Map<String, List<ItemChanceHolder>> AGATHIONS = new HashMap<>();
 	static
 	{
 		AGATHIONS.put("littleAngel", Arrays.asList(LITTLE_ANGELS));
@@ -93,7 +93,7 @@ public class Alexandria extends AbstractNpcAI
 			final int chance = getRandom(1000);
 			int chance2 = 0;
 			int chance3 = 0;
-			for (QuestItemHolder agathion : AGATHIONS.get(event))
+			for (ItemChanceHolder agathion : AGATHIONS.get(event))
 			{
 				chance3 += agathion.getChance();
 				if ((chance2 <= chance) && (chance < chance3))
@@ -102,9 +102,9 @@ public class Alexandria extends AbstractNpcAI
 					{
 						giveItems(player, agathion);
 						htmltext = "30098-03.html";
-						if (agathion instanceof AdditionalQuestItemHolder)
+						if (agathion instanceof AdditionalItemChanceHolder)
 						{
-							giveItems(player, ((AdditionalQuestItemHolder) agathion).getAdditionalId(), 1);
+							giveItems(player, ((AdditionalItemChanceHolder) agathion).getAdditionalId(), 1);
 							htmltext = "30098-03a.html";
 						}
 					}
@@ -120,11 +120,11 @@ public class Alexandria extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	private static class AdditionalQuestItemHolder extends QuestItemHolder
+	private static class AdditionalItemChanceHolder extends ItemChanceHolder
 	{
 		private final int _additionalId;
 		
-		AdditionalQuestItemHolder(int id, int chance, long count, int additionalId)
+		AdditionalItemChanceHolder(int id, int chance, long count, int additionalId)
 		{
 			super(id, chance, count);
 			_additionalId = additionalId;

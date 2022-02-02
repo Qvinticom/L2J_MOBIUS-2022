@@ -16,7 +16,6 @@
  */
 package quests.Q271_ProofOfValor;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -101,7 +100,7 @@ public class Q271_ProofOfValor extends Quest
 				{
 					htmltext = "30577-05.htm";
 					st.takeItems(KASHA_WOLF_FANG, -1);
-					st.giveItems((Rnd.get(100) < 10) ? NECKLACE_OF_VALOR : NECKLACE_OF_COURAGE, 1);
+					st.giveItems((getRandom(100) < 10) ? NECKLACE_OF_VALOR : NECKLACE_OF_COURAGE, 1);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}
@@ -121,7 +120,7 @@ public class Q271_ProofOfValor extends Quest
 			return null;
 		}
 		
-		if (st.dropItemsAlways(KASHA_WOLF_FANG, (Rnd.get(4) == 0) ? 2 : 1, 50))
+		if (st.dropItemsAlways(KASHA_WOLF_FANG, (getRandom(4) == 0) ? 2 : 1, 50))
 		{
 			st.setCond(2);
 		}

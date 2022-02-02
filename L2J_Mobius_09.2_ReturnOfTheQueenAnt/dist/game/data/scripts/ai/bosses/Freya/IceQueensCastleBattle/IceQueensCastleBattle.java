@@ -1089,12 +1089,12 @@ public class IceQueensCastleBattle extends AbstractInstance
 				case KNIGHT_HARD:
 				{
 					final Npc spawnedBy = npc.getVariables().getObject("SPAWNED_NPC", Npc.class);
-					final NpcVariables var = controller.getVariables();
-					int knightCount = var.getInt("KNIGHT_COUNT");
+					final NpcVariables vars = controller.getVariables();
+					int knightCount = vars.getInt("KNIGHT_COUNT");
 					
-					if ((var.getInt("FREYA_MOVE") == 0) && world.isStatus(1))
+					if ((vars.getInt("FREYA_MOVE") == 0) && world.isStatus(1))
 					{
-						var.set("FREYA_MOVE", 1);
+						vars.set("FREYA_MOVE", 1);
 						final Npc freya = params.getObject("freya", Npc.class);
 						if (!freya.isInCombat())
 						{
@@ -1107,7 +1107,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					if ((knightCount < 10) && (world.isStatus(2)))
 					{
 						knightCount++;
-						var.set("KNIGHT_COUNT", knightCount);
+						vars.set("KNIGHT_COUNT", knightCount);
 						
 						if (knightCount == 10)
 						{

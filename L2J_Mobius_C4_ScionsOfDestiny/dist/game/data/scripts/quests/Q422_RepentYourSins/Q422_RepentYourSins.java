@@ -16,7 +16,6 @@
  */
 package quests.Q422_RepentYourSins;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -144,7 +143,7 @@ public class Q422_RepentYourSins extends Quest
 					st.takeItems(PENITENT_MANACLES, 1);
 					st.giveItems(LEFT_PENITENT_MANACLES, 1);
 					
-					final int removePkAmount = Rnd.get(10) + 1;
+					final int removePkAmount = getRandom(10) + 1;
 					
 					// Player's PKs are lower than random amount ; finish the quest.
 					if (player.getPkKills() <= removePkAmount)

@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.item.Weapon;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 
 public class PlayableStat extends CreatureStat
@@ -252,6 +253,6 @@ public class PlayableStat extends CreatureStat
 	public int getPhysicalAttackAngle()
 	{
 		final Weapon weapon = getActiveChar().getActiveWeaponItem();
-		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
+		return (weapon != null ? weapon.getBaseAttackAngle() + (int) getActiveChar().getStat().getValue(Stat.WEAPON_ATTACK_ANGLE_BONUS, 0) : super.getPhysicalAttackAngle());
 	}
 }

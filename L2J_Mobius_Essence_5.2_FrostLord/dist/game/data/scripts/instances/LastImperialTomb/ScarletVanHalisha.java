@@ -21,6 +21,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -48,10 +49,10 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private static final int FRINTEZZA_DAEMON_MORPH = 5018;
 	private static final int FRINTEZZA_DAEMON_FIELD = 5019;
 	// Misc
+	private static final int RANGED_SKILL_MIN_COOLTIME = 60000; // 1 minute
 	private Creature _target;
 	private Skill _skill;
 	private long _lastRangedSkillTime;
-	private static final int RANGED_SKILL_MIN_COOLTIME = 60000; // 1 minute
 	
 	public ScarletVanHalisha()
 	{
@@ -170,12 +171,12 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			return;
 		}
+		
 		if ((getRandom(100) < 30) || (_target == null) || _target.isDead())
 		{
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);
 		}
-		final Creature target = _target;
 		Skill skill = _skill;
 		if (skill == null)
 		{
@@ -187,6 +188,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			return;
 		}
 		
+		final Creature target = _target;
 		if ((target == null) || target.isDead())
 		{
 			// npc.setCastingNow(false);
@@ -211,49 +213,48 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	
 	private Creature getRandomTarget(Npc npc, Skill skill)
 	{
-		final ArrayList<Creature> result = new ArrayList<>();
+		final List<Creature> result = new ArrayList<>();
+		for (Player obj : npc.getInstanceWorld().getPlayers())
 		{
-			for (Player obj : npc.getInstanceWorld().getPlayers())
+			if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 			{
-				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
+				continue;
+			}
+			
+			if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+			{
+				continue;
+			}
+			
+			int skillRange = 150;
+			if (skill != null)
+			{
+				switch (skill.getId())
 				{
-					continue;
-				}
-				
-				if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
-				{
-					continue;
-				}
-				
-				int skillRange = 150;
-				if (skill != null)
-				{
-					switch (skill.getId())
+					case FRINTEZZA_DAEMON_ATTACK:
 					{
-						case FRINTEZZA_DAEMON_ATTACK:
-						{
-							skillRange = 150;
-							break;
-						}
-						case FRINTEZZA_DAEMON_CHARGE:
-						{
-							skillRange = 400;
-							break;
-						}
-						case YOKE_OF_SCARLET:
-						{
-							skillRange = 200;
-							break;
-						}
-						case FRINTEZZA_DAEMON_MORPH:
-						case FRINTEZZA_DAEMON_FIELD:
-						{
-							_lastRangedSkillTime = Chronos.currentTimeMillis();
-							skillRange = 550;
-							break;
-						}
+						skillRange = 150;
+						break;
+					}
+					case FRINTEZZA_DAEMON_CHARGE:
+					{
+						skillRange = 400;
+						break;
+					}
+					case YOKE_OF_SCARLET:
+					{
+						skillRange = 200;
+						break;
+					}
+					case FRINTEZZA_DAEMON_MORPH:
+					case FRINTEZZA_DAEMON_FIELD:
+					{
+						_lastRangedSkillTime = Chronos.currentTimeMillis();
+						skillRange = 550;
+						break;
 					}
 				}
+				
 				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
 				{
 					result.add(obj);

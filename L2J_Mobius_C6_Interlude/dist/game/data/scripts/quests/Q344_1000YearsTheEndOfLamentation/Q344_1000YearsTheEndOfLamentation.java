@@ -19,7 +19,6 @@ package quests.Q344_1000YearsTheEndOfLamentation;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -112,7 +111,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					st.giveItems(57, amount * 60);
 					
 					// Special item, % based on actual number of qItems.
-					if (Rnd.get(1000) < Math.min(10, Math.max(1, amount / 10)))
+					if (getRandom(1000) < Math.min(10, Math.max(1, amount / 10)))
 					{
 						htmltext = "30754-10.htm";
 					}
@@ -121,7 +120,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 			}
 			case "30754-11.htm":
 			{
-				final int random = Rnd.get(4);
+				final int random = getRandom(4);
 				if (random < 1)
 				{
 					htmltext = "30754-12.htm";
@@ -218,7 +217,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					st.set("success", "1");
 					st.takeItems(CRUCIFIX, -1);
 					
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					if (chance < 80)
 					{
 						st.giveItems(1875, 19);
@@ -241,7 +240,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					st.set("success", "1");
 					st.takeItems(OLD_TOTEM, -1);
 					
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					if (chance < 55)
 					{
 						st.giveItems(1882, 70);
@@ -264,7 +263,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					st.set("success", "1");
 					st.takeItems(OLD_HILT, -1);
 					
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					if (chance < 60)
 					{
 						st.giveItems(1874, 25);
@@ -291,7 +290,7 @@ public class Q344_1000YearsTheEndOfLamentation extends Quest
 					st.set("success", "1");
 					st.takeItems(OLD_KEY, -1);
 					
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					if (chance < 80)
 					{
 						st.giveItems(1879, 55);

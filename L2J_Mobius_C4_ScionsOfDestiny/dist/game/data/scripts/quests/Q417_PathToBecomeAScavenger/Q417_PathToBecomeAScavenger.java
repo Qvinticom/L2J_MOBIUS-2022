@@ -16,7 +16,6 @@
  */
 package quests.Q417_PathToBecomeAScavenger;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -105,7 +104,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 			}
 			case "30519_1":
 			{
-				final int random = Rnd.get(3);
+				final int random = getRandom(3);
 				htmltext = "30519-0" + (random + 2) + ".htm";
 				st.setCond(2);
 				st.playSound(QuestState.SOUND_MIDDLE);
@@ -115,7 +114,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 			}
 			case "30519_2":
 			{
-				final int random = Rnd.get(3);
+				final int random = getRandom(3);
 				htmltext = "30519-0" + (random + 2) + ".htm";
 				st.takeItems(BRONK_PAY, -1);
 				st.takeItems(SHARI_PAY, -1);
@@ -154,7 +153,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 			}
 			case "30519-11.htm":
 			{
-				if (Rnd.nextBoolean())
+				if (getRandomBoolean())
 				{
 					htmltext = "30519-06.htm";
 				}
@@ -474,7 +473,7 @@ public class Q417_PathToBecomeAScavenger extends Quest
 					final int step = st.getInt("step");
 					if (step > 20)
 					{
-						if (((step - 20) * 10) >= Rnd.get(100))
+						if (((step - 20) * 10) >= getRandom(100))
 						{
 							addSpawn(HONEY_BEAR, npc, false, 300000);
 							st.unset("step");

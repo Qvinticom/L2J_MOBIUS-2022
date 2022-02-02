@@ -13207,10 +13207,11 @@ public class Player extends Playable
 			}
 		}
 		
-		// Remove from world regions zones
-		if (getWorldRegion() != null)
+		// Remove from world regions zones.
+		final WorldRegion region = getWorldRegion();
+		if (region != null)
 		{
-			getWorldRegion().removeFromZones(this);
+			region.removeFromZones(this);
 		}
 		
 		try

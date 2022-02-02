@@ -16,7 +16,6 @@
  */
 package quests.Q105_SkirmishWithTheOrcs;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -80,7 +79,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 		if (event.equals("30218-03.htm"))
 		{
 			st.startQuest();
-			st.giveItems(Rnd.get(1836, 1839), 1); // Kendell's orders 1 to 4.
+			st.giveItems(getRandom(1836, 1839), 1); // Kendell's orders 1 to 4.
 		}
 		
 		return htmltext;
@@ -131,7 +130,7 @@ public class Q105_SkirmishWithTheOrcs extends Quest
 					st.takeItems(KENDELL_ORDER_2, 1);
 					st.takeItems(KENDELL_ORDER_3, 1);
 					st.takeItems(KENDELL_ORDER_4, 1);
-					st.giveItems(Rnd.get(1840, 1843), 1); // Kendell's orders 5 to 8.
+					st.giveItems(getRandom(1840, 1843), 1); // Kendell's orders 5 to 8.
 				}
 				else if (cond == 3)
 				{

@@ -146,7 +146,7 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 			else
 			{
 				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
-				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
+				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, itemCount, 0, 1, true);
 			}
 			
 			giveItemRandomly(player, npc, MYSTERIOUS_MAP_PIECE, 1, 0, 0.1, false);

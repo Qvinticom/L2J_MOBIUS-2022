@@ -16,7 +16,6 @@
  */
 package quests.Q382_KailsMagicCoin;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -118,7 +117,7 @@ public class Q382_KailsMagicCoin extends Quest
 			}
 			case FALLEN_ORC_CAPTAIN:
 			{
-				st.dropItems(5961 + Rnd.get(3), 1, 0, 100000);
+				st.dropItems(5961 + getRandom(3), 1, 0, 100000);
 				break;
 			}
 		}

@@ -16,7 +16,6 @@
  */
 package quests.Q509_TheClansPrestige;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -148,7 +147,7 @@ public class Q509_TheClansPrestige extends Quest
 				{
 					final int item = REWARD_LIST[raid - 1][1];
 					final int count = st.getQuestItemsCount(item);
-					final int reward = Rnd.get(REWARD_LIST[raid - 1][2], REWARD_LIST[raid - 1][3]);
+					final int reward = getRandom(REWARD_LIST[raid - 1][2], REWARD_LIST[raid - 1][3]);
 					if (count == 0)
 					{
 						htmltext = "31331-" + raid + "a.htm";

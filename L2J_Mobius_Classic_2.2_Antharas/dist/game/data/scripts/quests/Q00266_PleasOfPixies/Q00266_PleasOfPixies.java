@@ -93,7 +93,7 @@ public class Q00266_PleasOfPixies extends Quest
 			{
 				if (chance < mob.getId())
 				{
-					if (giveItemRandomly(killer, npc, PREDATORS_FANG, mob.getCount(), 100, 1.0, true))
+					if (giveItemRandomly(killer, npc, PREDATORS_FANG, mob.getCount(), 100, 1, true))
 					{
 						qs.setCond(2);
 					}

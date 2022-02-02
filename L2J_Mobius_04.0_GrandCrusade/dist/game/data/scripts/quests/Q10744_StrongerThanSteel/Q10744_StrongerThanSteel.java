@@ -147,11 +147,11 @@ public class Q10744_StrongerThanSteel extends Quest
 		{
 			if (npc.getId() == TREANT)
 			{
-				giveItemRandomly(killer, npc, TREANT_LEAF, 1, 20, 1.0, true);
+				giveItemRandomly(killer, npc, TREANT_LEAF, 1, 20, 1, true);
 			}
 			else if (npc.getId() == LEAFIE)
 			{
-				giveItemRandomly(killer, npc, LEAFIE_LEAF, 1, 15, 1.0, true);
+				giveItemRandomly(killer, npc, LEAFIE_LEAF, 1, 15, 1, true);
 			}
 			
 			if ((getQuestItemsCount(killer, TREANT_LEAF) >= 20) && (getQuestItemsCount(killer, LEAFIE_LEAF) >= 15))

@@ -29,7 +29,6 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.enums.PartyMessageType;
@@ -724,16 +723,16 @@ public class CeremonyOfChaos extends AbstractNpcAI
 				msg.addString(winner.getName());
 				
 				// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
-				final int marksRewarded = Rnd.get(2, 5); // Guessed
-				final int boxs = Rnd.get(1, 5);
+				final int marksRewarded = getRandom(2, 5); // Guessed
+				final int boxs = getRandom(1, 5);
 				winner.addItem("CoC-Winner", 45584, marksRewarded, winner, true); // Mark of battle
 				winner.addItem("CoC-Winner", 36333, boxs, winner, true); // Mysterious Box
 				// Possible additional rewards
 				
 				// Improved Life Stone
-				if (Rnd.get(10) < 3) // Chance to get reward (30%)
+				if (getRandom(10) < 3) // Chance to get reward (30%)
 				{
-					switch (Rnd.get(4))
+					switch (getRandom(4))
 					{
 						case 0:
 						{
@@ -758,9 +757,9 @@ public class CeremonyOfChaos extends AbstractNpcAI
 					}
 				}
 				// Soul Crystal Fragment
-				else if (Rnd.get(10) < 3) // Chance to get reward (30%)
+				else if (getRandom(10) < 3) // Chance to get reward (30%)
 				{
-					switch (Rnd.get(6))
+					switch (getRandom(6))
 					{
 						case 0:
 						{
@@ -795,7 +794,7 @@ public class CeremonyOfChaos extends AbstractNpcAI
 					}
 				}
 				// Mysterious Belt
-				else if (Rnd.get(10) < 1) // Chance to get reward (10%)
+				else if (getRandom(10) < 1) // Chance to get reward (10%)
 				{
 					winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
 				}

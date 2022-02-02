@@ -16,7 +16,6 @@
  */
 package quests.Q602_ShadowOfLight;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -70,7 +69,7 @@ public class Q602_ShadowOfLight extends Quest
 		{
 			st.takeItems(EYE_OF_DARKNESS, -1);
 			
-			final int random = Rnd.get(100);
+			final int random = getRandom(100);
 			for (int[] element : REWARDS)
 			{
 				if (random < element[4])

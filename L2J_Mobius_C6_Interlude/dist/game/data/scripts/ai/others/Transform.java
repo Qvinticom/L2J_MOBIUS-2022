@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -144,11 +143,11 @@ public class Transform extends Quest
 	{
 		for (Transformer monster : _mobs)
 		{
-			if ((npc.getNpcId() == monster.getId()) && (Rnd.get(100) <= (monster.getChance() * Config.RATE_DROP_QUEST)))
+			if ((npc.getNpcId() == monster.getId()) && (getRandom(100) <= (monster.getChance() * Config.RATE_DROP_QUEST)))
 			{
 				if (monster.getMessage() != 0)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), Message[Rnd.get(monster.getMessage())]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), Message[getRandom(monster.getMessage())]));
 				}
 				npc.onDecay();
 				final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
@@ -178,7 +177,7 @@ public class Transform extends Quest
 			{
 				if (monster.getMessage() != 0)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), Message[Rnd.get(monster.getMessage())]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), Message[getRandom(monster.getMessage())]));
 				}
 				final Attackable newNpc = (Attackable) addSpawn(monster.getIdPoly(), npc);
 				final Creature originalAttacker = isPet ? killer.getPet() : killer;

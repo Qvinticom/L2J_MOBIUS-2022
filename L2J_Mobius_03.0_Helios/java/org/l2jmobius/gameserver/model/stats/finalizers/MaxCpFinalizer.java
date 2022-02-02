@@ -40,8 +40,8 @@ public class MaxCpFinalizer implements IStatFunction
 		{
 			baseValue = player.getTemplate().getBaseCpMax(player.getLevel());
 		}
-		final double chaBonus = creature.isPlayer() ? BaseStat.CHA.calcBonus(creature) : 1.;
-		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1.;
+		final double chaBonus = creature.isPlayer() ? BaseStat.CHA.calcBonus(creature) : 1;
+		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1;
 		baseValue *= conBonus * chaBonus;
 		return Stat.defaultValue(creature, stat, baseValue);
 	}

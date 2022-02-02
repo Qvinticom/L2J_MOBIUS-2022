@@ -53,11 +53,11 @@ public class AltarsOfSacrifice extends AbstractNpcAI
 				throw new IllegalStateException();
 			}
 			
-			final Spawn spawn = new Spawn(_bossNpcIds[Rnd.get(_bossNpcIds.length)]);
+			final Spawn spawn = new Spawn(_bossNpcIds[getRandom(_bossNpcIds.length)]);
 			spawn.setAmount(1);
-			spawn.setHeading(Rnd.get(65536));
+			spawn.setHeading(getRandom(65536));
 			
-			final int radius = Rnd.get(BOSS_MIN_SPAWN_RADIUS, BOSS_MAX_SPAWN_RADIUS);
+			final int radius = getRandom(BOSS_MIN_SPAWN_RADIUS, BOSS_MAX_SPAWN_RADIUS);
 			final double angleRadians = Rnd.nextDouble() * 2 * Math.PI;
 			final int spawnX = (int) (radius * Math.cos(angleRadians)) + _middlePoint.getX();
 			final int spawnY = (int) (radius * Math.sin(angleRadians)) + _middlePoint.getY();

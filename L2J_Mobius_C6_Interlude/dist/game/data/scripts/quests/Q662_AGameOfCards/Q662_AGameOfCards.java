@@ -19,7 +19,6 @@ package quests.Q662_AGameOfCards;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -158,11 +157,11 @@ public class Q662_AGameOfCards extends Quest
 				final int stateEx = st.getInt("stateEx");
 				if ((state == 0) && (stateEx == 0) && (st.getQuestItemsCount(RED_GEM) >= 50))
 				{
-					int i1 = Rnd.get(70) + 1;
-					int i2 = Rnd.get(70) + 1;
-					int i3 = Rnd.get(70) + 1;
-					int i4 = Rnd.get(70) + 1;
-					int i5 = Rnd.get(70) + 1;
+					int i1 = getRandom(70) + 1;
+					int i2 = getRandom(70) + 1;
+					int i3 = getRandom(70) + 1;
+					int i4 = getRandom(70) + 1;
+					int i5 = getRandom(70) + 1;
 					if (i1 >= 57)
 					{
 						i1 = i1 - 56;

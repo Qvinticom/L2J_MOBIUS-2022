@@ -19,7 +19,6 @@ package events.MerrySquashmas;
 import java.util.Arrays;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -583,7 +582,7 @@ public class MerrySquashmas extends LongTimeEvent
 				{
 					continue;
 				}
-				if (Rnd.get(100) < drop[2])
+				if (getRandom(100) < drop[2])
 				{
 					if (ItemTable.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
 					{
@@ -602,7 +601,7 @@ public class MerrySquashmas extends LongTimeEvent
 	
 	private void randomSpawn(int low, int medium, int high, Npc npc)
 	{
-		final int _random = Rnd.get(100);
+		final int _random = getRandom(100);
 		if (_random < 5)
 		{
 			spawnNext(low, npc);
@@ -623,25 +622,25 @@ public class MerrySquashmas extends LongTimeEvent
 	
 	private void ChronoText(Npc npc)
 	{
-		if (Rnd.get(100) < 20)
+		if (getRandom(100) < 20)
 		{
-			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _CHRONO_TEXT[Rnd.get(_CHRONO_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _CHRONO_TEXT[getRandom(_CHRONO_TEXT.length)]));
 		}
 	}
 	
 	private void noChronoText(Npc npc)
 	{
-		if (Rnd.get(100) < 20)
+		if (getRandom(100) < 20)
 		{
-			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NOCHRONO_TEXT[Rnd.get(_NOCHRONO_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NOCHRONO_TEXT[getRandom(_NOCHRONO_TEXT.length)]));
 		}
 	}
 	
 	private void nectarText(Npc npc)
 	{
-		if (Rnd.get(100) < 30)
+		if (getRandom(100) < 30)
 		{
-			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NECTAR_TEXT[Rnd.get(_NECTAR_TEXT.length)]));
+			npc.broadcastPacket(new CreatureSay(npc, ChatType.NPC_GENERAL, npc.getName(), _NECTAR_TEXT[getRandom(_NECTAR_TEXT.length)]));
 		}
 	}
 	

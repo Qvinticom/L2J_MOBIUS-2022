@@ -146,7 +146,7 @@ public class Q00835_PitiableMelisa extends Quest
 	public void actionForEachPlayer(Player player, Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(2) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && giveItemRandomly(player, npc, ICE_CRYSTAL_SHARD, 1, 10, 1.0, true))
+		if ((qs != null) && qs.isCond(2) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && giveItemRandomly(player, npc, ICE_CRYSTAL_SHARD, 1, 10, 1, true))
 		{
 			qs.setCond(3, true);
 		}

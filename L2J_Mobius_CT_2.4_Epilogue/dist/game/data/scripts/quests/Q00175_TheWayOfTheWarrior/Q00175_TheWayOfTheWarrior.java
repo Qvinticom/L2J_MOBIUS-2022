@@ -160,7 +160,7 @@ public class Q00175_TheWayOfTheWarrior extends Quest
 		else
 		{
 			final QuestState qs = getRandomPartyMemberState(player, 7, 3, npc);
-			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, MUERTOS_CLAW.getId(), 1, MUERTOS_CLAW.getCount(), 1.0, true))
+			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, MUERTOS_CLAW.getId(), 1, MUERTOS_CLAW.getCount(), 1, true))
 			{
 				qs.setCond(8, true);
 			}

@@ -19,7 +19,6 @@ package quests.Q171_ActsOfEvil;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -336,7 +335,7 @@ public class Q171_ActsOfEvil extends Quest
 				if (st.isCond(2) && !st.dropItems(BLADE_MOLD, 1, 20, CHANCES.get(npcId)))
 				{
 					final int count = st.getQuestItemsCount(BLADE_MOLD);
-					if ((count == 5) || ((count >= 10) && (Rnd.get(100) < 25)))
+					if ((count == 5) || ((count >= 10) && (getRandom(100) < 25)))
 					{
 						addSpawn(27190, player.getX(), player.getY(), player.getZ(), player.getHeading(), false, 0);
 					}
@@ -353,7 +352,7 @@ public class Q171_ActsOfEvil extends Quest
 						st.giveItems(RANGER_REPORT_1, 1);
 						st.playSound(QuestState.SOUND_ITEMGET);
 					}
-					else if (Rnd.get(100) < 20)
+					else if (getRandom(100) < 20)
 					{
 						if (!st.hasQuestItems(RANGER_REPORT_2))
 						{
@@ -376,7 +375,7 @@ public class Q171_ActsOfEvil extends Quest
 			}
 			case 20438:
 			{
-				if (st.isCond(6) && (Rnd.get(100) < 10) && !st.hasQuestItems(WEAPON_TRADE_CONTRACT, ATTACK_DIRECTIVES))
+				if (st.isCond(6) && (getRandom(100) < 10) && !st.hasQuestItems(WEAPON_TRADE_CONTRACT, ATTACK_DIRECTIVES))
 				{
 					st.playSound(QuestState.SOUND_ITEMGET);
 					st.giveItems(WEAPON_TRADE_CONTRACT, 1);

@@ -23,7 +23,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -45,18 +45,18 @@ public class Q00299_GatherIngredientsForPie extends Quest
 	private static final int AVELLAN_SPICE = 7137;
 	private static final int HONEY_POUCH = 7138;
 	// Rewards
-	private static final List<QuestItemHolder> REWARDS = new ArrayList<>(5);
+	private static final List<ItemChanceHolder> REWARDS = new ArrayList<>(5);
 	// Misc
 	private static final int MIN_LEVEL = 34;
 	static
 	{
 		MONSTERS_CHANCES.put(20934, 700); // Wasp Worker
 		MONSTERS_CHANCES.put(20935, 770); // Wasp Leader
-		REWARDS.add(new QuestItemHolder(57, 400, 2500)); // Adena
-		REWARDS.add(new QuestItemHolder(1865, 550, 50)); // Varnish
-		REWARDS.add(new QuestItemHolder(1870, 700, 50)); // Coal
-		REWARDS.add(new QuestItemHolder(1869, 850, 50)); // Iron Ore
-		REWARDS.add(new QuestItemHolder(1871, 1000, 50)); // Charcoal
+		REWARDS.add(new ItemChanceHolder(57, 400, 2500)); // Adena
+		REWARDS.add(new ItemChanceHolder(1865, 550, 50)); // Varnish
+		REWARDS.add(new ItemChanceHolder(1870, 700, 50)); // Coal
+		REWARDS.add(new ItemChanceHolder(1869, 850, 50)); // Iron Ore
+		REWARDS.add(new ItemChanceHolder(1871, 1000, 50)); // Charcoal
 	}
 	
 	public Q00299_GatherIngredientsForPie()
@@ -142,7 +142,7 @@ public class Q00299_GatherIngredientsForPie extends Quest
 				{
 					takeItems(player, FRUIT_BASKET, -1);
 					final int chance = getRandom(1000);
-					for (QuestItemHolder holder : REWARDS)
+					for (ItemChanceHolder holder : REWARDS)
 					{
 						if (holder.getChance() > chance)
 						{

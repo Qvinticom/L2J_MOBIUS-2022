@@ -16,7 +16,6 @@
  */
 package quests.Q00698_BlockTheLordsEscape;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.SoIManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -81,7 +80,7 @@ public class Q00698_BlockTheLordsEscape extends Quest
 			{
 				if (qs.isCond(1) && (qs.getInt("defenceDone") == 1))
 				{
-					rewardItems(player, VESPER_STONE, Rnd.get(5, 8));
+					rewardItems(player, VESPER_STONE, getRandom(5, 8));
 					qs.exitQuest(true);
 					htmltext = "32603-05.html";
 				}

@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -535,7 +534,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_RECRUIT:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -549,7 +548,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_WARRIOR:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -563,7 +562,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_ELITE_GUARD:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -578,7 +577,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_OFFICER:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -593,7 +592,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_GENERAL:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -607,7 +606,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKAS_PROPHET:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -621,7 +620,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case VARKA_SILENOS_HEAD_GUARD:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -635,7 +634,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case PROPHET_GUARD:
 			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
+				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (getRandom(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
@@ -899,7 +898,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	
 	private void dropHerb(Npc mob, Player player, int[][] drop)
 	{
-		final int chance = Rnd.get(100);
+		final int chance = getRandom(100);
 		for (int[] element : drop)
 		{
 			if (chance < element[2])
@@ -916,9 +915,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		Collections.shuffle(DROPLIST);
 		for (ItemChanceHolder drop : DROPLIST)
 		{
-			if (Rnd.get(100) < drop.getChance())
+			if (getRandom(100) < drop.getChance())
 			{
-				((Monster) mob).dropItem(player, drop.getId(), Rnd.get(1, 6));
+				((Monster) mob).dropItem(player, drop.getId(), getRandom(1, 6));
 				return;
 			}
 		}

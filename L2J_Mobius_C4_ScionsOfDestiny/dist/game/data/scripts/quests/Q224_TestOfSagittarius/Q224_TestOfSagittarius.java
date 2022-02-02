@@ -16,7 +16,6 @@
  */
 package quests.Q224_TestOfSagittarius;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -396,7 +395,7 @@ public class Q224_TestOfSagittarius extends Quest
 			{
 				if (st.isCond(13))
 				{
-					if (((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN) - 120) * 5) > Rnd.get(100))
+					if (((st.getQuestItemsCount(BLOOD_OF_LIZARDMAN) - 120) * 5) > getRandom(100))
 					{
 						st.playSound(QuestState.SOUND_BEFORE_BATTLE);
 						st.takeItems(BLOOD_OF_LIZARDMAN, -1);

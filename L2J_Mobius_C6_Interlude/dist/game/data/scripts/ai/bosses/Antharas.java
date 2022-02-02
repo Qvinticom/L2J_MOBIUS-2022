@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
@@ -510,7 +509,7 @@ public class Antharas extends Quest
 					// Move at random.
 					if (FWA_MOVEATRANDOM)
 					{
-						final Location pos = new Location(Rnd.get(175000, 178500), Rnd.get(112400, 116000), -7707, 0);
+						final Location pos = new Location(getRandom(175000, 178500), getRandom(112400, 116000), -7707, 0);
 						_moveAtRandomTask = ThreadPool.schedule(new MoveAtRandom(_antharas, pos), 500);
 					}
 					if (_socialTask != null)
@@ -549,7 +548,7 @@ public class Antharas extends Quest
 		{
 			NpcTemplate template1;
 			Spawn tempSpawn;
-			final boolean isBehemoth = Rnd.get(100) < FWA_PERCENTOFBEHEMOTH;
+			final boolean isBehemoth = getRandom(100) < FWA_PERCENTOFBEHEMOTH;
 			try
 			{
 				final int mobNumber = (isBehemoth ? 2 : 3);
@@ -567,7 +566,7 @@ public class Antharas extends Quest
 					}
 					else
 					{
-						npcId = Rnd.get(29070, 29076);
+						npcId = getRandom(29070, 29076);
 					}
 					template1 = NpcTable.getInstance().getTemplate(npcId);
 					tempSpawn = new Spawn(template1);
@@ -579,8 +578,8 @@ public class Antharas extends Quest
 					int dt = ((_antharas.getX() - x) * (_antharas.getX() - x)) + ((_antharas.getY() - y) * (_antharas.getY() - y));
 					while ((tried++ < 25) && notFound)
 					{
-						final int rx = Rnd.get(175000, 179900);
-						final int ry = Rnd.get(112400, 116000);
+						final int rx = getRandom(175000, 179900);
+						final int ry = getRandom(112400, 116000);
 						final int rdt = ((_antharas.getX() - rx) * (_antharas.getX() - rx)) + ((_antharas.getY() - ry) * (_antharas.getY() - ry));
 						final Location randomLocation = new Location(rx, ry, -7704);
 						if (GeoEngine.getInstance().canSeeLocation(_antharas, randomLocation) && (rdt < dt))
@@ -915,7 +914,7 @@ public class Antharas extends Quest
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
 			_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
-			final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;
+			final long respawnTime = (Config.ANTHARAS_RESP_FIRST + getRandom(Config.ANTHARAS_RESP_SECOND)) * 3600000;
 			ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
 			// Also save the respawn time so that the info is maintained past restarts.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(npc.getNpcId());
@@ -924,8 +923,8 @@ public class Antharas extends Quest
 		}
 		else if (npc.getNpcId() == 29069)
 		{
-			final int hpHerbCount = Rnd.get(6, 18);
-			final int mpHerbCount = Rnd.get(6, 18);
+			final int hpHerbCount = getRandom(6, 18);
+			final int mpHerbCount = getRandom(6, 18);
 			for (int i = 0; i < hpHerbCount; i++)
 			{
 				((Monster) npc).dropItem(killer, 8602, 1);

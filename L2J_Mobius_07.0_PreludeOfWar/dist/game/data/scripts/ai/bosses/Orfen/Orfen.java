@@ -57,8 +57,6 @@ public class Orfen extends AbstractNpcAI
 	private static final int ARIMA = 29326;
 	private static final int ARIMUS = 29327;
 	
-	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
-	
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
 	
@@ -74,6 +72,8 @@ public class Orfen extends AbstractNpcAI
 	private static final SkillHolder ORFEN_RAISE_SPORE = new SkillHolder(32493, 1);
 	private static final SkillHolder HALLUCINATING_DUST = new SkillHolder(32494, 1);
 	private static final SkillHolder ORFEN_RAGE = new SkillHolder(32495, 1);
+	
+	private static Set<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	private Orfen()
 	{

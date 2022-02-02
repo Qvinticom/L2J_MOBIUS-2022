@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -279,7 +278,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 		{
 			st.takeItems(i, -1);
 		}
-		st.giveItems(57, (3400 * (int) Math.pow(2.0, bloodCrystalLevel - 2)));
+		st.giveItems(57, (3400 * (int) Math.pow(2, bloodCrystalLevel - 2)));
 		return true;
 	}
 	
@@ -294,37 +293,37 @@ public class Q335_TheSongOfTheHunter extends Quest
 			final int[] list = new int[5];
 			if (Laurel_Leaf_Pin_count < 4L)
 			{
-				if ((Laurel_Leaf_Pin_count == 0) || (Rnd.get(100) < 80))
+				if ((Laurel_Leaf_Pin_count == 0) || (getRandom(100) < 80))
 				{
 					for (int i = 0; i < 5; ++i)
 					{
-						list[i] = Rnd.get(12);
+						list[i] = getRandom(12);
 					}
 				}
 				else
 				{
-					list[0] = 12 + Rnd.get(6);
-					list[1] = Rnd.get(12);
-					list[2] = Rnd.get(6);
-					list[3] = 6 + Rnd.get(6);
-					list[4] = Rnd.get(12);
+					list[0] = 12 + getRandom(6);
+					list[1] = getRandom(12);
+					list[2] = getRandom(6);
+					list[3] = 6 + getRandom(6);
+					list[4] = getRandom(12);
 				}
 			}
-			else if (Rnd.get(100) < 20)
+			else if (getRandom(100) < 20)
 			{
-				list[0] = 12 + Rnd.get(6);
-				list[1] = Rnd.get(100) < 5 ? (18 + Rnd.get(3)) : Rnd.get(12);
-				list[2] = Rnd.get(6);
-				list[3] = 6 + Rnd.get(6);
-				list[4] = Rnd.get(12);
+				list[0] = 12 + getRandom(6);
+				list[1] = getRandom(100) < 5 ? (18 + getRandom(3)) : getRandom(12);
+				list[2] = getRandom(6);
+				list[3] = 6 + getRandom(6);
+				list[4] = getRandom(12);
 			}
 			else
 			{
-				list[0] = Rnd.get(12);
-				list[1] = Rnd.get(100) < 5 ? (18 + Rnd.get(3)) : Rnd.get(12);
-				list[2] = Rnd.get(6);
-				list[3] = 6 + Rnd.get(6);
-				list[4] = Rnd.get(12);
+				list[0] = getRandom(12);
+				list[1] = getRandom(100) < 5 ? (18 + getRandom(3)) : getRandom(12);
+				list[2] = getRandom(6);
+				list[3] = 6 + getRandom(6);
+				list[4] = getRandom(12);
 			}
 			boolean sortFlag;
 			do
@@ -731,7 +730,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 			{
 				for (int i = 2; i < itemCond.length; ++i)
 				{
-					if ((npcId == itemCond[i][0]) && (Rnd.get(100) < itemCond[i][1]) && (st.getQuestItemsCount(itemCond[0][0]) < itemCond[1][0]))
+					if ((npcId == itemCond[i][0]) && (getRandom(100) < itemCond[i][1]) && (st.getQuestItemsCount(itemCond[0][0]) < itemCond[1][0]))
 					{
 						st.giveItems(itemCond[0][0], 1);
 					}
@@ -744,15 +743,15 @@ public class Q335_TheSongOfTheHunter extends Quest
 				final long markasHeadCount = st.getQuestItemsCount(MARKAS_HEAD);
 				if (npcId == BREKA_ORC_WARRIOR)
 				{
-					if ((hakasHeadCount == 0) && (Rnd.get(100) < 10))
+					if ((hakasHeadCount == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(BREKA_OVERLORD_HAKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((jakasHeadCount == 0) && (Rnd.get(100) < 10))
+					else if ((jakasHeadCount == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(BREKA_OVERLORD_JAKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((markasHeadCount == 0) && (Rnd.get(100) < 10))
+					else if ((markasHeadCount == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(BREKA_OVERLORD_MARKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
@@ -778,7 +777,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 						st.giveItems(MARKAS_HEAD, 1);
 					}
 				}
-				else if ((npcId == WINDSUS) && (st.getQuestItemsCount(WINDSUS_ALEPH_SKIN) == 0) && (Rnd.get(100) < 10))
+				else if ((npcId == WINDSUS) && (st.getQuestItemsCount(WINDSUS_ALEPH_SKIN) == 0) && (getRandom(100) < 10))
 				{
 					st.addSpawn(WINDSUS_ALEPH, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 				}
@@ -792,23 +791,23 @@ public class Q335_TheSongOfTheHunter extends Quest
 				final long Kalaths_Head_count = st.getQuestItemsCount(KALATHS_HEAD);
 				if (npcId == TARLK_BUGBEAR_WARRIOR)
 				{
-					if ((Athus_Head_count == 0) && (Rnd.get(100) < 10))
+					if ((Athus_Head_count == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(TARLK_RAIDER_ATHU, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((Lankas_Head_count == 0) && (Rnd.get(100) < 10))
+					else if ((Lankas_Head_count == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(TARLK_RAIDER_LANKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((Triskas_Head_count == 0) && (Rnd.get(100) < 10))
+					else if ((Triskas_Head_count == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(TARLK_RAIDER_TRISKA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((Moturas_Head_count == 0) && (Rnd.get(100) < 10))
+					else if ((Moturas_Head_count == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(TARLK_RAIDER_MOTURA, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
-					else if ((Kalaths_Head_count == 0) && (Rnd.get(100) < 10))
+					else if ((Kalaths_Head_count == 0) && (getRandom(100) < 10))
 					{
 						st.addSpawn(TARLK_RAIDER_KALATH, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 					}
@@ -858,7 +857,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 					{
 						if (npcId == lizardmen_id)
 						{
-							if (Rnd.get(100) < 50)
+							if (getRandom(100) < 50)
 							{
 								st.takeItems(Q_BLOOD_CRYSTAL[bloodCrystalLevel], -1);
 								st.playSound((bloodCrystalLevel < 6) ? QuestState.SOUND_MIDDLE : QuestState.SOUND_JACKPOT);
@@ -883,14 +882,14 @@ public class Q335_TheSongOfTheHunter extends Quest
 			}
 			if (request != null)
 			{
-				if (request.droplist.containsKey(npcId) && (Rnd.get(100) < request.droplist.get(npcId)) && (st.getQuestItemsCount(request.request_item) < request.request_count))
+				if (request.droplist.containsKey(npcId) && (getRandom(100) < request.droplist.get(npcId)) && (st.getQuestItemsCount(request.request_item) < request.request_count))
 				{
 					st.giveItems(request.request_item, 1);
 				}
 				if (request.spawnlist.containsKey(npcId) && (st.getQuestItemsCount(request.request_item) < request.request_count))
 				{
 					final int[] spawnChance = request.spawnlist.get(npcId);
-					if (Rnd.get(100) < spawnChance[1])
+					if (getRandom(100) < spawnChance[1])
 					{
 						st.addSpawn(spawnChance[0], npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
 						if (spawnChance[0] == 27149)
@@ -901,7 +900,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 				}
 			}
 		}
-		if (((npcId == 27160) || (npcId == 27162) || (npcId == 27164)) && (Rnd.get(100) < 50))
+		if (((npcId == 27160) || (npcId == 27162) || (npcId == 27164)) && (getRandom(100) < 50))
 		{
 			npc.broadcastNpcSay("We'll take the property of the ancient empire!");
 			st.addSpawn(27150, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 300000);
@@ -979,7 +978,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 			throw new Exception("Overflow");
 		}
 		int result = 0;
-		final int mval = (int) Math.pow(2.0, bits);
+		final int mval = (int) Math.pow(2, bits);
 		for (int i = 0; i < m; ++i)
 		{
 			result <<= bits;
@@ -1004,7 +1003,7 @@ public class Q335_TheSongOfTheHunter extends Quest
 	private static int[] unpackInt(int value, int bits)
 	{
 		final int m = 32 / bits;
-		final int mval = (int) Math.pow(2.0, bits);
+		final int mval = (int) Math.pow(2, bits);
 		final int[] result = new int[m];
 		int a = value;
 		for (int i = m; i > 0; --i)

@@ -24,7 +24,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -164,12 +163,12 @@ public class SummonMinions extends Quest
 					if (npc.getStatus().getCurrentHp() < (npc.getMaxHp() / 2))
 					{
 						hasSpawned = 0;
-						if (Rnd.get(100) < 33) // mobs that summon minions only on certain chance
+						if (getRandom(100) < 33) // mobs that summon minions only on certain chance
 						{
 							final Integer[] minions = MINIONS.get(npcId);
 							for (Integer minion : minions)
 							{
-								final Attackable newNpc = (Attackable) addSpawn(minion, (npc.getX() + Rnd.get(-150, 150)), (npc.getY() + Rnd.get(-150, 150)), npc.getZ(), 0, false, 0);
+								final Attackable newNpc = (Attackable) addSpawn(minion, (npc.getX() + getRandom(-150, 150)), (npc.getY() + getRandom(-150, 150)), npc.getZ(), 0, false, 0);
 								newNpc.setRunning();
 								newNpc.addDamageHate(attacker, 0, 999);
 								newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -218,7 +217,7 @@ public class SummonMinions extends Quest
 						final Integer[] minions = MINIONS.get(npcId);
 						for (Integer minion : minions)
 						{
-							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
+							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
 							newNpc.setRunning();
 							newNpc.addDamageHate(currentAttacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, currentAttacker);
@@ -233,7 +232,7 @@ public class SummonMinions extends Quest
 					{
 						for (Integer minion : minions)
 						{
-							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + Rnd.get(-150, 150), npc.getY() + Rnd.get(-150, 150), npc.getZ(), 0, false, 0);
+							final Attackable newNpc = (Attackable) addSpawn(minion, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -243,7 +242,7 @@ public class SummonMinions extends Quest
 					{
 						for (Integer minion : minions)
 						{
-							addSpawn(minion, (npc.getX() + Rnd.get(-100, 100)), (npc.getY() + Rnd.get(-100, 100)), npc.getZ(), 0, false, 0);
+							addSpawn(minion, (npc.getX() + getRandom(-100, 100)), (npc.getY() + getRandom(-100, 100)), npc.getZ(), 0, false, 0);
 						}
 					}
 					if (npcId == 20767)

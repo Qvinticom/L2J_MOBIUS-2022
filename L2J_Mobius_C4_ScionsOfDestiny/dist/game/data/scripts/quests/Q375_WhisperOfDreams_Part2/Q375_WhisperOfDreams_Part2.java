@@ -16,7 +16,6 @@
  */
 package quests.Q375_WhisperOfDreams_Part2;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -101,7 +100,7 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(KARIK_HORN, 100);
 					st.takeItems(CAVE_HOWLER_SKULL, 100);
-					st.giveItems(REWARDS[Rnd.get(REWARDS.length)], 1);
+					st.giveItems(REWARDS[getRandom(REWARDS.length)], 1);
 				}
 				else
 				{

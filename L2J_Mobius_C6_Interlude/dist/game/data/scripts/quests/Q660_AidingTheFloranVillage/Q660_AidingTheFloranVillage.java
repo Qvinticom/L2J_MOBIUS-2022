@@ -16,7 +16,6 @@
  */
 package quests.Q660_AidingTheFloranVillage;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -114,7 +113,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 				}
 				else
 				{
-					if (Rnd.get(10) < 8)
+					if (getRandom(10) < 8)
 					{
 						st.rewardItems(ADENA, 1000);
 					}
@@ -134,7 +133,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 				}
 				else
 				{
-					final int luck = Rnd.get(15);
+					final int luck = getRandom(15);
 					if (luck < 8)
 					{
 						st.rewardItems(ADENA, 2000);
@@ -159,7 +158,7 @@ public class Q660_AidingTheFloranVillage extends Quest
 				}
 				else
 				{
-					if (Rnd.get(10) < 8)
+					if (getRandom(10) < 8)
 					{
 						st.rewardItems(ADENA, 5000);
 					}

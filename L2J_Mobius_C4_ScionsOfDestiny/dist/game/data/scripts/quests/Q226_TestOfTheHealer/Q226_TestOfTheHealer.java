@@ -16,7 +16,6 @@
  */
 package quests.Q226_TestOfTheHealer;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -272,7 +271,7 @@ public class Q226_TestOfTheHealer extends Quest
 					}
 					case ORPHAN_GIRL:
 					{
-						htmltext = "30659-0" + Rnd.get(1, 5) + ".htm";
+						htmltext = "30659-0" + getRandom(1, 5) + ".htm";
 						break;
 					}
 					case ALLANA:

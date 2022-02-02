@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -167,7 +166,7 @@ public class Monastery extends Quest
 		
 		if (Util.contains(MOBS_2, npc.getNpcId()) && (skill.getSkillType() == SkillType.AGGDAMAGE))
 		{
-			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[Rnd.get(2) + 1].replace("name", player.getName())));
+			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), TEXT[getRandom(2) + 1].replace("name", player.getName())));
 			((Attackable) npc).addDamageHate(player, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}

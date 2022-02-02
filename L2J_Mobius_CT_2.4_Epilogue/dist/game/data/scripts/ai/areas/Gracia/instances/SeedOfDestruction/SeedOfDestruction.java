@@ -25,7 +25,6 @@ import java.util.Map;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.Movie;
@@ -1255,7 +1254,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 						final Player target = world.getAllowed().stream().findAny().get();
 						if ((world.deviceSpawnedMobCount < MAX_DEVICE_SPAWNED_MOB_COUNT) && (target != null) && ((npc != null) && (target.getInstanceId() == npc.getInstanceId())) && !target.isDead())
 						{
-							final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
+							final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
 							world.deviceSpawnedMobCount++;
 							mob.setSeeThroughSilentMove(true);
 							mob.setRunning();

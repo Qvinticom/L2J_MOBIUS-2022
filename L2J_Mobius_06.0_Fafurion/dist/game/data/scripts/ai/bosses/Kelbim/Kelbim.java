@@ -21,7 +21,6 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -196,21 +195,21 @@ public class Kelbim extends AbstractNpcAI
 				GrandBossManager.getInstance().addBoss(_kelbimBoss);
 				_lastAction = Chronos.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null);
-				startQuestTimer("stage_all_random_area_attack", Rnd.get(2, 3) * 60000, null, null);
+				startQuestTimer("stage_all_random_area_attack", getRandom(2, 3) * 60000, null, null);
 				break;
 			}
 			case "stage_all_spawn_minions":
 			{
-				for (int i = 0; i < Rnd.get((_bossStage * 5) / 2, _bossStage * 5); i++)
+				for (int i = 0; i < getRandom((_bossStage * 5) / 2, _bossStage * 5); i++)
 				{
 					final Npc minion = addSpawn(KELBIM_GUARD, _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
 					((Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
 				}
-				for (int i = 0; i < Rnd.get((_bossStage * 2) / 2, _bossStage * 2); i++)
+				for (int i = 0; i < getRandom((_bossStage * 2) / 2, _bossStage * 2); i++)
 				{
-					final Npc minion = addSpawn(KELBIM_GUARDIANS[Rnd.get(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
+					final Npc minion = addSpawn(KELBIM_GUARDIANS[getRandom(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
 					minion.setRunning();
 					((Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
@@ -223,7 +222,7 @@ public class Kelbim extends AbstractNpcAI
 				{
 					if (_kelbimBoss.isInCombat())
 					{
-						final Skill randomAttackSkill = AREA_SKILLS[Rnd.get(AREA_SKILLS.length)];
+						final Skill randomAttackSkill = AREA_SKILLS[getRandom(AREA_SKILLS.length)];
 						final List<Npc> skillNpcs = new ArrayList<>();
 						for (Player pl : ZONE.getPlayersInside())
 						{
@@ -231,7 +230,7 @@ public class Kelbim extends AbstractNpcAI
 							{
 								continue;
 							}
-							if (Rnd.get(100) > 40)
+							if (getRandom(100) > 40)
 							{
 								final Npc skillMob = addSpawn(KELBIM_SHOUT, pl.getX(), pl.getY(), pl.getZ() + 10, 0, true, 60000, false, 0);
 								skillNpcs.add(skillMob);
@@ -247,7 +246,7 @@ public class Kelbim extends AbstractNpcAI
 							skillNpc.doCast(randomAttackSkill);
 						}
 					}
-					startQuestTimer("stage_all_random_area_attack", Rnd.get(1, 2) * 60000, null, null);
+					startQuestTimer("stage_all_random_area_attack", getRandom(1, 2) * 60000, null, null);
 				}
 				break;
 			}

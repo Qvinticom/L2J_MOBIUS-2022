@@ -16,7 +16,6 @@
  */
 package quests.Q264_KeenClaws;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -91,7 +90,7 @@ public class Q264_KeenClaws extends Quest
 					htmltext = "30136-05.htm";
 					st.takeItems(WOLF_CLAW, -1);
 					
-					final int n = Rnd.get(17);
+					final int n = getRandom(17);
 					if (n == 0)
 					{
 						st.giveItems(WOODEN_HELMET, 1);
@@ -144,12 +143,12 @@ public class Q264_KeenClaws extends Quest
 		
 		if (npc.getNpcId() == 20003)
 		{
-			if (st.dropItems(WOLF_CLAW, Rnd.nextBoolean() ? 2 : 4, 50, 500000))
+			if (st.dropItems(WOLF_CLAW, getRandomBoolean() ? 2 : 4, 50, 500000))
 			{
 				st.setCond(2);
 			}
 		}
-		else if (st.dropItemsAlways(WOLF_CLAW, (Rnd.get(5) < 4) ? 1 : 2, 50))
+		else if (st.dropItemsAlways(WOLF_CLAW, (getRandom(5) < 4) ? 1 : 2, 50))
 		{
 			st.setCond(2);
 		}

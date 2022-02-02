@@ -16,7 +16,6 @@
  */
 package quests.Q00708_PathToBecomingALordGludio;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -169,7 +168,7 @@ public final class Q00708_PathToBecomingALordGludio extends Quest
 		final QuestState qs = killer.getQuestState(getName());
 		if ((qs != null) && qs.isCond(6))
 		{
-			if ((npc.getId() != HEADLESS_KNIGHT) && (Rnd.get(9) == 0))
+			if ((npc.getId() != HEADLESS_KNIGHT) && (getRandom(9) == 0))
 			{
 				addSpawn(HEADLESS_KNIGHT, npc, true, 300000);
 			}

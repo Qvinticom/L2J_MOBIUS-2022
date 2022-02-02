@@ -16,7 +16,6 @@
  */
 package quests.Q421_LittleWingsBigAdventure;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
@@ -260,7 +259,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		{
 			for (Monster ghost : ((Monster) npc).getSpawnedMinions())
 			{
-				if (!ghost.isDead() && (Rnd.get(100) < 1))
+				if (!ghost.isDead() && (getRandom(100) < 1))
 				{
 					ghost.broadcastNpcSay("We must protect the fairy tree!");
 				}
@@ -278,7 +277,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		if (isPet && (attacker.getPet().getControlItemId() == st.getInt("summonOid")))
 		{
 			// Random luck is reached and you still have some leaves ; go further.
-			if ((Rnd.get(100) < 1) && st.hasQuestItems(FAIRY_LEAF))
+			if ((getRandom(100) < 1) && st.hasQuestItems(FAIRY_LEAF))
 			{
 				final int idMask = (int) Math.pow(2, (npc.getNpcId() - 27182) - 1);
 				final int iCond = st.getInt("iCond");
@@ -312,7 +311,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		final Creature originalKiller = isPet ? killer.getPet() : killer;
 		
 		// Tree curses the killer.
-		if ((Rnd.get(100) < 30) && (originalKiller != null))
+		if ((getRandom(100) < 30) && (originalKiller != null))
 		{
 			final Skill skill = SkillTable.getInstance().getSkill(4243, 1);
 			if ((skill != null) && (originalKiller.getFirstEffect(skill) == null))
@@ -324,7 +323,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		// Spawn 20 ghosts, attacking the killer.
 		for (int i = 0; i < 20; i++)
 		{
-			final Attackable newNpc = (Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), Rnd.get(65536), true, 300000);
+			final Attackable newNpc = (Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), getRandom(65536), true, 300000);
 			newNpc.setRunning();
 			newNpc.addDamageHate(originalKiller, 0, 999);
 			newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);

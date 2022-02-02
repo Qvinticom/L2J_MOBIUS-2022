@@ -135,7 +135,7 @@ public class Q00370_AnElderSowsSeeds extends Quest
 				final Player luckyPlayer = getRandomPartyMember(player, npc);
 				if (luckyPlayer != null)
 				{
-					giveItemRandomly(luckyPlayer, npc, SPELLBOOK_PAGE, 1, 0, 1.0, true);
+					giveItemRandomly(luckyPlayer, npc, SPELLBOOK_PAGE, 1, 0, 1, true);
 				}
 			}
 		}

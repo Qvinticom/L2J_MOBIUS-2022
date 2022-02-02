@@ -16,7 +16,6 @@
  */
 package ai.areas.TowerOfInsolence.Ateld;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -71,7 +70,7 @@ public class Ateld extends AbstractNpcAI
 			}
 			case "CHAT_TIMER":
 			{
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, TEXT[Rnd.get(TEXT.length)]));
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, TEXT[getRandom(TEXT.length)]));
 				startQuestTimer("CHAT_TIMER", 30000, npc, null);
 				break;
 			}

@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -150,7 +149,7 @@ public class FeedableBeasts extends Quest
 		{
 			int[][] temp;
 			temp = _spiceToMob.get(spice);
-			return temp[0][Rnd.get(temp[0].length)];
+			return temp[0][getRandom(temp[0].length)];
 		}
 		
 		public Integer getChance()
@@ -360,7 +359,7 @@ public class FeedableBeasts extends Quest
 		if (growthLevel == 2)
 		{
 			// If tamed, the mob that will spawn depends on the class type (fighter/mage) of the player!
-			if (Rnd.get(2) == 0)
+			if (getRandom(2) == 0)
 			{
 				if (player.isMageClass())
 				{
@@ -376,7 +375,7 @@ public class FeedableBeasts extends Quest
 				/*
 				 * If not tamed, there is a small chance that have "mad cow" disease. that is a stronger-than-normal animal that attacks its feeder
 				 */
-				if (Rnd.get(5) == 0)
+				if (getRandom(5) == 0)
 				{
 					nextNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getMob(food, 0, 1);
 				}
@@ -420,14 +419,14 @@ public class FeedableBeasts extends Quest
 			
 			// If player has Q020 going, give quest item
 			final QuestState st = player.getQuestState(Q020_BringUpWithLove.class.getSimpleName());
-			if ((st != null) && (Rnd.get(100) < 5) && !st.hasQuestItems(7185))
+			if ((st != null) && (getRandom(100) < 5) && !st.hasQuestItems(7185))
 			{
 				st.giveItems(7185, 1);
 				st.setCond(2);
 			}
 			
 			// Also, perform a rare random chat
-			final int rand = Rnd.get(20);
+			final int rand = getRandom(20);
 			if (rand < 5)
 			{
 				npc.broadcastPacket(new CreatureSay(nextNpc.getObjectId(), ChatType.GENERAL, nextNpc.getName(), SPAWN_CHATS[rand].replace("$s1", player.getName())));
@@ -533,9 +532,9 @@ public class FeedableBeasts extends Quest
 			}
 			
 			// Rare random talk...
-			if (Rnd.get(20) == 0)
+			if (getRandom(20) == 0)
 			{
-				npc.broadcastPacket(new CreatureSay(objectId, ChatType.GENERAL, npc.getName(), TEXT[growthLevel][Rnd.get(TEXT[growthLevel].length)]));
+				npc.broadcastPacket(new CreatureSay(objectId, ChatType.GENERAL, npc.getName(), TEXT[growthLevel][getRandom(TEXT[growthLevel].length)]));
 			}
 			
 			if ((growthLevel > 0) && (FEED_INFO.getOrDefault(objectId, 0) != caster.getObjectId()))
@@ -546,7 +545,7 @@ public class FeedableBeasts extends Quest
 			}
 			
 			// Polymorph the mob, with a certain chance, given its current growth level
-			if (Rnd.get(100) < GROWTH_CAPABLE_MONSTERS.get(npcId).getChance())
+			if (getRandom(100) < GROWTH_CAPABLE_MONSTERS.get(npcId).getChance())
 			{
 				spawnNext(npc, growthLevel, caster, food);
 			}

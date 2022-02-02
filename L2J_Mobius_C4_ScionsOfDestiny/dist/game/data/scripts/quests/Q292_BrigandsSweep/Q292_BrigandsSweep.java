@@ -16,7 +16,6 @@
  */
 package quests.Q292_BrigandsSweep;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -185,7 +184,7 @@ public class Q292_BrigandsSweep extends Quest
 			return null;
 		}
 		
-		final int chance = Rnd.get(10);
+		final int chance = getRandom(10);
 		if (chance > 5)
 		{
 			switch (npc.getNpcId())

@@ -1231,7 +1231,7 @@ public class Formulas
 		double defence = target.getPDef(attacker);
 		if (ss)
 		{
-			damage *= 2.;
+			damage *= 2;
 		}
 		
 		if (shld)

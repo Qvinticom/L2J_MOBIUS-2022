@@ -54,7 +54,7 @@ public class MaxHpFinalizer implements IStatFunction
 			}
 		}
 		
-		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1.;
+		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1;
 		baseValue *= conBonus;
 		
 		return defaultValue(creature, stat, baseValue);

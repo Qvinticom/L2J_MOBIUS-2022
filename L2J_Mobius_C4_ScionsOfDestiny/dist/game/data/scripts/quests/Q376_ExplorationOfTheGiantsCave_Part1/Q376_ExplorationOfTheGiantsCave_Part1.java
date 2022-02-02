@@ -16,7 +16,6 @@
  */
 package quests.Q376_ExplorationOfTheGiantsCave_Part1;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -232,7 +231,7 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 					st.takeItems(book, 1);
 				}
 				
-				st.giveItems(RECIPES[type][Rnd.get(RECIPES[type].length)], 1);
+				st.giveItems(RECIPES[type][getRandom(RECIPES[type].length)], 1);
 				return "31147-04.htm";
 			}
 		}

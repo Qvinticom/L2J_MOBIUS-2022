@@ -16,7 +16,6 @@
  */
 package quests.Q643_RiseAndFallOfTheElrokiTribe;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -76,7 +75,7 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 				if (count >= 300)
 				{
 					st.takeItems(BONES, 300);
-					st.rewardItems(Rnd.get(8712, 8722), 5);
+					st.rewardItems(getRandom(8712, 8722), 5);
 				}
 				else
 				{

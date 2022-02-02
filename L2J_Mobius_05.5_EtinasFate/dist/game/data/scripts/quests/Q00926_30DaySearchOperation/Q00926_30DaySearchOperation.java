@@ -148,7 +148,7 @@ public class Q00926_30DaySearchOperation extends Quest
 				case LOST_SOUL_DIMENSION:
 				case ROAMING_VENGEANCE:
 				{
-					if (giveItemRandomly(killer, npc, SPIRIT_FRAGMENTS, 1, 100, 1.0, true))
+					if (giveItemRandomly(killer, npc, SPIRIT_FRAGMENTS, 1, 100, 1, true))
 					{
 						qs.setCond(2, true);
 					}

@@ -19,7 +19,6 @@ package ai.bosses;
 import java.util.Collection;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -282,9 +281,9 @@ public class Benom extends Quest
 			}
 			case "Talk":
 			{
-				if (Rnd.get(100) < 40)
+				if (getRandom(100) < 40)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, "Benom", TALK[Rnd.get(4)]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, "Benom", TALK[getRandom(4)]));
 				}
 				break;
 			}
@@ -308,8 +307,8 @@ public class Benom extends Quest
 		{
 			if (castleOwner == clanId)
 			{
-				final int x = 12558 + (Rnd.get(200) - 100);
-				final int y = -49279 + (Rnd.get(200) - 100);
+				final int x = 12558 + (getRandom(200) - 100);
+				final int y = -49279 + (getRandom(200) - 100);
 				player.teleToLocation(x, y, -3007);
 				return null;
 			}

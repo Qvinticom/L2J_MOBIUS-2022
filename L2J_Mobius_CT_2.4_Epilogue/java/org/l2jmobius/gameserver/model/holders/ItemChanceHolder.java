@@ -17,8 +17,7 @@
 package org.l2jmobius.gameserver.model.holders;
 
 /**
- * A DTO for items; contains item ID, count and chance.<br>
- * Complemented by {@link QuestItemHolder}.
+ * A DTO for items; contains item ID, count and chance.
  * @author xban1x
  */
 public class ItemChanceHolder extends ItemHolder

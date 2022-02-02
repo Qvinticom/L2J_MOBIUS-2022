@@ -16,7 +16,6 @@
  */
 package quests.Q638_SeekersOfTheHolyGrail;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -90,7 +89,7 @@ public class Q638_SeekersOfTheHolyGrail extends Quest
 					st.playSound(QuestState.SOUND_MIDDLE);
 					st.takeItems(PAGAN_TOTEM, 2000);
 					
-					final int chance = Rnd.get(3);
+					final int chance = getRandom(3);
 					if (chance == 0)
 					{
 						st.rewardItems(959, 1);

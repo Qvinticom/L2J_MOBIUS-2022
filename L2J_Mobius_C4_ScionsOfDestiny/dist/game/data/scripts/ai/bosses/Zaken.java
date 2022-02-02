@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -355,16 +354,16 @@ public class Zaken extends Quest
 							if (i1 == 1)
 							{
 								_quest0 = 0;
-								final int i2 = Rnd.get(15);
-								_ai1 = X_COORDS[i2] + Rnd.get(650);
-								_ai2 = Y_COORDS[i2] + Rnd.get(650);
+								final int i2 = getRandom(15);
+								_ai1 = X_COORDS[i2] + getRandom(650);
+								_ai2 = Y_COORDS[i2] + getRandom(650);
 								_ai3 = Z_COORDS[i2];
 								npc.setTarget(npc);
 								npc.doCast(SkillTable.getInstance().getSkill(4222, 1));
 							}
 						}
 					}
-					if ((Rnd.get(20) < 1) && (_ai0 == 0))
+					if ((getRandom(20) < 1) && (_ai0 == 0))
 					{
 						_ai1 = npc.getX();
 						_ai2 = npc.getY();
@@ -417,11 +416,11 @@ public class Zaken extends Quest
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4242, 1));
 				}
-				if (Rnd.get(40) < 1)
+				if (getRandom(40) < 1)
 				{
-					final int i2 = Rnd.get(15);
-					_ai1 = X_COORDS[i2] + Rnd.get(650);
-					_ai2 = Y_COORDS[i2] + Rnd.get(650);
+					final int i2 = getRandom(15);
+					_ai1 = X_COORDS[i2] + getRandom(650);
+					_ai2 = Y_COORDS[i2] + getRandom(650);
 					_ai3 = Z_COORDS[i2];
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getSkill(4222, 1));
@@ -442,132 +441,132 @@ public class Zaken extends Quest
 				{
 					case 1:
 					{
-						final int rr = Rnd.get(15);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, X_COORDS[rr] + Rnd.get(650), Y_COORDS[rr] + Rnd.get(650), Z_COORDS[rr], Rnd.get(65536), false, 0);
+						final int rr = getRandom(15);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, X_COORDS[rr] + getRandom(650), Y_COORDS[rr] + getRandom(650), Z_COORDS[rr], getRandom(65536), false, 0);
 						_ai4 = 2;
 						break;
 					}
 					case 2:
 					{
-						final int rr = Rnd.get(15);
-						addSpawn(DOLL_BLADER_B, X_COORDS[rr] + Rnd.get(650), Y_COORDS[rr] + Rnd.get(650), Z_COORDS[rr], Rnd.get(65536), false, 0);
+						final int rr = getRandom(15);
+						addSpawn(DOLL_BLADER_B, X_COORDS[rr] + getRandom(650), Y_COORDS[rr] + getRandom(650), Z_COORDS[rr], getRandom(65536), false, 0);
 						_ai4 = 3;
 						break;
 					}
 					case 3:
 					{
-						addSpawn(VALE_MASTER_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(VALE_MASTER_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
 						_ai4 = 4;
 						break;
 					}
 					case 4:
 					{
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[Rnd.get(15)] + Rnd.get(650), Y_COORDS[Rnd.get(15)] + Rnd.get(650), Z_COORDS[Rnd.get(15)], Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, X_COORDS[getRandom(15)] + getRandom(650), Y_COORDS[getRandom(15)] + getRandom(650), Z_COORDS[getRandom(15)], getRandom(65536), false, 0);
 						_ai4 = 5;
 						break;
 					}
 					case 5:
 					{
-						addSpawn(DOLL_BLADER_B, 52675, 219371, -3290, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 52687, 219596, -3368, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 52672, 219740, -3418, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 52857, 219992, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 52959, 219997, -3488, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 53381, 220151, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3488, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 56276, 220783, -3488, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 57173, 220234, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3488, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56294, 219482, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3488, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56364, 218967, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 57113, 218079, -3488, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56186, 217153, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3488, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54226, 218797, -3488, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54394, 219067, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3488, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 54262, 219480, -3488, Rnd.get(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 52675, 219371, -3290, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 52687, 219596, -3368, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 52672, 219740, -3418, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 52857, 219992, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 52959, 219997, -3488, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 53381, 220151, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3488, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56276, 220783, -3488, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 57173, 220234, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3488, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56294, 219482, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3488, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56364, 218967, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 57113, 218079, -3488, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56186, 217153, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3488, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54226, 218797, -3488, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54394, 219067, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3488, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54262, 219480, -3488, getRandom(65536), false, 0);
 						_ai4 = 6;
 						break;
 					}
 					case 6:
 					{
-						addSpawn(PIRATES_ZOMBIE_B, 53412, 218077, -3488, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54413, 217132, -3488, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 54841, 217132, -3488, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 55372, 217128, -3343, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 55893, 217122, -3488, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56282, 217237, -3216, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 56963, 218080, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3216, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56294, 219482, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3216, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56364, 218967, -3216, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 56276, 220783, -3216, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 57173, 220234, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -3216, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54226, 218797, -3216, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54394, 219067, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3216, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 54262, 219480, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3216, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3216, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 53412, 218077, -3488, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54413, 217132, -3488, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54841, 217132, -3488, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55372, 217128, -3343, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55893, 217122, -3488, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56282, 217237, -3216, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56963, 218080, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -3216, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56294, 219482, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -3216, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56364, 218967, -3216, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56276, 220783, -3216, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 57173, 220234, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -3216, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54226, 218797, -3216, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54394, 219067, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -3216, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54262, 219480, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -3216, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -3216, getRandom(65536), false, 0);
 						_ai4 = 7;
 						break;
 					}
 					case 7:
 					{
-						addSpawn(PIRATES_ZOMBIE_B, 54228, 217504, -3216, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54181, 217168, -3216, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 54714, 217123, -3168, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 55298, 217127, -3073, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 55787, 217130, -2993, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56284, 217216, -2944, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 56963, 218080, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -2944, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56294, 219482, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -2944, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 56364, 218967, -2944, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 56276, 220783, -2944, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 57173, 220234, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -2944, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54226, 218797, -2944, Rnd.get(65536), false, 0);
-						addSpawn(VALE_MASTER_B, 54394, 219067, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -2944, Rnd.get(65536), false, 0);
-						addSpawn(DOLL_BLADER_B, 54262, 219480, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54280, 217200, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -2944, Rnd.get(65536), false, 0);
-						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -2944, Rnd.get(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54228, 217504, -3216, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54181, 217168, -3216, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54714, 217123, -3168, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55298, 217127, -3073, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 55787, 217130, -2993, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56284, 217216, -2944, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56963, 218080, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 56267, 218826, -2944, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56294, 219482, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 56094, 219113, -2944, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 56364, 218967, -2944, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 56276, 220783, -2944, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 57173, 220234, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54885, 220144, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55264, 219860, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55399, 220263, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55679, 220129, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54236, 220948, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54464, 219095, -2944, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54226, 218797, -2944, getRandom(65536), false, 0);
+						addSpawn(VALE_MASTER_B, 54394, 219067, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54139, 219253, -2944, getRandom(65536), false, 0);
+						addSpawn(DOLL_BLADER_B, 54262, 219480, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 53412, 218077, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 54280, 217200, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55440, 218081, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_CAPTAIN_B, 55202, 217940, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 55225, 218236, -2944, getRandom(65536), false, 0);
+						addSpawn(PIRATES_ZOMBIE_B, 54973, 218075, -2944, getRandom(65536), false, 0);
 						_ai4 = 8;
 						cancelQuestTimer("1003", null, null);
 						break;
@@ -607,7 +606,7 @@ public class Zaken extends Quest
 		if ((getTimeHour() < 5) && (callerId != ZAKEN) && (npcId == ZAKEN))
 		{
 			final int damage = 0;
-			if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) && (_ai0 == 0) && (damage < 10) && (Rnd.get((30 * 15)) < 1))// todo - damage missing
+			if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) && (_ai0 == 0) && (damage < 10) && (getRandom((30 * 15)) < 1))// todo - damage missing
 			{
 				_ai0 = 1;
 				_ai1 = caller.getX();
@@ -632,8 +631,8 @@ public class Zaken extends Quest
 			}
 			else if (skillId == 4216)
 			{
-				final int i1 = Rnd.get(15);
-				player.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+				final int i1 = getRandom(15);
+				player.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 				((Attackable) npc).stopHating(player);
 				final Creature nextTarget = ((Attackable) npc).getMostHated();
 				if (nextTarget != null)
@@ -644,8 +643,8 @@ public class Zaken extends Quest
 			else if (skillId == 4217)
 			{
 				int i0 = 0;
-				int i1 = Rnd.get(15);
-				player.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+				int i1 = getRandom(15);
+				player.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 				((Attackable) npc).stopHating(player);
 				if ((c_quest0 != null) && (_quest0 > 0) && (c_quest0 != player) && (c_quest0.getZ() > (player.getZ() - 100)) && (c_quest0.getZ() < (player.getZ() + 100)))
 				{
@@ -659,8 +658,8 @@ public class Zaken extends Quest
 					}
 					if (i0 == 0)
 					{
-						i1 = Rnd.get(15);
-						c_quest0.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+						i1 = getRandom(15);
+						c_quest0.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 						((Attackable) npc).stopHating(c_quest0);
 					}
 				}
@@ -676,8 +675,8 @@ public class Zaken extends Quest
 					}
 					if (i0 == 0)
 					{
-						i1 = Rnd.get(15);
-						c_quest1.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+						i1 = getRandom(15);
+						c_quest1.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 						((Attackable) npc).stopHating(c_quest1);
 					}
 				}
@@ -693,8 +692,8 @@ public class Zaken extends Quest
 					}
 					if (i0 == 0)
 					{
-						i1 = Rnd.get(15);
-						c_quest2.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+						i1 = getRandom(15);
+						c_quest2.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 						((Attackable) npc).stopHating(c_quest2);
 					}
 				}
@@ -710,8 +709,8 @@ public class Zaken extends Quest
 					}
 					if (i0 == 0)
 					{
-						i1 = Rnd.get(15);
-						c_quest3.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+						i1 = getRandom(15);
+						c_quest3.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 						((Attackable) npc).stopHating(c_quest3);
 					}
 				}
@@ -727,8 +726,8 @@ public class Zaken extends Quest
 					}
 					if (i0 == 0)
 					{
-						i1 = Rnd.get(15);
-						c_quest4.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
+						i1 = getRandom(15);
+						c_quest4.teleToLocation(X_COORDS[i1] + getRandom(650), Y_COORDS[i1] + getRandom(650), Z_COORDS[i1]);
 						((Attackable) npc).stopHating(c_quest4);
 					}
 				}
@@ -767,9 +766,9 @@ public class Zaken extends Quest
 			final Creature originalAttacker = isPet ? attacker.getPet() : attacker;
 			final int hate = (int) (((damage / npc.getMaxHp()) / 0.05) * 20000);
 			((Attackable) npc).addDamageHate(originalAttacker, 0, hate);
-			if (Rnd.get(10) < 1)
+			if (getRandom(10) < 1)
 			{
-				final int i0 = Rnd.get((15 * 15));
+				final int i0 = getRandom((15 * 15));
 				if (i0 < 1)
 				{
 					npc.setTarget(attacker);
@@ -805,7 +804,7 @@ public class Zaken extends Quest
 						}
 					}
 				}
-				if (Rnd.nextBoolean() && (attacker == ((Attackable) npc).getMostHated()))
+				if (getRandomBoolean() && (attacker == ((Attackable) npc).getMostHated()))
 				{
 					npc.setTarget(attacker);
 					npc.doCast(SkillTable.getInstance().getSkill(4220, 1));
@@ -814,9 +813,9 @@ public class Zaken extends Quest
 			if ((getTimeHour() >= 5) && (npc.getCurrentHp() < ((npc.getMaxHp() * _quest2) / 4.0)))
 			{
 				_quest2 = (_quest2 - 1);
-				final int i2 = Rnd.get(15);
-				_ai1 = X_COORDS[i2] + Rnd.get(650);
-				_ai2 = Y_COORDS[i2] + Rnd.get(650);
+				final int i2 = getRandom(15);
+				_ai1 = X_COORDS[i2] + getRandom(650);
+				_ai2 = Y_COORDS[i2] + getRandom(650);
 				_ai3 = Z_COORDS[i2];
 				npc.setTarget(npc);
 				npc.doCast(SkillTable.getInstance().getSkill(4222, 1));
@@ -835,7 +834,7 @@ public class Zaken extends Quest
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
 			// Time is 36hour +/- 17hour.
-			final long respawnTime = (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;
+			final long respawnTime = (Config.ZAKEN_RESP_FIRST + getRandom(Config.ZAKEN_RESP_SECOND)) * 3600000;
 			startQuestTimer("zaken_unlock", respawnTime, null, null);
 			cancelQuestTimer("1001", npc, null);
 			cancelQuestTimer("1003", npc, null);
@@ -846,7 +845,7 @@ public class Zaken extends Quest
 		}
 		else if (status == ALIVE)
 		{
-			startQuestTimer("CreateOnePrivateEx", ((30 + Rnd.get(60)) * 1000), npc, null);
+			startQuestTimer("CreateOnePrivateEx", ((30 + getRandom(60)) * 1000), npc, null);
 		}
 		return super.onKill(npc, killer, isPet);
 	}
@@ -864,7 +863,7 @@ public class Zaken extends Quest
 			}
 			if ((player.getZ() > (npc.getZ() - 100)) && (player.getZ() < (npc.getZ() + 100)))
 			{
-				if ((_quest0 < 5) && (Rnd.get(3) < 1))
+				if ((_quest0 < 5) && (getRandom(3) < 1))
 				{
 					if (_quest0 == 0)
 					{
@@ -888,9 +887,9 @@ public class Zaken extends Quest
 					}
 					_quest0++;
 				}
-				if (Rnd.get(15) < 1)
+				if (getRandom(15) < 1)
 				{
-					final int i0 = Rnd.get((15 * 15));
+					final int i0 = getRandom((15 * 15));
 					if (i0 < 1)
 					{
 						npc.setTarget(player);
@@ -926,7 +925,7 @@ public class Zaken extends Quest
 							}
 						}
 					}
-					if (Rnd.nextBoolean() && (player == ((Attackable) npc).getMostHated()))
+					if (getRandomBoolean() && (player == ((Attackable) npc).getMostHated()))
 					{
 						npc.setTarget(player);
 						npc.doCast(SkillTable.getInstance().getSkill(4220, 1));

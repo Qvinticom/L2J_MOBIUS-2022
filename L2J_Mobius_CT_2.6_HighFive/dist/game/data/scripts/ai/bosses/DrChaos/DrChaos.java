@@ -17,7 +17,6 @@
 package ai.bosses.DrChaos;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -198,7 +197,7 @@ public class DrChaos extends AbstractNpcAI
 		String htmltext = "";
 		if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
 		{
-			_pissedOffTimer -= 1 + Rnd.get(5); // remove 1-5 secs.
+			_pissedOffTimer -= 1 + getRandom(5); // remove 1-5 secs.
 			if ((_pissedOffTimer > 20) && (_pissedOffTimer <= 30))
 			{
 				htmltext = "<html><body>Doctor Chaos:<br>What?! Who are you? How did you come here?<br>You really look suspicious... Aren't those filthy members of Black Anvil guild send you? No? Mhhhhh... I don't trust you!</body></html>";
@@ -237,7 +236,7 @@ public class DrChaos extends AbstractNpcAI
 		npc.broadcastSay(ChatType.NPC_GENERAL, "Urggh! You will pay dearly for this insult.");
 		
 		// "lock" Dr. Chaos for regular RB time (36H fixed +- 24H random)
-		final long respawnTime = (36 + Rnd.get(-24, 24)) * 3600000;
+		final long respawnTime = (36 + getRandom(-24, 24)) * 3600000;
 		GrandBossManager.getInstance().setBossStatus(CHAOS_GOLEM, DEAD);
 		startQuestTimer("reset_drchaos", respawnTime, null, null, false);
 		
@@ -251,7 +250,7 @@ public class DrChaos extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player victim, int damage, boolean isPet)
 	{
-		final int chance = Rnd.get(300);
+		final int chance = getRandom(300);
 		
 		// Choose a message from 3 choices (1/100)
 		if (chance < 3)

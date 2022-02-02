@@ -16,7 +16,6 @@
  */
 package quests.Q619_RelicsOfTheOldEmpire;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -88,7 +87,7 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 				{
 					htmltext = "31538-09.htm";
 					st.takeItems(RELICS, 1000);
-					st.giveItems(RCP_REWARDS[Rnd.get(RCP_REWARDS.length)], 1);
+					st.giveItems(RCP_REWARDS[getRandom(RCP_REWARDS.length)], 1);
 				}
 				else
 				{

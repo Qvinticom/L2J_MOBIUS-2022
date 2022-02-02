@@ -17,7 +17,6 @@
 package quests.Q00181_DevilsStrikeBackAdventOfBalok;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -77,7 +76,7 @@ public class Q00181_DevilsStrikeBackAdventOfBalok extends Quest
 				giveAdena(player, 37128000, true);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				qs.exitQuest(QuestType.ONE_TIME, true);
-				switch (Rnd.get(3))
+				switch (getRandom(3))
 				{
 					case 0:
 					{

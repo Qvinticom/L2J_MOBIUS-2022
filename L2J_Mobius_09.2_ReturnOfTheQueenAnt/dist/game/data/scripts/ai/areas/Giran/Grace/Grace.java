@@ -16,7 +16,6 @@
  */
 package ai.areas.Giran.Grace;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -120,7 +119,7 @@ public class Grace extends AbstractNpcAI
 		
 		if (player.reduceAdena("Grace", ADENA_COST, _graceNpc, true))
 		{
-			SkillCaster.triggerCast(_graceNpc, player, Rnd.get(100) < BUFF_CHANCE ? GRACE_LUCK_LV2.getSkill() : GRACE_LUCK_LV1.getSkill());
+			SkillCaster.triggerCast(_graceNpc, player, getRandom(100) < BUFF_CHANCE ? GRACE_LUCK_LV2.getSkill() : GRACE_LUCK_LV1.getSkill());
 		}
 	}
 	

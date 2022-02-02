@@ -67,7 +67,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "attack":
+			case "ATTACK":
 			{
 				if (npc != null)
 				{
@@ -75,7 +75,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 				break;
 			}
-			case "random_target":
+			case "RANDOM_TARGET":
 			{
 				_target = getRandomTarget(npc, null);
 				break;
@@ -94,16 +94,16 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
-		startQuestTimer("random_Target", 5000, npc, null, true);
-		startQuestTimer("attack", 500, npc, null, true);
+		startQuestTimer("RANDOM_TARGET", 5000, npc, null, true);
+		startQuestTimer("ATTACK", 500, npc, null, true);
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		cancelQuestTimer("attack", npc, null);
-		cancelQuestTimer("random_Target", npc, null);
+		cancelQuestTimers("ATTACK");
+		cancelQuestTimers("RANDOM_TARGET");
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -171,12 +171,12 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			return;
 		}
+		
 		if ((getRandom(100) < 30) || (_target == null) || _target.isDead())
 		{
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);
 		}
-		final Creature target = _target;
 		Skill skill = _skill;
 		if (skill == null)
 		{
@@ -188,6 +188,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			return;
 		}
 		
+		final Creature target = _target;
 		if ((target == null) || target.isDead())
 		{
 			// npc.setCastingNow(false);
@@ -213,52 +214,50 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private Creature getRandomTarget(Npc npc, Skill skill)
 	{
 		final List<Creature> result = new ArrayList<>();
+		for (Player obj : npc.getInstanceWorld().getPlayers())
 		{
-			for (Player obj : npc.getInstanceWorld().getPlayers())
+			if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 			{
-				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
+				continue;
+			}
+			
+			if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+			{
+				continue;
+			}
+			
+			int skillRange = 150;
+			if (skill != null)
+			{
+				switch (skill.getId())
 				{
-					continue;
+					case FRINTEZZA_DAEMON_ATTACK:
+					{
+						skillRange = 150;
+						break;
+					}
+					case FRINTEZZA_DAEMON_CHARGE:
+					{
+						skillRange = 400;
+						break;
+					}
+					case YOKE_OF_SCARLET:
+					{
+						skillRange = 200;
+						break;
+					}
+					case FRINTEZZA_DAEMON_MORPH:
+					case FRINTEZZA_DAEMON_FIELD:
+					{
+						_lastRangedSkillTime = Chronos.currentTimeMillis();
+						skillRange = 550;
+						break;
+					}
 				}
 				
-				if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
 				{
-					continue;
-				}
-				
-				int skillRange = 150;
-				if (skill != null)
-				{
-					switch (skill.getId())
-					{
-						case FRINTEZZA_DAEMON_ATTACK:
-						{
-							skillRange = 150;
-							break;
-						}
-						case FRINTEZZA_DAEMON_CHARGE:
-						{
-							skillRange = 400;
-							break;
-						}
-						case YOKE_OF_SCARLET:
-						{
-							skillRange = 200;
-							break;
-						}
-						case FRINTEZZA_DAEMON_MORPH:
-						case FRINTEZZA_DAEMON_FIELD:
-						{
-							_lastRangedSkillTime = Chronos.currentTimeMillis();
-							skillRange = 550;
-							break;
-						}
-					}
-					
-					if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
-					{
-						result.add(obj);
-					}
+					result.add(obj);
 				}
 			}
 		}

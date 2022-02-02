@@ -268,7 +268,7 @@ public class Q00233_TestOfTheWarSpirit extends Quest
 				{
 					if (hasQuestItems(killer, ORIMS_CONTRACT))
 					{
-						giveItemRandomly(killer, npc, PORTAS_EYE, 2, 10, 1.0, true);
+						giveItemRandomly(killer, npc, PORTAS_EYE, 2, 10, 1, true);
 					}
 					break;
 				}
@@ -276,7 +276,7 @@ public class Q00233_TestOfTheWarSpirit extends Quest
 				{
 					if (hasQuestItems(killer, ORIMS_CONTRACT))
 					{
-						giveItemRandomly(killer, npc, EXCUROS_SCALE, 5, 10, 1.0, true);
+						giveItemRandomly(killer, npc, EXCUROS_SCALE, 5, 10, 1, true);
 					}
 					break;
 				}
@@ -284,7 +284,7 @@ public class Q00233_TestOfTheWarSpirit extends Quest
 				{
 					if (hasQuestItems(killer, ORIMS_CONTRACT))
 					{
-						giveItemRandomly(killer, npc, MORDEOS_TALON, 5, 10, 1.0, true);
+						giveItemRandomly(killer, npc, MORDEOS_TALON, 5, 10, 1, true);
 					}
 					break;
 				}
@@ -324,7 +324,7 @@ public class Q00233_TestOfTheWarSpirit extends Quest
 				case TAMLIN_ORC:
 				case TAMLIN_ORC_ARCHER:
 				{
-					if (hasQuestItems(killer, VENDETTA_TOTEM) && giveItemRandomly(killer, npc, TAMLIN_ORC_HEAD, 1, 13, 1.0, true))
+					if (hasQuestItems(killer, VENDETTA_TOTEM) && giveItemRandomly(killer, npc, TAMLIN_ORC_HEAD, 1, 13, 1, true))
 					{
 						qs.setCond(4, true);
 					}

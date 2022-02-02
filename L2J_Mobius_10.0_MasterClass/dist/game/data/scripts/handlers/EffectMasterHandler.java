@@ -405,6 +405,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("VitalityExpRate", VitalityExpRate::new);
 		EffectHandler.getInstance().registerHandler("VitalityPointsRate", VitalityPointsRate::new);
 		EffectHandler.getInstance().registerHandler("VitalityPointUp", VitalityPointUp::new);
+		EffectHandler.getInstance().registerHandler("WeaponAttackAngleBonus", WeaponAttackAngleBonus::new);
 		EffectHandler.getInstance().registerHandler("WeightLimit", WeightLimit::new);
 		EffectHandler.getInstance().registerHandler("WeightPenalty", WeightPenalty::new);
 		EffectHandler.getInstance().registerHandler("WorldChatPoints", WorldChatPoints::new);

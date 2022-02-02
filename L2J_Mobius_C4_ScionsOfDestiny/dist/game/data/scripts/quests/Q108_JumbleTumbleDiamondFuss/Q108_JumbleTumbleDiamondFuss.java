@@ -16,7 +16,6 @@
  */
 package quests.Q108_JumbleTumbleDiamondFuss;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -342,7 +341,7 @@ public class Q108_JumbleTumbleDiamondFuss extends Quest
 						}
 						else if (cond == 11)
 						{
-							htmltext = (Rnd.nextBoolean()) ? "30522-02.htm" : "30522-04.htm";
+							htmltext = getRandomBoolean() ? "30522-02.htm" : "30522-04.htm";
 						}
 						else if (cond == 12)
 						{

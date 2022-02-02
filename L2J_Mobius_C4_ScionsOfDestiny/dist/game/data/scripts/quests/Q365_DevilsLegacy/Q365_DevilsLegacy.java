@@ -16,7 +16,6 @@
  */
 package quests.Q365_DevilsLegacy;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -81,9 +80,9 @@ public class Q365_DevilsLegacy extends Quest
 					st.takeItems(57, 600);
 					
 					int i0;
-					if (Rnd.get(100) < 80)
+					if (getRandom(100) < 80)
 					{
-						i0 = Rnd.get(100);
+						i0 = getRandom(100);
 						if (i0 < 1)
 						{
 							st.giveItems(955, 1);
@@ -109,7 +108,7 @@ public class Q365_DevilsLegacy extends Quest
 					}
 					else
 					{
-						i0 = Rnd.get(1000);
+						i0 = getRandom(1000);
 						if (i0 < 10)
 						{
 							st.giveItems(951, 1);

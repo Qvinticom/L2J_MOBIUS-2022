@@ -200,11 +200,11 @@ public class Q00355_FamilyHonor extends Quest
 		final int random = getRandom(1000);
 		if (random < info.getFirstChance())
 		{
-			giveItemRandomly(killer, npc, GALFREDO_ROMERS_BUST, 1, 0, 1.0, true);
+			giveItemRandomly(killer, npc, GALFREDO_ROMERS_BUST, 1, 0, 1, true);
 		}
 		else if (random < info.getSecondChance())
 		{
-			giveItemRandomly(killer, npc, SCULPTOR_BERONA, 1, 0, 1.0, true);
+			giveItemRandomly(killer, npc, SCULPTOR_BERONA, 1, 0, 1, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

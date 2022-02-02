@@ -16,7 +16,6 @@
  */
 package quests.Q00620_FourGoblets;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -141,7 +140,7 @@ public class Q00620_FourGoblets extends Quest
 					htmltext = "31454-13.htm";
 					takeItems(player, SEALED_BOX, 1);
 					int reward = 0;
-					final int rnd = Rnd.get(5);
+					final int rnd = getRandom(5);
 					if (rnd == 0)
 					{
 						giveItems(player, 57, 10000);
@@ -149,10 +148,10 @@ public class Q00620_FourGoblets extends Quest
 					}
 					else if (rnd == 1)
 					{
-						if (Rnd.get(1000) < 848)
+						if (getRandom(1000) < 848)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 43)
 							{
 								giveItems(player, 1884, 42);
@@ -194,10 +193,10 @@ public class Q00620_FourGoblets extends Quest
 								giveItems(player, 4043, 1);
 							}
 						}
-						else if (Rnd.get(1000) < 323)
+						else if (getRandom(1000) < 323)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 335)
 							{
 								giveItems(player, 1888, 1);
@@ -230,10 +229,10 @@ public class Q00620_FourGoblets extends Quest
 					}
 					else if (rnd == 2)
 					{
-						if (Rnd.get(1000) < 847)
+						if (getRandom(1000) < 847)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 148)
 							{
 								giveItems(player, 1878, 8);
@@ -275,10 +274,10 @@ public class Q00620_FourGoblets extends Quest
 								giveItems(player, 4044, 1);
 							}
 						}
-						else if (Rnd.get(1000) < 251)
+						else if (getRandom(1000) < 251)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 350)
 							{
 								giveItems(player, 1887, 1);
@@ -311,10 +310,10 @@ public class Q00620_FourGoblets extends Quest
 					}
 					else if (rnd == 3)
 					{
-						if (Rnd.get(1000) < 31)
+						if (getRandom(1000) < 31)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 223)
 							{
 								giveItems(player, 730, 1);
@@ -328,10 +327,10 @@ public class Q00620_FourGoblets extends Quest
 								giveItems(player, 960, 1);
 							}
 						}
-						else if (Rnd.get(1000) < 50)
+						else if (getRandom(1000) < 50)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 202)
 							{
 								giveItems(player, 729, 1);
@@ -348,10 +347,10 @@ public class Q00620_FourGoblets extends Quest
 					}
 					else if (rnd == 4)
 					{
-						if (Rnd.get(1000) < 329)
+						if (getRandom(1000) < 329)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 88)
 							{
 								giveItems(player, 6698, 1);
@@ -421,10 +420,10 @@ public class Q00620_FourGoblets extends Quest
 								giveItems(player, 6714, 1);
 							}
 						}
-						else if (Rnd.get(1000) < 54)
+						else if (getRandom(1000) < 54)
 						{
 							reward = 1;
-							final int i = Rnd.get(1000);
+							final int i = getRandom(1000);
 							if (i < 100)
 							{
 								giveItems(player, 6688, 1);
@@ -469,7 +468,7 @@ public class Q00620_FourGoblets extends Quest
 					}
 					else if (reward == 0)
 					{
-						if (Rnd.nextBoolean())
+						if (getRandomBoolean())
 						{
 							htmltext = "31454-14.htm";
 						}
@@ -590,7 +589,7 @@ public class Q00620_FourGoblets extends Quest
 				htmltext = "31919-3.htm";
 				takeItems(player, SEALED_BOX, 1);
 				int reward = 0;
-				final int rnd = Rnd.get(5);
+				final int rnd = getRandom(5);
 				if (rnd == 0)
 				{
 					giveItems(player, 57, 10000);
@@ -598,10 +597,10 @@ public class Q00620_FourGoblets extends Quest
 				}
 				else if (rnd == 1)
 				{
-					if (Rnd.get(1000) < 848)
+					if (getRandom(1000) < 848)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 43)
 						{
 							giveItems(player, 1884, 42);
@@ -643,10 +642,10 @@ public class Q00620_FourGoblets extends Quest
 							giveItems(player, 4043, 1);
 						}
 					}
-					else if (Rnd.get(1000) < 323)
+					else if (getRandom(1000) < 323)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 335)
 						{
 							giveItems(player, 1888, 1);
@@ -679,10 +678,10 @@ public class Q00620_FourGoblets extends Quest
 				}
 				else if (rnd == 2)
 				{
-					if (Rnd.get(1000) < 847)
+					if (getRandom(1000) < 847)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 148)
 						{
 							giveItems(player, 1878, 8);
@@ -724,10 +723,10 @@ public class Q00620_FourGoblets extends Quest
 							giveItems(player, 4044, 1);
 						}
 					}
-					else if (Rnd.get(1000) < 251)
+					else if (getRandom(1000) < 251)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 350)
 						{
 							giveItems(player, 1887, 1);
@@ -760,10 +759,10 @@ public class Q00620_FourGoblets extends Quest
 				}
 				else if (rnd == 3)
 				{
-					if (Rnd.get(1000) < 31)
+					if (getRandom(1000) < 31)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 223)
 						{
 							giveItems(player, 730, 1);
@@ -777,11 +776,11 @@ public class Q00620_FourGoblets extends Quest
 							giveItems(player, 960, 1);
 						}
 					}
-					else if (Rnd.get(1000) < 5)
+					else if (getRandom(1000) < 5)
 					{
 						reward = 1;
 					}
-					final int i = Rnd.get(1000);
+					final int i = getRandom(1000);
 					if (i < 202)
 					{
 						giveItems(player, 729, 1);
@@ -797,10 +796,10 @@ public class Q00620_FourGoblets extends Quest
 				}
 				else if (rnd == 4)
 				{
-					if (Rnd.get(1000) < 329)
+					if (getRandom(1000) < 329)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 88)
 						{
 							giveItems(player, 6698, 1);
@@ -870,10 +869,10 @@ public class Q00620_FourGoblets extends Quest
 							giveItems(player, 6714, 1);
 						}
 					}
-					else if (Rnd.get(1000) < 54)
+					else if (getRandom(1000) < 54)
 					{
 						reward = 1;
-						final int i = Rnd.get(1000);
+						final int i = getRandom(1000);
 						if (i < 100)
 						{
 							giveItems(player, 6688, 1);
@@ -918,7 +917,7 @@ public class Q00620_FourGoblets extends Quest
 				}
 				if (reward == 0)
 				{
-					if (Rnd.nextBoolean())
+					if (getRandomBoolean())
 					{
 						htmltext = "31919-4.htm";
 					}
@@ -1158,7 +1157,7 @@ public class Q00620_FourGoblets extends Quest
 		final int npcId = npc.getId();
 		if ((qs != null) && (qs.getCond() > 0) && (npcId >= 18120) && (npcId <= 18256))
 		{
-			if (Rnd.get(100) < 15)
+			if (getRandom(100) < 15)
 			{
 				giveItems(killer, SEALED_BOX, 1);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

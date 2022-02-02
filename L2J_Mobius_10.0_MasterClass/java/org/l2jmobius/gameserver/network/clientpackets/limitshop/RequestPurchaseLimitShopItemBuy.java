@@ -96,6 +96,12 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			return;
 		}
 		
+		if (!player.isInventoryUnder80(false))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVENTORY_OVERFLOW));
+			return;
+		}
+		
 		if ((player.getLevel() < _product.getMinLevel()) || (player.getLevel() > _product.getMaxLevel()))
 		{
 			player.sendPacket(SystemMessageId.YOUR_LEVEL_CANNOT_PURCHASE_THIS_ITEM);

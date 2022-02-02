@@ -18,7 +18,6 @@ package quests.Q625_TheFinestIngredients_Part2;
 
 import java.util.logging.Level;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -131,7 +130,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 				if (st.hasQuestItems(SPECIAL_YETI_MEAT))
 				{
 					st.takeItems(SPECIAL_YETI_MEAT, 1);
-					st.rewardItems(REWARD_DYE[Rnd.get(REWARD_DYE.length)], 5);
+					st.rewardItems(REWARD_DYE[getRandom(REWARD_DYE.length)], 5);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}
@@ -281,7 +280,7 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBoss.checkAndReturnToSpawn())
-			// raid.getSpawn().setLoc(157117, -121939, -2397, Rnd.get(65536));
+			// raid.getSpawn().setLoc(157117, -121939, -2397, getRandom(65536));
 			
 			addSpawn(ICICLE_EMPEROR_BUMBALUMP, 157117, -121939, -2397, 100, false, 0);
 			raid.broadcastNpcSay("I smell something delicious...");

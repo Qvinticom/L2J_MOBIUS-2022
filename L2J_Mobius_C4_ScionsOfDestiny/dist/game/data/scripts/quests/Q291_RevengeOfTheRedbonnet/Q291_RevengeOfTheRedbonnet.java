@@ -16,7 +16,6 @@
  */
 package quests.Q291_RevengeOfTheRedbonnet;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -90,7 +89,7 @@ public class Q291_RevengeOfTheRedbonnet extends Quest
 					htmltext = "30553-05.htm";
 					st.takeItems(BLACK_WOLF_PELT, -1);
 					
-					final int random = Rnd.get(100);
+					final int random = getRandom(100);
 					if (random < 3)
 					{
 						st.rewardItems(GRANDMA_PEARL, 1);

@@ -161,7 +161,7 @@ public class Q10741_ADraughtForTheCold extends Quest
 				}
 				case KIKU:
 				{
-					giveItemRandomly(killer, npc, NUTRITIOUS_MEAT, 1, 10, 1.0, true);
+					giveItemRandomly(killer, npc, NUTRITIOUS_MEAT, 1, 10, 1, true);
 					break;
 				}
 			}

@@ -48,7 +48,7 @@ public class IceQueensCastle extends AbstractInstance
 	// Locations
 	private static final Location FREYA_LOC = new Location(114730, -114805, -11200, 50);
 	// Skill
-	private static SkillHolder ETHERNAL_BLIZZARD = new SkillHolder(6276, 1);
+	private static final SkillHolder ETHERNAL_BLIZZARD = new SkillHolder(6276, 1);
 	// Misc
 	private static final int TEMPLATE_ID = 137;
 	

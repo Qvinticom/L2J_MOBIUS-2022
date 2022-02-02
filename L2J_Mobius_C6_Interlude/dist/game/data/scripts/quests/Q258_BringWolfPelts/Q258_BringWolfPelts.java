@@ -16,7 +16,6 @@
  */
 package quests.Q258_BringWolfPelts;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -87,7 +86,7 @@ public class Q258_BringWolfPelts extends Quest
 				else
 				{
 					st.takeItems(WOLF_PELT, -1);
-					final int randomNumber = Rnd.get(16);
+					final int randomNumber = getRandom(16);
 					
 					// Reward is based on a random number (1D16).
 					if (randomNumber == 0)

@@ -24,7 +24,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
@@ -154,7 +153,7 @@ public class Core extends Quest
 		for (Entry<Integer, Location> spawn : MINNION_SPAWNS.entrySet())
 		{
 			spawnLocation = spawn.getValue();
-			mob = (Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), Rnd.get(61794), false, 0);
+			mob = (Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), getRandom(61794), false, 0);
 			_minions.add(mob);
 		}
 	}
@@ -202,7 +201,7 @@ public class Core extends Quest
 		{
 			if (_firstAttacked)
 			{
-				if (Rnd.get(100) == 0)
+				if (getRandom(100) == 0)
 				{
 					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "Removing intruders."));
 				}
@@ -233,7 +232,7 @@ public class Core extends Quest
 			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
 			// Calculate Min and Max respawn times randomly.
-			final long respawnTime = (Config.CORE_RESP_FIRST + Rnd.get(Config.CORE_RESP_SECOND)) * 3600000;
+			final long respawnTime = (Config.CORE_RESP_FIRST + getRandom(Config.CORE_RESP_SECOND)) * 3600000;
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// Also save the respawn time so that the info is maintained past reboots.
 			final StatSet info = GrandBossManager.getInstance().getStatSet(CORE);

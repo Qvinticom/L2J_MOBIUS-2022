@@ -16,7 +16,6 @@
  */
 package quests.Q343_UnderTheShadowOfTheIvoryTower;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -78,8 +77,8 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			return htmltext;
 		}
 		
-		final int random1 = Rnd.get(3);
-		final int random2 = Rnd.get(2);
+		final int random1 = getRandom(3);
+		final int random2 = getRandom(2);
 		final int orbs = st.getQuestItemsCount(ORB);
 		switch (event)
 		{
@@ -312,7 +311,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 				if (st.getQuestItemsCount(ECTOPLASM) > 0)
 				{
 					st.takeItems(ECTOPLASM, 1);
-					final int random3 = Rnd.get(1000);
+					final int random3 = getRandom(1000);
 					if (random3 <= 119)
 					{
 						st.giveItems(955, 1);
@@ -323,11 +322,11 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 					}
 					else if (random3 <= 329)
 					{
-						st.giveItems(2511, (Rnd.get(200) + 401));
+						st.giveItems(2511, (getRandom(200) + 401));
 					}
 					else if (random3 <= 559)
 					{
-						st.giveItems(2510, (Rnd.get(200) + 401));
+						st.giveItems(2510, (getRandom(200) + 401));
 					}
 					else if (random3 <= 561)
 					{
@@ -435,7 +434,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			return null;
 		}
 		
-		if (Rnd.get(100) < CHANCE)
+		if (getRandom(100) < CHANCE)
 		{
 			st.giveItems(ORB, 1);
 			st.playSound(QuestState.SOUND_ITEMGET);

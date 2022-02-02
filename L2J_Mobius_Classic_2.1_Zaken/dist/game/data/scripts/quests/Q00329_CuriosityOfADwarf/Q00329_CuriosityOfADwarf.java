@@ -107,7 +107,7 @@ public class Q00329_CuriosityOfADwarf extends Quest
 			{
 				if (rnd < drop.getCount())
 				{
-					giveItemRandomly(killer, npc, drop.getId(), 1, 0, 1.0, true);
+					giveItemRandomly(killer, npc, drop.getId(), 1, 0, 1, true);
 					break;
 				}
 			}

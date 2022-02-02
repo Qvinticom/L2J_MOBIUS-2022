@@ -16,7 +16,6 @@
  */
 package quests.Q266_PleasOfPixies;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -100,7 +99,7 @@ public class Q266_PleasOfPixies extends Quest
 					htmltext = "31852-05.htm";
 					st.takeItems(PREDATOR_FANG, -1);
 					
-					final int n = Rnd.get(100);
+					final int n = getRandom(100);
 					if (n < 10)
 					{
 						st.playSound(QuestState.SOUND_JACKPOT);
@@ -142,7 +141,7 @@ public class Q266_PleasOfPixies extends Quest
 		{
 			case 20525:
 			{
-				if (st.dropItemsAlways(PREDATOR_FANG, Rnd.get(2, 3), 100))
+				if (st.dropItemsAlways(PREDATOR_FANG, getRandom(2, 3), 100))
 				{
 					st.setCond(2);
 				}
@@ -158,7 +157,7 @@ public class Q266_PleasOfPixies extends Quest
 			}
 			case 20534:
 			{
-				if (st.dropItems(PREDATOR_FANG, (Rnd.get(3) == 0) ? 1 : 2, 100, 600000))
+				if (st.dropItems(PREDATOR_FANG, (getRandom(3) == 0) ? 1 : 2, 100, 600000))
 				{
 					st.setCond(2);
 				}

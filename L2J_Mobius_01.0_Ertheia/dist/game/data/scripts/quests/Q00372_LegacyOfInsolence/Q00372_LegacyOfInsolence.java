@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.util.Util;
@@ -101,15 +101,15 @@ public class Q00372_LegacyOfInsolence extends Quest
 	private static final int SEALED_MAJESTIC_CIRCLET_DESIGN = 5528;
 	// Monsters
 	private static final int HALLATES_INSPECTOR = 20825;
-	private static final Map<Integer, QuestItemHolder> MONSTER_REWARDS = new HashMap<>();
+	private static final Map<Integer, ItemChanceHolder> MONSTER_REWARDS = new HashMap<>();
 	static
 	{
-		MONSTER_REWARDS.put(20817, new QuestItemHolder(ANCIENT_RED_PAPYRUS, 302, 1));
-		MONSTER_REWARDS.put(20821, new QuestItemHolder(ANCIENT_RED_PAPYRUS, 410, 1));
-		MONSTER_REWARDS.put(HALLATES_INSPECTOR, new QuestItemHolder(ANCIENT_RED_PAPYRUS, 447, 1));
-		MONSTER_REWARDS.put(20829, new QuestItemHolder(ANCIENT_BLUE_PAPYRUS, 451, 1));
-		MONSTER_REWARDS.put(21062, new QuestItemHolder(ANCIENT_WHITE_PAPYRUS, 290, 1));
-		MONSTER_REWARDS.put(21069, new QuestItemHolder(ANCIENT_BLACK_PAPYRUS, 280, 1));
+		MONSTER_REWARDS.put(20817, new ItemChanceHolder(ANCIENT_RED_PAPYRUS, 302, 1));
+		MONSTER_REWARDS.put(20821, new ItemChanceHolder(ANCIENT_RED_PAPYRUS, 410, 1));
+		MONSTER_REWARDS.put(HALLATES_INSPECTOR, new ItemChanceHolder(ANCIENT_RED_PAPYRUS, 447, 1));
+		MONSTER_REWARDS.put(20829, new ItemChanceHolder(ANCIENT_BLUE_PAPYRUS, 451, 1));
+		MONSTER_REWARDS.put(21062, new ItemChanceHolder(ANCIENT_WHITE_PAPYRUS, 290, 1));
+		MONSTER_REWARDS.put(21069, new ItemChanceHolder(ANCIENT_BLACK_PAPYRUS, 280, 1));
 	}
 	
 	// Misc
@@ -445,7 +445,7 @@ public class Q00372_LegacyOfInsolence extends Quest
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		final QuestItemHolder item = MONSTER_REWARDS.get(npc.getId());
+		final ItemChanceHolder item = MONSTER_REWARDS.get(npc.getId());
 		if (npc.getId() == HALLATES_INSPECTOR)
 		{
 			if (getRandom(1000) < item.getChance())

@@ -16,7 +16,6 @@
  */
 package quests.Q273_InvadersOfTheHolyLand;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -149,7 +148,7 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 			probability = 87;
 		}
 		
-		if (Rnd.get(100) <= probability)
+		if (getRandom(100) <= probability)
 		{
 			st.dropItemsAlways(BLACK_SOULSTONE, 1, 0);
 		}

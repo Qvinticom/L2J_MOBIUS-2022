@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -70,7 +69,7 @@ public class Chests extends Quest
 		{
 			chest.setInteracted();
 			final boolean isDeluxeSkill = skill.getId() == SKILL_DELUXE_KEY;
-			if ((Rnd.get(100) < IS_BOX) || isDeluxeSkill)
+			if ((getRandom(100) < IS_BOX) || isDeluxeSkill)
 			{
 				// if it's a box, either it will be successfully opened by a proper key, or instantly disappear
 				if (isDeluxeSkill)
@@ -85,7 +84,7 @@ public class Chests extends Quest
 					final int chance = BASE_CHANCE - (levelDiff * LEVEL_DECREASE);
 					
 					// success, pretend-death with rewards: npc.reduceCurrentHp(99999999, player)
-					if (Rnd.get(100) < chance)
+					if (getRandom(100) < chance)
 					{
 						chest.setMustRewardExpSp(false);
 						chest.setSpecialDrop();
@@ -114,7 +113,7 @@ public class Chests extends Quest
 		if (!chest.isInteracted())
 		{
 			chest.setInteracted();
-			if (Rnd.get(100) < IS_BOX)
+			if (getRandom(100) < IS_BOX)
 			{
 				chest.onDecay();
 			}

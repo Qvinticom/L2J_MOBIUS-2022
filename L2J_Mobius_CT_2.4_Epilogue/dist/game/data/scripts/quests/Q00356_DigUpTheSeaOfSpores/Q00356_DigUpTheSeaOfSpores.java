@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -109,7 +108,7 @@ public class Q00356_DigUpTheSeaOfSpores extends Quest
 			}
 			case "FINISH":
 			{
-				final int value = Rnd.get(100);
+				final int value = getRandom(100);
 				int adena = 0;
 				if (value < 20)
 				{

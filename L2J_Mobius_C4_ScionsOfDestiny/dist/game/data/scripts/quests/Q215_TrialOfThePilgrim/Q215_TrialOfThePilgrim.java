@@ -16,7 +16,6 @@
  */
 package quests.Q215_TrialOfThePilgrim;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -340,7 +339,7 @@ public class Q215_TrialOfThePilgrim extends Quest
 						}
 						else if (cond == 13)
 						{
-							htmltext = (Rnd.nextBoolean()) ? "30362-02.htm" : "30362-02a.htm";
+							htmltext = (getRandomBoolean()) ? "30362-02.htm" : "30362-02a.htm";
 						}
 						else if (cond == 14)
 						{

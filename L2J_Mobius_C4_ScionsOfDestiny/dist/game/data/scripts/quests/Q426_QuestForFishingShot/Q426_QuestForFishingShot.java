@@ -19,7 +19,6 @@ package quests.Q426_QuestForFishingShot;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -412,7 +411,7 @@ public class Q426_QuestForFishingShot extends Quest
 			drop = MOB_SPECIAL.get(npcId)[1];
 		}
 		
-		if (Rnd.get(1000) <= chance)
+		if (getRandom(1000) <= chance)
 		{
 			drop++;
 		}

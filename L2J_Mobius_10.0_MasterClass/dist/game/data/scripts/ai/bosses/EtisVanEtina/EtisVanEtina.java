@@ -444,14 +444,14 @@ public class EtisVanEtina extends AbstractNpcAI
 			}
 			case "end_etina":
 			{
-				Clean();
+				clean();
 				break;
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	protected void Clean()
+	private void clean()
 	{
 		BOSS_ZONE.getCharactersInside().forEach(mob ->
 		{
@@ -708,12 +708,9 @@ public class EtisVanEtina extends AbstractNpcAI
 	@Override
 	public String onExitZone(Creature character, ZoneType zone)
 	{
-		if (zone.getId() == ZONE_ID)
+		if ((zone.getId() == ZONE_ID) && zone.getPlayersInside().isEmpty())
 		{
-			if (zone.getPlayersInside().isEmpty())
-			{
-				_collapseTask = ThreadPool.schedule(() -> Clean(), 900000);
-			}
+			_collapseTask = ThreadPool.schedule(this::clean, 900000);
 		}
 		return super.onExitZone(character, zone);
 	}
@@ -723,25 +720,18 @@ public class EtisVanEtina extends AbstractNpcAI
 	{
 		if (npc.getId() == ETIS_VAN_ETINA1)
 		{
-			BOSS_ZONE.getPlayersInside().forEach(player ->
-			{
-				playMovie(player, Movie.SC_ETIS_VAN_ETINA_TRANS);
-			});
+			BOSS_ZONE.getPlayersInside().forEach(player -> playMovie(player, Movie.SC_ETIS_VAN_ETINA_TRANS));
 			startQuestTimer("spawnTransformedEtina", 15000, null, null);
 		}
 		else if (npc.getId() == ETIS_VAN_ETINA2)
 		{
 			notifyEvent("cancel_timers", null, null);
-			BOSS_ZONE.getPlayersInside().forEach(player ->
-			{
-				playMovie(player, Movie.SC_ETIS_VAN_ETINA_ENDING);
-			});
+			BOSS_ZONE.getPlayersInside().forEach(player -> playMovie(player, Movie.SC_ETIS_VAN_ETINA_ENDING));
 			GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, DEAD);
 			final long respawnTime = (Config.ETINA_SPAWN_INTERVAL + getRandom(-Config.ETINA_SPAWN_RANDOM, Config.ETINA_SPAWN_RANDOM)) * 3600000;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ETIS_VAN_ETINA1);
 			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ETIS_VAN_ETINA1, info);
-			
 			startQuestTimer("unlock_etina", respawnTime, null, null);
 			startQuestTimer("end_etina", 900000, null, null);
 		}
@@ -774,10 +764,7 @@ public class EtisVanEtina extends AbstractNpcAI
 			_etina.setTargetable(true);
 			BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.ETIS_VAN_ETINA_APPROACHES, ExShowScreenMessage.TOP_CENTER, 7000, true)));
 			_kain.deleteMe();
-			BOSS_ZONE.getPlayersInside().forEach(player ->
-			{
-				playMovie(player, Movie.SC_KAIN_BOSS_ENDING);
-			});
+			BOSS_ZONE.getPlayersInside().forEach(player -> playMovie(player, Movie.SC_KAIN_BOSS_ENDING));
 		}
 		return super.onKill(npc, killer, isPet);
 	}

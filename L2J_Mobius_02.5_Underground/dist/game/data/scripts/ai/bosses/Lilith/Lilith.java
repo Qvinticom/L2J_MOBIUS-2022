@@ -23,7 +23,6 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -432,7 +431,7 @@ public class Lilith extends AbstractNpcAI
 				{
 					for (int i = 0; i < 2; i++)
 					{
-						randomSpawn = _spawns.get(Rnd.get(_spawns.size()));
+						randomSpawn = _spawns.get(getRandom(_spawns.size()));
 						if (randomSpawn != null)
 						{
 							final Npc remnant = addSpawn(REMNANT, randomSpawn.getX(), randomSpawn.getY(), randomSpawn.getZ(), randomSpawn.getHeading(), true, 0, false, 0);
@@ -442,7 +441,7 @@ public class Lilith extends AbstractNpcAI
 				}
 				else
 				{
-					randomSpawn = _spawns.get(Rnd.get(_spawns.size()));
+					randomSpawn = _spawns.get(getRandom(_spawns.size()));
 					if (randomSpawn != null)
 					{
 						npc.teleToLocation(randomSpawn.getX(), randomSpawn.getY(), randomSpawn.getZ());
@@ -612,7 +611,7 @@ public class Lilith extends AbstractNpcAI
 				}
 			}
 		}
-		if ((npc.getId() == REMNANT) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.30)) && !npc.isCastingNow() && (Rnd.get(100) > 95))
+		if ((npc.getId() == REMNANT) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.30)) && !npc.isCastingNow() && (getRandom(100) > 95))
 		{
 			npc.doCast(REMANT_TELE);
 		}
@@ -661,7 +660,7 @@ public class Lilith extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
-		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && Rnd.nextBoolean() && (skill.getAbnormalType() == AbnormalType.HP_RECOVER) && !npc.isCastingNow() && (npc.getTarget() != npc) && (npc.getTarget() != caster) && (npc.getTarget() != _lilithBoss))
+		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && getRandomBoolean() && (skill.getAbnormalType() == AbnormalType.HP_RECOVER) && !npc.isCastingNow() && (npc.getTarget() != npc) && (npc.getTarget() != caster) && (npc.getTarget() != _lilithBoss))
 		{
 			((Attackable) npc).clearAggroList();
 			npc.setTarget(caster);

@@ -16,7 +16,6 @@
  */
 package quests.Q647_InfluxOfMachines;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -59,7 +58,7 @@ public class Q647_InfluxOfMachines extends Quest
 		else if (event.equals("32069-06.htm"))
 		{
 			st.takeItems(DESTROYED_GOLEM_SHARD, -1);
-			st.giveItems(Rnd.get(4963, 4972), 1);
+			st.giveItems(getRandom(4963, 4972), 1);
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
 		}

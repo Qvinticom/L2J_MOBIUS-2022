@@ -21,8 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.util.Rnd;
 
 /**
- * A DTO for items; contains item ID, count and chance.<br>
- * Complemented by {@link QuestItemHolder}.
+ * A DTO for items; contains item ID, count and chance.
  * @author xban1x
  */
 public class ItemChanceHolder extends ItemHolder

@@ -76,10 +76,8 @@ public class Core extends AbstractNpcAI
 	// Misc
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
-	
-	private static boolean _firstAttacked;
-	
 	private static final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
+	private static boolean _firstAttacked;
 	
 	private Core()
 	{

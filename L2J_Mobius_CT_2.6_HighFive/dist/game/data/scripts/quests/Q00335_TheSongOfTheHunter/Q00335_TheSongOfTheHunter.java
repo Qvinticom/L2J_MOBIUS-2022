@@ -1438,7 +1438,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 				{
 					if (hasQuestItems(qs.getPlayer(), SECOND_CIRCLE_REQUEST_7C) && (getQuestItemsCount(qs.getPlayer(), TEMPEST_SHARD) < 40))
 					{
-						if (giveItemRandomly(qs.getPlayer(), npc, TEMPEST_SHARD, 5, 40, 1.0, true))
+						if (giveItemRandomly(qs.getPlayer(), npc, TEMPEST_SHARD, 5, 40, 1, true))
 						{
 							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}
@@ -1448,7 +1448,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 					
 					if (hasQuestItems(qs.getPlayer(), SECOND_CIRCLE_REQUEST_8C) && (getQuestItemsCount(qs.getPlayer(), TSUNAMI_SHARD) < 40))
 					{
-						if (giveItemRandomly(qs.getPlayer(), npc, TSUNAMI_SHARD, 5, 40, 1.0, true))
+						if (giveItemRandomly(qs.getPlayer(), npc, TSUNAMI_SHARD, 5, 40, 1, true))
 						{
 							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}
@@ -1458,7 +1458,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 					
 					if (hasQuestItems(qs.getPlayer(), SECOND_CIRCLE_REQUEST_10C) && (getQuestItemsCount(qs.getPlayer(), HAMADRYAD_SHARD) < 40))
 					{
-						if (giveItemRandomly(qs.getPlayer(), npc, HAMADRYAD_SHARD, 5, 40, 1.0, true))
+						if (giveItemRandomly(qs.getPlayer(), npc, HAMADRYAD_SHARD, 5, 40, 1, true))
 						{
 							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}
@@ -1468,7 +1468,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 					
 					if (hasQuestItems(qs.getPlayer(), SECOND_CIRCLE_REQUEST_3B) && (getQuestItemsCount(qs.getPlayer(), NARCISSUSS_SOULSTONE) < 40))
 					{
-						if (giveItemRandomly(qs.getPlayer(), npc, NARCISSUSS_SOULSTONE, 5, 40, 1.0, true))
+						if (giveItemRandomly(qs.getPlayer(), npc, NARCISSUSS_SOULSTONE, 5, 40, 1, true))
 						{
 							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}
@@ -1478,7 +1478,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 					
 					if (hasQuestItems(qs.getPlayer(), SECOND_CIRCLE_REQUEST_5C) && (getQuestItemsCount(qs.getPlayer(), COIN_OF_OLD_EMPIRE) < 20))
 					{
-						if (giveItemRandomly(qs.getPlayer(), npc, COIN_OF_OLD_EMPIRE, 3, 20, 1.0, true))
+						if (giveItemRandomly(qs.getPlayer(), npc, COIN_OF_OLD_EMPIRE, 3, 20, 1, true))
 						{
 							playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}

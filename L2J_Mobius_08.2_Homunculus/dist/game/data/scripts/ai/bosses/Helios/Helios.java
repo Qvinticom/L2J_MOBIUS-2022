@@ -122,18 +122,18 @@ public class Helios extends AbstractNpcAI
 	}
 	// Misc
 	private static final int HELIOS_RAID_DURATION = 5; // hours
-	private static Npc bossInstance;
-	private final NoSummonFriendZone bossZone;
+	private static Npc _bossInstance;
+	private final NoSummonFriendZone _bossZone;
 	private GrandBoss _tempHelios;
 	private static List<Npc> _minionSpawns = new ArrayList<>();
-	private static Npc blueLightning;
-	private static Npc redLightning;
-	private static Npc leopold;
-	private boolean activated = false;
-	private boolean stage1_50 = false;
-	private boolean stage2_50 = false;
-	private boolean helios80 = false;
-	private boolean helios50 = false;
+	private static Npc _blueLightning;
+	private static Npc _redLightning;
+	private static Npc _leopold;
+	private boolean _activated = false;
+	private boolean _stage1 = false;
+	private boolean _stage2 = false;
+	private boolean _helios80 = false;
+	private boolean _helios50 = false;
 	private boolean _announce = false;
 	protected ScheduledFuture<?> _blueSpearTask;
 	protected ScheduledFuture<?> _redSpearTask;
@@ -145,7 +145,7 @@ public class Helios extends AbstractNpcAI
 		addAttackId(HELIOS1, HELIOS2, HELIOS3);
 		addKillId(HELIOS1, HELIOS2, HELIOS3, MIMILLION, MIMILLUS);
 		// Zone
-		bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
+		_bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, NoSummonFriendZone.class);
 		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);
 		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
@@ -177,151 +177,145 @@ public class Helios extends AbstractNpcAI
 		if ((npc.getId() == HELIOS1) && !_announce)
 		{
 			_announce = true;
-			_debuffTask = ThreadPool.scheduleAtFixedRate(() ->
-			{
-				bossZone.getPlayersInside().forEach(player ->
-				{
-					AUDIENCE_DEBUFF.getSkill().applyEffects(player, player);
-				});
-			}, 5000, 20000);
+			_debuffTask = ThreadPool.scheduleAtFixedRate(() -> _bossZone.getPlayersInside().forEach(player -> AUDIENCE_DEBUFF.getSkill().applyEffects(player, player)), 5000, 20000);
 			Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_ADEN_WARRIORS_BEGIN_BATTLE_WITH_THE_GIANT_EMPEROR_HELIOS, ExShowScreenMessage.TOP_CENTER, 10000, true));
 		}
-		if ((npc.getId() == HELIOS1) && !stage1_50 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
+		if ((npc.getId() == HELIOS1) && !_stage1 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
 		{
-			stage1_50 = true;
-			HELIOS_RAGE1.getSkill().applyEffects(bossInstance, bossInstance);
+			_stage1 = true;
+			HELIOS_RAGE1.getSkill().applyEffects(_bossInstance, _bossInstance);
 		}
-		if ((npc.getId() == HELIOS2) && !activated)
+		if ((npc.getId() == HELIOS2) && !_activated)
 		{
-			activated = true;
-			HELIOS_RAGE1.getSkill().applyEffects(bossInstance, bossInstance);
+			_activated = true;
+			HELIOS_RAGE1.getSkill().applyEffects(_bossInstance, _bossInstance);
 			_blueSpearTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
-				int count = bossZone.getPlayersInside().size();
+				int count = _bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-					if (blueLightning != null)
+					Player randomPlayer = _bossZone.getPlayersInside().get(getRandom(count));
+					if (_blueLightning != null)
 					{
-						blueLightning.setTarget(randomPlayer);
-						blueLightning.doCast(BLUE_LIGHTNING_SPEAR.getSkill());
+						_blueLightning.setTarget(randomPlayer);
+						_blueLightning.doCast(BLUE_LIGHTNING_SPEAR.getSkill());
 					}
 				}
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_PICKS_UP_THE_BLUE_LIGHTNING_SPEAR_AND_BEGINS_GATHERING_HIS_POWER, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_PICKS_UP_THE_BLUE_LIGHTNING_SPEAR_AND_BEGINS_GATHERING_HIS_POWER, ExShowScreenMessage.TOP_CENTER, 10000, true));
 			}, 10000, 120000);
 			_redSpearTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
-				int count = bossZone.getPlayersInside().size();
+				int count = _bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-					if (redLightning != null)
+					Player randomPlayer = _bossZone.getPlayersInside().get(getRandom(count));
+					if (_redLightning != null)
 					{
-						redLightning.setTarget(randomPlayer);
-						redLightning.doCast(RED_LIGHTNING_SPEAR.getSkill());
+						_redLightning.setTarget(randomPlayer);
+						_redLightning.doCast(RED_LIGHTNING_SPEAR.getSkill());
 					}
 				}
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_PICKS_UP_THE_RED_LIGHTNING_SPEAR_AND_BEGINS_GATHERING_HIS_POWER, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_PICKS_UP_THE_RED_LIGHTNING_SPEAR_AND_BEGINS_GATHERING_HIS_POWER, ExShowScreenMessage.TOP_CENTER, 10000, true));
 			}, 30000, 120000);
 			_leopoldTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
-				int count = bossZone.getPlayersInside().size();
+				int count = _bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-					if (leopold != null)
+					Player randomPlayer = _bossZone.getPlayersInside().get(getRandom(count));
+					if (_leopold != null)
 					{
-						leopold.setTarget(randomPlayer);
+						_leopold.setTarget(randomPlayer);
 						int rnd = getRandom(100);
 						if (rnd < 16)
 						{
-							leopold.doCast(LEOPOLD_BOMB.getSkill());
+							_leopold.doCast(LEOPOLD_BOMB.getSkill());
 						}
 						else if (rnd < 32)
 						{
-							leopold.doCast(LEOPOLD_PLASMA_BOMB.getSkill());
+							_leopold.doCast(LEOPOLD_PLASMA_BOMB.getSkill());
 						}
 						else if (rnd < 48)
 						{
-							leopold.doCast(LEOPOLD_ENERGY_BOMB.getSkill());
+							_leopold.doCast(LEOPOLD_ENERGY_BOMB.getSkill());
 						}
 						else if (rnd < 64)
 						{
-							leopold.doCast(LEOPOLD_MINI_GUN.getSkill());
+							_leopold.doCast(LEOPOLD_MINI_GUN.getSkill());
 						}
 						else if (rnd < 80)
 						{
-							leopold.doCast(LEOPOLD_SPRAY_SHOT.getSkill());
+							_leopold.doCast(LEOPOLD_SPRAY_SHOT.getSkill());
 						}
 						else
 						{
-							leopold.doCast(LEOPOLD_HARPOON.getSkill());
+							_leopold.doCast(LEOPOLD_HARPOON.getSkill());
 						}
 					}
 				}
 			}, 5000, 10000);
 		}
-		if ((npc.getId() == HELIOS2) && !stage2_50 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
+		if ((npc.getId() == HELIOS2) && !_stage2 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
 		{
-			stage2_50 = true;
-			HELIOS_RAGE2.getSkill().applyEffects(bossInstance, bossInstance);
+			_stage2 = true;
+			HELIOS_RAGE2.getSkill().applyEffects(_bossInstance, _bossInstance);
 		}
-		if ((npc.getId() == HELIOS3) && !activated)
+		if ((npc.getId() == HELIOS3) && !_activated)
 		{
-			activated = true;
-			HELIOS_RAGE3.getSkill().applyEffects(bossInstance, bossInstance);
+			_activated = true;
+			HELIOS_RAGE3.getSkill().applyEffects(_bossInstance, _bossInstance);
 			_leopoldTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
-				int count = bossZone.getPlayersInside().size();
+				int count = _bossZone.getPlayersInside().size();
 				if (count > 0)
 				{
-					Player randomPlayer = bossZone.getPlayersInside().get(getRandom(count));
-					if (leopold != null)
+					Player randomPlayer = _bossZone.getPlayersInside().get(getRandom(count));
+					if (_leopold != null)
 					{
-						leopold.setTarget(randomPlayer);
+						_leopold.setTarget(randomPlayer);
 						int rnd = getRandom(100);
 						if (rnd < 16)
 						{
-							leopold.doCast(LEOPOLD_BOMB.getSkill());
+							_leopold.doCast(LEOPOLD_BOMB.getSkill());
 						}
 						else if (rnd < 32)
 						{
-							leopold.doCast(LEOPOLD_PLASMA_BOMB.getSkill());
+							_leopold.doCast(LEOPOLD_PLASMA_BOMB.getSkill());
 						}
 						else if (rnd < 48)
 						{
-							leopold.doCast(LEOPOLD_ENERGY_BOMB.getSkill());
+							_leopold.doCast(LEOPOLD_ENERGY_BOMB.getSkill());
 						}
 						else if (rnd < 64)
 						{
-							leopold.doCast(LEOPOLD_MINI_GUN.getSkill());
+							_leopold.doCast(LEOPOLD_MINI_GUN.getSkill());
 						}
 						else if (rnd < 80)
 						{
-							leopold.doCast(LEOPOLD_SPRAY_SHOT.getSkill());
+							_leopold.doCast(LEOPOLD_SPRAY_SHOT.getSkill());
 						}
 						else
 						{
-							leopold.doCast(LEOPOLD_HARPOON.getSkill());
+							_leopold.doCast(LEOPOLD_HARPOON.getSkill());
 						}
 					}
 				}
 			}, 5000, 10000);
 		}
-		if ((npc.getId() == HELIOS3) && !helios80 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.8)))
+		if ((npc.getId() == HELIOS3) && !_helios80 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.8)))
 		{
-			helios80 = true;
+			_helios80 = true;
 			addSpawn(LEOPOLD_ORIGIN, LEOPOLD_ORIGIN_LOC, false, 0);
 			addSpawn(ENUMA_ELISH_ORIGIN, ENUMA_ELISH_ORIGIN_LOC, false, 0);
-			bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_KAMAEL_ORIGINS_ABOVE_THE_THRONE_OF_HELIOS_BEGIN_TO_SOAR, ExShowScreenMessage.TOP_CENTER, 10000, true));
+			_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_KAMAEL_ORIGINS_ABOVE_THE_THRONE_OF_HELIOS_BEGIN_TO_SOAR, ExShowScreenMessage.TOP_CENTER, 10000, true));
 		}
-		else if ((npc.getId() == HELIOS3) && !helios50 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
+		else if ((npc.getId() == HELIOS3) && !_helios50 && (npc.getCurrentHp() <= (npc.getMaxHp() * 0.5)))
 		{
-			helios50 = true;
-			HELIOS_RAGE4.getSkill().applyEffects(bossInstance, bossInstance);
-			bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_USES_THE_PRANARACH_SHIELD_OF_LIGHT_TO_MINIMIZE_DAMAGE, ExShowScreenMessage.TOP_CENTER, 10000, true));
-			bossInstance.abortCast();
-			bossInstance.doCast(PRANARACH.getSkill());
+			_helios50 = true;
+			HELIOS_RAGE4.getSkill().applyEffects(_bossInstance, _bossInstance);
+			_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_USES_THE_PRANARACH_SHIELD_OF_LIGHT_TO_MINIMIZE_DAMAGE, ExShowScreenMessage.TOP_CENTER, 10000, true));
+			_bossInstance.abortCast();
+			_bossInstance.doCast(PRANARACH.getSkill());
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -344,12 +338,12 @@ public class Helios extends AbstractNpcAI
 				if (GrandBossManager.getInstance().getBossStatus(HELIOS3) == WAITING)
 				{
 					GrandBossManager.getInstance().setBossStatus(HELIOS3, FIGHTING);
-					bossInstance = addSpawn(HELIOS1, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
+					_bossInstance = addSpawn(HELIOS1, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
 					for (SpawnHolder spawn : SPAWNS_MINIONS)
 					{
 						_minionSpawns.add(addSpawn(spawn.getNpcId(), spawn.getLocation()));
 					}
-					startQuestTimer("resetRaid", HELIOS_RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
+					startQuestTimer("resetRaid", HELIOS_RAID_DURATION * 60 * 60 * 1000, _bossInstance, null);
 				}
 				break;
 			}
@@ -358,17 +352,17 @@ public class Helios extends AbstractNpcAI
 				final int status = GrandBossManager.getInstance().getBossStatus(HELIOS3);
 				if ((status > ALIVE) && (status < DEAD))
 				{
-					bossZone.oustAllPlayers();
+					_bossZone.oustAllPlayers();
 					Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.THE_HEROES_DRAINED_OF_THEIR_POWERS_HAVE_BEEN_BANISHED_FROM_THE_THRONE_OF_HELIOS_BY_HELIOS_POWERS, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
-					Clean();
+					clean();
 				}
 				break;
 			}
 			case "stage2":
 			{
-				bossInstance = addSpawn(HELIOS2, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_APPEARANCE_CHANGES_AND_HE_BEGINS_TO_GROW_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_bossInstance = addSpawn(HELIOS2, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_APPEARANCE_CHANGES_AND_HE_BEGINS_TO_GROW_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				for (SpawnHolder spawn : SPAWNS_MINIONS)
 				{
 					_minionSpawns.add(addSpawn(spawn.getNpcId(), spawn.getLocation()));
@@ -378,25 +372,25 @@ public class Helios extends AbstractNpcAI
 			}
 			case "stage3":
 			{
-				activated = false;
-				bossInstance = addSpawn(HELIOS3, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_APPEARANCE_CHANGES_AND_HE_BEGINS_TO_GROW_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_activated = false;
+				_bossInstance = addSpawn(HELIOS3, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_APPEARANCE_CHANGES_AND_HE_BEGINS_TO_GROW_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				startQuestTimer("leopoldSpawn", 10000, null, null);
 				break;
 			}
 			case "spheresSpawn":
 			{
-				blueLightning = addSpawn(HELIOS_BLUE_LIGHTNING, BLUE_LIGHTNING_SPEAR_LOC, false, 0);
-				redLightning = addSpawn(HELIOS_RED_LIGHTNING, RED_LIGHTNING_SPEAR_LOC, false, 0);
-				blueLightning.setInvul(true);
-				redLightning.setInvul(true);
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_ENUMA_ELISH_SPEAR_ON_THE_THRONE_OF_HELIOS_IS_PREPARED_AND_PLACED_IN_POSITION, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_blueLightning = addSpawn(HELIOS_BLUE_LIGHTNING, BLUE_LIGHTNING_SPEAR_LOC, false, 0);
+				_redLightning = addSpawn(HELIOS_RED_LIGHTNING, RED_LIGHTNING_SPEAR_LOC, false, 0);
+				_blueLightning.setInvul(true);
+				_redLightning.setInvul(true);
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_ENUMA_ELISH_SPEAR_ON_THE_THRONE_OF_HELIOS_IS_PREPARED_AND_PLACED_IN_POSITION, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				startQuestTimer("protectorsSpawn", 10000, null, null);
 				break;
 			}
 			case "protectorsSpawn":
 			{
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MIMILLION_AND_MIMILLUS_APPEAR_IN_ORDER_TO_PROTECT_THE_ENUMA_ELISH_OF_RED_LIGHTNING_AND_THE_ENUMA_ELISH_OF_BLUE_LIGHTNING, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MIMILLION_AND_MIMILLUS_APPEAR_IN_ORDER_TO_PROTECT_THE_ENUMA_ELISH_OF_RED_LIGHTNING_AND_THE_ENUMA_ELISH_OF_BLUE_LIGHTNING, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				addSpawn(MIMILLION, MIMILLION_LOC, false, 0);
 				addSpawn(MIMILLUS, MIMILLUS_LOC, false, 0);
 				startQuestTimer("leopoldSpawn", 10000, null, null);
@@ -404,17 +398,17 @@ public class Helios extends AbstractNpcAI
 			}
 			case "leopoldSpawn":
 			{
-				leopold = addSpawn(LEOPOLD, LEOPOLD_LOC, false, 0);
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SIEGE_CANNON_LEOPOLD_ON_THE_THRONE_OF_HELIOS_BEGINS_TO_PREPARE_TO_FIRE, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				_leopold = addSpawn(LEOPOLD, LEOPOLD_LOC, false, 0);
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SIEGE_CANNON_LEOPOLD_ON_THE_THRONE_OF_HELIOS_BEGINS_TO_PREPARE_TO_FIRE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				break;
 			}
 		}
 		return htmltext;
 	}
 	
-	private void Clean()
+	private void clean()
 	{
-		bossZone.getCharactersInside().forEach(mob ->
+		_bossZone.getCharactersInside().forEach(mob ->
 		{
 			if (mob.isNpc())
 			{
@@ -450,50 +444,44 @@ public class Helios extends AbstractNpcAI
 		{
 			case MIMILLION:
 			{
-				if (redLightning != null)
+				if (_redLightning != null)
 				{
-					redLightning.deleteMe();
-					bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MIMILLION_FALLS_AND_THE_RED_LIGHTNING_SPEAR_VANISHES, ExShowScreenMessage.TOP_CENTER, 10000, true));
+					_redLightning.deleteMe();
+					_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MIMILLION_FALLS_AND_THE_RED_LIGHTNING_SPEAR_VANISHES, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
 				break;
 			}
 			case MIMILLUS:
 			{
-				if (blueLightning != null)
+				if (_blueLightning != null)
 				{
-					blueLightning.deleteMe();
-					bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MIMILLUS_FALLS_AND_THE_BLUE_LIGHTNING_SPEAR_VANISHES, ExShowScreenMessage.TOP_CENTER, 10000, true));
+					_blueLightning.deleteMe();
+					_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.MIMILLUS_FALLS_AND_THE_BLUE_LIGHTNING_SPEAR_VANISHES, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				}
 				break;
 			}
 			case HELIOS1:
 			{
-				bossInstance.deleteMe();
-				bossZone.getPlayersInside().forEach(player ->
-				{
-					playMovie(player, Movie.SC_HELIOS_TRANS_A);
-				});
+				_bossInstance.deleteMe();
+				_bossZone.getPlayersInside().forEach(player -> playMovie(player, Movie.SC_HELIOS_TRANS_A));
 				startQuestTimer("stage2", 15000, null, null);
 				break;
 			}
 			case HELIOS2:
 			{
-				bossInstance.deleteMe();
-				if (leopold != null)
+				_bossInstance.deleteMe();
+				if (_leopold != null)
 				{
-					leopold.deleteMe();
+					_leopold.deleteMe();
 				}
-				bossZone.getPlayersInside().forEach(player ->
-				{
-					playMovie(player, Movie.SC_HELIOS_TRANS_B);
-				});
+				_bossZone.getPlayersInside().forEach(player -> playMovie(player, Movie.SC_HELIOS_TRANS_B));
 				startQuestTimer("stage3", 15000, null, null);
 				break;
 			}
 			case HELIOS3:
 			{
-				Clean();
-				bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_DEFEATED_TAKES_FLIGHT_DEEP_IN_TO_THE_SUPERION_FORT_HIS_THRONE_IS_RENDERED_INACTIVE, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				clean();
+				_bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_DEFEATED_TAKES_FLIGHT_DEEP_IN_TO_THE_SUPERION_FORT_HIS_THRONE_IS_RENDERED_INACTIVE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, DEAD);
 				final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.HELIOS_SPAWN_RANDOM)) * 3600000;
 				final StatSet info = GrandBossManager.getInstance().getStatSet(HELIOS3);

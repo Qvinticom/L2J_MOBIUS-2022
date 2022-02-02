@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
@@ -39,15 +39,15 @@ public class Q00369_CollectorOfJewels extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 25;
 	// Mobs
-	private static final Map<Integer, QuestItemHolder> MOBS_DROP_CHANCES = new HashMap<>();
+	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
 	static
 	{
-		MOBS_DROP_CHANCES.put(20609, new QuestItemHolder(FLARE_SHARD, 75, 1)); // salamander_lakin
-		MOBS_DROP_CHANCES.put(20612, new QuestItemHolder(FLARE_SHARD, 91, 1)); // salamander_rowin
-		MOBS_DROP_CHANCES.put(20749, new QuestItemHolder(FLARE_SHARD, 100, 2)); // death_fire
-		MOBS_DROP_CHANCES.put(20616, new QuestItemHolder(FREEZING_SHARD, 81, 1)); // undine_lakin
-		MOBS_DROP_CHANCES.put(20619, new QuestItemHolder(FREEZING_SHARD, 87, 1)); // undine_rowin
-		MOBS_DROP_CHANCES.put(20747, new QuestItemHolder(FREEZING_SHARD, 100, 2)); // roxide
+		MOBS_DROP_CHANCES.put(20609, new ItemChanceHolder(FLARE_SHARD, 75, 1)); // salamander_lakin
+		MOBS_DROP_CHANCES.put(20612, new ItemChanceHolder(FLARE_SHARD, 91, 1)); // salamander_rowin
+		MOBS_DROP_CHANCES.put(20749, new ItemChanceHolder(FLARE_SHARD, 100, 2)); // death_fire
+		MOBS_DROP_CHANCES.put(20616, new ItemChanceHolder(FREEZING_SHARD, 81, 1)); // undine_lakin
+		MOBS_DROP_CHANCES.put(20619, new ItemChanceHolder(FREEZING_SHARD, 87, 1)); // undine_rowin
+		MOBS_DROP_CHANCES.put(20747, new ItemChanceHolder(FREEZING_SHARD, 100, 2)); // roxide
 	}
 	
 	public Q00369_CollectorOfJewels()
@@ -113,7 +113,7 @@ public class Q00369_CollectorOfJewels extends Quest
 	@Override
 	public String onKill(Npc npc, Player player, boolean isSummon)
 	{
-		final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
+		final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 		if (getRandom(100) < item.getChance())
 		{
 			final Player luckyPlayer = getRandomPartyMember(player, npc);
@@ -122,7 +122,7 @@ public class Q00369_CollectorOfJewels extends Quest
 				final QuestState qs = getQuestState(luckyPlayer, false);
 				final int itemCount = (qs.isMemoState(1) ? 50 : 200);
 				final int cond = (qs.isMemoState(1) ? 2 : 4);
-				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), itemCount, 1.0, true) //
+				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), itemCount, 1, true) //
 					&& (getQuestItemsCount(luckyPlayer, FLARE_SHARD, FREEZING_SHARD) >= (itemCount * 2)))
 				{
 					qs.setCond(cond);

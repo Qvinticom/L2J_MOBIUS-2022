@@ -19,7 +19,6 @@ package quests.Q648_AnIceMerchantsDream;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -132,7 +131,7 @@ public class Q648_AnIceMerchantsDream extends Quest
 						{
 							if (st.getInt("exCond") == 0)
 							{
-								st.set("exCond", String.valueOf((Rnd.get(4) + 1) * 10));
+								st.set("exCond", String.valueOf((getRandom(4) + 1) * 10));
 							}
 						}
 						else if (event.startsWith("32023-06-"))

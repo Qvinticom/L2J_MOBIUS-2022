@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -673,7 +672,7 @@ public class Q00662_AGameOfCards extends Quest
 			}
 		}
 		
-		final Player player = players.get(Rnd.get(players.size()));
+		final Player player = players.get(getRandom(players.size()));
 		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (MONSTERS.get(npc.getId()) < getRandom(1000)))
 		{
 			final QuestState qs = getQuestState(player, false);

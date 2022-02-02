@@ -16,7 +16,6 @@
  */
 package teleports.OracleTeleport;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -278,7 +277,7 @@ public class OracleTeleport extends Quest
 			}
 			else
 			{
-				final Location loc = RETURN_LOCS[Rnd.get(RETURN_LOCS.length)];
+				final Location loc = RETURN_LOCS[getRandom(RETURN_LOCS.length)];
 				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 				htmltext = "rift_back_unknown.htm";
 				player.setIn7sDungeon(false);

@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -41,7 +40,7 @@ public class ScarletStakatoNoble extends Quest
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
-		if (Rnd.get(100) < 20)
+		if (getRandom(100) < 20)
 		{
 			addSpawn(SCARLET_STAKATO_NOBLE_B, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
 			addSpawn(SCARLET_STAKATO_NOBLE_B, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);

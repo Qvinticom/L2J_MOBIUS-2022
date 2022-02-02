@@ -17,7 +17,6 @@
 package ai.bosses;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -57,7 +56,7 @@ public class Tyrannosaurus extends Quest
 	{
 		super(-1, "ai/bosses");
 		addKillId(TREX);
-		addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0);
+		addSpawn(TREX[getRandom(TREX.length)], SPAWNS[getRandom(SPAWNS.length)], false, 0);
 	}
 	
 	@Override
@@ -66,7 +65,7 @@ public class Tyrannosaurus extends Quest
 		final Spawn spawn = npc.getSpawn();
 		spawn.stopRespawn();
 		SpawnTable.getInstance().deleteSpawn(spawn, false);
-		ThreadPool.schedule(() -> addSpawn(TREX[Rnd.get(TREX.length)], SPAWNS[Rnd.get(SPAWNS.length)], false, 0), 1800000);
+		ThreadPool.schedule(() -> addSpawn(TREX[getRandom(TREX.length)], SPAWNS[getRandom(SPAWNS.length)], false, 0), 1800000);
 		return super.onKill(npc, killer, isPet);
 	}
 	

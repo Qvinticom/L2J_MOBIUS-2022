@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -403,7 +402,7 @@ public class Baium extends Quest
 		// Spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair).
 		addSpawn(29055, 115203, 16620, 10078, 0, false, 900000); // Should we teleport everyone out if the cubic despawns??
 		// Lock baium for 5 days and 1 to 8 hours [i.e. 432,000,000 + 1*3,600,000 + random-less-than(8*3,600,000) millisecs]
-		final long respawnTime = (Config.BAIUM_RESP_FIRST + Rnd.get(Config.BAIUM_RESP_SECOND)) * 3600000;
+		final long respawnTime = (Config.BAIUM_RESP_FIRST + getRandom(Config.BAIUM_RESP_SECOND)) * 3600000;
 		GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);
 		startQuestTimer("baium_unlock", respawnTime, null, null);
 		// Also save the respawn time so that the info is maintained past reboots.
@@ -535,11 +534,11 @@ public class Baium extends Quest
 		int skill;
 		if (npc.getCurrentHp() > ((npc.getMaxHp() * 3) / 4.0))
 		{
-			if (Rnd.get(100) < 10)
+			if (getRandom(100) < 10)
 			{
 				skill = 4128;
 			}
-			else if (Rnd.get(100) < 10)
+			else if (getRandom(100) < 10)
 			{
 				skill = 4129;
 			}
@@ -550,15 +549,15 @@ public class Baium extends Quest
 		}
 		else if (npc.getCurrentHp() > ((npc.getMaxHp() * 2) / 4.0))
 		{
-			if (Rnd.get(100) < 10)
+			if (getRandom(100) < 10)
 			{
 				skill = 4131;
 			}
-			else if (Rnd.get(100) < 10)
+			else if (getRandom(100) < 10)
 			{
 				skill = 4128;
 			}
-			else if (Rnd.get(100) < 10)
+			else if (getRandom(100) < 10)
 			{
 				skill = 4129;
 			}
@@ -569,19 +568,19 @@ public class Baium extends Quest
 		}
 		else if (npc.getCurrentHp() > ((npc.getMaxHp() * 1) / 4.0))
 		{
-			if (Rnd.get(100) < 10)
+			if (getRandom(100) < 10)
 			{
 				skill = 4130;
 			}
-			else if (Rnd.get(100) < 10)
+			else if (getRandom(100) < 10)
 			{
 				skill = 4131;
 			}
-			else if (Rnd.get(100) < 10)
+			else if (getRandom(100) < 10)
 			{
 				skill = 4128;
 			}
-			else if (Rnd.get(100) < 10)
+			else if (getRandom(100) < 10)
 			{
 				skill = 4129;
 			}
@@ -590,19 +589,19 @@ public class Baium extends Quest
 				skill = 4127;
 			}
 		}
-		else if (Rnd.get(100) < 10)
+		else if (getRandom(100) < 10)
 		{
 			skill = 4130;
 		}
-		else if (Rnd.get(100) < 10)
+		else if (getRandom(100) < 10)
 		{
 			skill = 4131;
 		}
-		else if (Rnd.get(100) < 10)
+		else if (getRandom(100) < 10)
 		{
 			skill = 4128;
 		}
-		else if (Rnd.get(100) < 10)
+		else if (getRandom(100) < 10)
 		{
 			skill = 4129;
 		}

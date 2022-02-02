@@ -715,7 +715,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_5TH_LIST))
 					{
-						giveItemRandomly(killer, npc, WINGS_OF_DRONEANT, 2, 30, 1.0, true);
+						giveItemRandomly(killer, npc, WINGS_OF_DRONEANT, 2, 30, 1, true);
 					}
 					break;
 				}
@@ -723,7 +723,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_5TH_LIST))
 					{
-						giveItemRandomly(killer, npc, FANGS_OF_WYRM, 3, 30, 1.0, true);
+						giveItemRandomly(killer, npc, FANGS_OF_WYRM, 3, 30, 1, true);
 					}
 					break;
 				}
@@ -732,7 +732,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_4TH_LIST))
 					{
-						giveItemRandomly(killer, npc, TALONS_OF_TYRANT, 3, 30, 1.0, true);
+						giveItemRandomly(killer, npc, TALONS_OF_TYRANT, 3, 30, 1, true);
 					}
 					break;
 				}
@@ -742,7 +742,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_3RD_LIST))
 					{
-						giveItemRandomly(killer, npc, BREKAORC_TOTEM, 1, 30, 1.0, true);
+						giveItemRandomly(killer, npc, BREKAORC_TOTEM, 1, 30, 1, true);
 					}
 					break;
 				}
@@ -751,7 +751,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_3RD_LIST))
 					{
-						giveItemRandomly(killer, npc, BREKAORC_TOTEM, 2, 30, 1.0, true);
+						giveItemRandomly(killer, npc, BREKAORC_TOTEM, 2, 30, 1, true);
 					}
 					break;
 				}
@@ -759,7 +759,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_3RD_LIST))
 					{
-						giveItemRandomly(killer, npc, CRIMSON_BLOODSTONE, 6, 30, 1.0, true);
+						giveItemRandomly(killer, npc, CRIMSON_BLOODSTONE, 6, 30, 1, true);
 					}
 					break;
 				}
@@ -767,7 +767,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_4TH_LIST))
 					{
-						giveItemRandomly(killer, npc, TUSK_OF_WINDSUS, 3, 30, 1.0, true);
+						giveItemRandomly(killer, npc, TUSK_OF_WINDSUS, 3, 30, 1, true);
 					}
 					break;
 				}
@@ -775,7 +775,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_1ST_LIST))
 					{
-						giveItemRandomly(killer, npc, SAC_OF_REDSPORES, 2, 30, 1.0, true);
+						giveItemRandomly(killer, npc, SAC_OF_REDSPORES, 2, 30, 1, true);
 					}
 					break;
 				}
@@ -783,7 +783,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_2ND_LIST))
 					{
-						giveItemRandomly(killer, npc, SHARDS_OF_MANASHEN, 2, 30, 1.0, true);
+						giveItemRandomly(killer, npc, SHARDS_OF_MANASHEN, 2, 30, 1, true);
 					}
 					break;
 				}
@@ -794,7 +794,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_1ST_LIST))
 					{
-						giveItemRandomly(killer, npc, LETOLIZARDMAN_AMULET, 1, 30, 1.0, true);
+						giveItemRandomly(killer, npc, LETOLIZARDMAN_AMULET, 1, 30, 1, true);
 					}
 					break;
 				}
@@ -803,7 +803,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_1ST_LIST))
 					{
-						giveItemRandomly(killer, npc, LETOLIZARDMAN_AMULET, 2, 30, 1.0, true);
+						giveItemRandomly(killer, npc, LETOLIZARDMAN_AMULET, 2, 30, 1, true);
 					}
 					break;
 				}
@@ -811,7 +811,7 @@ public class Q00230_TestOfTheSummoner extends Quest
 				{
 					if (!hasQuestItems(killer, GALATEAS_LETTER) && hasQuestItems(killer, LARAS_2ND_LIST))
 					{
-						giveItemRandomly(killer, npc, KARULBUGBEAR_TOTEM, 2, 30, 1.0, true);
+						giveItemRandomly(killer, npc, KARULBUGBEAR_TOTEM, 2, 30, 1, true);
 					}
 					break;
 				}

@@ -19,7 +19,6 @@ package quests.Q355_FamilyHonor;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -106,7 +105,7 @@ public class Q355_FamilyHonor extends Quest
 				{
 					st.takeItems(WORK_OF_BERONA, 1);
 					
-					final int appraising = Rnd.get(100);
+					final int appraising = getRandom(100);
 					if (appraising < 20)
 					{
 						htmltext = "30929-2.htm";
@@ -200,7 +199,7 @@ public class Q355_FamilyHonor extends Quest
 		}
 		
 		final int[] chances = CHANCES.get(npc.getNpcId());
-		final int random = Rnd.get(100);
+		final int random = getRandom(100);
 		if (random < chances[1])
 		{
 			st.dropItemsAlways((random < chances[0]) ? GALIBREDO_BUST : WORK_OF_BERONA, 1, 0);

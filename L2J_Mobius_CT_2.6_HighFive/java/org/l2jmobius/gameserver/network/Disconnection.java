@@ -21,8 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.events.EventDispatcher;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
@@ -138,7 +136,6 @@ public class Disconnection
 		{
 			if ((_player != null) && _player.isOnline())
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(_player), _player);
 				_player.deleteMe();
 			}
 		}

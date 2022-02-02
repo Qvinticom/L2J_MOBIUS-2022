@@ -16,7 +16,6 @@
  */
 package quests.Q383_SearchingForTreasure;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -101,7 +100,7 @@ public class Q383_SearchingForTreasure extends Quest
 					
 					// Adena reward.
 					int i1 = 0;
-					int i0 = Rnd.get(100);
+					int i0 = getRandom(100);
 					if (i0 < 5)
 					{
 						st.giveItems(2450, 1);
@@ -123,7 +122,7 @@ public class Q383_SearchingForTreasure extends Quest
 						i1 += 500;
 					}
 					
-					i0 = Rnd.get(1000);
+					i0 = getRandom(1000);
 					if (i0 < 25)
 					{
 						st.giveItems(4481, 1);
@@ -177,7 +176,7 @@ public class Q383_SearchingForTreasure extends Quest
 						i1 += 300;
 					}
 					
-					i0 = Rnd.get(100);
+					i0 = getRandom(100);
 					if (i0 < 4)
 					{
 						st.giveItems(1337, 1);
@@ -211,7 +210,7 @@ public class Q383_SearchingForTreasure extends Quest
 						i1 += 500;
 					}
 					
-					i0 = Rnd.get(100);
+					i0 = getRandom(100);
 					if (i0 < 20)
 					{
 						st.giveItems(4408, 1);

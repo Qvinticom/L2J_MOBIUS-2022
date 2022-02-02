@@ -17,7 +17,6 @@
 package vehicles;
 
 import java.util.concurrent.Future;
-import java.util.logging.Logger;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -43,8 +42,6 @@ import ai.AbstractNpcAI;
 
 public abstract class AirShipController extends AbstractNpcAI
 {
-	private static final Logger LOGGER = Logger.getLogger(AirShipController.class.getName());
-	
 	private final class DecayTask implements Runnable
 	{
 		public DecayTask()

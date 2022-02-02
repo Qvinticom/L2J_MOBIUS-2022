@@ -166,7 +166,7 @@ public class Q00483_IntendedTactic extends Quest
 		{
 			qs.setCond(2, true);
 		}
-		if ((qs != null) && qs.isCond(2) && (CommonUtil.contains(BOSSES, npc.getId())) && giveItemRandomly(killer, npc, TRUTTHFUL_ONES_BLOOD, 1, 10, 1.0, true))
+		if ((qs != null) && qs.isCond(2) && (CommonUtil.contains(BOSSES, npc.getId())) && giveItemRandomly(killer, npc, TRUTTHFUL_ONES_BLOOD, 1, 10, 1, true))
 		{
 			qs.setCond(2, true);
 		}

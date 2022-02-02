@@ -16,7 +16,6 @@
  */
 package quests.Q212_TrialOfDuty;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -338,7 +337,7 @@ public class Q212_TrialOfDuty extends Quest
 			case 20190:
 			case 20191:
 			{
-				if (st.isCond(2) && (Rnd.get(10) < 1))
+				if (st.isCond(2) && (getRandom(10) < 1))
 				{
 					st.playSound(QuestState.SOUND_BEFORE_BATTLE);
 					addSpawn(27119, npc, false, 120000);
@@ -368,7 +367,7 @@ public class Q212_TrialOfDuty extends Quest
 			}
 			case 20144:
 			{
-				if ((st.isCond(7) || st.isCond(8)) && (Rnd.get(100) < 33))
+				if ((st.isCond(7) || st.isCond(8)) && (getRandom(100) < 33))
 				{
 					if (st.isCond(7))
 					{
@@ -394,7 +393,7 @@ public class Q212_TrialOfDuty extends Quest
 			}
 			case 20270:
 			{
-				if (st.isCond(14) && Rnd.nextBoolean())
+				if (st.isCond(14) && getRandomBoolean())
 				{
 					if (!st.hasQuestItems(ATHEBALDT_SKULL))
 					{

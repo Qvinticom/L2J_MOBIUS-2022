@@ -296,7 +296,7 @@ public class Q00038_DragonFangs extends Quest
 			case LIZARDMAN_SENTINEL:
 			{
 				final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-				if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, FEATHER.getId(), 1, FEATHER.getCount(), 1.0, true))
+				if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, FEATHER.getId(), 1, FEATHER.getCount(), 1, true))
 				{
 					qs.setCond(2);
 				}

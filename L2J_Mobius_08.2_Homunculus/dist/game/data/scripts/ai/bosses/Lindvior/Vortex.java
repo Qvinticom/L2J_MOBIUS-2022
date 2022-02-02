@@ -135,38 +135,23 @@ public class Vortex extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		switch (npc.getId())
-		{
-			case SMALL_VORTEX:
-			{
-				attackRandomTarget(npc);
-				npc.setRandomWalking(true);
-				npc.setRunning();
-				break;
-			}
-			case BIG_VORTEX:
-			{
-				attackRandomTarget(npc);
-				npc.setRandomWalking(true);
-				npc.setRunning();
-				break;
-			}
-		}
+		attackRandomTarget(npc);
+		npc.setRandomWalking(true);
+		npc.setRunning();
 		return super.onSpawn(npc);
 	}
 	
 	private void attackRandomTarget(Npc npc)
 	{
 		final Collection<Player> players = World.getInstance().getVisibleObjects(npc, Player.class);
+		if ((players == null) || players.isEmpty())
 		{
-			if ((players == null) || players.isEmpty())
-			{
-				return;
-			}
-			if (!players.isEmpty())
-			{
-				addAttackPlayerDesire(npc, players.stream().findAny().get());
-			}
+			return;
+		}
+		
+		if (!players.isEmpty())
+		{
+			addAttackPlayerDesire(npc, players.stream().findAny().get());
 		}
 	}
 	

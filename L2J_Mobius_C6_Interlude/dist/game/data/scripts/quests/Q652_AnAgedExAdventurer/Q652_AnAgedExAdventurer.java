@@ -16,7 +16,6 @@
  */
 package quests.Q652_AnAgedExAdventurer;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -81,12 +80,12 @@ public class Q652_AnAgedExAdventurer extends Quest
 		}
 		else if (event.equals("apparition_npc"))
 		{
-			int chance = Rnd.get(5);
+			int chance = getRandom(5);
 			
 			// Loop to avoid to spawn to the same place.
 			while (chance == _currentPosition)
 			{
-				chance = Rnd.get(5);
+				chance = getRandom(5);
 			}
 			
 			// Register new position.
@@ -123,7 +122,7 @@ public class Q652_AnAgedExAdventurer extends Quest
 				{
 					case SARA:
 					{
-						if (Rnd.get(100) < 50)
+						if (getRandom(100) < 50)
 						{
 							htmltext = "30180-01.htm";
 							st.rewardItems(57, 5026);

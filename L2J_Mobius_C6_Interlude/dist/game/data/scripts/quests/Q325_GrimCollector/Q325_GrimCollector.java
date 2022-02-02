@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -167,7 +166,7 @@ public class Q325_GrimCollector extends Quest
 					st.takeItems(RIB_BONE, 1);
 					st.takeItems(THIGH_BONE, 1);
 					
-					if (Rnd.get(10) < 9)
+					if (getRandom(10) < 9)
 					{
 						st.giveItems(COMPLETE_SKELETON, 1);
 					}
@@ -252,7 +251,7 @@ public class Q325_GrimCollector extends Quest
 		
 		if (st.hasQuestItems(ANATOMY_DIAGRAM))
 		{
-			final int chance = Rnd.get(100);
+			final int chance = getRandom(100);
 			for (ItemHolder drop : DROPLIST.get(npc.getNpcId()))
 			{
 				if (chance < drop.getCount())

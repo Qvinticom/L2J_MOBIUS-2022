@@ -250,6 +250,7 @@ public class Config
 	public static int PLAYER_RATE_DROP_ITEM;
 	public static int PLAYER_RATE_DROP_EQUIP;
 	public static int PLAYER_RATE_DROP_EQUIP_WEAPON;
+	public static int EVENT_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static float PET_XP_RATE;
 	public static int PET_FOOD_RATE;
 	public static float SINEATER_XP_RATE;
@@ -1189,6 +1190,7 @@ public class Config
 		PLAYER_RATE_DROP_ITEM = ratesConfig.getInt("PlayerRateDropItem", 70);
 		PLAYER_RATE_DROP_EQUIP = ratesConfig.getInt("PlayerRateDropEquip", 25);
 		PLAYER_RATE_DROP_EQUIP_WEAPON = ratesConfig.getInt("PlayerRateDropEquipWeapon", 5);
+		EVENT_ITEM_MAX_LEVEL_DIFFERENCE = ratesConfig.getInt("EventItemMaxLevelDifference", 9);
 		PET_XP_RATE = ratesConfig.getFloat("PetXpRate", 1f);
 		PET_FOOD_RATE = ratesConfig.getInt("PetFoodRate", 1);
 		SINEATER_XP_RATE = ratesConfig.getFloat("SinEaterXpRate", 1f);

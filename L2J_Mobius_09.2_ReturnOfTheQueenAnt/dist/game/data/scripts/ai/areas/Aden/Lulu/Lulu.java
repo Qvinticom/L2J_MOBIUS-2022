@@ -16,7 +16,6 @@
  */
 package ai.areas.Aden.Lulu;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -127,7 +126,7 @@ public class Lulu extends AbstractNpcAI
 		
 		if (player.reduceAdena("Lulu", ADENA_COST, _luluNpc, true))
 		{
-			SkillCaster.triggerCast(_luluNpc, player, Rnd.get(100) < BUFF_CHANCE ? LULU_LUCK_LV2.getSkill() : LULU_LUCK_LV1.getSkill());
+			SkillCaster.triggerCast(_luluNpc, player, getRandom(100) < BUFF_CHANCE ? LULU_LUCK_LV2.getSkill() : LULU_LUCK_LV1.getSkill());
 		}
 	}
 	

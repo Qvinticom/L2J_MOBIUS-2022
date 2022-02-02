@@ -16,7 +16,6 @@
  */
 package ai.areas.RaidersCrossroads.Kaysen;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -105,7 +104,7 @@ public class Kaysen extends AbstractNpcAI
 					}
 					npc.setScriptValue(1);
 					
-					if (Rnd.get(100) < REWARD_CHANCE)
+					if (getRandom(100) < REWARD_CHANCE)
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_THOUGHT_I_D_BE_A_PUSHOVER_DIDN_T_YOU);
 						giveItems(player, REWARD);

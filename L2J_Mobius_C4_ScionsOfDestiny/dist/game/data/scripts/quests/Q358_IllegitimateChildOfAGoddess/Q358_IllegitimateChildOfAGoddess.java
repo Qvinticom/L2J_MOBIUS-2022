@@ -16,7 +16,6 @@
  */
 package quests.Q358_IllegitimateChildOfAGoddess;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -94,7 +93,7 @@ public class Q358_IllegitimateChildOfAGoddess extends Quest
 				{
 					htmltext = "30862-07.htm";
 					st.takeItems(SCALE, -1);
-					st.giveItems(REWARD[Rnd.get(REWARD.length)], 1);
+					st.giveItems(REWARD[getRandom(REWARD.length)], 1);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}

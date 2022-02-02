@@ -204,7 +204,7 @@ public class Q10292_SevenSignsGirlOfDoubt extends Quest
 		if (CommonUtil.contains(MOBS, npc.getId()))
 		{
 			final QuestState qs = getRandomPartyMemberState(player, 3, 3, npc);
-			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 1.0, true))
+			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 1, true))
 			{
 				qs.setCond(4, true);
 			}

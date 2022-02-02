@@ -19,7 +19,6 @@ package quests.Q00426_QuestForFishingShot;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -392,7 +391,7 @@ public class Q00426_QuestForFishingShot extends Quest
 		{
 			if (MOBS_SPECIAL.containsKey(npc.getId()))
 			{
-				if (Rnd.get(1000) <= MOBS_SPECIAL.get(npc.getId()).chance)
+				if (getRandom(1000) <= MOBS_SPECIAL.get(npc.getId()).chance)
 				{
 					rewardItems(qs.getPlayer(), SWEET_FLUID, MOBS_SPECIAL.get(npc.getId()).reward + 1);
 				}
@@ -404,7 +403,7 @@ public class Q00426_QuestForFishingShot extends Quest
 			}
 			else
 			{
-				if (Rnd.get(1000) <= MOBS.get(npc.getId()).chance)
+				if (getRandom(1000) <= MOBS.get(npc.getId()).chance)
 				{
 					rewardItems(qs.getPlayer(), SWEET_FLUID, MOBS.get(npc.getId()).reward);
 					playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);

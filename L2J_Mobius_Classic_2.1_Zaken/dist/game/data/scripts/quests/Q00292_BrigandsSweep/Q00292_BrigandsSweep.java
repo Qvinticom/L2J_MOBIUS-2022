@@ -117,14 +117,14 @@ public class Q00292_BrigandsSweep extends Quest
 			final int chance = getRandom(10);
 			if (chance > 5)
 			{
-				giveItemRandomly(killer, npc, MOB_ITEM_DROP.get(npc.getId()), 1, 0, 1.0, true);
+				giveItemRandomly(killer, npc, MOB_ITEM_DROP.get(npc.getId()), 1, 0, 1, true);
 			}
 			else if (qs.isCond(1) && (chance > 4) && !hasQuestItems(killer, SUSPICIOUS_CONTRACT))
 			{
 				final long memos = getQuestItemsCount(killer, SUSPICIOUS_MEMO);
 				if (memos < 3)
 				{
-					if (giveItemRandomly(killer, npc, SUSPICIOUS_MEMO, 1, 3, 1.0, false))
+					if (giveItemRandomly(killer, npc, SUSPICIOUS_MEMO, 1, 3, 1, false))
 					{
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						giveItems(killer, SUSPICIOUS_CONTRACT, 1);

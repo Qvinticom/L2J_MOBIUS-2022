@@ -817,12 +817,13 @@ public class LastImperialTomb extends AbstractInstance
 	
 	private void playRandomSong(Instance world)
 	{
-		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 		final boolean isPlayingSong = world.getParameters().getBoolean("isPlayingSong");
 		if (isPlayingSong)
 		{
 			return;
 		}
+		
+		final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 		world.setParameter("isPlayingSong", true);
 		final int random = getRandom(1, 5);
 		final SkillHolder skill = new SkillHolder(5007, random);

@@ -16,7 +16,6 @@
  */
 package ai.areas.HotSprings;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -56,12 +55,12 @@ public class HotSprings extends Quest
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
-		if (Rnd.get(100) < DISEASE_CHANCE)
+		if (getRandom(100) < DISEASE_CHANCE)
 		{
 			tryToInfect(npc, attacker, MALARIA);
 		}
 		
-		if (Rnd.get(100) < DISEASE_CHANCE)
+		if (getRandom(100) < DISEASE_CHANCE)
 		{
 			switch (npc.getNpcId())
 			{

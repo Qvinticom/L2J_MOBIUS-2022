@@ -16,7 +16,6 @@
  */
 package quests.Q00697_DefendTheHallOfErosion;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.SoIManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -85,7 +84,7 @@ public class Q00697_DefendTheHallOfErosion extends Quest
 				}
 				else if (qs.isCond(1) && (qs.getInt("defenceDone") != 0))
 				{
-					giveItems(player, VESPER_STONE, Rnd.get(12, 20));
+					giveItems(player, VESPER_STONE, getRandom(12, 20));
 					qs.unset("defenceDone");
 					qs.exitQuest(true);
 					htmltext = "32603-05.html";

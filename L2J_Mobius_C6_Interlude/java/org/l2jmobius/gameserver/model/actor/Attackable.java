@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.enums.AbsorbCrystalType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2jmobius.gameserver.instancemanager.EventDropManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
@@ -64,8 +65,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.script.EventDroplist;
-import org.l2jmobius.gameserver.script.EventDroplist.DateDrop;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -635,7 +634,8 @@ public class Attackable extends Npc
 			doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
 			
 			// Manage drop of Special Events created by GM for a defined period
-			doEventDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
+			EventDropManager.getInstance().doEventDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker, this);
+			
 			if (!_mustGiveExpSp)
 			{
 				return;
@@ -2219,69 +2219,6 @@ public class Attackable extends Npc
 				else
 				{
 					dropItem(player, item);
-				}
-			}
-		}
-	}
-	
-	/**
-	 * Manage Special Events drops created by GM for a defined period.<br>
-	 * <br>
-	 * <b><u>Concept</u>:</b><br>
-	 * <br>
-	 * During a Special Event all Attackable can drop extra Items. Those extra Items are defined in the table <b>allNpcDateDrops</b> of the EventDroplist. Each Special Event has a start and end date to stop to drop extra Items automaticaly.<br>
-	 * <br>
-	 * <b><u>Actions</u> : <i>If an extra drop must be generated</i></b><br>
-	 * <li>Get an Item Identifier (random) from the DateDrop Item table of this Event</li>
-	 * <li>Get the Item quantity dropped (random)</li>
-	 * <li>Create this or these Item corresponding to this Item Identifier</li>
-	 * <li>If the autoLoot mode is actif and if the Creature that has killed the Attackable is a Player, give this or these Item(s) to the Player that has killed the Attackable</li>
-	 * <li>If the autoLoot mode isn't actif or if the Creature that has killed the Attackable is not a Player, add this or these Item(s) in the world as a visible object at the position where mob was last</li><br>
-	 * @param lastAttacker The Creature that has killed the Attackable
-	 */
-	public void doEventDrop(Creature lastAttacker)
-	{
-		Player player = null;
-		if (lastAttacker instanceof Player)
-		{
-			player = (Player) lastAttacker;
-		}
-		else if (lastAttacker instanceof Summon)
-		{
-			player = ((Summon) lastAttacker).getOwner();
-		}
-		
-		if (player == null)
-		{
-			return; // Don't drop anything if the last attacker or owner isn't Player
-		}
-		
-		if ((player.getLevel() - getLevel()) > 9)
-		{
-			return;
-		}
-		
-		// Go through DateDrop of EventDroplist allNpcDateDrops within the date range
-		for (DateDrop drop : EventDroplist.getInstance().getAllDrops())
-		{
-			if (Rnd.get(DropData.MAX_CHANCE) < drop.chance)
-			{
-				final ItemHolder item = new ItemHolder(drop.items[Rnd.get(drop.items.length)], Rnd.get(drop.min, drop.max));
-				if (Config.AUTO_LOOT)
-				{
-					final ItemTemplate itemTemplate = ItemTable.getInstance().getTemplate(item.getId());
-					if (!player.getInventory().validateCapacity(itemTemplate))
-					{
-						dropItem(player, item);
-					}
-					else
-					{
-						player.doAutoLoot(this, item); // Give this or these Item(s) to the Player that has killed the Attackable
-					}
-				}
-				else
-				{
-					dropItem(player, item); // drop the item on the ground
 				}
 			}
 		}

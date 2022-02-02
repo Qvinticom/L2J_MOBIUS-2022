@@ -26,11 +26,9 @@ import java.util.List;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.actor.instance.Decoy;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -51,10 +49,10 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private static final int FRINTEZZA_DAEMON_MORPH = 5018;
 	private static final int FRINTEZZA_DAEMON_FIELD = 5019;
 	// Misc
+	private static final int RANGED_SKILL_MIN_COOLTIME = 60000; // 1 minute
 	private Creature _target;
 	private Skill _skill;
 	private long _lastRangedSkillTime;
-	private final int _rangedSkillMinCoolTime = 60000; // 1 minute
 	
 	public ScarletVanHalisha()
 	{
@@ -69,7 +67,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "attack":
+			case "ATTACK":
 			{
 				if (npc != null)
 				{
@@ -77,7 +75,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 				break;
 			}
-			case "random_target":
+			case "RANDOM_TARGET":
 			{
 				_target = getRandomTarget(npc, null);
 				break;
@@ -96,16 +94,16 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isSummon)
 	{
-		startQuestTimer("random_Target", 5000, npc, null, true);
-		startQuestTimer("attack", 500, npc, null, true);
+		startQuestTimer("RANDOM_TARGET", 5000, npc, null, true);
+		startQuestTimer("ATTACK", 500, npc, null, true);
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		cancelQuestTimers("attack");
-		cancelQuestTimers("random_Target");
+		cancelQuestTimers("ATTACK");
+		cancelQuestTimers("RANDOM_TARGET");
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -146,11 +144,11 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_FIELD, 1);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_MORPH, 1);
 				}
@@ -173,12 +171,12 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			return;
 		}
+		
 		if ((getRandom(100) < 30) || (_target == null) || _target.isDead())
 		{
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);
 		}
-		final Creature target = _target;
 		Skill skill = _skill;
 		if (skill == null)
 		{
@@ -190,6 +188,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			return;
 		}
 		
+		final Creature target = _target;
 		if ((target == null) || target.isDead())
 		{
 			// npc.setCastingNow(false);
@@ -215,65 +214,54 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private Creature getRandomTarget(Npc npc, Skill skill)
 	{
 		final List<Creature> result = new ArrayList<>();
+		for (Player obj : npc.getInstanceWorld().getPlayers())
 		{
-			for (WorldObject obj : npc.getInstanceWorld().getPlayers())
+			if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 			{
-				if (obj.isPlayable() || (obj instanceof Decoy))
+				continue;
+			}
+			
+			if (((obj.getZ() < (npc.getZ() - 100)) && (obj.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+			{
+				continue;
+			}
+			
+			int skillRange = 150;
+			if (skill != null)
+			{
+				switch (skill.getId())
 				{
-					if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
+					case FRINTEZZA_DAEMON_ATTACK:
 					{
-						continue;
+						skillRange = 150;
+						break;
 					}
-					
-					if (((((Creature) obj).getZ() < (npc.getZ() - 100)) && (((Creature) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
+					case FRINTEZZA_DAEMON_CHARGE:
 					{
-						continue;
+						skillRange = 400;
+						break;
+					}
+					case YOKE_OF_SCARLET:
+					{
+						skillRange = 200;
+						break;
+					}
+					case FRINTEZZA_DAEMON_MORPH:
+					case FRINTEZZA_DAEMON_FIELD:
+					{
+						_lastRangedSkillTime = Chronos.currentTimeMillis();
+						skillRange = 550;
+						break;
 					}
 				}
-				if (obj.isPlayable() || (obj instanceof Decoy))
+				
+				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
 				{
-					int skillRange = 150;
-					if (skill != null)
-					{
-						switch (skill.getId())
-						{
-							case FRINTEZZA_DAEMON_ATTACK:
-							{
-								skillRange = 150;
-								break;
-							}
-							case FRINTEZZA_DAEMON_CHARGE:
-							{
-								skillRange = 400;
-								break;
-							}
-							case YOKE_OF_SCARLET:
-							{
-								skillRange = 200;
-								break;
-							}
-							case FRINTEZZA_DAEMON_MORPH:
-							case FRINTEZZA_DAEMON_FIELD:
-							{
-								_lastRangedSkillTime = Chronos.currentTimeMillis();
-								skillRange = 550;
-								break;
-							}
-						}
-					}
-					if (Util.checkIfInRange(skillRange, npc, obj, true) && !((Creature) obj).isDead())
-					{
-						result.add((Creature) obj);
-					}
+					result.add(obj);
 				}
 			}
 		}
-		if (!result.isEmpty() && (result.size() != 0))
-		{
-			final Object[] characters = result.toArray();
-			return (Creature) characters[getRandom(characters.length)];
-		}
-		return null;
+		return getRandomEntry(result);
 	}
 	
 	public static void main(String[] args)

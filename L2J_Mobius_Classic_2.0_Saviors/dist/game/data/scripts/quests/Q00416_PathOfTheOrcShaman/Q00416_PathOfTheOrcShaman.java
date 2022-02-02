@@ -68,13 +68,13 @@ public class Q00416_PathOfTheOrcShaman extends Quest
 	private static final Map<Integer, ItemChanceHolder> MOBS = new HashMap<>();
 	static
 	{
-		MOBS.put(20415, new ItemChanceHolder(FIRST_FIERY_EGG, 1.0, 1)); // scarlet_salamander
-		MOBS.put(20478, new ItemChanceHolder(KASHA_BLADE_SPIDER_HUSK, 1.0, 1)); // kasha_blade_spider
-		MOBS.put(20479, new ItemChanceHolder(KASHA_BEAR_PELT, 1.0, 1)); // kasha_bear
-		MOBS.put(20335, new ItemChanceHolder(GRIZZLY_BLOOD, 1.0, 6)); // grizzly_bear
-		MOBS.put(20038, new ItemChanceHolder(DURKA_PARASITE, 1.0, 9)); // poison_spider
-		MOBS.put(20043, new ItemChanceHolder(DURKA_PARASITE, 1.0, 9)); // bind_poison_spider
-		MOBS.put(27056, new ItemChanceHolder(DURKA_PARASITE, 1.0, 9)); // durka_spirit
+		MOBS.put(20415, new ItemChanceHolder(FIRST_FIERY_EGG, 1, 1)); // scarlet_salamander
+		MOBS.put(20478, new ItemChanceHolder(KASHA_BLADE_SPIDER_HUSK, 1, 1)); // kasha_blade_spider
+		MOBS.put(20479, new ItemChanceHolder(KASHA_BEAR_PELT, 1, 1)); // kasha_bear
+		MOBS.put(20335, new ItemChanceHolder(GRIZZLY_BLOOD, 1, 6)); // grizzly_bear
+		MOBS.put(20038, new ItemChanceHolder(DURKA_PARASITE, 1, 9)); // poison_spider
+		MOBS.put(20043, new ItemChanceHolder(DURKA_PARASITE, 1, 9)); // bind_poison_spider
+		MOBS.put(27056, new ItemChanceHolder(DURKA_PARASITE, 1, 9)); // durka_spirit
 	}
 	
 	public Q00416_PathOfTheOrcShaman()

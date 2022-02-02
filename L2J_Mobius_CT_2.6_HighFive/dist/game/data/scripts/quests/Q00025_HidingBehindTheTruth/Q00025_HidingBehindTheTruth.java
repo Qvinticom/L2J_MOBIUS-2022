@@ -18,7 +18,6 @@ package quests.Q00025_HidingBehindTheTruth;
 
 import java.util.HashMap;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
@@ -260,7 +259,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 				{
 					htmltext = "31533-03.html";
 				}
-				else if (Rnd.get(60) > qs.getMemoStateEx(1))
+				else if (getRandom(60) > qs.getMemoStateEx(1))
 				{
 					qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 20);
 					qs.setMemoStateEx(npc.getId(), 1);

@@ -184,7 +184,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, PUNCHERS_SHARD, 1, 10, 1.0, true) && (getQuestItemsCount(killer, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, PUNCHERS_SHARD, 1, 10, 1, true) && (getQuestItemsCount(killer, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -201,7 +201,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, NOBLE_ANTS_FEELER, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, NOBLE_ANTS_FEELER, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -218,7 +218,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, DEAD_SEEKER_FANG, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, DEAD_SEEKER_FANG, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -235,7 +235,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, EXCUROS_SKIN, 1, 3, 1.0, true) && (getQuestItemsCount(killer, KRATORS_SHARD, LAKINS_MACE, GRANDIS_SKIN, TIMAK_ORCS_BELT) == 12))
+						if (giveItemRandomly(killer, npc, EXCUROS_SKIN, 1, 3, 1, true) && (getQuestItemsCount(killer, KRATORS_SHARD, LAKINS_MACE, GRANDIS_SKIN, TIMAK_ORCS_BELT) == 12))
 						{
 							if (i0 >= 5)
 							{
@@ -252,7 +252,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, KRATORS_SHARD, 1, 3, 1.0, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, LAKINS_MACE, GRANDIS_SKIN, TIMAK_ORCS_BELT) == 12))
+						if (giveItemRandomly(killer, npc, KRATORS_SHARD, 1, 3, 1, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, LAKINS_MACE, GRANDIS_SKIN, TIMAK_ORCS_BELT) == 12))
 						{
 							if (i0 >= 5)
 							{
@@ -269,7 +269,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, DRONES_CHITIN, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, DRONES_CHITIN, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -286,7 +286,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, OVERLORD_NECKLACE, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, OVERLORD_NECKLACE, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -303,7 +303,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, FETTERED_SOULS_CHAIN, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, FETTERED_SOULS_CHAIN, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -320,7 +320,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, GRANDIS_SKIN, 1, 3, 1.0, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, KRATORS_SHARD, LAKINS_MACE, TIMAK_ORCS_BELT) == 12))
+						if (giveItemRandomly(killer, npc, GRANDIS_SKIN, 1, 3, 1, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, KRATORS_SHARD, LAKINS_MACE, TIMAK_ORCS_BELT) == 12))
 						{
 							if (i0 >= 5)
 							{
@@ -337,7 +337,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, ENCHANTED_EYE_MEAT, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, ENCHANTED_EYE_MEAT, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -354,7 +354,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, CHIEDS_AMULET, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, CHIEDS_AMULET, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -371,7 +371,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, TIMAK_ORCS_BELT, 1, 3, 1.0, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, KRATORS_SHARD, LAKINS_MACE, GRANDIS_SKIN) == 12))
+						if (giveItemRandomly(killer, npc, TIMAK_ORCS_BELT, 1, 3, 1, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, KRATORS_SHARD, LAKINS_MACE, GRANDIS_SKIN) == 12))
 						{
 							if (i0 >= 5)
 							{
@@ -388,7 +388,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, TAMRIN_ORCS_RING, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_ARROW) == 90))
+						if (giveItemRandomly(killer, npc, TAMRIN_ORCS_RING, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_ARROW) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -405,7 +405,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, TAMRIN_ORCS_ARROW, 1, 10, 1.0, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING) == 90))
+						if (giveItemRandomly(killer, npc, TAMRIN_ORCS_ARROW, 1, 10, 1, true) && (getQuestItemsCount(killer, PUNCHERS_SHARD, NOBLE_ANTS_FEELER, DRONES_CHITIN, DEAD_SEEKER_FANG, OVERLORD_NECKLACE, FETTERED_SOULS_CHAIN, CHIEDS_AMULET, ENCHANTED_EYE_MEAT, TAMRIN_ORCS_RING) == 90))
 						{
 							if (i0 >= 9)
 							{
@@ -422,7 +422,7 @@ public class Q00222_TestOfTheDuelist extends Quest
 					{
 						final int i0 = qs.getMemoStateEx(1);
 						qs.setMemoStateEx(1, i0 + 1);
-						if (giveItemRandomly(killer, npc, LAKINS_MACE, 1, 3, 1.0, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, KRATORS_SHARD, GRANDIS_SKIN, TIMAK_ORCS_BELT) == 12))
+						if (giveItemRandomly(killer, npc, LAKINS_MACE, 1, 3, 1, true) && (getQuestItemsCount(killer, EXCUROS_SKIN, KRATORS_SHARD, GRANDIS_SKIN, TIMAK_ORCS_BELT) == 12))
 						{
 							if (i0 >= 5)
 							{

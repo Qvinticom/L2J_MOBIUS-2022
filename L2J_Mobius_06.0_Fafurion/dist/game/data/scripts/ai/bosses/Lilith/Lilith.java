@@ -22,7 +22,6 @@ import java.util.List;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -306,7 +305,7 @@ public class Lilith extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, Player caster, Skill skill, WorldObject[] targets, boolean isPet)
 	{
-		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && Rnd.nextBoolean())
+		if (CommonUtil.contains(LILITH_MINIONS, npc.getId()) && getRandomBoolean())
 		{
 			if (skill.getAbnormalType() == AbnormalType.HP_RECOVER)
 			{

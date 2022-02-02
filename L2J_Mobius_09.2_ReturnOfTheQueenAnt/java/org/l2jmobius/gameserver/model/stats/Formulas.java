@@ -1419,7 +1419,7 @@ public class Formulas
 			}
 			case SHIELD_DEFENSE_PERFECT_BLOCK:
 			{
-				return 1.;
+				return 1;
 			}
 		}
 		

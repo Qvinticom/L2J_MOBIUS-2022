@@ -19,7 +19,6 @@ package quests.Q328_SenseForBusiness;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -131,7 +130,7 @@ public class Q328_SenseForBusiness extends Quest
 		final int chance = CHANCES.get(npcId);
 		if (npcId < 20069)
 		{
-			final int rnd = Rnd.get(100);
+			final int rnd = getRandom(100);
 			if (rnd < (chance + 1))
 			{
 				st.dropItemsAlways((rnd < chance) ? MONSTER_EYE_CARCASS : MONSTER_EYE_LENS, 1, 0);

@@ -19,7 +19,6 @@ package quests.Q373_SupplierOfReagents;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -240,7 +239,7 @@ public class Q373_SupplierOfReagents extends Quest
 						continue;
 					}
 					
-					if (Rnd.get(100) < temperature[1])
+					if (getRandom(100) < temperature[1])
 					{
 						st.giveItems(formula[3], temperature[2]);
 						return "31149-12-" + formula[3] + ".htm";
@@ -308,7 +307,7 @@ public class Q373_SupplierOfReagents extends Quest
 		}
 		else
 		{
-			final int random = Rnd.get(1000);
+			final int random = getRandom(1000);
 			if (random < drop[3])
 			{
 				st.dropItemsAlways((random < drop[2]) ? drop[0] : drop[1], 1, 0);

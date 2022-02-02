@@ -153,7 +153,7 @@ public class Q00831_SayhasScheme extends Quest
 		for (Player member : members)
 		{
 			final QuestState qs = getQuestState(member, false);
-			if ((qs != null) && qs.isCond(1) && member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && giveItemRandomly(member, npc, DESTROYED_MARK_FRAGMENT, 1, 10, 1.0, true))
+			if ((qs != null) && qs.isCond(1) && member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && giveItemRandomly(member, npc, DESTROYED_MARK_FRAGMENT, 1, 10, 1, true))
 			{
 				qs.setCond(2, true);
 			}

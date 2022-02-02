@@ -19,7 +19,6 @@ package quests.Q327_RecoverTheFarmland;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -133,7 +132,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				if (st.getQuestItemsCount(CLAY_URN_FRAGMENT) >= 5)
 				{
 					st.takeItems(CLAY_URN_FRAGMENT, 5);
-					if (Rnd.get(6) < 5)
+					if (getRandom(6) < 5)
 					{
 						htmltext = "30313-03.htm";
 						st.rewardItems(ANCIENT_CLAY_URN, 1);
@@ -150,7 +149,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				if (st.getQuestItemsCount(BRASS_TRINKET_PIECE) >= 5)
 				{
 					st.takeItems(BRASS_TRINKET_PIECE, 5);
-					if (Rnd.get(7) < 6)
+					if (getRandom(7) < 6)
 					{
 						htmltext = "30313-05.htm";
 						st.rewardItems(ANCIENT_BRASS_TIARA, 1);
@@ -167,7 +166,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				if (st.getQuestItemsCount(BRONZE_MIRROR_PIECE) >= 5)
 				{
 					st.takeItems(BRONZE_MIRROR_PIECE, 5);
-					if (Rnd.get(7) < 6)
+					if (getRandom(7) < 6)
 					{
 						htmltext = "30313-07.htm";
 						st.rewardItems(ANCIENT_BRONZE_MIRROR, 1);
@@ -184,7 +183,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				if (st.getQuestItemsCount(JADE_NECKLACE_BEAD) >= 5)
 				{
 					st.takeItems(JADE_NECKLACE_BEAD, 5);
-					if (Rnd.get(8) < 7)
+					if (getRandom(8) < 7)
 					{
 						htmltext = "30313-09.htm";
 						st.rewardItems(ANCIENT_JADE_NECKLACE, 1);
@@ -288,7 +287,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				else
 				{
 					st.takeItems(ANCIENT_CLAY_URN, 1);
-					st.rewardItems(SOULSHOT_D, 70 + Rnd.get(41));
+					st.rewardItems(SOULSHOT_D, 70 + getRandom(41));
 				}
 				break;
 			}
@@ -301,7 +300,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				else
 				{
 					st.takeItems(ANCIENT_BRASS_TIARA, 1);
-					final int rnd = Rnd.get(100);
+					final int rnd = getRandom(100);
 					if (rnd < 40)
 					{
 						st.rewardItems(HEALING_POTION, 1);
@@ -326,7 +325,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				else
 				{
 					st.takeItems(ANCIENT_BRONZE_MIRROR, 1);
-					st.rewardItems((Rnd.get(100) < 59) ? SCROLL_OF_ESCAPE : SCROLL_OF_RESURRECTION, 1);
+					st.rewardItems((getRandom(100) < 59) ? SCROLL_OF_ESCAPE : SCROLL_OF_RESURRECTION, 1);
 				}
 				break;
 			}
@@ -339,7 +338,7 @@ public class Q327_RecoverTheFarmland extends Quest
 				else
 				{
 					st.takeItems(ANCIENT_JADE_NECKLACE, 1);
-					st.rewardItems(SPIRITSHOT_D, 50 + Rnd.get(41));
+					st.rewardItems(SPIRITSHOT_D, 50 + getRandom(41));
 				}
 				break;
 			}
@@ -449,7 +448,7 @@ public class Q327_RecoverTheFarmland extends Quest
 			if (npcData[0] == npc.getNpcId())
 			{
 				st.dropItemsAlways(npcData[2], 1, -1);
-				st.dropItems(Rnd.get(1848, 1851), 1, 0, npcData[1]);
+				st.dropItems(getRandom(1848, 1851), 1, 0, npcData[1]);
 				break;
 			}
 		}

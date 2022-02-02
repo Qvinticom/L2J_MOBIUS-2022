@@ -19,7 +19,6 @@ package quests.Q663_SeductiveWhispers;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -175,8 +174,8 @@ public class Q663_SeductiveWhispers extends Quest
 					final int i0 = st.getInt("stateEx");
 					final int i1 = i0 % 10;
 					final int i2 = (i0 - i1) / 10;
-					final int param1 = Rnd.get(2) + 1;
-					final int param2 = Rnd.get(5) + 1;
+					final int param1 = getRandom(2) + 1;
+					final int param2 = getRandom(5) + 1;
 					final int i5 = state / 10;
 					final int param3 = (param1 * 10) + param2;
 					if (param1 == i2)
@@ -242,8 +241,8 @@ public class Q663_SeductiveWhispers extends Quest
 					final int i0 = st.getInt("stateEx");
 					final int i1 = i0 % 10;
 					final int i2 = (i0 - i1) / 10;
-					final int param1 = Rnd.get(2) + 1;
-					final int param2 = Rnd.get(5) + 1;
+					final int param1 = getRandom(2) + 1;
+					final int param2 = getRandom(5) + 1;
 					final int param3 = (param1 * 10) + param2;
 					if (param1 == i2)
 					{
@@ -313,12 +312,12 @@ public class Q663_SeductiveWhispers extends Quest
 					else if (round == 4)
 					{
 						st.rewardItems(ADENA, 388000);
-						st.rewardItems(RECIPES[Rnd.get(RECIPES.length)], 1);
+						st.rewardItems(RECIPES[getRandom(RECIPES.length)], 1);
 					}
 					else if (round == 5)
 					{
 						st.rewardItems(ADENA, 675000);
-						st.rewardItems(BLADES[Rnd.get(BLADES.length)], 1);
+						st.rewardItems(BLADES[getRandom(BLADES.length)], 1);
 					}
 					else if (round == 6)
 					{
@@ -357,8 +356,8 @@ public class Q663_SeductiveWhispers extends Quest
 					final int i0 = st.getInt("stateEx");
 					final int i1 = i0 % 10;
 					final int i2 = (i0 - i1) / 10;
-					final int param1 = Rnd.get(2) + 1;
-					final int param2 = Rnd.get(5) + 1;
+					final int param1 = getRandom(2) + 1;
+					final int param2 = getRandom(5) + 1;
 					final int param3 = (param1 * 10) + param2;
 					if (param1 == i2)
 					{
@@ -403,8 +402,8 @@ public class Q663_SeductiveWhispers extends Quest
 					final int i0 = st.getInt("stateEx");
 					final int i1 = i0 % 10;
 					final int i2 = (i0 - i1) / 10;
-					final int param1 = Rnd.get(2) + 1;
-					final int param2 = Rnd.get(5) + 1;
+					final int param1 = getRandom(2) + 1;
+					final int param2 = getRandom(5) + 1;
 					final int param3 = (param1 * 10) + param2;
 					if (param1 == i2)
 					{

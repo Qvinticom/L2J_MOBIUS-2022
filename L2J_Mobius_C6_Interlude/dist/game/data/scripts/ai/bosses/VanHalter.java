@@ -32,7 +32,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
@@ -1018,7 +1017,7 @@ public class VanHalter extends Quest
 			targets.put(i, pc);
 		}
 		
-		_vanHalter.reduceCurrentHp(1, targets.get(Rnd.get(1, i)));
+		_vanHalter.reduceCurrentHp(1, targets.get(getRandom(1, i)));
 	}
 	
 	public void callRoyalGuardHelper()
@@ -1251,7 +1250,7 @@ public class VanHalter extends Quest
 		final Integer status = GrandBossManager.getInstance().getBossStatus(29062);
 		if (status != INTERVAL)
 		{
-			final long interval = Rnd.get(Config.HPH_FIXINTERVALOFHALTER, Config.HPH_FIXINTERVALOFHALTER + Config.HPH_RANDOMINTERVALOFHALTER)/* * 3600000 */;
+			final long interval = getRandom(Config.HPH_FIXINTERVALOFHALTER, Config.HPH_FIXINTERVALOFHALTER + Config.HPH_RANDOMINTERVALOFHALTER)/* * 3600000 */;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(29062);
 			info.set("respawn_time", (Chronos.currentTimeMillis() + interval));
 			GrandBossManager.getInstance().setStatSet(29062, info);

@@ -35,6 +35,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -47,9 +48,16 @@ import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.item.ItemTemplate;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.scripting.ManagedScript;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
@@ -1409,8 +1417,8 @@ public class Quest extends ManagedScript
 	 * @param player the instance of a player whose party is to be searched
 	 * @param variable a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value
-	 * @return Player: Player for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
-	 *         player, or if no target exists, 1500 distance from the player itself.
+	 * @return Player: Player for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference player, or if no
+	 *         target exists, 1500 distance from the player itself.
 	 */
 	public Player getRandomPartyMember(Player player, String variable, String value)
 	{
@@ -1881,6 +1889,387 @@ public class Quest extends ManagedScript
 			// Deleting it for offline members...
 			deleteQuestToOfflineMembers(player.getClanId());
 		}
+	}
+	
+	/**
+	 * Check for an item in player's inventory.
+	 * @param player the player whose inventory to check for quest items
+	 * @param itemId the ID of the item to check for
+	 * @return {@code true} if the item exists in player's inventory, {@code false} otherwise
+	 */
+	public static boolean hasQuestItems(Player player, int itemId)
+	{
+		return player.getInventory().getItemByItemId(itemId) != null;
+	}
+	
+	/**
+	 * Check for multiple items in player's inventory.
+	 * @param player the player whose inventory to check for quest items
+	 * @param itemIds a list of item IDs to check for
+	 * @return {@code true} if all items exist in player's inventory, {@code false} otherwise
+	 */
+	public static boolean hasQuestItems(Player player, int... itemIds)
+	{
+		if ((itemIds == null) || (itemIds.length == 0))
+		{
+			return false;
+		}
+		final PlayerInventory inv = player.getInventory();
+		for (int itemId : itemIds)
+		{
+			if (inv.getItemByItemId(itemId) == null)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * Get the amount of an item in player's inventory.
+	 * @param player the player whose inventory to check
+	 * @param itemId the ID of the item whose amount to get
+	 * @return the amount of the specified item in player's inventory
+	 */
+	public static long getQuestItemsCount(Player player, int itemId)
+	{
+		return player.getInventory().getInventoryItemCount(itemId, -1);
+	}
+	
+	/**
+	 * Get the total amount of all specified items in player's inventory.
+	 * @param player the player whose inventory to check
+	 * @param itemIds a list of IDs of items whose amount to get
+	 * @return the summary amount of all listed items in player's inventory
+	 */
+	public long getQuestItemsCount(Player player, int... itemIds)
+	{
+		long count = 0;
+		for (Item item : player.getInventory().getItems())
+		{
+			if (item == null)
+			{
+				continue;
+			}
+			
+			for (int itemId : itemIds)
+			{
+				if (item.getItemId() == itemId)
+				{
+					if ((count + item.getCount()) > Long.MAX_VALUE)
+					{
+						return Long.MAX_VALUE;
+					}
+					count += item.getCount();
+				}
+			}
+		}
+		return count;
+	}
+	
+	/**
+	 * Check if the player has the specified item in his inventory.
+	 * @param player the player whose inventory to check for the specified item
+	 * @param item the {@link ItemHolder} object containing the ID and count of the item to check
+	 * @return {@code true} if the player has the required count of the item
+	 */
+	protected static boolean hasItem(Player player, ItemHolder item)
+	{
+		return hasItem(player, item, true);
+	}
+	
+	/**
+	 * Check if the player has the required count of the specified item in his inventory.
+	 * @param player the player whose inventory to check for the specified item
+	 * @param item the {@link ItemHolder} object containing the ID and count of the item to check
+	 * @param checkCount if {@code true}, check if each item is at least of the count specified in the ItemHolder,<br>
+	 *            otherwise check only if the player has the item at all
+	 * @return {@code true} if the player has the item
+	 */
+	protected static boolean hasItem(Player player, ItemHolder item, boolean checkCount)
+	{
+		if (item == null)
+		{
+			return false;
+		}
+		if (checkCount)
+		{
+			return getQuestItemsCount(player, item.getId()) >= item.getCount();
+		}
+		return hasQuestItems(player, item.getId());
+	}
+	
+	/**
+	 * Take an amount of a specified item from player's inventory.
+	 * @param player the player whose item to take
+	 * @param itemId the ID of the item to take
+	 * @param amount the amount to take
+	 * @return {@code true} if any items were taken, {@code false} otherwise
+	 */
+	public static boolean takeItems(Player player, int itemId, int amount)
+	{
+		final Collection<Item> items = player.getInventory().getAllItemsByItemId(itemId);
+		if (amount < 0)
+		{
+			items.forEach(i -> takeItem(player, i, i.getCount()));
+		}
+		else
+		{
+			int currentCount = 0;
+			for (Item i : items)
+			{
+				int toDelete = i.getCount();
+				if ((currentCount + toDelete) > amount)
+				{
+					toDelete = amount - currentCount;
+				}
+				if (toDelete > 0)
+				{
+					takeItem(player, i, toDelete);
+				}
+				currentCount += toDelete;
+			}
+		}
+		return true;
+	}
+	
+	private static boolean takeItem(Player player, Item item, int toDelete)
+	{
+		if (item.isEquipped())
+		{
+			final InventoryUpdate iu = new InventoryUpdate();
+			for (Item itm : player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart()))
+			{
+				iu.addModifiedItem(itm);
+			}
+			player.sendPacket(iu);
+			player.broadcastUserInfo();
+		}
+		return player.destroyItemByItemId("Quest", item.getItemId(), toDelete, player, true);
+	}
+	
+	/**
+	 * Take a set amount of a specified item from player's inventory.
+	 * @param player the player whose item to take
+	 * @param holder the {@link ItemHolder} object containing the ID and count of the item to take
+	 * @return {@code true} if the item was taken, {@code false} otherwise
+	 */
+	protected static boolean takeItem(Player player, ItemHolder holder)
+	{
+		return (holder != null) && takeItems(player, holder.getId(), holder.getCount());
+	}
+	
+	/**
+	 * Take an amount of all specified items from player's inventory.
+	 * @param player the player whose items to take
+	 * @param amount the amount to take of each item
+	 * @param itemIds a list or an array of IDs of the items to take
+	 * @return {@code true} if all items were taken, {@code false} otherwise
+	 */
+	public static boolean takeItems(Player player, int amount, int... itemIds)
+	{
+		boolean check = true;
+		if (itemIds != null)
+		{
+			for (int item : itemIds)
+			{
+				check &= takeItems(player, item, amount);
+			}
+		}
+		return check;
+	}
+	
+	/**
+	 * Give a reward to player using multipliers.
+	 * @param player the player to whom to give the item
+	 * @param holder
+	 */
+	public static void rewardItems(Player player, ItemHolder holder)
+	{
+		rewardItems(player, holder.getId(), holder.getCount());
+	}
+	
+	/**
+	 * Give a reward to player using multipliers.
+	 * @param player the player to whom to give the item
+	 * @param itemId the ID of the item to give
+	 * @param countValue the amount of items to give
+	 */
+	public static void rewardItems(Player player, int itemId, int countValue)
+	{
+		if (countValue <= 0)
+		{
+			return;
+		}
+		
+		final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+		if (item == null)
+		{
+			return;
+		}
+		
+		int count = countValue;
+		if (itemId == 57)
+		{
+			// TODO: Config.RATE_QUEST_REWARD_ADENA
+		}
+		else
+		{
+			count *= Config.RATE_QUESTS_REWARD;
+		}
+		
+		// Add items to player's inventory
+		final Item itemInstance = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		if (itemInstance == null)
+		{
+			return;
+		}
+		
+		sendItemGetMessage(player, itemInstance, count);
+	}
+	
+	/**
+	 * Send the system message and the status update packets to the player.
+	 * @param player the player that has got the item
+	 * @param item the item obtain by the player
+	 * @param count the item count
+	 */
+	private static void sendItemGetMessage(Player player, Item item, int count)
+	{
+		// If item for reward is gold, send message of gold reward to client
+		if (item.getItemId() == 57)
+		{
+			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			smsg.addNumber(count);
+			player.sendPacket(smsg);
+		}
+		else // Otherwise, send message of object reward to client
+		{
+			if (count > 1)
+			{
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				smsg.addItemName(item.getItemId());
+				smsg.addNumber(count);
+				player.sendPacket(smsg);
+			}
+			else
+			{
+				final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				smsg.addItemName(item.getItemId());
+				player.sendPacket(smsg);
+			}
+		}
+		// send packets
+		final StatusUpdate su = new StatusUpdate(player);
+		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
+		player.sendPacket(su);
+	}
+	
+	/**
+	 * Give item/reward to the player
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 */
+	public static void giveItems(Player player, int itemId, int count)
+	{
+		giveItems(player, itemId, count, 0);
+	}
+	
+	/**
+	 * Give item/reward to the player
+	 * @param player
+	 * @param holder
+	 */
+	protected static void giveItems(Player player, ItemHolder holder)
+	{
+		giveItems(player, holder.getId(), holder.getCount());
+	}
+	
+	/**
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 * @param enchantlevel
+	 */
+	public static void giveItems(Player player, int itemId, int count, int enchantlevel)
+	{
+		if (count <= 0)
+		{
+			return;
+		}
+		
+		// Add items to player's inventory
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		if (item == null)
+		{
+			return;
+		}
+		
+		// set enchant level for item if that item is not adena
+		if ((enchantlevel > 0) && (itemId != 57))
+		{
+			item.setEnchantLevel(enchantlevel);
+		}
+		
+		sendItemGetMessage(player, item, count);
+	}
+	
+	/**
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 * @param attributeId
+	 * @param attributeLevel
+	 */
+	public static void giveItems(Player player, int itemId, int count, byte attributeId, int attributeLevel)
+	{
+		if (count <= 0)
+		{
+			return;
+		}
+		
+		// Add items to player's inventory
+		final Item item = player.getInventory().addItem("Quest", itemId, count, player, player.getTarget());
+		if (item == null)
+		{
+			return;
+		}
+		
+		sendItemGetMessage(player, item, count);
+	}
+	
+	/**
+	 * Get a random integer from 0 (inclusive) to {@code max} (exclusive).<br>
+	 * Use this method instead of importing {@link org.l2jmobius.commons.util.Rnd} utility.
+	 * @param max the maximum value for randomization
+	 * @return a random integer number from 0 to {@code max - 1}
+	 */
+	public static int getRandom(int max)
+	{
+		return Rnd.get(max);
+	}
+	
+	/**
+	 * Get a random integer from {@code min} (inclusive) to {@code max} (inclusive).<br>
+	 * Use this method instead of importing {@link org.l2jmobius.commons.util.Rnd} utility.
+	 * @param min the minimum value for randomization
+	 * @param max the maximum value for randomization
+	 * @return a random integer number from {@code min} to {@code max}
+	 */
+	public static int getRandom(int min, int max)
+	{
+		return Rnd.get(min, max);
+	}
+	
+	/**
+	 * Get a random boolean.<br>
+	 * Use this method instead of importing {@link org.l2jmobius.commons.util.Rnd} utility.
+	 * @return {@code true} or {@code false} randomly
+	 */
+	public static boolean getRandomBoolean()
+	{
+		return Rnd.nextBoolean();
 	}
 	
 	/**

@@ -16,7 +16,6 @@
  */
 package quests.Q416_PathToAnOrcShaman;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -464,7 +463,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 				if (st.isCond(9))
 				{
 					final int count = st.getQuestItemsCount(DURKA_PARASITE);
-					final int rnd = Rnd.get(10);
+					final int rnd = getRandom(10);
 					if (((count == 5) && (rnd < 1)) || (((count == 6) || (count == 7)) && (rnd < 2)) || (count >= 8))
 					{
 						st.playSound(QuestState.SOUND_BEFORE_BATTLE);
@@ -499,7 +498,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 						st.setCond(15);
 						st.playSound(QuestState.SOUND_MIDDLE);
 						
-						if (Rnd.get(3) < 2)
+						if (getRandom(3) < 2)
 						{
 							npc.broadcastNpcSay("My dear friend of " + player.getName() + ", who has gone on ahead of me!");
 						}
@@ -514,7 +513,7 @@ public class Q416_PathToAnOrcShaman extends Quest
 					st.setCond(17);
 					st.playSound(QuestState.SOUND_MIDDLE);
 					
-					if (Rnd.get(3) < 2)
+					if (getRandom(3) < 2)
 					{
 						npc.broadcastNpcSay("Listen to Tejakar Gandi, young Oroka! The spirit of the slain leopard is calling you, " + player.getName() + "!");
 					}

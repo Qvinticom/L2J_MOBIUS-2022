@@ -16,7 +16,6 @@
  */
 package quests.Q351_BlackSwan;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -162,7 +161,7 @@ public class Q351_BlackSwan extends Quest
 			return null;
 		}
 		
-		final int random = Rnd.get(4);
+		final int random = getRandom(4);
 		if (random < 3)
 		{
 			st.dropItemsAlways(LIZARD_FANG, (random < 2) ? 1 : 2, 0);

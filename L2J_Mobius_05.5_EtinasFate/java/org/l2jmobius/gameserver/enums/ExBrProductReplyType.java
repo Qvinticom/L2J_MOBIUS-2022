@@ -24,7 +24,7 @@ public enum ExBrProductReplyType implements IIdentifiable
 	LACK_OF_POINT(-1),
 	INVALID_PRODUCT(-2),
 	USER_CANCEL(-3),
-	INVENTROY_OVERFLOW(-4),
+	INVENTORY_OVERFLOW(-4),
 	CLOSED_PRODUCT(-5),
 	SERVER_ERROR(-6),
 	BEFORE_SALE_DATE(-7),

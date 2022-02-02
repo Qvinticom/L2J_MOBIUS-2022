@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -152,7 +151,7 @@ public class MemoryOfDisaster extends AbstractInstance
 		new Location(116925, -180420, -1200, 46585),
 		new Location(116656, -180461, -1240, 56363),
 	};
-	private static final Location DE_VILLAGE_START = new Location(10400, 17092, -4584, Rnd.get(65520));
+	private static final Location DE_VILLAGE_START = new Location(10400, 17092, -4584, getRandom(65520));
 	// Misc
 	private static final int FIRE_IN_DWARVEN_VILLAGE = 23120700;
 	private static final int TEMPLATE_ID = 200;
@@ -221,7 +220,7 @@ public class MemoryOfDisaster extends AbstractInstance
 						case "FIGHT":
 						{
 							addSpawn(npc, npc.getParameters().getInt("npcId"), npc.getLocation(), true, instance.getId());
-							switch (Rnd.get(3))
+							switch (getRandom(3))
 							{
 								case 0:
 								{
@@ -553,7 +552,7 @@ public class MemoryOfDisaster extends AbstractInstance
 			case "ATTACK_TIME":
 			{
 				final List<Npc> tentacles = npc.getInstanceWorld().getAliveNpcs(TENTACLE).stream().filter(n -> n.getVariables().getBoolean("isLeaderKiller", false)).collect(Collectors.toList());
-				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> addAttackDesire(n, tentacles.get(Rnd.get(tentacles.size()))));
+				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> addAttackDesire(n, tentacles.get(getRandom(tentacles.size()))));
 				break;
 			}
 			case "RUN_TIME":
@@ -561,7 +560,7 @@ public class MemoryOfDisaster extends AbstractInstance
 				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n ->
 				{
 					n.setRunning();
-					n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_RUN[Rnd.get(SHOUT_RUN.length)]);
+					n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_RUN[getRandom(SHOUT_RUN.length)]);
 					n.getAI().moveTo(DWARVES_MOVE_1);
 				});
 				break;
@@ -640,7 +639,7 @@ public class MemoryOfDisaster extends AbstractInstance
 			}
 			case "TIMER_ID_DIE":
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, SACRIFICED_DARK_ELF_SUICIDE_MESSAGES[Rnd.get(SACRIFICED_DARK_ELF_SUICIDE_MESSAGES.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, SACRIFICED_DARK_ELF_SUICIDE_MESSAGES[getRandom(SACRIFICED_DARK_ELF_SUICIDE_MESSAGES.length)]);
 				npc.doDie(npc);
 				DecayTaskManager.getInstance().cancel(npc);
 				break;
@@ -675,7 +674,7 @@ public class MemoryOfDisaster extends AbstractInstance
 			}
 			else if ((npc.getX() == DWARVES_MOVE_3.getX()) && (npc.getY() == DWARVES_MOVE_3.getY()))
 			{
-				addMoveToDesire(npc, DWARVES_MOVE_RANDOM[Rnd.get(DWARVES_MOVE_RANDOM.length)], 23);
+				addMoveToDesire(npc, DWARVES_MOVE_RANDOM[getRandom(DWARVES_MOVE_RANDOM.length)], 23);
 			}
 		}
 		switch (npc.getId())
@@ -864,7 +863,7 @@ public class MemoryOfDisaster extends AbstractInstance
 				}
 				else
 				{
-					dwarf.broadcastSay(ChatType.NPC_GENERAL, SHOUT_BRONK_DEATH[Rnd.get(SHOUT_BRONK_DEATH.length)]);
+					dwarf.broadcastSay(ChatType.NPC_GENERAL, SHOUT_BRONK_DEATH[getRandom(SHOUT_BRONK_DEATH.length)]);
 				}
 			}
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.UGH_IF_I_SEE_YOU_IN_THE_SPIRIT_WORLD_FIRST_ROUND_IS_ON_ME);
@@ -873,7 +872,7 @@ public class MemoryOfDisaster extends AbstractInstance
 		}
 		else if (npc.getId() == SILVERA)
 		{
-			npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_SILVERA_DEATH[Rnd.get(SHOUT_SILVERA_DEATH.length)]));
+			npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_SILVERA_DEATH[getRandom(SHOUT_SILVERA_DEATH.length)]));
 		}
 	}
 	
@@ -970,7 +969,7 @@ public class MemoryOfDisaster extends AbstractInstance
 		final Instance instance = receiver.getInstanceWorld();
 		if (isInInstance(instance) && event.equals("SCE_J4D_DARK_ELF_START"))
 		{
-			getTimers().addTimer("TIMER_ID_DIE", Rnd.get(60000) + 5000, receiver, null);
+			getTimers().addTimer("TIMER_ID_DIE", getRandom(60000) + 5000, receiver, null);
 		}
 		return super.onEventReceived(event, sender, receiver, reference);
 	}

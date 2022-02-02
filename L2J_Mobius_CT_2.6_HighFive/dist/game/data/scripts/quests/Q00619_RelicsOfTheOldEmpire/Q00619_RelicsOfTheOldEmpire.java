@@ -274,7 +274,7 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 			if (CommonUtil.contains(ARCHON_OF_HALISHA, npcId))
 			{
 				final int itemCount = ((getRandom(100) < 79) ? 4 : 3);
-				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, 1.0, true);
+				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, 1, true);
 			}
 			else
 			{

@@ -19,7 +19,6 @@ package quests.Q611_AllianceWithVarkaSilenos;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -348,7 +347,7 @@ public class Q611_AllianceWithVarkaSilenos extends Quest
 		
 		// Support for Q612.
 		QuestState st = partyMember.getQuestState(Q612_WarWithKetraOrcs.class.getSimpleName());
-		if ((st != null) && Rnd.nextBoolean() && CHANCES_MOLAR.containsKey(npcId))
+		if ((st != null) && getRandomBoolean() && CHANCES_MOLAR.containsKey(npcId))
 		{
 			st.dropItems(MOLAR_OF_KETRA_ORC, 1, 0, CHANCES_MOLAR.get(npcId));
 			return null;

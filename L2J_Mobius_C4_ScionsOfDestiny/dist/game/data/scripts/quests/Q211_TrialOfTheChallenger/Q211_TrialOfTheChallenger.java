@@ -16,7 +16,6 @@
  */
 package quests.Q211_TrialOfTheChallenger;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -108,12 +107,12 @@ public class Q211_TrialOfTheChallenger extends Quest
 			{
 				if (st.hasQuestItems(BROKEN_KEY))
 				{
-					if (Rnd.get(10) < 2)
+					if (getRandom(10) < 2)
 					{
 						htmltext = "30647-03.htm";
 						st.playSound(QuestState.SOUND_JACKPOT);
 						st.takeItems(BROKEN_KEY, 1);
-						final int chance = Rnd.get(100);
+						final int chance = getRandom(100);
 						if (chance > 90)
 						{
 							st.rewardItems(BRIGANDINE_GAUNTLETS_PATTERN, 1);
@@ -140,7 +139,7 @@ public class Q211_TrialOfTheChallenger extends Quest
 					{
 						htmltext = "30647-02.htm";
 						st.takeItems(BROKEN_KEY, 1);
-						st.rewardItems(ADENA, Rnd.get(1, 1000));
+						st.rewardItems(ADENA, getRandom(1, 1000));
 					}
 				}
 				break;

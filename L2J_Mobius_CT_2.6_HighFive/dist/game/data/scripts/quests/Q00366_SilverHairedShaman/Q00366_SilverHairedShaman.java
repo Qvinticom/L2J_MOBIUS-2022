@@ -102,7 +102,7 @@ public class Q00366_SilverHairedShaman extends Quest
 			final Player luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
-				giveItemRandomly(luckyPlayer, npc, SAIRONS_SILVER_HAIR, 1, 0, 1.0, true);
+				giveItemRandomly(luckyPlayer, npc, SAIRONS_SILVER_HAIR, 1, 0, 1, true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

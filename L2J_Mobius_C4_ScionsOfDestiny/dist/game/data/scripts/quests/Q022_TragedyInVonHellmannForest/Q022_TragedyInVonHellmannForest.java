@@ -17,7 +17,6 @@
 package quests.Q022_TragedyInVonHellmannForest;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -645,7 +644,7 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 			else
 			{
 				final QuestState qs = killer.getQuestState(getName());
-				if ((qs != null) && qs.isCond(4) && qs.hasQuestItems(CROSS_OF_EINHASAD) && !qs.hasQuestItems(LOST_SKULL_OF_ELF) && (Rnd.get(100) < 10))
+				if ((qs != null) && qs.isCond(4) && qs.hasQuestItems(CROSS_OF_EINHASAD) && !qs.hasQuestItems(LOST_SKULL_OF_ELF) && (getRandom(100) < 10))
 				{
 					qs.giveItems(LOST_SKULL_OF_ELF, 1);
 					qs.setCond(5);

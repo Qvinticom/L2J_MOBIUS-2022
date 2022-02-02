@@ -19,7 +19,6 @@ package quests.Q605_AllianceWithKetraOrcs;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -348,7 +347,7 @@ public class Q605_AllianceWithKetraOrcs extends Quest
 		
 		// Support for Q606.
 		QuestState st = partyMember.getQuestState(Q606_WarWithVarkaSilenos.class.getSimpleName());
-		if ((st != null) && Rnd.nextBoolean() && CHANCES_MANE.containsKey(npcId))
+		if ((st != null) && getRandomBoolean() && CHANCES_MANE.containsKey(npcId))
 		{
 			st.dropItems(VARKA_MANE, 1, 0, CHANCES_MANE.get(npcId));
 			return null;

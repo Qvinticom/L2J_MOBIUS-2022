@@ -17,7 +17,6 @@
 package teleports.GrandBossTeleporters;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -117,8 +116,8 @@ public class GrandBossTeleporters extends Quest
 						{
 							zone.allowPlayerEntry(player, 30);
 						}
-						final int x = 179700 + Rnd.get(700);
-						final int y = 113800 + Rnd.get(2100);
+						final int x = 179700 + getRandom(700);
+						final int y = 113800 + getRandom(2100);
 						player.teleToLocation(x, y, -7709);
 						if (status == 0)
 						{
@@ -134,8 +133,8 @@ public class GrandBossTeleporters extends Quest
 		}
 		else if (npcId == 31859) // antharas teleport cube
 		{
-			final int x = 79800 + Rnd.get(600);
-			final int y = 151200 + Rnd.get(1100);
+			final int x = 79800 + getRandom(600);
+			final int y = 151200 + getRandom(1100);
 			player.teleToLocation(x, y, -3534);
 		}
 		else if (npcId == 31385) // heart of volcano
@@ -159,8 +158,8 @@ public class GrandBossTeleporters extends Quest
 						{
 							zone.allowPlayerEntry(player, 30);
 						}
-						final int x = 204328 + Rnd.get(600);
-						final int y = -111874 + Rnd.get(600);
+						final int x = 204328 + getRandom(600);
+						final int y = -111874 + getRandom(600);
 						player.teleToLocation(x, y, 70);
 						playerCount++;
 						if (status == 0)
@@ -226,8 +225,8 @@ public class GrandBossTeleporters extends Quest
 		}
 		else if (npcId == 31759) // valakas teleport cube
 		{
-			final int x = 150037 + Rnd.get(500);
-			final int y = -57720 + Rnd.get(500);
+			final int x = 150037 + getRandom(500);
+			final int y = -57720 + getRandom(500);
 			player.teleToLocation(x, y, -2976);
 		}
 		return htmltext;

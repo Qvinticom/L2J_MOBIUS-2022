@@ -16,7 +16,6 @@
  */
 package quests.Q379_FantasyWine;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -64,7 +63,7 @@ public class Q379_FantasyWine extends Quest
 			{
 				st.takeItems(LEAF, 80);
 				st.takeItems(STONE, 100);
-				final int rand = Rnd.get(10);
+				final int rand = getRandom(10);
 				if (rand < 3)
 				{
 					htmltext = "30074-6.htm";

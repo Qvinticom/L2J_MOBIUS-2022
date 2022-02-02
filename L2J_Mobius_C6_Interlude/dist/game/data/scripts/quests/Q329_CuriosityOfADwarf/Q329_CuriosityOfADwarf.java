@@ -16,7 +16,6 @@
  */
 package quests.Q329_CuriosityOfADwarf;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -108,7 +107,7 @@ public class Q329_CuriosityOfADwarf extends Quest
 			return null;
 		}
 		
-		final int chance = Rnd.get(100);
+		final int chance = getRandom(100);
 		if (chance < 2)
 		{
 			st.dropItemsAlways(GOLEM_HEARTSTONE, 1, 0);

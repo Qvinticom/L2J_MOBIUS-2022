@@ -52,7 +52,7 @@ public class MaxMpFinalizer implements IStatFunction
 			}
 		}
 		
-		final double menBonus = creature.getMEN() > 0 ? BaseStat.MEN.calcBonus(creature) : 1.;
+		final double menBonus = creature.getMEN() > 0 ? BaseStat.MEN.calcBonus(creature) : 1;
 		baseValue *= menBonus;
 		
 		return defaultValue(creature, stat, baseValue);

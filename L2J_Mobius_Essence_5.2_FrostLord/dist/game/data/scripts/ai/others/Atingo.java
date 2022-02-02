@@ -20,7 +20,6 @@ import java.time.Duration;
 import java.util.function.Consumer;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -94,7 +93,7 @@ public class Atingo extends AbstractNpcAI
 		final Npc creature = (Npc) hpChangeEvent.getCreature();
 		if ((creature.getScriptValue() == 0) && !creature.isDead() && creature.isInCombat())
 		{
-			final Npc pet = addSpawn(Rnd.get(100) <= ATINGO_PET_SPAWN_RATE ? getRandomEntry(PETS) : SIN_EATER, GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
+			final Npc pet = addSpawn(getRandom(100) <= ATINGO_PET_SPAWN_RATE ? getRandomEntry(PETS) : SIN_EATER, GeoEngine.getInstance().getValidLocation(creature.getX(), creature.getY(), creature.getZ(), creature.getX() + 50, creature.getY() + 50, creature.getZ(), null));
 			creature.setScriptValue(pet.getObjectId());
 			pet.setInvul(true);
 			pet.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.H_ULTIMATE_DEFENCE_B_AVE);

@@ -16,7 +16,6 @@
  */
 package quests.Q274_SkirmishWithTheWerewolves;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -130,7 +129,7 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 			st.setCond(2);
 		}
 		
-		if (Rnd.get(100) < 6)
+		if (getRandom(100) < 6)
 		{
 			st.giveItems(MARAKU_WOLFMEN_TOTEM, 1);
 		}

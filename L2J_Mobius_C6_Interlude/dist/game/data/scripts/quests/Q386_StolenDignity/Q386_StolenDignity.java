@@ -19,7 +19,6 @@ package quests.Q386_StolenDignity;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -229,12 +228,12 @@ public class Q386_StolenDignity extends Quest
 					if (winningLines == 3)
 					{
 						htmltext = getHtmlText("30843-22.htm");
-						st.rewardItems(REWARDS[Rnd.get(REWARDS.length)], 4);
+						st.rewardItems(REWARDS[getRandom(REWARDS.length)], 4);
 					}
 					else if (winningLines == 0)
 					{
 						htmltext = getHtmlText("30843-24.htm");
-						st.rewardItems(REWARDS[Rnd.get(REWARDS.length)], 10);
+						st.rewardItems(REWARDS[getRandom(REWARDS.length)], 10);
 					}
 					else
 					{

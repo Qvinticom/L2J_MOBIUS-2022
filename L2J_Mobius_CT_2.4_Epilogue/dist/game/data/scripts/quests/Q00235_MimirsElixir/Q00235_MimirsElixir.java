@@ -22,7 +22,7 @@ import java.util.Map;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -53,11 +53,11 @@ public class Q00235_MimirsElixir extends Quest
 	// Skill
 	private static SkillHolder QUEST_MIMIRS_ELIXIR = new SkillHolder(4339, 1);
 	// Mobs
-	private static final Map<Integer, QuestItemHolder> MOBS = new HashMap<>();
+	private static final Map<Integer, ItemChanceHolder> MOBS = new HashMap<>();
 	static
 	{
-		MOBS.put(20965, new QuestItemHolder(SAGES_STONE, 4, 1)); // chimera_piece
-		MOBS.put(21090, new QuestItemHolder(BLOOD_FIRE, 7, 1)); // bloody_guardian
+		MOBS.put(20965, new ItemChanceHolder(SAGES_STONE, 4, 1)); // chimera_piece
+		MOBS.put(21090, new ItemChanceHolder(BLOOD_FIRE, 7, 1)); // bloody_guardian
 	}
 	
 	public Q00235_MimirsElixir()
@@ -236,12 +236,12 @@ public class Q00235_MimirsElixir extends Quest
 			final Player luckyPlayer = getRandomPartyMember(player, npc);
 			if (luckyPlayer != null)
 			{
-				final QuestItemHolder item = MOBS.get(npc.getId());
-				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), item.getCount(), 1.0, true))
+				final ItemChanceHolder item = MOBS.get(npc.getId());
+				if (giveItemRandomly(luckyPlayer, npc, item.getId(), item.getCount(), item.getCount(), 1, true))
 				{
 					final QuestState qs = luckyPlayer.getQuestState(getName());
-					qs.setMemoState(item.getChance());
-					qs.setCond(item.getChance());
+					qs.setMemoState((int) item.getChance());
+					qs.setCond((int) item.getChance());
 				}
 			}
 		}

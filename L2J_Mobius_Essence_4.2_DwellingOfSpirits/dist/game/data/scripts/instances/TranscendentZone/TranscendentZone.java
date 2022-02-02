@@ -22,7 +22,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
@@ -291,13 +290,13 @@ public class TranscendentZone extends AbstractInstance
 			{
 				if (!instance.getParameters().getBoolean("PlayerIsOut", false) && (instance.getAliveNpcCount() == 1))
 				{
-					if (Rnd.get(5) == 0)
+					if (getRandom(5) == 0)
 					{
 						player.getInstanceWorld().spawnGroup("treasures");
 					}
 					else
 					{
-						if (Rnd.get(3) == 0)
+						if (getRandom(3) == 0)
 						{
 							player.getInstanceWorld().spawnGroup("treasures");
 						}

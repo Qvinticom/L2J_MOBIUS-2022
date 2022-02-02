@@ -276,7 +276,7 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBoss.checkAndReturnToSpawn())
-			// raid.getSpawn().setLoc(142624, -82285, -6491, Rnd.get(65536));
+			// raid.getSpawn().setLoc(142624, -82285, -6491, getRandom(65536));
 			
 			addSpawn(SOUL_OF_FIRE_NASTRON, 142624, -82285, -6491, 100, false, 0);
 			raid.broadcastNpcSay("The fire you kindle for your enemy often burns yourself more than them.");

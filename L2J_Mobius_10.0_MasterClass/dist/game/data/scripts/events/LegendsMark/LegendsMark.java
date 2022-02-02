@@ -23,7 +23,6 @@ import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -287,7 +286,7 @@ public class LegendsMark extends LongTimeEvent
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if (isEventPeriod() && (killer.getLevel() >= PLAYER_LEVEL) && (Rnd.get(100) < CHANCE))
+		if (isEventPeriod() && (killer.getLevel() >= PLAYER_LEVEL) && (getRandom(100) < CHANCE))
 		{
 			final int count = killer.getVariables().getInt(PROPHECY_FRAGMENTS_DROP_COUNT_VAR, 0);
 			if (count < DROP_DAILY)

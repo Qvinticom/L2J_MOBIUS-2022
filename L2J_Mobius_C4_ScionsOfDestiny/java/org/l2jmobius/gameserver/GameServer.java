@@ -117,8 +117,6 @@ import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.siege.clanhalls.FortressOfResistance;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawnHandler;
 import org.l2jmobius.gameserver.network.ClientNetworkManager;
-import org.l2jmobius.gameserver.script.EventDroplist;
-import org.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import org.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import org.l2jmobius.gameserver.taskmanager.GameTimeTaskManager;
 import org.l2jmobius.gameserver.taskmanager.ItemsAutoDestroyTaskManager;
@@ -289,7 +287,6 @@ public class GameServer
 		printSection("Misc");
 		RecipeData.getInstance();
 		RecipeManager.getInstance();
-		EventDroplist.getInstance();
 		MonsterRace.getInstance();
 		Lottery.getInstance();
 		MercTicketManager.getInstance();
@@ -364,7 +361,6 @@ public class GameServer
 		{
 			LOGGER.info("ScriptEngineManager: Loading server scripts:");
 			ScriptEngineManager.getInstance().executeScriptList();
-			FaenorScriptEngine.getInstance();
 		}
 		else
 		{

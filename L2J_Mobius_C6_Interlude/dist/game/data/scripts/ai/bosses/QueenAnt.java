@@ -21,7 +21,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -150,7 +149,7 @@ public class QueenAnt extends Quest
 		startQuestTimer("CHECK_MINIONS_ZONE", 30000, npc, null, true);
 		startQuestTimer("HEAL", 1000, null, null, true);
 		_queen = npc;
-		_larva = (Monster) addSpawn(LARVA, -21600, 179482, -5846, Rnd.get(360), false, 0);
+		_larva = (Monster) addSpawn(LARVA, -21600, 179482, -5846, getRandom(360), false, 0);
 		_larva.setUnkillable(true);
 		_larva.setImmobilized(true);
 		_larva.setPhysicalAttackMuted(true);
@@ -265,9 +264,9 @@ public class QueenAnt extends Quest
 			}
 			case ACTION:
 			{
-				if (Rnd.get(3) == 0)
+				if (getRandom(3) == 0)
 				{
-					if (Rnd.nextBoolean())
+					if (getRandomBoolean())
 					{
 						npc.broadcastPacket(new SocialAction(npc.getObjectId(), 3));
 					}
@@ -359,7 +358,7 @@ public class QueenAnt extends Quest
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
 			// Time is 36hour +/- 17hour.
-			final long respawnTime = (Config.QA_RESP_FIRST + Rnd.get(Config.QA_RESP_SECOND)) * 3600000;
+			final long respawnTime = (Config.QA_RESP_FIRST + getRandom(Config.QA_RESP_SECOND)) * 3600000;
 			startQuestTimer("QUEEN_SPAWN", respawnTime, null, null);
 			startQuestTimer("LARVA_DESPAWN", 4 * 60 * 60 * 1000, null, null);
 			cancelQuestTimer("ACTION", npc, null);
@@ -388,7 +387,7 @@ public class QueenAnt extends Quest
 			
 			if (npcId == ROYAL)
 			{
-				startQuestTimer("RESPAWN_ROYAL", (Config.QA_RESP_ROYAL + Rnd.get(40)) * 1000, npc, null);
+				startQuestTimer("RESPAWN_ROYAL", (Config.QA_RESP_ROYAL + getRandom(40)) * 1000, npc, null);
 			}
 			else // if (npcId == NURSE)
 			{

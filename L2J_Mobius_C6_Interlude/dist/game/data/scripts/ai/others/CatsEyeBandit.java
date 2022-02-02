@@ -16,7 +16,6 @@
  */
 package ai.others;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -45,7 +44,7 @@ public class CatsEyeBandit extends Quest
 	{
 		if (npc.isScriptValue(1))
 		{
-			if (Rnd.get(100) < 40)
+			if (getRandom(100) < 40)
 			{
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "You childish fool, do you think you can catch me?"));
 			}
@@ -60,7 +59,7 @@ public class CatsEyeBandit extends Quest
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isPet)
 	{
-		if (Rnd.get(100) < 80)
+		if (getRandom(100) < 80)
 		{
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "I must do something about this shameful incident..."));
 		}

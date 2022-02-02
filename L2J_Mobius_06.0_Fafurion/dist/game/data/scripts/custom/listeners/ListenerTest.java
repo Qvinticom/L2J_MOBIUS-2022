@@ -16,7 +16,6 @@
  */
 package custom.listeners;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -126,7 +125,7 @@ public class ListenerTest extends AbstractNpcAI
 	private void OnCreatureKill(OnCreatureDeath event)
 	{
 		// 70% chance to drop
-		if (Rnd.get(100) >= 70)
+		if (getRandom(100) >= 70)
 		{
 			return;
 		}
@@ -135,7 +134,7 @@ public class ListenerTest extends AbstractNpcAI
 		if ((event.getAttacker() != null) && event.getAttacker().isPlayable() && event.getTarget().isAttackable())
 		{
 			final Attackable monster = (Attackable) event.getTarget();
-			monster.dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, Rnd.get(100, 1000)));
+			monster.dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, getRandom(100, 1000)));
 		}
 	}
 	

@@ -73,4 +73,10 @@ public class DateRange
 	{
 		return _startDate;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "DateRange: From: " + _startDate + " To: " + _endDate;
+	}
 }

@@ -702,7 +702,7 @@ public class Formulas
 			}
 			case SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
 			{
-				return 1.;
+				return 1;
 			}
 		}
 		
@@ -1841,7 +1841,7 @@ public class Formulas
 		{
 			return 0;
 		}
-		return creature.calcStat(Stat.FALL, (fallHeight * creature.getMaxHp()) / 1000.0, null, null);
+		return creature.calcStat(Stat.FALL, (fallHeight * creature.getMaxHp()) / 1000, null, null);
 	}
 	
 	public static boolean calcBlowSuccess(Creature creature, Creature target, Skill skill)

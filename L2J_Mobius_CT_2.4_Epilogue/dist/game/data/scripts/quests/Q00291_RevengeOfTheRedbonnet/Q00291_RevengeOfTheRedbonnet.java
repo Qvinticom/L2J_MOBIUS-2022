@@ -70,7 +70,7 @@ public class Q00291_RevengeOfTheRedbonnet extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && giveItemRandomly(qs.getPlayer(), npc, BLACK_WOLF_PELT.getId(), 1, BLACK_WOLF_PELT.getCount(), 1.0, true))
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && giveItemRandomly(qs.getPlayer(), npc, BLACK_WOLF_PELT.getId(), 1, BLACK_WOLF_PELT.getCount(), 1, true))
 		{
 			qs.setCond(2);
 		}

@@ -40,7 +40,7 @@ public class MAttackSpeedFinalizer implements IStatFunction
 			baseValue *= Config.CHAMPION_SPD_ATK;
 		}
 		
-		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1.;
+		final double witBonus = creature.getWIT() > 0 ? BaseStat.WIT.calcBonus(creature) : 1;
 		baseValue *= witBonus;
 		return validateValue(creature, defaultValue(creature, stat, baseValue), 1, creature.isPlayable() ? Config.MAX_MATK_SPEED : Double.MAX_VALUE);
 	}

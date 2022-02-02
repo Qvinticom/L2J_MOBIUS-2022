@@ -16,7 +16,6 @@
  */
 package quests.Q348_AnArrogantSearch;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -119,7 +118,7 @@ public class Q348_AnArrogantSearch extends Quest
 			{
 				st.setCond(24);
 				st.playSound(QuestState.SOUND_MIDDLE);
-				st.rewardItems(57, Rnd.get(1, 2) * 12000);
+				st.rewardItems(57, getRandom(1, 2) * 12000);
 				break;
 			}
 			case "30864-37.htm":
@@ -823,7 +822,7 @@ public class Q348_AnArrogantSearch extends Quest
 			case SEAL_ANGEL:
 			case GUARDIAN_ANGEL:
 			{
-				if (((cond == 26) || (cond == 29)) && (Rnd.get(4) < 1) && st.hasQuestItems(WHITE_FABRIC_ANGELS))
+				if (((cond == 26) || (cond == 29)) && (getRandom(4) < 1) && st.hasQuestItems(WHITE_FABRIC_ANGELS))
 				{
 					st.playSound(QuestState.SOUND_ITEMGET);
 					st.takeItems(WHITE_FABRIC_ANGELS, 1);

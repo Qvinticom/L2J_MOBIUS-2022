@@ -21,7 +21,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -780,8 +779,8 @@ public class Frintezza extends Quest
 				_scarletDummy = null;
 				startQuestTimer("camera_23", 2000, _weakScarlet, null);
 				startQuestTimer("start_pc", 2000, _weakScarlet, null);
-				startQuestTimer("songs_play", 10000 + Rnd.get(10000), _frintezza, null);
-				startQuestTimer("skill01", 10000 + Rnd.get(10000), _weakScarlet, null);
+				startQuestTimer("songs_play", 10000 + getRandom(10000), _frintezza, null);
+				startQuestTimer("skill01", 10000 + getRandom(10000), _weakScarlet, null);
 				break;
 			}
 			case "camera_23":
@@ -891,8 +890,8 @@ public class Frintezza extends Quest
 				startQuestTimer("morph_end", 6000, _weakScarlet, null);
 				startQuestTimer("start_pc", 3000, _weakScarlet, null);
 				startQuestTimer("start_npc", 3000, _weakScarlet, null);
-				startQuestTimer("songs_play", 10000 + Rnd.get(10000), _frintezza, null);
-				startQuestTimer("skill02", 10000 + Rnd.get(10000), _weakScarlet, null);
+				startQuestTimer("songs_play", 10000 + getRandom(10000), _frintezza, null);
+				startQuestTimer("skill02", 10000 + getRandom(10000), _weakScarlet, null);
 				break;
 			}
 			case "morph_05a":
@@ -990,8 +989,8 @@ public class Frintezza extends Quest
 				startQuestTimer("morph_end", 9000, _strongScarlet, null);
 				startQuestTimer("start_pc", 6000, _strongScarlet, null);
 				startQuestTimer("start_npc", 6000, _strongScarlet, null);
-				startQuestTimer("songs_play", 10000 + Rnd.get(10000), _frintezza, null);
-				startQuestTimer("skill03", 10000 + Rnd.get(10000), _strongScarlet, null);
+				startQuestTimer("songs_play", 10000 + getRandom(10000), _frintezza, null);
+				startQuestTimer("skill03", 10000 + getRandom(10000), _strongScarlet, null);
 				break;
 			}
 			case "morph_16":
@@ -1035,7 +1034,7 @@ public class Frintezza extends Quest
 			{
 				if ((_frintezza != null) && !_frintezza.isDead() && (_onMorph == 0))
 				{
-					_onSong = Rnd.get(1, 5);
+					_onSong = getRandom(1, 5);
 					// To fix skill exception.
 					if (_onSong == 3)
 					{
@@ -1081,34 +1080,34 @@ public class Frintezza extends Quest
 					
 					// Like L2OFF the skill name is printed on screen.
 					_zone.broadcastPacket(new ExShowScreenMessage(songName, 6000));
-					if ((_onSong == 1) && (_thirdMorph == 1) && (_strongScarlet.getCurrentHp() < (_strongScarlet.getMaxHp() * 0.6)) && (Rnd.get(100) < 80))
+					if ((_onSong == 1) && (_thirdMorph == 1) && (_strongScarlet.getCurrentHp() < (_strongScarlet.getMaxHp() * 0.6)) && (getRandom(100) < 80))
 					{
 						_zone.broadcastPacket(new MagicSkillUse(_frintezza, _frintezza, 5007, 1, 32000, 0));
 						startQuestTimer("songs_effect", 5000, _frintezza, null);
-						startQuestTimer("songs_play", 32000 + Rnd.get(10000), _frintezza, null);
+						startQuestTimer("songs_play", 32000 + getRandom(10000), _frintezza, null);
 					}
 					else if ((_onSong == 2) || (_onSong == 3))
 					{
 						_zone.broadcastPacket(new MagicSkillUse(_frintezza, _frintezza, 5007, _onSong, 32000, 0));
 						startQuestTimer("songs_effect", 5000, _frintezza, null);
-						startQuestTimer("songs_play", 32000 + Rnd.get(10000), _frintezza, null);
+						startQuestTimer("songs_play", 32000 + getRandom(10000), _frintezza, null);
 					}
 					else if ((_onSong == 4) && (_secondMorph == 1))
 					{
 						_zone.broadcastPacket(new MagicSkillUse(_frintezza, _frintezza, 5007, 4, 31000, 0));
 						startQuestTimer("songs_effect", 5000, _frintezza, null);
-						startQuestTimer("songs_play", 31000 + Rnd.get(10000), _frintezza, null);
+						startQuestTimer("songs_play", 31000 + getRandom(10000), _frintezza, null);
 					}
 					else if ((_onSong == 5) && (_thirdMorph == 1) && (_abnormal == 0))
 					{
 						_abnormal = 1;
 						_zone.broadcastPacket(new MagicSkillUse(_frintezza, _frintezza, 5007, 5, 35000, 0));
 						startQuestTimer("songs_effect", 5000, _frintezza, null);
-						startQuestTimer("songs_play", 35000 + Rnd.get(10000), _frintezza, null);
+						startQuestTimer("songs_play", 35000 + getRandom(10000), _frintezza, null);
 					}
 					else
 					{
-						startQuestTimer("songs_play", 5000 + Rnd.get(5000), _frintezza, null);
+						startQuestTimer("songs_play", 5000 + getRandom(5000), _frintezza, null);
 					}
 				}
 				break;
@@ -1165,7 +1164,7 @@ public class Frintezza extends Quest
 				{
 					for (Creature creature : _zone.getCharactersInside())
 					{
-						if ((creature instanceof Player) && (Rnd.get(100) < 80))
+						if ((creature instanceof Player) && (getRandom(100) < 80))
 						{
 							skill.applyEffects(_frintezza, creature, false, false, false);
 							creature.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU).addSkillName(5008, 4));
@@ -1176,7 +1175,7 @@ public class Frintezza extends Quest
 				{
 					for (Creature creature : _zone.getCharactersInside())
 					{
-						if ((creature instanceof Player) && (Rnd.get(100) < 70))
+						if ((creature instanceof Player) && (getRandom(100) < 70))
 						{
 							creature.abortAttack();
 							creature.abortCast();
@@ -1253,7 +1252,7 @@ public class Frintezza extends Quest
 			{
 				if ((_weakScarlet != null) && !_weakScarlet.isDead() && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0))
 				{
-					final int i = Rnd.get(0, 1);
+					final int i = getRandom(0, 1);
 					final Skill skill = SkillTable.getInstance().getSkill(SKILLS[i][0], SKILLS[i][1]);
 					if (skill != null)
 					{
@@ -1261,7 +1260,7 @@ public class Frintezza extends Quest
 						// weakScarlet.setCastingNow(true);
 						_weakScarlet.doCast(skill);
 					}
-					startQuestTimer("skill01", SKILLS[i][2] + 5000 + Rnd.get(10000), npc, null);
+					startQuestTimer("skill01", SKILLS[i][2] + 5000 + getRandom(10000), npc, null);
 				}
 				break;
 			}
@@ -1272,11 +1271,11 @@ public class Frintezza extends Quest
 					int i = 0;
 					if (_abnormal == 0)
 					{
-						i = Rnd.get(2, 5);
+						i = getRandom(2, 5);
 					}
 					else
 					{
-						i = Rnd.get(2, 4);
+						i = getRandom(2, 4);
 					}
 					
 					final Skill skill = SkillTable.getInstance().getSkill(SKILLS[i][0], SKILLS[i][1]);
@@ -1286,7 +1285,7 @@ public class Frintezza extends Quest
 						// weakScarlet.setCastingNow(true);
 						_weakScarlet.doCast(skill);
 					}
-					startQuestTimer("skill02", SKILLS[i][2] + 5000 + Rnd.get(10000), npc, null);
+					startQuestTimer("skill02", SKILLS[i][2] + 5000 + getRandom(10000), npc, null);
 					if (i == 5)
 					{
 						_abnormal = 1;
@@ -1302,11 +1301,11 @@ public class Frintezza extends Quest
 					int i = 0;
 					if (_abnormal == 0)
 					{
-						i = Rnd.get(6, 10);
+						i = getRandom(6, 10);
 					}
 					else
 					{
-						i = Rnd.get(6, 9);
+						i = getRandom(6, 9);
 					}
 					
 					final Skill skill = SkillTable.getInstance().getSkill(SKILLS[i][0], SKILLS[i][1]);
@@ -1316,7 +1315,7 @@ public class Frintezza extends Quest
 						// strongScarlet.setCastingNow(true);
 						_strongScarlet.doCast(skill);
 					}
-					startQuestTimer("skill03", SKILLS[i][2] + 5000 + Rnd.get(10000), npc, null);
+					startQuestTimer("skill03", SKILLS[i][2] + 5000 + getRandom(10000), npc, null);
 					if (i == 10)
 					{
 						_abnormal = 1;
@@ -1458,8 +1457,8 @@ public class Frintezza extends Quest
 	{
 		if (npc.getNpcId() == CUBE)
 		{
-			final int x = 150037 + Rnd.get(500);
-			final int y = -57720 + Rnd.get(500);
+			final int x = 150037 + getRandom(500);
+			final int y = -57720 + getRandom(500);
 			player.teleToLocation(x, y, -2976);
 			return null;
 		}
@@ -1539,7 +1538,7 @@ public class Frintezza extends Quest
 												}
 												_playersInside.add(member);
 												_zone.allowPlayerEntry(member, 300);
-												member.teleToLocation(INVADE_LOC[_locCycle][0] + Rnd.get(50), INVADE_LOC[_locCycle][1] + Rnd.get(50), INVADE_LOC[_locCycle][2]);
+												member.teleToLocation(INVADE_LOC[_locCycle][0] + getRandom(50), INVADE_LOC[_locCycle][1] + getRandom(50), INVADE_LOC[_locCycle][2]);
 											}
 											if (_playersInside.size() > 45)
 											{
@@ -1580,7 +1579,7 @@ public class Frintezza extends Quest
 										}
 										
 										_zone.allowPlayerEntry(member, 300);
-										member.teleToLocation(INVADE_LOC[_locCycle][0] + Rnd.get(50), INVADE_LOC[_locCycle][1] + Rnd.get(50), INVADE_LOC[_locCycle][2]);
+										member.teleToLocation(INVADE_LOC[_locCycle][0] + getRandom(50), INVADE_LOC[_locCycle][1] + getRandom(50), INVADE_LOC[_locCycle][2]);
 									}
 									
 									_locCycle++;
@@ -1597,7 +1596,7 @@ public class Frintezza extends Quest
 									_playersInside.add(player);
 								}
 								_zone.allowPlayerEntry(player, 300);
-								player.teleToLocation(INVADE_LOC[_locCycle][0] + Rnd.get(50), INVADE_LOC[_locCycle][1] + Rnd.get(50), INVADE_LOC[_locCycle][2]);
+								player.teleToLocation(INVADE_LOC[_locCycle][0] + getRandom(50), INVADE_LOC[_locCycle][1] + getRandom(50), INVADE_LOC[_locCycle][2]);
 							}
 						}
 						else
@@ -1629,7 +1628,7 @@ public class Frintezza extends Quest
 										}
 										_playersInside.add(member);
 										_zone.allowPlayerEntry(member, 300);
-										member.teleToLocation(INVADE_LOC[_locCycle][0] + Rnd.get(50), INVADE_LOC[_locCycle][1] + Rnd.get(50), INVADE_LOC[_locCycle][2]);
+										member.teleToLocation(INVADE_LOC[_locCycle][0] + getRandom(50), INVADE_LOC[_locCycle][1] + getRandom(50), INVADE_LOC[_locCycle][2]);
 									}
 									if (_playersInside.size() > 45)
 									{
@@ -1693,7 +1692,7 @@ public class Frintezza extends Quest
 			_onCheck = 1;
 			startQuestTimer("check_hp", 0, npc, null);
 		}
-		else if (((npc.getNpcId() == 29050) || (npc.getNpcId() == 29051)) && (_bomber == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) && (Rnd.get(100) < 30))
+		else if (((npc.getNpcId() == 29050) || (npc.getNpcId() == 29051)) && (_bomber == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) && (getRandom(100) < 30))
 		{
 			_bomber = 1;
 			startQuestTimer("bomber", 3000, npc, null);
@@ -1740,7 +1739,7 @@ public class Frintezza extends Quest
 						startQuestTimer("minions_despawn", 60000, npc, null);
 						startQuestTimer("remove_players", 900000, npc, null);
 						GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
-						final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
+						final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + getRandom(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
 						startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 						// Also save the respawn time so that the info is maintained past restarts.
 						final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);

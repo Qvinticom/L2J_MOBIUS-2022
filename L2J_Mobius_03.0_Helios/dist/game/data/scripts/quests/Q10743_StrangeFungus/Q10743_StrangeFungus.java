@@ -172,7 +172,7 @@ public class Q10743_StrangeFungus extends Quest
 				}
 				case EVOLVED_GROWLER:
 				{
-					if (giveItemRandomly(killer, npc, PECULIAR_MUSHROOM_SPORE, 1, 10, 1.0, true))
+					if (giveItemRandomly(killer, npc, PECULIAR_MUSHROOM_SPORE, 1, 10, 1, true))
 					{
 						qs.setCond(2);
 					}

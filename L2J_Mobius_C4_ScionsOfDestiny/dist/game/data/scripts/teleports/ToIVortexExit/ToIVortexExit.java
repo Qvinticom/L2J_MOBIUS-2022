@@ -16,7 +16,6 @@
  */
 package teleports.ToIVortexExit;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -44,23 +43,23 @@ public class ToIVortexExit extends Quest
 		int x;
 		int y;
 		int z;
-		final int chance = Rnd.get(3);
+		final int chance = getRandom(3);
 		if (chance == 0)
 		{
-			x = 108784 + Rnd.get(100);
-			y = 16000 + Rnd.get(100);
+			x = 108784 + getRandom(100);
+			y = 16000 + getRandom(100);
 			z = -4928;
 		}
 		else if (chance == 1)
 		{
-			x = 113824 + Rnd.get(100);
-			y = 10448 + Rnd.get(100);
+			x = 113824 + getRandom(100);
+			y = 10448 + getRandom(100);
 			z = -5164;
 		}
 		else
 		{
-			x = 115488 + Rnd.get(100);
-			y = 22096 + Rnd.get(100);
+			x = 115488 + getRandom(100);
+			y = 22096 + getRandom(100);
 			z = -5168;
 		}
 		player.teleToLocation(x, y, z);

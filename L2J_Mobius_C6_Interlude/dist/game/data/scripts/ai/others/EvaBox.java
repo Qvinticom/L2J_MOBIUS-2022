@@ -19,7 +19,6 @@ package ai.others;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -64,7 +63,7 @@ public class EvaBox extends Quest
 		{
 			if (KISS_OF_EVA.contains(effect.getSkill().getId()))
 			{
-				final Item reward = ItemTable.getInstance().createItem("EvaBox", Rnd.get(REWARDS.length), 1, killer);
+				final Item reward = ItemTable.getInstance().createItem("EvaBox", getRandom(REWARDS.length), 1, killer);
 				reward.dropMe(npc, npc.getX(), npc.getY(), npc.getZ());
 				break;
 			}

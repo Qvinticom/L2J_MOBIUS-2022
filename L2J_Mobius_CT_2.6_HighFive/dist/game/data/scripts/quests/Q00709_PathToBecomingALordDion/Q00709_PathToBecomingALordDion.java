@@ -17,7 +17,6 @@
 package quests.Q00709_PathToBecomingALordDion;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -164,7 +163,7 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 		final QuestState qs = killer.getQuestState(getName());
 		if ((qs != null) && qs.isCond(6) && CommonUtil.contains(OL_MAHUMS, npc.getId()))
 		{
-			if ((npc.getId() != BLOODY_AXE_AIDE) && (Rnd.get(9) == 0))
+			if ((npc.getId() != BLOODY_AXE_AIDE) && (getRandom(9) == 0))
 			{
 				addSpawn(BLOODY_AXE_AIDE, npc, true, 300000);
 			}

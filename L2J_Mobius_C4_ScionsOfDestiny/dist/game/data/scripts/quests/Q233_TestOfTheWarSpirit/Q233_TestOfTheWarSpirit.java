@@ -16,7 +16,6 @@
  */
 package quests.Q233_TestOfTheWarSpirit;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -515,7 +514,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 			{
 				if (st.hasQuestItems(INSECT_DIAGRAM_BOOK))
 				{
-					final int rndAnt = Rnd.get(100);
+					final int rndAnt = getRandom(100);
 					if (rndAnt > 70)
 					{
 						if (st.hasQuestItems(KIRUNA_THIGHBONE))
@@ -548,7 +547,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 			case LETO_LIZARDMAN_SHAMAN:
 			case LETO_LIZARDMAN_OVERLORD:
 			{
-				if (st.hasQuestItems(PEKIRON_TOTEM) && Rnd.nextBoolean())
+				if (st.hasQuestItems(PEKIRON_TOTEM) && getRandomBoolean())
 				{
 					if (!st.hasQuestItems(TONAR_SKULL))
 					{
@@ -575,7 +574,7 @@ public class Q233_TestOfTheWarSpirit extends Quest
 			}
 			case MEDUSA:
 			{
-				if (st.hasQuestItems(MANAKIA_TOTEM) && Rnd.nextBoolean())
+				if (st.hasQuestItems(MANAKIA_TOTEM) && getRandomBoolean())
 				{
 					if (!st.hasQuestItems(HERMODT_RIBBONE))
 					{

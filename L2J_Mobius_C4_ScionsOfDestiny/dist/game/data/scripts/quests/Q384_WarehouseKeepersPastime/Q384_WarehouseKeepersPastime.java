@@ -19,7 +19,6 @@ package quests.Q384_WarehouseKeepersPastime;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -241,7 +240,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 				{
 					htmltext = getHtmlText(npcId + "-23.htm");
 					
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					for (int[] reward : ((st.get("bet") == "10") ? _rewards_10_win : _rewards_100_win))
 					{
 						if (chance < reward[0])
@@ -259,7 +258,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 				{
 					htmltext = getHtmlText(npcId + "-25.htm");
 					
-					final int chance = Rnd.get(100);
+					final int chance = getRandom(100);
 					for (int[] reward : ((st.get("bet") == "10") ? _rewards_10_lose : _rewards_100_lose))
 					{
 						if (chance < reward[0])

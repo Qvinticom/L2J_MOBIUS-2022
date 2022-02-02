@@ -531,12 +531,9 @@ public class OctavisWarzone extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world))
 		{
-			if (CommonUtil.contains(GLADIATORS, npc.getId()))
-			{
-				npc.setRandomWalking(false);
-				world.openCloseDoor(npc.getParameters().getInt("My_DoorName", -1), true);
-				getTimers().addTimer("GLADIATOR_MOVING", 3000, npc, null);
-			}
+			npc.setRandomWalking(false);
+			world.openCloseDoor(npc.getParameters().getInt("My_DoorName", -1), true);
+			getTimers().addTimer("GLADIATOR_MOVING", 3000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}

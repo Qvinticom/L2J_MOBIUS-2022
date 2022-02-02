@@ -16,7 +16,6 @@
  */
 package quests.Q275_DarkWingedSpies;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -127,7 +126,7 @@ public class Q275_DarkWingedSpies extends Quest
 				{
 					st.setCond(2);
 				}
-				else if ((Rnd.get(100) < 10) && (st.getQuestItemsCount(DARKWING_BAT_FANG) > 10) && (st.getQuestItemsCount(DARKWING_BAT_FANG) < 66))
+				else if ((getRandom(100) < 10) && (st.getQuestItemsCount(DARKWING_BAT_FANG) > 10) && (st.getQuestItemsCount(DARKWING_BAT_FANG) < 66))
 				{
 					// Spawn of Varangka Tracker on the npc position.
 					addSpawn(VARANGKA_TRACKER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);

@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
-import org.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
@@ -56,89 +56,89 @@ public class L2Day extends LongTimeEvent
 	private static final int T = 3887;
 	private static final int II = 3888;
 	// Rewards
-	private static final QuestItemHolder[] L2_REWARDS =
+	private static final ItemChanceHolder[] L2_REWARDS =
 	{
-		new QuestItemHolder(10260, 90, 3), // Alacrity Juice
-		new QuestItemHolder(10261, 85, 3), // Accuracy Juice
-		new QuestItemHolder(10262, 80, 3), // Critical Hit Juice
-		new QuestItemHolder(10263, 75, 3), // Critical Rate Juice
-		new QuestItemHolder(10264, 70, 3), // Casting Spd. Juice
-		new QuestItemHolder(10265, 65, 3), // Evasion Juice
-		new QuestItemHolder(10266, 60, 3), // M. Atk. Juice
-		new QuestItemHolder(10267, 55, 3), // Power Juice
-		new QuestItemHolder(10268, 50, 3), // Speed Juice
-		new QuestItemHolder(10269, 45, 3), // Defense Juice
-		new QuestItemHolder(10270, 40, 3), // MP Consumption Juice
-		new QuestItemHolder(9546, 37, 2), // Fire Stone
-		new QuestItemHolder(9547, 34, 2), // Water Stone
-		new QuestItemHolder(9548, 31, 2), // Earth Stone
-		new QuestItemHolder(9549, 28, 2), // Wind Stone
-		new QuestItemHolder(9550, 25, 2), // Dark Stone
-		new QuestItemHolder(9551, 22, 2), // Holy Stone
-		new QuestItemHolder(8947, 19, 1), // L2day - Rabbit Ears
-		new QuestItemHolder(8948, 16, 1), // L2day - Little Angel Wings
-		new QuestItemHolder(8949, 13, 1), // L2day - Fairy Antennae
-		new QuestItemHolder(3959, 10, 2), // Blessed Scroll of Resurrection (Event)
-		new QuestItemHolder(3958, 7, 2), // Blessed Scroll of Escape (Event)
-		new QuestItemHolder(8752, 4, 2), // High-Grade Life Stone - Level 76
-		new QuestItemHolder(8762, 1, 1), // Top-Grade Life Stone - Level 76
-		new QuestItemHolder(6660, 0, 1), // Ring of Queen Ant
+		new ItemChanceHolder(10260, 90, 3), // Alacrity Juice
+		new ItemChanceHolder(10261, 85, 3), // Accuracy Juice
+		new ItemChanceHolder(10262, 80, 3), // Critical Hit Juice
+		new ItemChanceHolder(10263, 75, 3), // Critical Rate Juice
+		new ItemChanceHolder(10264, 70, 3), // Casting Spd. Juice
+		new ItemChanceHolder(10265, 65, 3), // Evasion Juice
+		new ItemChanceHolder(10266, 60, 3), // M. Atk. Juice
+		new ItemChanceHolder(10267, 55, 3), // Power Juice
+		new ItemChanceHolder(10268, 50, 3), // Speed Juice
+		new ItemChanceHolder(10269, 45, 3), // Defense Juice
+		new ItemChanceHolder(10270, 40, 3), // MP Consumption Juice
+		new ItemChanceHolder(9546, 37, 2), // Fire Stone
+		new ItemChanceHolder(9547, 34, 2), // Water Stone
+		new ItemChanceHolder(9548, 31, 2), // Earth Stone
+		new ItemChanceHolder(9549, 28, 2), // Wind Stone
+		new ItemChanceHolder(9550, 25, 2), // Dark Stone
+		new ItemChanceHolder(9551, 22, 2), // Holy Stone
+		new ItemChanceHolder(8947, 19, 1), // L2day - Rabbit Ears
+		new ItemChanceHolder(8948, 16, 1), // L2day - Little Angel Wings
+		new ItemChanceHolder(8949, 13, 1), // L2day - Fairy Antennae
+		new ItemChanceHolder(3959, 10, 2), // Blessed Scroll of Resurrection (Event)
+		new ItemChanceHolder(3958, 7, 2), // Blessed Scroll of Escape (Event)
+		new ItemChanceHolder(8752, 4, 2), // High-Grade Life Stone - Level 76
+		new ItemChanceHolder(8762, 1, 1), // Top-Grade Life Stone - Level 76
+		new ItemChanceHolder(6660, 0, 1), // Ring of Queen Ant
 	};
-	private static final QuestItemHolder[] NC_REWARDS =
+	private static final ItemChanceHolder[] NC_REWARDS =
 	{
-		new QuestItemHolder(10260, 90, 2), // Alacrity Juice
-		new QuestItemHolder(10261, 85, 2), // Accuracy Juice
-		new QuestItemHolder(10262, 80, 2), // Critical Hit Juice
-		new QuestItemHolder(10263, 75, 2), // Critical Rate Juice
-		new QuestItemHolder(10264, 70, 2), // Casting Spd. Juice
-		new QuestItemHolder(10265, 65, 2), // Evasion Juice
-		new QuestItemHolder(10266, 60, 2), // M. Atk. Juice
-		new QuestItemHolder(10267, 55, 2), // Power Juice
-		new QuestItemHolder(10268, 50, 2), // Speed Juice
-		new QuestItemHolder(10269, 45, 2), // Defense Juice
-		new QuestItemHolder(10270, 40, 2), // MP Consumption Juice
-		new QuestItemHolder(9546, 37, 1), // Fire Stone
-		new QuestItemHolder(9547, 34, 1), // Water Stone
-		new QuestItemHolder(9548, 31, 1), // Earth Stone
-		new QuestItemHolder(9549, 28, 1), // Wind Stone
-		new QuestItemHolder(9550, 25, 1), // Dark Stone
-		new QuestItemHolder(9551, 22, 1), // Holy Stone
-		new QuestItemHolder(8948, 19, 1), // L2day - Little Angel Wings
-		new QuestItemHolder(8949, 16, 1), // L2day - Fairy Antennae
-		new QuestItemHolder(8950, 13, 1), // L2day - Feathered Hat
-		new QuestItemHolder(3959, 10, 1), // Blessed Scroll of Resurrection (Event)
-		new QuestItemHolder(3958, 7, 1), // Blessed Scroll of Escape (Event)
-		new QuestItemHolder(8742, 4, 2), // Mid-Grade Life Stone - Level 76
-		new QuestItemHolder(8752, 1, 1), // High-Grade Life Stone - Level 76
-		new QuestItemHolder(6661, 0, 1), // Earring of Orfen
+		new ItemChanceHolder(10260, 90, 2), // Alacrity Juice
+		new ItemChanceHolder(10261, 85, 2), // Accuracy Juice
+		new ItemChanceHolder(10262, 80, 2), // Critical Hit Juice
+		new ItemChanceHolder(10263, 75, 2), // Critical Rate Juice
+		new ItemChanceHolder(10264, 70, 2), // Casting Spd. Juice
+		new ItemChanceHolder(10265, 65, 2), // Evasion Juice
+		new ItemChanceHolder(10266, 60, 2), // M. Atk. Juice
+		new ItemChanceHolder(10267, 55, 2), // Power Juice
+		new ItemChanceHolder(10268, 50, 2), // Speed Juice
+		new ItemChanceHolder(10269, 45, 2), // Defense Juice
+		new ItemChanceHolder(10270, 40, 2), // MP Consumption Juice
+		new ItemChanceHolder(9546, 37, 1), // Fire Stone
+		new ItemChanceHolder(9547, 34, 1), // Water Stone
+		new ItemChanceHolder(9548, 31, 1), // Earth Stone
+		new ItemChanceHolder(9549, 28, 1), // Wind Stone
+		new ItemChanceHolder(9550, 25, 1), // Dark Stone
+		new ItemChanceHolder(9551, 22, 1), // Holy Stone
+		new ItemChanceHolder(8948, 19, 1), // L2day - Little Angel Wings
+		new ItemChanceHolder(8949, 16, 1), // L2day - Fairy Antennae
+		new ItemChanceHolder(8950, 13, 1), // L2day - Feathered Hat
+		new ItemChanceHolder(3959, 10, 1), // Blessed Scroll of Resurrection (Event)
+		new ItemChanceHolder(3958, 7, 1), // Blessed Scroll of Escape (Event)
+		new ItemChanceHolder(8742, 4, 2), // Mid-Grade Life Stone - Level 76
+		new ItemChanceHolder(8752, 1, 1), // High-Grade Life Stone - Level 76
+		new ItemChanceHolder(6661, 0, 1), // Earring of Orfen
 	};
-	private static final QuestItemHolder[] CH_REWARDS =
+	private static final ItemChanceHolder[] CH_REWARDS =
 	{
-		new QuestItemHolder(10260, 90, 1), // Alacrity Juice
-		new QuestItemHolder(10261, 85, 1), // Accuracy Juice
-		new QuestItemHolder(10262, 80, 1), // Critical Hit Juice
-		new QuestItemHolder(10263, 75, 1), // Critical Rate Juice
-		new QuestItemHolder(10264, 70, 1), // Casting Spd. Juice
-		new QuestItemHolder(10265, 65, 1), // Evasion Juice
-		new QuestItemHolder(10266, 60, 1), // M. Atk. Juice
-		new QuestItemHolder(10267, 55, 1), // Power Juice
-		new QuestItemHolder(10268, 50, 1), // Speed Juice
-		new QuestItemHolder(10269, 45, 1), // Defense Juice
-		new QuestItemHolder(10270, 40, 1), // MP Consumption Juice
-		new QuestItemHolder(9546, 37, 1), // Fire Stone
-		new QuestItemHolder(9547, 34, 1), // Water Stone
-		new QuestItemHolder(9548, 31, 1), // Earth Stone
-		new QuestItemHolder(9549, 28, 1), // Wind Stone
-		new QuestItemHolder(9550, 25, 1), // Dark Stone
-		new QuestItemHolder(9551, 22, 1), // Holy Stone
-		new QuestItemHolder(8949, 19, 1), // L2day - Fairy Antennae
-		new QuestItemHolder(8950, 16, 1), // L2day - Feathered Hat
-		new QuestItemHolder(8951, 13, 1), // L2day - Artisan's Goggles
-		new QuestItemHolder(3959, 10, 1), // Blessed Scroll of Resurrection (Event)
-		new QuestItemHolder(3958, 7, 1), // Blessed Scroll of Escape (Event)
-		new QuestItemHolder(8742, 4, 1), // Mid-Grade Life Stone - Level 76
-		new QuestItemHolder(8752, 1, 1), // High-Grade Life Stone - Level 76
-		new QuestItemHolder(6662, 0, 1), // Ring of Core
+		new ItemChanceHolder(10260, 90, 1), // Alacrity Juice
+		new ItemChanceHolder(10261, 85, 1), // Accuracy Juice
+		new ItemChanceHolder(10262, 80, 1), // Critical Hit Juice
+		new ItemChanceHolder(10263, 75, 1), // Critical Rate Juice
+		new ItemChanceHolder(10264, 70, 1), // Casting Spd. Juice
+		new ItemChanceHolder(10265, 65, 1), // Evasion Juice
+		new ItemChanceHolder(10266, 60, 1), // M. Atk. Juice
+		new ItemChanceHolder(10267, 55, 1), // Power Juice
+		new ItemChanceHolder(10268, 50, 1), // Speed Juice
+		new ItemChanceHolder(10269, 45, 1), // Defense Juice
+		new ItemChanceHolder(10270, 40, 1), // MP Consumption Juice
+		new ItemChanceHolder(9546, 37, 1), // Fire Stone
+		new ItemChanceHolder(9547, 34, 1), // Water Stone
+		new ItemChanceHolder(9548, 31, 1), // Earth Stone
+		new ItemChanceHolder(9549, 28, 1), // Wind Stone
+		new ItemChanceHolder(9550, 25, 1), // Dark Stone
+		new ItemChanceHolder(9551, 22, 1), // Holy Stone
+		new ItemChanceHolder(8949, 19, 1), // L2day - Fairy Antennae
+		new ItemChanceHolder(8950, 16, 1), // L2day - Feathered Hat
+		new ItemChanceHolder(8951, 13, 1), // L2day - Artisan's Goggles
+		new ItemChanceHolder(3959, 10, 1), // Blessed Scroll of Resurrection (Event)
+		new ItemChanceHolder(3958, 7, 1), // Blessed Scroll of Escape (Event)
+		new ItemChanceHolder(8742, 4, 1), // Mid-Grade Life Stone - Level 76
+		new ItemChanceHolder(8752, 1, 1), // High-Grade Life Stone - Level 76
+		new ItemChanceHolder(6662, 0, 1), // Ring of Core
 	};
 	
 	private L2Day()
@@ -162,15 +162,15 @@ public class L2Day extends LongTimeEvent
 					final int random = getRandom(100);
 					if (random >= 95)
 					{
-						rewardItems(player, MANAGERS.get(npc.getId()), 2);
+						giveItems(player, MANAGERS.get(npc.getId()), 2);
 					}
 					else
 					{
-						for (QuestItemHolder holder : L2_REWARDS)
+						for (ItemChanceHolder holder : L2_REWARDS)
 						{
 							if (random >= holder.getChance())
 							{
-								rewardItems(player, holder);
+								giveItems(player, holder);
 								break;
 							}
 						}
@@ -191,15 +191,15 @@ public class L2Day extends LongTimeEvent
 					final int random = getRandom(100);
 					if (random >= 95)
 					{
-						rewardItems(player, MANAGERS.get(npc.getId()), 1);
+						giveItems(player, MANAGERS.get(npc.getId()), 1);
 					}
 					else
 					{
-						for (QuestItemHolder holder : NC_REWARDS)
+						for (ItemChanceHolder holder : NC_REWARDS)
 						{
 							if (random >= holder.getChance())
 							{
-								rewardItems(player, holder);
+								giveItems(player, holder);
 								break;
 							}
 						}
@@ -220,15 +220,15 @@ public class L2Day extends LongTimeEvent
 					final int random = getRandom(100);
 					if (random >= 95)
 					{
-						rewardItems(player, MANAGERS.get(npc.getId()), 1);
+						giveItems(player, MANAGERS.get(npc.getId()), 1);
 					}
 					else
 					{
-						for (QuestItemHolder holder : CH_REWARDS)
+						for (ItemChanceHolder holder : CH_REWARDS)
 						{
 							if (random >= holder.getChance())
 							{
-								rewardItems(player, holder);
+								giveItems(player, holder);
 								break;
 							}
 						}

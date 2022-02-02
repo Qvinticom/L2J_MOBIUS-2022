@@ -19,7 +19,6 @@ package quests.Q00663_SeductiveWhispers;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -198,7 +197,7 @@ public class Q00663_SeductiveWhispers extends Quest
 			{
 				if (playerCard == null)
 				{
-					playerCard = cards[Rnd.get(0, 9)];
+					playerCard = cards[getRandom(0, 9)];
 				}
 				else
 				{
@@ -233,7 +232,7 @@ public class Q00663_SeductiveWhispers extends Quest
 				// Player draw a card (Always player start first !!)
 				if (playerCard == null)
 				{
-					playerCard = cards[Rnd.get(0, 9)];
+					playerCard = cards[getRandom(0, 9)];
 				}
 				else
 				{
@@ -346,7 +345,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
 		{
-			switch (Rnd.get(0, 5))
+			switch (getRandom(0, 5))
 			{
 				case 0:
 				case 1:
@@ -379,7 +378,7 @@ public class Q00663_SeductiveWhispers extends Quest
 	
 	private Card getRandomCard()
 	{
-		final int index = Rnd.get(0, 7);
+		final int index = getRandom(0, 7);
 		return Arrays.stream(cards).filter(card -> (!card.equals(playerCard)) && (!card.equals(npcCard))).collect(Collectors.toList()).get(index);
 	}
 	
@@ -461,12 +460,12 @@ public class Q00663_SeductiveWhispers extends Quest
 	
 	private int getRandomRecipeBGrade()
 	{
-		return RECIPES_B_GRADE[Rnd.get(0, RECIPES_B_GRADE.length - 1)];
+		return RECIPES_B_GRADE[getRandom(0, RECIPES_B_GRADE.length - 1)];
 	}
 	
 	private int getRandomPartBGrade()
 	{
-		return PART_B_GRADE[Rnd.get(0, PART_B_GRADE.length - 1)];
+		return PART_B_GRADE[getRandom(0, PART_B_GRADE.length - 1)];
 	}
 	
 	private enum Side

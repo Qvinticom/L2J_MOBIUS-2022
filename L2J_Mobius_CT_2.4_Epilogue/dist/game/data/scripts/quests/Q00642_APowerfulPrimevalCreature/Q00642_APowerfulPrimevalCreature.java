@@ -134,7 +134,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		}
 		else
 		{
-			giveItemRandomly(qs.getPlayer(), npc, DINOSAUR_EGG, 1, 0, 1.0, true);
+			giveItemRandomly(qs.getPlayer(), npc, DINOSAUR_EGG, 1, 0, 1, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

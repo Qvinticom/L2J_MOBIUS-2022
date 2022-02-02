@@ -16,7 +16,6 @@
  */
 package ai.areas.TowerOfInsolence.HeavenlyRift;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HeavenlyRiftManager;
 import org.l2jmobius.gameserver.model.World;
@@ -66,7 +65,7 @@ public class Bomb extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if (Rnd.get(100) < 33)
+		if (getRandom(100) < 33)
 		{
 			AbstractScript.addSpawn(DIVINE_ANGEL, npc, false, 1800000);
 		}
@@ -76,18 +75,18 @@ public class Bomb extends AbstractNpcAI
 			{
 				if ((creature != null) && !creature.isDead())
 				{
-					creature.reduceCurrentHp(Rnd.get(300, 400), npc, null);
+					creature.reduceCurrentHp(getRandom(300, 400), npc, null);
 				}
 			});
-			if (Rnd.get(100) < 50)
+			if (getRandom(100) < 50)
 			{
-				if (Rnd.get(100) < 90)
+				if (getRandom(100) < 90)
 				{
-					npc.dropItem(killer.getActingPlayer(), ITEM_DROP_1[Rnd.get(ITEM_DROP_1.length)], 1);
+					npc.dropItem(killer.getActingPlayer(), ITEM_DROP_1[getRandom(ITEM_DROP_1.length)], 1);
 				}
 				else
 				{
-					npc.dropItem(killer.getActingPlayer(), ITEM_DROP_2[Rnd.get(ITEM_DROP_2.length)], 1);
+					npc.dropItem(killer.getActingPlayer(), ITEM_DROP_2[getRandom(ITEM_DROP_2.length)], 1);
 				}
 			}
 		}

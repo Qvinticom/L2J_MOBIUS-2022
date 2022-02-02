@@ -40,9 +40,9 @@ public class Anais extends AbstractNpcAI
 	private static final int DIVINE_BURNER = 18915;
 	private static final int GRAIL_WARD = 18929;
 	// Skill
-	private static SkillHolder DIVINE_NOVA = new SkillHolder(6326, 1);
+	private static final SkillHolder DIVINE_NOVA = new SkillHolder(6326, 1);
 	// Instances
-	ArrayList<Npc> _divineBurners = new ArrayList<>(4);
+	private final ArrayList<Npc> _divineBurners = new ArrayList<>(4);
 	private Player _nextTarget = null;
 	private Npc _current = null;
 	private int _pot = 0;

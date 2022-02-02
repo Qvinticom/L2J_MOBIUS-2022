@@ -16,7 +16,6 @@
  */
 package quests.Q334_TheWishingPotion;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -210,7 +209,7 @@ public class Q334_TheWishingPotion extends Quest
 				if (st.getQuestItemsCount(WISH_POTION_ID) >= 1)
 				{
 					st.takeItems(WISH_POTION_ID, 1);
-					if (Rnd.get(100) < 50)
+					if (getRandom(100) < 50)
 					{
 						st.addSpawn(SUCCUBUS_OF_SEDUCTION);
 						st.addSpawn(SUCCUBUS_OF_SEDUCTION);
@@ -232,7 +231,7 @@ public class Q334_TheWishingPotion extends Quest
 				if (st.getQuestItemsCount(WISH_POTION_ID) >= 1)
 				{
 					st.takeItems(WISH_POTION_ID, 1);
-					final int WISH_CHANCE = Rnd.get(100) + 1;
+					final int WISH_CHANCE = getRandom(100) + 1;
 					if (WISH_CHANCE <= 33)
 					{
 						st.addSpawn(GRIMA);
@@ -243,9 +242,9 @@ public class Q334_TheWishingPotion extends Quest
 					{
 						st.giveItems(57, 10000);
 					}
-					else if (Rnd.get(100) < 2)
+					else if (getRandom(100) < 2)
 					{
-						st.giveItems(57, (Rnd.get(10) + 1) * 1000000);
+						st.giveItems(57, (getRandom(10) + 1) * 1000000);
 					}
 					else
 					{
@@ -265,7 +264,7 @@ public class Q334_TheWishingPotion extends Quest
 				if (st.getQuestItemsCount(WISH_POTION_ID) >= 1)
 				{
 					st.takeItems(WISH_POTION_ID, 1);
-					final int WISH_CHANCE = Rnd.get(100) + 1;
+					final int WISH_CHANCE = getRandom(100) + 1;
 					if (WISH_CHANCE <= 33)
 					{
 						st.giveItems(CERTIFICATE_OF_ROYALTY_ID, 1);
@@ -290,7 +289,7 @@ public class Q334_TheWishingPotion extends Quest
 				if (st.getQuestItemsCount(WISH_POTION_ID) >= 1)
 				{
 					st.takeItems(3467, 1);
-					final int WISH_CHANCE = Rnd.get(100) + 1;
+					final int WISH_CHANCE = getRandom(100) + 1;
 					if (WISH_CHANCE <= 33)
 					{
 						st.giveItems(SPELLBOOK_ICEBOLT_ID, 1);
@@ -404,7 +403,7 @@ public class Q334_TheWishingPotion extends Quest
 			}
 			case WISDOM_CHEST:
 			{
-				final int dropChance = Rnd.get(100);
+				final int dropChance = getRandom(100);
 				if (dropChance < 20)
 				{
 					st.giveItems(SPELLBOOK_ICEBOLT_ID, 1);
@@ -421,13 +420,13 @@ public class Q334_TheWishingPotion extends Quest
 				else
 				{
 					st.getPlayer().getTarget().decayMe();
-					htmltext = "30743-0" + (Rnd.get(5) + 1) + ".htm";
+					htmltext = "30743-0" + (getRandom(5) + 1) + ".htm";
 				}
 				break;
 			}
 			case RUPINA:
 			{
-				if (Rnd.get(100) < DROP_CHANCE_NECKLACE_OF_GRACE_ID)
+				if (getRandom(100) < DROP_CHANCE_NECKLACE_OF_GRACE_ID)
 				{
 					st.giveItems(NECKLACE_OF_GRACE_ID, 1);
 				}
@@ -460,12 +459,12 @@ public class Q334_TheWishingPotion extends Quest
 			{
 				if (element[5] == 0)
 				{
-					if (Rnd.get(100) < element[6])
+					if (getRandom(100) < element[6])
 					{
 						st.giveItems(element[4], element[7]);
 					}
 				}
-				else if ((Rnd.get(100) < element[6]) && (st.getQuestItemsCount(element[4]) < element[5]))
+				else if ((getRandom(100) < element[6]) && (st.getQuestItemsCount(element[4]) < element[5]))
 				{
 					st.giveItems(element[4], element[7]);
 					if (cond == 3)
@@ -480,7 +479,7 @@ public class Q334_TheWishingPotion extends Quest
 				}
 			}
 		}
-		final int dropChance = Rnd.get(100) + 1;
+		final int dropChance = getRandom(100) + 1;
 		if ((npcId == SUCCUBUS_OF_SEDUCTION) && (dropChance <= DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID))
 		{
 			st.playSound(QuestState.SOUND_ITEMGET);
@@ -489,21 +488,21 @@ public class Q334_TheWishingPotion extends Quest
 		else if ((npcId == GRIMA) && (dropChance <= DROP_CHANCE_GOLD_BAR_ID))
 		{
 			st.playSound(QuestState.SOUND_ITEMGET);
-			st.giveItems(GOLD_BAR_ID, Rnd.get(5) + 1);
+			st.giveItems(GOLD_BAR_ID, getRandom(5) + 1);
 		}
-		else if ((npcId == SANCHES) && (Rnd.get(100) < 50))
+		else if ((npcId == SANCHES) && (getRandom(100) < 50))
 		{
 			st.addSpawn(BONAPARTERIUS);
 		}
-		else if ((npcId == BONAPARTERIUS) && (Rnd.get(100) < 50))
+		else if ((npcId == BONAPARTERIUS) && (getRandom(100) < 50))
 		{
 			st.addSpawn(RAMSEBALIUS);
 		}
-		else if ((npcId == RAMSEBALIUS) && (Rnd.get(100) < 50))
+		else if ((npcId == RAMSEBALIUS) && (getRandom(100) < 50))
 		{
 			st.addSpawn(GREAT_DEMON_KING);
 		}
-		else if ((npcId == GREAT_DEMON_KING) && (Rnd.get(100) < 50))
+		else if ((npcId == GREAT_DEMON_KING) && (getRandom(100) < 50))
 		{
 			if (dropChance <= 25)
 			{

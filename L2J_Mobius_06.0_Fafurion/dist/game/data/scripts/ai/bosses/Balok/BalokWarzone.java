@@ -19,7 +19,6 @@ package ai.bosses.Balok;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
@@ -147,7 +146,7 @@ public class BalokWarzone extends AbstractInstance
 				}
 				case "stage_last_send_minions":
 				{
-					final Npc minion = _minionList.get(Rnd.get(_minionList.size()));
+					final Npc minion = _minionList.get(getRandom(_minionList.size()));
 					if (minion != null)
 					{
 						minion.setRunning();
@@ -186,7 +185,7 @@ public class BalokWarzone extends AbstractInstance
 				}
 				case "imprission_minions":
 				{
-					final int[] randomJail = PRISONS_SPAWN[Rnd.get(PRISONS_SPAWN.length)]; // Random jail
+					final int[] randomJail = PRISONS_SPAWN[getRandom(PRISONS_SPAWN.length)]; // Random jail
 					player.teleToLocation(randomJail[0], randomJail[1], randomJail[2]);
 					world.broadcastPacket(new ExShowScreenMessage("$s1, locked away in the prison.".replace("$s1", player.getName()), 5000));
 					break;
@@ -220,7 +219,7 @@ public class BalokWarzone extends AbstractInstance
 				}
 				World.getInstance().forEachVisibleObjectInRange(npc, Player.class, 300, instPlayer ->
 				{
-					if ((instPlayer == null) || (Rnd.get(100) > 2))
+					if ((instPlayer == null) || (getRandom(100) > 2))
 					{
 						return;
 					}

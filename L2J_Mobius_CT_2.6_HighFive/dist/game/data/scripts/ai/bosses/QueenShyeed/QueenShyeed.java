@@ -45,6 +45,12 @@ public class QueenShyeed extends AbstractNpcAI
 	private static final EffectZone MOB_BUFF_DISPLAY_ZONE = ZoneManager.getInstance().getZoneById(200104, EffectZone.class);
 	private static final EffectZone PC_BUFF_ZONE = ZoneManager.getInstance().getZoneById(200105, EffectZone.class);
 	
+	private QueenShyeed()
+	{
+		addKillId(SHYEED);
+		spawnShyeed();
+	}
+	
 	@Override
 	public String onAdvEvent(String event, Npc npc, Player player)
 	{
@@ -75,12 +81,6 @@ public class QueenShyeed extends AbstractNpcAI
 		startRespawn();
 		PC_BUFF_ZONE.setEnabled(true);
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	private QueenShyeed()
-	{
-		addKillId(SHYEED);
-		spawnShyeed();
 	}
 	
 	private void spawnShyeed()

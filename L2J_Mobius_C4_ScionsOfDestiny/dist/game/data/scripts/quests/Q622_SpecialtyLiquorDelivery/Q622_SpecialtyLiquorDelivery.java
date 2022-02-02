@@ -16,7 +16,6 @@
  */
 package quests.Q622_SpecialtyLiquorDelivery;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -121,9 +120,9 @@ public class Q622_SpecialtyLiquorDelivery extends Quest
 			}
 			case "31267-02.htm":
 			{
-				if (Rnd.get(5) < 1)
+				if (getRandom(5) < 1)
 				{
-					st.giveItems(RECIPES[Rnd.get(RECIPES.length)], 1);
+					st.giveItems(RECIPES[getRandom(RECIPES.length)], 1);
 				}
 				else
 				{

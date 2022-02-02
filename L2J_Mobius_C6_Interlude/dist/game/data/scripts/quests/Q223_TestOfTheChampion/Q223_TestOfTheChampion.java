@@ -16,7 +16,6 @@
  */
 package quests.Q223_TestOfTheChampion;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -357,12 +356,12 @@ public class Q223_TestOfTheChampion extends Quest
 		{
 			case HARPY: // Possibility to spawn an HARPY _MATRIARCH.
 			{
-				if (st.isCond(6) && Rnd.nextBoolean() && !npc.isScriptValue(1))
+				if (st.isCond(6) && getRandomBoolean() && !npc.isScriptValue(1))
 				{
 					final Creature originalKiller = isPet ? attacker.getPet() : attacker;
 					
 					// Spawn one or two matriarchs.
-					for (int i = 1; i < ((Rnd.get(10) < 7) ? 2 : 3); i++)
+					for (int i = 1; i < ((getRandom(10) < 7) ? 2 : 3); i++)
 					{
 						final Attackable collector = (Attackable) addSpawn(HARPY_MATRIARCH, npc, true, 0);
 						
@@ -376,12 +375,12 @@ public class Q223_TestOfTheChampion extends Quest
 			}
 			case ROAD_SCAVENGER: // Possibility to spawn a Road Collector.
 			{
-				if (st.isCond(10) && Rnd.nextBoolean() && !npc.isScriptValue(1))
+				if (st.isCond(10) && getRandomBoolean() && !npc.isScriptValue(1))
 				{
 					final Creature originalKiller = isPet ? attacker.getPet() : attacker;
 					
 					// Spawn one or two collectors.
-					for (int i = 1; i < ((Rnd.get(10) < 7) ? 2 : 3); i++)
+					for (int i = 1; i < ((getRandom(10) < 7) ? 2 : 3); i++)
 					{
 						final Attackable collector = (Attackable) addSpawn(ROAD_COLLECTOR, npc, true, 0);
 						

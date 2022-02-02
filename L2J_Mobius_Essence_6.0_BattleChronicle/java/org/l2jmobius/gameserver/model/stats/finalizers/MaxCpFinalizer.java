@@ -40,7 +40,7 @@ public class MaxCpFinalizer implements IStatFunction
 		{
 			baseValue = player.getTemplate().getBaseCpMax(player.getLevel());
 		}
-		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1.;
+		final double conBonus = creature.getCON() > 0 ? BaseStat.CON.calcBonus(creature) : 1;
 		baseValue *= conBonus;
 		return Stat.defaultValue(creature, stat, baseValue);
 	}

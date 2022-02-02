@@ -21,7 +21,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.threads.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.ChanceLocation;
@@ -152,7 +151,7 @@ public class EnergyOfInsolence extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if (CommonUtil.contains(UNIDENTIFIED_STONE_NPC_IDS, npc.getId()) && ((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF) && (Rnd.get(100) <= UNIDENTIFIED_STONE_DROP_RATE))
+		if (CommonUtil.contains(UNIDENTIFIED_STONE_NPC_IDS, npc.getId()) && ((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF) && (getRandom(100) <= UNIDENTIFIED_STONE_DROP_RATE))
 		{
 			npc.dropItem(killer, UNIDENTIFIED_STONE_ITEM_ID, ENERGY_OF_INSOLENCE_DROP_COUNT);
 		}
@@ -173,7 +172,7 @@ public class EnergyOfInsolence extends AbstractNpcAI
 					_scheduleTaskAmon = ThreadPool.schedule(new ScheduleAITask(null, POWER_ANGEL_AMON), TIME_UNTIL_MOVE);
 				}
 			}
-			if (((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF) && (Rnd.get(100) <= ENERGY_OF_INSOLENCE_DROP_RATE))
+			if (((killer.getLevel() - npc.getLevel()) <= LEVEL_MAX_DIFF) && (getRandom(100) <= ENERGY_OF_INSOLENCE_DROP_RATE))
 			{
 				npc.dropItem(killer, ENERGY_OF_INSOLENCE_ITEM_ID, ENERGY_OF_INSOLENCE_DROP_COUNT);
 			}
@@ -218,7 +217,7 @@ public class EnergyOfInsolence extends AbstractNpcAI
 				final Spawn spawn = new Spawn(_npcId);
 				final List<NpcSpawnTemplate> spawns = SpawnData.getInstance().getNpcSpawns(npcSpawnTemplate -> npcSpawnTemplate.getId() == _npcId);
 				final List<ChanceLocation> locations = spawns.get(0).getLocation();
-				final Location location = locations.get(Rnd.get(locations.size()));
+				final Location location = locations.get(getRandom(locations.size()));
 				spawn.setLocation(location);
 				spawn.doSpawn();
 			}

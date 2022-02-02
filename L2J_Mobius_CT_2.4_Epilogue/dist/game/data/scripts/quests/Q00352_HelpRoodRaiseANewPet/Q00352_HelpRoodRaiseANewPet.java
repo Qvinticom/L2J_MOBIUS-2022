@@ -129,11 +129,11 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest
 		final int random = getRandom(100);
 		if (random < info.getFirstChance())
 		{
-			giveItemRandomly(killer, npc, LIENRIK_EGG1, 1, 0, 1.0, true);
+			giveItemRandomly(killer, npc, LIENRIK_EGG1, 1, 0, 1, true);
 		}
 		else if (random < info.getSecondChance())
 		{
-			giveItemRandomly(killer, npc, LIENRIK_EGG2, 1, 0, 1.0, true);
+			giveItemRandomly(killer, npc, LIENRIK_EGG2, 1, 0, 1, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

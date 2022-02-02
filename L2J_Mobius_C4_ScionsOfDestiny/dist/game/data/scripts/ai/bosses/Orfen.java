@@ -18,7 +18,6 @@ package ai.bosses;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -208,7 +207,7 @@ public class Orfen extends Quest
 					npc.teleToLocation(43577, 15985, -4396);
 					startQuestTimer("ORFEN_REFRESH", 10000, npc, null);
 				}
-				else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (Rnd.get(10) == 0))
+				else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (getRandom(10) == 0))
 				{
 					attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 					npc.setTarget(attacker);
@@ -231,7 +230,7 @@ public class Orfen extends Quest
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 			// Time is 48hour +/- 20hour.
-			final long respawnTime = (Config.ORFEN_RESP_FIRST + Rnd.get(Config.ORFEN_RESP_SECOND)) * 3600000;
+			final long respawnTime = (Config.ORFEN_RESP_FIRST + getRandom(Config.ORFEN_RESP_SECOND)) * 3600000;
 			cancelQuestTimer("ORFEN_REFRESH", npc, null);
 			startQuestTimer("ORFEN_SPAWN", respawnTime, null, null);
 			// Also save the respawn time so that the info is maintained past restarts.

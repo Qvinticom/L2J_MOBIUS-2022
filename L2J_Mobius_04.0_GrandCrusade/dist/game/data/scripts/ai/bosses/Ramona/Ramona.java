@@ -22,7 +22,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
@@ -233,7 +232,7 @@ public class Ramona extends AbstractNpcAI
 			{
 				if ((_bossStage == 1) && _ramona1.isInCombat())
 				{
-					Skill randomAttackSkill = RAMONA1_SKILLS[Rnd.get(RAMONA1_SKILLS.length)];
+					Skill randomAttackSkill = RAMONA1_SKILLS[getRandom(RAMONA1_SKILLS.length)];
 					if (getRandom(100) > 20)
 					{
 						_ramona1.doCast(randomAttackSkill);
@@ -248,7 +247,7 @@ public class Ramona extends AbstractNpcAI
 				{
 					if (_ramona2 != null)
 					{
-						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], _ramona2.getX() + getRandom(-200, 200), _ramona2.getY() + getRandom(-200, 200), _ramona2.getZ(), _ramona2.getHeading(), false, 600000);
+						final Npc minion = addSpawn(MINION_LIST[getRandom(MINION_LIST.length)], _ramona2.getX() + getRandom(-200, 200), _ramona2.getY() + getRandom(-200, 200), _ramona2.getZ(), _ramona2.getHeading(), false, 600000);
 						minion.setRunning();
 						((Attackable) minion).setIsRaidMinion(true);
 						addAttackPlayerDesire(minion, player);
@@ -262,7 +261,7 @@ public class Ramona extends AbstractNpcAI
 			{
 				if ((_bossStage == 2) && _ramona2.isInCombat())
 				{
-					Skill randomAttackSkill = RAMONA2_SKILLS[Rnd.get(RAMONA2_SKILLS.length)];
+					Skill randomAttackSkill = RAMONA2_SKILLS[getRandom(RAMONA2_SKILLS.length)];
 					if (getRandom(100) > 20)
 					{
 						_ramona2.doCast(randomAttackSkill);
@@ -277,7 +276,7 @@ public class Ramona extends AbstractNpcAI
 				{
 					if (_ramona3 != null)
 					{
-						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], _ramona3.getX() + getRandom(-200, 200), _ramona3.getY() + getRandom(-200, 200), _ramona3.getZ(), _ramona3.getHeading(), false, 600000);
+						final Npc minion = addSpawn(MINION_LIST[getRandom(MINION_LIST.length)], _ramona3.getX() + getRandom(-200, 200), _ramona3.getY() + getRandom(-200, 200), _ramona3.getZ(), _ramona3.getHeading(), false, 600000);
 						minion.setRunning();
 						((Attackable) minion).setIsRaidMinion(true);
 						addAttackPlayerDesire(minion, player);
@@ -291,7 +290,7 @@ public class Ramona extends AbstractNpcAI
 			{
 				if ((_bossStage == 3) && _ramona3.isInCombat())
 				{
-					Skill randomAttackSkill = RAMONA3_SKILLS[Rnd.get(RAMONA3_SKILLS.length)];
+					Skill randomAttackSkill = RAMONA3_SKILLS[getRandom(RAMONA3_SKILLS.length)];
 					if (getRandom(100) > 20)
 					{
 						_ramona3.doCast(randomAttackSkill);
@@ -510,7 +509,7 @@ public class Ramona extends AbstractNpcAI
 		
 		if ((player != null) && !player.isDead())
 		{
-			Skill skillToCast = RAMONA3_SKILLS[Rnd.get(RAMONA3_SKILLS.length)];
+			Skill skillToCast = RAMONA3_SKILLS[getRandom(RAMONA3_SKILLS.length)];
 			if ((skillToCast != null) && SkillCaster.checkUseConditions(npc, skillToCast))
 			
 			{

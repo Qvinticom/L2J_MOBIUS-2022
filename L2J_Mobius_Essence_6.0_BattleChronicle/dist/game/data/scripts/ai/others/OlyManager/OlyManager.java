@@ -21,7 +21,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.handler.BypassHandler;
@@ -316,7 +315,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 						LOGGER.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
 						return false;
 					}
-					final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
+					final Location loc = spectatorSpawns.get(getRandom(spectatorSpawns.size()));
 					player.enterOlympiadObserverMode(loc, arenaId);
 				}
 			}

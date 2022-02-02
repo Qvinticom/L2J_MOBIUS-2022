@@ -16,7 +16,6 @@
  */
 package quests.Q642_APowerfulPrimevalCreature;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -147,7 +146,7 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 		
 		if (npc.getNpcId() == ANCIENT_EGG)
 		{
-			if (Rnd.get(100) < 1)
+			if (getRandom(100) < 1)
 			{
 				st.giveItems(DINOSAUR_EGG, 1);
 				if (st.getQuestItemsCount(DINOSAUR_TISSUE) >= 150)
@@ -160,7 +159,7 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 				}
 			}
 		}
-		else if (Rnd.get(100) < 33)
+		else if (getRandom(100) < 33)
 		{
 			st.rewardItems(DINOSAUR_TISSUE, 1);
 			if ((st.getQuestItemsCount(DINOSAUR_TISSUE) >= 150) && st.hasQuestItems(DINOSAUR_EGG))

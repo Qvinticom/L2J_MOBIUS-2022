@@ -409,7 +409,7 @@ public class Q00417_PathOfTheScavenger extends Quest
 				{
 					if (firstAttacker && ((Attackable) npc).isSpoiled() && hasQuestItems(killer, BEAR_PICTURE))
 					{
-						if (giveItemRandomly(killer, npc, HONEY_JAR, 1, 5, 50.0, true))
+						if (giveItemRandomly(killer, npc, HONEY_JAR, 1, 5, 50, true))
 						{
 							qs.setCond(6);
 						}
@@ -421,7 +421,7 @@ public class Q00417_PathOfTheScavenger extends Quest
 				{
 					if (firstAttacker && ((Attackable) npc).isSpoiled() && hasQuestItems(killer, TARANTULA_PICTURE))
 					{
-						if (giveItemRandomly(killer, npc, BEAD, 1, 20, 50.0, true))
+						if (giveItemRandomly(killer, npc, BEAD, 1, 20, 50, true))
 						{
 							qs.setCond(8);
 						}

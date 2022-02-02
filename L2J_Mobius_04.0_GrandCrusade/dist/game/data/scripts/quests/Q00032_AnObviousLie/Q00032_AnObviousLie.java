@@ -171,7 +171,7 @@ public class Q00032_AnObviousLie extends Quest
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 3, 3, npc);
-		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, MEDICINAL_HERB.getId(), 1, MEDICINAL_HERB.getCount(), 1.0, true))
+		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, MEDICINAL_HERB.getId(), 1, MEDICINAL_HERB.getCount(), 1, true))
 		{
 			qs.setCond(4);
 		}

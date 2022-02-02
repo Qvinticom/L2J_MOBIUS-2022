@@ -165,6 +165,7 @@ public enum Stat
 	MAGIC_ATTACK_RANGE("mAtkRange"),
 	ATTACK_COUNT_MAX("atkCountMax"),
 	PHYSICAL_POLEARM_TARGET_SINGLE("polearmSingleTarget"),
+	WEAPON_ATTACK_ANGLE_BONUS("weaponAttackAngleBonus"),
 	HIT_AT_NIGHT("hitAtNight"),
 	
 	// Run speed, walk & escape speed are calculated proportionally, magic speed is a buff

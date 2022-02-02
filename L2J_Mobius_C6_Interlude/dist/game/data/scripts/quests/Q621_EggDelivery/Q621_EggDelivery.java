@@ -16,7 +16,6 @@
  */
 package quests.Q621_EggDelivery;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -129,9 +128,9 @@ public class Q621_EggDelivery extends Quest
 			}
 			case "31584-02.htm":
 			{
-				if (Rnd.get(5) < 1)
+				if (getRandom(5) < 1)
 				{
-					st.rewardItems(RECIPES[Rnd.get(3)], 1);
+					st.rewardItems(RECIPES[getRandom(3)], 1);
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}

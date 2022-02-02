@@ -19,7 +19,6 @@ package quests.Q330_AdeptOfTaste;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -180,7 +179,7 @@ public class Q330_AdeptOfTaste extends Quest
 								int dish;
 								
 								final int specialIngredientsNumber = st.getQuestItemsCount(WHITE_MANDRAGORA_SAP) + st.getQuestItemsCount(GOLDEN_HONEY) + st.getQuestItemsCount(BROWN_MOSS_BUNDLE);
-								if (Rnd.nextBoolean())
+								if (getRandomBoolean())
 								{
 									htmltext = "30469-05t" + Integer.toString(specialIngredientsNumber + 2) + ".htm";
 									dish = 1443 + specialIngredientsNumber;
@@ -502,7 +501,7 @@ public class Q330_AdeptOfTaste extends Quest
 			{
 				if (st.hasQuestItems(ROLANT_CREATURE_BOOK))
 				{
-					st.dropItems(MONSTER_EYE_BODY, (Rnd.get(97) < 77) ? 2 : 3, 30, 970000);
+					st.dropItems(MONSTER_EYE_BODY, (getRandom(97) < 77) ? 2 : 3, 30, 970000);
 				}
 				break;
 			}
@@ -510,7 +509,7 @@ public class Q330_AdeptOfTaste extends Quest
 			{
 				if (st.hasQuestItems(ROLANT_CREATURE_BOOK))
 				{
-					st.dropItemsAlways(MONSTER_EYE_BODY, (Rnd.get(10) < 7) ? 1 : 2, 30);
+					st.dropItemsAlways(MONSTER_EYE_BODY, (getRandom(10) < 7) ? 1 : 2, 30);
 				}
 				break;
 			}
@@ -518,7 +517,7 @@ public class Q330_AdeptOfTaste extends Quest
 			{
 				if (st.hasQuestItems(GLYVKA_BOTANY_BOOK))
 				{
-					st.dropItems(((Rnd.get(96) < 87) ? GREEN_MARSH_MOSS : BROWN_MARSH_MOSS), 1, 20, 960000);
+					st.dropItems(((getRandom(96) < 87) ? GREEN_MARSH_MOSS : BROWN_MARSH_MOSS), 1, 20, 960000);
 				}
 				break;
 			}
@@ -526,7 +525,7 @@ public class Q330_AdeptOfTaste extends Quest
 			{
 				if (st.hasQuestItems(GLYVKA_BOTANY_BOOK))
 				{
-					st.dropItemsAlways(((Rnd.get(10) < 9) ? GREEN_MARSH_MOSS : BROWN_MARSH_MOSS), 1, 20);
+					st.dropItemsAlways(((getRandom(10) < 9) ? GREEN_MARSH_MOSS : BROWN_MARSH_MOSS), 1, 20);
 				}
 				break;
 			}
@@ -543,7 +542,7 @@ public class Q330_AdeptOfTaste extends Quest
 			{
 				if (st.hasQuestItems(JACOB_INSECT_BOOK))
 				{
-					final int random = Rnd.get(100);
+					final int random = getRandom(100);
 					final int[] chances = CHANCES.get(npcId);
 					if (random < chances[0])
 					{
@@ -563,7 +562,7 @@ public class Q330_AdeptOfTaste extends Quest
 			{
 				if (st.hasQuestItems(SONIA_BOTANY_BOOK))
 				{
-					final int random = Rnd.get(100);
+					final int random = getRandom(100);
 					final int[] chances = CHANCES.get(npcId);
 					if (random < chances[1])
 					{

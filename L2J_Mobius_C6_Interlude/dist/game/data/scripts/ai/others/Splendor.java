@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
@@ -64,7 +63,7 @@ public class Splendor extends Quest
 	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet)
 	{
 		final List<Integer> npcData = NPCS.get(npc.getNpcId());
-		if (Rnd.get(100) < (npcData.get(1) * Config.RATE_DROP_QUEST))
+		if (getRandom(100) < (npcData.get(1) * Config.RATE_DROP_QUEST))
 		{
 			if (npcData.get(2) == 1)
 			{

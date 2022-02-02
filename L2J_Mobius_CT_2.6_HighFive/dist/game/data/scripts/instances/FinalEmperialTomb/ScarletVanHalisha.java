@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
@@ -43,14 +42,14 @@ import ai.AbstractNpcAI;
  */
 public class ScarletVanHalisha extends AbstractNpcAI
 {
+	// NPCs
+	private static final int HALISHA2 = 29046;
+	private static final int HALISHA3 = 29047;
+	
 	private Creature _target;
 	private Skill _skill;
 	private long _lastRangedSkillTime;
 	private final int _rangedSkillMinCoolTime = 60000; // 1 minute
-	
-	// NPCs
-	private static final int HALISHA2 = 29046;
-	private static final int HALISHA3 = 29047;
 	
 	public ScarletVanHalisha()
 	{
@@ -111,15 +110,15 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			case HALISHA2:
 			{
-				if (Rnd.get(100) < 10)
+				if (getRandom(100) < 10)
 				{
 					return SkillData.getInstance().getSkill(5015, 2);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (getRandom(100) < 10)
 				{
 					return SkillData.getInstance().getSkill(5015, 5);
 				}
-				else if (Rnd.get(100) < 2)
+				else if (getRandom(100) < 2)
 				{
 					return SkillData.getInstance().getSkill(5016, 1);
 				}
@@ -130,27 +129,27 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			}
 			case HALISHA3:
 			{
-				if (Rnd.get(100) < 10)
+				if (getRandom(100) < 10)
 				{
 					return SkillData.getInstance().getSkill(5015, 3);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (getRandom(100) < 10)
 				{
 					return SkillData.getInstance().getSkill(5015, 6);
 				}
-				else if (Rnd.get(100) < 10)
+				else if (getRandom(100) < 10)
 				{
 					return SkillData.getInstance().getSkill(5015, 2);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (Rnd.get(100) < 10))
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(5019, 1);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (Rnd.get(100) < 10))
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(5018, 1);
 				}
-				else if (Rnd.get(100) < 2)
+				else if (getRandom(100) < 2)
 				{
 					return SkillData.getInstance().getSkill(5016, 1);
 				}
@@ -169,7 +168,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		{
 			return;
 		}
-		if ((Rnd.get(100) < 30) || (_target == null) || _target.isDead())
+		if ((getRandom(100) < 30) || (_target == null) || _target.isDead())
 		{
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);

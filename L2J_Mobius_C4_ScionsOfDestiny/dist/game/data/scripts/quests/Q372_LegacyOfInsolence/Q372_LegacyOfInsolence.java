@@ -16,7 +16,6 @@
  */
 package quests.Q372_LegacyOfInsolence;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -221,7 +220,7 @@ public class Q372_LegacyOfInsolence extends Quest
 		
 		// Retrieve array with rewards.
 		final int[][] rewards = REWARDS_MATRICE[rewardType];
-		final int chance = Rnd.get(100);
+		final int chance = getRandom(100);
 		for (int[] reward : rewards)
 		{
 			if (chance < reward[0])
